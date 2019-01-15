@@ -1,27 +1,27 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/georecovery-alias.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/migration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/queue.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/topic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/queue/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/topic/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/topic/subscription.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/namespace/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/queue/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/topic/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/servicebus/topic/subscription/rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/georecovery-alias.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/migration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/topic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/queue.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/topic/subscription.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/topic/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/queue/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/topic/subscription/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/topic/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/namespace/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/georecovery-alias/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/servicebus/queue/authorization-rule/keys.yml"
   ],
   "name": "AzureServicebus",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/servicebus?view=azure-cli-latest",
@@ -45,6 +45,13 @@
             "help": "Name of the Geo-Disaster Recovery Configuration Alias."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
@@ -55,6 +62,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -71,6 +84,13 @@
             "help": "Name of the Geo-Disaster Recovery Configuration Alias."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
@@ -81,6 +101,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -107,6 +133,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -123,6 +155,13 @@
             "help": "Name of the Geo-Disaster Recovery Configuration Alias."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
@@ -133,6 +172,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -153,6 +198,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -163,10 +214,29 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "PartnerNamespace",
+            "type": "string",
+            "format": "--partner-namespace {value}",
+            "help": "Name (if within the same resource group) or ARM Id of Primary/Secondary Service Bus  namespace name, which is part of GEO DR pairing."
+          },
+          {
+            "name": "AlternateName",
+            "type": "string",
+            "format": "--alternate-name {value}",
+            "help": "Alternate Name (Post failover) for Primary Namespace, when Namespace name and Alias name are same."
+          },
+          {
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
             "help": "Name of the Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "NamespaceName",
@@ -175,22 +245,16 @@
             "help": "Name of Namespace."
           },
           {
-            "name": "PartnerNamespace",
-            "type": "string",
-            "format": "--partner-namespace {value}",
-            "help": "Name (if within the same resource group) or ARM Id of Primary/Secondary Service Bus  namespace name, which is part of GEO DR pairing."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "AlternateName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--alternate-name {value}",
-            "help": "Alternate Name (Post failover) for Primary Namespace, when Namespace name and Alias name are same."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -207,6 +271,13 @@
             "help": "Name of the Geo-Disaster Recovery Configuration Alias."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
@@ -217,6 +288,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -227,6 +304,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -237,6 +321,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -247,6 +337,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -257,6 +354,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -267,6 +370,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -277,6 +387,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -287,16 +403,29 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Standard Namespace used as source of the migration."
-          },
-          {
             "name": "PostMigrationName",
             "type": "string",
             "format": "--post-migration-name {value}",
             "help": "Post migration name is the name that can be used to connect to standard namespace after migration is complete."
+          },
+          {
+            "name": "TargetNamespace",
+            "type": "string",
+            "format": "--target-namespace {value}",
+            "help": "Name (if within the same resource group) or ARM Id of empty Premium Service Bus namespace name that will be target of the migration."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Standard Namespace used as source of the migration."
           },
           {
             "name": "ResourceGroup",
@@ -305,10 +434,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "TargetNamespace",
+            "name": "Subscription",
             "type": "string",
-            "format": "--target-namespace {value}",
-            "help": "Name (if within the same resource group) or ARM Id of empty Premium Service Bus namespace name that will be target of the migration."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -340,7 +469,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Sku",
@@ -353,6 +482,12 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -362,6 +497,13 @@
       "definiteArgument": "servicebus namespace delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -373,6 +515,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -387,6 +535,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Namespace name. Name can contain only letters, numbers, and hyphens. The namespace must start with a letter, and it must end with a letter or number."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -401,6 +555,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -411,6 +571,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -421,6 +588,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -430,18 +603,6 @@
       "definiteArgument": "servicebus namespace update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "Capacity",
             "type": "ServicebusNamespaceCapacity",
@@ -459,6 +620,362 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicCreate",
+      "definiteArgument": "servicebus topic create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AutoDeleteOnIdle",
+            "type": "string",
+            "format": "--auto-delete-on-idle {value}",
+            "help": "ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes."
+          },
+          {
+            "name": "DefaultMessageTimeToLive",
+            "type": "string",
+            "format": "--default-message-time-to-live {value}",
+            "help": "ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
+          },
+          {
+            "name": "DuplicateDetectionHistoryTimeWindow",
+            "type": "string",
+            "format": "--duplicate-detection-history-time-window {value}",
+            "help": "ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
+          },
+          {
+            "name": "EnableBatchedOperations",
+            "type": "bool",
+            "format": "--enable-batched-operations",
+            "help": "Allow server-side batched operations."
+          },
+          {
+            "name": "EnableDuplicateDetection",
+            "type": "bool",
+            "format": "--enable-duplicate-detection",
+            "help": "A boolean value indicating if this topic requires duplicate detection."
+          },
+          {
+            "name": "EnableExpress",
+            "type": "bool",
+            "format": "--enable-express",
+            "help": "A boolean value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage."
+          },
+          {
+            "name": "EnableOrdering",
+            "type": "bool",
+            "format": "--enable-ordering",
+            "help": "A boolean value that indicates whether the topic supports ordering."
+          },
+          {
+            "name": "EnablePartitioning",
+            "type": "bool",
+            "format": "--enable-partitioning",
+            "help": "A boolean value that indicates whether the topic to be partitioned across multiple message brokers is enabled."
+          },
+          {
+            "name": "MaxSize",
+            "type": "ServicebusTopicMaxSize",
+            "format": "--max-size {value}",
+            "help": "Maximum size of topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024."
+          },
+          {
+            "name": "Status",
+            "type": "ServicebusTopicStatus",
+            "format": "--status {value}",
+            "help": "Enumerates the possible values for the status of a messaging entity."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicDelete",
+      "definiteArgument": "servicebus topic delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicList",
+      "definiteArgument": "servicebus topic list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicShow",
+      "definiteArgument": "servicebus topic show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicUpdate",
+      "definiteArgument": "servicebus topic update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoDeleteOnIdle",
+            "type": "string",
+            "format": "--auto-delete-on-idle {value}",
+            "help": "ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes."
+          },
+          {
+            "name": "DefaultMessageTimeToLive",
+            "type": "string",
+            "format": "--default-message-time-to-live {value}",
+            "help": "ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
+          },
+          {
+            "name": "DuplicateDetectionHistoryTimeWindow",
+            "type": "string",
+            "format": "--duplicate-detection-history-time-window {value}",
+            "help": "ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
+          },
+          {
+            "name": "EnableBatchedOperations",
+            "type": "bool",
+            "format": "--enable-batched-operations",
+            "help": "Allow server-side batched operations."
+          },
+          {
+            "name": "EnableDuplicateDetection",
+            "type": "bool",
+            "format": "--enable-duplicate-detection",
+            "help": "A boolean value indicating if this topic requires duplicate detection."
+          },
+          {
+            "name": "EnableExpress",
+            "type": "bool",
+            "format": "--enable-express",
+            "help": "A boolean value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage."
+          },
+          {
+            "name": "EnableOrdering",
+            "type": "bool",
+            "format": "--enable-ordering",
+            "help": "A boolean value that indicates whether the topic supports ordering."
+          },
+          {
+            "name": "EnablePartitioning",
+            "type": "bool",
+            "format": "--enable-partitioning",
+            "help": "A boolean value that indicates whether the topic to be partitioned across multiple message brokers is enabled."
+          },
+          {
+            "name": "MaxSize",
+            "type": "ServicebusTopicMaxSize",
+            "format": "--max-size {value}",
+            "help": "Maximum size of topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024."
+          },
+          {
+            "name": "Status",
+            "type": "ServicebusTopicStatus",
+            "format": "--status {value}",
+            "help": "Enumerates the possible values for the status of a messaging entity."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
@@ -590,15 +1107,21 @@
           },
           {
             "name": "MaxSize",
-            "type": "ServicebusQueueMaxSize",
+            "type": "ServicebusTopicMaxSize",
             "format": "--max-size {value}",
             "help": "The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024."
           },
           {
             "name": "Status",
-            "type": "ServicebusQueueStatus",
+            "type": "ServicebusTopicStatus",
             "format": "--status {value}",
             "help": "Enumerates the possible values for the status of a messaging entity."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -608,6 +1131,13 @@
       "definiteArgument": "servicebus queue delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -625,6 +1155,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -657,6 +1193,12 @@
             "type": "string",
             "format": "--top {value}",
             "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -667,6 +1209,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -683,6 +1232,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -692,24 +1247,6 @@
       "definiteArgument": "servicebus queue update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "AutoDeleteOnIdle",
             "type": "string",
@@ -790,747 +1327,30 @@
           },
           {
             "name": "MaxSize",
-            "type": "ServicebusQueueMaxSize",
+            "type": "ServicebusTopicMaxSize",
             "format": "--max-size {value}",
             "help": "The maximum size of queue in megabytes, which is the size of memory allocated for the queue. Default is 1024."
           },
           {
             "name": "Status",
-            "type": "ServicebusQueueStatus",
+            "type": "ServicebusTopicStatus",
             "format": "--status {value}",
             "help": "Enumerates the possible values for the status of a messaging entity."
           },
           {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicCreate",
-      "definiteArgument": "servicebus topic create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AutoDeleteOnIdle",
-            "type": "string",
-            "format": "--auto-delete-on-idle {value}",
-            "help": "ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes."
-          },
-          {
-            "name": "DefaultMessageTimeToLive",
-            "type": "string",
-            "format": "--default-message-time-to-live {value}",
-            "help": "ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
-          },
-          {
-            "name": "DuplicateDetectionHistoryTimeWindow",
-            "type": "string",
-            "format": "--duplicate-detection-history-time-window {value}",
-            "help": "ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
-          },
-          {
-            "name": "EnableBatchedOperations",
-            "type": "bool",
-            "format": "--enable-batched-operations",
-            "help": "Allow server-side batched operations."
-          },
-          {
-            "name": "EnableDuplicateDetection",
-            "type": "bool",
-            "format": "--enable-duplicate-detection",
-            "help": "A boolean value indicating if this topic requires duplicate detection."
-          },
-          {
-            "name": "EnableExpress",
-            "type": "bool",
-            "format": "--enable-express",
-            "help": "A boolean value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage."
-          },
-          {
-            "name": "EnableOrdering",
-            "type": "bool",
-            "format": "--enable-ordering",
-            "help": "A boolean value that indicates whether the topic supports ordering."
-          },
-          {
-            "name": "EnablePartitioning",
-            "type": "bool",
-            "format": "--enable-partitioning",
-            "help": "A boolean value that indicates whether the topic to be partitioned across multiple message brokers is enabled."
-          },
-          {
-            "name": "MaxSize",
-            "type": "ServicebusQueueMaxSize",
-            "format": "--max-size {value}",
-            "help": "Maximum size of topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024."
-          },
-          {
-            "name": "Status",
-            "type": "ServicebusQueueStatus",
-            "format": "--status {value}",
-            "help": "Enumerates the possible values for the status of a messaging entity."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicDelete",
-      "definiteArgument": "servicebus topic delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicList",
-      "definiteArgument": "servicebus topic list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "May be used to limit the number of results to the most recent N usageDetails."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicShow",
-      "definiteArgument": "servicebus topic show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicUpdate",
-      "definiteArgument": "servicebus topic update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AutoDeleteOnIdle",
-            "type": "string",
-            "format": "--auto-delete-on-idle {value}",
-            "help": "ISO 8601 timespan or duration time format for idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes."
-          },
-          {
-            "name": "DefaultMessageTimeToLive",
-            "type": "string",
-            "format": "--default-message-time-to-live {value}",
-            "help": "ISO 8601 or duration time format for Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself."
-          },
-          {
-            "name": "DuplicateDetectionHistoryTimeWindow",
-            "type": "string",
-            "format": "--duplicate-detection-history-time-window {value}",
-            "help": "ISO 8601 timespan or duration time format for structure that defines the duration of the duplicate detection history. The default value is 10 minutes."
-          },
-          {
-            "name": "EnableBatchedOperations",
-            "type": "bool",
-            "format": "--enable-batched-operations",
-            "help": "Allow server-side batched operations."
-          },
-          {
-            "name": "EnableDuplicateDetection",
-            "type": "bool",
-            "format": "--enable-duplicate-detection",
-            "help": "A boolean value indicating if this topic requires duplicate detection."
-          },
-          {
-            "name": "EnableExpress",
-            "type": "bool",
-            "format": "--enable-express",
-            "help": "A boolean value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage."
-          },
-          {
-            "name": "EnableOrdering",
-            "type": "bool",
-            "format": "--enable-ordering",
-            "help": "A boolean value that indicates whether the topic supports ordering."
-          },
-          {
-            "name": "EnablePartitioning",
-            "type": "bool",
-            "format": "--enable-partitioning",
-            "help": "A boolean value that indicates whether the topic to be partitioned across multiple message brokers is enabled."
-          },
-          {
-            "name": "MaxSize",
-            "type": "ServicebusQueueMaxSize",
-            "format": "--max-size {value}",
-            "help": "Maximum size of topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024."
-          },
-          {
-            "name": "Status",
-            "type": "ServicebusQueueStatus",
-            "format": "--status {value}",
-            "help": "Enumerates the possible values for the status of a messaging entity."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasAuthorizationRuleList",
-      "definiteArgument": "servicebus georecovery-alias authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
-      "definiteArgument": "servicebus georecovery-alias authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of the Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleCreate",
-      "definiteArgument": "servicebus namespace authorization-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
             "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleDelete",
-      "definiteArgument": "servicebus namespace authorization-rule delete",
-      "settingsClass": {
-        "properties": [
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleList",
-      "definiteArgument": "servicebus namespace authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of the Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleShow",
-      "definiteArgument": "servicebus namespace authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleUpdate",
-      "definiteArgument": "servicebus namespace authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleCreate",
-      "definiteArgument": "servicebus queue authorization-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
             "help": "Name of Queue."
           },
           {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleDelete",
-      "definiteArgument": "servicebus queue authorization-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleList",
-      "definiteArgument": "servicebus queue authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleShow",
-      "definiteArgument": "servicebus queue authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "QueueAuthorizationRuleUpdate",
-      "definiteArgument": "servicebus queue authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Queue Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "QueueName",
-            "type": "string",
-            "format": "--queue-name {value}",
-            "help": "Name of Queue."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleCreate",
-      "definiteArgument": "servicebus topic authorization-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
-          {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
@@ -1543,146 +1363,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "TopicName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleDelete",
-      "definiteArgument": "servicebus topic authorization-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleList",
-      "definiteArgument": "servicebus topic authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleShow",
-      "definiteArgument": "servicebus topic authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicAuthorizationRuleUpdate",
-      "definiteArgument": "servicebus topic authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<ServicebusNamespaceAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
@@ -1802,9 +1486,15 @@
           },
           {
             "name": "Status",
-            "type": "ServicebusQueueStatus",
+            "type": "ServicebusTopicStatus",
             "format": "--status {value}",
             "help": ""
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1814,6 +1504,13 @@
       "definiteArgument": "servicebus topic subscription delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -1831,6 +1528,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "TopicName",
@@ -1875,6 +1578,12 @@
             "type": "string",
             "format": "--top {value}",
             "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1884,6 +1593,13 @@
       "definiteArgument": "servicebus topic subscription show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -1901,6 +1617,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "TopicName",
@@ -1916,30 +1638,6 @@
       "definiteArgument": "servicebus topic subscription update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Subscription."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TopicName",
-            "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
-          },
           {
             "name": "AutoDeleteOnIdle",
             "type": "string",
@@ -2002,9 +1700,46 @@
           },
           {
             "name": "Status",
-            "type": "ServicebusQueueStatus",
+            "type": "ServicebusTopicStatus",
             "format": "--status {value}",
             "help": ""
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Subscription."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
           },
           {
             "name": "Add",
@@ -2034,8 +1769,464 @@
       }
     },
     {
-      "postfix": "GeorecoveryAliasAuthorizationRuleKeysList",
-      "definiteArgument": "servicebus georecovery-alias authorization-rule keys list",
+      "postfix": "TopicAuthorizationRuleCreate",
+      "definiteArgument": "servicebus topic authorization-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<ServicebusTopicAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleDelete",
+      "definiteArgument": "servicebus topic authorization-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleList",
+      "definiteArgument": "servicebus topic authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleShow",
+      "definiteArgument": "servicebus topic authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleUpdate",
+      "definiteArgument": "servicebus topic authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Rights",
+            "type": "List<ServicebusTopicAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleCreate",
+      "definiteArgument": "servicebus namespace authorization-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<ServicebusTopicAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleDelete",
+      "definiteArgument": "servicebus namespace authorization-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleList",
+      "definiteArgument": "servicebus namespace authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of the Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleShow",
+      "definiteArgument": "servicebus namespace authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleUpdate",
+      "definiteArgument": "servicebus namespace authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Rights",
+            "type": "List<ServicebusTopicAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasAuthorizationRuleList",
+      "definiteArgument": "servicebus georecovery-alias authorization-rule list",
       "settingsClass": {
         "properties": [
           {
@@ -2045,12 +2236,6 @@
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
           },
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
-          },
-          {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
@@ -2061,46 +2246,33 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleKeysList",
-      "definiteArgument": "servicebus namespace authorization-rule keys list",
+      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
+      "definiteArgument": "servicebus georecovery-alias authorization-rule show",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "Alias",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace Authorization Rule."
+            "format": "--alias {value}",
+            "help": "Name of the Geo-Disaster Recovery Configuration Alias."
           },
           {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleKeysRenew",
-      "definiteArgument": "servicebus namespace authorization-rule keys renew",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Key",
-            "type": "ServicebusNamespaceAuthorizationRuleKeysKey",
-            "format": "--key {value}",
-            "help": "Specifies Primary or Secondary key needs to be reset."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -2121,17 +2293,17 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "KeyValue",
+            "name": "Subscription",
             "type": "string",
-            "format": "--key-value {value}",
-            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "QueueAuthorizationRuleKeysList",
-      "definiteArgument": "servicebus queue authorization-rule keys list",
+      "postfix": "QueueAuthorizationRuleCreate",
+      "definiteArgument": "servicebus queue authorization-rule create",
       "settingsClass": {
         "properties": [
           {
@@ -2157,20 +2329,34 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<ServicebusTopicAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "QueueAuthorizationRuleKeysRenew",
-      "definiteArgument": "servicebus queue authorization-rule keys renew",
+      "postfix": "QueueAuthorizationRuleDelete",
+      "definiteArgument": "servicebus queue authorization-rule delete",
       "settingsClass": {
         "properties": [
           {
-            "name": "Key",
-            "type": "ServicebusNamespaceAuthorizationRuleKeysKey",
-            "format": "--key {value}",
-            "help": "Specifies Primary or Secondary key needs to be reset."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -2197,30 +2383,30 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "KeyValue",
+            "name": "Subscription",
             "type": "string",
-            "format": "--key-value {value}",
-            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "TopicAuthorizationRuleKeysList",
-      "definiteArgument": "servicebus topic authorization-rule keys list",
+      "postfix": "QueueAuthorizationRuleList",
+      "definiteArgument": "servicebus queue authorization-rule list",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
-          },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
             "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
           },
           {
             "name": "ResourceGroup",
@@ -2229,30 +2415,31 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "TopicName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "TopicAuthorizationRuleKeysRenew",
-      "definiteArgument": "servicebus topic authorization-rule keys renew",
+      "postfix": "QueueAuthorizationRuleShow",
+      "definiteArgument": "servicebus queue authorization-rule show",
       "settingsClass": {
         "properties": [
           {
-            "name": "Key",
-            "type": "ServicebusNamespaceAuthorizationRuleKeysKey",
-            "format": "--key {value}",
-            "help": "Specifies Primary or Secondary key needs to be reset."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Topic Authorization Rule."
+            "help": "Name of Queue Authorization Rule."
           },
           {
             "name": "NamespaceName",
@@ -2261,22 +2448,98 @@
             "help": "Name of Namespace."
           },
           {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "TopicName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--topic-name {value}",
-            "help": "Name of Topic."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleUpdate",
+      "definiteArgument": "servicebus queue authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Rights",
+            "type": "List<ServicebusTopicAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
           },
           {
-            "name": "KeyValue",
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
             "type": "string",
-            "format": "--key-value {value}",
-            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
@@ -2399,6 +2662,12 @@
             "type": "string",
             "format": "--filter-sql-expression {value}",
             "help": "SQL expression. e.g. myproperty=test."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2408,6 +2677,13 @@
       "definiteArgument": "servicebus topic subscription rule delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -2425,6 +2701,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "SubscriptionName",
@@ -2481,6 +2763,12 @@
             "type": "string",
             "format": "--top {value}",
             "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2490,6 +2778,13 @@
       "definiteArgument": "servicebus topic subscription rule show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -2507,6 +2802,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "SubscriptionName",
@@ -2529,6 +2830,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -2545,6 +2853,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "SubscriptionName",
@@ -2668,6 +2982,317 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleKeysList",
+      "definiteArgument": "servicebus topic authorization-rule keys list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicAuthorizationRuleKeysRenew",
+      "definiteArgument": "servicebus topic authorization-rule keys renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "ServicebusTopicAuthorizationRuleKeysKey",
+            "format": "--key {value}",
+            "help": "Specifies Primary or Secondary key needs to be reset."
+          },
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Topic Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "TopicName",
+            "type": "string",
+            "format": "--topic-name {value}",
+            "help": "Name of Topic."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleKeysList",
+      "definiteArgument": "servicebus namespace authorization-rule keys list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleKeysRenew",
+      "definiteArgument": "servicebus namespace authorization-rule keys renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "ServicebusTopicAuthorizationRuleKeysKey",
+            "format": "--key {value}",
+            "help": "Specifies Primary or Secondary key needs to be reset."
+          },
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasAuthorizationRuleKeysList",
+      "definiteArgument": "servicebus georecovery-alias authorization-rule keys list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleKeysList",
+      "definiteArgument": "servicebus queue authorization-rule keys list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueAuthorizationRuleKeysRenew",
+      "definiteArgument": "servicebus queue authorization-rule keys renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "ServicebusTopicAuthorizationRuleKeysKey",
+            "format": "--key {value}",
+            "help": "Specifies Primary or Secondary key needs to be reset."
+          },
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Queue Authorization Rule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "help": "Name of Queue."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -2720,7 +3345,7 @@
       ]
     },
     {
-      "name": "ServicebusQueueMaxSize",
+      "name": "ServicebusTopicMaxSize",
       "values": [
         "1024",
         "2048",
@@ -2730,7 +3355,7 @@
       ]
     },
     {
-      "name": "ServicebusQueueStatus",
+      "name": "ServicebusTopicStatus",
       "values": [
         "active",
         "disabled",
@@ -2739,7 +3364,7 @@
       ]
     },
     {
-      "name": "ServicebusNamespaceAuthorizationRuleRights",
+      "name": "ServicebusTopicAuthorizationRuleRights",
       "values": [
         "listen",
         "manage",
@@ -2747,7 +3372,7 @@
       ]
     },
     {
-      "name": "ServicebusNamespaceAuthorizationRuleKeysKey",
+      "name": "ServicebusTopicAuthorizationRuleKeysKey",
       "values": [
         "primarykey",
         "secondarykey"

@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -84,30 +84,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeList(Configure<AzureEventgridTopicTypeListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeListEventTypes(Configure<AzureEventgridTopicTypeListEventTypesSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListEventTypesSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeShow(Configure<AzureEventgridTopicTypeShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureEventgridTopicCreate(Configure<AzureEventgridTopicCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicCreateSettings());
@@ -143,6 +119,30 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureEventgridTopicUpdate(Configure<AzureEventgridTopicUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeList(Configure<AzureEventgridTopicTypeListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeListEventTypes(Configure<AzureEventgridTopicTypeListEventTypesSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeListEventTypesSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Grid topics and subscriptions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventgridTopicTypeShow(Configure<AzureEventgridTopicTypeShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventgridTopicTypeShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -227,6 +227,8 @@ namespace Nuke.Azure
         public virtual string SubjectEndsWith { get; internal set; }
         /// <summary><p>Name of the Event Grid topic to which the event subscription needs to be created.</p></summary>
         public virtual string TopicName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -252,6 +254,7 @@ namespace Nuke.Azure
               .Add("--subject-case-sensitive", SubjectCaseSensitive)
               .Add("--subject-ends-with {value}", SubjectEndsWith)
               .Add("--topic-name {value}", TopicName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -278,6 +281,8 @@ namespace Nuke.Azure
         public virtual string ResourceId { get; internal set; }
         /// <summary><p>Name of the Event Grid topic whose event subscription needs to be deleted.</p></summary>
         public virtual string TopicName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -296,6 +301,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-id {value}", ResourceId)
               .Add("--topic-name {value}", TopicName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -314,7 +320,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -324,6 +330,8 @@ namespace Nuke.Azure
         public virtual string TopicName { get; internal set; }
         /// <summary><p>Name of the topic type.</p></summary>
         public virtual string TopicTypeName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -343,6 +351,7 @@ namespace Nuke.Azure
               .Add("--resource-id {value}", ResourceId)
               .Add("--topic-name {value}", TopicName)
               .Add("--topic-type-name {value}", TopicTypeName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -371,6 +380,8 @@ namespace Nuke.Azure
         public virtual string ResourceId { get; internal set; }
         /// <summary><p>Name of the Event Grid topic.</p></summary>
         public virtual string TopicName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -390,6 +401,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-id {value}", ResourceId)
               .Add("--topic-name {value}", TopicName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -436,6 +448,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -464,108 +478,7 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventgridTopicTypeListSettings
-    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventgridTopicTypeListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventgrid topic-type list")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventgridTopicTypeListEventTypesSettings
-    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventgridTopicTypeListEventTypesSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
-        /// <summary><p>Name of the topic type.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventgrid topic-type list-event-types")
-              .Add("--name {value}", Name)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventgridTopicTypeShowSettings
-    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventgridTopicTypeShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
-        /// <summary><p>Name of the topic type.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventgrid topic-type show")
-              .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -584,7 +497,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Name of the topic.</p></summary>
         public virtual string Name { get; internal set; }
@@ -592,6 +505,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -610,6 +525,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -628,10 +544,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the topic.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -646,8 +567,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventgrid topic delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -668,6 +591,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -683,6 +608,7 @@ namespace Nuke.Azure
             arguments
               .Add("eventgrid topic list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -701,10 +627,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the topic.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -719,8 +650,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventgrid topic show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -739,12 +672,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the topic.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -767,13 +705,126 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventgrid topic update")
+              .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventgridTopicTypeListSettings
+    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventgridTopicTypeListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventgrid topic-type list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventgridTopicTypeListEventTypesSettings
+    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventgridTopicTypeListEventTypesSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
+        /// <summary><p>Name of the topic type.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventgrid topic-type list-event-types")
+              .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventgridTopicTypeShowSettings
+    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventgridTopicTypeShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
+        /// <summary><p>Name of the topic type.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventgrid topic-type show")
+              .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -792,10 +843,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventgrid executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the topic.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -810,8 +866,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventgrid topic key list")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -832,10 +890,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureEventgridTasks.AzureEventgridPath;
         /// <summary><p>Key name to regenerate key1 or key2.</p></summary>
         public virtual string KeyName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the topic.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -851,8 +914,10 @@ namespace Nuke.Azure
             arguments
               .Add("eventgrid topic key regenerate")
               .Add("--key-name {value}", KeyName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1188,6 +1253,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionCreateSettings SetSubscription(this AzureEventgridEventSubscriptionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionCreateSettings ResetSubscription(this AzureEventgridEventSubscriptionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1358,6 +1441,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionDeleteSettings SetSubscription(this AzureEventgridEventSubscriptionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionDeleteSettings ResetSubscription(this AzureEventgridEventSubscriptionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1457,7 +1558,7 @@ namespace Nuke.Azure
     public static partial class AzureEventgridEventSubscriptionListSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionListSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionListSettings SetLocation(this AzureEventgridEventSubscriptionListSettings toolSettings, string location)
         {
@@ -1465,7 +1566,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionListSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureEventgridEventSubscriptionListSettings ResetLocation(this AzureEventgridEventSubscriptionListSettings toolSettings)
         {
@@ -1543,6 +1644,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TopicTypeName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionListSettings SetSubscription(this AzureEventgridEventSubscriptionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionListSettings ResetSubscription(this AzureEventgridEventSubscriptionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1755,6 +1874,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TopicName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionShowSettings SetSubscription(this AzureEventgridEventSubscriptionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionShowSettings ResetSubscription(this AzureEventgridEventSubscriptionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2108,6 +2245,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionUpdateSettings SetSubscription(this AzureEventgridEventSubscriptionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridEventSubscriptionUpdateSettings ResetSubscription(this AzureEventgridEventSubscriptionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventgridEventSubscriptionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2200,336 +2355,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventgridTopicTypeListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventgridTopicTypeListSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings SetDebug(this AzureEventgridTopicTypeListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings ResetDebug(this AzureEventgridTopicTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings SetHelp(this AzureEventgridTopicTypeListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings ResetHelp(this AzureEventgridTopicTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings SetOutput(this AzureEventgridTopicTypeListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings ResetOutput(this AzureEventgridTopicTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings SetQuery(this AzureEventgridTopicTypeListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings ResetQuery(this AzureEventgridTopicTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings SetVerbose(this AzureEventgridTopicTypeListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListSettings ResetVerbose(this AzureEventgridTopicTypeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventgridTopicTypeListEventTypesSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventgridTopicTypeListEventTypesSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings SetName(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings ResetName(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings SetDebug(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings ResetDebug(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings SetHelp(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings ResetHelp(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings SetOutput(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings ResetOutput(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings SetQuery(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings ResetQuery(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings SetVerbose(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeListEventTypesSettings ResetVerbose(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventgridTopicTypeShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventgridTopicTypeShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings SetName(this AzureEventgridTopicTypeShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings ResetName(this AzureEventgridTopicTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings SetDebug(this AzureEventgridTopicTypeShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings ResetDebug(this AzureEventgridTopicTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings SetHelp(this AzureEventgridTopicTypeShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings ResetHelp(this AzureEventgridTopicTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings SetOutput(this AzureEventgridTopicTypeShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings ResetOutput(this AzureEventgridTopicTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings SetQuery(this AzureEventgridTopicTypeShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings ResetQuery(this AzureEventgridTopicTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings SetVerbose(this AzureEventgridTopicTypeShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventgridTopicTypeShowSettings ResetVerbose(this AzureEventgridTopicTypeShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureEventgridTopicCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
     [PublicAPI]
@@ -2537,7 +2362,7 @@ namespace Nuke.Azure
     public static partial class AzureEventgridTopicCreateSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureEventgridTopicCreateSettings SetLocation(this AzureEventgridTopicCreateSettings toolSettings, string location)
         {
@@ -2545,7 +2370,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureEventgridTopicCreateSettings ResetLocation(this AzureEventgridTopicCreateSettings toolSettings)
         {
@@ -2605,6 +2430,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicCreateSettings SetSubscription(this AzureEventgridTopicCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicCreateSettings ResetSubscription(this AzureEventgridTopicCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2706,6 +2549,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventgridTopicDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings SetIds(this AzureEventgridTopicDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings SetIds(this AzureEventgridTopicDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings AddIds(this AzureEventgridTopicDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings AddIds(this AzureEventgridTopicDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventgridTopicDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings ClearIds(this AzureEventgridTopicDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings RemoveIds(this AzureEventgridTopicDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings RemoveIds(this AzureEventgridTopicDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicDeleteSettings.Name"/>.</em></p><p>Name of the topic.</p></summary>
         [Pure]
@@ -2739,6 +2642,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings SetSubscription(this AzureEventgridTopicDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicDeleteSettings ResetSubscription(this AzureEventgridTopicDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2858,6 +2779,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicListSettings SetSubscription(this AzureEventgridTopicListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicListSettings ResetSubscription(this AzureEventgridTopicListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2956,6 +2895,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventgridTopicShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings SetIds(this AzureEventgridTopicShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings SetIds(this AzureEventgridTopicShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings AddIds(this AzureEventgridTopicShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings AddIds(this AzureEventgridTopicShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventgridTopicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings ClearIds(this AzureEventgridTopicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings RemoveIds(this AzureEventgridTopicShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings RemoveIds(this AzureEventgridTopicShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicShowSettings.Name"/>.</em></p><p>Name of the topic.</p></summary>
         [Pure]
@@ -2989,6 +2988,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings SetSubscription(this AzureEventgridTopicShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicShowSettings ResetSubscription(this AzureEventgridTopicShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3090,6 +3107,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventgridTopicUpdateSettingsExtensions
     {
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings SetTags(this AzureEventgridTopicUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings ResetTags(this AzureEventgridTopicUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings SetIds(this AzureEventgridTopicUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings SetIds(this AzureEventgridTopicUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings AddIds(this AzureEventgridTopicUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings AddIds(this AzureEventgridTopicUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventgridTopicUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings ClearIds(this AzureEventgridTopicUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings RemoveIds(this AzureEventgridTopicUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicUpdateSettings RemoveIds(this AzureEventgridTopicUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Name"/>.</em></p><p>Name of the topic.</p></summary>
         [Pure]
@@ -3126,21 +3221,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventgridTopicUpdateSettings SetTags(this AzureEventgridTopicUpdateSettings toolSettings, string tags)
+        public static AzureEventgridTopicUpdateSettings SetSubscription(this AzureEventgridTopicUpdateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventgridTopicUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventgridTopicUpdateSettings ResetTags(this AzureEventgridTopicUpdateSettings toolSettings)
+        public static AzureEventgridTopicUpdateSettings ResetSubscription(this AzureEventgridTopicUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3308,12 +3403,456 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureEventgridTopicTypeListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventgridTopicTypeListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings SetSubscription(this AzureEventgridTopicTypeListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings ResetSubscription(this AzureEventgridTopicTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings SetDebug(this AzureEventgridTopicTypeListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings ResetDebug(this AzureEventgridTopicTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings SetHelp(this AzureEventgridTopicTypeListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings ResetHelp(this AzureEventgridTopicTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings SetOutput(this AzureEventgridTopicTypeListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings ResetOutput(this AzureEventgridTopicTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings SetQuery(this AzureEventgridTopicTypeListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings ResetQuery(this AzureEventgridTopicTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings SetVerbose(this AzureEventgridTopicTypeListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListSettings ResetVerbose(this AzureEventgridTopicTypeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventgridTopicTypeListEventTypesSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventgridTopicTypeListEventTypesSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings SetName(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings ResetName(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings SetSubscription(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings ResetSubscription(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings SetDebug(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings ResetDebug(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings SetHelp(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings ResetHelp(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings SetOutput(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings ResetOutput(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings SetQuery(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings ResetQuery(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings SetVerbose(this AzureEventgridTopicTypeListEventTypesSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeListEventTypesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeListEventTypesSettings ResetVerbose(this AzureEventgridTopicTypeListEventTypesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventgridTopicTypeShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventgridTopicTypeShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings SetName(this AzureEventgridTopicTypeShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Name"/>.</em></p><p>Name of the topic type.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings ResetName(this AzureEventgridTopicTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings SetSubscription(this AzureEventgridTopicTypeShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings ResetSubscription(this AzureEventgridTopicTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings SetDebug(this AzureEventgridTopicTypeShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings ResetDebug(this AzureEventgridTopicTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings SetHelp(this AzureEventgridTopicTypeShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings ResetHelp(this AzureEventgridTopicTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings SetOutput(this AzureEventgridTopicTypeShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings ResetOutput(this AzureEventgridTopicTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings SetQuery(this AzureEventgridTopicTypeShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings ResetQuery(this AzureEventgridTopicTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings SetVerbose(this AzureEventgridTopicTypeShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicTypeShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicTypeShowSettings ResetVerbose(this AzureEventgridTopicTypeShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureEventgridTopicKeyListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventgridTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventgridTopicKeyListSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings SetIds(this AzureEventgridTopicKeyListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings SetIds(this AzureEventgridTopicKeyListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicKeyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings AddIds(this AzureEventgridTopicKeyListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicKeyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings AddIds(this AzureEventgridTopicKeyListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventgridTopicKeyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings ClearIds(this AzureEventgridTopicKeyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicKeyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings RemoveIds(this AzureEventgridTopicKeyListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicKeyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings RemoveIds(this AzureEventgridTopicKeyListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyListSettings.Name"/>.</em></p><p>Name of the topic.</p></summary>
         [Pure]
@@ -3347,6 +3886,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings SetSubscription(this AzureEventgridTopicKeyListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicKeyListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyListSettings ResetSubscription(this AzureEventgridTopicKeyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3466,6 +4023,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyRegenerateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings SetIds(this AzureEventgridTopicKeyRegenerateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyRegenerateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings SetIds(this AzureEventgridTopicKeyRegenerateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicKeyRegenerateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings AddIds(this AzureEventgridTopicKeyRegenerateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventgridTopicKeyRegenerateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings AddIds(this AzureEventgridTopicKeyRegenerateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventgridTopicKeyRegenerateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings ClearIds(this AzureEventgridTopicKeyRegenerateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicKeyRegenerateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings RemoveIds(this AzureEventgridTopicKeyRegenerateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventgridTopicKeyRegenerateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings RemoveIds(this AzureEventgridTopicKeyRegenerateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyRegenerateSettings.Name"/>.</em></p><p>Name of the topic.</p></summary>
         [Pure]
@@ -3499,6 +4116,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventgridTopicKeyRegenerateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings SetSubscription(this AzureEventgridTopicKeyRegenerateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventgridTopicKeyRegenerateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventgridTopicKeyRegenerateSettings ResetSubscription(this AzureEventgridTopicKeyRegenerateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

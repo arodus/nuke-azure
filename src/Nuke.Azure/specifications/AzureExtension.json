@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/extension.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/extension.yml"
   ],
   "name": "AzureExtension",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest",
@@ -48,6 +48,12 @@
             "type": "string",
             "format": "--pip-proxy {value}",
             "help": "Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -55,7 +61,16 @@
     {
       "postfix": "List",
       "definiteArgument": "extension list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "ListAvailable",
@@ -67,6 +82,12 @@
             "type": "bool",
             "format": "--show-details",
             "help": "Show the raw data from the extension index."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -81,6 +102,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of extension."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -95,6 +122,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of extension."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -122,6 +155,12 @@
             "type": "string",
             "format": "--pip-proxy {value}",
             "help": "Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

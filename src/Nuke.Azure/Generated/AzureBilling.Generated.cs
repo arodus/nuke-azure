@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -133,6 +133,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBilling executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -147,6 +149,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("billing enrollment-account list")
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -167,6 +170,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
         /// <summary><p>Name of the enrollment account.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -182,6 +187,7 @@ namespace Nuke.Azure
             arguments
               .Add("billing enrollment-account show")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -202,6 +208,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
         /// <summary><p>Generate download url of the invoice.</p></summary>
         public virtual string GenerateDownloadUrl { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -217,6 +225,7 @@ namespace Nuke.Azure
             arguments
               .Add("billing invoice list")
               .Add("--generate-download-url {value}", GenerateDownloadUrl)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -237,6 +246,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
         /// <summary><p>Name of the invoice.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -252,6 +263,7 @@ namespace Nuke.Azure
             arguments
               .Add("billing invoice show")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -276,6 +288,8 @@ namespace Nuke.Azure
         public virtual string Skiptoken { get; internal set; }
         /// <summary><p>May be used to limit the number of results to the most recent N billing periods.</p></summary>
         public virtual string Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -293,6 +307,7 @@ namespace Nuke.Azure
               .Add("--filter {value}", Filter)
               .Add("--skiptoken {value}", Skiptoken)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -313,6 +328,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBillingTasks.AzureBillingPath;
         /// <summary><p>Name of the billing period.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -328,6 +345,7 @@ namespace Nuke.Azure
             arguments
               .Add("billing period show")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -441,6 +459,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBillingEnrollmentAccountListSettingsExtensions
     {
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBillingEnrollmentAccountListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingEnrollmentAccountListSettings SetSubscription(this AzureBillingEnrollmentAccountListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingEnrollmentAccountListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingEnrollmentAccountListSettings ResetSubscription(this AzureBillingEnrollmentAccountListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBillingEnrollmentAccountListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -554,6 +590,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBillingEnrollmentAccountShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingEnrollmentAccountShowSettings SetSubscription(this AzureBillingEnrollmentAccountShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingEnrollmentAccountShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingEnrollmentAccountShowSettings ResetSubscription(this AzureBillingEnrollmentAccountShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -673,6 +727,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings SetSubscription(this AzureBillingInvoiceListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceListSettings ResetSubscription(this AzureBillingInvoiceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBillingInvoiceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -786,6 +858,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBillingInvoiceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings SetSubscription(this AzureBillingInvoiceShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingInvoiceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingInvoiceShowSettings ResetSubscription(this AzureBillingInvoiceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -941,6 +1031,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBillingPeriodListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingPeriodListSettings SetSubscription(this AzureBillingPeriodListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingPeriodListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingPeriodListSettings ResetSubscription(this AzureBillingPeriodListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBillingPeriodListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1054,6 +1162,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBillingPeriodShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingPeriodShowSettings SetSubscription(this AzureBillingPeriodShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBillingPeriodShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBillingPeriodShowSettings ResetSubscription(this AzureBillingPeriodShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

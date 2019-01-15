@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -173,7 +173,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The primary resource name.</p></summary>
         public virtual string Name { get; internal set; }
@@ -197,6 +197,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>Json dictionary with tenant settings.</p></summary>
         public virtual string TenantSettings { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -223,6 +225,7 @@ namespace Nuke.Azure
               .Add("--subnet-id {value}", SubnetId)
               .Add("--tags {value}", Tags)
               .Add("--tenant-settings {value}", TenantSettings)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -241,10 +244,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -259,8 +267,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -281,14 +291,19 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
         /// <summary><p>Container name to export to.</p></summary>
         public virtual string Container { get; internal set; }
-        /// <summary><p>Name of the Redis cache.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>Prefix to use for exported files.</p></summary>
         public virtual string Prefix { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>File format to export.</p></summary>
         public virtual string FileFormat { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the Redis cache.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -304,10 +319,12 @@ namespace Nuke.Azure
             arguments
               .Add("redis export")
               .Add("--container {value}", Container)
-              .Add("--name {value}", Name)
               .Add("--prefix {value}", Prefix)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--file-format {value}", FileFormat)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -326,14 +343,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the Redis cache.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>Which Redis node(s) to reboot. Depending on this value data loss is possible.</p></summary>
         public virtual RedisForceRebootRebootType RebootType { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>If clustering is enabled, the ID of the shard to be rebooted.</p></summary>
         public virtual string ShardId { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the Redis cache.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -348,10 +370,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis force-reboot")
-              .Add("--name {value}", Name)
               .Add("--reboot-type {value}", RebootType)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--shard-id {value}", ShardId)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -375,10 +399,15 @@ namespace Nuke.Azure
         /// <summary><p>Space-separated list of files to import.</p></summary>
         public virtual IReadOnlyList<string> Files => FilesInternal.AsReadOnly();
         internal List<string> FilesInternal { get; set; } = new List<string>();
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -395,8 +424,10 @@ namespace Nuke.Azure
               .Add("redis import")
               .Add("--file-format {value}", FileFormat)
               .Add("--files {value}", Files, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -420,10 +451,15 @@ namespace Nuke.Azure
         /// <summary><p>Space-separated list of files to import.</p></summary>
         public virtual IReadOnlyList<string> Files => FilesInternal.AsReadOnly();
         internal List<string> FilesInternal { get; set; } = new List<string>();
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -440,8 +476,10 @@ namespace Nuke.Azure
               .Add("redis import-method")
               .Add("--file-format {value}", FileFormat)
               .Add("--files {value}", Files, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -462,6 +500,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -477,6 +517,7 @@ namespace Nuke.Azure
             arguments
               .Add("redis list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -495,6 +536,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -509,6 +552,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis list-all")
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -527,10 +571,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -545,8 +594,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis list-keys")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -567,10 +618,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
         /// <summary><p>The Redis access key to regenerate.</p></summary>
         public virtual RedisRegenerateKeysKeyType KeyType { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -586,8 +642,10 @@ namespace Nuke.Azure
             arguments
               .Add("redis regenerate-keys")
               .Add("--key-type {value}", KeyType)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -606,10 +664,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -624,8 +687,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -644,14 +709,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the Redis cache.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Type of Redis cache.</p></summary>
         public virtual RedisSku Sku { get; internal set; }
         /// <summary><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
         public virtual string VmSize { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the Redis cache.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -674,10 +744,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--sku {value}", Sku)
               .Add("--vm-size {value}", VmSize)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -700,12 +772,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        /// <summary><p>Name of the Redis cache.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         public virtual string RedisConfiguration { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the Redis cache.</p></summary>
+        public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -720,9 +797,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis update-settings")
-              .Add("--name {value}", Name)
               .Add("--redis-configuration {value}", RedisConfiguration)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -741,10 +820,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -759,8 +843,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis patch-schedule delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -779,12 +865,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>List of patch schedules for a Redis cache.</p></summary>
+        public virtual string ScheduleEntries { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>List of patch schedules for a Redis cache.</p></summary>
-        public virtual string ScheduleEntries { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -799,9 +890,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis patch-schedule set")
+              .Add("--schedule-entries {value}", ScheduleEntries)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--schedule-entries {value}", ScheduleEntries)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -820,10 +913,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureRedis executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Redis cache.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -838,8 +936,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("redis patch-schedule show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -856,7 +956,7 @@ namespace Nuke.Azure
     public static partial class AzureRedisCreateSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings SetLocation(this AzureRedisCreateSettings toolSettings, string location)
         {
@@ -864,7 +964,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureRedisCreateSettings ResetLocation(this AzureRedisCreateSettings toolSettings)
         {
@@ -1071,6 +1171,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisCreateSettings SetSubscription(this AzureRedisCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisCreateSettings ResetSubscription(this AzureRedisCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureRedisCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1169,6 +1287,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings SetIds(this AzureRedisDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings SetIds(this AzureRedisDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings AddIds(this AzureRedisDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings AddIds(this AzureRedisDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings ClearIds(this AzureRedisDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings RemoveIds(this AzureRedisDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings RemoveIds(this AzureRedisDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -1202,6 +1380,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings SetSubscription(this AzureRedisDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisDeleteSettings ResetSubscription(this AzureRedisDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1321,24 +1517,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisExportSettings SetName(this AzureRedisExportSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisExportSettings ResetName(this AzureRedisExportSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region Prefix
         /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Prefix"/>.</em></p><p>Prefix to use for exported files.</p></summary>
         [Pure]
@@ -1354,6 +1532,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Prefix = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FileFormat
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p>File format to export.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings SetFileFormat(this AzureRedisExportSettings toolSettings, string fileFormat)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileFormat = fileFormat;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p>File format to export.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings ResetFileFormat(this AzureRedisExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileFormat = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings SetIds(this AzureRedisExportSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings SetIds(this AzureRedisExportSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisExportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings AddIds(this AzureRedisExportSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisExportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings AddIds(this AzureRedisExportSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisExportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings ClearIds(this AzureRedisExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisExportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings RemoveIds(this AzureRedisExportSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisExportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings RemoveIds(this AzureRedisExportSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings SetName(this AzureRedisExportSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisExportSettings ResetName(this AzureRedisExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
@@ -1375,21 +1649,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region FileFormat
-        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p>File format to export.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisExportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisExportSettings SetFileFormat(this AzureRedisExportSettings toolSettings, string fileFormat)
+        public static AzureRedisExportSettings SetSubscription(this AzureRedisExportSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.FileFormat = fileFormat;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.FileFormat"/>.</em></p><p>File format to export.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisExportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisExportSettings ResetFileFormat(this AzureRedisExportSettings toolSettings)
+        public static AzureRedisExportSettings ResetSubscription(this AzureRedisExportSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.FileFormat = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1491,24 +1765,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisForceRebootSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisForceRebootSettings SetName(this AzureRedisForceRebootSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisForceRebootSettings ResetName(this AzureRedisForceRebootSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region RebootType
         /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.RebootType"/>.</em></p><p>Which Redis node(s) to reboot. Depending on this value data loss is possible.</p></summary>
         [Pure]
@@ -1524,6 +1780,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RebootType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ShardId
+        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.ShardId"/>.</em></p><p>If clustering is enabled, the ID of the shard to be rebooted.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings SetShardId(this AzureRedisForceRebootSettings toolSettings, string shardId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShardId = shardId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.ShardId"/>.</em></p><p>If clustering is enabled, the ID of the shard to be rebooted.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings ResetShardId(this AzureRedisForceRebootSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShardId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings SetIds(this AzureRedisForceRebootSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings SetIds(this AzureRedisForceRebootSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisForceRebootSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings AddIds(this AzureRedisForceRebootSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisForceRebootSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings AddIds(this AzureRedisForceRebootSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisForceRebootSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings ClearIds(this AzureRedisForceRebootSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisForceRebootSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings RemoveIds(this AzureRedisForceRebootSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisForceRebootSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings RemoveIds(this AzureRedisForceRebootSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings SetName(this AzureRedisForceRebootSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisForceRebootSettings ResetName(this AzureRedisForceRebootSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
@@ -1545,21 +1897,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ShardId
-        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.ShardId"/>.</em></p><p>If clustering is enabled, the ID of the shard to be rebooted.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisForceRebootSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisForceRebootSettings SetShardId(this AzureRedisForceRebootSettings toolSettings, string shardId)
+        public static AzureRedisForceRebootSettings SetSubscription(this AzureRedisForceRebootSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ShardId = shardId;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.ShardId"/>.</em></p><p>If clustering is enabled, the ID of the shard to be rebooted.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisForceRebootSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisForceRebootSettings ResetShardId(this AzureRedisForceRebootSettings toolSettings)
+        public static AzureRedisForceRebootSettings ResetSubscription(this AzureRedisForceRebootSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ShardId = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1739,6 +2091,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetIds(this AzureRedisImportSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetIds(this AzureRedisImportSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings AddIds(this AzureRedisImportSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings AddIds(this AzureRedisImportSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisImportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ClearIds(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings RemoveIds(this AzureRedisImportSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings RemoveIds(this AzureRedisImportSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -1772,6 +2184,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisImportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings SetSubscription(this AzureRedisImportSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisImportSettings ResetSubscription(this AzureRedisImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1951,6 +2381,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings SetIds(this AzureRedisImportMethodSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings SetIds(this AzureRedisImportMethodSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportMethodSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings AddIds(this AzureRedisImportMethodSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisImportMethodSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings AddIds(this AzureRedisImportMethodSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisImportMethodSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings ClearIds(this AzureRedisImportMethodSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportMethodSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings RemoveIds(this AzureRedisImportMethodSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisImportMethodSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings RemoveIds(this AzureRedisImportMethodSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -1984,6 +2474,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisImportMethodSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings SetSubscription(this AzureRedisImportMethodSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisImportMethodSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisImportMethodSettings ResetSubscription(this AzureRedisImportMethodSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2103,6 +2611,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisListSettings SetSubscription(this AzureRedisListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisListSettings ResetSubscription(this AzureRedisListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureRedisListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2201,6 +2727,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisListAllSettingsExtensions
     {
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisListAllSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisListAllSettings SetSubscription(this AzureRedisListAllSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisListAllSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisListAllSettings ResetSubscription(this AzureRedisListAllSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureRedisListAllSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2299,6 +2843,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisListKeysSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings SetIds(this AzureRedisListKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings SetIds(this AzureRedisListKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings AddIds(this AzureRedisListKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings AddIds(this AzureRedisListKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings ClearIds(this AzureRedisListKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings RemoveIds(this AzureRedisListKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings RemoveIds(this AzureRedisListKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -2332,6 +2936,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisListKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings SetSubscription(this AzureRedisListKeysSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisListKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisListKeysSettings ResetSubscription(this AzureRedisListKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2451,6 +3073,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings SetIds(this AzureRedisRegenerateKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings SetIds(this AzureRedisRegenerateKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisRegenerateKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings AddIds(this AzureRedisRegenerateKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisRegenerateKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings AddIds(this AzureRedisRegenerateKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisRegenerateKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings ClearIds(this AzureRedisRegenerateKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisRegenerateKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings RemoveIds(this AzureRedisRegenerateKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisRegenerateKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings RemoveIds(this AzureRedisRegenerateKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -2484,6 +3166,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisRegenerateKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings SetSubscription(this AzureRedisRegenerateKeysSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisRegenerateKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisRegenerateKeysSettings ResetSubscription(this AzureRedisRegenerateKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2585,6 +3285,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings SetIds(this AzureRedisShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings SetIds(this AzureRedisShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings AddIds(this AzureRedisShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings AddIds(this AzureRedisShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings ClearIds(this AzureRedisShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings RemoveIds(this AzureRedisShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings RemoveIds(this AzureRedisShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -2618,6 +3378,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings SetSubscription(this AzureRedisShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisShowSettings ResetSubscription(this AzureRedisShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2719,6 +3497,102 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisUpdateSettingsExtensions
     {
+        #region Sku
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings SetSku(this AzureRedisUpdateSettings toolSettings, RedisSku sku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = sku;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings ResetSku(this AzureRedisUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmSize
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings SetVmSize(this AzureRedisUpdateSettings toolSettings, string vmSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmSize = vmSize;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings ResetVmSize(this AzureRedisUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings SetIds(this AzureRedisUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings SetIds(this AzureRedisUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings AddIds(this AzureRedisUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings AddIds(this AzureRedisUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings ClearIds(this AzureRedisUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings RemoveIds(this AzureRedisUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettings RemoveIds(this AzureRedisUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -2755,39 +3629,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Sku
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisUpdateSettings SetSku(this AzureRedisUpdateSettings toolSettings, RedisSku sku)
+        public static AzureRedisUpdateSettings SetSubscription(this AzureRedisUpdateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = sku;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Sku"/>.</em></p><p>Type of Redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisUpdateSettings ResetSku(this AzureRedisUpdateSettings toolSettings)
+        public static AzureRedisUpdateSettings ResetSubscription(this AzureRedisUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmSize
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
-        [Pure]
-        public static AzureRedisUpdateSettings SetVmSize(this AzureRedisUpdateSettings toolSettings, string vmSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmSize = vmSize;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettings.VmSize"/>.</em></p><p>Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4).</p></summary>
-        [Pure]
-        public static AzureRedisUpdateSettings ResetVmSize(this AzureRedisUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmSize = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2961,24 +3817,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisUpdateSettingsSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisUpdateSettingsSettings SetName(this AzureRedisUpdateSettingsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
-        [Pure]
-        public static AzureRedisUpdateSettingsSettings ResetName(this AzureRedisUpdateSettingsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region RedisConfiguration
         /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.RedisConfiguration"/>.</em></p><p>JSON encoded configuration settings. Use @{file} to load from a file.</p></summary>
         [Pure]
@@ -2997,6 +3835,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings SetIds(this AzureRedisUpdateSettingsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings SetIds(this AzureRedisUpdateSettingsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisUpdateSettingsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings AddIds(this AzureRedisUpdateSettingsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisUpdateSettingsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings AddIds(this AzureRedisUpdateSettingsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisUpdateSettingsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings ClearIds(this AzureRedisUpdateSettingsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisUpdateSettingsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings RemoveIds(this AzureRedisUpdateSettingsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisUpdateSettingsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings RemoveIds(this AzureRedisUpdateSettingsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings SetName(this AzureRedisUpdateSettingsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings ResetName(this AzureRedisUpdateSettingsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -3012,6 +3928,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisUpdateSettingsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings SetSubscription(this AzureRedisUpdateSettingsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisUpdateSettingsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisUpdateSettingsSettings ResetSubscription(this AzureRedisUpdateSettingsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3113,6 +4047,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisPatchScheduleDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetIds(this AzureRedisPatchScheduleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetIds(this AzureRedisPatchScheduleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisPatchScheduleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings AddIds(this AzureRedisPatchScheduleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisPatchScheduleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings AddIds(this AzureRedisPatchScheduleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisPatchScheduleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ClearIds(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisPatchScheduleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings RemoveIds(this AzureRedisPatchScheduleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisPatchScheduleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings RemoveIds(this AzureRedisPatchScheduleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -3146,6 +4140,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetSubscription(this AzureRedisPatchScheduleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetSubscription(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3247,6 +4259,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisPatchScheduleSetSettingsExtensions
     {
+        #region ScheduleEntries
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.ScheduleEntries"/>.</em></p><p>List of patch schedules for a Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings SetScheduleEntries(this AzureRedisPatchScheduleSetSettings toolSettings, string scheduleEntries)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScheduleEntries = scheduleEntries;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleSetSettings.ScheduleEntries"/>.</em></p><p>List of patch schedules for a Redis cache.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings ResetScheduleEntries(this AzureRedisPatchScheduleSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScheduleEntries = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings SetIds(this AzureRedisPatchScheduleSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings SetIds(this AzureRedisPatchScheduleSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisPatchScheduleSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings AddIds(this AzureRedisPatchScheduleSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisPatchScheduleSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings AddIds(this AzureRedisPatchScheduleSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisPatchScheduleSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings ClearIds(this AzureRedisPatchScheduleSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisPatchScheduleSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings RemoveIds(this AzureRedisPatchScheduleSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisPatchScheduleSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleSetSettings RemoveIds(this AzureRedisPatchScheduleSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -3283,21 +4373,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ScheduleEntries
-        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.ScheduleEntries"/>.</em></p><p>List of patch schedules for a Redis cache.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisPatchScheduleSetSettings SetScheduleEntries(this AzureRedisPatchScheduleSetSettings toolSettings, string scheduleEntries)
+        public static AzureRedisPatchScheduleSetSettings SetSubscription(this AzureRedisPatchScheduleSetSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ScheduleEntries = scheduleEntries;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleSetSettings.ScheduleEntries"/>.</em></p><p>List of patch schedules for a Redis cache.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureRedisPatchScheduleSetSettings ResetScheduleEntries(this AzureRedisPatchScheduleSetSettings toolSettings)
+        public static AzureRedisPatchScheduleSetSettings ResetSubscription(this AzureRedisPatchScheduleSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ScheduleEntries = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3399,6 +4489,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureRedisPatchScheduleShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetIds(this AzureRedisPatchScheduleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetIds(this AzureRedisPatchScheduleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisPatchScheduleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings AddIds(this AzureRedisPatchScheduleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureRedisPatchScheduleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings AddIds(this AzureRedisPatchScheduleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureRedisPatchScheduleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ClearIds(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisPatchScheduleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings RemoveIds(this AzureRedisPatchScheduleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureRedisPatchScheduleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings RemoveIds(this AzureRedisPatchScheduleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Name"/>.</em></p><p>Name of the Redis cache.</p></summary>
         [Pure]
@@ -3432,6 +4582,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetSubscription(this AzureRedisPatchScheduleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetSubscription(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -117,7 +117,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDeployment executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDeploymentTasks.AzureDeploymentPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The deployment name. Default to template file base name.</p></summary>
         public virtual string Name { get; internal set; }
@@ -129,6 +129,8 @@ namespace Nuke.Azure
         public virtual string TemplateFile { get; internal set; }
         /// <summary><p>A uri to a remote template file.</p></summary>
         public virtual string TemplateUri { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -149,6 +151,7 @@ namespace Nuke.Azure
               .Add("--parameters {value}", Parameters)
               .Add("--template-file {value}", TemplateFile)
               .Add("--template-uri {value}", TemplateUri)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -171,6 +174,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -187,6 +192,7 @@ namespace Nuke.Azure
               .Add("deployment delete")
               .Add("--name {value}", Name)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -207,6 +213,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureDeploymentTasks.AzureDeploymentPath;
         /// <summary><p>The deployment name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -222,6 +230,7 @@ namespace Nuke.Azure
             arguments
               .Add("deployment export")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -244,6 +253,8 @@ namespace Nuke.Azure
         public virtual string Filter { get; internal set; }
         /// <summary><p>The number of results to get. If null is passed, returns all deployments.</p></summary>
         public virtual string Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -260,6 +271,7 @@ namespace Nuke.Azure
               .Add("deployment list")
               .Add("--filter {value}", Filter)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -280,6 +292,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureDeploymentTasks.AzureDeploymentPath;
         /// <summary><p>The deployment name.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -295,6 +309,7 @@ namespace Nuke.Azure
             arguments
               .Add("deployment show")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -313,7 +328,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureDeployment executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureDeploymentTasks.AzureDeploymentPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Supply deployment parameter values.</p></summary>
         public virtual string Parameters { get; internal set; }
@@ -321,6 +336,8 @@ namespace Nuke.Azure
         public virtual string TemplateFile { get; internal set; }
         /// <summary><p>A uri to a remote template file.</p></summary>
         public virtual string TemplateUri { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -339,6 +356,7 @@ namespace Nuke.Azure
               .Add("--parameters {value}", Parameters)
               .Add("--template-file {value}", TemplateFile)
               .Add("--template-uri {value}", TemplateUri)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -373,6 +391,8 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
         public virtual string Updated { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -395,6 +415,7 @@ namespace Nuke.Azure
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
               .Add("--updated {value}", Updated)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -417,6 +438,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>The number of results to return.</p></summary>
         public virtual string Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -433,6 +456,7 @@ namespace Nuke.Azure
               .Add("deployment operation list")
               .Add("--name {value}", Name)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -455,6 +479,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>A list of operation ids to show.</p></summary>
         public virtual string OperationIds { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -471,6 +497,7 @@ namespace Nuke.Azure
               .Add("deployment operation show")
               .Add("--name {value}", Name)
               .Add("--operation-ids {value}", OperationIds)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -487,7 +514,7 @@ namespace Nuke.Azure
     public static partial class AzureDeploymentCreateSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureDeploymentCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDeploymentCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureDeploymentCreateSettings SetLocation(this AzureDeploymentCreateSettings toolSettings, string location)
         {
@@ -495,7 +522,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDeploymentCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDeploymentCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureDeploymentCreateSettings ResetLocation(this AzureDeploymentCreateSettings toolSettings)
         {
@@ -615,6 +642,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TemplateUri = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentCreateSettings SetSubscription(this AzureDeploymentCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentCreateSettings ResetSubscription(this AzureDeploymentCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -776,6 +821,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentDeleteSettings SetSubscription(this AzureDeploymentDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentDeleteSettings ResetSubscription(this AzureDeploymentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDeploymentDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -889,6 +952,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentExportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentExportSettings SetSubscription(this AzureDeploymentExportSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentExportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentExportSettings ResetSubscription(this AzureDeploymentExportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1026,6 +1107,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentListSettings SetSubscription(this AzureDeploymentListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentListSettings ResetSubscription(this AzureDeploymentListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDeploymentListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1142,6 +1241,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentShowSettings SetSubscription(this AzureDeploymentShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentShowSettings ResetSubscription(this AzureDeploymentShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDeploymentShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1241,7 +1358,7 @@ namespace Nuke.Azure
     public static partial class AzureDeploymentValidateSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureDeploymentValidateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureDeploymentValidateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureDeploymentValidateSettings SetLocation(this AzureDeploymentValidateSettings toolSettings, string location)
         {
@@ -1249,7 +1366,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureDeploymentValidateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureDeploymentValidateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureDeploymentValidateSettings ResetLocation(this AzureDeploymentValidateSettings toolSettings)
         {
@@ -1309,6 +1426,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TemplateUri = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentValidateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentValidateSettings SetSubscription(this AzureDeploymentValidateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentValidateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentValidateSettings ResetSubscription(this AzureDeploymentValidateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1554,6 +1689,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentWaitSettings SetSubscription(this AzureDeploymentWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentWaitSettings ResetSubscription(this AzureDeploymentWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDeploymentWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1688,6 +1841,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentOperationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentOperationListSettings SetSubscription(this AzureDeploymentOperationListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentOperationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentOperationListSettings ResetSubscription(this AzureDeploymentOperationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureDeploymentOperationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1819,6 +1990,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OperationIds = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureDeploymentOperationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentOperationShowSettings SetSubscription(this AzureDeploymentOperationShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureDeploymentOperationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureDeploymentOperationShowSettings ResetSubscription(this AzureDeploymentOperationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

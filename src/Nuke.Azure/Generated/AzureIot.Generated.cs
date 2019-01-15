@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -348,62 +348,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupCreate(Configure<AzureIotHubConsumerGroupCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupDelete(Configure<AzureIotHubConsumerGroupDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupList(Configure<AzureIotHubConsumerGroupListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupShow(Configure<AzureIotHubConsumerGroupShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubJobCancel(Configure<AzureIotHubJobCancelSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubJobCancelSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubJobList(Configure<AzureIotHubJobListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubJobListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubJobShow(Configure<AzureIotHubJobShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubJobShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureIotHubPolicyCreate(Configure<AzureIotHubPolicyCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubPolicyCreateSettings());
@@ -431,6 +375,70 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureIotHubPolicyShow(Configure<AzureIotHubPolicyShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureIotHubPolicyShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointCreate(Configure<AzureIotHubRoutingEndpointCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointDelete(Configure<AzureIotHubRoutingEndpointDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointList(Configure<AzureIotHubRoutingEndpointListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointShow(Configure<AzureIotHubRoutingEndpointShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupCreate(Configure<AzureIotHubConsumerGroupCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupDelete(Configure<AzureIotHubConsumerGroupDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupList(Configure<AzureIotHubConsumerGroupListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureIotHubConsumerGroupShow(Configure<AzureIotHubConsumerGroupShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubConsumerGroupShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -484,33 +492,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointCreate(Configure<AzureIotHubRoutingEndpointCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureIotHubJobCancel(Configure<AzureIotHubJobCancelSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubJobCancelSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointDelete(Configure<AzureIotHubRoutingEndpointDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureIotHubJobList(Configure<AzureIotHubJobListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubJobListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointList(Configure<AzureIotHubRoutingEndpointListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureIotHubJobShow(Configure<AzureIotHubJobShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Internet of Things (IoT) assets.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureIotHubRoutingEndpointShow(Configure<AzureIotHubRoutingEndpointShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureIotHubRoutingEndpointShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureIotHubJobShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -567,6 +567,8 @@ namespace Nuke.Azure
         public virtual IotDpsCreateSku Sku { get; internal set; }
         /// <summary><p>Units in your IoT Provisioning Service.</p></summary>
         public virtual string Unit { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -586,6 +588,7 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--sku {value}", Sku)
               .Add("--unit {value}", Unit)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -604,10 +607,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Provisioning Service name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -622,8 +630,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot dps delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -644,6 +654,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -659,6 +671,7 @@ namespace Nuke.Azure
             arguments
               .Add("iot dps list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -677,10 +690,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Provisioning Service name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -695,8 +713,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot dps show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -715,10 +735,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Provisioning Service name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -741,8 +766,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot dps update")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -777,6 +804,8 @@ namespace Nuke.Azure
         public virtual IotHubCreateSku Sku { get; internal set; }
         /// <summary><p>Units in your IoT Hub.</p></summary>
         public virtual string Unit { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -797,6 +826,7 @@ namespace Nuke.Azure
               .Add("--partition-count {value}", PartitionCount)
               .Add("--sku {value}", Sku)
               .Add("--unit {value}", Unit)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -815,10 +845,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -833,8 +868,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -855,6 +892,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -870,6 +909,7 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -888,10 +928,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -906,8 +951,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub list-skus")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -926,10 +973,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -944,8 +996,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -964,14 +1018,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>The key to use.</p></summary>
         public virtual IotHubShowConnectionStringKey Key { get; internal set; }
         /// <summary><p>Shared access policy to use.</p></summary>
         public virtual string PolicyName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -986,10 +1045,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub show-connection-string")
-              .Add("--name {value}", Name)
               .Add("--key {value}", Key)
               .Add("--policy-name {value}", PolicyName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1008,10 +1069,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1026,8 +1092,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub show-quota-metrics")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1046,10 +1114,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1064,8 +1137,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub show-stats")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1084,10 +1159,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -1110,8 +1190,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub update")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -1148,6 +1230,8 @@ namespace Nuke.Azure
         public virtual string PrimaryKey { get; internal set; }
         /// <summary><p>Secondary SAS key value.</p></summary>
         public virtual string SecondaryKey { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1169,6 +1253,7 @@ namespace Nuke.Azure
               .Add("--no-wait", NoWait)
               .Add("--primary-key {value}", PrimaryKey)
               .Add("--secondary-key {value}", SecondaryKey)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1195,6 +1280,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1213,6 +1300,7 @@ namespace Nuke.Azure
               .Add("--dps-name {value}", DpsName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1235,6 +1323,8 @@ namespace Nuke.Azure
         public virtual string DpsName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1251,6 +1341,7 @@ namespace Nuke.Azure
               .Add("iot dps access-policy list")
               .Add("--dps-name {value}", DpsName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1275,6 +1366,8 @@ namespace Nuke.Azure
         public virtual string DpsName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1292,6 +1385,7 @@ namespace Nuke.Azure
               .Add("--access-policy-name {value}", AccessPolicyName)
               .Add("--dps-name {value}", DpsName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1324,6 +1418,8 @@ namespace Nuke.Azure
         public virtual IotDpsAccessPolicyRights Rights { get; internal set; }
         /// <summary><p>Secondary SAS key value.</p></summary>
         public virtual string SecondaryKey { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1345,6 +1441,7 @@ namespace Nuke.Azure
               .Add("--primary-key {value}", PrimaryKey)
               .Add("--rights {value}", Rights)
               .Add("--secondary-key {value}", SecondaryKey)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1371,6 +1468,8 @@ namespace Nuke.Azure
         public virtual string Path { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1389,6 +1488,7 @@ namespace Nuke.Azure
               .Add("--dps-name {value}", DpsName)
               .Add("--path {value}", Path)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1415,6 +1515,8 @@ namespace Nuke.Azure
         public virtual string Etag { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1433,6 +1535,7 @@ namespace Nuke.Azure
               .Add("--dps-name {value}", DpsName)
               .Add("--etag {value}", Etag)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1459,6 +1562,8 @@ namespace Nuke.Azure
         public virtual string Etag { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1477,6 +1582,7 @@ namespace Nuke.Azure
               .Add("--dps-name {value}", DpsName)
               .Add("--etag {value}", Etag)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1499,6 +1605,8 @@ namespace Nuke.Azure
         public virtual string DpsName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1515,6 +1623,7 @@ namespace Nuke.Azure
               .Add("iot dps certificate list")
               .Add("--dps-name {value}", DpsName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1539,6 +1648,8 @@ namespace Nuke.Azure
         public virtual string DpsName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1556,6 +1667,7 @@ namespace Nuke.Azure
               .Add("--certificate-name {value}", CertificateName)
               .Add("--dps-name {value}", DpsName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1584,6 +1696,8 @@ namespace Nuke.Azure
         public virtual string Path { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1603,6 +1717,7 @@ namespace Nuke.Azure
               .Add("--etag {value}", Etag)
               .Add("--path {value}", Path)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1631,6 +1746,8 @@ namespace Nuke.Azure
         public virtual string Path { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1650,6 +1767,7 @@ namespace Nuke.Azure
               .Add("--etag {value}", Etag)
               .Add("--path {value}", Path)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1682,6 +1800,8 @@ namespace Nuke.Azure
         public virtual bool? ApplyAllocationPolicy { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1703,6 +1823,7 @@ namespace Nuke.Azure
               .Add("--allocation-weight {value}", AllocationWeight)
               .Add("--apply-allocation-policy", ApplyAllocationPolicy)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1729,6 +1850,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1747,6 +1870,7 @@ namespace Nuke.Azure
               .Add("--linked-hub {value}", LinkedHub)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1769,6 +1893,8 @@ namespace Nuke.Azure
         public virtual string DpsName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1785,6 +1911,7 @@ namespace Nuke.Azure
               .Add("iot dps linked-hub list")
               .Add("--dps-name {value}", DpsName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1809,6 +1936,8 @@ namespace Nuke.Azure
         public virtual string LinkedHub { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1826,6 +1955,7 @@ namespace Nuke.Azure
               .Add("--dps-name {value}", DpsName)
               .Add("--linked-hub {value}", LinkedHub)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1856,6 +1986,8 @@ namespace Nuke.Azure
         public virtual bool? ApplyAllocationPolicy { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1876,6 +2008,7 @@ namespace Nuke.Azure
               .Add("--allocation-weight {value}", AllocationWeight)
               .Add("--apply-allocation-policy", ApplyAllocationPolicy)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1902,6 +2035,8 @@ namespace Nuke.Azure
         public virtual string Path { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1920,6 +2055,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--path {value}", Path)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1940,12 +2076,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>Entity Tag (etag) of the object.</p></summary>
         public virtual string Etag { get; internal set; }
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
         /// <summary><p>A friendly name for the certificate.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1961,9 +2102,11 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub certificate delete")
               .Add("--etag {value}", Etag)
-              .Add("--hub-name {value}", HubName)
               .Add("--name {value}", Name)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1984,12 +2127,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>Entity Tag (etag) of the object.</p></summary>
         public virtual string Etag { get; internal set; }
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
         /// <summary><p>A friendly name for the certificate.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2005,9 +2153,11 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub certificate generate-verification-code")
               .Add("--etag {value}", Etag)
-              .Add("--hub-name {value}", HubName)
               .Add("--name {value}", Name)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2028,8 +2178,13 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2045,7 +2200,9 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub certificate list")
               .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2064,12 +2221,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
         /// <summary><p>A friendly name for the certificate.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2084,9 +2246,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub certificate show")
-              .Add("--hub-name {value}", HubName)
               .Add("--name {value}", Name)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2107,14 +2271,19 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>Entity Tag (etag) of the object.</p></summary>
         public virtual string Etag { get; internal set; }
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
         /// <summary><p>A friendly name for the certificate.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The path to the file containing the certificate.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2130,10 +2299,12 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub certificate update")
               .Add("--etag {value}", Etag)
-              .Add("--hub-name {value}", HubName)
               .Add("--name {value}", Name)
               .Add("--path {value}", Path)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2154,14 +2325,19 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>Entity Tag (etag) of the object.</p></summary>
         public virtual string Etag { get; internal set; }
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
         /// <summary><p>A friendly name for the certificate.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The path to the file containing the certificate.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2177,303 +2353,12 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub certificate verify")
               .Add("--etag {value}", Etag)
-              .Add("--hub-name {value}", HubName)
               .Add("--name {value}", Name)
               .Add("--path {value}", Path)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubConsumerGroupCreateSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubConsumerGroupCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Event hub consumer group name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Event hub endpoint name.</p></summary>
-        public virtual string EventHubName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub consumer-group create")
               .Add("--hub-name {value}", HubName)
-              .Add("--name {value}", Name)
-              .Add("--event-hub-name {value}", EventHubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubConsumerGroupDeleteSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubConsumerGroupDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Event hub consumer group name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Event hub endpoint name.</p></summary>
-        public virtual string EventHubName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub consumer-group delete")
-              .Add("--hub-name {value}", HubName)
-              .Add("--name {value}", Name)
-              .Add("--event-hub-name {value}", EventHubName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubConsumerGroupListSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubConsumerGroupListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Event hub endpoint name.</p></summary>
-        public virtual string EventHubName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub consumer-group list")
-              .Add("--hub-name {value}", HubName)
-              .Add("--event-hub-name {value}", EventHubName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubConsumerGroupShowSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubConsumerGroupShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Event hub consumer group name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Event hub endpoint name.</p></summary>
-        public virtual string EventHubName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub consumer-group show")
-              .Add("--hub-name {value}", HubName)
-              .Add("--name {value}", Name)
-              .Add("--event-hub-name {value}", EventHubName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubJobCancelSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubJobCancelSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Job Id.</p></summary>
-        public virtual string JobId { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub job cancel")
-              .Add("--hub-name {value}", HubName)
-              .Add("--job-id {value}", JobId)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubJobListSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubJobListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub job list")
-              .Add("--hub-name {value}", HubName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubJobShowSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubJobShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Job Id.</p></summary>
-        public virtual string JobId { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub job show")
-              .Add("--hub-name {value}", HubName)
-              .Add("--job-id {value}", JobId)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2500,6 +2385,8 @@ namespace Nuke.Azure
         public virtual string Permissions { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2518,6 +2405,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--permissions {value}", Permissions)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2538,10 +2426,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Shared access policy name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2557,8 +2450,10 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub policy delete")
               .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2579,8 +2474,13 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2596,7 +2496,9 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub policy list")
               .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2617,10 +2519,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Shared access policy name.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2636,293 +2543,10 @@ namespace Nuke.Azure
             arguments
               .Add("iot hub policy show")
               .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubRouteCreateSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubRouteCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>Name of the routing endpoint.</p></summary>
-        public virtual string En { get; internal set; }
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Name of the Route.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Source of the route.</p></summary>
-        public virtual IotHubRouteSource Source { get; internal set; }
-        /// <summary><p>Condition that is evaluated to apply the routing rule.</p></summary>
-        public virtual string Condition { get; internal set; }
-        /// <summary><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
-        public virtual bool? Enabled { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub route create")
-              .Add("--en {value}", En)
-              .Add("--hub-name {value}", HubName)
-              .Add("--name {value}", Name)
-              .Add("--source {value}", Source)
-              .Add("--condition {value}", Condition)
-              .Add("--enabled", Enabled)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubRouteDeleteSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubRouteDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Name of the Route.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Source of the route.</p></summary>
-        public virtual IotHubRouteSource Source { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub route delete")
-              .Add("--hub-name {value}", HubName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--source {value}", Source)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubRouteListSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubRouteListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Source of the route.</p></summary>
-        public virtual IotHubRouteSource Source { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub route list")
-              .Add("--hub-name {value}", HubName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--source {value}", Source)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubRouteShowSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubRouteShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Name of the Route.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub route show")
-              .Add("--hub-name {value}", HubName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubRouteTestSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubRouteTestSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>App properties of the route message.</p></summary>
-        public virtual string Ap { get; internal set; }
-        /// <summary><p>Body of the route message.</p></summary>
-        public virtual string Body { get; internal set; }
-        /// <summary><p>Name of the Route.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Source of the route.</p></summary>
-        public virtual IotHubRouteSource Source { get; internal set; }
-        /// <summary><p>System properties of the route message.</p></summary>
-        public virtual string Sp { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub route test")
-              .Add("--hub-name {value}", HubName)
-              .Add("--ap {value}", Ap)
-              .Add("--body {value}", Body)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--source {value}", Source)
-              .Add("--sp {value}", Sp)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureIotHubRouteUpdateSettings
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureIotHubRouteUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureIot executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
-        /// <summary><p>Name of the Route.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Condition that is evaluated to apply the routing rule.</p></summary>
-        public virtual string Condition { get; internal set; }
-        /// <summary><p>Name of the routing endpoint.</p></summary>
-        public virtual string En { get; internal set; }
-        /// <summary><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
-        public virtual bool? Enabled { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Source of the route.</p></summary>
-        public virtual IotHubRouteSource Source { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("iot hub route update")
-              .Add("--hub-name {value}", HubName)
-              .Add("--name {value}", Name)
-              .Add("--condition {value}", Condition)
-              .Add("--en {value}", En)
-              .Add("--enabled", Enabled)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--source {value}", Source)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2957,6 +2581,8 @@ namespace Nuke.Azure
         public virtual string Container { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2979,6 +2605,7 @@ namespace Nuke.Azure
               .Add("--hub-name {value}", HubName)
               .Add("--container {value}", Container)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2997,14 +2624,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
         /// <summary><p>Name of the Routing Endpoint.</p></summary>
         public virtual string EndpointName { get; internal set; }
         /// <summary><p>Type of the Routing Endpoint.</p></summary>
         public virtual IotHubRoutingEndpointEndpointType EndpointType { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3019,10 +2651,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub routing-endpoint delete")
-              .Add("--hub-name {value}", HubName)
               .Add("--endpoint-name {value}", EndpointName)
               .Add("--endpoint-type {value}", EndpointType)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3041,12 +2675,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureIot executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
-        /// <summary><p>IoT Hub name.</p></summary>
-        public virtual string HubName { get; internal set; }
         /// <summary><p>Type of the Routing Endpoint.</p></summary>
         public virtual IotHubRoutingEndpointEndpointType EndpointType { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3061,9 +2700,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("iot hub routing-endpoint list")
-              .Add("--hub-name {value}", HubName)
               .Add("--endpoint-type {value}", EndpointType)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3086,8 +2727,13 @@ namespace Nuke.Azure
         public virtual string EndpointName { get; internal set; }
         /// <summary><p>IoT Hub name.</p></summary>
         public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3104,7 +2750,670 @@ namespace Nuke.Azure
               .Add("iot hub routing-endpoint show")
               .Add("--endpoint-name {value}", EndpointName)
               .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupCreateSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubConsumerGroupCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Event hub consumer group name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Event hub endpoint name.</p></summary>
+        public virtual string EventHubName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub consumer-group create")
+              .Add("--hub-name {value}", HubName)
+              .Add("--name {value}", Name)
+              .Add("--event-hub-name {value}", EventHubName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupDeleteSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubConsumerGroupDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Event hub endpoint name.</p></summary>
+        public virtual string EventHubName { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Event hub consumer group name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub consumer-group delete")
+              .Add("--event-hub-name {value}", EventHubName)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupListSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubConsumerGroupListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Event hub endpoint name.</p></summary>
+        public virtual string EventHubName { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub consumer-group list")
+              .Add("--event-hub-name {value}", EventHubName)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupShowSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubConsumerGroupShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Event hub endpoint name.</p></summary>
+        public virtual string EventHubName { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Event hub consumer group name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub consumer-group show")
+              .Add("--event-hub-name {value}", EventHubName)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteCreateSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Name of the routing endpoint.</p></summary>
+        public virtual string En { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        public virtual string Condition { get; internal set; }
+        /// <summary><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route create")
+              .Add("--en {value}", En)
+              .Add("--hub-name {value}", HubName)
+              .Add("--name {value}", Name)
+              .Add("--source {value}", Source)
+              .Add("--condition {value}", Condition)
+              .Add("--enabled", Enabled)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteDeleteSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route delete")
+              .Add("--name {value}", Name)
+              .Add("--source {value}", Source)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteListSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route list")
+              .Add("--source {value}", Source)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteShowSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route show")
+              .Add("--name {value}", Name)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteTestSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteTestSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>App properties of the route message.</p></summary>
+        public virtual string Ap { get; internal set; }
+        /// <summary><p>Body of the route message.</p></summary>
+        public virtual string Body { get; internal set; }
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>System properties of the route message.</p></summary>
+        public virtual string Sp { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route test")
+              .Add("--ap {value}", Ap)
+              .Add("--body {value}", Body)
+              .Add("--name {value}", Name)
+              .Add("--source {value}", Source)
+              .Add("--sp {value}", Sp)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubRouteUpdateSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubRouteUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>Name of the Route.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Condition that is evaluated to apply the routing rule.</p></summary>
+        public virtual string Condition { get; internal set; }
+        /// <summary><p>Name of the routing endpoint.</p></summary>
+        public virtual string En { get; internal set; }
+        /// <summary><p>A boolean indicating whether to enable route to the Iot hub.</p></summary>
+        public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Source of the route.</p></summary>
+        public virtual IotHubRouteSource Source { get; internal set; }
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub route update")
+              .Add("--name {value}", Name)
+              .Add("--condition {value}", Condition)
+              .Add("--en {value}", En)
+              .Add("--enabled", Enabled)
+              .Add("--source {value}", Source)
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubJobCancelSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubJobCancelSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Job Id.</p></summary>
+        public virtual string JobId { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub job cancel")
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--job-id {value}", JobId)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubJobListSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubJobListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub job list")
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureIotHubJobShowSettings
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureIotHubJobShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureIot executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureIotTasks.AzureIotPath;
+        /// <summary><p>IoT Hub name.</p></summary>
+        public virtual string HubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Job Id.</p></summary>
+        public virtual string JobId { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("iot hub job show")
+              .Add("--hub-name {value}", HubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--job-id {value}", JobId)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3308,6 +3617,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCreateSettings SetSubscription(this AzureIotDpsCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCreateSettings ResetSubscription(this AzureIotDpsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3406,6 +3733,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotDpsDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotDpsDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings SetIds(this AzureIotDpsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotDpsDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings SetIds(this AzureIotDpsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotDpsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings AddIds(this AzureIotDpsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotDpsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings AddIds(this AzureIotDpsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotDpsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings ClearIds(this AzureIotDpsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotDpsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings RemoveIds(this AzureIotDpsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotDpsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings RemoveIds(this AzureIotDpsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotDpsDeleteSettings.Name"/>.</em></p><p>IoT Provisioning Service name.</p></summary>
         [Pure]
@@ -3439,6 +3826,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings SetSubscription(this AzureIotDpsDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsDeleteSettings ResetSubscription(this AzureIotDpsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3558,6 +3963,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsListSettings SetSubscription(this AzureIotDpsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsListSettings ResetSubscription(this AzureIotDpsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3656,6 +4079,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotDpsShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotDpsShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings SetIds(this AzureIotDpsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotDpsShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings SetIds(this AzureIotDpsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotDpsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings AddIds(this AzureIotDpsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotDpsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings AddIds(this AzureIotDpsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotDpsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings ClearIds(this AzureIotDpsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotDpsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings RemoveIds(this AzureIotDpsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotDpsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings RemoveIds(this AzureIotDpsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotDpsShowSettings.Name"/>.</em></p><p>IoT Provisioning Service name.</p></summary>
         [Pure]
@@ -3689,6 +4172,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings SetSubscription(this AzureIotDpsShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsShowSettings ResetSubscription(this AzureIotDpsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3790,6 +4291,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotDpsUpdateSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotDpsUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings SetIds(this AzureIotDpsUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotDpsUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings SetIds(this AzureIotDpsUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotDpsUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings AddIds(this AzureIotDpsUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotDpsUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings AddIds(this AzureIotDpsUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotDpsUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings ClearIds(this AzureIotDpsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotDpsUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings RemoveIds(this AzureIotDpsUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotDpsUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings RemoveIds(this AzureIotDpsUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotDpsUpdateSettings.Name"/>.</em></p><p>IoT Provisioning Service name.</p></summary>
         [Pure]
@@ -3823,6 +4384,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings SetSubscription(this AzureIotDpsUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsUpdateSettings ResetSubscription(this AzureIotDpsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4104,6 +4683,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCreateSettings SetSubscription(this AzureIotHubCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCreateSettings ResetSubscription(this AzureIotHubCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotHubCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4202,6 +4799,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings SetIds(this AzureIotHubDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings SetIds(this AzureIotHubDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings AddIds(this AzureIotHubDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings AddIds(this AzureIotHubDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings ClearIds(this AzureIotHubDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings RemoveIds(this AzureIotHubDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings RemoveIds(this AzureIotHubDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubDeleteSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -4235,6 +4892,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings SetSubscription(this AzureIotHubDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubDeleteSettings ResetSubscription(this AzureIotHubDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4354,6 +5029,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubListSettings SetSubscription(this AzureIotHubListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubListSettings ResetSubscription(this AzureIotHubListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotHubListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4452,6 +5145,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubListSkusSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubListSkusSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings SetIds(this AzureIotHubListSkusSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubListSkusSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings SetIds(this AzureIotHubListSkusSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings AddIds(this AzureIotHubListSkusSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings AddIds(this AzureIotHubListSkusSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings ClearIds(this AzureIotHubListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings RemoveIds(this AzureIotHubListSkusSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubListSkusSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings RemoveIds(this AzureIotHubListSkusSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubListSkusSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -4485,6 +5238,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubListSkusSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings SetSubscription(this AzureIotHubListSkusSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubListSkusSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubListSkusSettings ResetSubscription(this AzureIotHubListSkusSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4586,6 +5357,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings SetIds(this AzureIotHubShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings SetIds(this AzureIotHubShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings AddIds(this AzureIotHubShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings AddIds(this AzureIotHubShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings ClearIds(this AzureIotHubShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings RemoveIds(this AzureIotHubShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings RemoveIds(this AzureIotHubShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubShowSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -4619,6 +5450,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings SetSubscription(this AzureIotHubShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowSettings ResetSubscription(this AzureIotHubShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4720,24 +5569,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubShowConnectionStringSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubShowConnectionStringSettings SetName(this AzureIotHubShowConnectionStringSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubShowConnectionStringSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubShowConnectionStringSettings ResetName(this AzureIotHubShowConnectionStringSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region Key
         /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Key"/>.</em></p><p>The key to use.</p></summary>
         [Pure]
@@ -4774,6 +5605,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings SetIds(this AzureIotHubShowConnectionStringSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings SetIds(this AzureIotHubShowConnectionStringSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowConnectionStringSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings AddIds(this AzureIotHubShowConnectionStringSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowConnectionStringSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings AddIds(this AzureIotHubShowConnectionStringSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubShowConnectionStringSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings ClearIds(this AzureIotHubShowConnectionStringSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowConnectionStringSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings RemoveIds(this AzureIotHubShowConnectionStringSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowConnectionStringSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings RemoveIds(this AzureIotHubShowConnectionStringSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings SetName(this AzureIotHubShowConnectionStringSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubShowConnectionStringSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings ResetName(this AzureIotHubShowConnectionStringSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -4789,6 +5698,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowConnectionStringSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings SetSubscription(this AzureIotHubShowConnectionStringSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubShowConnectionStringSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowConnectionStringSettings ResetSubscription(this AzureIotHubShowConnectionStringSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4890,6 +5817,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubShowQuotaMetricsSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowQuotaMetricsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings SetIds(this AzureIotHubShowQuotaMetricsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowQuotaMetricsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings SetIds(this AzureIotHubShowQuotaMetricsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowQuotaMetricsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings AddIds(this AzureIotHubShowQuotaMetricsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowQuotaMetricsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings AddIds(this AzureIotHubShowQuotaMetricsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubShowQuotaMetricsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings ClearIds(this AzureIotHubShowQuotaMetricsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowQuotaMetricsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings RemoveIds(this AzureIotHubShowQuotaMetricsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowQuotaMetricsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings RemoveIds(this AzureIotHubShowQuotaMetricsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubShowQuotaMetricsSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -4923,6 +5910,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowQuotaMetricsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings SetSubscription(this AzureIotHubShowQuotaMetricsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubShowQuotaMetricsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowQuotaMetricsSettings ResetSubscription(this AzureIotHubShowQuotaMetricsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5024,6 +6029,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubShowStatsSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowStatsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings SetIds(this AzureIotHubShowStatsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowStatsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings SetIds(this AzureIotHubShowStatsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowStatsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings AddIds(this AzureIotHubShowStatsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubShowStatsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings AddIds(this AzureIotHubShowStatsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubShowStatsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings ClearIds(this AzureIotHubShowStatsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowStatsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings RemoveIds(this AzureIotHubShowStatsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubShowStatsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings RemoveIds(this AzureIotHubShowStatsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubShowStatsSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -5057,6 +6122,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubShowStatsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings SetSubscription(this AzureIotHubShowStatsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubShowStatsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubShowStatsSettings ResetSubscription(this AzureIotHubShowStatsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5158,6 +6241,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubUpdateSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings SetIds(this AzureIotHubUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings SetIds(this AzureIotHubUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings AddIds(this AzureIotHubUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings AddIds(this AzureIotHubUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings ClearIds(this AzureIotHubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings RemoveIds(this AzureIotHubUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings RemoveIds(this AzureIotHubUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubUpdateSettings.Name"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -5191,6 +6334,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings SetSubscription(this AzureIotHubUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubUpdateSettings ResetSubscription(this AzureIotHubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5514,6 +6675,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyCreateSettings SetSubscription(this AzureIotDpsAccessPolicyCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsAccessPolicyCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyCreateSettings ResetSubscription(this AzureIotDpsAccessPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5708,6 +6887,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyDeleteSettings SetSubscription(this AzureIotDpsAccessPolicyDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsAccessPolicyDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyDeleteSettings ResetSubscription(this AzureIotDpsAccessPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5839,6 +7036,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyListSettings SetSubscription(this AzureIotDpsAccessPolicyListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsAccessPolicyListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyListSettings ResetSubscription(this AzureIotDpsAccessPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5991,6 +7206,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyShowSettings SetSubscription(this AzureIotDpsAccessPolicyShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsAccessPolicyShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyShowSettings ResetSubscription(this AzureIotDpsAccessPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6242,6 +7475,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyUpdateSettings SetSubscription(this AzureIotDpsAccessPolicyUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsAccessPolicyUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsAccessPolicyUpdateSettings ResetSubscription(this AzureIotDpsAccessPolicyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsAccessPolicyUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6409,6 +7660,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateCreateSettings SetSubscription(this AzureIotDpsCertificateCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCertificateCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateCreateSettings ResetSubscription(this AzureIotDpsCertificateCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6582,6 +7851,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateDeleteSettings SetSubscription(this AzureIotDpsCertificateDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCertificateDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateDeleteSettings ResetSubscription(this AzureIotDpsCertificateDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6752,6 +8039,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateGenerateVerificationCodeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateGenerateVerificationCodeSettings SetSubscription(this AzureIotDpsCertificateGenerateVerificationCodeSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCertificateGenerateVerificationCodeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateGenerateVerificationCodeSettings ResetSubscription(this AzureIotDpsCertificateGenerateVerificationCodeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateGenerateVerificationCodeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6883,6 +8188,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateListSettings SetSubscription(this AzureIotDpsCertificateListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCertificateListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateListSettings ResetSubscription(this AzureIotDpsCertificateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7035,6 +8358,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateShowSettings SetSubscription(this AzureIotDpsCertificateShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCertificateShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateShowSettings ResetSubscription(this AzureIotDpsCertificateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7226,6 +8567,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateUpdateSettings SetSubscription(this AzureIotDpsCertificateUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCertificateUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateUpdateSettings ResetSubscription(this AzureIotDpsCertificateUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7411,6 +8770,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsCertificateVerifySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateVerifySettings SetSubscription(this AzureIotDpsCertificateVerifySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsCertificateVerifySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsCertificateVerifySettings ResetSubscription(this AzureIotDpsCertificateVerifySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7686,6 +9063,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubCreateSettings SetSubscription(this AzureIotDpsLinkedHubCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsLinkedHubCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubCreateSettings ResetSubscription(this AzureIotDpsLinkedHubCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7880,6 +9275,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubDeleteSettings SetSubscription(this AzureIotDpsLinkedHubDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsLinkedHubDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubDeleteSettings ResetSubscription(this AzureIotDpsLinkedHubDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8011,6 +9424,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubListSettings SetSubscription(this AzureIotDpsLinkedHubListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsLinkedHubListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubListSettings ResetSubscription(this AzureIotDpsLinkedHubListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8163,6 +9594,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubShowSettings SetSubscription(this AzureIotDpsLinkedHubShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsLinkedHubShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubShowSettings ResetSubscription(this AzureIotDpsLinkedHubShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8420,6 +9869,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubUpdateSettings SetSubscription(this AzureIotDpsLinkedHubUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotDpsLinkedHubUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotDpsLinkedHubUpdateSettings ResetSubscription(this AzureIotDpsLinkedHubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotDpsLinkedHubUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8590,6 +10057,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateCreateSettings SetSubscription(this AzureIotHubCertificateCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateCreateSettings ResetSubscription(this AzureIotHubCertificateCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8706,24 +10191,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateDeleteSettings SetHubName(this AzureIotHubCertificateDeleteSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateDeleteSettings ResetHubName(this AzureIotHubCertificateDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateDeleteSettings.Name"/>.</em></p><p>A friendly name for the certificate.</p></summary>
         [Pure]
@@ -8742,6 +10209,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings SetHubName(this AzureIotHubCertificateDeleteSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings ResetHubName(this AzureIotHubCertificateDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings SetIds(this AzureIotHubCertificateDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings SetIds(this AzureIotHubCertificateDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings AddIds(this AzureIotHubCertificateDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings AddIds(this AzureIotHubCertificateDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubCertificateDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings ClearIds(this AzureIotHubCertificateDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings RemoveIds(this AzureIotHubCertificateDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings RemoveIds(this AzureIotHubCertificateDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -8757,6 +10302,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings SetSubscription(this AzureIotHubCertificateDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateDeleteSettings ResetSubscription(this AzureIotHubCertificateDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8876,24 +10439,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateGenerateVerificationCodeSettings SetHubName(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateGenerateVerificationCodeSettings ResetHubName(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Name"/>.</em></p><p>A friendly name for the certificate.</p></summary>
         [Pure]
@@ -8912,6 +10457,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings SetHubName(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings ResetHubName(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings SetIds(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings SetIds(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings AddIds(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings AddIds(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings ClearIds(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings RemoveIds(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings RemoveIds(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -8927,6 +10550,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings SetSubscription(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateGenerateVerificationCodeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateGenerateVerificationCodeSettings ResetSubscription(this AzureIotHubCertificateGenerateVerificationCodeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9046,6 +10687,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings SetIds(this AzureIotHubCertificateListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings SetIds(this AzureIotHubCertificateListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings AddIds(this AzureIotHubCertificateListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings AddIds(this AzureIotHubCertificateListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubCertificateListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings ClearIds(this AzureIotHubCertificateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings RemoveIds(this AzureIotHubCertificateListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings RemoveIds(this AzureIotHubCertificateListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -9061,6 +10762,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings SetSubscription(this AzureIotHubCertificateListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateListSettings ResetSubscription(this AzureIotHubCertificateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9162,24 +10881,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubCertificateShowSettingsExtensions
     {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateShowSettings SetHubName(this AzureIotHubCertificateShowSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateShowSettings ResetHubName(this AzureIotHubCertificateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateShowSettings.Name"/>.</em></p><p>A friendly name for the certificate.</p></summary>
         [Pure]
@@ -9198,6 +10899,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings SetHubName(this AzureIotHubCertificateShowSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings ResetHubName(this AzureIotHubCertificateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings SetIds(this AzureIotHubCertificateShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings SetIds(this AzureIotHubCertificateShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings AddIds(this AzureIotHubCertificateShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings AddIds(this AzureIotHubCertificateShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubCertificateShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings ClearIds(this AzureIotHubCertificateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings RemoveIds(this AzureIotHubCertificateShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings RemoveIds(this AzureIotHubCertificateShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -9213,6 +10992,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings SetSubscription(this AzureIotHubCertificateShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateShowSettings ResetSubscription(this AzureIotHubCertificateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9332,24 +11129,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateUpdateSettings SetHubName(this AzureIotHubCertificateUpdateSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateUpdateSettings ResetHubName(this AzureIotHubCertificateUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateUpdateSettings.Name"/>.</em></p><p>A friendly name for the certificate.</p></summary>
         [Pure]
@@ -9386,6 +11165,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings SetHubName(this AzureIotHubCertificateUpdateSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings ResetHubName(this AzureIotHubCertificateUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings SetIds(this AzureIotHubCertificateUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings SetIds(this AzureIotHubCertificateUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings AddIds(this AzureIotHubCertificateUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings AddIds(this AzureIotHubCertificateUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubCertificateUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings ClearIds(this AzureIotHubCertificateUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings RemoveIds(this AzureIotHubCertificateUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings RemoveIds(this AzureIotHubCertificateUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -9401,6 +11258,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings SetSubscription(this AzureIotHubCertificateUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateUpdateSettings ResetSubscription(this AzureIotHubCertificateUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9520,24 +11395,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateVerifySettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateVerifySettings SetHubName(this AzureIotHubCertificateVerifySettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateVerifySettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubCertificateVerifySettings ResetHubName(this AzureIotHubCertificateVerifySettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateVerifySettings.Name"/>.</em></p><p>A friendly name for the certificate.</p></summary>
         [Pure]
@@ -9574,6 +11431,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateVerifySettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings SetHubName(this AzureIotHubCertificateVerifySettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateVerifySettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings ResetHubName(this AzureIotHubCertificateVerifySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateVerifySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings SetIds(this AzureIotHubCertificateVerifySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateVerifySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings SetIds(this AzureIotHubCertificateVerifySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateVerifySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings AddIds(this AzureIotHubCertificateVerifySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubCertificateVerifySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings AddIds(this AzureIotHubCertificateVerifySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubCertificateVerifySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings ClearIds(this AzureIotHubCertificateVerifySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateVerifySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings RemoveIds(this AzureIotHubCertificateVerifySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubCertificateVerifySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings RemoveIds(this AzureIotHubCertificateVerifySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubCertificateVerifySettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -9589,6 +11524,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubCertificateVerifySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings SetSubscription(this AzureIotHubCertificateVerifySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubCertificateVerifySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubCertificateVerifySettings ResetSubscription(this AzureIotHubCertificateVerifySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9684,1106 +11637,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureIotHubConsumerGroupCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubConsumerGroupCreateSettingsExtensions
-    {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetName(this AzureIotHubConsumerGroupCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetName(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EventHubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetEventHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings, string eventHubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = eventHubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetEventHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetResourceGroup(this AzureIotHubConsumerGroupCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetResourceGroup(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetDebug(this AzureIotHubConsumerGroupCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetDebug(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetHelp(this AzureIotHubConsumerGroupCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetHelp(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetOutput(this AzureIotHubConsumerGroupCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetOutput(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetQuery(this AzureIotHubConsumerGroupCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetQuery(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings SetVerbose(this AzureIotHubConsumerGroupCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupCreateSettings ResetVerbose(this AzureIotHubConsumerGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureIotHubConsumerGroupDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubConsumerGroupDeleteSettingsExtensions
-    {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetName(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetName(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EventHubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetEventHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string eventHubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = eventHubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetEventHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetResourceGroup(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetResourceGroup(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetDebug(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetDebug(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetHelp(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetHelp(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetOutput(this AzureIotHubConsumerGroupDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetOutput(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetQuery(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetQuery(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings SetVerbose(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupDeleteSettings ResetVerbose(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureIotHubConsumerGroupListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubConsumerGroupListSettingsExtensions
-    {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetHubName(this AzureIotHubConsumerGroupListSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetHubName(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EventHubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetEventHubName(this AzureIotHubConsumerGroupListSettings toolSettings, string eventHubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = eventHubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetEventHubName(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetResourceGroup(this AzureIotHubConsumerGroupListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetResourceGroup(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetDebug(this AzureIotHubConsumerGroupListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetDebug(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetHelp(this AzureIotHubConsumerGroupListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetHelp(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetOutput(this AzureIotHubConsumerGroupListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetOutput(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetQuery(this AzureIotHubConsumerGroupListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetQuery(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings SetVerbose(this AzureIotHubConsumerGroupListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupListSettings ResetVerbose(this AzureIotHubConsumerGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureIotHubConsumerGroupShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubConsumerGroupShowSettingsExtensions
-    {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetHubName(this AzureIotHubConsumerGroupShowSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetHubName(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetName(this AzureIotHubConsumerGroupShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetName(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EventHubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetEventHubName(this AzureIotHubConsumerGroupShowSettings toolSettings, string eventHubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = eventHubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetEventHubName(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventHubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetResourceGroup(this AzureIotHubConsumerGroupShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetResourceGroup(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetDebug(this AzureIotHubConsumerGroupShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetDebug(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetHelp(this AzureIotHubConsumerGroupShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetHelp(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetOutput(this AzureIotHubConsumerGroupShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetOutput(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetQuery(this AzureIotHubConsumerGroupShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetQuery(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings SetVerbose(this AzureIotHubConsumerGroupShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubConsumerGroupShowSettings ResetVerbose(this AzureIotHubConsumerGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureIotHubJobCancelSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubJobCancelSettingsExtensions
-    {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetHubName(this AzureIotHubJobCancelSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetHubName(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region JobId
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetJobId(this AzureIotHubJobCancelSettings toolSettings, string jobId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JobId = jobId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetJobId(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JobId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetResourceGroup(this AzureIotHubJobCancelSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetResourceGroup(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetDebug(this AzureIotHubJobCancelSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetDebug(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetHelp(this AzureIotHubJobCancelSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetHelp(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetOutput(this AzureIotHubJobCancelSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetOutput(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetQuery(this AzureIotHubJobCancelSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetQuery(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings SetVerbose(this AzureIotHubJobCancelSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobCancelSettings ResetVerbose(this AzureIotHubJobCancelSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureIotHubJobListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubJobListSettingsExtensions
-    {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings SetHubName(this AzureIotHubJobListSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings ResetHubName(this AzureIotHubJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings SetResourceGroup(this AzureIotHubJobListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings ResetResourceGroup(this AzureIotHubJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings SetDebug(this AzureIotHubJobListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings ResetDebug(this AzureIotHubJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings SetHelp(this AzureIotHubJobListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings ResetHelp(this AzureIotHubJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings SetOutput(this AzureIotHubJobListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings ResetOutput(this AzureIotHubJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings SetQuery(this AzureIotHubJobListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings ResetQuery(this AzureIotHubJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings SetVerbose(this AzureIotHubJobListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobListSettings ResetVerbose(this AzureIotHubJobListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureIotHubJobShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubJobShowSettingsExtensions
-    {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetHubName(this AzureIotHubJobShowSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetHubName(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region JobId
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetJobId(this AzureIotHubJobShowSettings toolSettings, string jobId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JobId = jobId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetJobId(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.JobId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetResourceGroup(this AzureIotHubJobShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetResourceGroup(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetDebug(this AzureIotHubJobShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetDebug(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetHelp(this AzureIotHubJobShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetHelp(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetOutput(this AzureIotHubJobShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetOutput(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetQuery(this AzureIotHubJobShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetQuery(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings SetVerbose(this AzureIotHubJobShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubJobShowSettings ResetVerbose(this AzureIotHubJobShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureIotHubPolicyCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
@@ -10859,6 +11712,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyCreateSettings SetSubscription(this AzureIotHubPolicyCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubPolicyCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyCreateSettings ResetSubscription(this AzureIotHubPolicyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10978,6 +11849,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings SetIds(this AzureIotHubPolicyDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings SetIds(this AzureIotHubPolicyDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubPolicyDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings AddIds(this AzureIotHubPolicyDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubPolicyDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings AddIds(this AzureIotHubPolicyDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubPolicyDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings ClearIds(this AzureIotHubPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubPolicyDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings RemoveIds(this AzureIotHubPolicyDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubPolicyDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings RemoveIds(this AzureIotHubPolicyDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubPolicyDeleteSettings.Name"/>.</em></p><p>Shared access policy name.</p></summary>
         [Pure]
@@ -11011,6 +11942,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings SetSubscription(this AzureIotHubPolicyDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubPolicyDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyDeleteSettings ResetSubscription(this AzureIotHubPolicyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11130,6 +12079,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings SetIds(this AzureIotHubPolicyListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings SetIds(this AzureIotHubPolicyListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubPolicyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings AddIds(this AzureIotHubPolicyListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubPolicyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings AddIds(this AzureIotHubPolicyListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubPolicyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings ClearIds(this AzureIotHubPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubPolicyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings RemoveIds(this AzureIotHubPolicyListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubPolicyListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings RemoveIds(this AzureIotHubPolicyListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubPolicyListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -11145,6 +12154,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings SetSubscription(this AzureIotHubPolicyListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubPolicyListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyListSettings ResetSubscription(this AzureIotHubPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11264,6 +12291,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings SetIds(this AzureIotHubPolicyShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings SetIds(this AzureIotHubPolicyShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubPolicyShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings AddIds(this AzureIotHubPolicyShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubPolicyShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings AddIds(this AzureIotHubPolicyShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubPolicyShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings ClearIds(this AzureIotHubPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubPolicyShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings RemoveIds(this AzureIotHubPolicyShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubPolicyShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings RemoveIds(this AzureIotHubPolicyShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubPolicyShowSettings.Name"/>.</em></p><p>Shared access policy name.</p></summary>
         [Pure]
@@ -11297,6 +12384,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubPolicyShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings SetSubscription(this AzureIotHubPolicyShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubPolicyShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubPolicyShowSettings ResetSubscription(this AzureIotHubPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11384,6 +12489,1888 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureIotHubPolicyShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureIotHubPolicyShowSettings ResetVerbose(this AzureIotHubPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointCreateSettingsExtensions
+    {
+        #region ConnectionString
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.ConnectionString"/>.</em></p><p>Connection string of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetConnectionString(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string connectionString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = connectionString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.ConnectionString"/>.</em></p><p>Connection string of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetConnectionString(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ConnectionString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointName(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointName(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointResourceGroup"/>.</em></p><p>Resource group of the Endpoint resoure.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointResourceGroup = endpointResourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointResourceGroup"/>.</em></p><p>Resource group of the Endpoint resoure.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointSubscriptionId
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointSubscriptionId"/>.</em></p><p>SubscriptionId of the Endpoint resource.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointSubscriptionId(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointSubscriptionId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointSubscriptionId = endpointSubscriptionId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointSubscriptionId"/>.</em></p><p>SubscriptionId of the Endpoint resource.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointSubscriptionId(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointSubscriptionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointType
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointType(this AzureIotHubRoutingEndpointCreateSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = endpointType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointType(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetHubName(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetHubName(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Container
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Container"/>.</em></p><p>Name of the storage container.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetContainer(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string container)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Container = container;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Container"/>.</em></p><p>Name of the storage container.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetContainer(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Container = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetSubscription(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetSubscription(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetDebug(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetDebug(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetHelp(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetHelp(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetOutput(this AzureIotHubRoutingEndpointCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetOutput(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetQuery(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetQuery(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings SetVerbose(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointCreateSettings ResetVerbose(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointDeleteSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetEndpointName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetEndpointName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndpointType
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetEndpointType(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = endpointType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetEndpointType(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetHubName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetHubName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetIds(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetIds(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRoutingEndpointDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings AddIds(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRoutingEndpointDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings AddIds(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRoutingEndpointDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ClearIds(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRoutingEndpointDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings RemoveIds(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRoutingEndpointDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings RemoveIds(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetResourceGroup(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetResourceGroup(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetSubscription(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetSubscription(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetDebug(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetDebug(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetHelp(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetHelp(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetOutput(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetOutput(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetQuery(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetQuery(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings SetVerbose(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointDeleteSettings ResetVerbose(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointListSettingsExtensions
+    {
+        #region EndpointType
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetEndpointType(this AzureIotHubRoutingEndpointListSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = endpointType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetEndpointType(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetHubName(this AzureIotHubRoutingEndpointListSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetHubName(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetIds(this AzureIotHubRoutingEndpointListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetIds(this AzureIotHubRoutingEndpointListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRoutingEndpointListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings AddIds(this AzureIotHubRoutingEndpointListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRoutingEndpointListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings AddIds(this AzureIotHubRoutingEndpointListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRoutingEndpointListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ClearIds(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRoutingEndpointListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings RemoveIds(this AzureIotHubRoutingEndpointListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRoutingEndpointListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings RemoveIds(this AzureIotHubRoutingEndpointListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetResourceGroup(this AzureIotHubRoutingEndpointListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetResourceGroup(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetSubscription(this AzureIotHubRoutingEndpointListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetSubscription(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetDebug(this AzureIotHubRoutingEndpointListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetDebug(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetHelp(this AzureIotHubRoutingEndpointListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetHelp(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetOutput(this AzureIotHubRoutingEndpointListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetOutput(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetQuery(this AzureIotHubRoutingEndpointListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetQuery(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings SetVerbose(this AzureIotHubRoutingEndpointListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointListSettings ResetVerbose(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubRoutingEndpointShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubRoutingEndpointShowSettingsExtensions
+    {
+        #region EndpointName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetEndpointName(this AzureIotHubRoutingEndpointShowSettings toolSettings, string endpointName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = endpointName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetEndpointName(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndpointName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetHubName(this AzureIotHubRoutingEndpointShowSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetHubName(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetIds(this AzureIotHubRoutingEndpointShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetIds(this AzureIotHubRoutingEndpointShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRoutingEndpointShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings AddIds(this AzureIotHubRoutingEndpointShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRoutingEndpointShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings AddIds(this AzureIotHubRoutingEndpointShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRoutingEndpointShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ClearIds(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRoutingEndpointShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings RemoveIds(this AzureIotHubRoutingEndpointShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRoutingEndpointShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings RemoveIds(this AzureIotHubRoutingEndpointShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetResourceGroup(this AzureIotHubRoutingEndpointShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetResourceGroup(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetSubscription(this AzureIotHubRoutingEndpointShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetSubscription(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetDebug(this AzureIotHubRoutingEndpointShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetDebug(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetHelp(this AzureIotHubRoutingEndpointShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetHelp(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetOutput(this AzureIotHubRoutingEndpointShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetOutput(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetQuery(this AzureIotHubRoutingEndpointShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetQuery(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings SetVerbose(this AzureIotHubRoutingEndpointShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubRoutingEndpointShowSettings ResetVerbose(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubConsumerGroupCreateSettingsExtensions
+    {
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetName(this AzureIotHubConsumerGroupCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetName(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EventHubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetEventHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings, string eventHubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = eventHubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetEventHubName(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetResourceGroup(this AzureIotHubConsumerGroupCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetResourceGroup(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetSubscription(this AzureIotHubConsumerGroupCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetSubscription(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetDebug(this AzureIotHubConsumerGroupCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetDebug(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetHelp(this AzureIotHubConsumerGroupCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetHelp(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetOutput(this AzureIotHubConsumerGroupCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetOutput(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetQuery(this AzureIotHubConsumerGroupCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetQuery(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings SetVerbose(this AzureIotHubConsumerGroupCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupCreateSettings ResetVerbose(this AzureIotHubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubConsumerGroupDeleteSettingsExtensions
+    {
+        #region EventHubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetEventHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string eventHubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = eventHubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetEventHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetHubName(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetIds(this AzureIotHubConsumerGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetIds(this AzureIotHubConsumerGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings AddIds(this AzureIotHubConsumerGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings AddIds(this AzureIotHubConsumerGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ClearIds(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings RemoveIds(this AzureIotHubConsumerGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings RemoveIds(this AzureIotHubConsumerGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetName(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetName(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetResourceGroup(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetResourceGroup(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetSubscription(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetSubscription(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetDebug(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetDebug(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetHelp(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetHelp(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetOutput(this AzureIotHubConsumerGroupDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetOutput(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetQuery(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetQuery(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings SetVerbose(this AzureIotHubConsumerGroupDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupDeleteSettings ResetVerbose(this AzureIotHubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubConsumerGroupListSettingsExtensions
+    {
+        #region EventHubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetEventHubName(this AzureIotHubConsumerGroupListSettings toolSettings, string eventHubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = eventHubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetEventHubName(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetHubName(this AzureIotHubConsumerGroupListSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetHubName(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetIds(this AzureIotHubConsumerGroupListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetIds(this AzureIotHubConsumerGroupListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubConsumerGroupListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings AddIds(this AzureIotHubConsumerGroupListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubConsumerGroupListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings AddIds(this AzureIotHubConsumerGroupListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubConsumerGroupListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ClearIds(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubConsumerGroupListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings RemoveIds(this AzureIotHubConsumerGroupListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubConsumerGroupListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings RemoveIds(this AzureIotHubConsumerGroupListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetResourceGroup(this AzureIotHubConsumerGroupListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetResourceGroup(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetSubscription(this AzureIotHubConsumerGroupListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetSubscription(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetDebug(this AzureIotHubConsumerGroupListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetDebug(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetHelp(this AzureIotHubConsumerGroupListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetHelp(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetOutput(this AzureIotHubConsumerGroupListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetOutput(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetQuery(this AzureIotHubConsumerGroupListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetQuery(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings SetVerbose(this AzureIotHubConsumerGroupListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupListSettings ResetVerbose(this AzureIotHubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureIotHubConsumerGroupShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureIotHubConsumerGroupShowSettingsExtensions
+    {
+        #region EventHubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetEventHubName(this AzureIotHubConsumerGroupShowSettings toolSettings, string eventHubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = eventHubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.EventHubName"/>.</em></p><p>Event hub endpoint name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetEventHubName(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventHubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetHubName(this AzureIotHubConsumerGroupShowSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetHubName(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetIds(this AzureIotHubConsumerGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetIds(this AzureIotHubConsumerGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings AddIds(this AzureIotHubConsumerGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings AddIds(this AzureIotHubConsumerGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ClearIds(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings RemoveIds(this AzureIotHubConsumerGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings RemoveIds(this AzureIotHubConsumerGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetName(this AzureIotHubConsumerGroupShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Name"/>.</em></p><p>Event hub consumer group name.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetName(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetResourceGroup(this AzureIotHubConsumerGroupShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetResourceGroup(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetSubscription(this AzureIotHubConsumerGroupShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetSubscription(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetDebug(this AzureIotHubConsumerGroupShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetDebug(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetHelp(this AzureIotHubConsumerGroupShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetHelp(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetOutput(this AzureIotHubConsumerGroupShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetOutput(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetQuery(this AzureIotHubConsumerGroupShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetQuery(this AzureIotHubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureIotHubConsumerGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings SetVerbose(this AzureIotHubConsumerGroupShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubConsumerGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubConsumerGroupShowSettings ResetVerbose(this AzureIotHubConsumerGroupShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11548,6 +14535,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings SetSubscription(this AzureIotHubRouteCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteCreateSettings ResetSubscription(this AzureIotHubRouteCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -11646,6 +14651,42 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubRouteDeleteSettingsExtensions
     {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetName(this AzureIotHubRouteDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetName(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings SetSource(this AzureIotHubRouteDeleteSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ResetSource(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
         #region HubName
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -11664,21 +14705,63 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRouteDeleteSettings SetName(this AzureIotHubRouteDeleteSettings toolSettings, string name)
+        public static AzureIotHubRouteDeleteSettings SetIds(this AzureIotHubRouteDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRouteDeleteSettings ResetName(this AzureIotHubRouteDeleteSettings toolSettings)
+        public static AzureIotHubRouteDeleteSettings SetIds(this AzureIotHubRouteDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings AddIds(this AzureIotHubRouteDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings AddIds(this AzureIotHubRouteDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRouteDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings ClearIds(this AzureIotHubRouteDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings RemoveIds(this AzureIotHubRouteDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteDeleteSettings RemoveIds(this AzureIotHubRouteDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -11700,21 +14783,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Source
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRouteDeleteSettings SetSource(this AzureIotHubRouteDeleteSettings toolSettings, IotHubRouteSource source)
+        public static AzureIotHubRouteDeleteSettings SetSubscription(this AzureIotHubRouteDeleteSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Source = source;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRouteDeleteSettings ResetSource(this AzureIotHubRouteDeleteSettings toolSettings)
+        public static AzureIotHubRouteDeleteSettings ResetSubscription(this AzureIotHubRouteDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Source = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11816,6 +14899,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubRouteListSettingsExtensions
     {
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetSource(this AzureIotHubRouteListSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ResetSource(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
         #region HubName
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
@@ -11831,6 +14932,66 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetIds(this AzureIotHubRouteListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings SetIds(this AzureIotHubRouteListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings AddIds(this AzureIotHubRouteListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings AddIds(this AzureIotHubRouteListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRouteListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings ClearIds(this AzureIotHubRouteListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings RemoveIds(this AzureIotHubRouteListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteListSettings RemoveIds(this AzureIotHubRouteListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -11852,21 +15013,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Source
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRouteListSettings SetSource(this AzureIotHubRouteListSettings toolSettings, IotHubRouteSource source)
+        public static AzureIotHubRouteListSettings SetSubscription(this AzureIotHubRouteListSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Source = source;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRouteListSettings ResetSource(this AzureIotHubRouteListSettings toolSettings)
+        public static AzureIotHubRouteListSettings ResetSubscription(this AzureIotHubRouteListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Source = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11968,24 +15129,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubRouteShowSettingsExtensions
     {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteShowSettings SetHubName(this AzureIotHubRouteShowSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteShowSettings ResetHubName(this AzureIotHubRouteShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
         [Pure]
@@ -12004,6 +15147,84 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetHubName(this AzureIotHubRouteShowSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetHubName(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetIds(this AzureIotHubRouteShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetIds(this AzureIotHubRouteShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings AddIds(this AzureIotHubRouteShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings AddIds(this AzureIotHubRouteShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRouteShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ClearIds(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings RemoveIds(this AzureIotHubRouteShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings RemoveIds(this AzureIotHubRouteShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -12019,6 +15240,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings SetSubscription(this AzureIotHubRouteShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteShowSettings ResetSubscription(this AzureIotHubRouteShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -12120,24 +15359,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubRouteTestSettingsExtensions
     {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteTestSettings SetHubName(this AzureIotHubRouteTestSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteTestSettings ResetHubName(this AzureIotHubRouteTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Ap
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Ap"/>.</em></p><p>App properties of the route message.</p></summary>
         [Pure]
@@ -12192,24 +15413,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteTestSettings SetResourceGroup(this AzureIotHubRouteTestSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteTestSettings ResetResourceGroup(this AzureIotHubRouteTestSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Source
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
         [Pure]
@@ -12243,6 +15446,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Sp = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetHubName(this AzureIotHubRouteTestSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetHubName(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetIds(this AzureIotHubRouteTestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetIds(this AzureIotHubRouteTestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings AddIds(this AzureIotHubRouteTestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings AddIds(this AzureIotHubRouteTestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRouteTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ClearIds(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings RemoveIds(this AzureIotHubRouteTestSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteTestSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings RemoveIds(this AzureIotHubRouteTestSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetResourceGroup(this AzureIotHubRouteTestSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetResourceGroup(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteTestSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings SetSubscription(this AzureIotHubRouteTestSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteTestSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteTestSettings ResetSubscription(this AzureIotHubRouteTestSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -12344,24 +15661,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureIotHubRouteUpdateSettingsExtensions
     {
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteUpdateSettings SetHubName(this AzureIotHubRouteUpdateSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRouteUpdateSettings ResetHubName(this AzureIotHubRouteUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Name"/>.</em></p><p>Name of the Route.</p></summary>
         [Pure]
@@ -12458,6 +15757,102 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Source
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetSource(this AzureIotHubRouteUpdateSettings toolSettings, IotHubRouteSource source)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = source;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetSource(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Source = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HubName
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetHubName(this AzureIotHubRouteUpdateSettings toolSettings, string hubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = hubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ResetHubName(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetIds(this AzureIotHubRouteUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings SetIds(this AzureIotHubRouteUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings AddIds(this AzureIotHubRouteUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubRouteUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings AddIds(this AzureIotHubRouteUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubRouteUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings ClearIds(this AzureIotHubRouteUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings RemoveIds(this AzureIotHubRouteUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubRouteUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubRouteUpdateSettings RemoveIds(this AzureIotHubRouteUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -12476,21 +15871,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Source
-        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubRouteUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRouteUpdateSettings SetSource(this AzureIotHubRouteUpdateSettings toolSettings, IotHubRouteSource source)
+        public static AzureIotHubRouteUpdateSettings SetSubscription(this AzureIotHubRouteUpdateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Source = source;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Source"/>.</em></p><p>Source of the route.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubRouteUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRouteUpdateSettings ResetSource(this AzureIotHubRouteUpdateSettings toolSettings)
+        public static AzureIotHubRouteUpdateSettings ResetSubscription(this AzureIotHubRouteUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Source = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -12586,168 +15981,156 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureIotHubRoutingEndpointCreateSettingsExtensions
+    #region AzureIotHubJobCancelSettingsExtensions
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubRoutingEndpointCreateSettingsExtensions
+    public static partial class AzureIotHubJobCancelSettingsExtensions
     {
-        #region ConnectionString
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.ConnectionString"/>.</em></p><p>Connection string of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetConnectionString(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string connectionString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionString = connectionString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.ConnectionString"/>.</em></p><p>Connection string of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetConnectionString(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ConnectionString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointName(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointName(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndpointResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointResourceGroup"/>.</em></p><p>Resource group of the Endpoint resoure.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointResourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointResourceGroup = endpointResourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointResourceGroup"/>.</em></p><p>Resource group of the Endpoint resoure.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndpointSubscriptionId
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointSubscriptionId"/>.</em></p><p>SubscriptionId of the Endpoint resource.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointSubscriptionId(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string endpointSubscriptionId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointSubscriptionId = endpointSubscriptionId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointSubscriptionId"/>.</em></p><p>SubscriptionId of the Endpoint resource.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointSubscriptionId(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointSubscriptionId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndpointType
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetEndpointType(this AzureIotHubRoutingEndpointCreateSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointType = endpointType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetEndpointType(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointType = null;
-            return toolSettings;
-        }
-        #endregion
         #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetHubName(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string hubName)
+        public static AzureIotHubJobCancelSettings SetHubName(this AzureIotHubJobCancelSettings toolSettings, string hubName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HubName = hubName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetHubName(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings ResetHubName(this AzureIotHubJobCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HubName = null;
             return toolSettings;
         }
         #endregion
-        #region Container
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Container"/>.</em></p><p>Name of the storage container.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetContainer(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string container)
+        public static AzureIotHubJobCancelSettings SetIds(this AzureIotHubJobCancelSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Container = container;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Container"/>.</em></p><p>Name of the storage container.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetContainer(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings SetIds(this AzureIotHubJobCancelSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Container = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubJobCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings AddIds(this AzureIotHubJobCancelSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubJobCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings AddIds(this AzureIotHubJobCancelSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubJobCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings ClearIds(this AzureIotHubJobCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubJobCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings RemoveIds(this AzureIotHubJobCancelSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubJobCancelSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings RemoveIds(this AzureIotHubJobCancelSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region JobId
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings SetJobId(this AzureIotHubJobCancelSettings toolSettings, string jobId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JobId = jobId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings ResetJobId(this AzureIotHubJobCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JobId = null;
             return toolSettings;
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string resourceGroup)
+        public static AzureIotHubJobCancelSettings SetResourceGroup(this AzureIotHubJobCancelSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetResourceGroup(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings ResetResourceGroup(this AzureIotHubJobCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetDebug(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string debug)
+        public static AzureIotHubJobCancelSettings SetSubscription(this AzureIotHubJobCancelSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings ResetSubscription(this AzureIotHubJobCancelSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubJobCancelSettings SetDebug(this AzureIotHubJobCancelSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetDebug(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings ResetDebug(this AzureIotHubJobCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12755,17 +16138,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetHelp(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string help)
+        public static AzureIotHubJobCancelSettings SetHelp(this AzureIotHubJobCancelSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetHelp(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings ResetHelp(this AzureIotHubJobCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12773,17 +16156,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetOutput(this AzureIotHubRoutingEndpointCreateSettings toolSettings, AzureOutput output)
+        public static AzureIotHubJobCancelSettings SetOutput(this AzureIotHubJobCancelSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetOutput(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings ResetOutput(this AzureIotHubJobCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12791,17 +16174,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetQuery(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string query)
+        public static AzureIotHubJobCancelSettings SetQuery(this AzureIotHubJobCancelSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetQuery(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings ResetQuery(this AzureIotHubJobCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12809,17 +16192,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings SetVerbose(this AzureIotHubRoutingEndpointCreateSettings toolSettings, string verbose)
+        public static AzureIotHubJobCancelSettings SetVerbose(this AzureIotHubJobCancelSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobCancelSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointCreateSettings ResetVerbose(this AzureIotHubRoutingEndpointCreateSettings toolSettings)
+        public static AzureIotHubJobCancelSettings ResetVerbose(this AzureIotHubJobCancelSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12828,96 +16211,138 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureIotHubRoutingEndpointDeleteSettingsExtensions
+    #region AzureIotHubJobListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubRoutingEndpointDeleteSettingsExtensions
+    public static partial class AzureIotHubJobListSettingsExtensions
     {
         #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetHubName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string hubName)
+        public static AzureIotHubJobListSettings SetHubName(this AzureIotHubJobListSettings toolSettings, string hubName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HubName = hubName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetHubName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings ResetHubName(this AzureIotHubJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HubName = null;
             return toolSettings;
         }
         #endregion
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetEndpointName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string endpointName)
+        public static AzureIotHubJobListSettings SetIds(this AzureIotHubJobListSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetEndpointName(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings SetIds(this AzureIotHubJobListSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        #endregion
-        #region EndpointType
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubJobListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetEndpointType(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        public static AzureIotHubJobListSettings AddIds(this AzureIotHubJobListSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointType = endpointType;
+            toolSettings.IdsInternal.AddRange(ids);
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubJobListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetEndpointType(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings AddIds(this AzureIotHubJobListSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointType = null;
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubJobListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobListSettings ClearIds(this AzureIotHubJobListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubJobListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobListSettings RemoveIds(this AzureIotHubJobListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubJobListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobListSettings RemoveIds(this AzureIotHubJobListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetResourceGroup(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string resourceGroup)
+        public static AzureIotHubJobListSettings SetResourceGroup(this AzureIotHubJobListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetResourceGroup(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings ResetResourceGroup(this AzureIotHubJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetDebug(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string debug)
+        public static AzureIotHubJobListSettings SetSubscription(this AzureIotHubJobListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubJobListSettings ResetSubscription(this AzureIotHubJobListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubJobListSettings SetDebug(this AzureIotHubJobListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetDebug(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings ResetDebug(this AzureIotHubJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -12925,17 +16350,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetHelp(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string help)
+        public static AzureIotHubJobListSettings SetHelp(this AzureIotHubJobListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetHelp(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings ResetHelp(this AzureIotHubJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -12943,17 +16368,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetOutput(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, AzureOutput output)
+        public static AzureIotHubJobListSettings SetOutput(this AzureIotHubJobListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetOutput(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings ResetOutput(this AzureIotHubJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -12961,17 +16386,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetQuery(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string query)
+        public static AzureIotHubJobListSettings SetQuery(this AzureIotHubJobListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetQuery(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings ResetQuery(this AzureIotHubJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -12979,17 +16404,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings SetVerbose(this AzureIotHubRoutingEndpointDeleteSettings toolSettings, string verbose)
+        public static AzureIotHubJobListSettings SetVerbose(this AzureIotHubJobListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointDeleteSettings ResetVerbose(this AzureIotHubRoutingEndpointDeleteSettings toolSettings)
+        public static AzureIotHubJobListSettings ResetVerbose(this AzureIotHubJobListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12998,78 +16423,156 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureIotHubRoutingEndpointListSettingsExtensions
+    #region AzureIotHubJobShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubRoutingEndpointListSettingsExtensions
+    public static partial class AzureIotHubJobShowSettingsExtensions
     {
         #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetHubName(this AzureIotHubRoutingEndpointListSettings toolSettings, string hubName)
+        public static AzureIotHubJobShowSettings SetHubName(this AzureIotHubJobShowSettings toolSettings, string hubName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HubName = hubName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetHubName(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        public static AzureIotHubJobShowSettings ResetHubName(this AzureIotHubJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HubName = null;
             return toolSettings;
         }
         #endregion
-        #region EndpointType
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetEndpointType(this AzureIotHubRoutingEndpointListSettings toolSettings, IotHubRoutingEndpointEndpointType endpointType)
+        public static AzureIotHubJobShowSettings SetIds(this AzureIotHubJobShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointType = endpointType;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.EndpointType"/>.</em></p><p>Type of the Routing Endpoint.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetEndpointType(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        public static AzureIotHubJobShowSettings SetIds(this AzureIotHubJobShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointType = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings AddIds(this AzureIotHubJobShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureIotHubJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings AddIds(this AzureIotHubJobShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureIotHubJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings ClearIds(this AzureIotHubJobShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings RemoveIds(this AzureIotHubJobShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureIotHubJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings RemoveIds(this AzureIotHubJobShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region JobId
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings SetJobId(this AzureIotHubJobShowSettings toolSettings, string jobId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JobId = jobId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.JobId"/>.</em></p><p>Job Id.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings ResetJobId(this AzureIotHubJobShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.JobId = null;
             return toolSettings;
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetResourceGroup(this AzureIotHubRoutingEndpointListSettings toolSettings, string resourceGroup)
+        public static AzureIotHubJobShowSettings SetResourceGroup(this AzureIotHubJobShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetResourceGroup(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        public static AzureIotHubJobShowSettings ResetResourceGroup(this AzureIotHubJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetDebug(this AzureIotHubRoutingEndpointListSettings toolSettings, string debug)
+        public static AzureIotHubJobShowSettings SetSubscription(this AzureIotHubJobShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings ResetSubscription(this AzureIotHubJobShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureIotHubJobShowSettings SetDebug(this AzureIotHubJobShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetDebug(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        public static AzureIotHubJobShowSettings ResetDebug(this AzureIotHubJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -13077,17 +16580,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetHelp(this AzureIotHubRoutingEndpointListSettings toolSettings, string help)
+        public static AzureIotHubJobShowSettings SetHelp(this AzureIotHubJobShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetHelp(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        public static AzureIotHubJobShowSettings ResetHelp(this AzureIotHubJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -13095,17 +16598,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetOutput(this AzureIotHubRoutingEndpointListSettings toolSettings, AzureOutput output)
+        public static AzureIotHubJobShowSettings SetOutput(this AzureIotHubJobShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetOutput(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        public static AzureIotHubJobShowSettings ResetOutput(this AzureIotHubJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -13113,17 +16616,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetQuery(this AzureIotHubRoutingEndpointListSettings toolSettings, string query)
+        public static AzureIotHubJobShowSettings SetQuery(this AzureIotHubJobShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetQuery(this AzureIotHubRoutingEndpointListSettings toolSettings)
+        public static AzureIotHubJobShowSettings ResetQuery(this AzureIotHubJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -13131,169 +16634,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureIotHubJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings SetVerbose(this AzureIotHubRoutingEndpointListSettings toolSettings, string verbose)
+        public static AzureIotHubJobShowSettings SetVerbose(this AzureIotHubJobShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureIotHubJobShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureIotHubRoutingEndpointListSettings ResetVerbose(this AzureIotHubRoutingEndpointListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureIotHubRoutingEndpointShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureIotHubRoutingEndpointShowSettingsExtensions
-    {
-        #region EndpointName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetEndpointName(this AzureIotHubRoutingEndpointShowSettings toolSettings, string endpointName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = endpointName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.EndpointName"/>.</em></p><p>Name of the Routing Endpoint.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetEndpointName(this AzureIotHubRoutingEndpointShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndpointName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region HubName
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetHubName(this AzureIotHubRoutingEndpointShowSettings toolSettings, string hubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = hubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.HubName"/>.</em></p><p>IoT Hub name.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetHubName(this AzureIotHubRoutingEndpointShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetResourceGroup(this AzureIotHubRoutingEndpointShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetResourceGroup(this AzureIotHubRoutingEndpointShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetDebug(this AzureIotHubRoutingEndpointShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetDebug(this AzureIotHubRoutingEndpointShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetHelp(this AzureIotHubRoutingEndpointShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetHelp(this AzureIotHubRoutingEndpointShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetOutput(this AzureIotHubRoutingEndpointShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetOutput(this AzureIotHubRoutingEndpointShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetQuery(this AzureIotHubRoutingEndpointShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetQuery(this AzureIotHubRoutingEndpointShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureIotHubRoutingEndpointShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings SetVerbose(this AzureIotHubRoutingEndpointShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureIotHubRoutingEndpointShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureIotHubRoutingEndpointShowSettings ResetVerbose(this AzureIotHubRoutingEndpointShowSettings toolSettings)
+        public static AzureIotHubJobShowSettings ResetVerbose(this AzureIotHubJobShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -13354,6 +16705,19 @@ namespace Nuke.Azure
         public static IotDpsAccessPolicyRights serviceconfig = new IotDpsAccessPolicyRights { Value = "serviceconfig" };
     }
     #endregion
+    #region IotHubRoutingEndpointEndpointType
+    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class IotHubRoutingEndpointEndpointType : Enumeration
+    {
+        public static IotHubRoutingEndpointEndpointType azurestoragecontainer = new IotHubRoutingEndpointEndpointType { Value = "azurestoragecontainer" };
+        public static IotHubRoutingEndpointEndpointType eventhub = new IotHubRoutingEndpointEndpointType { Value = "eventhub" };
+        public static IotHubRoutingEndpointEndpointType servicebusqueue = new IotHubRoutingEndpointEndpointType { Value = "servicebusqueue" };
+        public static IotHubRoutingEndpointEndpointType servicebustopic = new IotHubRoutingEndpointEndpointType { Value = "servicebustopic" };
+    }
+    #endregion
     #region IotHubRouteSource
     /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
     [PublicAPI]
@@ -13366,19 +16730,6 @@ namespace Nuke.Azure
         public static IotHubRouteSource devicemessages = new IotHubRouteSource { Value = "devicemessages" };
         public static IotHubRouteSource invalid = new IotHubRouteSource { Value = "invalid" };
         public static IotHubRouteSource twinchangeevents = new IotHubRouteSource { Value = "twinchangeevents" };
-    }
-    #endregion
-    #region IotHubRoutingEndpointEndpointType
-    /// <summary><p>Used within <see cref="AzureIotTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class IotHubRoutingEndpointEndpointType : Enumeration
-    {
-        public static IotHubRoutingEndpointEndpointType azurestoragecontainer = new IotHubRoutingEndpointEndpointType { Value = "azurestoragecontainer" };
-        public static IotHubRoutingEndpointEndpointType eventhub = new IotHubRoutingEndpointEndpointType { Value = "eventhub" };
-        public static IotHubRoutingEndpointEndpointType servicebusqueue = new IotHubRoutingEndpointEndpointType { Value = "servicebusqueue" };
-        public static IotHubRoutingEndpointEndpointType servicebustopic = new IotHubRoutingEndpointEndpointType { Value = "servicebustopic" };
     }
     #endregion
 }

@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cosmosdb.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cosmosdb/collection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cosmosdb/database.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/cosmosdb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/cosmosdb/database.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/cosmosdb/collection.yml"
   ],
   "name": "AzureCosmosdb",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest",
@@ -21,10 +21,23 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -119,6 +132,12 @@
             "type": "string",
             "format": "--virtual-network-rules {value}",
             "help": "ACL's for virtual network."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -128,6 +147,13 @@
       "definiteArgument": "cosmosdb delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -139,6 +165,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -156,6 +188,13 @@
             "help": "Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -166,6 +205,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -180,6 +225,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -190,6 +241,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -200,6 +258,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -210,6 +274,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -220,6 +291,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -230,6 +307,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -240,6 +324,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -256,6 +346,13 @@
             "help": "The access key to regenerate."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -266,6 +363,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -276,6 +379,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -286,6 +396,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -295,18 +411,6 @@
       "definiteArgument": "cosmosdb update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Cosmos DB database account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "Capabilities",
             "type": "string",
@@ -324,6 +428,12 @@
             "type": "bool",
             "format": "--enable-automatic-failover",
             "help": "Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account."
+          },
+          {
+            "name": "EnableMultipleWriteLocations",
+            "type": "bool",
+            "format": "--enable-multiple-write-locations",
+            "help": "Enable Multiple Write Locations."
           },
           {
             "name": "EnableVirtualNetwork",
@@ -368,6 +478,245 @@
             "type": "string",
             "format": "--virtual-network-rules {value}",
             "help": "ACL's for virtual network."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseCreate",
+      "definiteArgument": "cosmosdb database create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseDelete",
+      "definiteArgument": "cosmosdb database delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseExists",
+      "definiteArgument": "cosmosdb database exists",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseList",
+      "definiteArgument": "cosmosdb database list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DatabaseShow",
+      "definiteArgument": "cosmosdb database show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DbName",
+            "type": "string",
+            "format": "--db-name {value}",
+            "help": "Database Name."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
+          },
+          {
+            "name": "ResourceGroupName",
+            "type": "string",
+            "format": "--resource-group-name {value}",
+            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
+          },
+          {
+            "name": "UrlConnection",
+            "type": "string",
+            "format": "--url-connection {value}",
+            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -436,6 +785,12 @@
             "type": "string",
             "format": "--url-connection {value}",
             "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -480,6 +835,12 @@
             "type": "string",
             "format": "--url-connection {value}",
             "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -524,6 +885,12 @@
             "type": "string",
             "format": "--url-connection {value}",
             "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -562,6 +929,12 @@
             "type": "string",
             "format": "--url-connection {value}",
             "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -606,6 +979,12 @@
             "type": "string",
             "format": "--url-connection {value}",
             "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -668,190 +1047,12 @@
             "type": "string",
             "format": "--url-connection {value}",
             "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DatabaseCreate",
-      "definiteArgument": "cosmosdb database create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DbName",
-            "type": "string",
-            "format": "--db-name {value}",
-            "help": "Database Name."
           },
           {
-            "name": "Key",
+            "name": "Subscription",
             "type": "string",
-            "format": "--key {value}",
-            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
-          },
-          {
-            "name": "ResourceGroupName",
-            "type": "string",
-            "format": "--resource-group-name {value}",
-            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
-          },
-          {
-            "name": "UrlConnection",
-            "type": "string",
-            "format": "--url-connection {value}",
-            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DatabaseDelete",
-      "definiteArgument": "cosmosdb database delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DbName",
-            "type": "string",
-            "format": "--db-name {value}",
-            "help": "Database Name."
-          },
-          {
-            "name": "Key",
-            "type": "string",
-            "format": "--key {value}",
-            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
-          },
-          {
-            "name": "ResourceGroupName",
-            "type": "string",
-            "format": "--resource-group-name {value}",
-            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
-          },
-          {
-            "name": "UrlConnection",
-            "type": "string",
-            "format": "--url-connection {value}",
-            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DatabaseExists",
-      "definiteArgument": "cosmosdb database exists",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DbName",
-            "type": "string",
-            "format": "--db-name {value}",
-            "help": "Database Name."
-          },
-          {
-            "name": "Key",
-            "type": "string",
-            "format": "--key {value}",
-            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
-          },
-          {
-            "name": "ResourceGroupName",
-            "type": "string",
-            "format": "--resource-group-name {value}",
-            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
-          },
-          {
-            "name": "UrlConnection",
-            "type": "string",
-            "format": "--url-connection {value}",
-            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DatabaseList",
-      "definiteArgument": "cosmosdb database list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Key",
-            "type": "string",
-            "format": "--key {value}",
-            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
-          },
-          {
-            "name": "ResourceGroupName",
-            "type": "string",
-            "format": "--resource-group-name {value}",
-            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
-          },
-          {
-            "name": "UrlConnection",
-            "type": "string",
-            "format": "--url-connection {value}",
-            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DatabaseShow",
-      "definiteArgument": "cosmosdb database show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DbName",
-            "type": "string",
-            "format": "--db-name {value}",
-            "help": "Database Name."
-          },
-          {
-            "name": "Key",
-            "type": "string",
-            "format": "--key {value}",
-            "help": "Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key."
-          },
-          {
-            "name": "ResourceGroupName",
-            "type": "string",
-            "format": "--resource-group-name {value}",
-            "help": "Name of the resource group. Must be used in conjunction with cosmosdb account name."
-          },
-          {
-            "name": "UrlConnection",
-            "type": "string",
-            "format": "--url-connection {value}",
-            "help": "Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

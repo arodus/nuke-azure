@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -124,6 +124,46 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseCreate(Configure<AzureCosmosdbDatabaseCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseDelete(Configure<AzureCosmosdbDatabaseDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseExists(Configure<AzureCosmosdbDatabaseExistsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseExistsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseList(Configure<AzureCosmosdbDatabaseListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseShow(Configure<AzureCosmosdbDatabaseShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureCosmosdbCollectionCreate(Configure<AzureCosmosdbCollectionCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureCosmosdbCollectionCreateSettings());
@@ -171,46 +211,6 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseCreate(Configure<AzureCosmosdbDatabaseCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseDelete(Configure<AzureCosmosdbDatabaseDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseExists(Configure<AzureCosmosdbDatabaseExistsSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseExistsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseList(Configure<AzureCosmosdbDatabaseListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Cosmos DB database accounts.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureCosmosdbDatabaseShow(Configure<AzureCosmosdbDatabaseShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureCosmosdbDatabaseShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
     }
     #region AzureCosmosdbCheckNameExistsSettings
     /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
@@ -221,8 +221,13 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -237,7 +242,9 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb check-name-exists")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -286,6 +293,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>ACL's for virtual network.</p></summary>
         public virtual string VirtualNetworkRules { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -314,6 +323,7 @@ namespace Nuke.Azure
               .Add("--max-staleness-prefix {value}", MaxStalenessPrefix)
               .Add("--tags {value}", Tags)
               .Add("--virtual-network-rules {value}", VirtualNetworkRules)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -332,10 +342,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -350,8 +365,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -373,10 +390,15 @@ namespace Nuke.Azure
         /// <summary><p>Space-separated failover policies in 'regionName=failoverPriority' format. E.g eastus=0 westus=1.</p></summary>
         public virtual IReadOnlyList<string> FailoverPolicies => FailoverPoliciesInternal.AsReadOnly();
         internal List<string> FailoverPoliciesInternal { get; set; } = new List<string>();
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -392,8 +414,10 @@ namespace Nuke.Azure
             arguments
               .Add("cosmosdb failover-priority-change")
               .Add("--failover-policies {value}", FailoverPolicies, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -414,6 +438,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -429,6 +455,7 @@ namespace Nuke.Azure
             arguments
               .Add("cosmosdb list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -447,10 +474,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -465,8 +497,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb list-connection-strings")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -485,10 +519,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -503,8 +542,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb list-keys")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -523,10 +564,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -541,8 +587,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb list-read-only-keys")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -563,10 +611,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
         /// <summary><p>The access key to regenerate.</p></summary>
         public virtual CosmosdbRegenerateKeyKeyKind KeyKind { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -582,8 +635,10 @@ namespace Nuke.Azure
             arguments
               .Add("cosmosdb regenerate-key")
               .Add("--key-kind {value}", KeyKind)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -602,10 +657,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the Cosmos DB database account.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -620,8 +680,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -640,16 +702,14 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
-        /// <summary><p>Name of the Cosmos DB database account.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Set custom capabilities on the Cosmos DB database account.</p></summary>
         public virtual string Capabilities { get; internal set; }
         /// <summary><p>Default consistency level of the Cosmos DB database account.</p></summary>
         public virtual CosmosdbDefaultConsistencyLevel DefaultConsistencyLevel { get; internal set; }
         /// <summary><p>Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.</p></summary>
         public virtual bool? EnableAutomaticFailover { get; internal set; }
+        /// <summary><p>Enable Multiple Write Locations.</p></summary>
+        public virtual bool? EnableMultipleWriteLocations { get; internal set; }
         /// <summary><p>Enables virtual network on the Cosmos DB database account.</p></summary>
         public virtual bool? EnableVirtualNetwork { get; internal set; }
         /// <summary><p>Firewall support. Specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma-separated and must not contain any spaces.</p></summary>
@@ -666,6 +726,15 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>ACL's for virtual network.</p></summary>
         public virtual string VirtualNetworkRules { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the Cosmos DB database account.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -680,11 +749,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cosmosdb update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--capabilities {value}", Capabilities)
               .Add("--default-consistency-level {value}", DefaultConsistencyLevel)
               .Add("--enable-automatic-failover", EnableAutomaticFailover)
+              .Add("--enable-multiple-write-locations", EnableMultipleWriteLocations)
               .Add("--enable-virtual-network", EnableVirtualNetwork)
               .Add("--ip-range-filter {value}", IpRangeFilter, separator: ',')
               .Add("--locations {value}", Locations, separator: ' ')
@@ -692,6 +760,257 @@ namespace Nuke.Azure
               .Add("--max-staleness-prefix {value}", MaxStalenessPrefix)
               .Add("--tags {value}", Tags)
               .Add("--virtual-network-rules {value}", VirtualNetworkRules)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseCreateSettings
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCosmosdbDatabaseCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>Database Name.</p></summary>
+        public virtual string DbName { get; internal set; }
+        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        public virtual string Key { get; internal set; }
+        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        public virtual string ResourceGroupName { get; internal set; }
+        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cosmosdb database create")
+              .Add("--db-name {value}", DbName)
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--resource-group-name {value}", ResourceGroupName)
+              .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseDeleteSettings
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCosmosdbDatabaseDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>Database Name.</p></summary>
+        public virtual string DbName { get; internal set; }
+        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        public virtual string Key { get; internal set; }
+        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        public virtual string ResourceGroupName { get; internal set; }
+        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cosmosdb database delete")
+              .Add("--db-name {value}", DbName)
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--resource-group-name {value}", ResourceGroupName)
+              .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseExistsSettings
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCosmosdbDatabaseExistsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>Database Name.</p></summary>
+        public virtual string DbName { get; internal set; }
+        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        public virtual string Key { get; internal set; }
+        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        public virtual string ResourceGroupName { get; internal set; }
+        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cosmosdb database exists")
+              .Add("--db-name {value}", DbName)
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--resource-group-name {value}", ResourceGroupName)
+              .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseListSettings
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCosmosdbDatabaseListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        public virtual string Key { get; internal set; }
+        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        public virtual string ResourceGroupName { get; internal set; }
+        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cosmosdb database list")
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--resource-group-name {value}", ResourceGroupName)
+              .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseShowSettings
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCosmosdbDatabaseShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
+        /// <summary><p>Database Name.</p></summary>
+        public virtual string DbName { get; internal set; }
+        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        public virtual string Key { get; internal set; }
+        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        public virtual string ResourceGroupName { get; internal set; }
+        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cosmosdb database show")
+              .Add("--db-name {value}", DbName)
+              .Add("--key {value}", Key)
+              .Add("--name {value}", Name)
+              .Add("--resource-group-name {value}", ResourceGroupName)
+              .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -730,6 +1049,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroupName { get; internal set; }
         /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
         public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -754,6 +1075,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group-name {value}", ResourceGroupName)
               .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -784,6 +1106,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroupName { get; internal set; }
         /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
         public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -804,6 +1128,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group-name {value}", ResourceGroupName)
               .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -834,6 +1159,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroupName { get; internal set; }
         /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
         public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -854,6 +1181,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group-name {value}", ResourceGroupName)
               .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -882,6 +1210,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroupName { get; internal set; }
         /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
         public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -901,6 +1231,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group-name {value}", ResourceGroupName)
               .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -931,6 +1262,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroupName { get; internal set; }
         /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
         public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -951,6 +1284,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group-name {value}", ResourceGroupName)
               .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -987,6 +1321,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroupName { get; internal set; }
         /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
         public virtual string UrlConnection { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1010,238 +1346,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group-name {value}", ResourceGroupName)
               .Add("--url-connection {value}", UrlConnection)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseCreateSettings
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCosmosdbDatabaseCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
-        /// <summary><p>Database Name.</p></summary>
-        public virtual string DbName { get; internal set; }
-        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        public virtual string Key { get; internal set; }
-        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        public virtual string ResourceGroupName { get; internal set; }
-        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        public virtual string UrlConnection { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cosmosdb database create")
-              .Add("--db-name {value}", DbName)
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--resource-group-name {value}", ResourceGroupName)
-              .Add("--url-connection {value}", UrlConnection)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseDeleteSettings
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCosmosdbDatabaseDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
-        /// <summary><p>Database Name.</p></summary>
-        public virtual string DbName { get; internal set; }
-        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        public virtual string Key { get; internal set; }
-        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        public virtual string ResourceGroupName { get; internal set; }
-        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        public virtual string UrlConnection { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cosmosdb database delete")
-              .Add("--db-name {value}", DbName)
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--resource-group-name {value}", ResourceGroupName)
-              .Add("--url-connection {value}", UrlConnection)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseExistsSettings
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCosmosdbDatabaseExistsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
-        /// <summary><p>Database Name.</p></summary>
-        public virtual string DbName { get; internal set; }
-        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        public virtual string Key { get; internal set; }
-        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        public virtual string ResourceGroupName { get; internal set; }
-        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        public virtual string UrlConnection { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cosmosdb database exists")
-              .Add("--db-name {value}", DbName)
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--resource-group-name {value}", ResourceGroupName)
-              .Add("--url-connection {value}", UrlConnection)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseListSettings
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCosmosdbDatabaseListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
-        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        public virtual string Key { get; internal set; }
-        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        public virtual string ResourceGroupName { get; internal set; }
-        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        public virtual string UrlConnection { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cosmosdb database list")
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--resource-group-name {value}", ResourceGroupName)
-              .Add("--url-connection {value}", UrlConnection)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseShowSettings
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCosmosdbDatabaseShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureCosmosdb executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureCosmosdbTasks.AzureCosmosdbPath;
-        /// <summary><p>Database Name.</p></summary>
-        public virtual string DbName { get; internal set; }
-        /// <summary><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        public virtual string Key { get; internal set; }
-        /// <summary><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        public virtual string ResourceGroupName { get; internal set; }
-        /// <summary><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        public virtual string UrlConnection { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cosmosdb database show")
-              .Add("--db-name {value}", DbName)
-              .Add("--key {value}", Key)
-              .Add("--name {value}", Name)
-              .Add("--resource-group-name {value}", ResourceGroupName)
-              .Add("--url-connection {value}", UrlConnection)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1257,6 +1362,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCosmosdbCheckNameExistsSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCheckNameExistsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings SetIds(this AzureCosmosdbCheckNameExistsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCheckNameExistsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings SetIds(this AzureCosmosdbCheckNameExistsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbCheckNameExistsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings AddIds(this AzureCosmosdbCheckNameExistsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbCheckNameExistsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings AddIds(this AzureCosmosdbCheckNameExistsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbCheckNameExistsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings ClearIds(this AzureCosmosdbCheckNameExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbCheckNameExistsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings RemoveIds(this AzureCosmosdbCheckNameExistsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbCheckNameExistsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings RemoveIds(this AzureCosmosdbCheckNameExistsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCheckNameExistsSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -1272,6 +1437,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCheckNameExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings SetSubscription(this AzureCosmosdbCheckNameExistsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCheckNameExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCheckNameExistsSettings ResetSubscription(this AzureCosmosdbCheckNameExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1781,6 +1964,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings SetSubscription(this AzureCosmosdbCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCreateSettings ResetSubscription(this AzureCosmosdbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1879,6 +2080,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCosmosdbDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings SetIds(this AzureCosmosdbDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings SetIds(this AzureCosmosdbDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings AddIds(this AzureCosmosdbDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings AddIds(this AzureCosmosdbDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings ClearIds(this AzureCosmosdbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings RemoveIds(this AzureCosmosdbDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings RemoveIds(this AzureCosmosdbDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbDeleteSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -1912,6 +2173,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings SetSubscription(this AzureCosmosdbDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDeleteSettings ResetSubscription(this AzureCosmosdbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2073,6 +2352,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings SetIds(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings SetIds(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings AddIds(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings AddIds(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings ClearIds(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings RemoveIds(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings RemoveIds(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -2106,6 +2445,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings SetSubscription(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbFailoverPriorityChangeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbFailoverPriorityChangeSettings ResetSubscription(this AzureCosmosdbFailoverPriorityChangeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2225,6 +2582,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListSettings SetSubscription(this AzureCosmosdbListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListSettings ResetSubscription(this AzureCosmosdbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2323,6 +2698,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCosmosdbListConnectionStringsSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListConnectionStringsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings SetIds(this AzureCosmosdbListConnectionStringsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListConnectionStringsSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings SetIds(this AzureCosmosdbListConnectionStringsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbListConnectionStringsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings AddIds(this AzureCosmosdbListConnectionStringsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbListConnectionStringsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings AddIds(this AzureCosmosdbListConnectionStringsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbListConnectionStringsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings ClearIds(this AzureCosmosdbListConnectionStringsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbListConnectionStringsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings RemoveIds(this AzureCosmosdbListConnectionStringsSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbListConnectionStringsSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings RemoveIds(this AzureCosmosdbListConnectionStringsSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListConnectionStringsSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -2356,6 +2791,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListConnectionStringsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings SetSubscription(this AzureCosmosdbListConnectionStringsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbListConnectionStringsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListConnectionStringsSettings ResetSubscription(this AzureCosmosdbListConnectionStringsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2457,6 +2910,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCosmosdbListKeysSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings SetIds(this AzureCosmosdbListKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings SetIds(this AzureCosmosdbListKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings AddIds(this AzureCosmosdbListKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings AddIds(this AzureCosmosdbListKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings ClearIds(this AzureCosmosdbListKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings RemoveIds(this AzureCosmosdbListKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbListKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings RemoveIds(this AzureCosmosdbListKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListKeysSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -2490,6 +3003,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings SetSubscription(this AzureCosmosdbListKeysSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbListKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListKeysSettings ResetSubscription(this AzureCosmosdbListKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2591,6 +3122,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCosmosdbListReadOnlyKeysSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListReadOnlyKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings SetIds(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListReadOnlyKeysSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings SetIds(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbListReadOnlyKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings AddIds(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbListReadOnlyKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings AddIds(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbListReadOnlyKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings ClearIds(this AzureCosmosdbListReadOnlyKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbListReadOnlyKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings RemoveIds(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbListReadOnlyKeysSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings RemoveIds(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbListReadOnlyKeysSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -2624,6 +3215,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbListReadOnlyKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings SetSubscription(this AzureCosmosdbListReadOnlyKeysSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbListReadOnlyKeysSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbListReadOnlyKeysSettings ResetSubscription(this AzureCosmosdbListReadOnlyKeysSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2743,6 +3352,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbRegenerateKeySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings SetIds(this AzureCosmosdbRegenerateKeySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbRegenerateKeySettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings SetIds(this AzureCosmosdbRegenerateKeySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbRegenerateKeySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings AddIds(this AzureCosmosdbRegenerateKeySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbRegenerateKeySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings AddIds(this AzureCosmosdbRegenerateKeySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbRegenerateKeySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings ClearIds(this AzureCosmosdbRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbRegenerateKeySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings RemoveIds(this AzureCosmosdbRegenerateKeySettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbRegenerateKeySettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings RemoveIds(this AzureCosmosdbRegenerateKeySettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbRegenerateKeySettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -2776,6 +3445,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbRegenerateKeySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings SetSubscription(this AzureCosmosdbRegenerateKeySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbRegenerateKeySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbRegenerateKeySettings ResetSubscription(this AzureCosmosdbRegenerateKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2877,6 +3564,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCosmosdbShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings SetIds(this AzureCosmosdbShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings SetIds(this AzureCosmosdbShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings AddIds(this AzureCosmosdbShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings AddIds(this AzureCosmosdbShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings ClearIds(this AzureCosmosdbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings RemoveIds(this AzureCosmosdbShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings RemoveIds(this AzureCosmosdbShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureCosmosdbShowSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
         [Pure]
@@ -2910,6 +3657,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings SetSubscription(this AzureCosmosdbShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbShowSettings ResetSubscription(this AzureCosmosdbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3011,42 +3776,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCosmosdbUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
-        [Pure]
-        public static AzureCosmosdbUpdateSettings SetName(this AzureCosmosdbUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
-        [Pure]
-        public static AzureCosmosdbUpdateSettings ResetName(this AzureCosmosdbUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCosmosdbUpdateSettings SetResourceGroup(this AzureCosmosdbUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureCosmosdbUpdateSettings ResetResourceGroup(this AzureCosmosdbUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Capabilities
         /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Capabilities"/>.</em></p><p>Set custom capabilities on the Cosmos DB database account.</p></summary>
         [Pure]
@@ -3122,6 +3851,48 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EnableAutomaticFailover = !toolSettings.EnableAutomaticFailover;
+            return toolSettings;
+        }
+        #endregion
+        #region EnableMultipleWriteLocations
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetEnableMultipleWriteLocations(this AzureCosmosdbUpdateSettings toolSettings, bool? enableMultipleWriteLocations)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = enableMultipleWriteLocations;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ResetEnableMultipleWriteLocations(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureCosmosdbUpdateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings EnableEnableMultipleWriteLocations(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureCosmosdbUpdateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings DisableEnableMultipleWriteLocations(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureCosmosdbUpdateSettings.EnableMultipleWriteLocations"/>.</em></p><p>Enable Multiple Write Locations.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ToggleEnableMultipleWriteLocations(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EnableMultipleWriteLocations = !toolSettings.EnableMultipleWriteLocations;
             return toolSettings;
         }
         #endregion
@@ -3359,6 +4130,120 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetIds(this AzureCosmosdbUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetIds(this AzureCosmosdbUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings AddIds(this AzureCosmosdbUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureCosmosdbUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings AddIds(this AzureCosmosdbUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureCosmosdbUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ClearIds(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings RemoveIds(this AzureCosmosdbUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureCosmosdbUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings RemoveIds(this AzureCosmosdbUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetName(this AzureCosmosdbUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.Name"/>.</em></p><p>Name of the Cosmos DB database account.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ResetName(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetResourceGroup(this AzureCosmosdbUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ResetResourceGroup(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings SetSubscription(this AzureCosmosdbUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbUpdateSettings ResetSubscription(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureCosmosdbUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3443,6 +4328,1018 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureCosmosdbUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureCosmosdbUpdateSettings ResetVerbose(this AzureCosmosdbUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCosmosdbDatabaseCreateSettingsExtensions
+    {
+        #region DbName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetDbName(this AzureCosmosdbDatabaseCreateSettings toolSettings, string dbName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = dbName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetDbName(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetKey(this AzureCosmosdbDatabaseCreateSettings toolSettings, string key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetKey(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetName(this AzureCosmosdbDatabaseCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetName(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroupName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetResourceGroupName(this AzureCosmosdbDatabaseCreateSettings toolSettings, string resourceGroupName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = resourceGroupName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetResourceGroupName(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UrlConnection
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetUrlConnection(this AzureCosmosdbDatabaseCreateSettings toolSettings, string urlConnection)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = urlConnection;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetUrlConnection(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetSubscription(this AzureCosmosdbDatabaseCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetSubscription(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetDebug(this AzureCosmosdbDatabaseCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetDebug(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetHelp(this AzureCosmosdbDatabaseCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetHelp(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetOutput(this AzureCosmosdbDatabaseCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetOutput(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetQuery(this AzureCosmosdbDatabaseCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetQuery(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings SetVerbose(this AzureCosmosdbDatabaseCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseCreateSettings ResetVerbose(this AzureCosmosdbDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCosmosdbDatabaseDeleteSettingsExtensions
+    {
+        #region DbName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetDbName(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string dbName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = dbName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetDbName(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetKey(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetKey(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetName(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetName(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroupName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetResourceGroupName(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string resourceGroupName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = resourceGroupName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetResourceGroupName(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UrlConnection
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetUrlConnection(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string urlConnection)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = urlConnection;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetUrlConnection(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetSubscription(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetSubscription(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetDebug(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetDebug(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetHelp(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetHelp(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetOutput(this AzureCosmosdbDatabaseDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetOutput(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetQuery(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetQuery(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings SetVerbose(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseDeleteSettings ResetVerbose(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseExistsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCosmosdbDatabaseExistsSettingsExtensions
+    {
+        #region DbName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetDbName(this AzureCosmosdbDatabaseExistsSettings toolSettings, string dbName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = dbName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetDbName(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetKey(this AzureCosmosdbDatabaseExistsSettings toolSettings, string key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetKey(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetName(this AzureCosmosdbDatabaseExistsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetName(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroupName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetResourceGroupName(this AzureCosmosdbDatabaseExistsSettings toolSettings, string resourceGroupName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = resourceGroupName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetResourceGroupName(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UrlConnection
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetUrlConnection(this AzureCosmosdbDatabaseExistsSettings toolSettings, string urlConnection)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = urlConnection;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetUrlConnection(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetSubscription(this AzureCosmosdbDatabaseExistsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetSubscription(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetDebug(this AzureCosmosdbDatabaseExistsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetDebug(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetHelp(this AzureCosmosdbDatabaseExistsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetHelp(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetOutput(this AzureCosmosdbDatabaseExistsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetOutput(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetQuery(this AzureCosmosdbDatabaseExistsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetQuery(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings SetVerbose(this AzureCosmosdbDatabaseExistsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseExistsSettings ResetVerbose(this AzureCosmosdbDatabaseExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCosmosdbDatabaseListSettingsExtensions
+    {
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetKey(this AzureCosmosdbDatabaseListSettings toolSettings, string key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetKey(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetName(this AzureCosmosdbDatabaseListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetName(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroupName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetResourceGroupName(this AzureCosmosdbDatabaseListSettings toolSettings, string resourceGroupName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = resourceGroupName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetResourceGroupName(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UrlConnection
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetUrlConnection(this AzureCosmosdbDatabaseListSettings toolSettings, string urlConnection)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = urlConnection;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetUrlConnection(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetSubscription(this AzureCosmosdbDatabaseListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetSubscription(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetDebug(this AzureCosmosdbDatabaseListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetDebug(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetHelp(this AzureCosmosdbDatabaseListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetHelp(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetOutput(this AzureCosmosdbDatabaseListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetOutput(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetQuery(this AzureCosmosdbDatabaseListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetQuery(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings SetVerbose(this AzureCosmosdbDatabaseListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseListSettings ResetVerbose(this AzureCosmosdbDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCosmosdbDatabaseShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCosmosdbDatabaseShowSettingsExtensions
+    {
+        #region DbName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetDbName(this AzureCosmosdbDatabaseShowSettings toolSettings, string dbName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = dbName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetDbName(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DbName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetKey(this AzureCosmosdbDatabaseShowSettings toolSettings, string key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetKey(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetName(this AzureCosmosdbDatabaseShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetName(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroupName
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetResourceGroupName(this AzureCosmosdbDatabaseShowSettings toolSettings, string resourceGroupName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = resourceGroupName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetResourceGroupName(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroupName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UrlConnection
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetUrlConnection(this AzureCosmosdbDatabaseShowSettings toolSettings, string urlConnection)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = urlConnection;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetUrlConnection(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetSubscription(this AzureCosmosdbDatabaseShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetSubscription(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetDebug(this AzureCosmosdbDatabaseShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetDebug(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetHelp(this AzureCosmosdbDatabaseShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetHelp(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetOutput(this AzureCosmosdbDatabaseShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetOutput(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetQuery(this AzureCosmosdbDatabaseShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetQuery(this AzureCosmosdbDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings SetVerbose(this AzureCosmosdbDatabaseShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureCosmosdbDatabaseShowSettings ResetVerbose(this AzureCosmosdbDatabaseShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3634,6 +5531,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionCreateSettings SetSubscription(this AzureCosmosdbCollectionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCollectionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionCreateSettings ResetSubscription(this AzureCosmosdbCollectionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3843,6 +5758,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionDeleteSettings SetSubscription(this AzureCosmosdbCollectionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCollectionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionDeleteSettings ResetSubscription(this AzureCosmosdbCollectionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4049,6 +5982,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionExistsSettings SetSubscription(this AzureCosmosdbCollectionExistsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCollectionExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionExistsSettings ResetSubscription(this AzureCosmosdbCollectionExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4234,6 +6185,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionListSettings SetSubscription(this AzureCosmosdbCollectionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCollectionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionListSettings ResetSubscription(this AzureCosmosdbCollectionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4440,6 +6409,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.UrlConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionShowSettings SetSubscription(this AzureCosmosdbCollectionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCollectionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionShowSettings ResetSubscription(this AzureCosmosdbCollectionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4703,6 +6690,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionUpdateSettings SetSubscription(this AzureCosmosdbCollectionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureCosmosdbCollectionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureCosmosdbCollectionUpdateSettings ResetSubscription(this AzureCosmosdbCollectionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureCosmosdbCollectionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4787,928 +6792,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureCosmosdbCollectionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureCosmosdbCollectionUpdateSettings ResetVerbose(this AzureCosmosdbCollectionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCosmosdbDatabaseCreateSettingsExtensions
-    {
-        #region DbName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetDbName(this AzureCosmosdbDatabaseCreateSettings toolSettings, string dbName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = dbName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetDbName(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetKey(this AzureCosmosdbDatabaseCreateSettings toolSettings, string key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetKey(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetName(this AzureCosmosdbDatabaseCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetName(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroupName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetResourceGroupName(this AzureCosmosdbDatabaseCreateSettings toolSettings, string resourceGroupName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = resourceGroupName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetResourceGroupName(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UrlConnection
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetUrlConnection(this AzureCosmosdbDatabaseCreateSettings toolSettings, string urlConnection)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = urlConnection;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetUrlConnection(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetDebug(this AzureCosmosdbDatabaseCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetDebug(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetHelp(this AzureCosmosdbDatabaseCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetHelp(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetOutput(this AzureCosmosdbDatabaseCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetOutput(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetQuery(this AzureCosmosdbDatabaseCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetQuery(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings SetVerbose(this AzureCosmosdbDatabaseCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseCreateSettings ResetVerbose(this AzureCosmosdbDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCosmosdbDatabaseDeleteSettingsExtensions
-    {
-        #region DbName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetDbName(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string dbName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = dbName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetDbName(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetKey(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetKey(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetName(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetName(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroupName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetResourceGroupName(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string resourceGroupName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = resourceGroupName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetResourceGroupName(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UrlConnection
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetUrlConnection(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string urlConnection)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = urlConnection;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetUrlConnection(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetDebug(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetDebug(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetHelp(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetHelp(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetOutput(this AzureCosmosdbDatabaseDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetOutput(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetQuery(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetQuery(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings SetVerbose(this AzureCosmosdbDatabaseDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseDeleteSettings ResetVerbose(this AzureCosmosdbDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseExistsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCosmosdbDatabaseExistsSettingsExtensions
-    {
-        #region DbName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetDbName(this AzureCosmosdbDatabaseExistsSettings toolSettings, string dbName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = dbName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetDbName(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetKey(this AzureCosmosdbDatabaseExistsSettings toolSettings, string key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetKey(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetName(this AzureCosmosdbDatabaseExistsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetName(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroupName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetResourceGroupName(this AzureCosmosdbDatabaseExistsSettings toolSettings, string resourceGroupName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = resourceGroupName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetResourceGroupName(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UrlConnection
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetUrlConnection(this AzureCosmosdbDatabaseExistsSettings toolSettings, string urlConnection)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = urlConnection;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetUrlConnection(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetDebug(this AzureCosmosdbDatabaseExistsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetDebug(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetHelp(this AzureCosmosdbDatabaseExistsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetHelp(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetOutput(this AzureCosmosdbDatabaseExistsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetOutput(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetQuery(this AzureCosmosdbDatabaseExistsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetQuery(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings SetVerbose(this AzureCosmosdbDatabaseExistsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseExistsSettings ResetVerbose(this AzureCosmosdbDatabaseExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCosmosdbDatabaseListSettingsExtensions
-    {
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetKey(this AzureCosmosdbDatabaseListSettings toolSettings, string key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetKey(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetName(this AzureCosmosdbDatabaseListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetName(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroupName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetResourceGroupName(this AzureCosmosdbDatabaseListSettings toolSettings, string resourceGroupName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = resourceGroupName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetResourceGroupName(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UrlConnection
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetUrlConnection(this AzureCosmosdbDatabaseListSettings toolSettings, string urlConnection)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = urlConnection;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetUrlConnection(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetDebug(this AzureCosmosdbDatabaseListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetDebug(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetHelp(this AzureCosmosdbDatabaseListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetHelp(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetOutput(this AzureCosmosdbDatabaseListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetOutput(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetQuery(this AzureCosmosdbDatabaseListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetQuery(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings SetVerbose(this AzureCosmosdbDatabaseListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseListSettings ResetVerbose(this AzureCosmosdbDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCosmosdbDatabaseShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureCosmosdbTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCosmosdbDatabaseShowSettingsExtensions
-    {
-        #region DbName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetDbName(this AzureCosmosdbDatabaseShowSettings toolSettings, string dbName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = dbName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.DbName"/>.</em></p><p>Database Name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetDbName(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DbName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetKey(this AzureCosmosdbDatabaseShowSettings toolSettings, string key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Key"/>.</em></p><p>Cosmos DB account key. Must be used in conjunction with cosmosdb account name or url-connection.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetKey(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetName(this AzureCosmosdbDatabaseShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Name"/>.</em></p><p>Cosmos DB account name. Must be used in conjunction with either name of the resource group or cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetName(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroupName
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetResourceGroupName(this AzureCosmosdbDatabaseShowSettings toolSettings, string resourceGroupName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = resourceGroupName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.ResourceGroupName"/>.</em></p><p>Name of the resource group. Must be used in conjunction with cosmosdb account name.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetResourceGroupName(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroupName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UrlConnection
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetUrlConnection(this AzureCosmosdbDatabaseShowSettings toolSettings, string urlConnection)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = urlConnection;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.UrlConnection"/>.</em></p><p>Cosmos DB account url connection. Must be used in conjunction with cosmosdb account key.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetUrlConnection(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UrlConnection = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetDebug(this AzureCosmosdbDatabaseShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetDebug(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetHelp(this AzureCosmosdbDatabaseShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetHelp(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetOutput(this AzureCosmosdbDatabaseShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetOutput(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetQuery(this AzureCosmosdbDatabaseShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetQuery(this AzureCosmosdbDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureCosmosdbDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings SetVerbose(this AzureCosmosdbDatabaseShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureCosmosdbDatabaseShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureCosmosdbDatabaseShowSettings ResetVerbose(this AzureCosmosdbDatabaseShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

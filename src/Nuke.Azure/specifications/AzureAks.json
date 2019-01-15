@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
@@ -41,6 +41,12 @@
             "type": "string",
             "format": "--listen-port {value}",
             "help": "The listening port for the dashboard."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -66,26 +72,26 @@
             "name": "AadClientAppId",
             "type": "string",
             "format": "--aad-client-app-id {value}",
-            "help": "(PREVIEW) The ID of an Azure Active Directory client application of type \"Native\". This application is for user login via kubectl."
+            "help": "The ID of an Azure Active Directory client application of type \"Native\". This application is for user login via kubectl."
           },
           {
             "name": "AadServerAppId",
             "type": "string",
             "format": "--aad-server-app-id {value}",
-            "help": "(PREVIEW) The ID of an Azure Active Directory server application of type \"Web app/API\". This application represents the managed cluster's apiserver (Server application)."
+            "help": "The ID of an Azure Active Directory server application of type \"Web app/API\". This application represents the managed cluster's apiserver (Server application)."
           },
           {
             "name": "AadServerAppSecret",
             "type": "string",
             "format": "--aad-server-app-secret {value}",
             "secret": true,
-            "help": "(PREVIEW) The secret of an Azure Active Directory server application."
+            "help": "The secret of an Azure Active Directory server application."
           },
           {
             "name": "AadTenantId",
             "type": "string",
             "format": "--aad-tenant-id {value}",
-            "help": "(PREVIEW) The ID of an Azure Active Directory tenant."
+            "help": "The ID of an Azure Active Directory tenant."
           },
           {
             "name": "AdminUsername",
@@ -153,7 +159,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "MaxPods",
@@ -166,6 +172,12 @@
             "type": "string",
             "format": "--network-plugin {value}",
             "help": "The Kubernetes network plugin to use."
+          },
+          {
+            "name": "NetworkPolicy",
+            "type": "string",
+            "format": "--network-policy {value}",
+            "help": "(PREVIEW) The Kubernetes network policy to use."
           },
           {
             "name": "NoSshKey",
@@ -250,6 +262,12 @@
             "type": "string",
             "format": "--workspace-resource-id {value}",
             "help": "The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -282,6 +300,12 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -315,6 +339,12 @@
             "type": "bool",
             "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -350,10 +380,22 @@
             "help": "Do not wait for the long-running operation to finish."
           },
           {
+            "name": "SubnetName",
+            "type": "string",
+            "format": "--subnet-name {value}",
+            "help": ""
+          },
+          {
             "name": "WorkspaceResourceId",
             "type": "string",
             "format": "--workspace-resource-id {value}",
             "help": "The resource ID of an existing Log Analytics Workspace to use for storing monitoring data."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -392,6 +434,12 @@
             "type": "string",
             "format": "--overwrite-existing {value}",
             "help": ""
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -412,6 +460,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -425,7 +479,13 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -446,6 +506,12 @@
             "type": "string",
             "format": "--install-location {value}",
             "help": ""
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -515,6 +581,12 @@
             "type": "bool",
             "format": "--service-principal",
             "help": "Service principal used for authentication to Azure APIs."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -529,6 +601,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -566,13 +644,19 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "OsType",
             "type": "AksOsType",
             "format": "--os-type {value}",
             "help": "Remove support for deploying ACIs of this operating system type."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -599,6 +683,12 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -637,6 +727,12 @@
             "type": "string",
             "format": "--nodepool-name {value}",
             "help": "Node pool name, upto 12 alphanumeric characters."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -657,6 +753,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -695,6 +797,12 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -764,6 +872,12 @@
             "type": "bool",
             "format": "--service-principal",
             "help": "Service principal used for authentication to Azure APIs."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -802,6 +916,12 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation. Requires --space."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -864,6 +984,12 @@
             "type": "string",
             "format": "--updated {value}",
             "help": "Wait until updated with provisioningState at 'Succeeded'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

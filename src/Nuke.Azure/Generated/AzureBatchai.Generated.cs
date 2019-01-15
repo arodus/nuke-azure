@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -124,6 +124,38 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceCreate(Configure<AzureBatchaiWorkspaceCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceDelete(Configure<AzureBatchaiWorkspaceDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceList(Configure<AzureBatchaiWorkspaceListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceShow(Configure<AzureBatchaiWorkspaceShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureBatchaiFileServerCreate(Configure<AzureBatchaiFileServerCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiFileServerCreateSettings());
@@ -204,62 +236,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceCreate(Configure<AzureBatchaiWorkspaceCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceDelete(Configure<AzureBatchaiWorkspaceDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceList(Configure<AzureBatchaiWorkspaceListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBatchaiWorkspaceShow(Configure<AzureBatchaiWorkspaceShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBatchaiWorkspaceShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBatchaiClusterFileList(Configure<AzureBatchaiClusterFileListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterFileListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBatchaiClusterNodeExec(Configure<AzureBatchaiClusterNodeExecSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterNodeExecSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureBatchaiClusterNodeList(Configure<AzureBatchaiClusterNodeListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterNodeListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureBatchaiJobFileList(Configure<AzureBatchaiJobFileListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureBatchaiJobFileListSettings());
@@ -291,6 +267,30 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             return process.Output;
         }
+        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBatchaiClusterFileList(Configure<AzureBatchaiClusterFileListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterFileListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBatchaiClusterNodeExec(Configure<AzureBatchaiClusterNodeExecSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterNodeExecSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Batch AI resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureBatchaiClusterNodeList(Configure<AzureBatchaiClusterNodeListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureBatchaiClusterNodeListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
     }
     #region AzureBatchaiListUsagesSettings
     /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
@@ -301,8 +301,10 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -318,6 +320,7 @@ namespace Nuke.Azure
             arguments
               .Add("batchai list-usages")
               .Add("--location {value}", Location)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -340,10 +343,15 @@ namespace Nuke.Azure
         public virtual int? Max { get; internal set; }
         /// <summary><p>Minimum number of nodes.</p></summary>
         public virtual int? Min { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of cluster.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -362,8 +370,10 @@ namespace Nuke.Azure
               .Add("batchai cluster auto-scale")
               .Add("--max {value}", Max)
               .Add("--min {value}", Min)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -437,6 +447,8 @@ namespace Nuke.Azure
         public virtual string SetupTaskOutput { get; internal set; }
         /// <summary><p>ARM ID of a virtual network subnet to put the cluster in.</p></summary>
         public virtual string Subnet { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -478,6 +490,7 @@ namespace Nuke.Azure
               .Add("--setup-task {value}", SetupTask)
               .Add("--setup-task-output {value}", SetupTaskOutput)
               .Add("--subnet {value}", Subnet)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -496,16 +509,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of cluster.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of cluster.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -520,11 +538,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai cluster delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -547,6 +567,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -563,6 +585,7 @@ namespace Nuke.Azure
               .Add("batchai cluster list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--workspace {value}", Workspace)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -581,12 +604,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Target number of compute nodes.</p></summary>
+        public virtual string Target { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of cluster.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Target number of compute nodes.</p></summary>
-        public virtual string Target { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -603,9 +631,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai cluster resize")
+              .Add("--target {value}", Target)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--target {value}", Target)
+              .Add("--subscription {value}", Subscription)
               .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -625,10 +655,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of cluster.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -645,8 +680,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai cluster show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -672,6 +709,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -689,6 +728,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--workspace {value}", Workspace)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -707,16 +747,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of experiment.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of experiment.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -731,11 +776,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai experiment delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -758,6 +805,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -774,6 +823,7 @@ namespace Nuke.Azure
               .Add("batchai experiment list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--workspace {value}", Workspace)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -792,10 +842,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of experiment.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -812,8 +867,188 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai experiment show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--workspace {value}", Workspace)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceCreateSettings
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBatchaiWorkspaceCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
+        /// <summary><p>Location of the workspace. If omitted, the location of the resource group will be used.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("batchai workspace create")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--workspace {value}", Workspace)
+              .Add("--location {value}", Location)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceDeleteSettings
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBatchaiWorkspaceDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("batchai workspace delete")
+              .Add("--no-wait", NoWait)
+              .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--workspace {value}", Workspace)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceListSettings
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBatchaiWorkspaceListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("batchai workspace list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceShowSettings
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBatchaiWorkspaceShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("batchai workspace show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -863,6 +1098,8 @@ namespace Nuke.Azure
         public virtual BatchaiFileServerCreateStorageSku StorageSku { get; internal set; }
         /// <summary><p>ARM ID of a virtual network subnet to put the file server in. If not provided via command line or in the configuration file, Batch AI will create a new virtual network and subnet under your subscription.</p></summary>
         public virtual string Subnet { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -892,6 +1129,7 @@ namespace Nuke.Azure
               .Add("--disk-size {value}", DiskSize)
               .Add("--storage-sku {value}", StorageSku)
               .Add("--subnet {value}", Subnet)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -910,16 +1148,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of file server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of file server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -934,11 +1177,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai file-server delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -961,6 +1206,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -977,6 +1224,7 @@ namespace Nuke.Azure
               .Add("batchai file-server list")
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--workspace {value}", Workspace)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -995,10 +1243,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of file server.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -1015,8 +1268,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai file-server show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1064,6 +1319,8 @@ namespace Nuke.Azure
         public virtual string Nfs { get; internal set; }
         /// <summary><p>Relative mount path for NFS. The NFS will be available at $AZ_BATCHAI_JOB_MOUNT_ROOT/&lt;relative_mount_path&gt; folder.</p></summary>
         public virtual string NfsMountPath { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1092,6 +1349,7 @@ namespace Nuke.Azure
               .Add("--storage-account-name {value}", StorageAccountName)
               .Add("--nfs {value}", Nfs)
               .Add("--nfs-mount-path {value}", NfsMountPath)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1110,18 +1368,23 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of experiment.</p></summary>
-        public virtual string Experiment { get; internal set; }
-        /// <summary><p>Name of job.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>Name of experiment.</p></summary>
+        public virtual string Experiment { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of job.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1136,12 +1399,14 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai job delete")
-              .Add("--experiment {value}", Experiment)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--experiment {value}", Experiment)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1166,6 +1431,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1183,6 +1450,7 @@ namespace Nuke.Azure
               .Add("--experiment {value}", Experiment)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--workspace {value}", Workspace)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1203,10 +1471,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
         /// <summary><p>Name of experiment.</p></summary>
         public virtual string Experiment { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of job.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
@@ -1224,8 +1497,10 @@ namespace Nuke.Azure
             arguments
               .Add("batchai job show")
               .Add("--experiment {value}", Experiment)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1245,18 +1520,23 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of experiment.</p></summary>
-        public virtual string Experiment { get; internal set; }
-        /// <summary><p>Name of job.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>Name of experiment.</p></summary>
+        public virtual string Experiment { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of job.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1271,12 +1551,14 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai job terminate")
-              .Add("--experiment {value}", Experiment)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--experiment {value}", Experiment)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1295,16 +1577,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureBatchai executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Polling interval in sec.</p></summary>
+        public virtual string Interval { get; internal set; }
         /// <summary><p>Name of experiment.</p></summary>
         public virtual string Experiment { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of job.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
-        /// <summary><p>Polling interval in sec.</p></summary>
-        public virtual string Interval { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1319,312 +1606,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("batchai job wait")
+              .Add("--interval {value}", Interval)
               .Add("--experiment {value}", Experiment)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
-              .Add("--interval {value}", Interval)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceCreateSettings
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBatchaiWorkspaceCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
-        /// <summary><p>Location of the workspace. If omitted, the location of the resource group will be used.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("batchai workspace create")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
-              .Add("--location {value}", Location)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceDeleteSettings
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBatchaiWorkspaceDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual bool? NoWait { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("batchai workspace delete")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
-              .Add("--no-wait", NoWait)
-              .Add("--yes {value}", Yes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceListSettings
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBatchaiWorkspaceListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("batchai workspace list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceShowSettings
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBatchaiWorkspaceShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("batchai workspace show")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBatchaiClusterFileListSettings
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBatchaiClusterFileListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of cluster.</p></summary>
-        public virtual string Cluster { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
-        /// <summary><p>Time in minutes for how long generated download URLs should remain valid.</p></summary>
-        public virtual string Expiry { get; internal set; }
-        /// <summary><p>Relative path of a subfolder inside of the node setup task output directory.</p></summary>
-        public virtual string Path { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("batchai cluster file list")
-              .Add("--cluster {value}", Cluster)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
-              .Add("--expiry {value}", Expiry)
-              .Add("--path {value}", Path)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBatchaiClusterNodeExecSettings
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBatchaiClusterNodeExecSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of cluster.</p></summary>
-        public virtual string Cluster { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
-        /// <summary><p>Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080.</p></summary>
-        public virtual string Address { get; internal set; }
-        /// <summary><p>Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only.</p></summary>
-        public virtual string Exec { get; internal set; }
-        /// <summary><p>ID of the node to forward the ports to. If not provided, the command will be executed on the first available node.</p></summary>
-        public virtual string NodeId { get; internal set; }
-        /// <summary><p>Optional password to establish SSH connection.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used.</p></summary>
-        public virtual string SshPrivateKey { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("batchai cluster node exec")
-              .Add("--cluster {value}", Cluster)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace {value}", Workspace)
-              .Add("--address {value}", Address)
-              .Add("--exec {value}", Exec)
-              .Add("--node-id {value}", NodeId)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--ssh-private-key {value}", SshPrivateKey)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureBatchaiClusterNodeListSettings
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureBatchaiClusterNodeListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
-        /// <summary><p>Name of cluster.</p></summary>
-        public virtual string Cluster { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of workspace.</p></summary>
-        public virtual string Workspace { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("batchai cluster node list")
-              .Add("--cluster {value}", Cluster)
-              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--workspace {value}", Workspace)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1658,6 +1645,8 @@ namespace Nuke.Azure
         public virtual string OutputDirectoryId { get; internal set; }
         /// <summary><p>Relative path in the given output directory.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1679,6 +1668,7 @@ namespace Nuke.Azure
               .Add("--expiry {value}", Expiry)
               .Add("--output-directory-id {value}", OutputDirectoryId)
               .Add("--path {value}", Path)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1711,6 +1701,8 @@ namespace Nuke.Azure
         public virtual string OutputDirectoryId { get; internal set; }
         /// <summary><p>Relative path in the given output directory.</p></summary>
         public virtual string Path { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1732,6 +1724,7 @@ namespace Nuke.Azure
               .Add("--workspace {value}", Workspace)
               .Add("--output-directory-id {value}", OutputDirectoryId)
               .Add("--path {value}", Path)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1768,6 +1761,8 @@ namespace Nuke.Azure
         public virtual string Password { get; internal set; }
         /// <summary><p>Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used.</p></summary>
         public virtual string SshPrivateKey { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1791,6 +1786,7 @@ namespace Nuke.Azure
               .Add("--node-id {value}", NodeId)
               .Add("--password {value}", Password, secret: true)
               .Add("--ssh-private-key {value}", SshPrivateKey)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1817,6 +1813,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of workspace.</p></summary>
         public virtual string Workspace { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1835,6 +1833,160 @@ namespace Nuke.Azure
               .Add("--job {value}", Job)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--workspace {value}", Workspace)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBatchaiClusterFileListSettings
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBatchaiClusterFileListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Name of cluster.</p></summary>
+        public virtual string Cluster { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
+        /// <summary><p>Time in minutes for how long generated download URLs should remain valid.</p></summary>
+        public virtual string Expiry { get; internal set; }
+        /// <summary><p>Relative path of a subfolder inside of the node setup task output directory.</p></summary>
+        public virtual string Path { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("batchai cluster file list")
+              .Add("--cluster {value}", Cluster)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--workspace {value}", Workspace)
+              .Add("--expiry {value}", Expiry)
+              .Add("--path {value}", Path)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBatchaiClusterNodeExecSettings
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBatchaiClusterNodeExecSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Name of cluster.</p></summary>
+        public virtual string Cluster { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
+        /// <summary><p>Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080.</p></summary>
+        public virtual string Address { get; internal set; }
+        /// <summary><p>Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only.</p></summary>
+        public virtual string Exec { get; internal set; }
+        /// <summary><p>ID of the node to forward the ports to. If not provided, the command will be executed on the first available node.</p></summary>
+        public virtual string NodeId { get; internal set; }
+        /// <summary><p>Optional password to establish SSH connection.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used.</p></summary>
+        public virtual string SshPrivateKey { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("batchai cluster node exec")
+              .Add("--cluster {value}", Cluster)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--workspace {value}", Workspace)
+              .Add("--address {value}", Address)
+              .Add("--exec {value}", Exec)
+              .Add("--node-id {value}", NodeId)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--ssh-private-key {value}", SshPrivateKey)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureBatchaiClusterNodeListSettings
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureBatchaiClusterNodeListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureBatchai executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureBatchaiTasks.AzureBatchaiPath;
+        /// <summary><p>Name of cluster.</p></summary>
+        public virtual string Cluster { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of workspace.</p></summary>
+        public virtual string Workspace { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("batchai cluster node list")
+              .Add("--cluster {value}", Cluster)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--workspace {value}", Workspace)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1851,7 +2003,7 @@ namespace Nuke.Azure
     public static partial class AzureBatchaiListUsagesSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureBatchaiListUsagesSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureBatchaiListUsagesSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureBatchaiListUsagesSettings SetLocation(this AzureBatchaiListUsagesSettings toolSettings, string location)
         {
@@ -1859,12 +2011,30 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiListUsagesSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchaiListUsagesSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureBatchaiListUsagesSettings ResetLocation(this AzureBatchaiListUsagesSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiListUsagesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiListUsagesSettings SetSubscription(this AzureBatchaiListUsagesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiListUsagesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiListUsagesSettings ResetSubscription(this AzureBatchaiListUsagesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2002,6 +2172,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterAutoScaleSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings SetIds(this AzureBatchaiClusterAutoScaleSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterAutoScaleSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings SetIds(this AzureBatchaiClusterAutoScaleSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterAutoScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings AddIds(this AzureBatchaiClusterAutoScaleSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterAutoScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings AddIds(this AzureBatchaiClusterAutoScaleSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiClusterAutoScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings ClearIds(this AzureBatchaiClusterAutoScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterAutoScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings RemoveIds(this AzureBatchaiClusterAutoScaleSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterAutoScaleSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings RemoveIds(this AzureBatchaiClusterAutoScaleSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureBatchaiClusterAutoScaleSettings.Name"/>.</em></p><p>Name of cluster.</p></summary>
         [Pure]
@@ -2035,6 +2265,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterAutoScaleSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings SetSubscription(this AzureBatchaiClusterAutoScaleSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterAutoScaleSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterAutoScaleSettings ResetSubscription(this AzureBatchaiClusterAutoScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2640,6 +2888,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterCreateSettings SetSubscription(this AzureBatchaiClusterCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterCreateSettings ResetSubscription(this AzureBatchaiClusterCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiClusterCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2738,60 +3004,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiClusterDeleteSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.Name"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterDeleteSettings SetName(this AzureBatchaiClusterDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterDeleteSettings.Name"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterDeleteSettings ResetName(this AzureBatchaiClusterDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterDeleteSettings SetResourceGroup(this AzureBatchaiClusterDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterDeleteSettings ResetResourceGroup(this AzureBatchaiClusterDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterDeleteSettings SetWorkspace(this AzureBatchaiClusterDeleteSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterDeleteSettings ResetWorkspace(this AzureBatchaiClusterDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -2849,6 +3061,138 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings SetIds(this AzureBatchaiClusterDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings SetIds(this AzureBatchaiClusterDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings AddIds(this AzureBatchaiClusterDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings AddIds(this AzureBatchaiClusterDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiClusterDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings ClearIds(this AzureBatchaiClusterDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings RemoveIds(this AzureBatchaiClusterDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings RemoveIds(this AzureBatchaiClusterDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.Name"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings SetName(this AzureBatchaiClusterDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterDeleteSettings.Name"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings ResetName(this AzureBatchaiClusterDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings SetResourceGroup(this AzureBatchaiClusterDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings ResetResourceGroup(this AzureBatchaiClusterDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings SetSubscription(this AzureBatchaiClusterDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings ResetSubscription(this AzureBatchaiClusterDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings SetWorkspace(this AzureBatchaiClusterDeleteSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterDeleteSettings ResetWorkspace(this AzureBatchaiClusterDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
             return toolSettings;
         }
         #endregion
@@ -2986,6 +3330,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterListSettings SetSubscription(this AzureBatchaiClusterListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterListSettings ResetSubscription(this AzureBatchaiClusterListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiClusterListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3084,6 +3446,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiClusterResizeSettingsExtensions
     {
+        #region Target
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterResizeSettings.Target"/>.</em></p><p>Target number of compute nodes.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings SetTarget(this AzureBatchaiClusterResizeSettings toolSettings, string target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Target = target;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterResizeSettings.Target"/>.</em></p><p>Target number of compute nodes.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings ResetTarget(this AzureBatchaiClusterResizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Target = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterResizeSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings SetIds(this AzureBatchaiClusterResizeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterResizeSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings SetIds(this AzureBatchaiClusterResizeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterResizeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings AddIds(this AzureBatchaiClusterResizeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterResizeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings AddIds(this AzureBatchaiClusterResizeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiClusterResizeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings ClearIds(this AzureBatchaiClusterResizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterResizeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings RemoveIds(this AzureBatchaiClusterResizeSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterResizeSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterResizeSettings RemoveIds(this AzureBatchaiClusterResizeSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureBatchaiClusterResizeSettings.Name"/>.</em></p><p>Name of cluster.</p></summary>
         [Pure]
@@ -3120,21 +3560,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Target
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterResizeSettings.Target"/>.</em></p><p>Target number of compute nodes.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterResizeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureBatchaiClusterResizeSettings SetTarget(this AzureBatchaiClusterResizeSettings toolSettings, string target)
+        public static AzureBatchaiClusterResizeSettings SetSubscription(this AzureBatchaiClusterResizeSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Target = target;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterResizeSettings.Target"/>.</em></p><p>Target number of compute nodes.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterResizeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureBatchaiClusterResizeSettings ResetTarget(this AzureBatchaiClusterResizeSettings toolSettings)
+        public static AzureBatchaiClusterResizeSettings ResetSubscription(this AzureBatchaiClusterResizeSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Target = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3254,6 +3694,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiClusterShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings SetIds(this AzureBatchaiClusterShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings SetIds(this AzureBatchaiClusterShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings AddIds(this AzureBatchaiClusterShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiClusterShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings AddIds(this AzureBatchaiClusterShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiClusterShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings ClearIds(this AzureBatchaiClusterShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings RemoveIds(this AzureBatchaiClusterShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiClusterShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings RemoveIds(this AzureBatchaiClusterShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureBatchaiClusterShowSettings.Name"/>.</em></p><p>Name of cluster.</p></summary>
         [Pure]
@@ -3287,6 +3787,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings SetSubscription(this AzureBatchaiClusterShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterShowSettings ResetSubscription(this AzureBatchaiClusterShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3460,6 +3978,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentCreateSettings SetSubscription(this AzureBatchaiExperimentCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentCreateSettings ResetSubscription(this AzureBatchaiExperimentCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3558,60 +4094,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiExperimentDeleteSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.Name"/>.</em></p><p>Name of experiment.</p></summary>
-        [Pure]
-        public static AzureBatchaiExperimentDeleteSettings SetName(this AzureBatchaiExperimentDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentDeleteSettings.Name"/>.</em></p><p>Name of experiment.</p></summary>
-        [Pure]
-        public static AzureBatchaiExperimentDeleteSettings ResetName(this AzureBatchaiExperimentDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiExperimentDeleteSettings SetResourceGroup(this AzureBatchaiExperimentDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiExperimentDeleteSettings ResetResourceGroup(this AzureBatchaiExperimentDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiExperimentDeleteSettings SetWorkspace(this AzureBatchaiExperimentDeleteSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiExperimentDeleteSettings ResetWorkspace(this AzureBatchaiExperimentDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -3669,6 +4151,138 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings SetIds(this AzureBatchaiExperimentDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings SetIds(this AzureBatchaiExperimentDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiExperimentDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings AddIds(this AzureBatchaiExperimentDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiExperimentDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings AddIds(this AzureBatchaiExperimentDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiExperimentDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings ClearIds(this AzureBatchaiExperimentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiExperimentDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings RemoveIds(this AzureBatchaiExperimentDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiExperimentDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings RemoveIds(this AzureBatchaiExperimentDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.Name"/>.</em></p><p>Name of experiment.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings SetName(this AzureBatchaiExperimentDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentDeleteSettings.Name"/>.</em></p><p>Name of experiment.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings ResetName(this AzureBatchaiExperimentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings SetResourceGroup(this AzureBatchaiExperimentDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings ResetResourceGroup(this AzureBatchaiExperimentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings SetSubscription(this AzureBatchaiExperimentDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings ResetSubscription(this AzureBatchaiExperimentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings SetWorkspace(this AzureBatchaiExperimentDeleteSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentDeleteSettings ResetWorkspace(this AzureBatchaiExperimentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
             return toolSettings;
         }
         #endregion
@@ -3806,6 +4420,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentListSettings SetSubscription(this AzureBatchaiExperimentListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentListSettings ResetSubscription(this AzureBatchaiExperimentListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3904,6 +4536,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiExperimentShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings SetIds(this AzureBatchaiExperimentShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings SetIds(this AzureBatchaiExperimentShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiExperimentShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings AddIds(this AzureBatchaiExperimentShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiExperimentShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings AddIds(this AzureBatchaiExperimentShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiExperimentShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings ClearIds(this AzureBatchaiExperimentShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiExperimentShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings RemoveIds(this AzureBatchaiExperimentShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiExperimentShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings RemoveIds(this AzureBatchaiExperimentShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentShowSettings.Name"/>.</em></p><p>Name of experiment.</p></summary>
         [Pure]
@@ -3937,6 +4629,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiExperimentShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings SetSubscription(this AzureBatchaiExperimentShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiExperimentShowSettings ResetSubscription(this AzureBatchaiExperimentShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4042,6 +4752,794 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureBatchaiExperimentShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureBatchaiExperimentShowSettings ResetVerbose(this AzureBatchaiExperimentShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBatchaiWorkspaceCreateSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetResourceGroup(this AzureBatchaiWorkspaceCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetResourceGroup(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetWorkspace(this AzureBatchaiWorkspaceCreateSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetWorkspace(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Location"/>.</em></p><p>Location of the workspace. If omitted, the location of the resource group will be used.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetLocation(this AzureBatchaiWorkspaceCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Location"/>.</em></p><p>Location of the workspace. If omitted, the location of the resource group will be used.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetLocation(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetSubscription(this AzureBatchaiWorkspaceCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetSubscription(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetDebug(this AzureBatchaiWorkspaceCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetDebug(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetHelp(this AzureBatchaiWorkspaceCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetHelp(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetOutput(this AzureBatchaiWorkspaceCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetOutput(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetQuery(this AzureBatchaiWorkspaceCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetQuery(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings SetVerbose(this AzureBatchaiWorkspaceCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceCreateSettings ResetVerbose(this AzureBatchaiWorkspaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBatchaiWorkspaceDeleteSettingsExtensions
+    {
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings EnableNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings DisableNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ToggleNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetYes(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetYes(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetIds(this AzureBatchaiWorkspaceDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetIds(this AzureBatchaiWorkspaceDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiWorkspaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings AddIds(this AzureBatchaiWorkspaceDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiWorkspaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings AddIds(this AzureBatchaiWorkspaceDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiWorkspaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ClearIds(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiWorkspaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings RemoveIds(this AzureBatchaiWorkspaceDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiWorkspaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings RemoveIds(this AzureBatchaiWorkspaceDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetResourceGroup(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetResourceGroup(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetSubscription(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetSubscription(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetWorkspace(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetWorkspace(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetDebug(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetDebug(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetHelp(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetHelp(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetOutput(this AzureBatchaiWorkspaceDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetOutput(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetQuery(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetQuery(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings SetVerbose(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceDeleteSettings ResetVerbose(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBatchaiWorkspaceListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings SetResourceGroup(this AzureBatchaiWorkspaceListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings ResetResourceGroup(this AzureBatchaiWorkspaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings SetSubscription(this AzureBatchaiWorkspaceListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings ResetSubscription(this AzureBatchaiWorkspaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings SetDebug(this AzureBatchaiWorkspaceListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings ResetDebug(this AzureBatchaiWorkspaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings SetHelp(this AzureBatchaiWorkspaceListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings ResetHelp(this AzureBatchaiWorkspaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings SetOutput(this AzureBatchaiWorkspaceListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings ResetOutput(this AzureBatchaiWorkspaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings SetQuery(this AzureBatchaiWorkspaceListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings ResetQuery(this AzureBatchaiWorkspaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings SetVerbose(this AzureBatchaiWorkspaceListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceListSettings ResetVerbose(this AzureBatchaiWorkspaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBatchaiWorkspaceShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBatchaiWorkspaceShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetIds(this AzureBatchaiWorkspaceShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetIds(this AzureBatchaiWorkspaceShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiWorkspaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings AddIds(this AzureBatchaiWorkspaceShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiWorkspaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings AddIds(this AzureBatchaiWorkspaceShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiWorkspaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ClearIds(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiWorkspaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings RemoveIds(this AzureBatchaiWorkspaceShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiWorkspaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings RemoveIds(this AzureBatchaiWorkspaceShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetResourceGroup(this AzureBatchaiWorkspaceShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetResourceGroup(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetSubscription(this AzureBatchaiWorkspaceShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetSubscription(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetWorkspace(this AzureBatchaiWorkspaceShowSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetWorkspace(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetDebug(this AzureBatchaiWorkspaceShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetDebug(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetHelp(this AzureBatchaiWorkspaceShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetHelp(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetOutput(this AzureBatchaiWorkspaceShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetOutput(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetQuery(this AzureBatchaiWorkspaceShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetQuery(this AzureBatchaiWorkspaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings SetVerbose(this AzureBatchaiWorkspaceShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiWorkspaceShowSettings ResetVerbose(this AzureBatchaiWorkspaceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4350,6 +5848,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerCreateSettings SetSubscription(this AzureBatchaiFileServerCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerCreateSettings ResetSubscription(this AzureBatchaiFileServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4448,60 +5964,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiFileServerDeleteSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.Name"/>.</em></p><p>Name of file server.</p></summary>
-        [Pure]
-        public static AzureBatchaiFileServerDeleteSettings SetName(this AzureBatchaiFileServerDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerDeleteSettings.Name"/>.</em></p><p>Name of file server.</p></summary>
-        [Pure]
-        public static AzureBatchaiFileServerDeleteSettings ResetName(this AzureBatchaiFileServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiFileServerDeleteSettings SetResourceGroup(this AzureBatchaiFileServerDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiFileServerDeleteSettings ResetResourceGroup(this AzureBatchaiFileServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiFileServerDeleteSettings SetWorkspace(this AzureBatchaiFileServerDeleteSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiFileServerDeleteSettings ResetWorkspace(this AzureBatchaiFileServerDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -4559,6 +6021,138 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings SetIds(this AzureBatchaiFileServerDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings SetIds(this AzureBatchaiFileServerDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiFileServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings AddIds(this AzureBatchaiFileServerDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiFileServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings AddIds(this AzureBatchaiFileServerDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiFileServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings ClearIds(this AzureBatchaiFileServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiFileServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings RemoveIds(this AzureBatchaiFileServerDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiFileServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings RemoveIds(this AzureBatchaiFileServerDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.Name"/>.</em></p><p>Name of file server.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings SetName(this AzureBatchaiFileServerDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerDeleteSettings.Name"/>.</em></p><p>Name of file server.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings ResetName(this AzureBatchaiFileServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings SetResourceGroup(this AzureBatchaiFileServerDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings ResetResourceGroup(this AzureBatchaiFileServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings SetSubscription(this AzureBatchaiFileServerDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings ResetSubscription(this AzureBatchaiFileServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings SetWorkspace(this AzureBatchaiFileServerDeleteSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerDeleteSettings ResetWorkspace(this AzureBatchaiFileServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
             return toolSettings;
         }
         #endregion
@@ -4696,6 +6290,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerListSettings SetSubscription(this AzureBatchaiFileServerListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerListSettings ResetSubscription(this AzureBatchaiFileServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4794,6 +6406,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiFileServerShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings SetIds(this AzureBatchaiFileServerShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings SetIds(this AzureBatchaiFileServerShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiFileServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings AddIds(this AzureBatchaiFileServerShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiFileServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings AddIds(this AzureBatchaiFileServerShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiFileServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings ClearIds(this AzureBatchaiFileServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiFileServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings RemoveIds(this AzureBatchaiFileServerShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiFileServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings RemoveIds(this AzureBatchaiFileServerShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerShowSettings.Name"/>.</em></p><p>Name of file server.</p></summary>
         [Pure]
@@ -4827,6 +6499,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiFileServerShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings SetSubscription(this AzureBatchaiFileServerShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiFileServerShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiFileServerShowSettings ResetSubscription(this AzureBatchaiFileServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5198,6 +6888,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobCreateSettings SetSubscription(this AzureBatchaiJobCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobCreateSettings ResetSubscription(this AzureBatchaiJobCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5296,78 +7004,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiJobDeleteSettingsExtensions
     {
-        #region Experiment
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings SetExperiment(this AzureBatchaiJobDeleteSettings toolSettings, string experiment)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Experiment = experiment;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings ResetExperiment(this AzureBatchaiJobDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Experiment = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Name"/>.</em></p><p>Name of job.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings SetName(this AzureBatchaiJobDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.Name"/>.</em></p><p>Name of job.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings ResetName(this AzureBatchaiJobDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings SetResourceGroup(this AzureBatchaiJobDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings ResetResourceGroup(this AzureBatchaiJobDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings SetWorkspace(this AzureBatchaiJobDeleteSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobDeleteSettings ResetWorkspace(this AzureBatchaiJobDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -5425,6 +7061,156 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Experiment
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings SetExperiment(this AzureBatchaiJobDeleteSettings toolSettings, string experiment)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Experiment = experiment;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings ResetExperiment(this AzureBatchaiJobDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Experiment = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings SetIds(this AzureBatchaiJobDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings SetIds(this AzureBatchaiJobDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings AddIds(this AzureBatchaiJobDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings AddIds(this AzureBatchaiJobDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiJobDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings ClearIds(this AzureBatchaiJobDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings RemoveIds(this AzureBatchaiJobDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings RemoveIds(this AzureBatchaiJobDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Name"/>.</em></p><p>Name of job.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings SetName(this AzureBatchaiJobDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.Name"/>.</em></p><p>Name of job.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings ResetName(this AzureBatchaiJobDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings SetResourceGroup(this AzureBatchaiJobDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings ResetResourceGroup(this AzureBatchaiJobDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings SetSubscription(this AzureBatchaiJobDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings ResetSubscription(this AzureBatchaiJobDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings SetWorkspace(this AzureBatchaiJobDeleteSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobDeleteSettings ResetWorkspace(this AzureBatchaiJobDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
             return toolSettings;
         }
         #endregion
@@ -5580,6 +7366,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobListSettings SetSubscription(this AzureBatchaiJobListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobListSettings ResetSubscription(this AzureBatchaiJobListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5696,6 +7500,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings SetIds(this AzureBatchaiJobShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings SetIds(this AzureBatchaiJobShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings AddIds(this AzureBatchaiJobShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings AddIds(this AzureBatchaiJobShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings ClearIds(this AzureBatchaiJobShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings RemoveIds(this AzureBatchaiJobShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings RemoveIds(this AzureBatchaiJobShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobShowSettings.Name"/>.</em></p><p>Name of job.</p></summary>
         [Pure]
@@ -5729,6 +7593,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings SetSubscription(this AzureBatchaiJobShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobShowSettings ResetSubscription(this AzureBatchaiJobShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5848,78 +7730,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiJobTerminateSettingsExtensions
     {
-        #region Experiment
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings SetExperiment(this AzureBatchaiJobTerminateSettings toolSettings, string experiment)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Experiment = experiment;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings ResetExperiment(this AzureBatchaiJobTerminateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Experiment = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Name"/>.</em></p><p>Name of job.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings SetName(this AzureBatchaiJobTerminateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.Name"/>.</em></p><p>Name of job.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings ResetName(this AzureBatchaiJobTerminateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings SetResourceGroup(this AzureBatchaiJobTerminateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings ResetResourceGroup(this AzureBatchaiJobTerminateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings SetWorkspace(this AzureBatchaiJobTerminateSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobTerminateSettings ResetWorkspace(this AzureBatchaiJobTerminateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
         #region NoWait
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
         [Pure]
@@ -5977,6 +7787,156 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Experiment
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings SetExperiment(this AzureBatchaiJobTerminateSettings toolSettings, string experiment)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Experiment = experiment;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings ResetExperiment(this AzureBatchaiJobTerminateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Experiment = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings SetIds(this AzureBatchaiJobTerminateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings SetIds(this AzureBatchaiJobTerminateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobTerminateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings AddIds(this AzureBatchaiJobTerminateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobTerminateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings AddIds(this AzureBatchaiJobTerminateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiJobTerminateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings ClearIds(this AzureBatchaiJobTerminateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobTerminateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings RemoveIds(this AzureBatchaiJobTerminateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobTerminateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings RemoveIds(this AzureBatchaiJobTerminateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Name"/>.</em></p><p>Name of job.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings SetName(this AzureBatchaiJobTerminateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.Name"/>.</em></p><p>Name of job.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings ResetName(this AzureBatchaiJobTerminateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings SetResourceGroup(this AzureBatchaiJobTerminateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings ResetResourceGroup(this AzureBatchaiJobTerminateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings SetSubscription(this AzureBatchaiJobTerminateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings ResetSubscription(this AzureBatchaiJobTerminateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobTerminateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings SetWorkspace(this AzureBatchaiJobTerminateSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobTerminateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobTerminateSettings ResetWorkspace(this AzureBatchaiJobTerminateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
             return toolSettings;
         }
         #endregion
@@ -6078,6 +8038,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureBatchaiJobWaitSettingsExtensions
     {
+        #region Interval
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobWaitSettings.Interval"/>.</em></p><p>Polling interval in sec.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings SetInterval(this AzureBatchaiJobWaitSettings toolSettings, string interval)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = interval;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobWaitSettings.Interval"/>.</em></p><p>Polling interval in sec.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings ResetInterval(this AzureBatchaiJobWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = null;
+            return toolSettings;
+        }
+        #endregion
         #region Experiment
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobWaitSettings.Experiment"/>.</em></p><p>Name of experiment.</p></summary>
         [Pure]
@@ -6093,6 +8071,66 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Experiment = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings SetIds(this AzureBatchaiJobWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings SetIds(this AzureBatchaiJobWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings AddIds(this AzureBatchaiJobWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureBatchaiJobWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings AddIds(this AzureBatchaiJobWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureBatchaiJobWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings ClearIds(this AzureBatchaiJobWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings RemoveIds(this AzureBatchaiJobWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureBatchaiJobWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings RemoveIds(this AzureBatchaiJobWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -6132,6 +8170,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings SetSubscription(this AzureBatchaiJobWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobWaitSettings ResetSubscription(this AzureBatchaiJobWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Workspace
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobWaitSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
         [Pure]
@@ -6147,24 +8203,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Interval
-        /// <summary><p><em>Sets <see cref="AzureBatchaiJobWaitSettings.Interval"/>.</em></p><p>Polling interval in sec.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobWaitSettings SetInterval(this AzureBatchaiJobWaitSettings toolSettings, string interval)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = interval;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiJobWaitSettings.Interval"/>.</em></p><p>Polling interval in sec.</p></summary>
-        [Pure]
-        public static AzureBatchaiJobWaitSettings ResetInterval(this AzureBatchaiJobWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = null;
             return toolSettings;
         }
         #endregion
@@ -6252,1184 +8290,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureBatchaiJobWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureBatchaiJobWaitSettings ResetVerbose(this AzureBatchaiJobWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBatchaiWorkspaceCreateSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetResourceGroup(this AzureBatchaiWorkspaceCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetResourceGroup(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetWorkspace(this AzureBatchaiWorkspaceCreateSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetWorkspace(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Location"/>.</em></p><p>Location of the workspace. If omitted, the location of the resource group will be used.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetLocation(this AzureBatchaiWorkspaceCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Location"/>.</em></p><p>Location of the workspace. If omitted, the location of the resource group will be used.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetLocation(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetDebug(this AzureBatchaiWorkspaceCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetDebug(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetHelp(this AzureBatchaiWorkspaceCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetHelp(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetOutput(this AzureBatchaiWorkspaceCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetOutput(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetQuery(this AzureBatchaiWorkspaceCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetQuery(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings SetVerbose(this AzureBatchaiWorkspaceCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceCreateSettings ResetVerbose(this AzureBatchaiWorkspaceCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBatchaiWorkspaceDeleteSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetResourceGroup(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetResourceGroup(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetWorkspace(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetWorkspace(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings, bool? noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings EnableNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings DisableNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureBatchaiWorkspaceDeleteSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ToggleNoWait(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetYes(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetYes(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetDebug(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetDebug(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetHelp(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetHelp(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetOutput(this AzureBatchaiWorkspaceDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetOutput(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetQuery(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetQuery(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings SetVerbose(this AzureBatchaiWorkspaceDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceDeleteSettings ResetVerbose(this AzureBatchaiWorkspaceDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBatchaiWorkspaceListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings SetResourceGroup(this AzureBatchaiWorkspaceListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings ResetResourceGroup(this AzureBatchaiWorkspaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings SetDebug(this AzureBatchaiWorkspaceListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings ResetDebug(this AzureBatchaiWorkspaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings SetHelp(this AzureBatchaiWorkspaceListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings ResetHelp(this AzureBatchaiWorkspaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings SetOutput(this AzureBatchaiWorkspaceListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings ResetOutput(this AzureBatchaiWorkspaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings SetQuery(this AzureBatchaiWorkspaceListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings ResetQuery(this AzureBatchaiWorkspaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings SetVerbose(this AzureBatchaiWorkspaceListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceListSettings ResetVerbose(this AzureBatchaiWorkspaceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBatchaiWorkspaceShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBatchaiWorkspaceShowSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings SetResourceGroup(this AzureBatchaiWorkspaceShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings ResetResourceGroup(this AzureBatchaiWorkspaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings SetWorkspace(this AzureBatchaiWorkspaceShowSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings ResetWorkspace(this AzureBatchaiWorkspaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings SetDebug(this AzureBatchaiWorkspaceShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings ResetDebug(this AzureBatchaiWorkspaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings SetHelp(this AzureBatchaiWorkspaceShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings ResetHelp(this AzureBatchaiWorkspaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings SetOutput(this AzureBatchaiWorkspaceShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings ResetOutput(this AzureBatchaiWorkspaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings SetQuery(this AzureBatchaiWorkspaceShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings ResetQuery(this AzureBatchaiWorkspaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBatchaiWorkspaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings SetVerbose(this AzureBatchaiWorkspaceShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiWorkspaceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiWorkspaceShowSettings ResetVerbose(this AzureBatchaiWorkspaceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBatchaiClusterFileListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBatchaiClusterFileListSettingsExtensions
-    {
-        #region Cluster
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetCluster(this AzureBatchaiClusterFileListSettings toolSettings, string cluster)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cluster = cluster;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetCluster(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cluster = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetResourceGroup(this AzureBatchaiClusterFileListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetResourceGroup(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetWorkspace(this AzureBatchaiClusterFileListSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetWorkspace(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expiry
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Expiry"/>.</em></p><p>Time in minutes for how long generated download URLs should remain valid.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetExpiry(this AzureBatchaiClusterFileListSettings toolSettings, string expiry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expiry = expiry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Expiry"/>.</em></p><p>Time in minutes for how long generated download URLs should remain valid.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetExpiry(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expiry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Path
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Path"/>.</em></p><p>Relative path of a subfolder inside of the node setup task output directory.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetPath(this AzureBatchaiClusterFileListSettings toolSettings, string path)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = path;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Path"/>.</em></p><p>Relative path of a subfolder inside of the node setup task output directory.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetPath(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Path = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetDebug(this AzureBatchaiClusterFileListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetDebug(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetHelp(this AzureBatchaiClusterFileListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetHelp(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetOutput(this AzureBatchaiClusterFileListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetOutput(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetQuery(this AzureBatchaiClusterFileListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetQuery(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings SetVerbose(this AzureBatchaiClusterFileListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterFileListSettings ResetVerbose(this AzureBatchaiClusterFileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBatchaiClusterNodeExecSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBatchaiClusterNodeExecSettingsExtensions
-    {
-        #region Cluster
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetCluster(this AzureBatchaiClusterNodeExecSettings toolSettings, string cluster)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cluster = cluster;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetCluster(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cluster = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetResourceGroup(this AzureBatchaiClusterNodeExecSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetResourceGroup(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetWorkspace(this AzureBatchaiClusterNodeExecSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetWorkspace(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Address
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Address"/>.</em></p><p>Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetAddress(this AzureBatchaiClusterNodeExecSettings toolSettings, string address)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Address = address;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Address"/>.</em></p><p>Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetAddress(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Address = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Exec
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Exec"/>.</em></p><p>Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetExec(this AzureBatchaiClusterNodeExecSettings toolSettings, string exec)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exec = exec;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Exec"/>.</em></p><p>Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetExec(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exec = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NodeId
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.NodeId"/>.</em></p><p>ID of the node to forward the ports to. If not provided, the command will be executed on the first available node.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetNodeId(this AzureBatchaiClusterNodeExecSettings toolSettings, string nodeId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeId = nodeId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.NodeId"/>.</em></p><p>ID of the node to forward the ports to. If not provided, the command will be executed on the first available node.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetNodeId(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Password"/>.</em></p><p>Optional password to establish SSH connection.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetPassword(this AzureBatchaiClusterNodeExecSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Password"/>.</em></p><p>Optional password to establish SSH connection.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetPassword(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshPrivateKey
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.SshPrivateKey"/>.</em></p><p>Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetSshPrivateKey(this AzureBatchaiClusterNodeExecSettings toolSettings, string sshPrivateKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshPrivateKey = sshPrivateKey;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.SshPrivateKey"/>.</em></p><p>Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetSshPrivateKey(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshPrivateKey = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetDebug(this AzureBatchaiClusterNodeExecSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetDebug(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetHelp(this AzureBatchaiClusterNodeExecSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetHelp(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetOutput(this AzureBatchaiClusterNodeExecSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetOutput(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetQuery(this AzureBatchaiClusterNodeExecSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetQuery(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings SetVerbose(this AzureBatchaiClusterNodeExecSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeExecSettings ResetVerbose(this AzureBatchaiClusterNodeExecSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureBatchaiClusterNodeListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureBatchaiClusterNodeListSettingsExtensions
-    {
-        #region Cluster
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetCluster(this AzureBatchaiClusterNodeListSettings toolSettings, string cluster)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cluster = cluster;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetCluster(this AzureBatchaiClusterNodeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Cluster = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetResourceGroup(this AzureBatchaiClusterNodeListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetResourceGroup(this AzureBatchaiClusterNodeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Workspace
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetWorkspace(this AzureBatchaiClusterNodeListSettings toolSettings, string workspace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = workspace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetWorkspace(this AzureBatchaiClusterNodeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Workspace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetDebug(this AzureBatchaiClusterNodeListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetDebug(this AzureBatchaiClusterNodeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetHelp(this AzureBatchaiClusterNodeListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetHelp(this AzureBatchaiClusterNodeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetOutput(this AzureBatchaiClusterNodeListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetOutput(this AzureBatchaiClusterNodeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetQuery(this AzureBatchaiClusterNodeListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetQuery(this AzureBatchaiClusterNodeListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings SetVerbose(this AzureBatchaiClusterNodeListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureBatchaiClusterNodeListSettings ResetVerbose(this AzureBatchaiClusterNodeListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -7567,6 +8427,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobFileListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobFileListSettings SetSubscription(this AzureBatchaiJobFileListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobFileListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobFileListSettings ResetSubscription(this AzureBatchaiJobFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7791,6 +8669,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobFileStreamSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobFileStreamSettings SetSubscription(this AzureBatchaiJobFileStreamSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobFileStreamSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobFileStreamSettings ResetSubscription(this AzureBatchaiJobFileStreamSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8054,6 +8950,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobNodeExecSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobNodeExecSettings SetSubscription(this AzureBatchaiJobNodeExecSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobNodeExecSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobNodeExecSettings ResetSubscription(this AzureBatchaiJobNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobNodeExecSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8224,6 +9138,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiJobNodeListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobNodeListSettings SetSubscription(this AzureBatchaiJobNodeListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiJobNodeListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiJobNodeListSettings ResetSubscription(this AzureBatchaiJobNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureBatchaiJobNodeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8308,6 +9240,642 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureBatchaiJobNodeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureBatchaiJobNodeListSettings ResetVerbose(this AzureBatchaiJobNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBatchaiClusterFileListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBatchaiClusterFileListSettingsExtensions
+    {
+        #region Cluster
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetCluster(this AzureBatchaiClusterFileListSettings toolSettings, string cluster)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cluster = cluster;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetCluster(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cluster = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetResourceGroup(this AzureBatchaiClusterFileListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetResourceGroup(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetWorkspace(this AzureBatchaiClusterFileListSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetWorkspace(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expiry
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Expiry"/>.</em></p><p>Time in minutes for how long generated download URLs should remain valid.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetExpiry(this AzureBatchaiClusterFileListSettings toolSettings, string expiry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expiry = expiry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Expiry"/>.</em></p><p>Time in minutes for how long generated download URLs should remain valid.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetExpiry(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expiry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Path
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Path"/>.</em></p><p>Relative path of a subfolder inside of the node setup task output directory.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetPath(this AzureBatchaiClusterFileListSettings toolSettings, string path)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = path;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Path"/>.</em></p><p>Relative path of a subfolder inside of the node setup task output directory.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetPath(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Path = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetSubscription(this AzureBatchaiClusterFileListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetSubscription(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetDebug(this AzureBatchaiClusterFileListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetDebug(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetHelp(this AzureBatchaiClusterFileListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetHelp(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetOutput(this AzureBatchaiClusterFileListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetOutput(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetQuery(this AzureBatchaiClusterFileListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetQuery(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterFileListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings SetVerbose(this AzureBatchaiClusterFileListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterFileListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterFileListSettings ResetVerbose(this AzureBatchaiClusterFileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBatchaiClusterNodeExecSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBatchaiClusterNodeExecSettingsExtensions
+    {
+        #region Cluster
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetCluster(this AzureBatchaiClusterNodeExecSettings toolSettings, string cluster)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cluster = cluster;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetCluster(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cluster = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetResourceGroup(this AzureBatchaiClusterNodeExecSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetResourceGroup(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetWorkspace(this AzureBatchaiClusterNodeExecSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetWorkspace(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Address
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Address"/>.</em></p><p>Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetAddress(this AzureBatchaiClusterNodeExecSettings toolSettings, string address)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Address = address;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Address"/>.</em></p><p>Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetAddress(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Address = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Exec
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Exec"/>.</em></p><p>Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetExec(this AzureBatchaiClusterNodeExecSettings toolSettings, string exec)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exec = exec;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Exec"/>.</em></p><p>Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetExec(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exec = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeId
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.NodeId"/>.</em></p><p>ID of the node to forward the ports to. If not provided, the command will be executed on the first available node.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetNodeId(this AzureBatchaiClusterNodeExecSettings toolSettings, string nodeId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeId = nodeId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.NodeId"/>.</em></p><p>ID of the node to forward the ports to. If not provided, the command will be executed on the first available node.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetNodeId(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Password"/>.</em></p><p>Optional password to establish SSH connection.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetPassword(this AzureBatchaiClusterNodeExecSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Password"/>.</em></p><p>Optional password to establish SSH connection.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetPassword(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SshPrivateKey
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.SshPrivateKey"/>.</em></p><p>Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetSshPrivateKey(this AzureBatchaiClusterNodeExecSettings toolSettings, string sshPrivateKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshPrivateKey = sshPrivateKey;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.SshPrivateKey"/>.</em></p><p>Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetSshPrivateKey(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SshPrivateKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetSubscription(this AzureBatchaiClusterNodeExecSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetSubscription(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetDebug(this AzureBatchaiClusterNodeExecSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetDebug(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetHelp(this AzureBatchaiClusterNodeExecSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetHelp(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetOutput(this AzureBatchaiClusterNodeExecSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetOutput(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetQuery(this AzureBatchaiClusterNodeExecSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetQuery(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeExecSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings SetVerbose(this AzureBatchaiClusterNodeExecSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeExecSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeExecSettings ResetVerbose(this AzureBatchaiClusterNodeExecSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureBatchaiClusterNodeListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureBatchaiTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureBatchaiClusterNodeListSettingsExtensions
+    {
+        #region Cluster
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetCluster(this AzureBatchaiClusterNodeListSettings toolSettings, string cluster)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cluster = cluster;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Cluster"/>.</em></p><p>Name of cluster.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetCluster(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Cluster = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetResourceGroup(this AzureBatchaiClusterNodeListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetResourceGroup(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetWorkspace(this AzureBatchaiClusterNodeListSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Workspace"/>.</em></p><p>Name of workspace.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetWorkspace(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetSubscription(this AzureBatchaiClusterNodeListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetSubscription(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetDebug(this AzureBatchaiClusterNodeListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetDebug(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetHelp(this AzureBatchaiClusterNodeListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetHelp(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetOutput(this AzureBatchaiClusterNodeListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetOutput(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetQuery(this AzureBatchaiClusterNodeListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetQuery(this AzureBatchaiClusterNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureBatchaiClusterNodeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings SetVerbose(this AzureBatchaiClusterNodeListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureBatchaiClusterNodeListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureBatchaiClusterNodeListSettings ResetVerbose(this AzureBatchaiClusterNodeListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

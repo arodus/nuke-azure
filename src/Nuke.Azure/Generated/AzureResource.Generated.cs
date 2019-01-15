@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -100,6 +100,14 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureResourceWait(Configure<AzureResourceWaitSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureResourceWaitSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure resources.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureResourceLinkCreate(Configure<AzureResourceLinkCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureResourceLinkCreateSettings());
@@ -195,7 +203,7 @@ namespace Nuke.Azure
         public virtual string Id { get; internal set; }
         /// <summary><p>Indicates that the properties object includes other options such as location, tags, sku, and/or plan.</p></summary>
         public virtual string IsFullObject { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The api version of the resource (omit for latest).</p></summary>
         public virtual string ApiVersion { get; internal set; }
@@ -209,6 +217,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -233,6 +243,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -266,6 +277,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -287,6 +300,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -324,6 +338,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -347,6 +363,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -365,7 +382,7 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureResource executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The resource name. (Ex: myC).</p></summary>
         public virtual string Name { get; internal set; }
@@ -377,6 +394,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -397,6 +416,7 @@ namespace Nuke.Azure
               .Add("--namespace {value}", Namespace)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -421,6 +441,8 @@ namespace Nuke.Azure
         public virtual string Ids { get; internal set; }
         /// <summary><p>The destination subscription identifier.</p></summary>
         public virtual string DestinationSubscriptionId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -438,6 +460,7 @@ namespace Nuke.Azure
               .Add("--destination-group {value}", DestinationGroup)
               .Add("--ids {value}", Ids)
               .Add("--destination-subscription-id {value}", DestinationSubscriptionId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -473,6 +496,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -495,6 +520,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -530,6 +556,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -552,6 +580,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -595,6 +624,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -621,6 +652,88 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureResourceWaitSettings
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureResourceWaitSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureResource executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
+        /// <summary><p>Use if the default command output doesn't capture all of the property data.</p></summary>
+        public virtual bool? IncludeResponseBody { get; internal set; }
+        /// <summary><p>The api version of the resource (omit for latest).</p></summary>
+        public virtual string ApiVersion { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The resource name. (Ex: myC).</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Provider namespace (Ex: 'Microsoft.Provider').</p></summary>
+        public virtual string Namespace { get; internal set; }
+        /// <summary><p>The parent path (Ex: 'resA/myA/resB/myB').</p></summary>
+        public virtual string Parent { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
+        public virtual string Created { get; internal set; }
+        /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        public virtual string Custom { get; internal set; }
+        /// <summary><p>Wait until deleted.</p></summary>
+        public virtual string Deleted { get; internal set; }
+        /// <summary><p>Wait until the resource exists.</p></summary>
+        public virtual string Exists { get; internal set; }
+        /// <summary><p>Polling interval in seconds.</p></summary>
+        public virtual string Interval { get; internal set; }
+        /// <summary><p>Maximum wait in seconds.</p></summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
+        public virtual string Updated { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("resource wait")
+              .Add("--include-response-body", IncludeResponseBody)
+              .Add("--api-version {value}", ApiVersion)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace {value}", Namespace)
+              .Add("--parent {value}", Parent)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--resource-type {value}", ResourceType)
+              .Add("--created {value}", Created)
+              .Add("--custom {value}", Custom)
+              .Add("--deleted {value}", Deleted)
+              .Add("--exists {value}", Exists)
+              .Add("--interval {value}", Interval)
+              .Add("--timeout {value}", Timeout)
+              .Add("--updated {value}", Updated)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -645,6 +758,8 @@ namespace Nuke.Azure
         public virtual string TargetId { get; internal set; }
         /// <summary><p>Notes for this link.</p></summary>
         public virtual string Notes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -662,6 +777,7 @@ namespace Nuke.Azure
               .Add("--link-id {value}", LinkId)
               .Add("--target-id {value}", TargetId)
               .Add("--notes {value}", Notes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -682,6 +798,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
         /// <summary><p>The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
         public virtual string LinkId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -697,6 +815,7 @@ namespace Nuke.Azure
             arguments
               .Add("resource link delete")
               .Add("--link-id {value}", LinkId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -719,6 +838,8 @@ namespace Nuke.Azure
         public virtual string FilterString { get; internal set; }
         /// <summary><p>The scope for the links.</p></summary>
         public virtual string Scope { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -735,6 +856,7 @@ namespace Nuke.Azure
               .Add("resource link list")
               .Add("--filter-string {value}", FilterString)
               .Add("--scope {value}", Scope)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -755,6 +877,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureResourceTasks.AzureResourcePath;
         /// <summary><p>The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink.</p></summary>
         public virtual string LinkId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -770,6 +894,7 @@ namespace Nuke.Azure
             arguments
               .Add("resource link show")
               .Add("--link-id {value}", LinkId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -794,6 +919,8 @@ namespace Nuke.Azure
         public virtual string Notes { get; internal set; }
         /// <summary><p>The id of the resource link target.</p></summary>
         public virtual string TargetId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -811,6 +938,7 @@ namespace Nuke.Azure
               .Add("--link-id {value}", LinkId)
               .Add("--notes {value}", Notes)
               .Add("--target-id {value}", TargetId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -845,6 +973,8 @@ namespace Nuke.Azure
         public virtual string Resource { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -867,6 +997,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource {value}", Resource)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -900,6 +1031,8 @@ namespace Nuke.Azure
         public virtual string Resource { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -921,6 +1054,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource {value}", Resource)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -951,6 +1085,8 @@ namespace Nuke.Azure
         public virtual string Resource { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -971,6 +1107,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource {value}", Resource)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1004,6 +1141,8 @@ namespace Nuke.Azure
         public virtual string Resource { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1025,6 +1164,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource {value}", Resource)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1062,6 +1202,8 @@ namespace Nuke.Azure
         public virtual string Resource { get; internal set; }
         /// <summary><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1085,6 +1227,7 @@ namespace Nuke.Azure
               .Add("--parent {value}", Parent)
               .Add("--resource {value}", Resource)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1155,7 +1298,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureResourceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureResourceCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureResourceCreateSettings SetLocation(this AzureResourceCreateSettings toolSettings, string location)
         {
@@ -1163,7 +1306,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureResourceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureResourceCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureResourceCreateSettings ResetLocation(this AzureResourceCreateSettings toolSettings)
         {
@@ -1277,6 +1420,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceCreateSettings SetSubscription(this AzureResourceCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceCreateSettings ResetSubscription(this AzureResourceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1543,6 +1704,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceDeleteSettings SetSubscription(this AzureResourceDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceDeleteSettings ResetSubscription(this AzureResourceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1848,6 +2027,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceInvokeActionSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceInvokeActionSettings SetSubscription(this AzureResourceInvokeActionSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceInvokeActionSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceInvokeActionSettings ResetSubscription(this AzureResourceInvokeActionSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureResourceInvokeActionSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1947,7 +2144,7 @@ namespace Nuke.Azure
     public static partial class AzureResourceListSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureResourceListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureResourceListSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureResourceListSettings SetLocation(this AzureResourceListSettings toolSettings, string location)
         {
@@ -1955,7 +2152,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureResourceListSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureResourceListSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureResourceListSettings ResetLocation(this AzureResourceListSettings toolSettings)
         {
@@ -2051,6 +2248,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceListSettings SetSubscription(this AzureResourceListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceListSettings ResetSubscription(this AzureResourceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2203,6 +2418,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.DestinationSubscriptionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceMoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceMoveSettings SetSubscription(this AzureResourceMoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceMoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceMoveSettings ResetSubscription(this AzureResourceMoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2514,6 +2747,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceShowSettings SetSubscription(this AzureResourceShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceShowSettings ResetSubscription(this AzureResourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureResourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2795,6 +3046,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceTagSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceTagSettings SetSubscription(this AzureResourceTagSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceTagSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceTagSettings ResetSubscription(this AzureResourceTagSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3178,6 +3447,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceUpdateSettings SetSubscription(this AzureResourceUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceUpdateSettings ResetSubscription(this AzureResourceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureResourceUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3270,6 +3557,458 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureResourceWaitSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureResourceWaitSettingsExtensions
+    {
+        #region IncludeResponseBody
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.IncludeResponseBody"/>.</em></p><p>Use if the default command output doesn't capture all of the property data.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetIncludeResponseBody(this AzureResourceWaitSettings toolSettings, bool? includeResponseBody)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeResponseBody = includeResponseBody;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.IncludeResponseBody"/>.</em></p><p>Use if the default command output doesn't capture all of the property data.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetIncludeResponseBody(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeResponseBody = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureResourceWaitSettings.IncludeResponseBody"/>.</em></p><p>Use if the default command output doesn't capture all of the property data.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings EnableIncludeResponseBody(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeResponseBody = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureResourceWaitSettings.IncludeResponseBody"/>.</em></p><p>Use if the default command output doesn't capture all of the property data.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings DisableIncludeResponseBody(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeResponseBody = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureResourceWaitSettings.IncludeResponseBody"/>.</em></p><p>Use if the default command output doesn't capture all of the property data.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ToggleIncludeResponseBody(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeResponseBody = !toolSettings.IncludeResponseBody;
+            return toolSettings;
+        }
+        #endregion
+        #region ApiVersion
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.ApiVersion"/>.</em></p><p>The api version of the resource (omit for latest).</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetApiVersion(this AzureResourceWaitSettings toolSettings, string apiVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiVersion = apiVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.ApiVersion"/>.</em></p><p>The api version of the resource (omit for latest).</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetApiVersion(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetIds(this AzureResourceWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetIds(this AzureResourceWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureResourceWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings AddIds(this AzureResourceWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureResourceWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings AddIds(this AzureResourceWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureResourceWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ClearIds(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureResourceWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings RemoveIds(this AzureResourceWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureResourceWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings RemoveIds(this AzureResourceWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Name"/>.</em></p><p>The resource name. (Ex: myC).</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetName(this AzureResourceWaitSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Name"/>.</em></p><p>The resource name. (Ex: myC).</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetName(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Namespace
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: 'Microsoft.Provider').</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetNamespace(this AzureResourceWaitSettings toolSettings, string @namespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = @namespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Namespace"/>.</em></p><p>Provider namespace (Ex: 'Microsoft.Provider').</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetNamespace(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parent
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Parent"/>.</em></p><p>The parent path (Ex: 'resA/myA/resB/myB').</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetParent(this AzureResourceWaitSettings toolSettings, string parent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = parent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Parent"/>.</em></p><p>The parent path (Ex: 'resA/myA/resB/myB').</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetParent(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetResourceGroup(this AzureResourceWaitSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetResourceGroup(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.ResourceType"/>.</em></p><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetResourceType(this AzureResourceWaitSettings toolSettings, string resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.ResourceType"/>.</em></p><p>The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC').</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetResourceType(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Created
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Created"/>.</em></p><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetCreated(this AzureResourceWaitSettings toolSettings, string created)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Created = created;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Created"/>.</em></p><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetCreated(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Created = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Custom
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetCustom(this AzureResourceWaitSettings toolSettings, string custom)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = custom;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetCustom(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Deleted
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Deleted"/>.</em></p><p>Wait until deleted.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetDeleted(this AzureResourceWaitSettings toolSettings, string deleted)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Deleted = deleted;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Deleted"/>.</em></p><p>Wait until deleted.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetDeleted(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Deleted = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Exists
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetExists(this AzureResourceWaitSettings toolSettings, string exists)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = exists;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetExists(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Interval
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetInterval(this AzureResourceWaitSettings toolSettings, string interval)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = interval;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetInterval(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetTimeout(this AzureResourceWaitSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetTimeout(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Updated
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Updated"/>.</em></p><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetUpdated(this AzureResourceWaitSettings toolSettings, string updated)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Updated = updated;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Updated"/>.</em></p><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetUpdated(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Updated = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetSubscription(this AzureResourceWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetSubscription(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetDebug(this AzureResourceWaitSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetDebug(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetHelp(this AzureResourceWaitSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetHelp(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetOutput(this AzureResourceWaitSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetOutput(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetQuery(this AzureResourceWaitSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetQuery(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureResourceWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings SetVerbose(this AzureResourceWaitSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureResourceWaitSettings ResetVerbose(this AzureResourceWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureResourceLinkCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureResourceTasks"/>.</p></summary>
     [PublicAPI]
@@ -3327,6 +4066,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Notes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings SetSubscription(this AzureResourceLinkCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkCreateSettings ResetSubscription(this AzureResourceLinkCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3443,6 +4200,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LinkId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings SetSubscription(this AzureResourceLinkDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkDeleteSettings ResetSubscription(this AzureResourceLinkDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3580,6 +4355,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings SetSubscription(this AzureResourceLinkListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkListSettings ResetSubscription(this AzureResourceLinkListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureResourceLinkListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3693,6 +4486,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LinkId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings SetSubscription(this AzureResourceLinkShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkShowSettings ResetSubscription(this AzureResourceLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3845,6 +4656,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.TargetId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLinkUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings SetSubscription(this AzureResourceLinkUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLinkUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLinkUpdateSettings ResetSubscription(this AzureResourceLinkUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4087,6 +4916,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLockCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockCreateSettings SetSubscription(this AzureResourceLockCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLockCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockCreateSettings ResetSubscription(this AzureResourceLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4356,6 +5203,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLockDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockDeleteSettings SetSubscription(this AzureResourceLockDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLockDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockDeleteSettings ResetSubscription(this AzureResourceLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureResourceLockDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4559,6 +5424,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLockListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockListSettings SetSubscription(this AzureResourceLockListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLockListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockListSettings ResetSubscription(this AzureResourceLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4825,6 +5708,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLockShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockShowSettings SetSubscription(this AzureResourceLockShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLockShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockShowSettings ResetSubscription(this AzureResourceLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5127,6 +6028,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureResourceLockUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockUpdateSettings SetSubscription(this AzureResourceLockUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureResourceLockUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureResourceLockUpdateSettings ResetSubscription(this AzureResourceLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

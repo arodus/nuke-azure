@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -44,38 +44,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureRoleAssignmentCreate(Configure<AzureRoleAssignmentCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureRoleAssignmentDelete(Configure<AzureRoleAssignmentDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureRoleAssignmentList(Configure<AzureRoleAssignmentListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureRoleAssignmentListChangelogs(Configure<AzureRoleAssignmentListChangelogsSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListChangelogsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureRoleDefinitionCreate(Configure<AzureRoleDefinitionCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionCreateSettings());
@@ -103,6 +71,38 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureRoleDefinitionUpdate(Configure<AzureRoleDefinitionUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureRoleDefinitionUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentCreate(Configure<AzureRoleAssignmentCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentDelete(Configure<AzureRoleAssignmentDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentList(Configure<AzureRoleAssignmentListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage user roles for access control with Azure Active Directory and service principals.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureRoleAssignmentListChangelogs(Configure<AzureRoleAssignmentListChangelogsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureRoleAssignmentListChangelogsSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -140,6 +140,176 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureRoleDefinitionCreateSettings
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRoleDefinitionCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureRole executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
+        /// <summary><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
+        public virtual string RoleDefinition { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("role definition create")
+              .Add("--role-definition {value}", RoleDefinition)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRoleDefinitionDeleteSettings
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRoleDefinitionDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureRole executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
+        /// <summary><p>The role's name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Custom roles only(vs. build-in ones).</p></summary>
+        public virtual bool? CustomRoleOnly { get; internal set; }
+        /// <summary><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("role definition delete")
+              .Add("--name {value}", Name)
+              .Add("--custom-role-only", CustomRoleOnly)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--scope {value}", Scope)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRoleDefinitionListSettings
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRoleDefinitionListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureRole executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
+        /// <summary><p>Custom roles only(vs. build-in ones).</p></summary>
+        public virtual bool? CustomRoleOnly { get; internal set; }
+        /// <summary><p>The role's name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("role definition list")
+              .Add("--custom-role-only", CustomRoleOnly)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--scope {value}", Scope)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRoleDefinitionUpdateSettings
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRoleDefinitionUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureRole executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
+        /// <summary><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
+        public virtual string RoleDefinition { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("role definition update")
+              .Add("--role-definition {value}", RoleDefinition)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureRoleAssignmentCreateSettings
     /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
     [PublicAPI]
@@ -159,6 +329,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
         public virtual string Scope { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -178,6 +350,7 @@ namespace Nuke.Azure
               .Add("--assignee-object-id {value}", AssigneeObjectId)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--scope {value}", Scope)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -209,6 +382,8 @@ namespace Nuke.Azure
         public virtual string Role { get; internal set; }
         /// <summary><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
         public virtual string Scope { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -229,6 +404,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--role {value}", Role)
               .Add("--scope {value}", Scope)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -263,6 +439,8 @@ namespace Nuke.Azure
         public virtual string Role { get; internal set; }
         /// <summary><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
         public virtual string Scope { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -285,6 +463,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--role {value}", Role)
               .Add("--scope {value}", Scope)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -307,6 +486,8 @@ namespace Nuke.Azure
         public virtual string EndTime { get; internal set; }
         /// <summary><p>The start time of the query in the format of %Y-%m-%dT%H:%M:%SZ, e.g. 2000-12-31T12:59:59Z. Defaults to 1 Hour prior to the current time.</p></summary>
         public virtual string StartTime { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -323,164 +504,7 @@ namespace Nuke.Azure
               .Add("role assignment list-changelogs")
               .Add("--end-time {value}", EndTime)
               .Add("--start-time {value}", StartTime)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRoleDefinitionCreateSettings
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRoleDefinitionCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureRole executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
-        /// <summary><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
-        public virtual string RoleDefinition { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("role definition create")
-              .Add("--role-definition {value}", RoleDefinition)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRoleDefinitionDeleteSettings
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRoleDefinitionDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureRole executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
-        /// <summary><p>The role's name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Custom roles only(vs. build-in ones).</p></summary>
-        public virtual bool? CustomRoleOnly { get; internal set; }
-        /// <summary><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("role definition delete")
-              .Add("--name {value}", Name)
-              .Add("--custom-role-only", CustomRoleOnly)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--scope {value}", Scope)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRoleDefinitionListSettings
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRoleDefinitionListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureRole executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
-        /// <summary><p>Custom roles only(vs. build-in ones).</p></summary>
-        public virtual bool? CustomRoleOnly { get; internal set; }
-        /// <summary><p>The role's name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("role definition list")
-              .Add("--custom-role-only", CustomRoleOnly)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--scope {value}", Scope)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRoleDefinitionUpdateSettings
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRoleDefinitionUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureRole executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureRoleTasks.AzureRolePath;
-        /// <summary><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
-        public virtual string RoleDefinition { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("role definition update")
-              .Add("--role-definition {value}", RoleDefinition)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -588,6 +612,698 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureRoleDefinitionCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRoleDefinitionCreateSettingsExtensions
+    {
+        #region RoleDefinition
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings SetRoleDefinition(this AzureRoleDefinitionCreateSettings toolSettings, string roleDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RoleDefinition = roleDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings ResetRoleDefinition(this AzureRoleDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RoleDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings SetSubscription(this AzureRoleDefinitionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings ResetSubscription(this AzureRoleDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings SetDebug(this AzureRoleDefinitionCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings ResetDebug(this AzureRoleDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings SetHelp(this AzureRoleDefinitionCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings ResetHelp(this AzureRoleDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings SetOutput(this AzureRoleDefinitionCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings ResetOutput(this AzureRoleDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings SetQuery(this AzureRoleDefinitionCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings ResetQuery(this AzureRoleDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings SetVerbose(this AzureRoleDefinitionCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionCreateSettings ResetVerbose(this AzureRoleDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRoleDefinitionDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRoleDefinitionDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Name"/>.</em></p><p>The role's name.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetName(this AzureRoleDefinitionDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Name"/>.</em></p><p>The role's name.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetName(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CustomRoleOnly
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings, bool? customRoleOnly)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = customRoleOnly;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings EnableCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings DisableCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ToggleCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = !toolSettings.CustomRoleOnly;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetResourceGroup(this AzureRoleDefinitionDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetResourceGroup(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetScope(this AzureRoleDefinitionDeleteSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetScope(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetSubscription(this AzureRoleDefinitionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetSubscription(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetDebug(this AzureRoleDefinitionDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetDebug(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetHelp(this AzureRoleDefinitionDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetHelp(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetOutput(this AzureRoleDefinitionDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetOutput(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetQuery(this AzureRoleDefinitionDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetQuery(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings SetVerbose(this AzureRoleDefinitionDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionDeleteSettings ResetVerbose(this AzureRoleDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRoleDefinitionListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRoleDefinitionListSettingsExtensions
+    {
+        #region CustomRoleOnly
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings, bool? customRoleOnly)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = customRoleOnly;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings EnableCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings DisableCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ToggleCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomRoleOnly = !toolSettings.CustomRoleOnly;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Name"/>.</em></p><p>The role's name.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetName(this AzureRoleDefinitionListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Name"/>.</em></p><p>The role's name.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetName(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetResourceGroup(this AzureRoleDefinitionListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetResourceGroup(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetScope(this AzureRoleDefinitionListSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetScope(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetSubscription(this AzureRoleDefinitionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetSubscription(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetDebug(this AzureRoleDefinitionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetDebug(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetHelp(this AzureRoleDefinitionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetHelp(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetOutput(this AzureRoleDefinitionListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetOutput(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetQuery(this AzureRoleDefinitionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetQuery(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings SetVerbose(this AzureRoleDefinitionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionListSettings ResetVerbose(this AzureRoleDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRoleDefinitionUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRoleDefinitionUpdateSettingsExtensions
+    {
+        #region RoleDefinition
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings SetRoleDefinition(this AzureRoleDefinitionUpdateSettings toolSettings, string roleDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RoleDefinition = roleDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings ResetRoleDefinition(this AzureRoleDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RoleDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings SetSubscription(this AzureRoleDefinitionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings ResetSubscription(this AzureRoleDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings SetDebug(this AzureRoleDefinitionUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings ResetDebug(this AzureRoleDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings SetHelp(this AzureRoleDefinitionUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings ResetHelp(this AzureRoleDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings SetOutput(this AzureRoleDefinitionUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings ResetOutput(this AzureRoleDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings SetQuery(this AzureRoleDefinitionUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings ResetQuery(this AzureRoleDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings SetVerbose(this AzureRoleDefinitionUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureRoleDefinitionUpdateSettings ResetVerbose(this AzureRoleDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureRoleAssignmentCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
     [PublicAPI]
@@ -681,6 +1397,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentCreateSettings SetSubscription(this AzureRoleAssignmentCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleAssignmentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentCreateSettings ResetSubscription(this AzureRoleAssignmentCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -929,6 +1663,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentDeleteSettings SetSubscription(this AzureRoleAssignmentDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleAssignmentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentDeleteSettings ResetSubscription(this AzureRoleAssignmentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1198,6 +1950,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentListSettings SetSubscription(this AzureRoleAssignmentListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleAssignmentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentListSettings ResetSubscription(this AzureRoleAssignmentListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1332,6 +2102,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListChangelogsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentListChangelogsSettings SetSubscription(this AzureRoleAssignmentListChangelogsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureRoleAssignmentListChangelogsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureRoleAssignmentListChangelogsSettings ResetSubscription(this AzureRoleAssignmentListChangelogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureRoleAssignmentListChangelogsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1416,626 +2204,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureRoleAssignmentListChangelogsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureRoleAssignmentListChangelogsSettings ResetVerbose(this AzureRoleAssignmentListChangelogsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRoleDefinitionCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRoleDefinitionCreateSettingsExtensions
-    {
-        #region RoleDefinition
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings SetRoleDefinition(this AzureRoleDefinitionCreateSettings toolSettings, string roleDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RoleDefinition = roleDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings ResetRoleDefinition(this AzureRoleDefinitionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RoleDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings SetDebug(this AzureRoleDefinitionCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings ResetDebug(this AzureRoleDefinitionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings SetHelp(this AzureRoleDefinitionCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings ResetHelp(this AzureRoleDefinitionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings SetOutput(this AzureRoleDefinitionCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings ResetOutput(this AzureRoleDefinitionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings SetQuery(this AzureRoleDefinitionCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings ResetQuery(this AzureRoleDefinitionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings SetVerbose(this AzureRoleDefinitionCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionCreateSettings ResetVerbose(this AzureRoleDefinitionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRoleDefinitionDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRoleDefinitionDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Name"/>.</em></p><p>The role's name.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetName(this AzureRoleDefinitionDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Name"/>.</em></p><p>The role's name.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetName(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CustomRoleOnly
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings, bool? customRoleOnly)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = customRoleOnly;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings EnableCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings DisableCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureRoleDefinitionDeleteSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ToggleCustomRoleOnly(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = !toolSettings.CustomRoleOnly;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetResourceGroup(this AzureRoleDefinitionDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetResourceGroup(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetScope(this AzureRoleDefinitionDeleteSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetScope(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetDebug(this AzureRoleDefinitionDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetDebug(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetHelp(this AzureRoleDefinitionDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetHelp(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetOutput(this AzureRoleDefinitionDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetOutput(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetQuery(this AzureRoleDefinitionDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetQuery(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings SetVerbose(this AzureRoleDefinitionDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionDeleteSettings ResetVerbose(this AzureRoleDefinitionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRoleDefinitionListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRoleDefinitionListSettingsExtensions
-    {
-        #region CustomRoleOnly
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings, bool? customRoleOnly)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = customRoleOnly;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings EnableCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings DisableCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureRoleDefinitionListSettings.CustomRoleOnly"/>.</em></p><p>Custom roles only(vs. build-in ones).</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ToggleCustomRoleOnly(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CustomRoleOnly = !toolSettings.CustomRoleOnly;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Name"/>.</em></p><p>The role's name.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetName(this AzureRoleDefinitionListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Name"/>.</em></p><p>The role's name.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetName(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetResourceGroup(this AzureRoleDefinitionListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.ResourceGroup"/>.</em></p><p>Use it only if the role or assignment was added at the level of a resource group.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetResourceGroup(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetScope(this AzureRoleDefinitionListSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Scope"/>.</em></p><p>Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetScope(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetDebug(this AzureRoleDefinitionListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetDebug(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetHelp(this AzureRoleDefinitionListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetHelp(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetOutput(this AzureRoleDefinitionListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetOutput(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetQuery(this AzureRoleDefinitionListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetQuery(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings SetVerbose(this AzureRoleDefinitionListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionListSettings ResetVerbose(this AzureRoleDefinitionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRoleDefinitionUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureRoleTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRoleDefinitionUpdateSettingsExtensions
-    {
-        #region RoleDefinition
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings SetRoleDefinition(this AzureRoleDefinitionUpdateSettings toolSettings, string roleDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RoleDefinition = roleDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.RoleDefinition"/>.</em></p><p>Description of a role as JSON, or a path to a file containing a JSON description.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings ResetRoleDefinition(this AzureRoleDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RoleDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings SetDebug(this AzureRoleDefinitionUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings ResetDebug(this AzureRoleDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings SetHelp(this AzureRoleDefinitionUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings ResetHelp(this AzureRoleDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings SetOutput(this AzureRoleDefinitionUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings ResetOutput(this AzureRoleDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings SetQuery(this AzureRoleDefinitionUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings ResetQuery(this AzureRoleDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureRoleDefinitionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings SetVerbose(this AzureRoleDefinitionUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureRoleDefinitionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureRoleDefinitionUpdateSettings ResetVerbose(this AzureRoleDefinitionUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

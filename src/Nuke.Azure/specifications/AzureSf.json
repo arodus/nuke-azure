@@ -1,23 +1,23 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/durability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/reliability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/setting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/application/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/durability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/setting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/node-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/reliability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
   ],
   "name": "AzureSf",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest",
@@ -30,11 +30,6 @@
       "settingsClass": {}
     },
     {
-      "postfix": "Application",
-      "definiteArgument": "sf application",
-      "settingsClass": {}
-    },
-    {
       "postfix": "ClusterCreate",
       "definiteArgument": "sf cluster create",
       "settingsClass": {
@@ -43,7 +38,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
@@ -143,6 +138,12 @@
             "type": "string",
             "format": "--vm-user-name {value}",
             "help": "The user name for logging to Vm. Default will be adminuser."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -157,6 +158,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -177,9 +184,20 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
+    },
+    {
+      "postfix": "Application",
+      "definiteArgument": "sf application",
+      "settingsClass": {}
     },
     {
       "postfix": "ApplicationCertificateAdd",
@@ -241,6 +259,12 @@
             "type": "string",
             "format": "--vault-resource-group {value}",
             "help": "Key vault resource group name,if not given it will be cluster resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -305,6 +329,12 @@
             "type": "string",
             "format": "--vault-resource-group {value}",
             "help": "Key vault resource group name,if not given it will be cluster resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -331,6 +361,144 @@
             "type": "string",
             "format": "--thumbprint {value}",
             "help": "The cluster certificate thumbprint to be removed."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterDurabilityUpdate",
+      "definiteArgument": "sf cluster durability update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "DurabilityLevel",
+            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "format": "--durability-level {value}",
+            "help": "Durability level."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "help": "The Node type name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterSettingRemove",
+      "definiteArgument": "sf cluster setting remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "Parameter",
+            "type": "string",
+            "format": "--parameter {value}",
+            "help": "Parameter name."
+          },
+          {
+            "name": "Section",
+            "type": "string",
+            "format": "--section {value}",
+            "help": "Section name."
+          },
+          {
+            "name": "SettingsSectionDescription",
+            "type": "string",
+            "format": "--settings-section-description {value}",
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterSettingSet",
+      "definiteArgument": "sf cluster setting set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "The resource group name."
+          },
+          {
+            "name": "Parameter",
+            "type": "string",
+            "format": "--parameter {value}",
+            "help": "Parameter name."
+          },
+          {
+            "name": "Section",
+            "type": "string",
+            "format": "--section {value}",
+            "help": "Section name."
+          },
+          {
+            "name": "SettingsSectionDescription",
+            "type": "string",
+            "format": "--settings-section-description {value}",
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\",\"value\": 1000},{\"section\": \"MaxFileOperationTimeout\",\"parameter\": \"Max2\",\"value\": 1000]."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "help": "Specify the value."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -394,6 +562,12 @@
             "type": "string",
             "format": "--thumbprint {value}",
             "help": "Client certificate thumbprint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -438,38 +612,12 @@
             "type": "string",
             "format": "--thumbprints {value}",
             "help": "A single or Space-separated list of client certificate thumbprint(s) to be remove."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterDurabilityUpdate",
-      "definiteArgument": "sf cluster durability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
-            "name": "DurabilityLevel",
-            "type": "SfClusterDurabilityUpdateDurabilityLevel",
-            "format": "--durability-level {value}",
-            "help": "Durability level."
-          },
-          {
-            "name": "NodeType",
+            "name": "Subscription",
             "type": "string",
-            "format": "--node-type {value}",
-            "help": "The Node type name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -533,6 +681,12 @@
             "type": "string",
             "format": "--vm-tier {value}",
             "help": ""
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -565,6 +719,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -597,6 +757,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -629,88 +795,12 @@
             "type": "string",
             "format": "--auto-add-node {value}",
             "help": "Add node count automatically when changing reliability."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterSettingRemove",
-      "definiteArgument": "sf cluster setting remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "Parameter",
-            "type": "string",
-            "format": "--parameter {value}",
-            "help": "Parameter name."
-          },
-          {
-            "name": "Section",
-            "type": "string",
-            "format": "--section {value}",
-            "help": "Section name."
-          },
-          {
-            "name": "SettingsSectionDescription",
-            "type": "string",
-            "format": "--settings-section-description {value}",
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterSettingSet",
-      "definiteArgument": "sf cluster setting set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "The resource group name."
-          },
-          {
-            "name": "Parameter",
-            "type": "string",
-            "format": "--parameter {value}",
-            "help": "Parameter name."
-          },
-          {
-            "name": "Section",
-            "type": "string",
-            "format": "--section {value}",
-            "help": "Section name."
-          },
-          {
-            "name": "SettingsSectionDescription",
-            "type": "string",
-            "format": "--settings-section-description {value}",
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\",\"value\": 1000},{\"section\": \"MaxFileOperationTimeout\",\"parameter\": \"Max2\",\"value\": 1000]."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "help": "Specify the value."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -743,6 +833,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "Cluster code version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

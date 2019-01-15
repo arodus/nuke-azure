@@ -1,22 +1,22 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/eventhub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml"
   ],
   "name": "AzureEventhubs",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest",
@@ -27,6 +27,271 @@
       "postfix": "",
       "definiteArgument": "eventhubs",
       "settingsClass": {}
+    },
+    {
+      "postfix": "GeorecoveryAliasBreakPair",
+      "definiteArgument": "eventhubs georecovery-alias break-pair",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasDelete",
+      "definiteArgument": "eventhubs georecovery-alias delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasExists",
+      "definiteArgument": "eventhubs georecovery-alias exists",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo Recovery Configs - Alias to check availability."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasFailOver",
+      "definiteArgument": "eventhubs georecovery-alias fail-over",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasList",
+      "definiteArgument": "eventhubs georecovery-alias list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasSet",
+      "definiteArgument": "eventhubs georecovery-alias set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PartnerNamespace",
+            "type": "string",
+            "format": "--partner-namespace {value}",
+            "help": "Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing."
+          },
+          {
+            "name": "AlternateName",
+            "type": "string",
+            "format": "--alternate-name {value}",
+            "help": "Alternate Name for the Alias, when the Namespace name and Alias name are same."
+          },
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasShow",
+      "definiteArgument": "eventhubs georecovery-alias show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "EventhubCreate",
@@ -110,6 +375,12 @@
             "type": "string",
             "format": "--storage-account {value}",
             "help": "Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -119,6 +390,13 @@
       "definiteArgument": "eventhubs eventhub delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -136,6 +414,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -168,6 +452,12 @@
             "type": "string",
             "format": "--top {value}",
             "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -178,6 +468,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -194,6 +491,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -203,24 +506,6 @@
       "definiteArgument": "eventhubs eventhub update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Eventhub."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "EnableCapture",
             "type": "bool",
@@ -244,6 +529,37 @@
             "type": "EventhubsEventhubStatus",
             "format": "--status {value}",
             "help": "Status of Eventhub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Eventhub."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "CaptureInterval",
@@ -309,194 +625,6 @@
       }
     },
     {
-      "postfix": "GeorecoveryAliasBreakPair",
-      "definiteArgument": "eventhubs georecovery-alias break-pair",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasDelete",
-      "definiteArgument": "eventhubs georecovery-alias delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasExists",
-      "definiteArgument": "eventhubs georecovery-alias exists",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo Recovery Configs - Alias to check availability."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasFailOver",
-      "definiteArgument": "eventhubs georecovery-alias fail-over",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasList",
-      "definiteArgument": "eventhubs georecovery-alias list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasSet",
-      "definiteArgument": "eventhubs georecovery-alias set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "PartnerNamespace",
-            "type": "string",
-            "format": "--partner-namespace {value}",
-            "help": "Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AlternateName",
-            "type": "string",
-            "format": "--alternate-name {value}",
-            "help": "Alternate Name for the Alias, when the Namespace name and Alias name are same."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasShow",
-      "definiteArgument": "eventhubs georecovery-alias show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "NamespaceCreate",
       "definiteArgument": "eventhubs namespace create",
       "settingsClass": {
@@ -535,7 +663,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "MaximumThroughputUnits",
@@ -554,6 +682,12 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -563,6 +697,13 @@
       "definiteArgument": "eventhubs namespace delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -574,6 +715,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -588,6 +735,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name to check the namespace name availability."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -602,6 +755,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -612,6 +771,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -622,6 +788,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -631,18 +803,6 @@
       "definiteArgument": "eventhubs namespace update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "Capacity",
             "type": "string",
@@ -678,6 +838,574 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleCreate",
+      "definiteArgument": "eventhubs namespace authorization-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Rights",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleDelete",
+      "definiteArgument": "eventhubs namespace authorization-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleList",
+      "definiteArgument": "eventhubs namespace authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleShow",
+      "definiteArgument": "eventhubs namespace authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceAuthorizationRuleUpdate",
+      "definiteArgument": "eventhubs namespace authorization-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Rights",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasAuthorizationRuleList",
+      "definiteArgument": "eventhubs georecovery-alias authorization-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
+      "definiteArgument": "eventhubs georecovery-alias authorization-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubConsumerGroupCreate",
+      "definiteArgument": "eventhubs eventhub consumer-group create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of ConsumerGroup."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "UserMetadata",
+            "type": "string",
+            "format": "--user-metadata {value}",
+            "help": "Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubConsumerGroupDelete",
+      "definiteArgument": "eventhubs eventhub consumer-group delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of ConsumerGroup."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubConsumerGroupList",
+      "definiteArgument": "eventhubs eventhub consumer-group list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Skip",
+            "type": "string",
+            "format": "--skip {value}",
+            "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubConsumerGroupShow",
+      "definiteArgument": "eventhubs eventhub consumer-group show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of ConsumerGroup."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventhubConsumerGroupUpdate",
+      "definiteArgument": "eventhubs eventhub consumer-group update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UserMetadata",
+            "type": "string",
+            "format": "--user-metadata {value}",
+            "help": "Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
+          },
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of ConsumerGroup."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
@@ -737,10 +1465,16 @@
           },
           {
             "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
             "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -755,6 +1489,13 @@
             "type": "string",
             "format": "--eventhub-name {value}",
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -773,6 +1514,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -799,6 +1546,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -815,6 +1568,13 @@
             "help": "Name of EventHub."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -831,6 +1591,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -841,10 +1607,24 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Rights",
+            "type": "List<EventhubsNamespaceAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
@@ -865,11 +1645,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
@@ -899,268 +1678,8 @@
       }
     },
     {
-      "postfix": "EventhubConsumerGroupCreate",
-      "definiteArgument": "eventhubs eventhub consumer-group create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of ConsumerGroup."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "UserMetadata",
-            "type": "string",
-            "format": "--user-metadata {value}",
-            "help": "Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubConsumerGroupDelete",
-      "definiteArgument": "eventhubs eventhub consumer-group delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of ConsumerGroup."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubConsumerGroupList",
-      "definiteArgument": "eventhubs eventhub consumer-group list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Skip",
-            "type": "string",
-            "format": "--skip {value}",
-            "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "help": "May be used to limit the number of results to the most recent N usageDetails."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubConsumerGroupShow",
-      "definiteArgument": "eventhubs eventhub consumer-group show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of ConsumerGroup."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubConsumerGroupUpdate",
-      "definiteArgument": "eventhubs eventhub consumer-group update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of ConsumerGroup."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "UserMetadata",
-            "type": "string",
-            "format": "--user-metadata {value}",
-            "help": "Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasAuthorizationRuleList",
-      "definiteArgument": "eventhubs georecovery-alias authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GeorecoveryAliasAuthorizationRuleShow",
-      "definiteArgument": "eventhubs georecovery-alias authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleCreate",
-      "definiteArgument": "eventhubs namespace authorization-rule create",
+      "postfix": "NamespaceAuthorizationRuleKeysList",
+      "definiteArgument": "eventhubs namespace authorization-rule keys list",
       "settingsClass": {
         "properties": [
           {
@@ -1182,216 +1701,61 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleDelete",
-      "definiteArgument": "eventhubs namespace authorization-rule delete",
+      "postfix": "NamespaceAuthorizationRuleKeysRenew",
+      "definiteArgument": "eventhubs namespace authorization-rule keys renew",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleList",
-      "definiteArgument": "eventhubs namespace authorization-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleShow",
-      "definiteArgument": "eventhubs namespace authorization-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NamespaceAuthorizationRuleUpdate",
-      "definiteArgument": "eventhubs namespace authorization-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubAuthorizationRuleKeysList",
-      "definiteArgument": "eventhubs eventhub authorization-rule keys list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventhubAuthorizationRuleKeysRenew",
-      "definiteArgument": "eventhubs eventhub authorization-rule keys renew",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
           {
             "name": "Key",
-            "type": "EventhubsEventhubAuthorizationRuleKeysKey",
+            "type": "EventhubsNamespaceAuthorizationRuleKeysKey",
             "format": "--key {value}",
             "help": "Specifies Primary or Secondary key needs to be reset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of EventHub AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "KeyValue",
             "type": "string",
             "format": "--key-value {value}",
             "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of Namespace AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1424,20 +1788,32 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleKeysList",
-      "definiteArgument": "eventhubs namespace authorization-rule keys list",
+      "postfix": "EventhubAuthorizationRuleKeysList",
+      "definiteArgument": "eventhubs eventhub authorization-rule keys list",
       "settingsClass": {
         "properties": [
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
+            "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
@@ -1450,44 +1826,69 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "NamespaceAuthorizationRuleKeysRenew",
-      "definiteArgument": "eventhubs namespace authorization-rule keys renew",
+      "postfix": "EventhubAuthorizationRuleKeysRenew",
+      "definiteArgument": "eventhubs eventhub authorization-rule keys renew",
       "settingsClass": {
         "properties": [
           {
             "name": "Key",
-            "type": "EventhubsEventhubAuthorizationRuleKeysKey",
+            "type": "EventhubsNamespaceAuthorizationRuleKeysKey",
             "format": "--key {value}",
             "help": "Specifies Primary or Secondary key needs to be reset."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace AuthorizationRule."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "KeyValue",
             "type": "string",
             "format": "--key-value {value}",
             "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          },
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of EventHub AuthorizationRule."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1543,7 +1944,7 @@
       ]
     },
     {
-      "name": "EventhubsEventhubAuthorizationRuleRights",
+      "name": "EventhubsNamespaceAuthorizationRuleRights",
       "values": [
         "listen",
         "manage",
@@ -1551,7 +1952,7 @@
       ]
     },
     {
-      "name": "EventhubsEventhubAuthorizationRuleKeysKey",
+      "name": "EventhubsNamespaceAuthorizationRuleKeysKey",
       "values": [
         "primarykey",
         "secondarykey"

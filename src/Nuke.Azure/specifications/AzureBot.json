@@ -1,23 +1,23 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/authsetting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/directline.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/email.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/facebook.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/kik.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/msteams.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/skype.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/slack.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/sms.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/telegram.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/webchat.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/email.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/sms.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/kik.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/telegram.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/facebook.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/authsetting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/skype.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/webchat.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/directline.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/slack.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/9a9762f/latest/docs-ref-autogen/bot/msteams.yml"
   ],
   "name": "AzureBot",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest",
@@ -57,7 +57,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Password",
@@ -116,9 +116,15 @@
           },
           {
             "name": "Version",
-            "type": "BotCreateVersion",
+            "type": "BotVersion",
             "format": "--version {value}",
             "help": "The Microsoft Bot Builder SDK version to be used to create the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -139,6 +145,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -165,6 +177,12 @@
             "type": "string",
             "format": "--save-path {value}",
             "help": "The directory to download bot code to."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -203,6 +221,18 @@
             "type": "string",
             "format": "--code-dir {value}",
             "help": "The directory to download deployment scripts to."
+          },
+          {
+            "name": "Version",
+            "type": "BotVersion",
+            "format": "--version {value}",
+            "help": "The Microsoft Bot Builder SDK version to be used in the bot template that will be created."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -229,6 +259,24 @@
             "type": "string",
             "format": "--code-dir {value}",
             "help": "The directory to upload bot code from."
+          },
+          {
+            "name": "ProjName",
+            "type": "string",
+            "format": "--proj-name {value}",
+            "help": "Name of the start up project file name."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The Microsoft Bot Builder SDK version of the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -249,6 +297,18 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Msbot",
+            "type": "bool",
+            "format": "--msbot",
+            "help": "Show the output as JSON compatible with a .bot file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -269,6 +329,42 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Etag",
+            "type": "string",
+            "format": "--etag {value}",
+            "help": "Entity Tag."
+          },
+          {
+            "name": "Kind",
+            "type": "string",
+            "format": "--kind {value}",
+            "help": "Required. Gets or sets the Kind of the resource."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Properties",
+            "type": "string",
+            "format": "--properties {value}",
+            "help": "The set of properties specific to bot resource."
+          },
+          {
+            "name": "Sku",
+            "type": "string",
+            "format": "--sku {value}",
+            "help": "Gets or sets the SKU of the resource."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Contains resource tags defined as key/value pairs."
           },
           {
             "name": "Add",
@@ -293,6 +389,559 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EmailCreate",
+      "definiteArgument": "bot email create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EmailAddress",
+            "type": "string",
+            "format": "--email-address {value}",
+            "help": "The email address for the bot."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The email password for the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AddDisabled",
+            "type": "bool",
+            "format": "--add-disabled",
+            "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EmailDelete",
+      "definiteArgument": "bot email delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EmailShow",
+      "definiteArgument": "bot email show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SmsCreate",
+      "definiteArgument": "bot sms create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountSid",
+            "type": "string",
+            "format": "--account-sid {value}",
+            "help": "The account SID for the Twilio account."
+          },
+          {
+            "name": "AuthToken",
+            "type": "string",
+            "format": "--auth-token {value}",
+            "help": "The token token for the Twilio account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "Phone",
+            "type": "string",
+            "format": "--phone {value}",
+            "help": "The phone number for the Twilio account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AddDisabled",
+            "type": "bool",
+            "format": "--add-disabled",
+            "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "IsValidated",
+            "type": "bool",
+            "format": "--is-validated",
+            "help": "Whether or not the Twilio account has been validated for use with the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SmsDelete",
+      "definiteArgument": "bot sms delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SmsShow",
+      "definiteArgument": "bot sms show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KikCreate",
+      "definiteArgument": "bot kik create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "help": "The API key for the Kik account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "help": "Kik user name."
+          },
+          {
+            "name": "AddDisabled",
+            "type": "bool",
+            "format": "--add-disabled",
+            "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "IsValidated",
+            "type": "bool",
+            "format": "--is-validated",
+            "help": "Whether or not the Kik account has been validated for use with the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KikDelete",
+      "definiteArgument": "bot kik delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KikShow",
+      "definiteArgument": "bot kik show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TelegramCreate",
+      "definiteArgument": "bot telegram create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccessToken",
+            "type": "string",
+            "format": "--access-token {value}",
+            "help": "The access token for the Telegram account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AddDisabled",
+            "type": "bool",
+            "format": "--add-disabled",
+            "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "IsValidated",
+            "type": "bool",
+            "format": "--is-validated",
+            "help": "Whether or not the Telegram account has been validated for use with the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TelegramDelete",
+      "definiteArgument": "bot telegram delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TelegramShow",
+      "definiteArgument": "bot telegram show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FacebookCreate",
+      "definiteArgument": "bot facebook create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Appid",
+            "type": "string",
+            "format": "--appid {value}",
+            "help": "The Facebook application id."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "PageId",
+            "type": "string",
+            "format": "--page-id {value}",
+            "help": "Page ID of the Facebook page to be used for the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Secret",
+            "type": "string",
+            "format": "--secret {value}",
+            "secret": true,
+            "help": "The Facebook application secret."
+          },
+          {
+            "name": "Token",
+            "type": "string",
+            "format": "--token {value}",
+            "help": "The Facebook application access token."
+          },
+          {
+            "name": "AddDisabled",
+            "type": "bool",
+            "format": "--add-disabled",
+            "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FacebookDelete",
+      "definiteArgument": "bot facebook delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FacebookShow",
+      "definiteArgument": "bot facebook show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -350,6 +999,12 @@
             "type": "string",
             "format": "--parameters {value}",
             "help": "Parameter values for service provider parameters. Usage: --parameters key=value key1=value1."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -376,6 +1031,12 @@
             "type": "string",
             "format": "--setting-name {value}",
             "help": "Name of the oauth connection setting."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -396,6 +1057,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -410,6 +1077,12 @@
             "type": "string",
             "format": "--provider-name {value}",
             "help": "Service provider name for which to fetch details."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -436,457 +1109,12 @@
             "type": "string",
             "format": "--setting-name {value}",
             "help": "Name of the oauth connection setting."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DirectlineCreate",
-      "definiteArgument": "bot directline create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AddDisabled",
-            "type": "bool",
-            "format": "--add-disabled",
-            "help": "Add the channel in a disabled state."
-          },
-          {
-            "name": "Disablev1",
-            "type": "bool",
-            "format": "--disablev1",
-            "help": "If true, v1 protocol will be disabled on the channel."
-          },
-          {
-            "name": "Disablev3",
-            "type": "bool",
-            "format": "--disablev3",
-            "help": "If true, v3 protocol will be disabled on the channel."
-          },
-          {
-            "name": "SiteName",
-            "type": "string",
-            "format": "--site-name {value}",
-            "help": "Name of the Directline channel site."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DirectlineDelete",
-      "definiteArgument": "bot directline delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DirectlineShow",
-      "definiteArgument": "bot directline show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EmailCreate",
-      "definiteArgument": "bot email create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EmailAddress",
-            "type": "string",
-            "format": "--email-address {value}",
-            "help": "The email address for the bot."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The email password for the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AddDisabled",
-            "type": "bool",
-            "format": "--add-disabled",
-            "help": "Add the channel in a disabled state."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EmailDelete",
-      "definiteArgument": "bot email delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EmailShow",
-      "definiteArgument": "bot email show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "FacebookCreate",
-      "definiteArgument": "bot facebook create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Appid",
-            "type": "string",
-            "format": "--appid {value}",
-            "help": "The Facebook application id."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "PageId",
-            "type": "string",
-            "format": "--page-id {value}",
-            "help": "Page ID of the Facebook page to be used for the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Secret",
-            "type": "string",
-            "format": "--secret {value}",
-            "secret": true,
-            "help": "The Facebook application secret."
-          },
-          {
-            "name": "Token",
-            "type": "string",
-            "format": "--token {value}",
-            "help": "The Facebook application access token."
-          },
-          {
-            "name": "AddDisabled",
-            "type": "bool",
-            "format": "--add-disabled",
-            "help": "Add the channel in a disabled state."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "FacebookDelete",
-      "definiteArgument": "bot facebook delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "FacebookShow",
-      "definiteArgument": "bot facebook show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KikCreate",
-      "definiteArgument": "bot kik create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Key",
-            "type": "string",
-            "format": "--key {value}",
-            "help": "The API key for the Kik account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "UserName",
-            "type": "string",
-            "format": "--user-name {value}",
-            "help": "Kik user name."
-          },
-          {
-            "name": "AddDisabled",
-            "type": "bool",
-            "format": "--add-disabled",
-            "help": "Add the channel in a disabled state."
-          },
-          {
-            "name": "IsValidated",
-            "type": "bool",
-            "format": "--is-validated",
-            "help": "Whether or not the Kik account has been validated for use with the bot."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KikDelete",
-      "definiteArgument": "bot kik delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "KikShow",
-      "definiteArgument": "bot kik show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MsteamsCreate",
-      "definiteArgument": "bot msteams create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AddDisabled",
-            "type": "bool",
-            "format": "--add-disabled",
-            "help": "Add the channel in a disabled state."
-          },
-          {
-            "name": "CallingWebHook",
-            "type": "string",
-            "format": "--calling-web-hook {value}",
-            "help": "The calling web hook to use on Microsoft Teams."
-          },
-          {
-            "name": "EnableCalling",
-            "type": "bool",
-            "format": "--enable-calling",
-            "help": "Enable calling on Microsoft Teams."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MsteamsDelete",
-      "definiteArgument": "bot msteams delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MsteamsShow",
-      "definiteArgument": "bot msteams show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -961,6 +1189,12 @@
             "type": "string",
             "format": "--groups-mode {value}",
             "help": "Select groups mode on Skype."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -981,6 +1215,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1008,6 +1248,154 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "WebchatShow",
+      "definiteArgument": "bot webchat show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DirectlineCreate",
+      "definiteArgument": "bot directline create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AddDisabled",
+            "type": "bool",
+            "format": "--add-disabled",
+            "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "Disablev1",
+            "type": "bool",
+            "format": "--disablev1",
+            "help": "If true, v1 protocol will be disabled on the channel."
+          },
+          {
+            "name": "Disablev3",
+            "type": "bool",
+            "format": "--disablev3",
+            "help": "If true, v3 protocol will be disabled on the channel."
+          },
+          {
+            "name": "SiteName",
+            "type": "string",
+            "format": "--site-name {value}",
+            "help": "Name of the Directline channel site."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DirectlineDelete",
+      "definiteArgument": "bot directline delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DirectlineShow",
+      "definiteArgument": "bot directline show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The resource name of the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecrets",
+            "type": "bool",
+            "format": "--with-secrets",
+            "secret": true,
+            "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1059,6 +1447,12 @@
             "type": "string",
             "format": "--landing-page-url {value}",
             "help": "The landing page url to redirect to after login."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1079,6 +1473,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1106,118 +1506,21 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "SmsCreate",
-      "definiteArgument": "bot sms create",
+      "postfix": "MsteamsCreate",
+      "definiteArgument": "bot msteams create",
       "settingsClass": {
         "properties": [
-          {
-            "name": "AccountSid",
-            "type": "string",
-            "format": "--account-sid {value}",
-            "help": "The account SID for the Twilio account."
-          },
-          {
-            "name": "AuthToken",
-            "type": "string",
-            "format": "--auth-token {value}",
-            "help": "The token token for the Twilio account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "Phone",
-            "type": "string",
-            "format": "--phone {value}",
-            "help": "The phone number for the Twilio account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "AddDisabled",
-            "type": "bool",
-            "format": "--add-disabled",
-            "help": "Add the channel in a disabled state."
-          },
-          {
-            "name": "IsValidated",
-            "type": "bool",
-            "format": "--is-validated",
-            "help": "Whether or not the Twilio account has been validated for use with the bot."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SmsDelete",
-      "definiteArgument": "bot sms delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SmsShow",
-      "definiteArgument": "bot sms show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TelegramCreate",
-      "definiteArgument": "bot telegram create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccessToken",
-            "type": "string",
-            "format": "--access-token {value}",
-            "help": "The access token for the Telegram account."
-          },
           {
             "name": "Name",
             "type": "string",
@@ -1237,17 +1540,29 @@
             "help": "Add the channel in a disabled state."
           },
           {
-            "name": "IsValidated",
+            "name": "CallingWebHook",
+            "type": "string",
+            "format": "--calling-web-hook {value}",
+            "help": "The calling web hook to use on Microsoft Teams."
+          },
+          {
+            "name": "EnableCalling",
             "type": "bool",
-            "format": "--is-validated",
-            "help": "Whether or not the Telegram account has been validated for use with the bot."
+            "format": "--enable-calling",
+            "help": "Enable calling on Microsoft Teams."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "TelegramDelete",
-      "definiteArgument": "bot telegram delete",
+      "postfix": "MsteamsDelete",
+      "definiteArgument": "bot msteams delete",
       "settingsClass": {
         "properties": [
           {
@@ -1261,13 +1576,19 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "TelegramShow",
-      "definiteArgument": "bot telegram show",
+      "postfix": "MsteamsShow",
+      "definiteArgument": "bot msteams show",
       "settingsClass": {
         "properties": [
           {
@@ -1288,33 +1609,12 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "WebchatShow",
-      "definiteArgument": "bot webchat show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The resource name of the bot."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecrets",
-            "type": "bool",
-            "format": "--with-secrets",
-            "secret": true,
-            "help": "Show secrets in response for the channel."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1387,7 +1687,7 @@
       ]
     },
     {
-      "name": "BotCreateVersion",
+      "name": "BotVersion",
       "values": [
         "v3",
         "v4"

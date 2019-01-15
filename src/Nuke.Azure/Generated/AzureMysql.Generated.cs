@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -44,6 +44,22 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlServerLogsDownload(Configure<AzureMysqlServerLogsDownloadSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsDownloadSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMysqlServerLogsList(Configure<AzureMysqlServerLogsListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureMysqlDbCreate(Configure<AzureMysqlDbCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlDbCreateSettings());
@@ -71,22 +87,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureMysqlDbShow(Configure<AzureMysqlDbShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMysqlDbShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerLogsDownload(Configure<AzureMysqlServerLogsDownloadSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsDownloadSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerLogsList(Configure<AzureMysqlServerLogsListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerLogsListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -156,25 +156,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationList(Configure<AzureMysqlServerConfigurationListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerReplicaCreate(Configure<AzureMysqlServerReplicaCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerReplicaCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationSet(Configure<AzureMysqlServerConfigurationSetSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerReplicaList(Configure<AzureMysqlServerReplicaListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationSetSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerReplicaListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationShow(Configure<AzureMysqlServerConfigurationShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerReplicaStop(Configure<AzureMysqlServerReplicaStopSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerReplicaStopSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -220,25 +220,25 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerReplicaCreate(Configure<AzureMysqlServerReplicaCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationList(Configure<AzureMysqlServerConfigurationListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerReplicaCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerReplicaList(Configure<AzureMysqlServerReplicaListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationSet(Configure<AzureMysqlServerConfigurationSetSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerReplicaListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationSetSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Database for MySQL servers.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMysqlServerReplicaStop(Configure<AzureMysqlServerReplicaStopSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureMysqlServerConfigurationShow(Configure<AzureMysqlServerConfigurationShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerReplicaStopSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureMysqlServerConfigurationShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -316,176 +316,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMysqlDbCreateSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlDbCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>The charset of the database.</p></summary>
-        public virtual string Charset { get; internal set; }
-        /// <summary><p>The collation of the database.</p></summary>
-        public virtual string Collation { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql db create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--charset {value}", Charset)
-              .Add("--collation {value}", Collation)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlDbDeleteSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlDbDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql db delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--yes {value}", Yes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlDbListSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlDbListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql db list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlDbShowSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlDbShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the database.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql db show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureMysqlServerLogsDownloadSettings
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
@@ -502,6 +332,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -519,6 +351,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -547,6 +380,8 @@ namespace Nuke.Azure
         public virtual string FilenameContains { get; internal set; }
         /// <summary><p>The file size limitation to filter files.</p></summary>
         public virtual string MaxFileSize { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -566,6 +401,189 @@ namespace Nuke.Azure
               .Add("--file-last-written {value}", FileLastWritten)
               .Add("--filename-contains {value}", FilenameContains)
               .Add("--max-file-size {value}", MaxFileSize)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlDbCreateSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlDbCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>The charset of the database.</p></summary>
+        public virtual string Charset { get; internal set; }
+        /// <summary><p>The collation of the database.</p></summary>
+        public virtual string Collation { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql db create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--charset {value}", Charset)
+              .Add("--collation {value}", Collation)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlDbDeleteSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlDbDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql db delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlDbListSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlDbListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql db list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlDbShowSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlDbShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>The name of the database.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql db show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -594,7 +612,7 @@ namespace Nuke.Azure
         public virtual string BackupRetention { get; internal set; }
         /// <summary><p>Enable Geo-redundant or not for server backup.</p></summary>
         public virtual string GeoRedundantBackup { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Enable ssl enforcement or not when connect to server.</p></summary>
         public virtual MysqlServerSslEnforcement SslEnforcement { get; internal set; }
@@ -608,6 +626,8 @@ namespace Nuke.Azure
         public virtual string AdminUser { get; internal set; }
         /// <summary><p>The password of the administrator login.</p></summary>
         public virtual string AdminPassword { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -634,6 +654,7 @@ namespace Nuke.Azure
               .Add("--version {value}", Version)
               .Add("--admin-user {value}", AdminUser)
               .Add("--admin-password {value}", AdminPassword, secret: true)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -652,12 +673,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the server.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -672,9 +698,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server delete")
+              .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -693,12 +721,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The name or ID of the source server to restore from.</p></summary>
         public virtual string SourceServer { get; internal set; }
         /// <summary><p>The max days of retention, unit is days.</p></summary>
@@ -709,6 +733,15 @@ namespace Nuke.Azure
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8.</p></summary>
         public virtual string SkuName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -724,13 +757,15 @@ namespace Nuke.Azure
             arguments
               .Add("mysql server georestore")
               .Add("--location {value}", Location)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--source-server {value}", SourceServer)
               .Add("--backup-retention {value}", BackupRetention)
               .Add("--geo-redundant-backup {value}", GeoRedundantBackup)
               .Add("--no-wait", NoWait)
               .Add("--sku-name {value}", SkuName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -751,6 +786,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -766,6 +803,7 @@ namespace Nuke.Azure
             arguments
               .Add("mysql server list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -784,16 +822,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
         public virtual string RestorePointInTime { get; internal set; }
         /// <summary><p>The name or ID of the source server to restore from.</p></summary>
         public virtual string SourceServer { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -808,11 +851,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server restore")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--restore-point-in-time {value}", RestorePointInTime)
               .Add("--source-server {value}", SourceServer)
               .Add("--no-wait", NoWait)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -831,10 +876,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the server.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -849,8 +899,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -869,10 +921,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The password of the administrator login.</p></summary>
         public virtual string AdminPassword { get; internal set; }
         /// <summary><p>The number of days a backup is retained.</p></summary>
@@ -885,6 +933,15 @@ namespace Nuke.Azure
         public virtual string StorageSize { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -907,14 +964,16 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--admin-password {value}", AdminPassword, secret: true)
               .Add("--backup-retention {value}", BackupRetention)
               .Add("--sku-name {value}", SkuName)
               .Add("--ssl-enforcement {value}", SslEnforcement)
               .Add("--storage-size {value}", StorageSize)
               .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -937,10 +996,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the server.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
         public virtual string Custom { get; internal set; }
         /// <summary><p>Wait until the resource exists.</p></summary>
@@ -963,8 +1027,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server wait")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--custom {value}", Custom)
               .Add("--exists {value}", Exists)
               .Add("--interval {value}", Interval)
@@ -978,19 +1044,25 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMysqlServerConfigurationListSettings
+    #region AzureMysqlServerReplicaCreateSettings
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMysqlServerConfigurationListSettings : ToolSettings
+    public partial class AzureMysqlServerReplicaCreateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
+        /// <summary><p>The name or ID of the master server to create replica for.</p></summary>
+        public virtual string SourceServer { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1004,9 +1076,12 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mysql server configuration list")
+              .Add("mysql server replica create")
+              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
+              .Add("--source-server {value}", SourceServer)
+              .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1016,23 +1091,24 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMysqlServerConfigurationSetSettings
+    #region AzureMysqlServerReplicaListSettings
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMysqlServerConfigurationSetSettings : ToolSettings
+    public partial class AzureMysqlServerReplicaListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
-        public virtual string Name { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
+        /// <summary><p>Name of the master server.</p></summary>
         public virtual string ServerName { get; internal set; }
-        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
-        public virtual string Value { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1046,11 +1122,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mysql server configuration set")
-              .Add("--name {value}", Name)
+              .Add("mysql server replica list")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
-              .Add("--value {value}", Value)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1060,21 +1136,26 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMysqlServerConfigurationShowSettings
+    #region AzureMysqlServerReplicaStopSettings
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMysqlServerConfigurationShowSettings : ToolSettings
+    public partial class AzureMysqlServerReplicaStopSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the server configuration.</p></summary>
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the server.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1088,10 +1169,12 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mysql server configuration show")
+              .Add("mysql server replica stop")
+              .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1120,6 +1203,8 @@ namespace Nuke.Azure
         public virtual string ServerName { get; internal set; }
         /// <summary><p>The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
         public virtual string StartIpAddress { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1139,6 +1224,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
               .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1157,14 +1243,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the firewall rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1179,10 +1270,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server firewall-rule delete")
+              .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
-              .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1201,10 +1294,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1219,8 +1317,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server firewall-rule list")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1239,12 +1339,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the firewall rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1259,9 +1364,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server firewall-rule show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1280,16 +1387,21 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        public virtual string EndIpAddress { get; internal set; }
+        /// <summary><p>The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        public virtual string StartIpAddress { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the firewall rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
-        /// <summary><p>The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
-        public virtual string EndIpAddress { get; internal set; }
-        /// <summary><p>The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
-        public virtual string StartIpAddress { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -1312,11 +1424,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server firewall-rule update")
+              .Add("--end-ip-address {value}", EndIpAddress)
+              .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
-              .Add("--end-ip-address {value}", EndIpAddress)
-              .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -1330,63 +1444,24 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMysqlServerReplicaCreateSettings
+    #region AzureMysqlServerConfigurationListSettings
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMysqlServerReplicaCreateSettings : ToolSettings
+    public partial class AzureMysqlServerConfigurationListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The name or ID of the master server to create replica for.</p></summary>
-        public virtual string SourceServer { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual bool? NoWait { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mysql server replica create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--source-server {value}", SourceServer)
-              .Add("--no-wait", NoWait)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMysqlServerReplicaListSettings
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMysqlServerReplicaListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMysql executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the master server.</p></summary>
         public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1400,9 +1475,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mysql server replica list")
+              .Add("mysql server configuration list")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1412,21 +1489,28 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMysqlServerReplicaStopSettings
+    #region AzureMysqlServerConfigurationSetSettings
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureMysqlServerReplicaStopSettings : ToolSettings
+    public partial class AzureMysqlServerConfigurationSetSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>Name of the server.</p></summary>
+        /// <summary><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        public virtual string Value { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the server configuration.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1440,10 +1524,61 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("mysql server replica stop")
+              .Add("mysql server configuration set")
+              .Add("--value {value}", Value)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--yes {value}", Yes)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationShowSettings
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMysqlServerConfigurationShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMysql executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the server configuration.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mysql server configuration show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1474,6 +1609,8 @@ namespace Nuke.Azure
         public virtual bool? IgnoreMissingEndpoint { get; internal set; }
         /// <summary><p>The virtual network name.</p></summary>
         public virtual string VnetName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1494,6 +1631,7 @@ namespace Nuke.Azure
               .Add("--subnet {value}", Subnet)
               .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
               .Add("--vnet-name {value}", VnetName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1512,12 +1650,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the vnet rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1532,9 +1675,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server vnet-rule delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1553,10 +1698,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1571,8 +1721,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server vnet-rule list")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1591,12 +1743,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the vnet rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the server.</p></summary>
         public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1611,9 +1768,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server vnet-rule show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1632,18 +1791,23 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMysql executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMysqlTasks.AzureMysqlPath;
-        /// <summary><p>The name of the vnet rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the server.</p></summary>
-        public virtual string ServerName { get; internal set; }
         /// <summary><p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p></summary>
         public virtual string Subnet { get; internal set; }
         /// <summary><p>Create vnet rule before virtual network has vnet service endpoint enabled.</p></summary>
         public virtual bool? IgnoreMissingEndpoint { get; internal set; }
         /// <summary><p>The virtual network name.</p></summary>
         public virtual string VnetName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the vnet rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the server.</p></summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -1666,12 +1830,14 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mysql server vnet-rule update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
               .Add("--subnet {value}", Subnet)
               .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
               .Add("--vnet-name {value}", VnetName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -1783,650 +1949,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMysqlDbCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlDbCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetName(this AzureMysqlDbCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetName(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetResourceGroup(this AzureMysqlDbCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetResourceGroup(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetServerName(this AzureMysqlDbCreateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetServerName(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Charset
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetCharset(this AzureMysqlDbCreateSettings toolSettings, string charset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Charset = charset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetCharset(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Charset = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Collation
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetCollation(this AzureMysqlDbCreateSettings toolSettings, string collation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = collation;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetCollation(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Collation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetDebug(this AzureMysqlDbCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetDebug(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetHelp(this AzureMysqlDbCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetHelp(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetOutput(this AzureMysqlDbCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetOutput(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetQuery(this AzureMysqlDbCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetQuery(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings SetVerbose(this AzureMysqlDbCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbCreateSettings ResetVerbose(this AzureMysqlDbCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlDbDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlDbDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetName(this AzureMysqlDbDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetName(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetResourceGroup(this AzureMysqlDbDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetResourceGroup(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetServerName(this AzureMysqlDbDeleteSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetServerName(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetYes(this AzureMysqlDbDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetYes(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetDebug(this AzureMysqlDbDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetDebug(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetHelp(this AzureMysqlDbDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetHelp(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetOutput(this AzureMysqlDbDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetOutput(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetQuery(this AzureMysqlDbDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetQuery(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings SetVerbose(this AzureMysqlDbDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbDeleteSettings ResetVerbose(this AzureMysqlDbDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlDbListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlDbListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings SetResourceGroup(this AzureMysqlDbListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings ResetResourceGroup(this AzureMysqlDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings SetServerName(this AzureMysqlDbListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings ResetServerName(this AzureMysqlDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings SetDebug(this AzureMysqlDbListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings ResetDebug(this AzureMysqlDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings SetHelp(this AzureMysqlDbListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings ResetHelp(this AzureMysqlDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings SetOutput(this AzureMysqlDbListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings ResetOutput(this AzureMysqlDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings SetQuery(this AzureMysqlDbListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings ResetQuery(this AzureMysqlDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings SetVerbose(this AzureMysqlDbListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbListSettings ResetVerbose(this AzureMysqlDbListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlDbShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlDbShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetName(this AzureMysqlDbShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetName(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetResourceGroup(this AzureMysqlDbShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetResourceGroup(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetServerName(this AzureMysqlDbShowSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetServerName(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetDebug(this AzureMysqlDbShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetDebug(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetHelp(this AzureMysqlDbShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetHelp(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetOutput(this AzureMysqlDbShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetOutput(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetQuery(this AzureMysqlDbShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetQuery(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings SetVerbose(this AzureMysqlDbShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlDbShowSettings ResetVerbose(this AzureMysqlDbShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureMysqlServerLogsDownloadSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
@@ -2526,6 +2048,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerLogsDownloadSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerLogsDownloadSettings SetSubscription(this AzureMysqlServerLogsDownloadSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerLogsDownloadSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerLogsDownloadSettings ResetSubscription(this AzureMysqlServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2717,6 +2257,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerLogsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerLogsListSettings SetSubscription(this AzureMysqlServerLogsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerLogsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerLogsListSettings ResetSubscription(this AzureMysqlServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMysqlServerLogsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2801,6 +2359,722 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMysqlServerLogsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMysqlServerLogsListSettings ResetVerbose(this AzureMysqlServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlDbCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlDbCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetName(this AzureMysqlDbCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetName(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetResourceGroup(this AzureMysqlDbCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetResourceGroup(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetServerName(this AzureMysqlDbCreateSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetServerName(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Charset
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetCharset(this AzureMysqlDbCreateSettings toolSettings, string charset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Charset = charset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Charset"/>.</em></p><p>The charset of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetCharset(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Charset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Collation
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetCollation(this AzureMysqlDbCreateSettings toolSettings, string collation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = collation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Collation"/>.</em></p><p>The collation of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetCollation(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Collation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetSubscription(this AzureMysqlDbCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetSubscription(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetDebug(this AzureMysqlDbCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetDebug(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetHelp(this AzureMysqlDbCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetHelp(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetOutput(this AzureMysqlDbCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetOutput(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetQuery(this AzureMysqlDbCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetQuery(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings SetVerbose(this AzureMysqlDbCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbCreateSettings ResetVerbose(this AzureMysqlDbCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlDbDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlDbDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetName(this AzureMysqlDbDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetName(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetResourceGroup(this AzureMysqlDbDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetResourceGroup(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetServerName(this AzureMysqlDbDeleteSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetServerName(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetYes(this AzureMysqlDbDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetYes(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetSubscription(this AzureMysqlDbDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetSubscription(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetDebug(this AzureMysqlDbDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetDebug(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetHelp(this AzureMysqlDbDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetHelp(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetOutput(this AzureMysqlDbDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetOutput(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetQuery(this AzureMysqlDbDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetQuery(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings SetVerbose(this AzureMysqlDbDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbDeleteSettings ResetVerbose(this AzureMysqlDbDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlDbListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlDbListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetResourceGroup(this AzureMysqlDbListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetResourceGroup(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetServerName(this AzureMysqlDbListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetServerName(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetSubscription(this AzureMysqlDbListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetSubscription(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetDebug(this AzureMysqlDbListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetDebug(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetHelp(this AzureMysqlDbListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetHelp(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetOutput(this AzureMysqlDbListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetOutput(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetQuery(this AzureMysqlDbListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetQuery(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings SetVerbose(this AzureMysqlDbListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbListSettings ResetVerbose(this AzureMysqlDbListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlDbShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlDbShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetName(this AzureMysqlDbShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Name"/>.</em></p><p>The name of the database.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetName(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetResourceGroup(this AzureMysqlDbShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetResourceGroup(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetServerName(this AzureMysqlDbShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetServerName(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetSubscription(this AzureMysqlDbShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetSubscription(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetDebug(this AzureMysqlDbShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetDebug(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetHelp(this AzureMysqlDbShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetHelp(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetOutput(this AzureMysqlDbShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetOutput(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetQuery(this AzureMysqlDbShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetQuery(this AzureMysqlDbShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings SetVerbose(this AzureMysqlDbShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlDbShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlDbShowSettings ResetVerbose(this AzureMysqlDbShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2906,7 +3180,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMysqlServerCreateSettings SetLocation(this AzureMysqlServerCreateSettings toolSettings, string location)
         {
@@ -2914,7 +3188,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMysqlServerCreateSettings ResetLocation(this AzureMysqlServerCreateSettings toolSettings)
         {
@@ -3031,6 +3305,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings SetSubscription(this AzureMysqlServerCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerCreateSettings ResetSubscription(this AzureMysqlServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMysqlServerCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3129,6 +3421,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerDeleteSettingsExtensions
     {
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetYes(this AzureMysqlServerDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ResetYes(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetIds(this AzureMysqlServerDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings SetIds(this AzureMysqlServerDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings AddIds(this AzureMysqlServerDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings AddIds(this AzureMysqlServerDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings ClearIds(this AzureMysqlServerDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings RemoveIds(this AzureMysqlServerDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerDeleteSettings RemoveIds(this AzureMysqlServerDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
@@ -3165,21 +3535,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerDeleteSettings SetYes(this AzureMysqlServerDeleteSettings toolSettings, string yes)
+        public static AzureMysqlServerDeleteSettings SetSubscription(this AzureMysqlServerDeleteSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerDeleteSettings ResetYes(this AzureMysqlServerDeleteSettings toolSettings)
+        public static AzureMysqlServerDeleteSettings ResetSubscription(this AzureMysqlServerDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3282,7 +3652,7 @@ namespace Nuke.Azure
     public static partial class AzureMysqlServerGeorestoreSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMysqlServerGeorestoreSettings SetLocation(this AzureMysqlServerGeorestoreSettings toolSettings, string location)
         {
@@ -3290,48 +3660,12 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMysqlServerGeorestoreSettings ResetLocation(this AzureMysqlServerGeorestoreSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetName(this AzureMysqlServerGeorestoreSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetName(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings SetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerGeorestoreSettings ResetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
@@ -3446,6 +3780,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SkuName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetIds(this AzureMysqlServerGeorestoreSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetIds(this AzureMysqlServerGeorestoreSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerGeorestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings AddIds(this AzureMysqlServerGeorestoreSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerGeorestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings AddIds(this AzureMysqlServerGeorestoreSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerGeorestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ClearIds(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerGeorestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings RemoveIds(this AzureMysqlServerGeorestoreSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerGeorestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings RemoveIds(this AzureMysqlServerGeorestoreSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetName(this AzureMysqlServerGeorestoreSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetName(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetResourceGroup(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerGeorestoreSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings SetSubscription(this AzureMysqlServerGeorestoreSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerGeorestoreSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerGeorestoreSettings ResetSubscription(this AzureMysqlServerGeorestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3565,6 +4013,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings SetSubscription(this AzureMysqlServerListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerListSettings ResetSubscription(this AzureMysqlServerListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMysqlServerListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3663,42 +4129,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerRestoreSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetName(this AzureMysqlServerRestoreSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetName(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings SetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerRestoreSettings ResetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region RestorePointInTime
         /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.RestorePointInTime"/>.</em></p><p>The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.</p></summary>
         [Pure]
@@ -3774,6 +4204,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetIds(this AzureMysqlServerRestoreSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetIds(this AzureMysqlServerRestoreSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerRestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings AddIds(this AzureMysqlServerRestoreSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerRestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings AddIds(this AzureMysqlServerRestoreSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerRestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ClearIds(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerRestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings RemoveIds(this AzureMysqlServerRestoreSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerRestoreSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings RemoveIds(this AzureMysqlServerRestoreSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetName(this AzureMysqlServerRestoreSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetName(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetResourceGroup(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerRestoreSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings SetSubscription(this AzureMysqlServerRestoreSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerRestoreSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerRestoreSettings ResetSubscription(this AzureMysqlServerRestoreSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3875,6 +4419,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetIds(this AzureMysqlServerShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetIds(this AzureMysqlServerShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings AddIds(this AzureMysqlServerShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings AddIds(this AzureMysqlServerShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ClearIds(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings RemoveIds(this AzureMysqlServerShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings RemoveIds(this AzureMysqlServerShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
@@ -3908,6 +4512,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings SetSubscription(this AzureMysqlServerShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerShowSettings ResetSubscription(this AzureMysqlServerShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4009,42 +4631,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetName(this AzureMysqlServerUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetName(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings SetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerUpdateSettings ResetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region AdminPassword
         /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.AdminPassword"/>.</em></p><p>The password of the administrator login.</p></summary>
         [Pure]
@@ -4150,6 +4736,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetIds(this AzureMysqlServerUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetIds(this AzureMysqlServerUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings AddIds(this AzureMysqlServerUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings AddIds(this AzureMysqlServerUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ClearIds(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings RemoveIds(this AzureMysqlServerUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings RemoveIds(this AzureMysqlServerUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetName(this AzureMysqlServerUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetName(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetResourceGroup(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings SetSubscription(this AzureMysqlServerUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerUpdateSettings ResetSubscription(this AzureMysqlServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4323,6 +5023,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerWaitSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetIds(this AzureMysqlServerWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetIds(this AzureMysqlServerWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings AddIds(this AzureMysqlServerWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings AddIds(this AzureMysqlServerWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ClearIds(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings RemoveIds(this AzureMysqlServerWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerWaitSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings RemoveIds(this AzureMysqlServerWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
@@ -4356,6 +5116,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings SetSubscription(this AzureMysqlServerWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerWaitSettings ResetSubscription(this AzureMysqlServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4523,60 +5301,138 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMysqlServerConfigurationListSettingsExtensions
+    #region AzureMysqlServerReplicaCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerConfigurationListSettingsExtensions
+    public static partial class AzureMysqlServerReplicaCreateSettingsExtensions
     {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings, string resourceGroup)
+        public static AzureMysqlServerReplicaCreateSettings SetName(this AzureMysqlServerReplicaCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings ResetName(this AzureMysqlServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings SetResourceGroup(this AzureMysqlServerReplicaCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings)
+        public static AzureMysqlServerReplicaCreateSettings ResetResourceGroup(this AzureMysqlServerReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        #region SourceServer
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.SourceServer"/>.</em></p><p>The name or ID of the master server to create replica for.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetServerName(this AzureMysqlServerConfigurationListSettings toolSettings, string serverName)
+        public static AzureMysqlServerReplicaCreateSettings SetSourceServer(this AzureMysqlServerReplicaCreateSettings toolSettings, string sourceServer)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
+            toolSettings.SourceServer = sourceServer;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.SourceServer"/>.</em></p><p>The name or ID of the master server to create replica for.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetServerName(this AzureMysqlServerConfigurationListSettings toolSettings)
+        public static AzureMysqlServerReplicaCreateSettings ResetSourceServer(this AzureMysqlServerReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
+            toolSettings.SourceServer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings SetNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings ResetNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings EnableNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings DisableNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings ToggleNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings SetSubscription(this AzureMysqlServerReplicaCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaCreateSettings ResetSubscription(this AzureMysqlServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetDebug(this AzureMysqlServerConfigurationListSettings toolSettings, string debug)
+        public static AzureMysqlServerReplicaCreateSettings SetDebug(this AzureMysqlServerReplicaCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetDebug(this AzureMysqlServerConfigurationListSettings toolSettings)
+        public static AzureMysqlServerReplicaCreateSettings ResetDebug(this AzureMysqlServerReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4584,17 +5440,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetHelp(this AzureMysqlServerConfigurationListSettings toolSettings, string help)
+        public static AzureMysqlServerReplicaCreateSettings SetHelp(this AzureMysqlServerReplicaCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetHelp(this AzureMysqlServerConfigurationListSettings toolSettings)
+        public static AzureMysqlServerReplicaCreateSettings ResetHelp(this AzureMysqlServerReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4602,17 +5458,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetOutput(this AzureMysqlServerConfigurationListSettings toolSettings, AzureOutput output)
+        public static AzureMysqlServerReplicaCreateSettings SetOutput(this AzureMysqlServerReplicaCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetOutput(this AzureMysqlServerConfigurationListSettings toolSettings)
+        public static AzureMysqlServerReplicaCreateSettings ResetOutput(this AzureMysqlServerReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4620,17 +5476,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetQuery(this AzureMysqlServerConfigurationListSettings toolSettings, string query)
+        public static AzureMysqlServerReplicaCreateSettings SetQuery(this AzureMysqlServerReplicaCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetQuery(this AzureMysqlServerConfigurationListSettings toolSettings)
+        public static AzureMysqlServerReplicaCreateSettings ResetQuery(this AzureMysqlServerReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4638,17 +5494,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings SetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings, string verbose)
+        public static AzureMysqlServerReplicaCreateSettings SetVerbose(this AzureMysqlServerReplicaCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationListSettings ResetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings)
+        public static AzureMysqlServerReplicaCreateSettings ResetVerbose(this AzureMysqlServerReplicaCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4657,42 +5513,84 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMysqlServerConfigurationSetSettingsExtensions
+    #region AzureMysqlServerReplicaListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerConfigurationSetSettingsExtensions
+    public static partial class AzureMysqlServerReplicaListSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetName(this AzureMysqlServerConfigurationSetSettings toolSettings, string name)
+        public static AzureMysqlServerReplicaListSettings SetIds(this AzureMysqlServerReplicaListSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetName(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings SetIds(this AzureMysqlServerReplicaListSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerReplicaListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaListSettings AddIds(this AzureMysqlServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerReplicaListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaListSettings AddIds(this AzureMysqlServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerReplicaListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaListSettings ClearIds(this AzureMysqlServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerReplicaListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaListSettings RemoveIds(this AzureMysqlServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerReplicaListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaListSettings RemoveIds(this AzureMysqlServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings, string resourceGroup)
+        public static AzureMysqlServerReplicaListSettings SetResourceGroup(this AzureMysqlServerReplicaListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetResourceGroup(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -4700,53 +5598,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.ServerName"/>.</em></p><p>Name of the master server.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings, string serverName)
+        public static AzureMysqlServerReplicaListSettings SetServerName(this AzureMysqlServerReplicaListSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.ServerName"/>.</em></p><p>Name of the master server.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetServerName(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
             return toolSettings;
         }
         #endregion
-        #region Value
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetValue(this AzureMysqlServerConfigurationSetSettings toolSettings, string value)
+        public static AzureMysqlServerReplicaListSettings SetSubscription(this AzureMysqlServerReplicaListSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = value;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetValue(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetSubscription(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Value = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings, string debug)
+        public static AzureMysqlServerReplicaListSettings SetDebug(this AzureMysqlServerReplicaListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetDebug(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4754,17 +5652,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings, string help)
+        public static AzureMysqlServerReplicaListSettings SetHelp(this AzureMysqlServerReplicaListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetHelp(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4772,17 +5670,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings, AzureOutput output)
+        public static AzureMysqlServerReplicaListSettings SetOutput(this AzureMysqlServerReplicaListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetOutput(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4790,17 +5688,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings, string query)
+        public static AzureMysqlServerReplicaListSettings SetQuery(this AzureMysqlServerReplicaListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetQuery(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4808,17 +5706,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings SetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings, string verbose)
+        public static AzureMysqlServerReplicaListSettings SetVerbose(this AzureMysqlServerReplicaListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationSetSettings ResetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        public static AzureMysqlServerReplicaListSettings ResetVerbose(this AzureMysqlServerReplicaListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4827,24 +5725,102 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMysqlServerConfigurationShowSettingsExtensions
+    #region AzureMysqlServerReplicaStopSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerConfigurationShowSettingsExtensions
+    public static partial class AzureMysqlServerReplicaStopSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetName(this AzureMysqlServerConfigurationShowSettings toolSettings, string name)
+        public static AzureMysqlServerReplicaStopSettings SetYes(this AzureMysqlServerReplicaStopSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings ResetYes(this AzureMysqlServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings SetIds(this AzureMysqlServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings SetIds(this AzureMysqlServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerReplicaStopSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings AddIds(this AzureMysqlServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerReplicaStopSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings AddIds(this AzureMysqlServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerReplicaStopSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings ClearIds(this AzureMysqlServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerReplicaStopSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings RemoveIds(this AzureMysqlServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerReplicaStopSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings RemoveIds(this AzureMysqlServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerReplicaStopSettings SetName(this AzureMysqlServerReplicaStopSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetName(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetName(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -4852,53 +5828,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings, string resourceGroup)
+        public static AzureMysqlServerReplicaStopSettings SetResourceGroup(this AzureMysqlServerReplicaStopSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetResourceGroup(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings, string serverName)
+        public static AzureMysqlServerReplicaStopSettings SetSubscription(this AzureMysqlServerReplicaStopSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetSubscription(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings, string debug)
+        public static AzureMysqlServerReplicaStopSettings SetDebug(this AzureMysqlServerReplicaStopSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetDebug(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -4906,17 +5882,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings, string help)
+        public static AzureMysqlServerReplicaStopSettings SetHelp(this AzureMysqlServerReplicaStopSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetHelp(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -4924,17 +5900,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings, AzureOutput output)
+        public static AzureMysqlServerReplicaStopSettings SetOutput(this AzureMysqlServerReplicaStopSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetOutput(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -4942,17 +5918,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings, string query)
+        public static AzureMysqlServerReplicaStopSettings SetQuery(this AzureMysqlServerReplicaStopSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetQuery(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -4960,17 +5936,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings SetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings, string verbose)
+        public static AzureMysqlServerReplicaStopSettings SetVerbose(this AzureMysqlServerReplicaStopSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerConfigurationShowSettings ResetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        public static AzureMysqlServerReplicaStopSettings ResetVerbose(this AzureMysqlServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5075,6 +6051,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleCreateSettings SetSubscription(this AzureMysqlServerFirewallRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleCreateSettings ResetSubscription(this AzureMysqlServerFirewallRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5173,6 +6167,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerFirewallRuleDeleteSettingsExtensions
     {
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings SetYes(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings ResetYes(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings SetIds(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings SetIds(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings AddIds(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings AddIds(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings ClearIds(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings RemoveIds(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleDeleteSettings RemoveIds(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Name"/>.</em></p><p>The name of the firewall rule.</p></summary>
         [Pure]
@@ -5227,21 +6299,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerFirewallRuleDeleteSettings SetYes(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, string yes)
+        public static AzureMysqlServerFirewallRuleDeleteSettings SetSubscription(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerFirewallRuleDeleteSettings ResetYes(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings)
+        public static AzureMysqlServerFirewallRuleDeleteSettings ResetSubscription(this AzureMysqlServerFirewallRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5343,6 +6415,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerFirewallRuleListSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings SetIds(this AzureMysqlServerFirewallRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings SetIds(this AzureMysqlServerFirewallRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings AddIds(this AzureMysqlServerFirewallRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings AddIds(this AzureMysqlServerFirewallRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerFirewallRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings ClearIds(this AzureMysqlServerFirewallRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings RemoveIds(this AzureMysqlServerFirewallRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings RemoveIds(this AzureMysqlServerFirewallRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -5376,6 +6508,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings SetSubscription(this AzureMysqlServerFirewallRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleListSettings ResetSubscription(this AzureMysqlServerFirewallRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5477,6 +6627,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerFirewallRuleShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings SetIds(this AzureMysqlServerFirewallRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings SetIds(this AzureMysqlServerFirewallRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings AddIds(this AzureMysqlServerFirewallRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings AddIds(this AzureMysqlServerFirewallRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerFirewallRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings ClearIds(this AzureMysqlServerFirewallRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings RemoveIds(this AzureMysqlServerFirewallRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings RemoveIds(this AzureMysqlServerFirewallRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleShowSettings.Name"/>.</em></p><p>The name of the firewall rule.</p></summary>
         [Pure]
@@ -5528,6 +6738,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings SetSubscription(this AzureMysqlServerFirewallRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleShowSettings ResetSubscription(this AzureMysqlServerFirewallRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5629,6 +6857,102 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerFirewallRuleUpdateSettingsExtensions
     {
+        #region EndIpAddress
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings SetEndIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, string endIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = endIpAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings ResetEndIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartIpAddress
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings SetStartIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, string startIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = startIpAddress;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings ResetStartIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings SetIds(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings SetIds(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings AddIds(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings AddIds(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings ClearIds(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings RemoveIds(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerFirewallRuleUpdateSettings RemoveIds(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Name"/>.</em></p><p>The name of the firewall rule.</p></summary>
         [Pure]
@@ -5683,39 +7007,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region EndIpAddress
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerFirewallRuleUpdateSettings SetEndIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, string endIpAddress)
+        public static AzureMysqlServerFirewallRuleUpdateSettings SetSubscription(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = endIpAddress;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.EndIpAddress"/>.</em></p><p>The end IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerFirewallRuleUpdateSettings ResetEndIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings)
+        public static AzureMysqlServerFirewallRuleUpdateSettings ResetSubscription(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartIpAddress
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
-        [Pure]
-        public static AzureMysqlServerFirewallRuleUpdateSettings SetStartIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings, string startIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = startIpAddress;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerFirewallRuleUpdateSettings.StartIpAddress"/>.</em></p><p>The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses.</p></summary>
-        [Pure]
-        public static AzureMysqlServerFirewallRuleUpdateSettings ResetStartIpAddress(this AzureMysqlServerFirewallRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5883,218 +7189,84 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMysqlServerReplicaCreateSettingsExtensions
+    #region AzureMysqlServerConfigurationListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerReplicaCreateSettingsExtensions
+    public static partial class AzureMysqlServerConfigurationListSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetName(this AzureMysqlServerReplicaCreateSettings toolSettings, string name)
+        public static AzureMysqlServerConfigurationListSettings SetIds(this AzureMysqlServerConfigurationListSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetName(this AzureMysqlServerReplicaCreateSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings SetIds(this AzureMysqlServerConfigurationListSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerConfigurationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings AddIds(this AzureMysqlServerConfigurationListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerConfigurationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings AddIds(this AzureMysqlServerConfigurationListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerConfigurationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ClearIds(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerConfigurationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings RemoveIds(this AzureMysqlServerConfigurationListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerConfigurationListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings RemoveIds(this AzureMysqlServerConfigurationListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetResourceGroup(this AzureMysqlServerReplicaCreateSettings toolSettings, string resourceGroup)
+        public static AzureMysqlServerConfigurationListSettings SetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetResourceGroup(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourceServer
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.SourceServer"/>.</em></p><p>The name or ID of the master server to create replica for.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetSourceServer(this AzureMysqlServerReplicaCreateSettings toolSettings, string sourceServer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = sourceServer;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.SourceServer"/>.</em></p><p>The name or ID of the master server to create replica for.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetSourceServer(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings, bool? noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings EnableNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings DisableNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureMysqlServerReplicaCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ToggleNoWait(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetDebug(this AzureMysqlServerReplicaCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetDebug(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetHelp(this AzureMysqlServerReplicaCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetHelp(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetOutput(this AzureMysqlServerReplicaCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetOutput(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetQuery(this AzureMysqlServerReplicaCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetQuery(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings SetVerbose(this AzureMysqlServerReplicaCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaCreateSettings ResetVerbose(this AzureMysqlServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMysqlServerReplicaListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerReplicaListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaListSettings SetResourceGroup(this AzureMysqlServerReplicaListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerReplicaListSettings ResetResourceGroup(this AzureMysqlServerReplicaListSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings ResetResourceGroup(this AzureMysqlServerConfigurationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -6102,35 +7274,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.ServerName"/>.</em></p><p>Name of the master server.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings SetServerName(this AzureMysqlServerReplicaListSettings toolSettings, string serverName)
+        public static AzureMysqlServerConfigurationListSettings SetServerName(this AzureMysqlServerConfigurationListSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.ServerName"/>.</em></p><p>Name of the master server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings ResetServerName(this AzureMysqlServerReplicaListSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings ResetServerName(this AzureMysqlServerConfigurationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings SetDebug(this AzureMysqlServerReplicaListSettings toolSettings, string debug)
+        public static AzureMysqlServerConfigurationListSettings SetSubscription(this AzureMysqlServerConfigurationListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings ResetSubscription(this AzureMysqlServerConfigurationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationListSettings SetDebug(this AzureMysqlServerConfigurationListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings ResetDebug(this AzureMysqlServerReplicaListSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings ResetDebug(this AzureMysqlServerConfigurationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -6138,17 +7328,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings SetHelp(this AzureMysqlServerReplicaListSettings toolSettings, string help)
+        public static AzureMysqlServerConfigurationListSettings SetHelp(this AzureMysqlServerConfigurationListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings ResetHelp(this AzureMysqlServerReplicaListSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings ResetHelp(this AzureMysqlServerConfigurationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -6156,17 +7346,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings SetOutput(this AzureMysqlServerReplicaListSettings toolSettings, AzureOutput output)
+        public static AzureMysqlServerConfigurationListSettings SetOutput(this AzureMysqlServerConfigurationListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings ResetOutput(this AzureMysqlServerReplicaListSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings ResetOutput(this AzureMysqlServerConfigurationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -6174,17 +7364,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings SetQuery(this AzureMysqlServerReplicaListSettings toolSettings, string query)
+        public static AzureMysqlServerConfigurationListSettings SetQuery(this AzureMysqlServerConfigurationListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings ResetQuery(this AzureMysqlServerReplicaListSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings ResetQuery(this AzureMysqlServerConfigurationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -6192,17 +7382,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings SetVerbose(this AzureMysqlServerReplicaListSettings toolSettings, string verbose)
+        public static AzureMysqlServerConfigurationListSettings SetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaListSettings ResetVerbose(this AzureMysqlServerReplicaListSettings toolSettings)
+        public static AzureMysqlServerConfigurationListSettings ResetVerbose(this AzureMysqlServerConfigurationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6211,24 +7401,102 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMysqlServerReplicaStopSettingsExtensions
+    #region AzureMysqlServerConfigurationSetSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureMysqlServerReplicaStopSettingsExtensions
+    public static partial class AzureMysqlServerConfigurationSetSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        #region Value
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetName(this AzureMysqlServerReplicaStopSettings toolSettings, string name)
+        public static AzureMysqlServerConfigurationSetSettings SetValue(this AzureMysqlServerConfigurationSetSettings toolSettings, string value)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = value;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Value"/>.</em></p><p>Value of the configuration. If not provided, configuration value will be set to default.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetValue(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Value = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetIds(this AzureMysqlServerConfigurationSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetIds(this AzureMysqlServerConfigurationSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerConfigurationSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings AddIds(this AzureMysqlServerConfigurationSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerConfigurationSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings AddIds(this AzureMysqlServerConfigurationSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerConfigurationSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ClearIds(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerConfigurationSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings RemoveIds(this AzureMysqlServerConfigurationSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerConfigurationSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings RemoveIds(this AzureMysqlServerConfigurationSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetName(this AzureMysqlServerConfigurationSetSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Name"/>.</em></p><p>Name of the server.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetName(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetName(this AzureMysqlServerConfigurationSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -6236,53 +7504,71 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetResourceGroup(this AzureMysqlServerReplicaStopSettings toolSettings, string resourceGroup)
+        public static AzureMysqlServerConfigurationSetSettings SetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetResourceGroup(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetResourceGroup(this AzureMysqlServerConfigurationSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetYes(this AzureMysqlServerReplicaStopSettings toolSettings, string yes)
+        public static AzureMysqlServerConfigurationSetSettings SetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings, string serverName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
+            toolSettings.ServerName = serverName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetYes(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetServerName(this AzureMysqlServerConfigurationSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings SetSubscription(this AzureMysqlServerConfigurationSetSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationSetSettings ResetSubscription(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetDebug(this AzureMysqlServerReplicaStopSettings toolSettings, string debug)
+        public static AzureMysqlServerConfigurationSetSettings SetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetDebug(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetDebug(this AzureMysqlServerConfigurationSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -6290,17 +7576,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetHelp(this AzureMysqlServerReplicaStopSettings toolSettings, string help)
+        public static AzureMysqlServerConfigurationSetSettings SetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetHelp(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetHelp(this AzureMysqlServerConfigurationSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -6308,17 +7594,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetOutput(this AzureMysqlServerReplicaStopSettings toolSettings, AzureOutput output)
+        public static AzureMysqlServerConfigurationSetSettings SetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetOutput(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetOutput(this AzureMysqlServerConfigurationSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -6326,17 +7612,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetQuery(this AzureMysqlServerReplicaStopSettings toolSettings, string query)
+        public static AzureMysqlServerConfigurationSetSettings SetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetQuery(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetQuery(this AzureMysqlServerConfigurationSetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -6344,17 +7630,247 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerReplicaStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings SetVerbose(this AzureMysqlServerReplicaStopSettings toolSettings, string verbose)
+        public static AzureMysqlServerConfigurationSetSettings SetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerReplicaStopSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureMysqlServerReplicaStopSettings ResetVerbose(this AzureMysqlServerReplicaStopSettings toolSettings)
+        public static AzureMysqlServerConfigurationSetSettings ResetVerbose(this AzureMysqlServerConfigurationSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMysqlServerConfigurationShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMysqlTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMysqlServerConfigurationShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetIds(this AzureMysqlServerConfigurationShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetIds(this AzureMysqlServerConfigurationShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerConfigurationShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings AddIds(this AzureMysqlServerConfigurationShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerConfigurationShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings AddIds(this AzureMysqlServerConfigurationShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerConfigurationShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ClearIds(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerConfigurationShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings RemoveIds(this AzureMysqlServerConfigurationShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerConfigurationShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings RemoveIds(this AzureMysqlServerConfigurationShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetName(this AzureMysqlServerConfigurationShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Name"/>.</em></p><p>The name of the server configuration.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetName(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetResourceGroup(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetServerName(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetSubscription(this AzureMysqlServerConfigurationShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetSubscription(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetDebug(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetHelp(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetOutput(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetQuery(this AzureMysqlServerConfigurationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings SetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerConfigurationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMysqlServerConfigurationShowSettings ResetVerbose(this AzureMysqlServerConfigurationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6501,6 +8017,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleCreateSettings SetSubscription(this AzureMysqlServerVnetRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleCreateSettings ResetSubscription(this AzureMysqlServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6599,6 +8133,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerVnetRuleDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings SetIds(this AzureMysqlServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings SetIds(this AzureMysqlServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings AddIds(this AzureMysqlServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings AddIds(this AzureMysqlServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerVnetRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings ClearIds(this AzureMysqlServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings RemoveIds(this AzureMysqlServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings RemoveIds(this AzureMysqlServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleDeleteSettings.Name"/>.</em></p><p>The name of the vnet rule.</p></summary>
         [Pure]
@@ -6650,6 +8244,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings SetSubscription(this AzureMysqlServerVnetRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleDeleteSettings ResetSubscription(this AzureMysqlServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6751,6 +8363,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerVnetRuleListSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings SetIds(this AzureMysqlServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleListSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings SetIds(this AzureMysqlServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings AddIds(this AzureMysqlServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings AddIds(this AzureMysqlServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerVnetRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings ClearIds(this AzureMysqlServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings RemoveIds(this AzureMysqlServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleListSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings RemoveIds(this AzureMysqlServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -6784,6 +8456,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings SetSubscription(this AzureMysqlServerVnetRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleListSettings ResetSubscription(this AzureMysqlServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6885,6 +8575,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerVnetRuleShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings SetIds(this AzureMysqlServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings SetIds(this AzureMysqlServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings AddIds(this AzureMysqlServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings AddIds(this AzureMysqlServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerVnetRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings ClearIds(this AzureMysqlServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings RemoveIds(this AzureMysqlServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings RemoveIds(this AzureMysqlServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleShowSettings.Name"/>.</em></p><p>The name of the vnet rule.</p></summary>
         [Pure]
@@ -6936,6 +8686,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings SetSubscription(this AzureMysqlServerVnetRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleShowSettings ResetSubscription(this AzureMysqlServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7037,60 +8805,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMysqlServerVnetRuleUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Name"/>.</em></p><p>The name of the vnet rule.</p></summary>
-        [Pure]
-        public static AzureMysqlServerVnetRuleUpdateSettings SetName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Name"/>.</em></p><p>The name of the vnet rule.</p></summary>
-        [Pure]
-        public static AzureMysqlServerVnetRuleUpdateSettings ResetName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerVnetRuleUpdateSettings SetResourceGroup(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMysqlServerVnetRuleUpdateSettings ResetResourceGroup(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerVnetRuleUpdateSettings SetServerName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
-        [Pure]
-        public static AzureMysqlServerVnetRuleUpdateSettings ResetServerName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Subnet
         /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Subnet"/>.</em></p><p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p></summary>
         [Pure]
@@ -7166,6 +8880,138 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings SetIds(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings SetIds(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings AddIds(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMysqlServerVnetRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings AddIds(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMysqlServerVnetRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings ClearIds(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings RemoveIds(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMysqlServerVnetRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings RemoveIds(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Name"/>.</em></p><p>The name of the vnet rule.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings SetName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Name"/>.</em></p><p>The name of the vnet rule.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings ResetName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings SetResourceGroup(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings ResetResourceGroup(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings SetServerName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleUpdateSettings.ServerName"/>.</em></p><p>Name of the server.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings ResetServerName(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings SetSubscription(this AzureMysqlServerVnetRuleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMysqlServerVnetRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMysqlServerVnetRuleUpdateSettings ResetSubscription(this AzureMysqlServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

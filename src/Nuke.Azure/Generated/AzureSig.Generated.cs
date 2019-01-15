@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -76,46 +76,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSigImageDefinitionCreate(Configure<AzureSigImageDefinitionCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSigImageDefinitionDelete(Configure<AzureSigImageDefinitionDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSigImageDefinitionList(Configure<AzureSigImageDefinitionListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSigImageDefinitionShow(Configure<AzureSigImageDefinitionShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSigImageDefinitionUpdate(Configure<AzureSigImageDefinitionUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureSigImageVersionCreate(Configure<AzureSigImageVersionCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureSigImageVersionCreateSettings());
@@ -163,6 +123,46 @@ namespace Nuke.Azure
             process.AssertZeroExitCode();
             return process.Output;
         }
+        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureSigImageDefinitionCreate(Configure<AzureSigImageDefinitionCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureSigImageDefinitionDelete(Configure<AzureSigImageDefinitionDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureSigImageDefinitionList(Configure<AzureSigImageDefinitionListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureSigImageDefinitionShow(Configure<AzureSigImageDefinitionShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage shared image gallery.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sig?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureSigImageDefinitionUpdate(Configure<AzureSigImageDefinitionUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureSigImageDefinitionUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
     }
     #region AzureSigCreateSettings
     /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
@@ -179,10 +179,12 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The description of the gallery.</p></summary>
         public virtual string Description { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -202,6 +204,7 @@ namespace Nuke.Azure
               .Add("--description {value}", Description)
               .Add("--location {value}", Location)
               .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -224,6 +227,8 @@ namespace Nuke.Azure
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -240,6 +245,7 @@ namespace Nuke.Azure
               .Add("sig delete")
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -260,6 +266,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -275,6 +283,7 @@ namespace Nuke.Azure
             arguments
               .Add("sig list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -295,8 +304,13 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -312,7 +326,9 @@ namespace Nuke.Azure
             arguments
               .Add("sig show")
               .Add("--gallery-name {value}", GalleryName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -343,6 +359,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -363,6 +381,357 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSigImageVersionCreateSettings
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSigImageVersionCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSig executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
+        /// <summary><p>Gallery image definition.</p></summary>
+        public virtual string GalleryImageDefinition { get; internal set; }
+        /// <summary><p>Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        public virtual string GalleryImageVersion { get; internal set; }
+        /// <summary><p>Gallery name.</p></summary>
+        public virtual string GalleryName { get; internal set; }
+        /// <summary><p>Image name(if in the same resource group) or resource id.</p></summary>
+        public virtual string ManagedImage { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The end of life date, e.g. '2020-12-31'.</p></summary>
+        public virtual string EndOfLifeDate { get; internal set; }
+        /// <summary><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
+        public virtual bool? ExcludeFromLatest { get; internal set; }
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Default replicate count. For region specific, use --target-regions.</p></summary>
+        public virtual string ReplicaCount { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        public virtual IReadOnlyList<string> TargetRegions => TargetRegionsInternal.AsReadOnly();
+        internal List<string> TargetRegionsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sig image-version create")
+              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
+              .Add("--gallery-name {value}", GalleryName)
+              .Add("--managed-image {value}", ManagedImage)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--end-of-life-date {value}", EndOfLifeDate)
+              .Add("--exclude-from-latest", ExcludeFromLatest)
+              .Add("--location {value}", Location)
+              .Add("--no-wait", NoWait)
+              .Add("--replica-count {value}", ReplicaCount)
+              .Add("--tags {value}", Tags)
+              .Add("--target-regions {value}", TargetRegions, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSigImageVersionDeleteSettings
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSigImageVersionDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSig executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
+        /// <summary><p>Gallery image definition.</p></summary>
+        public virtual string GalleryImageDefinition { get; internal set; }
+        /// <summary><p>The name of the gallery Image Version to be deleted.</p></summary>
+        public virtual string GalleryImageVersion { get; internal set; }
+        /// <summary><p>Gallery name.</p></summary>
+        public virtual string GalleryName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sig image-version delete")
+              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
+              .Add("--gallery-name {value}", GalleryName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSigImageVersionListSettings
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSigImageVersionListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSig executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
+        /// <summary><p>Gallery image definition.</p></summary>
+        public virtual string GalleryImageDefinition { get; internal set; }
+        /// <summary><p>Gallery name.</p></summary>
+        public virtual string GalleryName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sig image-version list")
+              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
+              .Add("--gallery-name {value}", GalleryName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSigImageVersionShowSettings
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSigImageVersionShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSig executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
+        /// <summary><p>Gallery image definition.</p></summary>
+        public virtual string GalleryImageDefinition { get; internal set; }
+        /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        public virtual string GalleryImageVersion { get; internal set; }
+        /// <summary><p>Gallery name.</p></summary>
+        public virtual string GalleryName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The expand expression to apply on the operation, e.g. 'ReplicationStatus'.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sig image-version show")
+              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
+              .Add("--gallery-name {value}", GalleryName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSigImageVersionUpdateSettings
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSigImageVersionUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSig executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
+        /// <summary><p>Gallery image definition.</p></summary>
+        public virtual string GalleryImageDefinition { get; internal set; }
+        /// <summary><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        public virtual string GalleryImageVersion { get; internal set; }
+        /// <summary><p>Gallery name.</p></summary>
+        public virtual string GalleryName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        public virtual IReadOnlyList<string> TargetRegions => TargetRegionsInternal.AsReadOnly();
+        internal List<string> TargetRegionsInternal { get; set; } = new List<string>();
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sig image-version update")
+              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
+              .Add("--gallery-name {value}", GalleryName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--no-wait", NoWait)
+              .Add("--target-regions {value}", TargetRegions, separator: ' ')
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSigImageVersionWaitSettings
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSigImageVersionWaitSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureSig executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
+        /// <summary><p>Gallery image definition.</p></summary>
+        public virtual string GalleryImageDefinition { get; internal set; }
+        /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        public virtual string GalleryImageVersion { get; internal set; }
+        /// <summary><p>Gallery name.</p></summary>
+        public virtual string GalleryName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The expand expression to apply on the operation.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
+        public virtual string Created { get; internal set; }
+        /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        public virtual string Custom { get; internal set; }
+        /// <summary><p>Wait until deleted.</p></summary>
+        public virtual string Deleted { get; internal set; }
+        /// <summary><p>Wait until the resource exists.</p></summary>
+        public virtual string Exists { get; internal set; }
+        /// <summary><p>Polling interval in seconds.</p></summary>
+        public virtual string Interval { get; internal set; }
+        /// <summary><p>Maximum wait in seconds.</p></summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
+        public virtual string Updated { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sig image-version wait")
+              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
+              .Add("--gallery-image-version {value}", GalleryImageVersion)
+              .Add("--gallery-name {value}", GalleryName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--expand {value}", Expand)
+              .Add("--created {value}", Created)
+              .Add("--custom {value}", Custom)
+              .Add("--deleted {value}", Deleted)
+              .Add("--exists {value}", Exists)
+              .Add("--interval {value}", Interval)
+              .Add("--timeout {value}", Timeout)
+              .Add("--updated {value}", Updated)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -403,7 +772,7 @@ namespace Nuke.Azure
         public virtual string EndOfLifeDate { get; internal set; }
         /// <summary><p>The Eula agreement for the gallery image.</p></summary>
         public virtual string Eula { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The privacy statement uri.</p></summary>
         public virtual string PrivacyStatementUri { get; internal set; }
@@ -425,6 +794,8 @@ namespace Nuke.Azure
         public virtual string MinimumCpuCore { get; internal set; }
         /// <summary><p>Minimum memory in MB.</p></summary>
         public virtual string MinimumMemory { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -461,6 +832,7 @@ namespace Nuke.Azure
               .Add("--maximum-memory {value}", MaximumMemory)
               .Add("--minimum-cpu-core {value}", MinimumCpuCore)
               .Add("--minimum-memory {value}", MinimumMemory)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -483,8 +855,13 @@ namespace Nuke.Azure
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -501,7 +878,9 @@ namespace Nuke.Azure
               .Add("sig image-definition delete")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
               .Add("--gallery-name {value}", GalleryName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -524,6 +903,8 @@ namespace Nuke.Azure
         public virtual string GalleryName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -540,6 +921,7 @@ namespace Nuke.Azure
               .Add("sig image-definition list")
               .Add("--gallery-name {value}", GalleryName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -562,8 +944,13 @@ namespace Nuke.Azure
         public virtual string GalleryImageDefinition { get; internal set; }
         /// <summary><p>Gallery name.</p></summary>
         public virtual string GalleryName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -580,7 +967,9 @@ namespace Nuke.Azure
               .Add("sig image-definition show")
               .Add("--gallery-image-definition {value}", GalleryImageDefinition)
               .Add("--gallery-name {value}", GalleryName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -613,6 +1002,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -634,338 +1025,7 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSigImageVersionCreateSettings
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSigImageVersionCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSig executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
-        /// <summary><p>Gallery image definition.</p></summary>
-        public virtual string GalleryImageDefinition { get; internal set; }
-        /// <summary><p>Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        public virtual string GalleryImageVersion { get; internal set; }
-        /// <summary><p>Gallery name.</p></summary>
-        public virtual string GalleryName { get; internal set; }
-        /// <summary><p>Image name(if in the same resource group) or resource id.</p></summary>
-        public virtual string ManagedImage { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The end of life date, e.g. '2020-12-31'.</p></summary>
-        public virtual string EndOfLifeDate { get; internal set; }
-        /// <summary><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
-        public virtual bool? ExcludeFromLatest { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual bool? NoWait { get; internal set; }
-        /// <summary><p>Default replicate count. For region specific, use --target-regions.</p></summary>
-        public virtual string ReplicaCount { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        public virtual IReadOnlyList<string> TargetRegions => TargetRegionsInternal.AsReadOnly();
-        internal List<string> TargetRegionsInternal { get; set; } = new List<string>();
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sig image-version create")
-              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version {value}", GalleryImageVersion)
-              .Add("--gallery-name {value}", GalleryName)
-              .Add("--managed-image {value}", ManagedImage)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--end-of-life-date {value}", EndOfLifeDate)
-              .Add("--exclude-from-latest", ExcludeFromLatest)
-              .Add("--location {value}", Location)
-              .Add("--no-wait", NoWait)
-              .Add("--replica-count {value}", ReplicaCount)
-              .Add("--tags {value}", Tags)
-              .Add("--target-regions {value}", TargetRegions, separator: ' ')
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSigImageVersionDeleteSettings
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSigImageVersionDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSig executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
-        /// <summary><p>Gallery image definition.</p></summary>
-        public virtual string GalleryImageDefinition { get; internal set; }
-        /// <summary><p>The name of the gallery Image Version to be deleted.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
-        /// <summary><p>Gallery name.</p></summary>
-        public virtual string GalleryName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sig image-version delete")
-              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
-              .Add("--gallery-name {value}", GalleryName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSigImageVersionListSettings
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSigImageVersionListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSig executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
-        /// <summary><p>Gallery image definition.</p></summary>
-        public virtual string GalleryImageDefinition { get; internal set; }
-        /// <summary><p>Gallery name.</p></summary>
-        public virtual string GalleryName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sig image-version list")
-              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-name {value}", GalleryName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSigImageVersionShowSettings
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSigImageVersionShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSig executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
-        /// <summary><p>Gallery image definition.</p></summary>
-        public virtual string GalleryImageDefinition { get; internal set; }
-        /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
-        /// <summary><p>Gallery name.</p></summary>
-        public virtual string GalleryName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The expand expression to apply on the operation, e.g. 'ReplicationStatus'.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sig image-version show")
-              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
-              .Add("--gallery-name {value}", GalleryName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--expand {value}", Expand)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSigImageVersionUpdateSettings
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSigImageVersionUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSig executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
-        /// <summary><p>Gallery image definition.</p></summary>
-        public virtual string GalleryImageDefinition { get; internal set; }
-        /// <summary><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
-        /// <summary><p>Gallery name.</p></summary>
-        public virtual string GalleryName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
-        public virtual bool? NoWait { get; internal set; }
-        /// <summary><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        public virtual IReadOnlyList<string> TargetRegions => TargetRegionsInternal.AsReadOnly();
-        internal List<string> TargetRegionsInternal { get; set; } = new List<string>();
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sig image-version update")
-              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
-              .Add("--gallery-name {value}", GalleryName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--no-wait", NoWait)
-              .Add("--target-regions {value}", TargetRegions, separator: ' ')
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSigImageVersionWaitSettings
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSigImageVersionWaitSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureSig executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureSigTasks.AzureSigPath;
-        /// <summary><p>Gallery image definition.</p></summary>
-        public virtual string GalleryImageDefinition { get; internal set; }
-        /// <summary><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        public virtual string GalleryImageVersionName { get; internal set; }
-        /// <summary><p>Gallery name.</p></summary>
-        public virtual string GalleryName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The expand expression to apply on the operation.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
-        public virtual string Created { get; internal set; }
-        /// <summary><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
-        public virtual string Custom { get; internal set; }
-        /// <summary><p>Wait until deleted.</p></summary>
-        public virtual string Deleted { get; internal set; }
-        /// <summary><p>Wait until the resource exists.</p></summary>
-        public virtual string Exists { get; internal set; }
-        /// <summary><p>Polling interval in seconds.</p></summary>
-        public virtual string Interval { get; internal set; }
-        /// <summary><p>Maximum wait in seconds.</p></summary>
-        public virtual string Timeout { get; internal set; }
-        /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
-        public virtual string Updated { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sig image-version wait")
-              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-image-version-name {value}", GalleryImageVersionName)
-              .Add("--gallery-name {value}", GalleryName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--expand {value}", Expand)
-              .Add("--created {value}", Created)
-              .Add("--custom {value}", Custom)
-              .Add("--deleted {value}", Deleted)
-              .Add("--exists {value}", Exists)
-              .Add("--interval {value}", Interval)
-              .Add("--timeout {value}", Timeout)
-              .Add("--updated {value}", Updated)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1036,7 +1096,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureSigCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSigCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureSigCreateSettings SetLocation(this AzureSigCreateSettings toolSettings, string location)
         {
@@ -1044,7 +1104,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureSigCreateSettings ResetLocation(this AzureSigCreateSettings toolSettings)
         {
@@ -1068,6 +1128,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigCreateSettings SetSubscription(this AzureSigCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigCreateSettings ResetSubscription(this AzureSigCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1205,6 +1283,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigDeleteSettings SetSubscription(this AzureSigDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigDeleteSettings ResetSubscription(this AzureSigDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1318,6 +1414,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigListSettings SetSubscription(this AzureSigListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigListSettings ResetSubscription(this AzureSigListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1437,6 +1551,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureSigShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings SetIds(this AzureSigShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings SetIds(this AzureSigShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings AddIds(this AzureSigShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings AddIds(this AzureSigShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings ClearIds(this AzureSigShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings RemoveIds(this AzureSigShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings RemoveIds(this AzureSigShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureSigShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -1452,6 +1626,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings SetSubscription(this AzureSigShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigShowSettings ResetSubscription(this AzureSigShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1661,6 +1853,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigUpdateSettings SetSubscription(this AzureSigUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigUpdateSettings ResetSubscription(this AzureSigUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1745,6 +1955,1686 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureSigUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureSigUpdateSettings ResetVerbose(this AzureSigUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSigImageVersionCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSigImageVersionCreateSettingsExtensions
+    {
+        #region GalleryImageDefinition
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetGalleryImageDefinition(this AzureSigImageVersionCreateSettings toolSettings, string galleryImageDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = galleryImageDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetGalleryImageDefinition(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.GalleryImageVersion"/>.</em></p><p>Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetGalleryImageVersion(this AzureSigImageVersionCreateSettings toolSettings, string galleryImageVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = galleryImageVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.GalleryImageVersion"/>.</em></p><p>Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetGalleryImageVersion(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryName
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetGalleryName(this AzureSigImageVersionCreateSettings toolSettings, string galleryName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = galleryName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetGalleryName(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagedImage
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ManagedImage"/>.</em></p><p>Image name(if in the same resource group) or resource id.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetManagedImage(this AzureSigImageVersionCreateSettings toolSettings, string managedImage)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedImage = managedImage;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ManagedImage"/>.</em></p><p>Image name(if in the same resource group) or resource id.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetManagedImage(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedImage = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetResourceGroup(this AzureSigImageVersionCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetResourceGroup(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndOfLifeDate
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.EndOfLifeDate"/>.</em></p><p>The end of life date, e.g. '2020-12-31'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetEndOfLifeDate(this AzureSigImageVersionCreateSettings toolSettings, string endOfLifeDate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndOfLifeDate = endOfLifeDate;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.EndOfLifeDate"/>.</em></p><p>The end of life date, e.g. '2020-12-31'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetEndOfLifeDate(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndOfLifeDate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ExcludeFromLatest
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings, bool? excludeFromLatest)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExcludeFromLatest = excludeFromLatest;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExcludeFromLatest = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings EnableExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExcludeFromLatest = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings DisableExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExcludeFromLatest = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ToggleExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExcludeFromLatest = !toolSettings.ExcludeFromLatest;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetLocation(this AzureSigImageVersionCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetLocation(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetNoWait(this AzureSigImageVersionCreateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetNoWait(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings EnableNoWait(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings DisableNoWait(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ToggleNoWait(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region ReplicaCount
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ReplicaCount"/>.</em></p><p>Default replicate count. For region specific, use --target-regions.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetReplicaCount(this AzureSigImageVersionCreateSettings toolSettings, string replicaCount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReplicaCount = replicaCount;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ReplicaCount"/>.</em></p><p>Default replicate count. For region specific, use --target-regions.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetReplicaCount(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReplicaCount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetTags(this AzureSigImageVersionCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetTags(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetRegions
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, params string[] targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal = targetRegions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, IEnumerable<string> targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal = targetRegions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings AddTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, params string[] targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings AddTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, IEnumerable<string> targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ClearTargetRegions(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings RemoveTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, params string[] targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(targetRegions);
+            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings RemoveTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, IEnumerable<string> targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(targetRegions);
+            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetSubscription(this AzureSigImageVersionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetSubscription(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetDebug(this AzureSigImageVersionCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetDebug(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetHelp(this AzureSigImageVersionCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetHelp(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetOutput(this AzureSigImageVersionCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetOutput(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetQuery(this AzureSigImageVersionCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetQuery(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings SetVerbose(this AzureSigImageVersionCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionCreateSettings ResetVerbose(this AzureSigImageVersionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSigImageVersionDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSigImageVersionDeleteSettingsExtensions
+    {
+        #region GalleryImageDefinition
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetGalleryImageDefinition(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = galleryImageDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetGalleryImageDefinition(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetGalleryImageVersion(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = galleryImageVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetGalleryImageVersion(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryName
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetGalleryName(this AzureSigImageVersionDeleteSettings toolSettings, string galleryName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = galleryName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetGalleryName(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetResourceGroup(this AzureSigImageVersionDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetResourceGroup(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetSubscription(this AzureSigImageVersionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetSubscription(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetDebug(this AzureSigImageVersionDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetDebug(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetHelp(this AzureSigImageVersionDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetHelp(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetOutput(this AzureSigImageVersionDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetOutput(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetQuery(this AzureSigImageVersionDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetQuery(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings SetVerbose(this AzureSigImageVersionDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionDeleteSettings ResetVerbose(this AzureSigImageVersionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSigImageVersionListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSigImageVersionListSettingsExtensions
+    {
+        #region GalleryImageDefinition
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetGalleryImageDefinition(this AzureSigImageVersionListSettings toolSettings, string galleryImageDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = galleryImageDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetGalleryImageDefinition(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryName
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetGalleryName(this AzureSigImageVersionListSettings toolSettings, string galleryName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = galleryName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetGalleryName(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetResourceGroup(this AzureSigImageVersionListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetResourceGroup(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetSubscription(this AzureSigImageVersionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetSubscription(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetDebug(this AzureSigImageVersionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetDebug(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetHelp(this AzureSigImageVersionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetHelp(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetOutput(this AzureSigImageVersionListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetOutput(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetQuery(this AzureSigImageVersionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetQuery(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings SetVerbose(this AzureSigImageVersionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionListSettings ResetVerbose(this AzureSigImageVersionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSigImageVersionShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSigImageVersionShowSettingsExtensions
+    {
+        #region GalleryImageDefinition
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetGalleryImageDefinition(this AzureSigImageVersionShowSettings toolSettings, string galleryImageDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = galleryImageDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetGalleryImageDefinition(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetGalleryImageVersion(this AzureSigImageVersionShowSettings toolSettings, string galleryImageVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = galleryImageVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetGalleryImageVersion(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryName
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetGalleryName(this AzureSigImageVersionShowSettings toolSettings, string galleryName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = galleryName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetGalleryName(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetResourceGroup(this AzureSigImageVersionShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetResourceGroup(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation, e.g. 'ReplicationStatus'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetExpand(this AzureSigImageVersionShowSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation, e.g. 'ReplicationStatus'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetExpand(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetSubscription(this AzureSigImageVersionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetSubscription(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetDebug(this AzureSigImageVersionShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetDebug(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetHelp(this AzureSigImageVersionShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetHelp(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetOutput(this AzureSigImageVersionShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetOutput(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetQuery(this AzureSigImageVersionShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetQuery(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings SetVerbose(this AzureSigImageVersionShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionShowSettings ResetVerbose(this AzureSigImageVersionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSigImageVersionUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSigImageVersionUpdateSettingsExtensions
+    {
+        #region GalleryImageDefinition
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetGalleryImageDefinition(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = galleryImageDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetGalleryImageDefinition(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetGalleryImageVersion(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = galleryImageVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetGalleryImageVersion(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryName
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetGalleryName(this AzureSigImageVersionUpdateSettings toolSettings, string galleryName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = galleryName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetGalleryName(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetResourceGroup(this AzureSigImageVersionUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetResourceGroup(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetNoWait(this AzureSigImageVersionUpdateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings EnableNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings DisableNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ToggleNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetRegions
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, params string[] targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal = targetRegions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, IEnumerable<string> targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal = targetRegions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings AddTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, params string[] targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings AddTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, IEnumerable<string> targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ClearTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetRegionsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings RemoveTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, params string[] targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(targetRegions);
+            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings RemoveTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, IEnumerable<string> targetRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(targetRegions);
+            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetAdd(this AzureSigImageVersionUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetAdd(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetForceString(this AzureSigImageVersionUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetForceString(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetRemove(this AzureSigImageVersionUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetRemove(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetSet(this AzureSigImageVersionUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetSet(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetSubscription(this AzureSigImageVersionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetSubscription(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetDebug(this AzureSigImageVersionUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetDebug(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetHelp(this AzureSigImageVersionUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetHelp(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetOutput(this AzureSigImageVersionUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetOutput(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetQuery(this AzureSigImageVersionUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetQuery(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings SetVerbose(this AzureSigImageVersionUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionUpdateSettings ResetVerbose(this AzureSigImageVersionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSigImageVersionWaitSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSigImageVersionWaitSettingsExtensions
+    {
+        #region GalleryImageDefinition
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetGalleryImageDefinition(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = galleryImageDefinition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetGalleryImageDefinition(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryImageVersion
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetGalleryImageVersion(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageVersion)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = galleryImageVersion;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersion"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetGalleryImageVersion(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryName
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetGalleryName(this AzureSigImageVersionWaitSettings toolSettings, string galleryName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = galleryName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetGalleryName(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetResourceGroup(this AzureSigImageVersionWaitSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetResourceGroup(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetExpand(this AzureSigImageVersionWaitSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetExpand(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Created
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Created"/>.</em></p><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetCreated(this AzureSigImageVersionWaitSettings toolSettings, string created)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Created = created;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Created"/>.</em></p><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetCreated(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Created = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Custom
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetCustom(this AzureSigImageVersionWaitSettings toolSettings, string custom)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = custom;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetCustom(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Deleted
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Deleted"/>.</em></p><p>Wait until deleted.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetDeleted(this AzureSigImageVersionWaitSettings toolSettings, string deleted)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Deleted = deleted;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Deleted"/>.</em></p><p>Wait until deleted.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetDeleted(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Deleted = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Exists
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetExists(this AzureSigImageVersionWaitSettings toolSettings, string exists)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = exists;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetExists(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Interval
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetInterval(this AzureSigImageVersionWaitSettings toolSettings, string interval)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = interval;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetInterval(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetTimeout(this AzureSigImageVersionWaitSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetTimeout(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Updated
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Updated"/>.</em></p><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetUpdated(this AzureSigImageVersionWaitSettings toolSettings, string updated)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Updated = updated;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Updated"/>.</em></p><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetUpdated(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Updated = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetSubscription(this AzureSigImageVersionWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetSubscription(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetDebug(this AzureSigImageVersionWaitSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetDebug(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetHelp(this AzureSigImageVersionWaitSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetHelp(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetOutput(this AzureSigImageVersionWaitSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetOutput(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetQuery(this AzureSigImageVersionWaitSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetQuery(this AzureSigImageVersionWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings SetVerbose(this AzureSigImageVersionWaitSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureSigImageVersionWaitSettings ResetVerbose(this AzureSigImageVersionWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -1958,7 +3848,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureSigImageDefinitionCreateSettings SetLocation(this AzureSigImageDefinitionCreateSettings toolSettings, string location)
         {
@@ -1966,7 +3856,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureSigImageDefinitionCreateSettings ResetLocation(this AzureSigImageDefinitionCreateSettings toolSettings)
         {
@@ -2155,6 +4045,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionCreateSettings SetSubscription(this AzureSigImageDefinitionCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionCreateSettings ResetSubscription(this AzureSigImageDefinitionCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2289,6 +4197,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings SetIds(this AzureSigImageDefinitionDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings SetIds(this AzureSigImageDefinitionDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings AddIds(this AzureSigImageDefinitionDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings AddIds(this AzureSigImageDefinitionDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings ClearIds(this AzureSigImageDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings RemoveIds(this AzureSigImageDefinitionDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings RemoveIds(this AzureSigImageDefinitionDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -2304,6 +4272,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings SetSubscription(this AzureSigImageDefinitionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionDeleteSettings ResetSubscription(this AzureSigImageDefinitionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2441,6 +4427,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionListSettings SetSubscription(this AzureSigImageDefinitionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionListSettings ResetSubscription(this AzureSigImageDefinitionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2575,6 +4579,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings SetIds(this AzureSigImageDefinitionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings SetIds(this AzureSigImageDefinitionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings AddIds(this AzureSigImageDefinitionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings AddIds(this AzureSigImageDefinitionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings ClearIds(this AzureSigImageDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings RemoveIds(this AzureSigImageDefinitionShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureSigImageDefinitionShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings RemoveIds(this AzureSigImageDefinitionShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region ResourceGroup
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
@@ -2590,6 +4654,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings SetSubscription(this AzureSigImageDefinitionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionShowSettings ResetSubscription(this AzureSigImageDefinitionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2817,6 +4899,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionUpdateSettings SetSubscription(this AzureSigImageDefinitionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureSigImageDefinitionUpdateSettings ResetSubscription(this AzureSigImageDefinitionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureSigImageDefinitionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2901,1578 +5001,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureSigImageDefinitionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureSigImageDefinitionUpdateSettings ResetVerbose(this AzureSigImageDefinitionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSigImageVersionCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSigImageVersionCreateSettingsExtensions
-    {
-        #region GalleryImageDefinition
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetGalleryImageDefinition(this AzureSigImageVersionCreateSettings toolSettings, string galleryImageDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = galleryImageDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetGalleryImageDefinition(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryImageVersion
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.GalleryImageVersion"/>.</em></p><p>Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetGalleryImageVersion(this AzureSigImageVersionCreateSettings toolSettings, string galleryImageVersion)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersion = galleryImageVersion;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.GalleryImageVersion"/>.</em></p><p>Gallery image version in semantic version pattern. The allowed characters are digit and period. Digits must be within the range of a 32-bit integer, e.g. &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetGalleryImageVersion(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersion = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetGalleryName(this AzureSigImageVersionCreateSettings toolSettings, string galleryName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = galleryName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetGalleryName(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ManagedImage
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ManagedImage"/>.</em></p><p>Image name(if in the same resource group) or resource id.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetManagedImage(this AzureSigImageVersionCreateSettings toolSettings, string managedImage)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ManagedImage = managedImage;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ManagedImage"/>.</em></p><p>Image name(if in the same resource group) or resource id.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetManagedImage(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ManagedImage = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetResourceGroup(this AzureSigImageVersionCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetResourceGroup(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndOfLifeDate
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.EndOfLifeDate"/>.</em></p><p>The end of life date, e.g. '2020-12-31'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetEndOfLifeDate(this AzureSigImageVersionCreateSettings toolSettings, string endOfLifeDate)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndOfLifeDate = endOfLifeDate;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.EndOfLifeDate"/>.</em></p><p>The end of life date, e.g. '2020-12-31'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetEndOfLifeDate(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndOfLifeDate = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ExcludeFromLatest
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings, bool? excludeFromLatest)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExcludeFromLatest = excludeFromLatest;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExcludeFromLatest = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings EnableExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExcludeFromLatest = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings DisableExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExcludeFromLatest = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureSigImageVersionCreateSettings.ExcludeFromLatest"/>.</em></p><p>The flag means that if it is set to true, people deploying VMs with version omitted will not use this version.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ToggleExcludeFromLatest(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExcludeFromLatest = !toolSettings.ExcludeFromLatest;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetLocation(this AzureSigImageVersionCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetLocation(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetNoWait(this AzureSigImageVersionCreateSettings toolSettings, bool? noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetNoWait(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings EnableNoWait(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings DisableNoWait(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureSigImageVersionCreateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ToggleNoWait(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region ReplicaCount
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.ReplicaCount"/>.</em></p><p>Default replicate count. For region specific, use --target-regions.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetReplicaCount(this AzureSigImageVersionCreateSettings toolSettings, string replicaCount)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReplicaCount = replicaCount;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.ReplicaCount"/>.</em></p><p>Default replicate count. For region specific, use --target-regions.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetReplicaCount(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReplicaCount = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetTags(this AzureSigImageVersionCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetTags(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetRegions
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, params string[] targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal = targetRegions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, IEnumerable<string> targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal = targetRegions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings AddTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, params string[] targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings AddTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, IEnumerable<string> targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ClearTargetRegions(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings RemoveTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, params string[] targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(targetRegions);
-            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionCreateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings RemoveTargetRegions(this AzureSigImageVersionCreateSettings toolSettings, IEnumerable<string> targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(targetRegions);
-            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetDebug(this AzureSigImageVersionCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetDebug(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetHelp(this AzureSigImageVersionCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetHelp(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetOutput(this AzureSigImageVersionCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetOutput(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetQuery(this AzureSigImageVersionCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetQuery(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings SetVerbose(this AzureSigImageVersionCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionCreateSettings ResetVerbose(this AzureSigImageVersionCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSigImageVersionDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSigImageVersionDeleteSettingsExtensions
-    {
-        #region GalleryImageDefinition
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetGalleryImageDefinition(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = galleryImageDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetGalleryImageDefinition(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetGalleryImageVersionName(this AzureSigImageVersionDeleteSettings toolSettings, string galleryImageVersionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be deleted.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetGalleryImageVersionName(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetGalleryName(this AzureSigImageVersionDeleteSettings toolSettings, string galleryName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = galleryName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetGalleryName(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetResourceGroup(this AzureSigImageVersionDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetResourceGroup(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetDebug(this AzureSigImageVersionDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetDebug(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetHelp(this AzureSigImageVersionDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetHelp(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetOutput(this AzureSigImageVersionDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetOutput(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetQuery(this AzureSigImageVersionDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetQuery(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings SetVerbose(this AzureSigImageVersionDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionDeleteSettings ResetVerbose(this AzureSigImageVersionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSigImageVersionListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSigImageVersionListSettingsExtensions
-    {
-        #region GalleryImageDefinition
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetGalleryImageDefinition(this AzureSigImageVersionListSettings toolSettings, string galleryImageDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = galleryImageDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetGalleryImageDefinition(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetGalleryName(this AzureSigImageVersionListSettings toolSettings, string galleryName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = galleryName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetGalleryName(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetResourceGroup(this AzureSigImageVersionListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetResourceGroup(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetDebug(this AzureSigImageVersionListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetDebug(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetHelp(this AzureSigImageVersionListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetHelp(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetOutput(this AzureSigImageVersionListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetOutput(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetQuery(this AzureSigImageVersionListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetQuery(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings SetVerbose(this AzureSigImageVersionListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionListSettings ResetVerbose(this AzureSigImageVersionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSigImageVersionShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSigImageVersionShowSettingsExtensions
-    {
-        #region GalleryImageDefinition
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetGalleryImageDefinition(this AzureSigImageVersionShowSettings toolSettings, string galleryImageDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = galleryImageDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetGalleryImageDefinition(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetGalleryImageVersionName(this AzureSigImageVersionShowSettings toolSettings, string galleryImageVersionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetGalleryImageVersionName(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetGalleryName(this AzureSigImageVersionShowSettings toolSettings, string galleryName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = galleryName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetGalleryName(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetResourceGroup(this AzureSigImageVersionShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetResourceGroup(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation, e.g. 'ReplicationStatus'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetExpand(this AzureSigImageVersionShowSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation, e.g. 'ReplicationStatus'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetExpand(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetDebug(this AzureSigImageVersionShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetDebug(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetHelp(this AzureSigImageVersionShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetHelp(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetOutput(this AzureSigImageVersionShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetOutput(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetQuery(this AzureSigImageVersionShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetQuery(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings SetVerbose(this AzureSigImageVersionShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionShowSettings ResetVerbose(this AzureSigImageVersionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSigImageVersionUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSigImageVersionUpdateSettingsExtensions
-    {
-        #region GalleryImageDefinition
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetGalleryImageDefinition(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = galleryImageDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetGalleryImageDefinition(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetGalleryImageVersionName(this AzureSigImageVersionUpdateSettings toolSettings, string galleryImageVersionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be created. Needs to follow semantic version name pattern: The allowed characters are digit and period. Digits must be within the range of a 32-bit integer. Format: &lt;MajorVersion&gt;.&lt;MinorVersion&gt;.&lt;Patch&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetGalleryImageVersionName(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetGalleryName(this AzureSigImageVersionUpdateSettings toolSettings, string galleryName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = galleryName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetGalleryName(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetResourceGroup(this AzureSigImageVersionUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetResourceGroup(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetNoWait(this AzureSigImageVersionUpdateSettings toolSettings, bool? noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings EnableNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings DisableNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureSigImageVersionUpdateSettings.NoWait"/>.</em></p><p>Do not wait for the long-running operation to finish.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ToggleNoWait(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetRegions
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, params string[] targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal = targetRegions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/> to a new list.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, IEnumerable<string> targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal = targetRegions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings AddTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, params string[] targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings AddTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, IEnumerable<string> targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal.AddRange(targetRegions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ClearTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetRegionsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings RemoveTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, params string[] targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(targetRegions);
-            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureSigImageVersionUpdateSettings.TargetRegions"/>.</em></p><p>Space separated region list, use "&lt;region&gt;=&lt;replicate count&gt;" to apply region specific replicate count.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings RemoveTargetRegions(this AzureSigImageVersionUpdateSettings toolSettings, IEnumerable<string> targetRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(targetRegions);
-            toolSettings.TargetRegionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetAdd(this AzureSigImageVersionUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetAdd(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetForceString(this AzureSigImageVersionUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetForceString(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetRemove(this AzureSigImageVersionUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetRemove(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetSet(this AzureSigImageVersionUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetSet(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetDebug(this AzureSigImageVersionUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetDebug(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetHelp(this AzureSigImageVersionUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetHelp(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetOutput(this AzureSigImageVersionUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetOutput(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetQuery(this AzureSigImageVersionUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetQuery(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings SetVerbose(this AzureSigImageVersionUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionUpdateSettings ResetVerbose(this AzureSigImageVersionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSigImageVersionWaitSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSigTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSigImageVersionWaitSettingsExtensions
-    {
-        #region GalleryImageDefinition
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetGalleryImageDefinition(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = galleryImageDefinition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageDefinition"/>.</em></p><p>Gallery image definition.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetGalleryImageDefinition(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryImageVersionName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetGalleryImageVersionName(this AzureSigImageVersionWaitSettings toolSettings, string galleryImageVersionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = galleryImageVersionName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryImageVersionName"/>.</em></p><p>The name of the gallery Image Version to be retrieved.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetGalleryImageVersionName(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageVersionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryName
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetGalleryName(this AzureSigImageVersionWaitSettings toolSettings, string galleryName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = galleryName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.GalleryName"/>.</em></p><p>Gallery name.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetGalleryName(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetResourceGroup(this AzureSigImageVersionWaitSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetResourceGroup(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetExpand(this AzureSigImageVersionWaitSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Expand"/>.</em></p><p>The expand expression to apply on the operation.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetExpand(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Created
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Created"/>.</em></p><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetCreated(this AzureSigImageVersionWaitSettings toolSettings, string created)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Created = created;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Created"/>.</em></p><p>Wait until created with 'provisioningState' at 'Succeeded'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetCreated(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Created = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Custom
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetCustom(this AzureSigImageVersionWaitSettings toolSettings, string custom)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Custom = custom;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Custom"/>.</em></p><p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetCustom(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Custom = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Deleted
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Deleted"/>.</em></p><p>Wait until deleted.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetDeleted(this AzureSigImageVersionWaitSettings toolSettings, string deleted)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Deleted = deleted;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Deleted"/>.</em></p><p>Wait until deleted.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetDeleted(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Deleted = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Exists
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetExists(this AzureSigImageVersionWaitSettings toolSettings, string exists)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exists = exists;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Exists"/>.</em></p><p>Wait until the resource exists.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetExists(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exists = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Interval
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetInterval(this AzureSigImageVersionWaitSettings toolSettings, string interval)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = interval;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Interval"/>.</em></p><p>Polling interval in seconds.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetInterval(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Timeout
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetTimeout(this AzureSigImageVersionWaitSettings toolSettings, string timeout)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = timeout;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Timeout"/>.</em></p><p>Maximum wait in seconds.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetTimeout(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Updated
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Updated"/>.</em></p><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetUpdated(this AzureSigImageVersionWaitSettings toolSettings, string updated)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Updated = updated;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Updated"/>.</em></p><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetUpdated(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Updated = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetDebug(this AzureSigImageVersionWaitSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetDebug(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetHelp(this AzureSigImageVersionWaitSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetHelp(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetOutput(this AzureSigImageVersionWaitSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetOutput(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetQuery(this AzureSigImageVersionWaitSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetQuery(this AzureSigImageVersionWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSigImageVersionWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings SetVerbose(this AzureSigImageVersionWaitSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureSigImageVersionWaitSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureSigImageVersionWaitSettings ResetVerbose(this AzureSigImageVersionWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -124,6 +124,14 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrConfig(Configure<AzureAcrConfigSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrConfigSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAcrBuildTaskCreate(Configure<AzureAcrBuildTaskCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcrBuildTaskCreateSettings());
@@ -204,102 +212,6 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrConfig(Configure<AzureAcrConfigSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrConfigSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrCredentialRenew(Configure<AzureAcrCredentialRenewSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialRenewSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrCredentialShow(Configure<AzureAcrCredentialShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrHelmDelete(Configure<AzureAcrHelmDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrHelmList(Configure<AzureAcrHelmListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrHelmPush(Configure<AzureAcrHelmPushSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmPushSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrHelmShow(Configure<AzureAcrHelmShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrReplicationCreate(Configure<AzureAcrReplicationCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrReplicationDelete(Configure<AzureAcrReplicationDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrReplicationList(Configure<AzureAcrReplicationListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrReplicationShow(Configure<AzureAcrReplicationShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrReplicationUpdate(Configure<AzureAcrReplicationUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureAcrRepositoryDelete(Configure<AzureAcrRepositoryDeleteSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcrRepositoryDeleteSettings());
@@ -351,6 +263,70 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureAcrRepositoryUpdate(Configure<AzureAcrRepositoryUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureAcrRepositoryUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookCreate(Configure<AzureAcrWebhookCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookDelete(Configure<AzureAcrWebhookDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookGetConfig(Configure<AzureAcrWebhookGetConfigSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookGetConfigSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookList(Configure<AzureAcrWebhookListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookListEvents(Configure<AzureAcrWebhookListEventsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookListEventsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookPing(Configure<AzureAcrWebhookPingSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookPingSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookShow(Configure<AzureAcrWebhookShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrWebhookUpdate(Configure<AzureAcrWebhookUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -444,65 +420,89 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookCreate(Configure<AzureAcrWebhookCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrCredentialRenew(Configure<AzureAcrCredentialRenewSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialRenewSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookDelete(Configure<AzureAcrWebhookDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrCredentialShow(Configure<AzureAcrCredentialShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrCredentialShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookGetConfig(Configure<AzureAcrWebhookGetConfigSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrHelmDelete(Configure<AzureAcrHelmDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookGetConfigSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookList(Configure<AzureAcrWebhookListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrHelmList(Configure<AzureAcrHelmListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookListEvents(Configure<AzureAcrWebhookListEventsSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrHelmPush(Configure<AzureAcrHelmPushSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookListEventsSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmPushSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookPing(Configure<AzureAcrWebhookPingSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrHelmShow(Configure<AzureAcrHelmShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookPingSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrHelmShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookShow(Configure<AzureAcrWebhookShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrReplicationCreate(Configure<AzureAcrReplicationCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureAcrWebhookUpdate(Configure<AzureAcrWebhookUpdateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureAcrReplicationDelete(Configure<AzureAcrReplicationDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureAcrWebhookUpdateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrReplicationList(Configure<AzureAcrReplicationListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrReplicationShow(Configure<AzureAcrReplicationShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage private registries with Azure Container Registries.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureAcrReplicationUpdate(Configure<AzureAcrReplicationUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureAcrReplicationUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -563,6 +563,8 @@ namespace Nuke.Azure
         public virtual string SecretBuildArg { get; internal set; }
         /// <summary><p>The timeout in seconds.</p></summary>
         public virtual string Timeout { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -588,6 +590,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
               .Add("--timeout {value}", Timeout)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -608,6 +611,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
         /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -623,6 +628,7 @@ namespace Nuke.Azure
             arguments
               .Add("acr check-name")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -649,10 +655,12 @@ namespace Nuke.Azure
         public virtual AcrSku Sku { get; internal set; }
         /// <summary><p>Indicates whether the admin user is enabled.</p></summary>
         public virtual bool? AdminEnabled { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Provide the name of an existing storage account if you're recreating a container registry over a previous registry created storage account. Only applicable to Classic SKU.</p></summary>
         public virtual string StorageAccountName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -673,6 +681,7 @@ namespace Nuke.Azure
               .Add("--admin-enabled", AdminEnabled)
               .Add("--location {value}", Location)
               .Add("--storage-account-name {value}", StorageAccountName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -695,6 +704,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -711,6 +722,7 @@ namespace Nuke.Azure
               .Add("acr delete")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -737,12 +749,18 @@ namespace Nuke.Azure
         public virtual string Force { get; internal set; }
         /// <summary><p>The name of the image. May include a tag in the format 'name:tag'.</p></summary>
         public virtual string Image { get; internal set; }
+        /// <summary><p>The password of source container registry.</p></summary>
+        public virtual string Password { get; internal set; }
         /// <summary><p>The source container registry can be name, login server or resource ID of the source registry.</p></summary>
         public virtual string Registry { get; internal set; }
         /// <summary><p>The repository name to do a manifest-only copy for images.</p></summary>
         public virtual string Repository { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The username of source container registry.</p></summary>
+        public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -761,9 +779,12 @@ namespace Nuke.Azure
               .Add("--source {value}", Source)
               .Add("--force {value}", Force)
               .Add("--image {value}", Image)
+              .Add("--password {value}", Password, secret: true)
               .Add("--registry {value}", Registry)
               .Add("--repository {value}", Repository)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -784,6 +805,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -799,6 +822,7 @@ namespace Nuke.Azure
             arguments
               .Add("acr list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -825,6 +849,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The username used to log into a container registry.</p></summary>
         public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -843,6 +869,7 @@ namespace Nuke.Azure
               .Add("--password {value}", Password, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -877,10 +904,14 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Value in 'name[=value]' format.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Secret value in 'name[=value]' format.</p></summary>
+        public virtual string SetSecret { get; internal set; }
         /// <summary><p>The timeout in seconds.</p></summary>
         public virtual string Timeout { get; internal set; }
         /// <summary><p>The task values file path relative to the source context.</p></summary>
         public virtual string Values { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -903,8 +934,10 @@ namespace Nuke.Azure
               .Add("--os {value}", Os)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--set {value}", Set)
+              .Add("--set-secret {value}", SetSecret, secret: true)
               .Add("--timeout {value}", Timeout)
               .Add("--values {value}", Values)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -927,6 +960,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -943,6 +978,7 @@ namespace Nuke.Azure
               .Add("acr show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -965,6 +1001,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -981,6 +1019,7 @@ namespace Nuke.Azure
               .Add("acr show-usage")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1019,6 +1058,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1043,6 +1084,39 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrConfigSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrConfigSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr config")
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1099,6 +1173,8 @@ namespace Nuke.Azure
         public virtual AcrBuildTaskStatus Status { get; internal set; }
         /// <summary><p>The timeout in seconds.</p></summary>
         public virtual string Timeout { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1132,6 +1208,7 @@ namespace Nuke.Azure
               .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
               .Add("--status {value}", Status)
               .Add("--timeout {value}", Timeout)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1156,6 +1233,8 @@ namespace Nuke.Azure
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1173,6 +1252,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1195,6 +1275,8 @@ namespace Nuke.Azure
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1211,6 +1293,7 @@ namespace Nuke.Azure
               .Add("acr build-task list")
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1241,6 +1324,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Limit the number of latest builds in the results.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1261,6 +1346,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1291,6 +1377,8 @@ namespace Nuke.Azure
         public virtual bool? NoFormat { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1311,6 +1399,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--no-format", NoFormat)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1339,6 +1428,8 @@ namespace Nuke.Azure
         public virtual bool? NoLogs { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1358,6 +1449,7 @@ namespace Nuke.Azure
               .Add("--no-format", NoFormat)
               .Add("--no-logs", NoLogs)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1384,6 +1476,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Indicates whether the secure properties of a build task should be returned.</p></summary>
         public virtual string WithSecureProperties { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1402,6 +1496,7 @@ namespace Nuke.Azure
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--with-secure-properties {value}", WithSecureProperties)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1426,6 +1521,8 @@ namespace Nuke.Azure
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1443,6 +1540,7 @@ namespace Nuke.Azure
               .Add("--build-id {value}", BuildId)
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1499,6 +1597,8 @@ namespace Nuke.Azure
         public virtual AcrBuildTaskStatus Status { get; internal set; }
         /// <summary><p>The timeout in seconds.</p></summary>
         public virtual string Timeout { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1532,6 +1632,7 @@ namespace Nuke.Azure
               .Add("--secret-build-arg {value}", SecretBuildArg, secret: true)
               .Add("--status {value}", Status)
               .Add("--timeout {value}", Timeout)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1558,6 +1659,8 @@ namespace Nuke.Azure
         public virtual bool? NoArchive { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1576,519 +1679,7 @@ namespace Nuke.Azure
               .Add("--registry {value}", Registry)
               .Add("--no-archive", NoArchive)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrConfigSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrConfigSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr config")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrCredentialRenewSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrCredentialRenewSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of password to regenerate.</p></summary>
-        public virtual AcrCredentialRenewPasswordName PasswordName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr credential renew")
-              .Add("--name {value}", Name)
-              .Add("--password-name {value}", PasswordName, secret: true)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrCredentialShowSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrCredentialShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr credential show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrHelmDeleteSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrHelmDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The password used to log into a container registry.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>Only delete the provenance file.</p></summary>
-        public virtual string Prov { get; internal set; }
-        /// <summary><p>The username used to log into a container registry.</p></summary>
-        public virtual string Username { get; internal set; }
-        /// <summary><p>The helm chart version.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr helm delete")
-              .Add("--name {value}", Name)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--prov {value}", Prov)
-              .Add("--username {value}", Username)
-              .Add("--version {value}", Version)
-              .Add("--yes {value}", Yes)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrHelmListSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrHelmListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The password used to log into a container registry.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>The username used to log into a container registry.</p></summary>
-        public virtual string Username { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr helm list")
-              .Add("--name {value}", Name)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--username {value}", Username)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrHelmPushSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrHelmPushSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Overwrite the existing chart package.</p></summary>
-        public virtual string Force { get; internal set; }
-        /// <summary><p>The password used to log into a container registry.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>The username used to log into a container registry.</p></summary>
-        public virtual string Username { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr helm push")
-              .Add("--name {value}", Name)
-              .Add("--force {value}", Force)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--username {value}", Username)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrHelmShowSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrHelmShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The password used to log into a container registry.</p></summary>
-        public virtual string Password { get; internal set; }
-        /// <summary><p>The username used to log into a container registry.</p></summary>
-        public virtual string Username { get; internal set; }
-        /// <summary><p>The helm chart version.</p></summary>
-        public virtual string Version { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr helm show")
-              .Add("--name {value}", Name)
-              .Add("--password {value}", Password, secret: true)
-              .Add("--username {value}", Username)
-              .Add("--version {value}", Version)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrReplicationCreateSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrReplicationCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>The name of the replication. Default to the location name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr replication create")
-              .Add("--location {value}", Location)
-              .Add("--registry {value}", Registry)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrReplicationDeleteSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrReplicationDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the replication.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr replication delete")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrReplicationListSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrReplicationListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr replication list")
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrReplicationShowSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrReplicationShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the replication.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr replication show")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrReplicationUpdateSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrReplicationUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the replication.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr replication update")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2121,6 +1712,8 @@ namespace Nuke.Azure
         public virtual string Username { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2142,6 +1735,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2170,6 +1764,8 @@ namespace Nuke.Azure
         public virtual int? Top { get; internal set; }
         /// <summary><p>The username used to log into a container registry.</p></summary>
         public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2189,6 +1785,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--top {value}", Top)
               .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2219,6 +1816,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The username used to log into a container registry.</p></summary>
         public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2239,6 +1838,7 @@ namespace Nuke.Azure
               .Add("--repository {value}", Repository)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2273,6 +1873,8 @@ namespace Nuke.Azure
         public virtual int? Top { get; internal set; }
         /// <summary><p>The username used to log into a container registry.</p></summary>
         public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2295,6 +1897,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--top {value}", Top)
               .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2329,6 +1932,8 @@ namespace Nuke.Azure
         public virtual int? Top { get; internal set; }
         /// <summary><p>The username used to log into a container registry.</p></summary>
         public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2351,6 +1956,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--top {value}", Top)
               .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2379,6 +1985,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The username used to log into a container registry.</p></summary>
         public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2398,6 +2006,7 @@ namespace Nuke.Azure
               .Add("--password {value}", Password, secret: true)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2436,6 +2045,8 @@ namespace Nuke.Azure
         public virtual string Username { get; internal set; }
         /// <summary><p>Indicates whether write or delete operation is allowed.</p></summary>
         public virtual bool? WriteEnabled { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2460,6 +2071,411 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--username {value}", Username)
               .Add("--write-enabled", WriteEnabled)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookCreateSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        public virtual IReadOnlyList<AcrWebhookActions> Actions => ActionsInternal.AsReadOnly();
+        internal List<AcrWebhookActions> ActionsInternal { get; set; } = new List<AcrWebhookActions>();
+        /// <summary><p>The name of the webhook.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>The service URI for the webhook to post notifications.</p></summary>
+        public virtual string Uri { get; internal set; }
+        /// <summary><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        public virtual IReadOnlyList<string> Headers => HeadersInternal.AsReadOnly();
+        internal List<string> HeadersInternal { get; set; } = new List<string>();
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Indicates whether the webhook is enabled.</p></summary>
+        public virtual AcrBuildTaskStatus Status { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook create")
+              .Add("--actions {value}", Actions, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--uri {value}", Uri)
+              .Add("--headers {value}", Headers, separator: ' ')
+              .Add("--location {value}", Location)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--scope {value}", Scope)
+              .Add("--status {value}", Status)
+              .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the webhook.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook delete")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookGetConfigSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookGetConfigSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the webhook.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook get-config")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookListSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook list")
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookListEventsSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookListEventsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the webhook.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook list-events")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookPingSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookPingSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the webhook.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook ping")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookShowSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the webhook.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook show")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrWebhookUpdateSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrWebhookUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the webhook.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        public virtual IReadOnlyList<AcrWebhookActions> Actions => ActionsInternal.AsReadOnly();
+        internal List<AcrWebhookActions> ActionsInternal { get; set; } = new List<AcrWebhookActions>();
+        /// <summary><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        public virtual IReadOnlyList<string> Headers => HeadersInternal.AsReadOnly();
+        internal List<string> HeadersInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>Indicates whether the webhook is enabled.</p></summary>
+        public virtual AcrBuildTaskStatus Status { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>The service URI for the webhook to post notifications.</p></summary>
+        public virtual string Uri { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr webhook update")
+              .Add("--name {value}", Name)
+              .Add("--registry {value}", Registry)
+              .Add("--actions {value}", Actions, separator: ' ')
+              .Add("--headers {value}", Headers, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--scope {value}", Scope)
+              .Add("--status {value}", Status)
+              .Add("--tags {value}", Tags)
+              .Add("--uri {value}", Uri)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2484,6 +2500,8 @@ namespace Nuke.Azure
         public virtual string RunId { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2501,6 +2519,7 @@ namespace Nuke.Azure
               .Add("--registry {value}", Registry)
               .Add("--run-id {value}", RunId)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2569,6 +2588,8 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>The task values/parameters file path relative to the source context.</p></summary>
         public virtual string Values { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2608,6 +2629,7 @@ namespace Nuke.Azure
               .Add("--status {value}", Status)
               .Add("--timeout {value}", Timeout)
               .Add("--values {value}", Values)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2632,6 +2654,8 @@ namespace Nuke.Azure
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2649,6 +2673,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2671,6 +2696,8 @@ namespace Nuke.Azure
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2687,6 +2714,7 @@ namespace Nuke.Azure
               .Add("acr task list")
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2717,6 +2745,8 @@ namespace Nuke.Azure
         public virtual AcrBuildTaskListBuildsBuildStatus RunStatus { get; internal set; }
         /// <summary><p>Limit the number of latest runs in the results.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2737,6 +2767,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--run-status {value}", RunStatus)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2765,6 +2796,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The unique run identifier.</p></summary>
         public virtual string RunId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2784,6 +2817,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--run-id {value}", RunId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2816,6 +2850,8 @@ namespace Nuke.Azure
         public virtual string Set { get; internal set; }
         /// <summary><p>Secret task value in 'name[=value]' format.</p></summary>
         public virtual string SetSecret { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2837,6 +2873,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--set {value}", Set)
               .Add("--set-secret {value}", SetSecret, secret: true)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2863,6 +2900,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Indicates whether the secure properties of a task should be returned.</p></summary>
         public virtual string WithSecureProperties { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2881,6 +2920,7 @@ namespace Nuke.Azure
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--with-secure-properties {value}", WithSecureProperties)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2905,6 +2945,8 @@ namespace Nuke.Azure
         public virtual string RunId { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2922,6 +2964,7 @@ namespace Nuke.Azure
               .Add("--registry {value}", Registry)
               .Add("--run-id {value}", RunId)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2986,6 +3029,8 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>The task values/parameters file path relative to the source context.</p></summary>
         public virtual string Values { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3023,6 +3068,7 @@ namespace Nuke.Azure
               .Add("--status {value}", Status)
               .Add("--timeout {value}", Timeout)
               .Add("--values {value}", Values)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3049,6 +3095,8 @@ namespace Nuke.Azure
         public virtual bool? NoArchive { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3067,6 +3115,7 @@ namespace Nuke.Azure
               .Add("--run-id {value}", RunId)
               .Add("--no-archive", NoArchive)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3076,37 +3125,303 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAcrWebhookCreateSettings
+    #region AzureAcrCredentialRenewSettings
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureAcrWebhookCreateSettings : ToolSettings
+    public partial class AzureAcrCredentialRenewSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureAcr executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        public virtual IReadOnlyList<AcrWebhookActions> Actions => ActionsInternal.AsReadOnly();
-        internal List<AcrWebhookActions> ActionsInternal { get; set; } = new List<AcrWebhookActions>();
-        /// <summary><p>The name of the webhook.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>The service URI for the webhook to post notifications.</p></summary>
-        public virtual string Uri { get; internal set; }
-        /// <summary><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        public virtual IReadOnlyList<string> Headers => HeadersInternal.AsReadOnly();
-        internal List<string> HeadersInternal { get; set; } = new List<string>();
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of password to regenerate.</p></summary>
+        public virtual AcrCredentialRenewPasswordName PasswordName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr credential renew")
+              .Add("--name {value}", Name)
+              .Add("--password-name {value}", PasswordName, secret: true)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrCredentialShowSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrCredentialShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr credential show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrHelmDeleteSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrHelmDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The password used to log into a container registry.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>Only delete the provenance file.</p></summary>
+        public virtual string Prov { get; internal set; }
+        /// <summary><p>The username used to log into a container registry.</p></summary>
+        public virtual string Username { get; internal set; }
+        /// <summary><p>The helm chart version.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr helm delete")
+              .Add("--name {value}", Name)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--prov {value}", Prov)
+              .Add("--username {value}", Username)
+              .Add("--version {value}", Version)
+              .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrHelmListSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrHelmListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The password used to log into a container registry.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>The username used to log into a container registry.</p></summary>
+        public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr helm list")
+              .Add("--name {value}", Name)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrHelmPushSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrHelmPushSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Overwrite the existing chart package.</p></summary>
+        public virtual string Force { get; internal set; }
+        /// <summary><p>The password used to log into a container registry.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>The username used to log into a container registry.</p></summary>
+        public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr helm push")
+              .Add("--name {value}", Name)
+              .Add("--force {value}", Force)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrHelmShowSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrHelmShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The password used to log into a container registry.</p></summary>
+        public virtual string Password { get; internal set; }
+        /// <summary><p>The username used to log into a container registry.</p></summary>
+        public virtual string Username { get; internal set; }
+        /// <summary><p>The helm chart version.</p></summary>
+        public virtual string Version { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr helm show")
+              .Add("--name {value}", Name)
+              .Add("--password {value}", Password, secret: true)
+              .Add("--username {value}", Username)
+              .Add("--version {value}", Version)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrReplicationCreateSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrReplicationCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>The name of the replication. Default to the location name.</p></summary>
+        public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Indicates whether the webhook is enabled.</p></summary>
-        public virtual AcrBuildTaskStatus Status { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3120,17 +3435,13 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("acr webhook create")
-              .Add("--actions {value}", Actions, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--uri {value}", Uri)
-              .Add("--headers {value}", Headers, separator: ' ')
+              .Add("acr replication create")
               .Add("--location {value}", Location)
+              .Add("--registry {value}", Registry)
+              .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--scope {value}", Scope)
-              .Add("--status {value}", Status)
               .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3140,21 +3451,23 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAcrWebhookDeleteSettings
+    #region AzureAcrReplicationDeleteSettings
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureAcrWebhookDeleteSettings : ToolSettings
+    public partial class AzureAcrReplicationDeleteSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureAcr executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the webhook.</p></summary>
+        /// <summary><p>The name of the replication.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3168,10 +3481,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("acr webhook delete")
+              .Add("acr replication delete")
               .Add("--name {value}", Name)
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3181,21 +3495,21 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAcrWebhookGetConfigSettings
+    #region AzureAcrReplicationListSettings
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureAcrWebhookGetConfigSettings : ToolSettings
+    public partial class AzureAcrReplicationListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureAcr executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the webhook.</p></summary>
-        public virtual string Name { get; internal set; }
         /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3209,10 +3523,54 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("acr webhook get-config")
+              .Add("acr replication list")
+              .Add("--registry {value}", Registry)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAcrReplicationShowSettings
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAcrReplicationShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureAcr executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
+        /// <summary><p>The name of the replication.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        public virtual string Registry { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("acr replication show")
               .Add("--name {value}", Name)
               .Add("--registry {value}", Registry)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3222,196 +3580,23 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAcrWebhookListSettings
+    #region AzureAcrReplicationUpdateSettings
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureAcrWebhookListSettings : ToolSettings
+    public partial class AzureAcrReplicationUpdateSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureAcr executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr webhook list")
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrWebhookListEventsSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrWebhookListEventsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the webhook.</p></summary>
+        /// <summary><p>The name of the replication.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         public virtual string Registry { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr webhook list-events")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrWebhookPingSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrWebhookPingSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the webhook.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr webhook ping")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrWebhookShowSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrWebhookShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the webhook.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("acr webhook show")
-              .Add("--name {value}", Name)
-              .Add("--registry {value}", Registry)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAcrWebhookUpdateSettings
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAcrWebhookUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureAcr executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureAcrTasks.AzureAcrPath;
-        /// <summary><p>The name of the webhook.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        public virtual string Registry { get; internal set; }
-        /// <summary><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        public virtual IReadOnlyList<AcrWebhookActions> Actions => ActionsInternal.AsReadOnly();
-        internal List<AcrWebhookActions> ActionsInternal { get; set; } = new List<AcrWebhookActions>();
-        /// <summary><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        public virtual IReadOnlyList<string> Headers => HeadersInternal.AsReadOnly();
-        internal List<string> HeadersInternal { get; set; } = new List<string>();
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
-        public virtual string Scope { get; internal set; }
-        /// <summary><p>Indicates whether the webhook is enabled.</p></summary>
-        public virtual AcrBuildTaskStatus Status { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
-        /// <summary><p>The service URI for the webhook to post notifications.</p></summary>
-        public virtual string Uri { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -3420,6 +3605,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3433,20 +3620,16 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("acr webhook update")
+              .Add("acr replication update")
               .Add("--name {value}", Name)
               .Add("--registry {value}", Registry)
-              .Add("--actions {value}", Actions, separator: ' ')
-              .Add("--headers {value}", Headers, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--scope {value}", Scope)
-              .Add("--status {value}", Status)
               .Add("--tags {value}", Tags)
-              .Add("--uri {value}", Uri)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3469,6 +3652,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3485,6 +3670,7 @@ namespace Nuke.Azure
               .Add("acr config content-trust show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3509,6 +3695,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Indicates whether content-trust is enabled or disabled.</p></summary>
         public virtual AcrBuildTaskStatus Status { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3526,6 +3714,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--status {value}", Status)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3550,6 +3739,8 @@ namespace Nuke.Azure
         public virtual string Password { get; internal set; }
         /// <summary><p>The username used to log into a container registry.</p></summary>
         public virtual string Username { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3567,6 +3758,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--password {value}", Password, secret: true)
               .Add("--username {value}", Username)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3852,6 +4044,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings SetSubscription(this AzureAcrBuildSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildSettings ResetSubscription(this AzureAcrBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3965,6 +4175,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrCheckNameSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCheckNameSettings SetSubscription(this AzureAcrCheckNameSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCheckNameSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCheckNameSettings ResetSubscription(this AzureAcrCheckNameSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4163,7 +4391,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureAcrCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAcrCreateSettings SetLocation(this AzureAcrCreateSettings toolSettings, string location)
         {
@@ -4171,7 +4399,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAcrCreateSettings ResetLocation(this AzureAcrCreateSettings toolSettings)
         {
@@ -4195,6 +4423,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.StorageAccountName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCreateSettings SetSubscription(this AzureAcrCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCreateSettings ResetSubscription(this AzureAcrCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4329,6 +4575,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrDeleteSettings SetSubscription(this AzureAcrDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrDeleteSettings ResetSubscription(this AzureAcrDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4502,6 +4766,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Password"/>.</em></p><p>The password of source container registry.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetPassword(this AzureAcrImportSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Password"/>.</em></p><p>The password of source container registry.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetPassword(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
         #region Registry
         /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Registry"/>.</em></p><p>The source container registry can be name, login server or resource ID of the source registry.</p></summary>
         [Pure]
@@ -4553,6 +4835,42 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Username
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Username"/>.</em></p><p>The username of source container registry.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetUsername(this AzureAcrImportSettings toolSettings, string username)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = username;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Username"/>.</em></p><p>The username of source container registry.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetUsername(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrImportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings SetSubscription(this AzureAcrImportSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrImportSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrImportSettings ResetSubscription(this AzureAcrImportSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4669,6 +4987,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrListSettings SetSubscription(this AzureAcrListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrListSettings ResetSubscription(this AzureAcrListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4839,6 +5175,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrLoginSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrLoginSettings SetSubscription(this AzureAcrLoginSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrLoginSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrLoginSettings ResetSubscription(this AzureAcrLoginSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5156,6 +5510,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region SetSecret
+        /// <summary><p><em>Sets <see cref="AzureAcrRunSettings.SetSecret"/>.</em></p><p>Secret value in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrRunSettings SetSetSecret(this AzureAcrRunSettings toolSettings, string setSecret)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SetSecret = setSecret;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRunSettings.SetSecret"/>.</em></p><p>Secret value in 'name[=value]' format.</p></summary>
+        [Pure]
+        public static AzureAcrRunSettings ResetSetSecret(this AzureAcrRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SetSecret = null;
+            return toolSettings;
+        }
+        #endregion
         #region Timeout
         /// <summary><p><em>Sets <see cref="AzureAcrRunSettings.Timeout"/>.</em></p><p>The timeout in seconds.</p></summary>
         [Pure]
@@ -5189,6 +5561,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Values = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRunSettings SetSubscription(this AzureAcrRunSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRunSettings ResetSubscription(this AzureAcrRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5326,6 +5716,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrShowSettings SetSubscription(this AzureAcrShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrShowSettings ResetSubscription(this AzureAcrShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5457,6 +5865,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrShowUsageSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrShowUsageSettings SetSubscription(this AzureAcrShowUsageSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrShowUsageSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrShowUsageSettings ResetSubscription(this AzureAcrShowUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5762,6 +6188,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrUpdateSettings SetSubscription(this AzureAcrUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrUpdateSettings ResetSubscription(this AzureAcrUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5846,6 +6290,104 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAcrUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAcrUpdateSettings ResetVerbose(this AzureAcrUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrConfigSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrConfigSettingsExtensions
+    {
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetDebug(this AzureAcrConfigSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetDebug(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetHelp(this AzureAcrConfigSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetHelp(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetOutput(this AzureAcrConfigSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetOutput(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetQuery(this AzureAcrConfigSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetQuery(this AzureAcrConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings SetVerbose(this AzureAcrConfigSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrConfigSettings ResetVerbose(this AzureAcrConfigSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6274,6 +6816,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings SetSubscription(this AzureAcrBuildTaskCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskCreateSettings ResetSubscription(this AzureAcrBuildTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6426,6 +6986,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings SetSubscription(this AzureAcrBuildTaskDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskDeleteSettings ResetSubscription(this AzureAcrBuildTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6557,6 +7135,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings SetSubscription(this AzureAcrBuildTaskListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListSettings ResetSubscription(this AzureAcrBuildTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6763,6 +7359,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskListBuildsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings SetSubscription(this AzureAcrBuildTaskListBuildsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskListBuildsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskListBuildsSettings ResetSubscription(this AzureAcrBuildTaskListBuildsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6993,6 +7607,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskLogsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings SetSubscription(this AzureAcrBuildTaskLogsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskLogsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskLogsSettings ResetSubscription(this AzureAcrBuildTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7232,6 +7864,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings SetSubscription(this AzureAcrBuildTaskRunSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskRunSettings ResetSubscription(this AzureAcrBuildTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7402,6 +8052,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings SetSubscription(this AzureAcrBuildTaskShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowSettings ResetSubscription(this AzureAcrBuildTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7551,6 +8219,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskShowBuildSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings SetSubscription(this AzureAcrBuildTaskShowBuildSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskShowBuildSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskShowBuildSettings ResetSubscription(this AzureAcrBuildTaskShowBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8066,6 +8752,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings SetSubscription(this AzureAcrBuildTaskUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateSettings ResetSubscription(this AzureAcrBuildTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8260,6 +8964,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings SetSubscription(this AzureAcrBuildTaskUpdateBuildSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrBuildTaskUpdateBuildSettings ResetSubscription(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8344,1956 +9066,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureAcrBuildTaskUpdateBuildSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureAcrBuildTaskUpdateBuildSettings ResetVerbose(this AzureAcrBuildTaskUpdateBuildSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrConfigSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrConfigSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetDebug(this AzureAcrConfigSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetDebug(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetHelp(this AzureAcrConfigSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetHelp(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetOutput(this AzureAcrConfigSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetOutput(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetQuery(this AzureAcrConfigSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetQuery(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings SetVerbose(this AzureAcrConfigSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrConfigSettings ResetVerbose(this AzureAcrConfigSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrCredentialRenewSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrCredentialRenewSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetName(this AzureAcrCredentialRenewSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetName(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PasswordName
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetPasswordName(this AzureAcrCredentialRenewSettings toolSettings, AcrCredentialRenewPasswordName passwordName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PasswordName = passwordName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetPasswordName(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PasswordName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetDebug(this AzureAcrCredentialRenewSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetDebug(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetHelp(this AzureAcrCredentialRenewSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetHelp(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetOutput(this AzureAcrCredentialRenewSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetOutput(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetQuery(this AzureAcrCredentialRenewSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetQuery(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings SetVerbose(this AzureAcrCredentialRenewSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialRenewSettings ResetVerbose(this AzureAcrCredentialRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrCredentialShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrCredentialShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetName(this AzureAcrCredentialShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetName(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetResourceGroup(this AzureAcrCredentialShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetResourceGroup(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetDebug(this AzureAcrCredentialShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetDebug(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetHelp(this AzureAcrCredentialShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetHelp(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetOutput(this AzureAcrCredentialShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetOutput(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetQuery(this AzureAcrCredentialShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetQuery(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings SetVerbose(this AzureAcrCredentialShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrCredentialShowSettings ResetVerbose(this AzureAcrCredentialShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrHelmDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrHelmDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetName(this AzureAcrHelmDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetName(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetPassword(this AzureAcrHelmDeleteSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetPassword(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Prov
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Prov"/>.</em></p><p>Only delete the provenance file.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetProv(this AzureAcrHelmDeleteSettings toolSettings, string prov)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Prov = prov;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Prov"/>.</em></p><p>Only delete the provenance file.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetProv(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Prov = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Username
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetUsername(this AzureAcrHelmDeleteSettings toolSettings, string username)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = username;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetUsername(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetVersion(this AzureAcrHelmDeleteSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetVersion(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Yes
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetYes(this AzureAcrHelmDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetYes(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetDebug(this AzureAcrHelmDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetDebug(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetHelp(this AzureAcrHelmDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetHelp(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetOutput(this AzureAcrHelmDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetOutput(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetQuery(this AzureAcrHelmDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetQuery(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings SetVerbose(this AzureAcrHelmDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmDeleteSettings ResetVerbose(this AzureAcrHelmDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrHelmListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrHelmListSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetName(this AzureAcrHelmListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetName(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetPassword(this AzureAcrHelmListSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetPassword(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Username
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetUsername(this AzureAcrHelmListSettings toolSettings, string username)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = username;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetUsername(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetDebug(this AzureAcrHelmListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetDebug(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetHelp(this AzureAcrHelmListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetHelp(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetOutput(this AzureAcrHelmListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetOutput(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetQuery(this AzureAcrHelmListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetQuery(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings SetVerbose(this AzureAcrHelmListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmListSettings ResetVerbose(this AzureAcrHelmListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrHelmPushSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrHelmPushSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetName(this AzureAcrHelmPushSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetName(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Force
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Force"/>.</em></p><p>Overwrite the existing chart package.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetForce(this AzureAcrHelmPushSettings toolSettings, string force)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = force;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Force"/>.</em></p><p>Overwrite the existing chart package.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetForce(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Force = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetPassword(this AzureAcrHelmPushSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetPassword(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Username
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetUsername(this AzureAcrHelmPushSettings toolSettings, string username)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = username;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetUsername(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetDebug(this AzureAcrHelmPushSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetDebug(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetHelp(this AzureAcrHelmPushSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetHelp(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetOutput(this AzureAcrHelmPushSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetOutput(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetQuery(this AzureAcrHelmPushSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetQuery(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings SetVerbose(this AzureAcrHelmPushSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmPushSettings ResetVerbose(this AzureAcrHelmPushSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrHelmShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrHelmShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetName(this AzureAcrHelmShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetName(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Password
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetPassword(this AzureAcrHelmShowSettings toolSettings, string password)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = password;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetPassword(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Password = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Username
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetUsername(this AzureAcrHelmShowSettings toolSettings, string username)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = username;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetUsername(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Username = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Version
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetVersion(this AzureAcrHelmShowSettings toolSettings, string version)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = version;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetVersion(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Version = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetDebug(this AzureAcrHelmShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetDebug(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetHelp(this AzureAcrHelmShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetHelp(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetOutput(this AzureAcrHelmShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetOutput(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetQuery(this AzureAcrHelmShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetQuery(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings SetVerbose(this AzureAcrHelmShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrHelmShowSettings ResetVerbose(this AzureAcrHelmShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrReplicationCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrReplicationCreateSettingsExtensions
-    {
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetLocation(this AzureAcrReplicationCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetLocation(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetRegistry(this AzureAcrReplicationCreateSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetRegistry(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Name"/>.</em></p><p>The name of the replication. Default to the location name.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetName(this AzureAcrReplicationCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Name"/>.</em></p><p>The name of the replication. Default to the location name.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetName(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetResourceGroup(this AzureAcrReplicationCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetResourceGroup(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetTags(this AzureAcrReplicationCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetTags(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetDebug(this AzureAcrReplicationCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetDebug(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetHelp(this AzureAcrReplicationCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetHelp(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetOutput(this AzureAcrReplicationCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetOutput(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetQuery(this AzureAcrReplicationCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetQuery(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings SetVerbose(this AzureAcrReplicationCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationCreateSettings ResetVerbose(this AzureAcrReplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrReplicationDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrReplicationDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetName(this AzureAcrReplicationDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetName(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetRegistry(this AzureAcrReplicationDeleteSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetRegistry(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetResourceGroup(this AzureAcrReplicationDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetResourceGroup(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetDebug(this AzureAcrReplicationDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetDebug(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetHelp(this AzureAcrReplicationDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetHelp(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetOutput(this AzureAcrReplicationDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetOutput(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetQuery(this AzureAcrReplicationDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetQuery(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings SetVerbose(this AzureAcrReplicationDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationDeleteSettings ResetVerbose(this AzureAcrReplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrReplicationListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrReplicationListSettingsExtensions
-    {
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings SetRegistry(this AzureAcrReplicationListSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings ResetRegistry(this AzureAcrReplicationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings SetResourceGroup(this AzureAcrReplicationListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings ResetResourceGroup(this AzureAcrReplicationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings SetDebug(this AzureAcrReplicationListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings ResetDebug(this AzureAcrReplicationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings SetHelp(this AzureAcrReplicationListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings ResetHelp(this AzureAcrReplicationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings SetOutput(this AzureAcrReplicationListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings ResetOutput(this AzureAcrReplicationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings SetQuery(this AzureAcrReplicationListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings ResetQuery(this AzureAcrReplicationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings SetVerbose(this AzureAcrReplicationListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationListSettings ResetVerbose(this AzureAcrReplicationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrReplicationShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrReplicationShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetName(this AzureAcrReplicationShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetName(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetRegistry(this AzureAcrReplicationShowSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetRegistry(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetResourceGroup(this AzureAcrReplicationShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetResourceGroup(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetDebug(this AzureAcrReplicationShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetDebug(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetHelp(this AzureAcrReplicationShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetHelp(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetOutput(this AzureAcrReplicationShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetOutput(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetQuery(this AzureAcrReplicationShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetQuery(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings SetVerbose(this AzureAcrReplicationShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationShowSettings ResetVerbose(this AzureAcrReplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrReplicationUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrReplicationUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetName(this AzureAcrReplicationUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetName(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetRegistry(this AzureAcrReplicationUpdateSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetRegistry(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetResourceGroup(this AzureAcrReplicationUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetResourceGroup(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetTags(this AzureAcrReplicationUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetTags(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetAdd(this AzureAcrReplicationUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetAdd(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetForceString(this AzureAcrReplicationUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetForceString(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetRemove(this AzureAcrReplicationUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetRemove(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetSet(this AzureAcrReplicationUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetSet(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetDebug(this AzureAcrReplicationUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetDebug(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetHelp(this AzureAcrReplicationUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetHelp(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetOutput(this AzureAcrReplicationUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetOutput(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetQuery(this AzureAcrReplicationUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetQuery(this AzureAcrReplicationUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings SetVerbose(this AzureAcrReplicationUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrReplicationUpdateSettings ResetVerbose(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -10431,6 +9203,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRepositoryDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryDeleteSettings SetSubscription(this AzureAcrRepositoryDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRepositoryDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryDeleteSettings ResetSubscription(this AzureAcrRepositoryDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10619,6 +9409,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRepositoryListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryListSettings SetSubscription(this AzureAcrRepositoryListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRepositoryListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryListSettings ResetSubscription(this AzureAcrRepositoryListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10825,6 +9633,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRepositoryShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryShowSettings SetSubscription(this AzureAcrRepositoryShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRepositoryShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryShowSettings ResetSubscription(this AzureAcrRepositoryShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11070,6 +9896,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRepositoryShowManifestsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryShowManifestsSettings SetSubscription(this AzureAcrRepositoryShowManifestsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRepositoryShowManifestsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryShowManifestsSettings ResetSubscription(this AzureAcrRepositoryShowManifestsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrRepositoryShowManifestsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -11312,6 +10156,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRepositoryShowTagsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryShowTagsSettings SetSubscription(this AzureAcrRepositoryShowTagsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRepositoryShowTagsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryShowTagsSettings ResetSubscription(this AzureAcrRepositoryShowTagsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrRepositoryShowTagsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -11497,6 +10359,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRepositoryUntagSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryUntagSettings SetSubscription(this AzureAcrRepositoryUntagSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRepositoryUntagSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryUntagSettings ResetSubscription(this AzureAcrRepositoryUntagSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11874,6 +10754,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrRepositoryUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryUpdateSettings SetSubscription(this AzureAcrRepositoryUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrRepositoryUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrRepositoryUpdateSettings ResetSubscription(this AzureAcrRepositoryUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrRepositoryUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -11966,6 +10864,1822 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureAcrWebhookCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookCreateSettingsExtensions
+    {
+        #region Actions
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetActions(this AzureAcrWebhookCreateSettings toolSettings, params AcrWebhookActions[] actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal = actions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetActions(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal = actions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings AddActions(this AzureAcrWebhookCreateSettings toolSettings, params AcrWebhookActions[] actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal.AddRange(actions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings AddActions(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal.AddRange(actions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ClearActions(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings RemoveActions(this AzureAcrWebhookCreateSettings toolSettings, params AcrWebhookActions[] actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AcrWebhookActions>(actions);
+            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings RemoveActions(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AcrWebhookActions>(actions);
+            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetName(this AzureAcrWebhookCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetName(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetRegistry(this AzureAcrWebhookCreateSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetRegistry(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Uri
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetUri(this AzureAcrWebhookCreateSettings toolSettings, string uri)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Uri = uri;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetUri(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Uri = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Headers
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetHeaders(this AzureAcrWebhookCreateSettings toolSettings, params string[] headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal = headers.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetHeaders(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<string> headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal = headers.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings AddHeaders(this AzureAcrWebhookCreateSettings toolSettings, params string[] headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal.AddRange(headers);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings AddHeaders(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<string> headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal.AddRange(headers);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ClearHeaders(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings RemoveHeaders(this AzureAcrWebhookCreateSettings toolSettings, params string[] headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(headers);
+            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings RemoveHeaders(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<string> headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(headers);
+            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetLocation(this AzureAcrWebhookCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetLocation(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetResourceGroup(this AzureAcrWebhookCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetResourceGroup(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetScope(this AzureAcrWebhookCreateSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetScope(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Status
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetStatus(this AzureAcrWebhookCreateSettings toolSettings, AcrBuildTaskStatus status)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = status;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetStatus(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetTags(this AzureAcrWebhookCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetTags(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetSubscription(this AzureAcrWebhookCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetSubscription(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetDebug(this AzureAcrWebhookCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetDebug(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetHelp(this AzureAcrWebhookCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetHelp(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetOutput(this AzureAcrWebhookCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetOutput(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetQuery(this AzureAcrWebhookCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetQuery(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings SetVerbose(this AzureAcrWebhookCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookCreateSettings ResetVerbose(this AzureAcrWebhookCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrWebhookDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetName(this AzureAcrWebhookDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetName(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetRegistry(this AzureAcrWebhookDeleteSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetRegistry(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetResourceGroup(this AzureAcrWebhookDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetResourceGroup(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetSubscription(this AzureAcrWebhookDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetSubscription(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetDebug(this AzureAcrWebhookDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetDebug(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetHelp(this AzureAcrWebhookDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetHelp(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetOutput(this AzureAcrWebhookDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetOutput(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetQuery(this AzureAcrWebhookDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetQuery(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings SetVerbose(this AzureAcrWebhookDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookDeleteSettings ResetVerbose(this AzureAcrWebhookDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrWebhookGetConfigSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookGetConfigSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetName(this AzureAcrWebhookGetConfigSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetName(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetRegistry(this AzureAcrWebhookGetConfigSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetRegistry(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetResourceGroup(this AzureAcrWebhookGetConfigSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetResourceGroup(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetSubscription(this AzureAcrWebhookGetConfigSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetSubscription(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetDebug(this AzureAcrWebhookGetConfigSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetDebug(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetHelp(this AzureAcrWebhookGetConfigSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetHelp(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetOutput(this AzureAcrWebhookGetConfigSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetOutput(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetQuery(this AzureAcrWebhookGetConfigSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetQuery(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings SetVerbose(this AzureAcrWebhookGetConfigSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookGetConfigSettings ResetVerbose(this AzureAcrWebhookGetConfigSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrWebhookListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookListSettingsExtensions
+    {
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetRegistry(this AzureAcrWebhookListSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetRegistry(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetResourceGroup(this AzureAcrWebhookListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetResourceGroup(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetSubscription(this AzureAcrWebhookListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetSubscription(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetDebug(this AzureAcrWebhookListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetDebug(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetHelp(this AzureAcrWebhookListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetHelp(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetOutput(this AzureAcrWebhookListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetOutput(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetQuery(this AzureAcrWebhookListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetQuery(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings SetVerbose(this AzureAcrWebhookListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListSettings ResetVerbose(this AzureAcrWebhookListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrWebhookListEventsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookListEventsSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetName(this AzureAcrWebhookListEventsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetName(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetRegistry(this AzureAcrWebhookListEventsSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetRegistry(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetResourceGroup(this AzureAcrWebhookListEventsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetResourceGroup(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetSubscription(this AzureAcrWebhookListEventsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetSubscription(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetDebug(this AzureAcrWebhookListEventsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetDebug(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetHelp(this AzureAcrWebhookListEventsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetHelp(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetOutput(this AzureAcrWebhookListEventsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetOutput(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetQuery(this AzureAcrWebhookListEventsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetQuery(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings SetVerbose(this AzureAcrWebhookListEventsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookListEventsSettings ResetVerbose(this AzureAcrWebhookListEventsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrWebhookPingSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookPingSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetName(this AzureAcrWebhookPingSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetName(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetRegistry(this AzureAcrWebhookPingSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetRegistry(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetResourceGroup(this AzureAcrWebhookPingSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetResourceGroup(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetSubscription(this AzureAcrWebhookPingSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetSubscription(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetDebug(this AzureAcrWebhookPingSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetDebug(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetHelp(this AzureAcrWebhookPingSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetHelp(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetOutput(this AzureAcrWebhookPingSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetOutput(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetQuery(this AzureAcrWebhookPingSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetQuery(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings SetVerbose(this AzureAcrWebhookPingSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookPingSettings ResetVerbose(this AzureAcrWebhookPingSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrWebhookShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetName(this AzureAcrWebhookShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetName(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetRegistry(this AzureAcrWebhookShowSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetRegistry(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetResourceGroup(this AzureAcrWebhookShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetResourceGroup(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetSubscription(this AzureAcrWebhookShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetSubscription(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetDebug(this AzureAcrWebhookShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetDebug(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetHelp(this AzureAcrWebhookShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetHelp(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetOutput(this AzureAcrWebhookShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetOutput(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetQuery(this AzureAcrWebhookShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetQuery(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings SetVerbose(this AzureAcrWebhookShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookShowSettings ResetVerbose(this AzureAcrWebhookShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrWebhookUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrWebhookUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetName(this AzureAcrWebhookUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetName(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetRegistry(this AzureAcrWebhookUpdateSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetRegistry(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Actions
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetActions(this AzureAcrWebhookUpdateSettings toolSettings, params AcrWebhookActions[] actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal = actions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetActions(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal = actions.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings AddActions(this AzureAcrWebhookUpdateSettings toolSettings, params AcrWebhookActions[] actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal.AddRange(actions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings AddActions(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal.AddRange(actions);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ClearActions(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings RemoveActions(this AzureAcrWebhookUpdateSettings toolSettings, params AcrWebhookActions[] actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AcrWebhookActions>(actions);
+            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings RemoveActions(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<AcrWebhookActions>(actions);
+            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Headers
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetHeaders(this AzureAcrWebhookUpdateSettings toolSettings, params string[] headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal = headers.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetHeaders(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<string> headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal = headers.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings AddHeaders(this AzureAcrWebhookUpdateSettings toolSettings, params string[] headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal.AddRange(headers);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings AddHeaders(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<string> headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal.AddRange(headers);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ClearHeaders(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HeadersInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings RemoveHeaders(this AzureAcrWebhookUpdateSettings toolSettings, params string[] headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(headers);
+            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings RemoveHeaders(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<string> headers)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(headers);
+            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetResourceGroup(this AzureAcrWebhookUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetResourceGroup(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetScope(this AzureAcrWebhookUpdateSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetScope(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Status
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetStatus(this AzureAcrWebhookUpdateSettings toolSettings, AcrBuildTaskStatus status)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = status;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetStatus(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetTags(this AzureAcrWebhookUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetTags(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Uri
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetUri(this AzureAcrWebhookUpdateSettings toolSettings, string uri)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Uri = uri;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetUri(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Uri = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetAdd(this AzureAcrWebhookUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetAdd(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetForceString(this AzureAcrWebhookUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetForceString(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetRemove(this AzureAcrWebhookUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetRemove(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetSet(this AzureAcrWebhookUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetSet(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetSubscription(this AzureAcrWebhookUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetSubscription(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetDebug(this AzureAcrWebhookUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetDebug(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetHelp(this AzureAcrWebhookUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetHelp(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetOutput(this AzureAcrWebhookUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetOutput(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetQuery(this AzureAcrWebhookUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetQuery(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings SetVerbose(this AzureAcrWebhookUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrWebhookUpdateSettings ResetVerbose(this AzureAcrWebhookUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureAcrTaskCancelRunSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
@@ -12023,6 +12737,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskCancelRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCancelRunSettings SetSubscription(this AzureAcrTaskCancelRunSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskCancelRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCancelRunSettings ResetSubscription(this AzureAcrTaskCancelRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -12694,6 +13426,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCreateSettings SetSubscription(this AzureAcrTaskCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskCreateSettings ResetSubscription(this AzureAcrTaskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrTaskCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -12846,6 +13596,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskDeleteSettings SetSubscription(this AzureAcrTaskDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskDeleteSettings ResetSubscription(this AzureAcrTaskDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrTaskDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -12977,6 +13745,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskListSettings SetSubscription(this AzureAcrTaskListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskListSettings ResetSubscription(this AzureAcrTaskListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -13186,6 +13972,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskListRunsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskListRunsSettings SetSubscription(this AzureAcrTaskListRunsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskListRunsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskListRunsSettings ResetSubscription(this AzureAcrTaskListRunsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrTaskListRunsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -13371,6 +14175,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RunId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskLogsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskLogsSettings SetSubscription(this AzureAcrTaskLogsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskLogsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskLogsSettings ResetSubscription(this AzureAcrTaskLogsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -13646,6 +14468,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskRunSettings SetSubscription(this AzureAcrTaskRunSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskRunSettings ResetSubscription(this AzureAcrTaskRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrTaskRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -13816,6 +14656,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskShowSettings SetSubscription(this AzureAcrTaskShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskShowSettings ResetSubscription(this AzureAcrTaskShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrTaskShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -13965,6 +14823,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskShowRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskShowRunSettings SetSubscription(this AzureAcrTaskShowRunSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskShowRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskShowRunSettings ResetSubscription(this AzureAcrTaskShowRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -14600,6 +15476,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateSettings SetSubscription(this AzureAcrTaskUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateSettings ResetSubscription(this AzureAcrTaskUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrTaskUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -14794,6 +15688,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrTaskUpdateRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateRunSettings SetSubscription(this AzureAcrTaskUpdateRunSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrTaskUpdateRunSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrTaskUpdateRunSettings ResetSubscription(this AzureAcrTaskUpdateRunSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrTaskUpdateRunSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -14886,288 +15798,1224 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAcrWebhookCreateSettingsExtensions
+    #region AzureAcrCredentialRenewSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookCreateSettingsExtensions
+    public static partial class AzureAcrCredentialRenewSettingsExtensions
     {
-        #region Actions
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings SetActions(this AzureAcrWebhookCreateSettings toolSettings, params AcrWebhookActions[] actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal = actions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings SetActions(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal = actions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings AddActions(this AzureAcrWebhookCreateSettings toolSettings, params AcrWebhookActions[] actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal.AddRange(actions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings AddActions(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal.AddRange(actions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings ClearActions(this AzureAcrWebhookCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings RemoveActions(this AzureAcrWebhookCreateSettings toolSettings, params AcrWebhookActions[] actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AcrWebhookActions>(actions);
-            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings RemoveActions(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AcrWebhookActions>(actions);
-            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetName(this AzureAcrWebhookCreateSettings toolSettings, string name)
+        public static AzureAcrCredentialRenewSettings SetName(this AzureAcrCredentialRenewSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetName(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrCredentialRenewSettings ResetName(this AzureAcrCredentialRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
             return toolSettings;
         }
         #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        #region PasswordName
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetRegistry(this AzureAcrWebhookCreateSettings toolSettings, string registry)
+        public static AzureAcrCredentialRenewSettings SetPasswordName(this AzureAcrCredentialRenewSettings toolSettings, AcrCredentialRenewPasswordName passwordName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
+            toolSettings.PasswordName = passwordName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.PasswordName"/>.</em></p><p>The name of password to regenerate.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetRegistry(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrCredentialRenewSettings ResetPasswordName(this AzureAcrCredentialRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Uri
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings SetUri(this AzureAcrWebhookCreateSettings toolSettings, string uri)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Uri = uri;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings ResetUri(this AzureAcrWebhookCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Uri = null;
+            toolSettings.PasswordName = null;
             return toolSettings;
         }
         #endregion
-        #region Headers
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetHeaders(this AzureAcrWebhookCreateSettings toolSettings, params string[] headers)
+        public static AzureAcrCredentialRenewSettings SetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal = headers.ToList();
+            toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetHeaders(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<string> headers)
+        public static AzureAcrCredentialRenewSettings ResetResourceGroup(this AzureAcrCredentialRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal = headers.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings AddHeaders(this AzureAcrWebhookCreateSettings toolSettings, params string[] headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal.AddRange(headers);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings AddHeaders(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<string> headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal.AddRange(headers);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings ClearHeaders(this AzureAcrWebhookCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings RemoveHeaders(this AzureAcrWebhookCreateSettings toolSettings, params string[] headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(headers);
-            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookCreateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings RemoveHeaders(this AzureAcrWebhookCreateSettings toolSettings, IEnumerable<string> headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(headers);
-            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
+            toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetSubscription(this AzureAcrCredentialRenewSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetSubscription(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetDebug(this AzureAcrCredentialRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetDebug(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetHelp(this AzureAcrCredentialRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetHelp(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetOutput(this AzureAcrCredentialRenewSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetOutput(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetQuery(this AzureAcrCredentialRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetQuery(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings SetVerbose(this AzureAcrCredentialRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialRenewSettings ResetVerbose(this AzureAcrCredentialRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrCredentialShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrCredentialShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetName(this AzureAcrCredentialShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetName(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetResourceGroup(this AzureAcrCredentialShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetResourceGroup(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetSubscription(this AzureAcrCredentialShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetSubscription(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetDebug(this AzureAcrCredentialShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetDebug(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetHelp(this AzureAcrCredentialShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetHelp(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetOutput(this AzureAcrCredentialShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetOutput(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetQuery(this AzureAcrCredentialShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetQuery(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings SetVerbose(this AzureAcrCredentialShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrCredentialShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrCredentialShowSettings ResetVerbose(this AzureAcrCredentialShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrHelmDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrHelmDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetName(this AzureAcrHelmDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetName(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetPassword(this AzureAcrHelmDeleteSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetPassword(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Prov
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Prov"/>.</em></p><p>Only delete the provenance file.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetProv(this AzureAcrHelmDeleteSettings toolSettings, string prov)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Prov = prov;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Prov"/>.</em></p><p>Only delete the provenance file.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetProv(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Prov = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Username
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetUsername(this AzureAcrHelmDeleteSettings toolSettings, string username)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = username;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetUsername(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetVersion(this AzureAcrHelmDeleteSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetVersion(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Yes
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetYes(this AzureAcrHelmDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetYes(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetSubscription(this AzureAcrHelmDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetSubscription(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetDebug(this AzureAcrHelmDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetDebug(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetHelp(this AzureAcrHelmDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetHelp(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetOutput(this AzureAcrHelmDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetOutput(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetQuery(this AzureAcrHelmDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetQuery(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings SetVerbose(this AzureAcrHelmDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmDeleteSettings ResetVerbose(this AzureAcrHelmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrHelmListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrHelmListSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetName(this AzureAcrHelmListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetName(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetPassword(this AzureAcrHelmListSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetPassword(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Username
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetUsername(this AzureAcrHelmListSettings toolSettings, string username)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = username;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetUsername(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetSubscription(this AzureAcrHelmListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetSubscription(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetDebug(this AzureAcrHelmListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetDebug(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetHelp(this AzureAcrHelmListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetHelp(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetOutput(this AzureAcrHelmListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetOutput(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetQuery(this AzureAcrHelmListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetQuery(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings SetVerbose(this AzureAcrHelmListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmListSettings ResetVerbose(this AzureAcrHelmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrHelmPushSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrHelmPushSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetName(this AzureAcrHelmPushSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetName(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Force
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Force"/>.</em></p><p>Overwrite the existing chart package.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetForce(this AzureAcrHelmPushSettings toolSettings, string force)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = force;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Force"/>.</em></p><p>Overwrite the existing chart package.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetForce(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Force = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetPassword(this AzureAcrHelmPushSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetPassword(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Username
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetUsername(this AzureAcrHelmPushSettings toolSettings, string username)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = username;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetUsername(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetSubscription(this AzureAcrHelmPushSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetSubscription(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetDebug(this AzureAcrHelmPushSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetDebug(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetHelp(this AzureAcrHelmPushSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetHelp(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetOutput(this AzureAcrHelmPushSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetOutput(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetQuery(this AzureAcrHelmPushSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetQuery(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmPushSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings SetVerbose(this AzureAcrHelmPushSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmPushSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmPushSettings ResetVerbose(this AzureAcrHelmPushSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrHelmShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrHelmShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetName(this AzureAcrHelmShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Name"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetName(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Password
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetPassword(this AzureAcrHelmShowSettings toolSettings, string password)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = password;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Password"/>.</em></p><p>The password used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetPassword(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Password = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Username
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetUsername(this AzureAcrHelmShowSettings toolSettings, string username)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = username;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Username"/>.</em></p><p>The username used to log into a container registry.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetUsername(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Version
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetVersion(this AzureAcrHelmShowSettings toolSettings, string version)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = version;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Version"/>.</em></p><p>The helm chart version.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetVersion(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Version = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetSubscription(this AzureAcrHelmShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetSubscription(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetDebug(this AzureAcrHelmShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetDebug(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetHelp(this AzureAcrHelmShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetHelp(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetOutput(this AzureAcrHelmShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetOutput(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetQuery(this AzureAcrHelmShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetQuery(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings SetVerbose(this AzureAcrHelmShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrHelmShowSettings ResetVerbose(this AzureAcrHelmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrReplicationCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrReplicationCreateSettingsExtensions
+    {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetLocation(this AzureAcrWebhookCreateSettings toolSettings, string location)
+        public static AzureAcrReplicationCreateSettings SetLocation(this AzureAcrReplicationCreateSettings toolSettings, string location)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetLocation(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetLocation(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Location = null;
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetResourceGroup(this AzureAcrWebhookCreateSettings toolSettings, string resourceGroup)
+        public static AzureAcrReplicationCreateSettings SetRegistry(this AzureAcrReplicationCreateSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationCreateSettings ResetRegistry(this AzureAcrReplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Name"/>.</em></p><p>The name of the replication. Default to the location name.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationCreateSettings SetName(this AzureAcrReplicationCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Name"/>.</em></p><p>The name of the replication. Default to the location name.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationCreateSettings ResetName(this AzureAcrReplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationCreateSettings SetResourceGroup(this AzureAcrReplicationCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetResourceGroup(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetResourceGroup(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings SetScope(this AzureAcrWebhookCreateSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings ResetScope(this AzureAcrWebhookCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Status
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings SetStatus(this AzureAcrWebhookCreateSettings toolSettings, AcrBuildTaskStatus status)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = status;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookCreateSettings ResetStatus(this AzureAcrWebhookCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = null;
-            return toolSettings;
-        }
-        #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetTags(this AzureAcrWebhookCreateSettings toolSettings, string tags)
+        public static AzureAcrReplicationCreateSettings SetTags(this AzureAcrReplicationCreateSettings toolSettings, string tags)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetTags(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetTags(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetDebug(this AzureAcrWebhookCreateSettings toolSettings, string debug)
+        public static AzureAcrReplicationCreateSettings SetSubscription(this AzureAcrReplicationCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationCreateSettings ResetSubscription(this AzureAcrReplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationCreateSettings SetDebug(this AzureAcrReplicationCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetDebug(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetDebug(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -15175,17 +17023,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetHelp(this AzureAcrWebhookCreateSettings toolSettings, string help)
+        public static AzureAcrReplicationCreateSettings SetHelp(this AzureAcrReplicationCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetHelp(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetHelp(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -15193,17 +17041,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetOutput(this AzureAcrWebhookCreateSettings toolSettings, AzureOutput output)
+        public static AzureAcrReplicationCreateSettings SetOutput(this AzureAcrReplicationCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetOutput(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetOutput(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -15211,17 +17059,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetQuery(this AzureAcrWebhookCreateSettings toolSettings, string query)
+        public static AzureAcrReplicationCreateSettings SetQuery(this AzureAcrReplicationCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetQuery(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetQuery(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -15229,17 +17077,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings SetVerbose(this AzureAcrWebhookCreateSettings toolSettings, string verbose)
+        public static AzureAcrReplicationCreateSettings SetVerbose(this AzureAcrReplicationCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookCreateSettings ResetVerbose(this AzureAcrWebhookCreateSettings toolSettings)
+        public static AzureAcrReplicationCreateSettings ResetVerbose(this AzureAcrReplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -15248,24 +17096,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAcrWebhookDeleteSettingsExtensions
+    #region AzureAcrReplicationDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookDeleteSettingsExtensions
+    public static partial class AzureAcrReplicationDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetName(this AzureAcrWebhookDeleteSettings toolSettings, string name)
+        public static AzureAcrReplicationDeleteSettings SetName(this AzureAcrReplicationDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetName(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetName(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -15273,17 +17121,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetRegistry(this AzureAcrWebhookDeleteSettings toolSettings, string registry)
+        public static AzureAcrReplicationDeleteSettings SetRegistry(this AzureAcrReplicationDeleteSettings toolSettings, string registry)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Registry = registry;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetRegistry(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetRegistry(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Registry = null;
@@ -15291,35 +17139,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetResourceGroup(this AzureAcrWebhookDeleteSettings toolSettings, string resourceGroup)
+        public static AzureAcrReplicationDeleteSettings SetResourceGroup(this AzureAcrReplicationDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetResourceGroup(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetResourceGroup(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetDebug(this AzureAcrWebhookDeleteSettings toolSettings, string debug)
+        public static AzureAcrReplicationDeleteSettings SetSubscription(this AzureAcrReplicationDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationDeleteSettings ResetSubscription(this AzureAcrReplicationDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationDeleteSettings SetDebug(this AzureAcrReplicationDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetDebug(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetDebug(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -15327,17 +17193,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetHelp(this AzureAcrWebhookDeleteSettings toolSettings, string help)
+        public static AzureAcrReplicationDeleteSettings SetHelp(this AzureAcrReplicationDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetHelp(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetHelp(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -15345,17 +17211,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetOutput(this AzureAcrWebhookDeleteSettings toolSettings, AzureOutput output)
+        public static AzureAcrReplicationDeleteSettings SetOutput(this AzureAcrReplicationDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetOutput(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetOutput(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -15363,17 +17229,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetQuery(this AzureAcrWebhookDeleteSettings toolSettings, string query)
+        public static AzureAcrReplicationDeleteSettings SetQuery(this AzureAcrReplicationDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetQuery(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetQuery(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -15381,17 +17247,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings SetVerbose(this AzureAcrWebhookDeleteSettings toolSettings, string verbose)
+        public static AzureAcrReplicationDeleteSettings SetVerbose(this AzureAcrReplicationDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookDeleteSettings ResetVerbose(this AzureAcrWebhookDeleteSettings toolSettings)
+        public static AzureAcrReplicationDeleteSettings ResetVerbose(this AzureAcrReplicationDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -15400,24 +17266,176 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAcrWebhookGetConfigSettingsExtensions
+    #region AzureAcrReplicationListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookGetConfigSettingsExtensions
+    public static partial class AzureAcrReplicationListSettingsExtensions
+    {
+        #region Registry
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetRegistry(this AzureAcrReplicationListSettings toolSettings, string registry)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = registry;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetRegistry(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Registry = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetResourceGroup(this AzureAcrReplicationListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetResourceGroup(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetSubscription(this AzureAcrReplicationListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetSubscription(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetDebug(this AzureAcrReplicationListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetDebug(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetHelp(this AzureAcrReplicationListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetHelp(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetOutput(this AzureAcrReplicationListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetOutput(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetQuery(this AzureAcrReplicationListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetQuery(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings SetVerbose(this AzureAcrReplicationListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationListSettings ResetVerbose(this AzureAcrReplicationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAcrReplicationShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAcrReplicationShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetName(this AzureAcrWebhookGetConfigSettings toolSettings, string name)
+        public static AzureAcrReplicationShowSettings SetName(this AzureAcrReplicationShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetName(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetName(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -15425,17 +17443,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetRegistry(this AzureAcrWebhookGetConfigSettings toolSettings, string registry)
+        public static AzureAcrReplicationShowSettings SetRegistry(this AzureAcrReplicationShowSettings toolSettings, string registry)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Registry = registry;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetRegistry(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetRegistry(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Registry = null;
@@ -15443,35 +17461,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetResourceGroup(this AzureAcrWebhookGetConfigSettings toolSettings, string resourceGroup)
+        public static AzureAcrReplicationShowSettings SetResourceGroup(this AzureAcrReplicationShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetResourceGroup(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetResourceGroup(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetDebug(this AzureAcrWebhookGetConfigSettings toolSettings, string debug)
+        public static AzureAcrReplicationShowSettings SetSubscription(this AzureAcrReplicationShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationShowSettings ResetSubscription(this AzureAcrReplicationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationShowSettings SetDebug(this AzureAcrReplicationShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetDebug(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetDebug(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -15479,17 +17515,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetHelp(this AzureAcrWebhookGetConfigSettings toolSettings, string help)
+        public static AzureAcrReplicationShowSettings SetHelp(this AzureAcrReplicationShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetHelp(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetHelp(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -15497,17 +17533,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetOutput(this AzureAcrWebhookGetConfigSettings toolSettings, AzureOutput output)
+        public static AzureAcrReplicationShowSettings SetOutput(this AzureAcrReplicationShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetOutput(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetOutput(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -15515,17 +17551,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetQuery(this AzureAcrWebhookGetConfigSettings toolSettings, string query)
+        public static AzureAcrReplicationShowSettings SetQuery(this AzureAcrReplicationShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetQuery(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetQuery(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -15533,17 +17569,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookGetConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings SetVerbose(this AzureAcrWebhookGetConfigSettings toolSettings, string verbose)
+        public static AzureAcrReplicationShowSettings SetVerbose(this AzureAcrReplicationShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookGetConfigSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookGetConfigSettings ResetVerbose(this AzureAcrWebhookGetConfigSettings toolSettings)
+        public static AzureAcrReplicationShowSettings ResetVerbose(this AzureAcrReplicationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -15552,158 +17588,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAcrWebhookListSettingsExtensions
+    #region AzureAcrReplicationUpdateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookListSettingsExtensions
-    {
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings SetRegistry(this AzureAcrWebhookListSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings ResetRegistry(this AzureAcrWebhookListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings SetResourceGroup(this AzureAcrWebhookListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings ResetResourceGroup(this AzureAcrWebhookListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings SetDebug(this AzureAcrWebhookListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings ResetDebug(this AzureAcrWebhookListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings SetHelp(this AzureAcrWebhookListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings ResetHelp(this AzureAcrWebhookListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings SetOutput(this AzureAcrWebhookListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings ResetOutput(this AzureAcrWebhookListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings SetQuery(this AzureAcrWebhookListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings ResetQuery(this AzureAcrWebhookListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings SetVerbose(this AzureAcrWebhookListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListSettings ResetVerbose(this AzureAcrWebhookListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrWebhookListEventsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookListEventsSettingsExtensions
+    public static partial class AzureAcrReplicationUpdateSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
         [Pure]
-        public static AzureAcrWebhookListEventsSettings SetName(this AzureAcrWebhookListEventsSettings toolSettings, string name)
+        public static AzureAcrReplicationUpdateSettings SetName(this AzureAcrReplicationUpdateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Name"/>.</em></p><p>The name of the replication.</p></summary>
         [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetName(this AzureAcrWebhookListEventsSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetName(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -15711,17 +17613,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookListEventsSettings SetRegistry(this AzureAcrWebhookListEventsSettings toolSettings, string registry)
+        public static AzureAcrReplicationUpdateSettings SetRegistry(this AzureAcrReplicationUpdateSettings toolSettings, string registry)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Registry = registry;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetRegistry(this AzureAcrWebhookListEventsSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetRegistry(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Registry = null;
@@ -15729,683 +17631,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookListEventsSettings SetResourceGroup(this AzureAcrWebhookListEventsSettings toolSettings, string resourceGroup)
+        public static AzureAcrReplicationUpdateSettings SetResourceGroup(this AzureAcrReplicationUpdateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetResourceGroup(this AzureAcrWebhookListEventsSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetResourceGroup(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings SetDebug(this AzureAcrWebhookListEventsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetDebug(this AzureAcrWebhookListEventsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings SetHelp(this AzureAcrWebhookListEventsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetHelp(this AzureAcrWebhookListEventsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings SetOutput(this AzureAcrWebhookListEventsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetOutput(this AzureAcrWebhookListEventsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings SetQuery(this AzureAcrWebhookListEventsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetQuery(this AzureAcrWebhookListEventsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookListEventsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings SetVerbose(this AzureAcrWebhookListEventsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookListEventsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookListEventsSettings ResetVerbose(this AzureAcrWebhookListEventsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrWebhookPingSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookPingSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetName(this AzureAcrWebhookPingSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetName(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetRegistry(this AzureAcrWebhookPingSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetRegistry(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetResourceGroup(this AzureAcrWebhookPingSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetResourceGroup(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetDebug(this AzureAcrWebhookPingSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetDebug(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetHelp(this AzureAcrWebhookPingSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetHelp(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetOutput(this AzureAcrWebhookPingSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetOutput(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetQuery(this AzureAcrWebhookPingSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetQuery(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookPingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings SetVerbose(this AzureAcrWebhookPingSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookPingSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookPingSettings ResetVerbose(this AzureAcrWebhookPingSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrWebhookShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetName(this AzureAcrWebhookShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetName(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetRegistry(this AzureAcrWebhookShowSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetRegistry(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetResourceGroup(this AzureAcrWebhookShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetResourceGroup(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetDebug(this AzureAcrWebhookShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetDebug(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetHelp(this AzureAcrWebhookShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetHelp(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetOutput(this AzureAcrWebhookShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetOutput(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetQuery(this AzureAcrWebhookShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetQuery(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings SetVerbose(this AzureAcrWebhookShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookShowSettings ResetVerbose(this AzureAcrWebhookShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAcrWebhookUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAcrWebhookUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetName(this AzureAcrWebhookUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Name"/>.</em></p><p>The name of the webhook.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetName(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Registry
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetRegistry(this AzureAcrWebhookUpdateSettings toolSettings, string registry)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = registry;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Registry"/>.</em></p><p>The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetRegistry(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Registry = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Actions
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetActions(this AzureAcrWebhookUpdateSettings toolSettings, params AcrWebhookActions[] actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal = actions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Actions"/> to a new list.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetActions(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal = actions.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings AddActions(this AzureAcrWebhookUpdateSettings toolSettings, params AcrWebhookActions[] actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal.AddRange(actions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings AddActions(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal.AddRange(actions);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ClearActions(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings RemoveActions(this AzureAcrWebhookUpdateSettings toolSettings, params AcrWebhookActions[] actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AcrWebhookActions>(actions);
-            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Actions"/>.</em></p><p>Space-separated list of actions that trigger the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings RemoveActions(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<AcrWebhookActions> actions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<AcrWebhookActions>(actions);
-            toolSettings.ActionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Headers
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetHeaders(this AzureAcrWebhookUpdateSettings toolSettings, params string[] headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal = headers.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Headers"/> to a new list.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetHeaders(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<string> headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal = headers.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings AddHeaders(this AzureAcrWebhookUpdateSettings toolSettings, params string[] headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal.AddRange(headers);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings AddHeaders(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<string> headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal.AddRange(headers);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ClearHeaders(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HeadersInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings RemoveHeaders(this AzureAcrWebhookUpdateSettings toolSettings, params string[] headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(headers);
-            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureAcrWebhookUpdateSettings.Headers"/>.</em></p><p>Space-separated custom headers in 'key[=value]' format that will be added to the webhook notifications. Use "" to clear existing headers.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings RemoveHeaders(this AzureAcrWebhookUpdateSettings toolSettings, IEnumerable<string> headers)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(headers);
-            toolSettings.HeadersInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetResourceGroup(this AzureAcrWebhookUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetResourceGroup(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetScope(this AzureAcrWebhookUpdateSettings toolSettings, string scope)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Scope"/>.</em></p><p>The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetScope(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Status
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetStatus(this AzureAcrWebhookUpdateSettings toolSettings, AcrBuildTaskStatus status)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = status;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Status"/>.</em></p><p>Indicates whether the webhook is enabled.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetStatus(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = null;
             return toolSettings;
         }
         #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetTags(this AzureAcrWebhookUpdateSettings toolSettings, string tags)
+        public static AzureAcrReplicationUpdateSettings SetTags(this AzureAcrReplicationUpdateSettings toolSettings, string tags)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetTags(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetTags(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Uri
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings SetUri(this AzureAcrWebhookUpdateSettings toolSettings, string uri)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Uri = uri;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Uri"/>.</em></p><p>The service URI for the webhook to post notifications.</p></summary>
-        [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetUri(this AzureAcrWebhookUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Uri = null;
             return toolSettings;
         }
         #endregion
         #region Add
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetAdd(this AzureAcrWebhookUpdateSettings toolSettings, string add)
+        public static AzureAcrReplicationUpdateSettings SetAdd(this AzureAcrReplicationUpdateSettings toolSettings, string add)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = add;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetAdd(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetAdd(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = null;
@@ -16413,17 +17685,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetForceString(this AzureAcrWebhookUpdateSettings toolSettings, string forceString)
+        public static AzureAcrReplicationUpdateSettings SetForceString(this AzureAcrReplicationUpdateSettings toolSettings, string forceString)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceString = forceString;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetForceString(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetForceString(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceString = null;
@@ -16431,17 +17703,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Remove
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetRemove(this AzureAcrWebhookUpdateSettings toolSettings, string remove)
+        public static AzureAcrReplicationUpdateSettings SetRemove(this AzureAcrReplicationUpdateSettings toolSettings, string remove)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Remove = remove;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetRemove(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetRemove(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Remove = null;
@@ -16449,35 +17721,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region Set
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetSet(this AzureAcrWebhookUpdateSettings toolSettings, string set)
+        public static AzureAcrReplicationUpdateSettings SetSet(this AzureAcrReplicationUpdateSettings toolSettings, string set)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = set;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetSet(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetSet(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetDebug(this AzureAcrWebhookUpdateSettings toolSettings, string debug)
+        public static AzureAcrReplicationUpdateSettings SetSubscription(this AzureAcrReplicationUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationUpdateSettings ResetSubscription(this AzureAcrReplicationUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureAcrReplicationUpdateSettings SetDebug(this AzureAcrReplicationUpdateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetDebug(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetDebug(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16485,17 +17775,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetHelp(this AzureAcrWebhookUpdateSettings toolSettings, string help)
+        public static AzureAcrReplicationUpdateSettings SetHelp(this AzureAcrReplicationUpdateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetHelp(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetHelp(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16503,17 +17793,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetOutput(this AzureAcrWebhookUpdateSettings toolSettings, AzureOutput output)
+        public static AzureAcrReplicationUpdateSettings SetOutput(this AzureAcrReplicationUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetOutput(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetOutput(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16521,17 +17811,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetQuery(this AzureAcrWebhookUpdateSettings toolSettings, string query)
+        public static AzureAcrReplicationUpdateSettings SetQuery(this AzureAcrReplicationUpdateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetQuery(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetQuery(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16539,17 +17829,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureAcrWebhookUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAcrReplicationUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings SetVerbose(this AzureAcrWebhookUpdateSettings toolSettings, string verbose)
+        public static AzureAcrReplicationUpdateSettings SetVerbose(this AzureAcrReplicationUpdateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAcrWebhookUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAcrReplicationUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureAcrWebhookUpdateSettings ResetVerbose(this AzureAcrWebhookUpdateSettings toolSettings)
+        public static AzureAcrReplicationUpdateSettings ResetVerbose(this AzureAcrReplicationUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16597,6 +17887,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigContentTrustShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrConfigContentTrustShowSettings SetSubscription(this AzureAcrConfigContentTrustShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigContentTrustShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrConfigContentTrustShowSettings ResetSubscription(this AzureAcrConfigContentTrustShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -16752,6 +18060,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrConfigContentTrustUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrConfigContentTrustUpdateSettings SetSubscription(this AzureAcrConfigContentTrustUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrConfigContentTrustUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrConfigContentTrustUpdateSettings ResetSubscription(this AzureAcrConfigContentTrustUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAcrConfigContentTrustUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -16901,6 +18227,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Username = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAcrHelmRepoAddSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmRepoAddSettings SetSubscription(this AzureAcrHelmRepoAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAcrHelmRepoAddSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAcrHelmRepoAddSettings ResetSubscription(this AzureAcrHelmRepoAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -17060,17 +18404,6 @@ namespace Nuke.Azure
         public static AcrBuildTaskListBuildsBuildStatus timeout = new AcrBuildTaskListBuildsBuildStatus { Value = "timeout" };
     }
     #endregion
-    #region AcrCredentialRenewPasswordName
-    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class AcrCredentialRenewPasswordName : Enumeration
-    {
-        public static AcrCredentialRenewPasswordName password = new AcrCredentialRenewPasswordName { Value = "password" };
-        public static AcrCredentialRenewPasswordName password2 = new AcrCredentialRenewPasswordName { Value = "password2" };
-    }
-    #endregion
     #region AcrRepositoryOrderby
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
@@ -17080,6 +18413,18 @@ namespace Nuke.Azure
     {
         public static AcrRepositoryOrderby time_asc = new AcrRepositoryOrderby { Value = "time_asc" };
         public static AcrRepositoryOrderby time_desc = new AcrRepositoryOrderby { Value = "time_desc" };
+    }
+    #endregion
+    #region AcrWebhookActions
+    /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class AcrWebhookActions : Enumeration
+    {
+        public static AcrWebhookActions delete = new AcrWebhookActions { Value = "delete" };
+        public static AcrWebhookActions push = new AcrWebhookActions { Value = "push" };
+        public static AcrWebhookActions quarantine = new AcrWebhookActions { Value = "quarantine" };
     }
     #endregion
     #region AcrTaskBaseImageTriggerType
@@ -17093,16 +18438,15 @@ namespace Nuke.Azure
         public static AcrTaskBaseImageTriggerType runtime = new AcrTaskBaseImageTriggerType { Value = "runtime" };
     }
     #endregion
-    #region AcrWebhookActions
+    #region AcrCredentialRenewPasswordName
     /// <summary><p>Used within <see cref="AzureAcrTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    public partial class AcrWebhookActions : Enumeration
+    public partial class AcrCredentialRenewPasswordName : Enumeration
     {
-        public static AcrWebhookActions delete = new AcrWebhookActions { Value = "delete" };
-        public static AcrWebhookActions push = new AcrWebhookActions { Value = "push" };
-        public static AcrWebhookActions quarantine = new AcrWebhookActions { Value = "quarantine" };
+        public static AcrCredentialRenewPasswordName password = new AcrCredentialRenewPasswordName { Value = "password" };
+        public static AcrCredentialRenewPasswordName password2 = new AcrCredentialRenewPasswordName { Value = "password2" };
     }
     #endregion
 }

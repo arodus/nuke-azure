@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -39,46 +39,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureEventhubs(Configure<AzureEventhubsSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubCreate(Configure<AzureEventhubsEventhubCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubDelete(Configure<AzureEventhubsEventhubDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubList(Configure<AzureEventhubsEventhubListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubShow(Configure<AzureEventhubsEventhubShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubUpdate(Configure<AzureEventhubsEventhubUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -140,6 +100,46 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubCreate(Configure<AzureEventhubsEventhubCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubDelete(Configure<AzureEventhubsEventhubDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubList(Configure<AzureEventhubsEventhubListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubShow(Configure<AzureEventhubsEventhubShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubUpdate(Configure<AzureEventhubsEventhubUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureEventhubsNamespaceCreate(Configure<AzureEventhubsNamespaceCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceCreateSettings());
@@ -188,41 +188,57 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleCreate(Configure<AzureEventhubsEventhubAuthorizationRuleCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleCreate(Configure<AzureEventhubsNamespaceAuthorizationRuleCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleDelete(Configure<AzureEventhubsEventhubAuthorizationRuleDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleDelete(Configure<AzureEventhubsNamespaceAuthorizationRuleDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleList(Configure<AzureEventhubsEventhubAuthorizationRuleListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleList(Configure<AzureEventhubsNamespaceAuthorizationRuleListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleShow(Configure<AzureEventhubsEventhubAuthorizationRuleShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleShow(Configure<AzureEventhubsNamespaceAuthorizationRuleShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleUpdate(Configure<AzureEventhubsEventhubAuthorizationRuleUpdateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleUpdate(Configure<AzureEventhubsNamespaceAuthorizationRuleUpdateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleUpdateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsGeorecoveryAliasAuthorizationRuleList(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsGeorecoveryAliasAuthorizationRuleShow(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -268,81 +284,41 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsGeorecoveryAliasAuthorizationRuleList(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleCreate(Configure<AzureEventhubsEventhubAuthorizationRuleCreateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleCreateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsGeorecoveryAliasAuthorizationRuleShow(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleDelete(Configure<AzureEventhubsEventhubAuthorizationRuleDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleDeleteSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleCreate(Configure<AzureEventhubsNamespaceAuthorizationRuleCreateSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleList(Configure<AzureEventhubsEventhubAuthorizationRuleListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleCreateSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleDelete(Configure<AzureEventhubsNamespaceAuthorizationRuleDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleShow(Configure<AzureEventhubsEventhubAuthorizationRuleShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleList(Configure<AzureEventhubsNamespaceAuthorizationRuleListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleUpdate(Configure<AzureEventhubsEventhubAuthorizationRuleUpdateSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleShow(Configure<AzureEventhubsNamespaceAuthorizationRuleShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleUpdate(Configure<AzureEventhubsNamespaceAuthorizationRuleUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleKeysList(Configure<AzureEventhubsEventhubAuthorizationRuleKeysListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleKeysListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleKeysRenew(Configure<AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -359,6 +335,30 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureEventhubsNamespaceAuthorizationRuleKeysRenew(Configure<AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysList(Configure<AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleKeysList(Configure<AzureEventhubsEventhubAuthorizationRuleKeysListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleKeysListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure Event Hubs namespaces, eventhubs, consumergroups and geo recovery configurations - Alias.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureEventhubsEventhubAuthorizationRuleKeysRenew(Configure<AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -387,6 +387,337 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasBreakPairSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasBreakPairSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias break-pair")
+              .Add("--alias {value}", Alias)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasDeleteSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias delete")
+              .Add("--alias {value}", Alias)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasExistsSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasExistsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Geo Recovery Configs - Alias to check availability.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias exists")
+              .Add("--alias {value}", Alias)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasFailOverSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasFailOverSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias fail-over")
+              .Add("--alias {value}", Alias)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasListSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias list")
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasSetSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasSetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
+        public virtual string PartnerNamespace { get; internal set; }
+        /// <summary><p>Alternate Name for the Alias, when the Namespace name and Alias name are same.</p></summary>
+        public virtual string AlternateName { get; internal set; }
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias set")
+              .Add("--partner-namespace {value}", PartnerNamespace)
+              .Add("--alternate-name {value}", AlternateName)
+              .Add("--alias {value}", Alias)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasShowSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias show")
+              .Add("--alias {value}", Alias)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -431,6 +762,8 @@ namespace Nuke.Azure
         public virtual string DestinationName { get; internal set; }
         /// <summary><p>Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs.</p></summary>
         public virtual string StorageAccount { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -458,6 +791,7 @@ namespace Nuke.Azure
               .Add("--blob-container {value}", BlobContainer)
               .Add("--destination-name {value}", DestinationName)
               .Add("--storage-account {value}", StorageAccount)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -476,12 +810,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of Eventhub.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -496,9 +835,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs eventhub delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -525,6 +866,8 @@ namespace Nuke.Azure
         public virtual string Skip { get; internal set; }
         /// <summary><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
         public virtual string Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -543,6 +886,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--skip {value}", Skip)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -561,12 +905,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of Eventhub.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -581,9 +930,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs eventhub show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -602,12 +953,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Eventhub.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>A boolean value that indicates whether capture description is enabled.</p></summary>
         public virtual bool? EnableCapture { get; internal set; }
         /// <summary><p>Number of days to retain events for this Event Hub, value should be 1 to 7 days.</p></summary>
@@ -616,6 +961,17 @@ namespace Nuke.Azure
         public virtual int? PartitionCount { get; internal set; }
         /// <summary><p>Status of Eventhub.</p></summary>
         public virtual EventhubsEventhubStatus Status { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Eventhub.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds.</p></summary>
         public virtual string CaptureInterval { get; internal set; }
         /// <summary><p>Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes.</p></summary>
@@ -650,13 +1006,15 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs eventhub update")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--enable-capture", EnableCapture)
               .Add("--message-retention {value}", MessageRetention)
               .Add("--partition-count {value}", PartitionCount)
               .Add("--status {value}", Status)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--capture-interval {value}", CaptureInterval)
               .Add("--capture-size-limit {value}", CaptureSizeLimit)
               .Add("--archive-name-format {value}", ArchiveNameFormat)
@@ -667,296 +1025,6 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasBreakPairSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasBreakPairSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias break-pair")
-              .Add("--alias {value}", Alias)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasDeleteSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias delete")
-              .Add("--alias {value}", Alias)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasExistsSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasExistsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo Recovery Configs - Alias to check availability.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias exists")
-              .Add("--alias {value}", Alias)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasFailOverSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasFailOverSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias fail-over")
-              .Add("--alias {value}", Alias)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasListSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias list")
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasSetSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasSetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
-        public virtual string PartnerNamespace { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Alternate Name for the Alias, when the Namespace name and Alias name are same.</p></summary>
-        public virtual string AlternateName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias set")
-              .Add("--alias {value}", Alias)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--partner-namespace {value}", PartnerNamespace)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--alternate-name {value}", AlternateName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasShowSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias show")
-              .Add("--alias {value}", Alias)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -985,7 +1053,7 @@ namespace Nuke.Azure
         public virtual bool? EnableAutoInflate { get; internal set; }
         /// <summary><p>A boolean value that indicates whether Kafka is enabled for eventhub namespace.</p></summary>
         public virtual bool? EnableKafka { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units. ( 0 if AutoInflateEnabled = true).</p></summary>
         public virtual string MaximumThroughputUnits { get; internal set; }
@@ -993,6 +1061,8 @@ namespace Nuke.Azure
         public virtual EventhubsNamespaceSku Sku { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1016,6 +1086,7 @@ namespace Nuke.Azure
               .Add("--maximum-throughput-units {value}", MaximumThroughputUnits)
               .Add("--sku {value}", Sku)
               .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1034,10 +1105,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1052,8 +1128,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs namespace delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1074,6 +1152,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
         /// <summary><p>Name to check the namespace name availability.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1089,6 +1169,7 @@ namespace Nuke.Azure
             arguments
               .Add("eventhubs namespace exists")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1109,6 +1190,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1124,6 +1207,7 @@ namespace Nuke.Azure
             arguments
               .Add("eventhubs namespace list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1142,10 +1226,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1160,8 +1249,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs namespace show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1180,10 +1271,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Capacity for Sku.</p></summary>
         public virtual string Capacity { get; internal set; }
         /// <summary><p>A boolean value that indicates whether AutoInflate is enabled for eventhub namespace.</p></summary>
@@ -1196,6 +1283,15 @@ namespace Nuke.Azure
         public virtual EventhubsNamespaceSku Sku { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -1218,14 +1314,628 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs namespace update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--capacity {value}", Capacity)
               .Add("--enable-auto-inflate", EnableAutoInflate)
               .Add("--enable-kafka", EnableKafka)
               .Add("--maximum-throughput-units {value}", MaximumThroughputUnits)
               .Add("--sku {value}", Sku)
               .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsNamespaceAuthorizationRuleCreateSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsNamespaceAuthorizationRuleCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
+        public virtual IReadOnlyList<EventhubsNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<EventhubsNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsNamespaceAuthorizationRuleRights>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs namespace authorization-rule create")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsNamespaceAuthorizationRuleDeleteSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsNamespaceAuthorizationRuleDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs namespace authorization-rule delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsNamespaceAuthorizationRuleListSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsNamespaceAuthorizationRuleListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs namespace authorization-rule list")
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsNamespaceAuthorizationRuleShowSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsNamespaceAuthorizationRuleShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs namespace authorization-rule show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsNamespaceAuthorizationRuleUpdateSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsNamespaceAuthorizationRuleUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
+        public virtual IReadOnlyList<EventhubsNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<EventhubsNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsNamespaceAuthorizationRuleRights>();
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs namespace authorization-rule update")
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias authorization-rule list")
+              .Add("--alias {value}", Alias)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        public virtual string Alias { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs georecovery-alias authorization-rule show")
+              .Add("--alias {value}", Alias)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsEventhubConsumerGroupCreateSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsEventhubConsumerGroupCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of EventHub.</p></summary>
+        public virtual string EventhubName { get; internal set; }
+        /// <summary><p>Name of ConsumerGroup.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
+        public virtual string UserMetadata { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs eventhub consumer-group create")
+              .Add("--eventhub-name {value}", EventhubName)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--user-metadata {value}", UserMetadata)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsEventhubConsumerGroupDeleteSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsEventhubConsumerGroupDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of EventHub.</p></summary>
+        public virtual string EventhubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of ConsumerGroup.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs eventhub consumer-group delete")
+              .Add("--eventhub-name {value}", EventhubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsEventhubConsumerGroupListSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsEventhubConsumerGroupListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of EventHub.</p></summary>
+        public virtual string EventhubName { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
+        public virtual string Skip { get; internal set; }
+        /// <summary><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
+        public virtual string Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs eventhub consumer-group list")
+              .Add("--eventhub-name {value}", EventhubName)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--skip {value}", Skip)
+              .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsEventhubConsumerGroupShowSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsEventhubConsumerGroupShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Name of EventHub.</p></summary>
+        public virtual string EventhubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of ConsumerGroup.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs eventhub consumer-group show")
+              .Add("--eventhub-name {value}", EventhubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureEventhubsEventhubConsumerGroupUpdateSettings
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureEventhubsEventhubConsumerGroupUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
+        public virtual string UserMetadata { get; internal set; }
+        /// <summary><p>Name of EventHub.</p></summary>
+        public virtual string EventhubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of ConsumerGroup.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("eventhubs eventhub consumer-group update")
+              .Add("--user-metadata {value}", UserMetadata)
+              .Add("--eventhub-name {value}", EventhubName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -1257,8 +1967,10 @@ namespace Nuke.Azure
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<EventhubsEventhubAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<EventhubsEventhubAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsEventhubAuthorizationRuleRights>();
+        public virtual IReadOnlyList<EventhubsNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<EventhubsNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsNamespaceAuthorizationRuleRights>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1278,6 +1990,7 @@ namespace Nuke.Azure
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1298,12 +2011,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
         /// <summary><p>Name of EventHub.</p></summary>
         public virtual string EventhubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of EventHub AuthorizationRule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1319,9 +2037,11 @@ namespace Nuke.Azure
             arguments
               .Add("eventhubs eventhub authorization-rule delete")
               .Add("--eventhub-name {value}", EventhubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1346,6 +2066,8 @@ namespace Nuke.Azure
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1363,6 +2085,7 @@ namespace Nuke.Azure
               .Add("--eventhub-name {value}", EventhubName)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1383,12 +2106,17 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
         /// <summary><p>Name of EventHub.</p></summary>
         public virtual string EventhubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of EventHub AuthorizationRule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1404,9 +2132,11 @@ namespace Nuke.Azure
             arguments
               .Add("eventhubs eventhub authorization-rule show")
               .Add("--eventhub-name {value}", EventhubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1425,17 +2155,22 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
+        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
+        public virtual IReadOnlyList<EventhubsNamespaceAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<EventhubsNamespaceAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsNamespaceAuthorizationRuleRights>();
         /// <summary><p>Name of EventHub.</p></summary>
         public virtual string EventhubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of EventHub AuthorizationRule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<EventhubsEventhubAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<EventhubsEventhubAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsEventhubAuthorizationRuleRights>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -1458,11 +2193,13 @@ namespace Nuke.Azure
         {
             arguments
               .Add("eventhubs eventhub authorization-rule update")
+              .Add("--rights {value}", Rights, separator: ' ')
               .Add("--eventhub-name {value}", EventhubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -1476,338 +2213,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureEventhubsEventhubConsumerGroupCreateSettings
+    #region AzureEventhubsNamespaceAuthorizationRuleKeysListSettings
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureEventhubsEventhubConsumerGroupCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of EventHub.</p></summary>
-        public virtual string EventhubName { get; internal set; }
-        /// <summary><p>Name of ConsumerGroup.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
-        public virtual string UserMetadata { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs eventhub consumer-group create")
-              .Add("--eventhub-name {value}", EventhubName)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--user-metadata {value}", UserMetadata)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsEventhubConsumerGroupDeleteSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsEventhubConsumerGroupDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of EventHub.</p></summary>
-        public virtual string EventhubName { get; internal set; }
-        /// <summary><p>Name of ConsumerGroup.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs eventhub consumer-group delete")
-              .Add("--eventhub-name {value}", EventhubName)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsEventhubConsumerGroupListSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsEventhubConsumerGroupListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of EventHub.</p></summary>
-        public virtual string EventhubName { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.</p></summary>
-        public virtual string Skip { get; internal set; }
-        /// <summary><p>May be used to limit the number of results to the most recent N usageDetails.</p></summary>
-        public virtual string Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs eventhub consumer-group list")
-              .Add("--eventhub-name {value}", EventhubName)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--skip {value}", Skip)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsEventhubConsumerGroupShowSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsEventhubConsumerGroupShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of EventHub.</p></summary>
-        public virtual string EventhubName { get; internal set; }
-        /// <summary><p>Name of ConsumerGroup.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs eventhub consumer-group show")
-              .Add("--eventhub-name {value}", EventhubName)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsEventhubConsumerGroupUpdateSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsEventhubConsumerGroupUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of EventHub.</p></summary>
-        public virtual string EventhubName { get; internal set; }
-        /// <summary><p>Name of ConsumerGroup.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
-        public virtual string UserMetadata { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs eventhub consumer-group update")
-              .Add("--eventhub-name {value}", EventhubName)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--user-metadata {value}", UserMetadata)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias authorization-rule list")
-              .Add("--alias {value}", Alias)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        public virtual string Alias { get; internal set; }
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs georecovery-alias authorization-rule show")
-              .Add("--alias {value}", Alias)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleCreateSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsNamespaceAuthorizationRuleCreateSettings : ToolSettings
+    public partial class AzureEventhubsNamespaceAuthorizationRuleKeysListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
@@ -1817,9 +2228,8 @@ namespace Nuke.Azure
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<EventhubsEventhubAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<EventhubsEventhubAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsEventhubAuthorizationRuleRights>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1833,11 +2243,11 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("eventhubs namespace authorization-rule create")
+              .Add("eventhubs namespace authorization-rule keys list")
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1847,248 +2257,30 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleDeleteSettings
+    #region AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureEventhubsNamespaceAuthorizationRuleDeleteSettings : ToolSettings
+    public partial class AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs namespace authorization-rule delete")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleListSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsNamespaceAuthorizationRuleListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs namespace authorization-rule list")
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleShowSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsNamespaceAuthorizationRuleShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs namespace authorization-rule show")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleUpdateSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsNamespaceAuthorizationRuleUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Space-separated list of Authorization rule rights.</p></summary>
-        public virtual IReadOnlyList<EventhubsEventhubAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<EventhubsEventhubAuthorizationRuleRights> RightsInternal { get; set; } = new List<EventhubsEventhubAuthorizationRuleRights>();
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs namespace authorization-rule update")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleKeysListSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsEventhubAuthorizationRuleKeysListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of EventHub.</p></summary>
-        public virtual string EventhubName { get; internal set; }
-        /// <summary><p>Name of EventHub AuthorizationRule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("eventhubs eventhub authorization-rule keys list")
-              .Add("--eventhub-name {value}", EventhubName)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of EventHub.</p></summary>
-        public virtual string EventhubName { get; internal set; }
         /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        public virtual EventhubsEventhubAuthorizationRuleKeysKey Key { get; internal set; }
-        /// <summary><p>Name of EventHub AuthorizationRule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of Namespace.</p></summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
+        public virtual EventhubsNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
         /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
         public virtual string KeyValue { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of Namespace.</p></summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2102,13 +2294,14 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("eventhubs eventhub authorization-rule keys renew")
-              .Add("--eventhub-name {value}", EventhubName)
+              .Add("eventhubs namespace authorization-rule keys renew")
               .Add("--key {value}", Key)
+              .Add("--key-value {value}", KeyValue)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--key-value {value}", KeyValue)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2135,6 +2328,8 @@ namespace Nuke.Azure
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2153,6 +2348,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2162,21 +2358,25 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleKeysListSettings
+    #region AzureEventhubsEventhubAuthorizationRuleKeysListSettings
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureEventhubsNamespaceAuthorizationRuleKeysListSettings : ToolSettings
+    public partial class AzureEventhubsEventhubAuthorizationRuleKeysListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p>Name of EventHub.</p></summary>
+        public virtual string EventhubName { get; internal set; }
+        /// <summary><p>Name of EventHub AuthorizationRule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2190,10 +2390,12 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("eventhubs namespace authorization-rule keys list")
+              .Add("eventhubs eventhub authorization-rule keys list")
+              .Add("--eventhub-name {value}", EventhubName)
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2203,25 +2405,32 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings
+    #region AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings : ToolSettings
+    public partial class AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureEventhubs executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureEventhubsTasks.AzureEventhubsPath;
         /// <summary><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        public virtual EventhubsEventhubAuthorizationRuleKeysKey Key { get; internal set; }
-        /// <summary><p>Name of Namespace AuthorizationRule.</p></summary>
+        public virtual EventhubsNamespaceAuthorizationRuleKeysKey Key { get; internal set; }
+        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        public virtual string KeyValue { get; internal set; }
+        /// <summary><p>Name of EventHub.</p></summary>
+        public virtual string EventhubName { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of EventHub AuthorizationRule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of Namespace.</p></summary>
         public virtual string NamespaceName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        public virtual string KeyValue { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2235,12 +2444,15 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("eventhubs namespace authorization-rule keys renew")
+              .Add("eventhubs eventhub authorization-rule keys renew")
               .Add("--key {value}", Key)
+              .Add("--key-value {value}", KeyValue)
+              .Add("--eventhub-name {value}", EventhubName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--key-value {value}", KeyValue)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2340,6 +2552,1514 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureEventhubsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureEventhubsSettings ResetVerbose(this AzureEventhubsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasBreakPairSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasBreakPairSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetAlias(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetAlias(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetIds(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetIds(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings AddIds(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings AddIds(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ClearIds(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings RemoveIds(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings RemoveIds(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetSubscription(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetDebug(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetDebug(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetHelp(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetHelp(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetOutput(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetOutput(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetQuery(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetQuery(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetVerbose(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasDeleteSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetAlias(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetAlias(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetIds(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetIds(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings AddIds(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings AddIds(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ClearIds(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings RemoveIds(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings RemoveIds(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetSubscription(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetDebug(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetDebug(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetHelp(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetHelp(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetOutput(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetOutput(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetQuery(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetQuery(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetVerbose(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasExistsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasExistsSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo Recovery Configs - Alias to check availability.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetAlias(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo Recovery Configs - Alias to check availability.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetAlias(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetSubscription(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetDebug(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetDebug(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetHelp(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetHelp(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetOutput(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetOutput(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetQuery(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetQuery(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings SetVerbose(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasFailOverSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasFailOverSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetAlias(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetAlias(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetIds(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetIds(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings AddIds(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings AddIds(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ClearIds(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings RemoveIds(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings RemoveIds(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetSubscription(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetDebug(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetDebug(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetHelp(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetHelp(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetOutput(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetOutput(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetQuery(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetQuery(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetVerbose(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasListSettingsExtensions
+    {
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetSubscription(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetDebug(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetDebug(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetHelp(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetHelp(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetOutput(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetOutput(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetQuery(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetQuery(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings SetVerbose(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasListSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasSetSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasSetSettingsExtensions
+    {
+        #region PartnerNamespace
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetPartnerNamespace(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string partnerNamespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PartnerNamespace = partnerNamespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetPartnerNamespace(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PartnerNamespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AlternateName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name for the Alias, when the Namespace name and Alias name are same.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetAlternateName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string alternateName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AlternateName = alternateName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name for the Alias, when the Namespace name and Alias name are same.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetAlternateName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AlternateName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetAlias(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetAlias(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetIds(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetIds(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings AddIds(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings AddIds(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ClearIds(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings RemoveIds(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings RemoveIds(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetSubscription(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetDebug(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetDebug(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetHelp(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetHelp(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetOutput(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetOutput(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetQuery(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetQuery(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings SetVerbose(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasSetSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasShowSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetAlias(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetAlias(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetIds(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetIds(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings AddIds(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings AddIds(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ClearIds(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings RemoveIds(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings RemoveIds(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetSubscription(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetDebug(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetDebug(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetHelp(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetHelp(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetOutput(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetOutput(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetQuery(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetQuery(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings SetVerbose(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasShowSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -2612,6 +4332,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubCreateSettings SetSubscription(this AzureEventhubsEventhubCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubCreateSettings ResetSubscription(this AzureEventhubsEventhubCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2710,6 +4448,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventhubsEventhubDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings SetIds(this AzureEventhubsEventhubDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings SetIds(this AzureEventhubsEventhubDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings AddIds(this AzureEventhubsEventhubDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings AddIds(this AzureEventhubsEventhubDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings ClearIds(this AzureEventhubsEventhubDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings RemoveIds(this AzureEventhubsEventhubDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings RemoveIds(this AzureEventhubsEventhubDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubDeleteSettings.Name"/>.</em></p><p>Name of Eventhub.</p></summary>
         [Pure]
@@ -2761,6 +4559,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings SetSubscription(this AzureEventhubsEventhubDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubDeleteSettings ResetSubscription(this AzureEventhubsEventhubDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2934,6 +4750,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubListSettings SetSubscription(this AzureEventhubsEventhubListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubListSettings ResetSubscription(this AzureEventhubsEventhubListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3032,6 +4866,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventhubsEventhubShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings SetIds(this AzureEventhubsEventhubShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings SetIds(this AzureEventhubsEventhubShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings AddIds(this AzureEventhubsEventhubShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings AddIds(this AzureEventhubsEventhubShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings ClearIds(this AzureEventhubsEventhubShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings RemoveIds(this AzureEventhubsEventhubShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings RemoveIds(this AzureEventhubsEventhubShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubShowSettings.Name"/>.</em></p><p>Name of Eventhub.</p></summary>
         [Pure]
@@ -3083,6 +4977,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings SetSubscription(this AzureEventhubsEventhubShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubShowSettings ResetSubscription(this AzureEventhubsEventhubShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3184,60 +5096,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventhubsEventhubUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.Name"/>.</em></p><p>Name of Eventhub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubUpdateSettings SetName(this AzureEventhubsEventhubUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubUpdateSettings.Name"/>.</em></p><p>Name of Eventhub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubUpdateSettings ResetName(this AzureEventhubsEventhubUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubUpdateSettings SetNamespaceName(this AzureEventhubsEventhubUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubUpdateSettings ResetNamespaceName(this AzureEventhubsEventhubUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubUpdateSettings SetResourceGroup(this AzureEventhubsEventhubUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubUpdateSettings ResetResourceGroup(this AzureEventhubsEventhubUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region EnableCapture
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.EnableCapture"/>.</em></p><p>A boolean value that indicates whether capture description is enabled.</p></summary>
         [Pure]
@@ -3331,6 +5189,138 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Status = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings SetIds(this AzureEventhubsEventhubUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings SetIds(this AzureEventhubsEventhubUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings AddIds(this AzureEventhubsEventhubUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings AddIds(this AzureEventhubsEventhubUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings ClearIds(this AzureEventhubsEventhubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings RemoveIds(this AzureEventhubsEventhubUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings RemoveIds(this AzureEventhubsEventhubUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.Name"/>.</em></p><p>Name of Eventhub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings SetName(this AzureEventhubsEventhubUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubUpdateSettings.Name"/>.</em></p><p>Name of Eventhub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings ResetName(this AzureEventhubsEventhubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings SetNamespaceName(this AzureEventhubsEventhubUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings ResetNamespaceName(this AzureEventhubsEventhubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings SetResourceGroup(this AzureEventhubsEventhubUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings ResetResourceGroup(this AzureEventhubsEventhubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings SetSubscription(this AzureEventhubsEventhubUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubUpdateSettings ResetSubscription(this AzureEventhubsEventhubUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3606,1088 +5596,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsGeorecoveryAliasBreakPairSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasBreakPairSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetAlias(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetAlias(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetDebug(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetDebug(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetHelp(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetHelp(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetOutput(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetOutput(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetQuery(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetQuery(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings SetVerbose(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasBreakPairSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasBreakPairSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasBreakPairSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasDeleteSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetAlias(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetAlias(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetDebug(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetDebug(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetHelp(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetHelp(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetOutput(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetOutput(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetQuery(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetQuery(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings SetVerbose(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasDeleteSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasExistsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasExistsSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo Recovery Configs - Alias to check availability.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetAlias(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Alias"/>.</em></p><p>Name of Geo Recovery Configs - Alias to check availability.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetAlias(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetDebug(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetDebug(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetHelp(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetHelp(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetOutput(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetOutput(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetQuery(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetQuery(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings SetVerbose(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasExistsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasExistsSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasExistsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasFailOverSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasFailOverSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetAlias(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetAlias(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetDebug(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetDebug(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetHelp(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetHelp(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetOutput(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetOutput(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetQuery(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetQuery(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings SetVerbose(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasFailOverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasFailOverSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasFailOverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasListSettingsExtensions
-    {
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings SetDebug(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings ResetDebug(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings SetHelp(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings ResetHelp(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings SetOutput(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings ResetOutput(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings SetQuery(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings ResetQuery(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings SetVerbose(this AzureEventhubsGeorecoveryAliasListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasListSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasSetSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasSetSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetAlias(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetAlias(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PartnerNamespace
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetPartnerNamespace(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string partnerNamespace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PartnerNamespace = partnerNamespace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.PartnerNamespace"/>.</em></p><p>Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetPartnerNamespace(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PartnerNamespace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AlternateName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name for the Alias, when the Namespace name and Alias name are same.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetAlternateName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string alternateName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlternateName = alternateName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.AlternateName"/>.</em></p><p>Alternate Name for the Alias, when the Namespace name and Alias name are same.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetAlternateName(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AlternateName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetDebug(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetDebug(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetHelp(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetHelp(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetOutput(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetOutput(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetQuery(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetQuery(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings SetVerbose(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasSetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasSetSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasShowSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetAlias(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetAlias(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetDebug(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetDebug(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetHelp(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetHelp(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetOutput(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetOutput(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetQuery(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetQuery(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings SetVerbose(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasShowSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureEventhubsNamespaceCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
@@ -4833,7 +5741,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureEventhubsNamespaceCreateSettings SetLocation(this AzureEventhubsNamespaceCreateSettings toolSettings, string location)
         {
@@ -4841,7 +5749,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureEventhubsNamespaceCreateSettings ResetLocation(this AzureEventhubsNamespaceCreateSettings toolSettings)
         {
@@ -4901,6 +5809,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceCreateSettings SetSubscription(this AzureEventhubsNamespaceCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceCreateSettings ResetSubscription(this AzureEventhubsNamespaceCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5002,6 +5928,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventhubsNamespaceDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings SetIds(this AzureEventhubsNamespaceDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings SetIds(this AzureEventhubsNamespaceDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings AddIds(this AzureEventhubsNamespaceDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings AddIds(this AzureEventhubsNamespaceDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings ClearIds(this AzureEventhubsNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings RemoveIds(this AzureEventhubsNamespaceDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings RemoveIds(this AzureEventhubsNamespaceDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceDeleteSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
@@ -5035,6 +6021,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings SetSubscription(this AzureEventhubsNamespaceDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceDeleteSettings ResetSubscription(this AzureEventhubsNamespaceDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5154,6 +6158,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceExistsSettings SetSubscription(this AzureEventhubsNamespaceExistsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceExistsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceExistsSettings ResetSubscription(this AzureEventhubsNamespaceExistsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceExistsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5270,6 +6292,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceListSettings SetSubscription(this AzureEventhubsNamespaceListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceListSettings ResetSubscription(this AzureEventhubsNamespaceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5368,6 +6408,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventhubsNamespaceShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings SetIds(this AzureEventhubsNamespaceShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings SetIds(this AzureEventhubsNamespaceShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings AddIds(this AzureEventhubsNamespaceShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings AddIds(this AzureEventhubsNamespaceShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings ClearIds(this AzureEventhubsNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings RemoveIds(this AzureEventhubsNamespaceShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings RemoveIds(this AzureEventhubsNamespaceShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceShowSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
@@ -5401,6 +6501,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings SetSubscription(this AzureEventhubsNamespaceShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceShowSettings ResetSubscription(this AzureEventhubsNamespaceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5502,42 +6620,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventhubsNamespaceUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceUpdateSettings SetName(this AzureEventhubsNamespaceUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceUpdateSettings ResetName(this AzureEventhubsNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceUpdateSettings SetResourceGroup(this AzureEventhubsNamespaceUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceUpdateSettings ResetResourceGroup(this AzureEventhubsNamespaceUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Capacity
         /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.Capacity"/>.</em></p><p>Capacity for Sku.</p></summary>
         [Pure]
@@ -5691,6 +6773,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings SetIds(this AzureEventhubsNamespaceUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings SetIds(this AzureEventhubsNamespaceUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings AddIds(this AzureEventhubsNamespaceUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings AddIds(this AzureEventhubsNamespaceUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings ClearIds(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings RemoveIds(this AzureEventhubsNamespaceUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings RemoveIds(this AzureEventhubsNamespaceUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings SetName(this AzureEventhubsNamespaceUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceUpdateSettings.Name"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings ResetName(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings SetResourceGroup(this AzureEventhubsNamespaceUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings ResetResourceGroup(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings SetSubscription(this AzureEventhubsNamespaceUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceUpdateSettings ResetSubscription(this AzureEventhubsNamespaceUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5858,42 +7054,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleCreateSettingsExtensions
+    #region AzureEventhubsNamespaceAuthorizationRuleCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsEventhubAuthorizationRuleCreateSettingsExtensions
+    public static partial class AzureEventhubsNamespaceAuthorizationRuleCreateSettingsExtensions
     {
-        #region EventhubName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string eventhubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = eventhubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string name)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5901,17 +7079,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string namespaceName)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -5919,17 +7097,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -5937,77 +7115,95 @@ namespace Nuke.Azure
         }
         #endregion
         #region Rights
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ClearRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ClearRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string debug)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetSubscription(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetSubscription(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -6015,17 +7211,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string help)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -6033,17 +7229,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -6051,17 +7247,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string query)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -6069,17 +7265,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string verbose)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6088,42 +7284,84 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleDeleteSettingsExtensions
+    #region AzureEventhubsNamespaceAuthorizationRuleDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsEventhubAuthorizationRuleDeleteSettingsExtensions
+    public static partial class AzureEventhubsNamespaceAuthorizationRuleDeleteSettingsExtensions
     {
-        #region EventhubName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string eventhubName)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = eventhubName;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ClearIds(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string name)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -6131,17 +7369,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -6149,35 +7387,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string debug)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetSubscription(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetSubscription(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -6185,17 +7441,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string help)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -6203,17 +7459,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -6221,17 +7477,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string query)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -6239,17 +7495,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string verbose)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6258,42 +7514,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleListSettingsExtensions
+    #region AzureEventhubsNamespaceAuthorizationRuleListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsEventhubAuthorizationRuleListSettingsExtensions
+    public static partial class AzureEventhubsNamespaceAuthorizationRuleListSettingsExtensions
     {
-        #region EventhubName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string eventhubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = eventhubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = null;
-            return toolSettings;
-        }
-        #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string namespaceName)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -6301,35 +7539,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string debug)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetSubscription(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetSubscription(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -6337,17 +7593,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string help)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -6355,17 +7611,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -6373,17 +7629,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string query)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -6391,17 +7647,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string verbose)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6410,42 +7666,84 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleShowSettingsExtensions
+    #region AzureEventhubsNamespaceAuthorizationRuleShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsEventhubAuthorizationRuleShowSettingsExtensions
+    public static partial class AzureEventhubsNamespaceAuthorizationRuleShowSettingsExtensions
     {
-        #region EventhubName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string eventhubName)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = eventhubName;
+            toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = null;
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ClearIds(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string name)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -6453,17 +7751,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -6471,35 +7769,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string debug)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetSubscription(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetSubscription(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -6507,17 +7823,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string help)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -6525,17 +7841,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -6543,17 +7859,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string query)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -6561,17 +7877,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string verbose)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6580,156 +7896,216 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleUpdateSettingsExtensions
+    #region AzureEventhubsNamespaceAuthorizationRuleUpdateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsEventhubAuthorizationRuleUpdateSettingsExtensions
+    public static partial class AzureEventhubsNamespaceAuthorizationRuleUpdateSettingsExtensions
     {
-        #region EventhubName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string eventhubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = eventhubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Rights
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ClearRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ClearRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ClearIds(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetSubscription(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetSubscription(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Add
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetAdd(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string add)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetAdd(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string add)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = add;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetAdd(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetAdd(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = null;
@@ -6737,17 +8113,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetForceString(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string forceString)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetForceString(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string forceString)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceString = forceString;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetForceString(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetForceString(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceString = null;
@@ -6755,17 +8131,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Remove
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetRemove(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string remove)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetRemove(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string remove)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Remove = remove;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetRemove(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetRemove(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Remove = null;
@@ -6773,17 +8149,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Set
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetSet(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string set)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetSet(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string set)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = set;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetSet(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetSet(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = null;
@@ -6791,17 +8167,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string debug)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -6809,17 +8185,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string help)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -6827,17 +8203,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -6845,17 +8221,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string query)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -6863,17 +8239,435 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string verbose)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetSubscription(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetIds(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetIds(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings AddIds(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings AddIds(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ClearIds(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings RemoveIds(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings RemoveIds(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetSubscription(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -6975,6 +8769,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.UserMetadata = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupCreateSettings SetSubscription(this AzureEventhubsEventhubConsumerGroupCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubConsumerGroupCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupCreateSettings ResetSubscription(this AzureEventhubsEventhubConsumerGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7094,6 +8906,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings SetIds(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings SetIds(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings AddIds(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings AddIds(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings ClearIds(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings RemoveIds(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings RemoveIds(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Name"/>.</em></p><p>Name of ConsumerGroup.</p></summary>
         [Pure]
@@ -7145,6 +9017,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings SetSubscription(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubConsumerGroupDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupDeleteSettings ResetSubscription(this AzureEventhubsEventhubConsumerGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7336,6 +9226,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupListSettings SetSubscription(this AzureEventhubsEventhubConsumerGroupListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubConsumerGroupListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupListSettings ResetSubscription(this AzureEventhubsEventhubConsumerGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7452,6 +9360,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings SetIds(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings SetIds(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings AddIds(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings AddIds(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings ClearIds(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings RemoveIds(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings RemoveIds(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Name"/>.</em></p><p>Name of ConsumerGroup.</p></summary>
         [Pure]
@@ -7503,6 +9471,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings SetSubscription(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubConsumerGroupShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupShowSettings ResetSubscription(this AzureEventhubsEventhubConsumerGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7604,6 +9590,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureEventhubsEventhubConsumerGroupUpdateSettingsExtensions
     {
+        #region UserMetadata
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.UserMetadata"/>.</em></p><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings SetUserMetadata(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, string userMetadata)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserMetadata = userMetadata;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.UserMetadata"/>.</em></p><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings ResetUserMetadata(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserMetadata = null;
+            return toolSettings;
+        }
+        #endregion
         #region EventhubName
         /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
         [Pure]
@@ -7619,6 +9623,66 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.EventhubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings SetIds(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings SetIds(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings AddIds(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings AddIds(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings ClearIds(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings RemoveIds(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings RemoveIds(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -7676,21 +9740,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region UserMetadata
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.UserMetadata"/>.</em></p><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubConsumerGroupUpdateSettings SetUserMetadata(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, string userMetadata)
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings SetSubscription(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.UserMetadata = userMetadata;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.UserMetadata"/>.</em></p><p>Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubConsumerGroupUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsEventhubConsumerGroupUpdateSettings ResetUserMetadata(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubConsumerGroupUpdateSettings ResetSubscription(this AzureEventhubsEventhubConsumerGroupUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.UserMetadata = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7858,194 +9922,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    #region AzureEventhubsEventhubAuthorizationRuleCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettingsExtensions
+    public static partial class AzureEventhubsEventhubAuthorizationRuleCreateSettingsExtensions
     {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        #region EventhubName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string alias)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string eventhubName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
+            toolSettings.EventhubName = eventhubName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings SetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
+            toolSettings.EventhubName = null;
             return toolSettings;
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string name)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -8053,17 +9965,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -8071,169 +9983,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings SetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsNamespaceAuthorizationRuleCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -8241,77 +10001,95 @@ namespace Nuke.Azure
         }
         #endregion
         #region Rights
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ClearRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ClearRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string debug)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetSubscription(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetSubscription(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8319,17 +10097,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string help)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8337,17 +10115,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8355,17 +10133,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string query)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8373,17 +10151,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings, string verbose)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleCreateSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleCreateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleCreateSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8392,24 +10170,102 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleDeleteSettingsExtensions
+    #region AzureEventhubsEventhubAuthorizationRuleDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsNamespaceAuthorizationRuleDeleteSettingsExtensions
+    public static partial class AzureEventhubsEventhubAuthorizationRuleDeleteSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        #region EventhubName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string name)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string eventhubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = eventhubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ClearIds(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -8417,17 +10273,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -8435,35 +10291,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string debug)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetSubscription(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetSubscription(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8471,17 +10345,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string help)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8489,17 +10363,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8507,17 +10381,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string query)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8525,17 +10399,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings, string verbose)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleDeleteSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleDeleteSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8544,24 +10418,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleListSettingsExtensions
+    #region AzureEventhubsEventhubAuthorizationRuleListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsNamespaceAuthorizationRuleListSettingsExtensions
+    public static partial class AzureEventhubsEventhubAuthorizationRuleListSettingsExtensions
     {
+        #region EventhubName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string eventhubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = eventhubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = null;
+            return toolSettings;
+        }
+        #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string namespaceName)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -8569,35 +10461,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string debug)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetSubscription(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetSubscription(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8605,17 +10515,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string help)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8623,17 +10533,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8641,17 +10551,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string query)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8659,17 +10569,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings, string verbose)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleListSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleListSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8678,24 +10588,102 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleShowSettingsExtensions
+    #region AzureEventhubsEventhubAuthorizationRuleShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsNamespaceAuthorizationRuleShowSettingsExtensions
+    public static partial class AzureEventhubsEventhubAuthorizationRuleShowSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        #region EventhubName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string name)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string eventhubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = eventhubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ClearIds(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -8703,17 +10691,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -8721,35 +10709,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string debug)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetSubscription(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetSubscription(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8757,17 +10763,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string help)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8775,17 +10781,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8793,17 +10799,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string query)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8811,17 +10817,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings, string verbose)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleShowSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleShowSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleShowSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8830,138 +10836,234 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureEventhubsNamespaceAuthorizationRuleUpdateSettingsExtensions
+    #region AzureEventhubsEventhubAuthorizationRuleUpdateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsNamespaceAuthorizationRuleUpdateSettingsExtensions
+    public static partial class AzureEventhubsEventhubAuthorizationRuleUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Rights
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/> to a new list.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings AddRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ClearRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ClearRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, params EventhubsEventhubAuthorizationRuleRights[] rights)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params EventhubsNamespaceAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Rights"/>.</em></p><p>Space-separated list of Authorization rule rights.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsEventhubAuthorizationRuleRights> rights)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings RemoveRights(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<EventhubsNamespaceAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<EventhubsEventhubAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<EventhubsNamespaceAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region EventhubName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string eventhubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = eventhubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ClearIds(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetSubscription(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetSubscription(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Add
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetAdd(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string add)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetAdd(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string add)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = add;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetAdd(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetAdd(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Add = null;
@@ -8969,17 +11071,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetForceString(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string forceString)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetForceString(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string forceString)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceString = forceString;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetForceString(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetForceString(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ForceString = null;
@@ -8987,17 +11089,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Remove
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetRemove(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string remove)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetRemove(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string remove)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Remove = remove;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetRemove(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetRemove(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Remove = null;
@@ -9005,17 +11107,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Set
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetSet(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string set)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetSet(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string set)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = set;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetSet(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetSet(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = null;
@@ -9023,17 +11125,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetDebug(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string debug)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetDebug(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -9041,17 +11143,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetHelp(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string help)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetHelp(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -9059,17 +11161,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetOutput(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetOutput(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -9077,17 +11179,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetQuery(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string query)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetQuery(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -9095,563 +11197,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings SetVerbose(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings, string verbose)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleUpdateSettings ResetVerbose(this AzureEventhubsNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleKeysListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsEventhubAuthorizationRuleKeysListSettingsExtensions
-    {
-        #region EventhubName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string eventhubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = eventhubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsEventhubAuthorizationRuleKeysRenewSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsEventhubAuthorizationRuleKeysRenewSettingsExtensions
-    {
-        #region EventhubName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string eventhubName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = eventhubName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EventhubName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Key
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetKey(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, EventhubsEventhubAuthorizationRuleKeysKey key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetKey(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyValue
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = keyValue;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
-    {
-        #region Alias
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string alias)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = alias;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Alias = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureEventhubsEventhubAuthorizationRuleUpdateSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9717,6 +11273,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysListSettings SetSubscription(this AzureEventhubsNamespaceAuthorizationRuleKeysListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysListSettings ResetSubscription(this AzureEventhubsNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9821,7 +11395,7 @@ namespace Nuke.Azure
         #region Key
         /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings SetKey(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, EventhubsEventhubAuthorizationRuleKeysKey key)
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings SetKey(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, EventhubsNamespaceAuthorizationRuleKeysKey key)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Key = key;
@@ -9833,6 +11407,84 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyValue
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = keyValue;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings SetIds(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings AddIds(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings ClearIds(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings RemoveIds(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
         #endregion
@@ -9890,21 +11542,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region KeyValue
-        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings SetSubscription(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = keyValue;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings ResetSubscription(this AzureEventhubsNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10000,6 +11652,666 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettingsExtensions
+    {
+        #region Alias
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string alias)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = alias;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Alias"/>.</em></p><p>Name of Geo-Disaster Recovery Configuration Alias.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetAlias(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Alias = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of Namespace AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetSubscription(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetSubscription(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetDebug(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetHelp(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetOutput(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetQuery(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings SetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings ResetVerbose(this AzureEventhubsGeorecoveryAliasAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsEventhubAuthorizationRuleKeysListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsEventhubAuthorizationRuleKeysListSettingsExtensions
+    {
+        #region EventhubName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string eventhubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = eventhubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetSubscription(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetSubscription(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysListSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureEventhubsEventhubAuthorizationRuleKeysRenewSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureEventhubsEventhubAuthorizationRuleKeysRenewSettingsExtensions
+    {
+        #region Key
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetKey(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, EventhubsNamespaceAuthorizationRuleKeysKey key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Key"/>.</em></p><p>Specifies Primary or Secondary key needs to be reset.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetKey(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyValue
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = keyValue;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.KeyValue"/>.</em></p><p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EventhubName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string eventhubName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = eventhubName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.EventhubName"/>.</em></p><p>Name of EventHub.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetEventhubName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EventhubName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetIds(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings AddIds(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ClearIds(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings RemoveIds(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Name"/>.</em></p><p>Name of EventHub AuthorizationRule.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.NamespaceName"/>.</em></p><p>Name of Namespace.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetSubscription(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetSubscription(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetDebug(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetHelp(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetOutput(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetQuery(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings SetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureEventhubsEventhubAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region EventhubsEventhubStatus
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
@@ -10024,27 +12336,27 @@ namespace Nuke.Azure
         public static EventhubsNamespaceSku standard = new EventhubsNamespaceSku { Value = "standard" };
     }
     #endregion
-    #region EventhubsEventhubAuthorizationRuleRights
+    #region EventhubsNamespaceAuthorizationRuleRights
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    public partial class EventhubsEventhubAuthorizationRuleRights : Enumeration
+    public partial class EventhubsNamespaceAuthorizationRuleRights : Enumeration
     {
-        public static EventhubsEventhubAuthorizationRuleRights listen = new EventhubsEventhubAuthorizationRuleRights { Value = "listen" };
-        public static EventhubsEventhubAuthorizationRuleRights manage = new EventhubsEventhubAuthorizationRuleRights { Value = "manage" };
-        public static EventhubsEventhubAuthorizationRuleRights send = new EventhubsEventhubAuthorizationRuleRights { Value = "send" };
+        public static EventhubsNamespaceAuthorizationRuleRights listen = new EventhubsNamespaceAuthorizationRuleRights { Value = "listen" };
+        public static EventhubsNamespaceAuthorizationRuleRights manage = new EventhubsNamespaceAuthorizationRuleRights { Value = "manage" };
+        public static EventhubsNamespaceAuthorizationRuleRights send = new EventhubsNamespaceAuthorizationRuleRights { Value = "send" };
     }
     #endregion
-    #region EventhubsEventhubAuthorizationRuleKeysKey
+    #region EventhubsNamespaceAuthorizationRuleKeysKey
     /// <summary><p>Used within <see cref="AzureEventhubsTasks"/>.</p></summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    public partial class EventhubsEventhubAuthorizationRuleKeysKey : Enumeration
+    public partial class EventhubsNamespaceAuthorizationRuleKeysKey : Enumeration
     {
-        public static EventhubsEventhubAuthorizationRuleKeysKey primarykey = new EventhubsEventhubAuthorizationRuleKeysKey { Value = "primarykey" };
-        public static EventhubsEventhubAuthorizationRuleKeysKey secondarykey = new EventhubsEventhubAuthorizationRuleKeysKey { Value = "secondarykey" };
+        public static EventhubsNamespaceAuthorizationRuleKeysKey primarykey = new EventhubsNamespaceAuthorizationRuleKeysKey { Value = "primarykey" };
+        public static EventhubsNamespaceAuthorizationRuleKeysKey secondarykey = new EventhubsNamespaceAuthorizationRuleKeysKey { Value = "secondarykey" };
     }
     #endregion
 }
