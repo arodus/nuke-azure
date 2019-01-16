@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -39,6 +39,46 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureMonitor(Configure<AzureMonitorSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleCreate(Configure<AzureMonitorAutoscaleCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleDelete(Configure<AzureMonitorAutoscaleDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleList(Configure<AzureMonitorAutoscaleListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleShow(Configure<AzureMonitorAutoscaleShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleUpdate(Configure<AzureMonitorAutoscaleUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -87,22 +127,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureMonitorActionGroupUpdate(Configure<AzureMonitorActionGroupUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorActionGroupUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorActivityLogList(Configure<AzureMonitorActivityLogListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorActivityLogListCategories(Configure<AzureMonitorActivityLogListCategoriesSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogListCategoriesSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -164,6 +188,62 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorActivityLogList(Configure<AzureMonitorActivityLogListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorActivityLogListCategories(Configure<AzureMonitorActivityLogListCategoriesSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorActivityLogListCategoriesSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsCreate(Configure<AzureMonitorDiagnosticSettingsCreateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCreateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsDelete(Configure<AzureMonitorDiagnosticSettingsDeleteSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsList(Configure<AzureMonitorDiagnosticSettingsListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsShow(Configure<AzureMonitorDiagnosticSettingsShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsUpdate(Configure<AzureMonitorDiagnosticSettingsUpdateSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsUpdateSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureMonitorAutoscaleSettingsCreate(Configure<AzureMonitorAutoscaleSettingsCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsCreateSettings());
@@ -207,86 +287,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureMonitorAutoscaleSettingsUpdate(Configure<AzureMonitorAutoscaleSettingsUpdateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleSettingsUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleCreate(Configure<AzureMonitorAutoscaleCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleDelete(Configure<AzureMonitorAutoscaleDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleList(Configure<AzureMonitorAutoscaleListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleShow(Configure<AzureMonitorAutoscaleShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorAutoscaleUpdate(Configure<AzureMonitorAutoscaleUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleUpdateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsCreate(Configure<AzureMonitorDiagnosticSettingsCreateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCreateSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsDelete(Configure<AzureMonitorDiagnosticSettingsDeleteSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsDeleteSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsList(Configure<AzureMonitorDiagnosticSettingsListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsShow(Configure<AzureMonitorDiagnosticSettingsShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsUpdate(Configure<AzureMonitorDiagnosticSettingsUpdateSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsUpdateSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -388,6 +388,22 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsCategoriesList(Configure<AzureMonitorDiagnosticSettingsCategoriesListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsCategoriesShow(Configure<AzureMonitorDiagnosticSettingsCategoriesShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
         public static IReadOnlyCollection<Output> AzureMonitorAutoscaleProfileCreate(Configure<AzureMonitorAutoscaleProfileCreateSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleProfileCreateSettings());
@@ -455,22 +471,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureMonitorAutoscaleRuleList(Configure<AzureMonitorAutoscaleRuleListSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureMonitorAutoscaleRuleListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsCategoriesList(Configure<AzureMonitorDiagnosticSettingsCategoriesListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage the Azure Monitor Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureMonitorDiagnosticSettingsCategoriesShow(Configure<AzureMonitorDiagnosticSettingsCategoriesShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureMonitorDiagnosticSettingsCategoriesShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -580,6 +580,298 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureMonitorAutoscaleCreateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Create the autoscale settings in a disabled state.</p></summary>
+        public virtual bool? Disabled { get; internal set; }
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Name of the autoscale settings.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>The numer of instances to use. If used with --min/max-count, the default number of instances to use.</p></summary>
+        public virtual string Count { get; internal set; }
+        /// <summary><p>The maximum number of instances.</p></summary>
+        public virtual int? MaxCount { get; internal set; }
+        /// <summary><p>The minimum number of instances.</p></summary>
+        public virtual int? MinCount { get; internal set; }
+        /// <summary><p>Add an action to fire when a scaling event occurs.</p></summary>
+        public virtual string Action { get; internal set; }
+        /// <summary><p>Send email to subscription administrator on scaling.</p></summary>
+        public virtual bool? EmailAdministrator { get; internal set; }
+        /// <summary><p>Send email to subscription co-administrators on scaling.</p></summary>
+        public virtual bool? EmailCoadministrators { get; internal set; }
+        /// <summary><p>Name or ID of the target resource.</p></summary>
+        public virtual string Resource { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Target resource provider namespace.</p></summary>
+        public virtual string ResourceNamespace { get; internal set; }
+        /// <summary><p>Target resource parent path, if applicable.</p></summary>
+        public virtual string ResourceParent { get; internal set; }
+        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale create")
+              .Add("--disabled", Disabled)
+              .Add("--location {value}", Location)
+              .Add("--name {value}", Name)
+              .Add("--tags {value}", Tags)
+              .Add("--count {value}", Count)
+              .Add("--max-count {value}", MaxCount)
+              .Add("--min-count {value}", MinCount)
+              .Add("--action {value}", Action)
+              .Add("--email-administrator", EmailAdministrator)
+              .Add("--email-coadministrators", EmailCoadministrators)
+              .Add("--resource {value}", Resource)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--resource-namespace {value}", ResourceNamespace)
+              .Add("--resource-parent {value}", ResourceParent)
+              .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleDeleteSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the autoscale settings.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleListSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleShowSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the autoscale settings.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleUpdateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Autoscale settings enabled status.</p></summary>
+        public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the autoscale settings.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>The numer of instances to use. If used with --min/max-count, the default number of instances to use.</p></summary>
+        public virtual string Count { get; internal set; }
+        /// <summary><p>The maximum number of instances.</p></summary>
+        public virtual int? MaxCount { get; internal set; }
+        /// <summary><p>The minimum number of instances.</p></summary>
+        public virtual int? MinCount { get; internal set; }
+        /// <summary><p>Add an action to fire when a scaling event occurs.</p></summary>
+        public virtual string AddAction { get; internal set; }
+        /// <summary><p>Send email to subscription administrator on scaling.</p></summary>
+        public virtual bool? EmailAdministrator { get; internal set; }
+        /// <summary><p>Send email to subscription co-administrators on scaling.</p></summary>
+        public virtual bool? EmailCoadministrators { get; internal set; }
+        /// <summary><p>Remove one or more actions.</p></summary>
+        public virtual string RemoveAction { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale update")
+              .Add("--enabled", Enabled)
+              .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--count {value}", Count)
+              .Add("--max-count {value}", MaxCount)
+              .Add("--min-count {value}", MinCount)
+              .Add("--add-action {value}", AddAction)
+              .Add("--email-administrator", EmailAdministrator)
+              .Add("--email-coadministrators", EmailCoadministrators)
+              .Add("--remove-action {value}", RemoveAction)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureMonitorActionGroupCreateSettings
     /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
     [PublicAPI]
@@ -599,6 +891,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>Add receivers to the action group during the creation.</p></summary>
         public virtual string Action { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -618,6 +912,7 @@ namespace Nuke.Azure
               .Add("--short-name {value}", ShortName)
               .Add("--tags {value}", Tags)
               .Add("--action {value}", Action)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -636,10 +931,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the action group.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -654,8 +954,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor action-group delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -674,12 +976,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The name of the action group.</p></summary>
-        public virtual string ActionGroup { get; internal set; }
         /// <summary><p>The name of the receiver to resubscribe.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>The name of the action group.</p></summary>
+        public virtual string ActionGroup { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -694,9 +1001,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor action-group enable-receiver")
-              .Add("--action-group {value}", ActionGroup)
               .Add("--name {value}", Name)
+              .Add("--action-group {value}", ActionGroup)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -717,6 +1026,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
         /// <summary><p>Name of the resource group under which the action groups are being listed. If it is omitted, all the action groups under the current subscription are listed.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -732,6 +1043,7 @@ namespace Nuke.Azure
             arguments
               .Add("monitor action-group list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -750,10 +1062,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the action group.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -768,8 +1085,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor action-group show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -788,14 +1107,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The name of the action group.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Update the group short name of the action group.</p></summary>
         public virtual string ShortName { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the action group.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add receivers to the action group.</p></summary>
         public virtual string AddAction { get; internal set; }
         /// <summary><p>Remove receivers from the action group. Accept space-separated list of receiver names.</p></summary>
@@ -822,12 +1146,410 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor action-group update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--short-name {value}", ShortName)
               .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add-action {value}", AddAction)
               .Add("--remove-action {value}", RemoveAction)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAlertCreateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAlertCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The condition which triggers the rule.</p></summary>
+        public virtual string Condition { get; internal set; }
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Free-text description of the rule. Defaults to the condition expression.</p></summary>
+        public virtual string Description { get; internal set; }
+        /// <summary><p>Create the rule in a disabled state.</p></summary>
+        public virtual bool? Disabled { get; internal set; }
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        public virtual string Location { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>Add an action to fire when the alert is triggered.</p></summary>
+        public virtual string Action { get; internal set; }
+        /// <summary><p>Email the service owners if an alert is triggered.</p></summary>
+        public virtual bool? EmailServiceOwners { get; internal set; }
+        /// <summary><p>Name or ID of the target resource.</p></summary>
+        public virtual string Target { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Target resource provider namespace.</p></summary>
+        public virtual string TargetNamespace { get; internal set; }
+        /// <summary><p>Target resource parent path, if applicable.</p></summary>
+        public virtual string TargetParent { get; internal set; }
+        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        public virtual string TargetType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor alert create")
+              .Add("--condition {value}", Condition)
+              .Add("--name {value}", Name)
+              .Add("--description {value}", Description)
+              .Add("--disabled", Disabled)
+              .Add("--location {value}", Location)
+              .Add("--tags {value}", Tags)
+              .Add("--action {value}", Action)
+              .Add("--email-service-owners", EmailServiceOwners)
+              .Add("--target {value}", Target)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--target-namespace {value}", TargetNamespace)
+              .Add("--target-parent {value}", TargetParent)
+              .Add("--target-type {value}", TargetType)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAlertDeleteSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAlertDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor alert delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAlertListSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAlertListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor alert list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAlertListIncidentsSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAlertListIncidentsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string RuleName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor alert list-incidents")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rule-name {value}", RuleName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAlertShowSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAlertShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor alert show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAlertShowIncidentSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAlertShowIncidentSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the incident to retrieve.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string RuleName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor alert show-incident")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rule-name {value}", RuleName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAlertUpdateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAlertUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Description of the rule.</p></summary>
+        public virtual string Description { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string Enabled { get; internal set; }
+        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Add an action to fire when the alert is triggered.</p></summary>
+        public virtual string AddAction { get; internal set; }
+        /// <summary><p>Email the service owners if an alert is triggered.</p></summary>
+        public virtual bool? EmailServiceOwners { get; internal set; }
+        /// <summary><p>Remove one or more actions.</p></summary>
+        public virtual string RemoveAction { get; internal set; }
+        /// <summary><p>Type of aggregation to apply based on --period.</p></summary>
+        public virtual MonitorAlertUpdateAggregation Aggregation { get; internal set; }
+        /// <summary><p>The condition which triggers the rule.</p></summary>
+        public virtual string Condition { get; internal set; }
+        /// <summary><p>Name of the metric to base the rule on.</p></summary>
+        public virtual string Metric { get; internal set; }
+        /// <summary><p>How to compare the metric against the threshold.</p></summary>
+        public virtual MonitorAlertUpdateOperator Operator { get; internal set; }
+        /// <summary><p>Time span over which to apply --aggregation, in nDnHnMnS shorthand or full ISO8601 format.</p></summary>
+        public virtual string Period { get; internal set; }
+        /// <summary><p>Numeric threshold at which to trigger the alert.</p></summary>
+        public virtual string Threshold { get; internal set; }
+        /// <summary><p>Name or ID of the target resource.</p></summary>
+        public virtual string Resource { get; internal set; }
+        /// <summary><p>Target resource provider namespace.</p></summary>
+        public virtual string ResourceNamespace { get; internal set; }
+        /// <summary><p>Target resource parent path, if applicable.</p></summary>
+        public virtual string ResourceParent { get; internal set; }
+        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor alert update")
+              .Add("--description {value}", Description)
+              .Add("--enabled {value}", Enabled)
+              .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add-action {value}", AddAction)
+              .Add("--email-service-owners", EmailServiceOwners)
+              .Add("--remove-action {value}", RemoveAction)
+              .Add("--aggregation {value}", Aggregation)
+              .Add("--condition {value}", Condition)
+              .Add("--metric {value}", Metric)
+              .Add("--operator {value}", Operator)
+              .Add("--period {value}", Period)
+              .Add("--threshold {value}", Threshold)
+              .Add("--resource {value}", Resource)
+              .Add("--resource-namespace {value}", ResourceNamespace)
+              .Add("--resource-parent {value}", ResourceParent)
+              .Add("--resource-type {value}", ResourceType)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
@@ -875,6 +1597,8 @@ namespace Nuke.Azure
         public virtual string Offset { get; internal set; }
         /// <summary><p>Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
         public virtual string StartTime { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -901,6 +1625,7 @@ namespace Nuke.Azure
               .Add("--end-time {value}", EndTime)
               .Add("--offset {value}", Offset)
               .Add("--start-time {value}", StartTime)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -919,6 +1644,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -933,864 +1660,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor activity-log list-categories")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAlertCreateSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAlertCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The condition which triggers the rule.</p></summary>
-        public virtual string Condition { get; internal set; }
-        /// <summary><p>Name of the alert rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Free-text description of the rule. Defaults to the condition expression.</p></summary>
-        public virtual string Description { get; internal set; }
-        /// <summary><p>Create the rule in a disabled state.</p></summary>
-        public virtual bool? Disabled { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Add an action to fire when the alert is triggered.</p></summary>
-        public virtual string Action { get; internal set; }
-        /// <summary><p>Email the service owners if an alert is triggered.</p></summary>
-        public virtual bool? EmailServiceOwners { get; internal set; }
-        /// <summary><p>Name or ID of the target resource.</p></summary>
-        public virtual string Target { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Target resource provider namespace.</p></summary>
-        public virtual string TargetNamespace { get; internal set; }
-        /// <summary><p>Target resource parent path, if applicable.</p></summary>
-        public virtual string TargetParent { get; internal set; }
-        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        public virtual string TargetType { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor alert create")
-              .Add("--condition {value}", Condition)
-              .Add("--name {value}", Name)
-              .Add("--description {value}", Description)
-              .Add("--disabled", Disabled)
-              .Add("--location {value}", Location)
-              .Add("--tags {value}", Tags)
-              .Add("--action {value}", Action)
-              .Add("--email-service-owners", EmailServiceOwners)
-              .Add("--target {value}", Target)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--target-namespace {value}", TargetNamespace)
-              .Add("--target-parent {value}", TargetParent)
-              .Add("--target-type {value}", TargetType)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAlertDeleteSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAlertDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the alert rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor alert delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAlertListSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAlertListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor alert list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAlertListIncidentsSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAlertListIncidentsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the alert rule.</p></summary>
-        public virtual string RuleName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor alert list-incidents")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rule-name {value}", RuleName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAlertShowSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAlertShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the alert rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor alert show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAlertShowIncidentSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAlertShowIncidentSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The name of the incident to retrieve.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Name of the alert rule.</p></summary>
-        public virtual string RuleName { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor alert show-incident")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rule-name {value}", RuleName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAlertUpdateSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAlertUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the alert rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Description of the rule.</p></summary>
-        public virtual string Description { get; internal set; }
-        /// <summary><p></p></summary>
-        public virtual string Enabled { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>Add an action to fire when the alert is triggered.</p></summary>
-        public virtual string AddAction { get; internal set; }
-        /// <summary><p>Email the service owners if an alert is triggered.</p></summary>
-        public virtual bool? EmailServiceOwners { get; internal set; }
-        /// <summary><p>Remove one or more actions.</p></summary>
-        public virtual string RemoveAction { get; internal set; }
-        /// <summary><p>Type of aggregation to apply based on --period.</p></summary>
-        public virtual MonitorAlertUpdateAggregation Aggregation { get; internal set; }
-        /// <summary><p>The condition which triggers the rule.</p></summary>
-        public virtual string Condition { get; internal set; }
-        /// <summary><p>Name of the metric to base the rule on.</p></summary>
-        public virtual string Metric { get; internal set; }
-        /// <summary><p>How to compare the metric against the threshold.</p></summary>
-        public virtual MonitorAlertUpdateOperator Operator { get; internal set; }
-        /// <summary><p>Time span over which to apply --aggregation, in nDnHnMnS shorthand or full ISO8601 format.</p></summary>
-        public virtual string Period { get; internal set; }
-        /// <summary><p>Numeric threshold at which to trigger the alert.</p></summary>
-        public virtual string Threshold { get; internal set; }
-        /// <summary><p>Name or ID of the target resource.</p></summary>
-        public virtual string Resource { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Target resource provider namespace.</p></summary>
-        public virtual string ResourceNamespace { get; internal set; }
-        /// <summary><p>Target resource parent path, if applicable.</p></summary>
-        public virtual string ResourceParent { get; internal set; }
-        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        public virtual string ResourceType { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor alert update")
-              .Add("--name {value}", Name)
-              .Add("--description {value}", Description)
-              .Add("--enabled {value}", Enabled)
-              .Add("--tags {value}", Tags)
-              .Add("--add-action {value}", AddAction)
-              .Add("--email-service-owners", EmailServiceOwners)
-              .Add("--remove-action {value}", RemoveAction)
-              .Add("--aggregation {value}", Aggregation)
-              .Add("--condition {value}", Condition)
-              .Add("--metric {value}", Metric)
-              .Add("--operator {value}", Operator)
-              .Add("--period {value}", Period)
-              .Add("--threshold {value}", Threshold)
-              .Add("--resource {value}", Resource)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--resource-namespace {value}", ResourceNamespace)
-              .Add("--resource-parent {value}", ResourceParent)
-              .Add("--resource-type {value}", ResourceType)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsCreateSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleSettingsCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The autoscale setting name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>JSON encoded parameters configuration. Use @{file} to load from a file. Use az autoscale-settings get-parameters-template to export json template.</p></summary>
-        public virtual string Parameters { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale-settings create")
-              .Add("--name {value}", Name)
-              .Add("--parameters {value}", Parameters)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsDeleteSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleSettingsDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The autoscale setting name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale-settings delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsGetParametersTemplateSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleSettingsGetParametersTemplateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale-settings get-parameters-template")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsListSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleSettingsListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale-settings list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsShowSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleSettingsShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The autoscale setting name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale-settings show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsUpdateSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleSettingsUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The autoscale setting name.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale-settings update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleCreateSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleCreateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Create the autoscale settings in a disabled state.</p></summary>
-        public virtual bool? Disabled { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        public virtual string Location { get; internal set; }
-        /// <summary><p>Name of the autoscale settings.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>The numer of instances to use. If used with --min/max-count, the default number of instances to use.</p></summary>
-        public virtual string Count { get; internal set; }
-        /// <summary><p>The maximum number of instances.</p></summary>
-        public virtual int? MaxCount { get; internal set; }
-        /// <summary><p>The minimum number of instances.</p></summary>
-        public virtual int? MinCount { get; internal set; }
-        /// <summary><p>Add an action to fire when a scaling event occurs.</p></summary>
-        public virtual string Action { get; internal set; }
-        /// <summary><p>Send email to subscription administrator on scaling.</p></summary>
-        public virtual bool? EmailAdministrator { get; internal set; }
-        /// <summary><p>Send email to subscription co-administrators on scaling.</p></summary>
-        public virtual bool? EmailCoadministrators { get; internal set; }
-        /// <summary><p>Name or ID of the target resource.</p></summary>
-        public virtual string Resource { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Target resource provider namespace.</p></summary>
-        public virtual string ResourceNamespace { get; internal set; }
-        /// <summary><p>Target resource parent path, if applicable.</p></summary>
-        public virtual string ResourceParent { get; internal set; }
-        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        public virtual string ResourceType { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale create")
-              .Add("--disabled", Disabled)
-              .Add("--location {value}", Location)
-              .Add("--name {value}", Name)
-              .Add("--tags {value}", Tags)
-              .Add("--count {value}", Count)
-              .Add("--max-count {value}", MaxCount)
-              .Add("--min-count {value}", MinCount)
-              .Add("--action {value}", Action)
-              .Add("--email-administrator", EmailAdministrator)
-              .Add("--email-coadministrators", EmailCoadministrators)
-              .Add("--resource {value}", Resource)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--resource-namespace {value}", ResourceNamespace)
-              .Add("--resource-parent {value}", ResourceParent)
-              .Add("--resource-type {value}", ResourceType)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleDeleteSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the autoscale settings.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleListSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleShowSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the autoscale settings.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorAutoscaleUpdateSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorAutoscaleUpdateSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the autoscale settings.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Autoscale settings enabled status.</p></summary>
-        public virtual bool? Enabled { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary><p>The numer of instances to use. If used with --min/max-count, the default number of instances to use.</p></summary>
-        public virtual string Count { get; internal set; }
-        /// <summary><p>The maximum number of instances.</p></summary>
-        public virtual int? MaxCount { get; internal set; }
-        /// <summary><p>The minimum number of instances.</p></summary>
-        public virtual int? MinCount { get; internal set; }
-        /// <summary><p>Add an action to fire when a scaling event occurs.</p></summary>
-        public virtual string AddAction { get; internal set; }
-        /// <summary><p>Send email to subscription administrator on scaling.</p></summary>
-        public virtual bool? EmailAdministrator { get; internal set; }
-        /// <summary><p>Send email to subscription co-administrators on scaling.</p></summary>
-        public virtual bool? EmailCoadministrators { get; internal set; }
-        /// <summary><p>Remove one or more actions.</p></summary>
-        public virtual string RemoveAction { get; internal set; }
-        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        public virtual string Add { get; internal set; }
-        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        public virtual string Set { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor autoscale update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--enabled", Enabled)
-              .Add("--tags {value}", Tags)
-              .Add("--count {value}", Count)
-              .Add("--max-count {value}", MaxCount)
-              .Add("--min-count {value}", MinCount)
-              .Add("--add-action {value}", AddAction)
-              .Add("--email-administrator", EmailAdministrator)
-              .Add("--email-coadministrators", EmailCoadministrators)
-              .Add("--remove-action {value}", RemoveAction)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1833,6 +1703,8 @@ namespace Nuke.Azure
         public virtual string ResourceParent { get; internal set; }
         /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1859,6 +1731,7 @@ namespace Nuke.Azure
               .Add("--resource-namespace {value}", ResourceNamespace)
               .Add("--resource-parent {value}", ResourceParent)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1889,6 +1762,8 @@ namespace Nuke.Azure
         public virtual string ResourceParent { get; internal set; }
         /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1909,6 +1784,7 @@ namespace Nuke.Azure
               .Add("--resource-namespace {value}", ResourceNamespace)
               .Add("--resource-parent {value}", ResourceParent)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1937,6 +1813,8 @@ namespace Nuke.Azure
         public virtual string ResourceParent { get; internal set; }
         /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1956,6 +1834,7 @@ namespace Nuke.Azure
               .Add("--resource-namespace {value}", ResourceNamespace)
               .Add("--resource-parent {value}", ResourceParent)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1986,6 +1865,8 @@ namespace Nuke.Azure
         public virtual string ResourceParent { get; internal set; }
         /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2006,6 +1887,7 @@ namespace Nuke.Azure
               .Add("--resource-namespace {value}", ResourceNamespace)
               .Add("--resource-parent {value}", ResourceParent)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2044,6 +1926,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2068,6 +1952,267 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsCreateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleSettingsCreateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The autoscale setting name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>JSON encoded parameters configuration. Use @{file} to load from a file. Use az autoscale-settings get-parameters-template to export json template.</p></summary>
+        public virtual string Parameters { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale-settings create")
+              .Add("--name {value}", Name)
+              .Add("--parameters {value}", Parameters)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsDeleteSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleSettingsDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The autoscale setting name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale-settings delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsGetParametersTemplateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleSettingsGetParametersTemplateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale-settings get-parameters-template")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsListSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleSettingsListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale-settings list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsShowSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleSettingsShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The autoscale setting name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale-settings show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsUpdateSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorAutoscaleSettingsUpdateSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The autoscale setting name.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        public virtual string Add { get; internal set; }
+        /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor autoscale-settings update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2089,7 +2234,7 @@ namespace Nuke.Azure
         /// <summary><p>Space-separated categories of the logs. These categories are created as is convenient to the user. Some values are Write, Delete, and/or Action.</p></summary>
         public virtual IReadOnlyList<string> Categories => CategoriesInternal.AsReadOnly();
         internal List<string> CategoriesInternal { get; set; } = new List<string>();
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Space-separated list of regions for which Activity Log events should be stored.</p></summary>
         public virtual IReadOnlyList<string> Locations => LocationsInternal.AsReadOnly();
@@ -2106,6 +2251,8 @@ namespace Nuke.Azure
         public virtual string Days { get; internal set; }
         /// <summary><p>Whether the retention policy is enabled.</p></summary>
         public virtual bool? Enabled { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2129,6 +2276,7 @@ namespace Nuke.Azure
               .Add("--tags {value}", Tags)
               .Add("--days {value}", Days)
               .Add("--enabled", Enabled)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2149,6 +2297,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
         /// <summary><p>The name of the log profile.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2164,6 +2314,7 @@ namespace Nuke.Azure
             arguments
               .Add("monitor log-profiles delete")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2182,6 +2333,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2196,6 +2349,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor log-profiles list")
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2216,6 +2370,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
         /// <summary><p>The name of the log profile.</p></summary>
         public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2231,6 +2387,7 @@ namespace Nuke.Azure
             arguments
               .Add("monitor log-profiles show")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2259,6 +2416,8 @@ namespace Nuke.Azure
         public virtual string Remove { get; internal set; }
         /// <summary><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
         public virtual string Set { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2278,6 +2437,7 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2331,6 +2491,8 @@ namespace Nuke.Azure
         public virtual string Offset { get; internal set; }
         /// <summary><p>Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
         public virtual string StartTime { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2362,6 +2524,7 @@ namespace Nuke.Azure
               .Add("--interval {value}", Interval)
               .Add("--offset {value}", Offset)
               .Add("--start-time {value}", StartTime)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2392,6 +2555,8 @@ namespace Nuke.Azure
         public virtual string ResourceParent { get; internal set; }
         /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2412,6 +2577,7 @@ namespace Nuke.Azure
               .Add("--resource-namespace {value}", ResourceNamespace)
               .Add("--resource-parent {value}", ResourceParent)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2449,6 +2615,8 @@ namespace Nuke.Azure
         /// <summary><p>Space-separated webhook properties in 'key[=value]' format. These properties are associated with the action groups added in this command.</p></summary>
         public virtual IReadOnlyList<string> WebhookProperties => WebhookPropertiesInternal.AsReadOnly();
         internal List<string> WebhookPropertiesInternal { get; set; } = new List<string>();
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2472,6 +2640,7 @@ namespace Nuke.Azure
               .Add("--scope {value}", Scope)
               .Add("--tags {value}", Tags)
               .Add("--webhook-properties {value}", WebhookProperties, separator: ' ')
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2490,10 +2659,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the activity log alert.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2508,8 +2682,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor activity-log alert delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2530,6 +2706,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
         /// <summary><p>Name of the resource group under which the activity log alerts are being listed. If it is omitted, all the activity log alerts under the current subscription are listed.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2545,6 +2723,7 @@ namespace Nuke.Azure
             arguments
               .Add("monitor activity-log alert list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2563,10 +2742,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>The name of the activity log alert.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2581,8 +2765,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor activity-log alert show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2601,10 +2787,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The name of the activity log alert.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The conditional expression that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...].</p></summary>
         public virtual string Condition { get; internal set; }
         /// <summary><p>A description of this activity log alert.</p></summary>
@@ -2613,6 +2795,15 @@ namespace Nuke.Azure
         public virtual bool? Enabled { get; internal set; }
         /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>The name of the activity log alert.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
         public virtual string Add { get; internal set; }
         /// <summary><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
@@ -2635,16 +2826,121 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor activity-log alert update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--condition {value}", Condition)
               .Add("--description {value}", Description)
               .Add("--enabled", Enabled)
               .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorDiagnosticSettingsCategoriesListSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorDiagnosticSettingsCategoriesListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>Name or ID of the target resource.</p></summary>
+        public virtual string Resource { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Target resource provider namespace.</p></summary>
+        public virtual string ResourceNamespace { get; internal set; }
+        /// <summary><p>Target resource parent path, if applicable.</p></summary>
+        public virtual string ResourceParent { get; internal set; }
+        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor diagnostic-settings categories list")
+              .Add("--resource {value}", Resource)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--resource-namespace {value}", ResourceNamespace)
+              .Add("--resource-parent {value}", ResourceParent)
+              .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMonitorDiagnosticSettingsCategoriesShowSettings
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMonitorDiagnosticSettingsCategoriesShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The name of the diagnostic setting.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name or ID of the target resource.</p></summary>
+        public virtual string Resource { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Target resource provider namespace.</p></summary>
+        public virtual string ResourceNamespace { get; internal set; }
+        /// <summary><p>Target resource parent path, if applicable.</p></summary>
+        public virtual string ResourceParent { get; internal set; }
+        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("monitor diagnostic-settings categories show")
+              .Add("--name {value}", Name)
+              .Add("--resource {value}", Resource)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--resource-namespace {value}", ResourceNamespace)
+              .Add("--resource-parent {value}", ResourceParent)
+              .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2685,6 +2981,8 @@ namespace Nuke.Azure
         public virtual string Recurrence { get; internal set; }
         /// <summary><p>When the autoscale profile begins. Format depends on the type of profile.</p></summary>
         public virtual string Start { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2710,6 +3008,7 @@ namespace Nuke.Azure
               .Add("--end {value}", End)
               .Add("--recurrence {value}", Recurrence)
               .Add("--start {value}", Start)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2734,6 +3033,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2751,6 +3052,7 @@ namespace Nuke.Azure
               .Add("--autoscale-name {value}", AutoscaleName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2773,6 +3075,8 @@ namespace Nuke.Azure
         public virtual string AutoscaleName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2789,6 +3093,7 @@ namespace Nuke.Azure
               .Add("monitor autoscale profile list")
               .Add("--autoscale-name {value}", AutoscaleName)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2811,6 +3116,8 @@ namespace Nuke.Azure
         public virtual string Offset { get; internal set; }
         /// <summary><p>Query text to find.</p></summary>
         public virtual string SearchQuery { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2827,6 +3134,7 @@ namespace Nuke.Azure
               .Add("monitor autoscale profile list-timezones")
               .Add("--offset {value}", Offset)
               .Add("--search-query {value}", SearchQuery)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2851,6 +3159,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2868,6 +3178,7 @@ namespace Nuke.Azure
               .Add("--autoscale-name {value}", AutoscaleName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2897,6 +3208,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the profile to copy rules from.</p></summary>
         public virtual string SourceSchedule { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2916,6 +3229,7 @@ namespace Nuke.Azure
               .Add("--index {value}", Index, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--source-schedule {value}", SourceSchedule)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2956,6 +3270,8 @@ namespace Nuke.Azure
         public virtual string ResourceParent { get; internal set; }
         /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
         public virtual string ResourceType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -2981,6 +3297,7 @@ namespace Nuke.Azure
               .Add("--resource-namespace {value}", ResourceNamespace)
               .Add("--resource-parent {value}", ResourceParent)
               .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3008,6 +3325,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the autoscale profile.</p></summary>
         public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3026,6 +3345,7 @@ namespace Nuke.Azure
               .Add("--index {value}", Index, separator: ' ')
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--profile-name {value}", ProfileName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3050,6 +3370,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Name of the autoscale profile.</p></summary>
         public virtual string ProfileName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3067,103 +3389,7 @@ namespace Nuke.Azure
               .Add("--autoscale-name {value}", AutoscaleName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--profile-name {value}", ProfileName)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorDiagnosticSettingsCategoriesListSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorDiagnosticSettingsCategoriesListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name or ID of the target resource.</p></summary>
-        public virtual string Resource { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Target resource provider namespace.</p></summary>
-        public virtual string ResourceNamespace { get; internal set; }
-        /// <summary><p>Target resource parent path, if applicable.</p></summary>
-        public virtual string ResourceParent { get; internal set; }
-        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        public virtual string ResourceType { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor diagnostic-settings categories list")
-              .Add("--resource {value}", Resource)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--resource-namespace {value}", ResourceNamespace)
-              .Add("--resource-parent {value}", ResourceParent)
-              .Add("--resource-type {value}", ResourceType)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMonitorDiagnosticSettingsCategoriesShowSettings
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMonitorDiagnosticSettingsCategoriesShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureMonitor executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>The name of the diagnostic setting.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name or ID of the target resource.</p></summary>
-        public virtual string Resource { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Target resource provider namespace.</p></summary>
-        public virtual string ResourceNamespace { get; internal set; }
-        /// <summary><p>Target resource parent path, if applicable.</p></summary>
-        public virtual string ResourceParent { get; internal set; }
-        /// <summary><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        public virtual string ResourceType { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("monitor diagnostic-settings categories show")
-              .Add("--name {value}", Name)
-              .Add("--resource {value}", Resource)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--resource-namespace {value}", ResourceNamespace)
-              .Add("--resource-parent {value}", ResourceParent)
-              .Add("--resource-type {value}", ResourceType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3207,6 +3433,8 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
         public virtual string WindowSize { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3233,6 +3461,7 @@ namespace Nuke.Azure
               .Add("--severity {value}", Severity)
               .Add("--tags {value}", Tags)
               .Add("--window-size {value}", WindowSize)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3251,10 +3480,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the alert rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3269,8 +3503,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor metrics alert delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3291,6 +3527,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3306,6 +3544,7 @@ namespace Nuke.Azure
             arguments
               .Add("monitor metrics alert list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3324,10 +3563,15 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the alert rule.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3342,8 +3586,10 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor metrics alert show")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3362,10 +3608,6 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the alert rule.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Automatically resolve the alert.</p></summary>
         public virtual bool? AutoMitigate { get; internal set; }
         /// <summary><p>Free-text description of the rule.</p></summary>
@@ -3383,6 +3625,15 @@ namespace Nuke.Azure
         public virtual string Tags { get; internal set; }
         /// <summary><p>Time over which to aggregate metrics in "##h##m##s" format.</p></summary>
         public virtual string WindowSize { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the alert rule.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Add an action group and optional webhook properties to fire when the alert is triggered.</p></summary>
         public virtual string AddAction { get; internal set; }
         /// <summary><p>Space-separated list of action group names to remove.</p></summary>
@@ -3415,8 +3666,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor metrics alert update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--auto-mitigate", AutoMitigate)
               .Add("--description {value}", Description)
               .Add("--enabled", Enabled)
@@ -3425,6 +3674,10 @@ namespace Nuke.Azure
               .Add("--severity {value}", Severity)
               .Add("--tags {value}", Tags)
               .Add("--window-size {value}", WindowSize)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--add-action {value}", AddAction)
               .Add("--remove-actions {value}", RemoveActions, separator: ' ')
               .Add("--add-condition {value}", AddCondition)
@@ -3453,10 +3706,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
         /// <summary><p>The names or the resource ids of the action groups to be added.</p></summary>
         public virtual string ActionGroup { get; internal set; }
-        /// <summary><p>Name of the activity log alerts.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Remove all the existing action groups before add new conditions.</p></summary>
         public virtual string Reset { get; internal set; }
         /// <summary><p>Fails the command if an action group to be added will change existing webhook properties.</p></summary>
@@ -3464,6 +3713,15 @@ namespace Nuke.Azure
         /// <summary><p>Space-separated webhook properties in 'key[=value]' format. These properties will be associated with the action groups added in this command.</p></summary>
         public virtual IReadOnlyList<string> WebhookProperties => WebhookPropertiesInternal.AsReadOnly();
         internal List<string> WebhookPropertiesInternal { get; set; } = new List<string>();
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the activity log alerts.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3479,11 +3737,13 @@ namespace Nuke.Azure
             arguments
               .Add("monitor activity-log alert action-group add")
               .Add("--action-group {value}", ActionGroup)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--reset {value}", Reset)
               .Add("--strict {value}", Strict)
               .Add("--webhook-properties {value}", WebhookProperties, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3504,10 +3764,15 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
         /// <summary><p>The names or the resource ids of the action groups to be added.</p></summary>
         public virtual string ActionGroup { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the activity log alerts.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3523,8 +3788,10 @@ namespace Nuke.Azure
             arguments
               .Add("monitor activity-log alert action-group remove")
               .Add("--action-group {value}", ActionGroup)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3543,14 +3810,19 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
-        /// <summary><p>Name of the activity log alerts.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>The scopes to add.</p></summary>
         public virtual string Scope { get; internal set; }
         /// <summary><p>Remove all the existing scopes before add new scopes.</p></summary>
         public virtual string Reset { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary><p>Name of the activity log alerts.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3565,10 +3837,12 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor activity-log alert scope add")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
               .Add("--scope {value}", Scope)
               .Add("--reset {value}", Reset)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3587,12 +3861,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureMonitor executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureMonitorTasks.AzureMonitorPath;
+        /// <summary><p>The scopes to remove.</p></summary>
+        public virtual string Scope { get; internal set; }
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the activity log alerts.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The scopes to remove.</p></summary>
-        public virtual string Scope { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -3607,9 +3886,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("monitor activity-log alert scope remove")
+              .Add("--scope {value}", Scope)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--scope {value}", Scope)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3717,3870 +3998,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMonitorActionGroupCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActionGroupCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetName(this AzureMonitorActionGroupCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetName(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetResourceGroup(this AzureMonitorActionGroupCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetResourceGroup(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ShortName
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.ShortName"/>.</em></p><p>The short name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetShortName(this AzureMonitorActionGroupCreateSettings toolSettings, string shortName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ShortName = shortName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.ShortName"/>.</em></p><p>The short name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetShortName(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ShortName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetTags(this AzureMonitorActionGroupCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetTags(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Action
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Action"/>.</em></p><p>Add receivers to the action group during the creation.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetAction(this AzureMonitorActionGroupCreateSettings toolSettings, string action)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Action = action;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Action"/>.</em></p><p>Add receivers to the action group during the creation.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetAction(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Action = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetDebug(this AzureMonitorActionGroupCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetDebug(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetHelp(this AzureMonitorActionGroupCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetHelp(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetOutput(this AzureMonitorActionGroupCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetOutput(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetQuery(this AzureMonitorActionGroupCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetQuery(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings SetVerbose(this AzureMonitorActionGroupCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupCreateSettings ResetVerbose(this AzureMonitorActionGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActionGroupDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActionGroupDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings SetName(this AzureMonitorActionGroupDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings ResetName(this AzureMonitorActionGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings SetResourceGroup(this AzureMonitorActionGroupDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings ResetResourceGroup(this AzureMonitorActionGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings SetDebug(this AzureMonitorActionGroupDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings ResetDebug(this AzureMonitorActionGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings SetHelp(this AzureMonitorActionGroupDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings ResetHelp(this AzureMonitorActionGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings SetOutput(this AzureMonitorActionGroupDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings ResetOutput(this AzureMonitorActionGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings SetQuery(this AzureMonitorActionGroupDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings ResetQuery(this AzureMonitorActionGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings SetVerbose(this AzureMonitorActionGroupDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupDeleteSettings ResetVerbose(this AzureMonitorActionGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActionGroupEnableReceiverSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActionGroupEnableReceiverSettingsExtensions
-    {
-        #region ActionGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ActionGroup"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetActionGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string actionGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionGroup = actionGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ActionGroup"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetActionGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ActionGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Name"/>.</em></p><p>The name of the receiver to resubscribe.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetName(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Name"/>.</em></p><p>The name of the receiver to resubscribe.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetName(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetResourceGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetResourceGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetDebug(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetDebug(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetHelp(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetHelp(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetOutput(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetOutput(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetQuery(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetQuery(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings SetVerbose(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupEnableReceiverSettings ResetVerbose(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActionGroupListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActionGroupListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.ResourceGroup"/>.</em></p><p>Name of the resource group under which the action groups are being listed. If it is omitted, all the action groups under the current subscription are listed.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings SetResourceGroup(this AzureMonitorActionGroupListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.ResourceGroup"/>.</em></p><p>Name of the resource group under which the action groups are being listed. If it is omitted, all the action groups under the current subscription are listed.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings ResetResourceGroup(this AzureMonitorActionGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings SetDebug(this AzureMonitorActionGroupListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings ResetDebug(this AzureMonitorActionGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings SetHelp(this AzureMonitorActionGroupListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings ResetHelp(this AzureMonitorActionGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings SetOutput(this AzureMonitorActionGroupListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings ResetOutput(this AzureMonitorActionGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings SetQuery(this AzureMonitorActionGroupListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings ResetQuery(this AzureMonitorActionGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings SetVerbose(this AzureMonitorActionGroupListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupListSettings ResetVerbose(this AzureMonitorActionGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActionGroupShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActionGroupShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings SetName(this AzureMonitorActionGroupShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings ResetName(this AzureMonitorActionGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings SetResourceGroup(this AzureMonitorActionGroupShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings ResetResourceGroup(this AzureMonitorActionGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings SetDebug(this AzureMonitorActionGroupShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings ResetDebug(this AzureMonitorActionGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings SetHelp(this AzureMonitorActionGroupShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings ResetHelp(this AzureMonitorActionGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings SetOutput(this AzureMonitorActionGroupShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings ResetOutput(this AzureMonitorActionGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings SetQuery(this AzureMonitorActionGroupShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings ResetQuery(this AzureMonitorActionGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings SetVerbose(this AzureMonitorActionGroupShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupShowSettings ResetVerbose(this AzureMonitorActionGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActionGroupUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActionGroupUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetName(this AzureMonitorActionGroupUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetName(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetResourceGroup(this AzureMonitorActionGroupUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetResourceGroup(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ShortName
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.ShortName"/>.</em></p><p>Update the group short name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetShortName(this AzureMonitorActionGroupUpdateSettings toolSettings, string shortName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ShortName = shortName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.ShortName"/>.</em></p><p>Update the group short name of the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetShortName(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ShortName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetTags(this AzureMonitorActionGroupUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetTags(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AddAction
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.AddAction"/>.</em></p><p>Add receivers to the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetAddAction(this AzureMonitorActionGroupUpdateSettings toolSettings, string addAction)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddAction = addAction;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.AddAction"/>.</em></p><p>Add receivers to the action group.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetAddAction(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddAction = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RemoveAction
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.RemoveAction"/>.</em></p><p>Remove receivers from the action group. Accept space-separated list of receiver names.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetRemoveAction(this AzureMonitorActionGroupUpdateSettings toolSettings, string removeAction)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoveAction = removeAction;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.RemoveAction"/>.</em></p><p>Remove receivers from the action group. Accept space-separated list of receiver names.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetRemoveAction(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoveAction = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetAdd(this AzureMonitorActionGroupUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetAdd(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetForceString(this AzureMonitorActionGroupUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetForceString(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetRemove(this AzureMonitorActionGroupUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetRemove(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetSet(this AzureMonitorActionGroupUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetSet(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetDebug(this AzureMonitorActionGroupUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetDebug(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetHelp(this AzureMonitorActionGroupUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetHelp(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetOutput(this AzureMonitorActionGroupUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetOutput(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetQuery(this AzureMonitorActionGroupUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetQuery(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings SetVerbose(this AzureMonitorActionGroupUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActionGroupUpdateSettings ResetVerbose(this AzureMonitorActionGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActivityLogListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActivityLogListSettingsExtensions
-    {
-        #region MaxEvents
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.MaxEvents"/>.</em></p><p>Maximum number of records to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetMaxEvents(this AzureMonitorActivityLogListSettings toolSettings, int? maxEvents)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxEvents = maxEvents;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.MaxEvents"/>.</em></p><p>Maximum number of records to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetMaxEvents(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxEvents = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Select
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Select"/> to a new list.</em></p><p>Space-separated list of properties to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetSelect(this AzureMonitorActivityLogListSettings toolSettings, params MonitorActivityLogListSelect[] select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SelectInternal = select.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Select"/> to a new list.</em></p><p>Space-separated list of properties to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetSelect(this AzureMonitorActivityLogListSettings toolSettings, IEnumerable<MonitorActivityLogListSelect> select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SelectInternal = select.ToList();
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings AddSelect(this AzureMonitorActivityLogListSettings toolSettings, params MonitorActivityLogListSelect[] select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SelectInternal.AddRange(select);
-            return toolSettings;
-        }
-        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings AddSelect(this AzureMonitorActivityLogListSettings toolSettings, IEnumerable<MonitorActivityLogListSelect> select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SelectInternal.AddRange(select);
-            return toolSettings;
-        }
-        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ClearSelect(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SelectInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings RemoveSelect(this AzureMonitorActivityLogListSettings toolSettings, params MonitorActivityLogListSelect[] select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<MonitorActivityLogListSelect>(select);
-            toolSettings.SelectInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings RemoveSelect(this AzureMonitorActivityLogListSettings toolSettings, IEnumerable<MonitorActivityLogListSelect> select)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<MonitorActivityLogListSelect>(select);
-            toolSettings.SelectInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Caller
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Caller"/>.</em></p><p>Caller to query for, such as an e-mail address or service principal ID.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetCaller(this AzureMonitorActivityLogListSettings toolSettings, string caller)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Caller = caller;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Caller"/>.</em></p><p>Caller to query for, such as an e-mail address or service principal ID.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetCaller(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Caller = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CorrelationId
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.CorrelationId"/>.</em></p><p>Correlation ID to query.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetCorrelationId(this AzureMonitorActivityLogListSettings toolSettings, string correlationId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CorrelationId = correlationId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.CorrelationId"/>.</em></p><p>Correlation ID to query.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetCorrelationId(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CorrelationId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filters
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Filters"/>.</em></p><p>OData filters. Will ignore other filter arguments.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetFilters(this AzureMonitorActivityLogListSettings toolSettings, string filters)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filters = filters;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Filters"/>.</em></p><p>OData filters. Will ignore other filter arguments.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetFilters(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filters = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Namespace
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Namespace"/>.</em></p><p>Resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetNamespace(this AzureMonitorActivityLogListSettings toolSettings, string @namespace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Namespace = @namespace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Namespace"/>.</em></p><p>Resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetNamespace(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Namespace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetResourceGroup(this AzureMonitorActivityLogListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetResourceGroup(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceId
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.ResourceId"/>.</em></p><p>ARM ID of a resource.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetResourceId(this AzureMonitorActivityLogListSettings toolSettings, string resourceId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceId = resourceId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.ResourceId"/>.</em></p><p>ARM ID of a resource.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetResourceId(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Status
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Status"/>.</em></p><p>Status to query for (ex: Failed).</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetStatus(this AzureMonitorActivityLogListSettings toolSettings, string status)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = status;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Status"/>.</em></p><p>Status to query for (ex: Failed).</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetStatus(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndTime
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.EndTime"/>.</em></p><p>End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetEndTime(this AzureMonitorActivityLogListSettings toolSettings, string endTime)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndTime = endTime;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.EndTime"/>.</em></p><p>End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetEndTime(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndTime = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Offset
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Offset"/>.</em></p><p>Time offset of the query range, in ##d##h format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetOffset(this AzureMonitorActivityLogListSettings toolSettings, string offset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offset = offset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Offset"/>.</em></p><p>Time offset of the query range, in ##d##h format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetOffset(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Offset = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartTime
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.StartTime"/>.</em></p><p>Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetStartTime(this AzureMonitorActivityLogListSettings toolSettings, string startTime)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartTime = startTime;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.StartTime"/>.</em></p><p>Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetStartTime(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartTime = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetDebug(this AzureMonitorActivityLogListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetDebug(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetHelp(this AzureMonitorActivityLogListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetHelp(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetOutput(this AzureMonitorActivityLogListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetOutput(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetQuery(this AzureMonitorActivityLogListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetQuery(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings SetVerbose(this AzureMonitorActivityLogListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListSettings ResetVerbose(this AzureMonitorActivityLogListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorActivityLogListCategoriesSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorActivityLogListCategoriesSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings SetDebug(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings ResetDebug(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings SetHelp(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings ResetHelp(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings SetOutput(this AzureMonitorActivityLogListCategoriesSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings ResetOutput(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings SetQuery(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings ResetQuery(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings SetVerbose(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogListCategoriesSettings ResetVerbose(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAlertCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAlertCreateSettingsExtensions
-    {
-        #region Condition
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetCondition(this AzureMonitorAlertCreateSettings toolSettings, string condition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Condition = condition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetCondition(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Condition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetName(this AzureMonitorAlertCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetName(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Description
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Description"/>.</em></p><p>Free-text description of the rule. Defaults to the condition expression.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetDescription(this AzureMonitorAlertCreateSettings toolSettings, string description)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Description = description;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Description"/>.</em></p><p>Free-text description of the rule. Defaults to the condition expression.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetDescription(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Description = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Disabled
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetDisabled(this AzureMonitorAlertCreateSettings toolSettings, bool? disabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = disabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetDisabled(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings EnableDisabled(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings DisableDisabled(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ToggleDisabled(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Disabled = !toolSettings.Disabled;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetLocation(this AzureMonitorAlertCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetLocation(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetTags(this AzureMonitorAlertCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetTags(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Action
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Action"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetAction(this AzureMonitorAlertCreateSettings toolSettings, string action)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Action = action;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Action"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetAction(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Action = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EmailServiceOwners
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings, bool? emailServiceOwners)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = emailServiceOwners;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings EnableEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings DisableEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ToggleEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = !toolSettings.EmailServiceOwners;
-            return toolSettings;
-        }
-        #endregion
-        #region Target
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Target"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetTarget(this AzureMonitorAlertCreateSettings toolSettings, string target)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Target = target;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Target"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetTarget(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Target = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetResourceGroup(this AzureMonitorAlertCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetResourceGroup(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetNamespace
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.TargetNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetTargetNamespace(this AzureMonitorAlertCreateSettings toolSettings, string targetNamespace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetNamespace = targetNamespace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.TargetNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetTargetNamespace(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetNamespace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetParent
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.TargetParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetTargetParent(this AzureMonitorAlertCreateSettings toolSettings, string targetParent)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetParent = targetParent;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.TargetParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetTargetParent(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetParent = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetType
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.TargetType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetTargetType(this AzureMonitorAlertCreateSettings toolSettings, string targetType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetType = targetType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.TargetType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetTargetType(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetDebug(this AzureMonitorAlertCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetDebug(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetHelp(this AzureMonitorAlertCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetHelp(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetOutput(this AzureMonitorAlertCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetOutput(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetQuery(this AzureMonitorAlertCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetQuery(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings SetVerbose(this AzureMonitorAlertCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertCreateSettings ResetVerbose(this AzureMonitorAlertCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAlertDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAlertDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings SetName(this AzureMonitorAlertDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings ResetName(this AzureMonitorAlertDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings SetResourceGroup(this AzureMonitorAlertDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings ResetResourceGroup(this AzureMonitorAlertDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings SetDebug(this AzureMonitorAlertDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings ResetDebug(this AzureMonitorAlertDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings SetHelp(this AzureMonitorAlertDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings ResetHelp(this AzureMonitorAlertDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings SetOutput(this AzureMonitorAlertDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings ResetOutput(this AzureMonitorAlertDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings SetQuery(this AzureMonitorAlertDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings ResetQuery(this AzureMonitorAlertDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings SetVerbose(this AzureMonitorAlertDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertDeleteSettings ResetVerbose(this AzureMonitorAlertDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAlertListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAlertListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings SetResourceGroup(this AzureMonitorAlertListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings ResetResourceGroup(this AzureMonitorAlertListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings SetDebug(this AzureMonitorAlertListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings ResetDebug(this AzureMonitorAlertListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings SetHelp(this AzureMonitorAlertListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings ResetHelp(this AzureMonitorAlertListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings SetOutput(this AzureMonitorAlertListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings ResetOutput(this AzureMonitorAlertListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings SetQuery(this AzureMonitorAlertListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings ResetQuery(this AzureMonitorAlertListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings SetVerbose(this AzureMonitorAlertListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListSettings ResetVerbose(this AzureMonitorAlertListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAlertListIncidentsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAlertListIncidentsSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings SetResourceGroup(this AzureMonitorAlertListIncidentsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings ResetResourceGroup(this AzureMonitorAlertListIncidentsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RuleName
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings SetRuleName(this AzureMonitorAlertListIncidentsSettings toolSettings, string ruleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RuleName = ruleName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings ResetRuleName(this AzureMonitorAlertListIncidentsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings SetDebug(this AzureMonitorAlertListIncidentsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings ResetDebug(this AzureMonitorAlertListIncidentsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings SetHelp(this AzureMonitorAlertListIncidentsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings ResetHelp(this AzureMonitorAlertListIncidentsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings SetOutput(this AzureMonitorAlertListIncidentsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings ResetOutput(this AzureMonitorAlertListIncidentsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings SetQuery(this AzureMonitorAlertListIncidentsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings ResetQuery(this AzureMonitorAlertListIncidentsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings SetVerbose(this AzureMonitorAlertListIncidentsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertListIncidentsSettings ResetVerbose(this AzureMonitorAlertListIncidentsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAlertShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAlertShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings SetName(this AzureMonitorAlertShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings ResetName(this AzureMonitorAlertShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings SetResourceGroup(this AzureMonitorAlertShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings ResetResourceGroup(this AzureMonitorAlertShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings SetDebug(this AzureMonitorAlertShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings ResetDebug(this AzureMonitorAlertShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings SetHelp(this AzureMonitorAlertShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings ResetHelp(this AzureMonitorAlertShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings SetOutput(this AzureMonitorAlertShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings ResetOutput(this AzureMonitorAlertShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings SetQuery(this AzureMonitorAlertShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings ResetQuery(this AzureMonitorAlertShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings SetVerbose(this AzureMonitorAlertShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowSettings ResetVerbose(this AzureMonitorAlertShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAlertShowIncidentSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAlertShowIncidentSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Name"/>.</em></p><p>The name of the incident to retrieve.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetName(this AzureMonitorAlertShowIncidentSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Name"/>.</em></p><p>The name of the incident to retrieve.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetName(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetResourceGroup(this AzureMonitorAlertShowIncidentSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetResourceGroup(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RuleName
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetRuleName(this AzureMonitorAlertShowIncidentSettings toolSettings, string ruleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RuleName = ruleName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetRuleName(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetDebug(this AzureMonitorAlertShowIncidentSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetDebug(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetHelp(this AzureMonitorAlertShowIncidentSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetHelp(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetOutput(this AzureMonitorAlertShowIncidentSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetOutput(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetQuery(this AzureMonitorAlertShowIncidentSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetQuery(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings SetVerbose(this AzureMonitorAlertShowIncidentSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertShowIncidentSettings ResetVerbose(this AzureMonitorAlertShowIncidentSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAlertUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAlertUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetName(this AzureMonitorAlertUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetName(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Description
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Description"/>.</em></p><p>Description of the rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetDescription(this AzureMonitorAlertUpdateSettings toolSettings, string description)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Description = description;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Description"/>.</em></p><p>Description of the rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetDescription(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Description = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Enabled
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Enabled"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetEnabled(this AzureMonitorAlertUpdateSettings toolSettings, string enabled)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enabled = enabled;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Enabled"/>.</em></p><p></p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetEnabled(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Enabled = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetTags(this AzureMonitorAlertUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetTags(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AddAction
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.AddAction"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetAddAction(this AzureMonitorAlertUpdateSettings toolSettings, string addAction)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddAction = addAction;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.AddAction"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetAddAction(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AddAction = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EmailServiceOwners
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings, bool? emailServiceOwners)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = emailServiceOwners;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = null;
-            return toolSettings;
-        }
-        /// <summary><p><em>Enables <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings EnableEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = true;
-            return toolSettings;
-        }
-        /// <summary><p><em>Disables <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings DisableEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = false;
-            return toolSettings;
-        }
-        /// <summary><p><em>Toggles <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ToggleEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EmailServiceOwners = !toolSettings.EmailServiceOwners;
-            return toolSettings;
-        }
-        #endregion
-        #region RemoveAction
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.RemoveAction"/>.</em></p><p>Remove one or more actions.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetRemoveAction(this AzureMonitorAlertUpdateSettings toolSettings, string removeAction)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoveAction = removeAction;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.RemoveAction"/>.</em></p><p>Remove one or more actions.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetRemoveAction(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RemoveAction = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Aggregation
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Aggregation"/>.</em></p><p>Type of aggregation to apply based on --period.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetAggregation(this AzureMonitorAlertUpdateSettings toolSettings, MonitorAlertUpdateAggregation aggregation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Aggregation = aggregation;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Aggregation"/>.</em></p><p>Type of aggregation to apply based on --period.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetAggregation(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Aggregation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Condition
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetCondition(this AzureMonitorAlertUpdateSettings toolSettings, string condition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Condition = condition;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetCondition(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Condition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Metric
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Metric"/>.</em></p><p>Name of the metric to base the rule on.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetMetric(this AzureMonitorAlertUpdateSettings toolSettings, string metric)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Metric = metric;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Metric"/>.</em></p><p>Name of the metric to base the rule on.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetMetric(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Metric = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Operator
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Operator"/>.</em></p><p>How to compare the metric against the threshold.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetOperator(this AzureMonitorAlertUpdateSettings toolSettings, MonitorAlertUpdateOperator @operator)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Operator = @operator;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Operator"/>.</em></p><p>How to compare the metric against the threshold.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetOperator(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Operator = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Period
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Period"/>.</em></p><p>Time span over which to apply --aggregation, in nDnHnMnS shorthand or full ISO8601 format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetPeriod(this AzureMonitorAlertUpdateSettings toolSettings, string period)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Period = period;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Period"/>.</em></p><p>Time span over which to apply --aggregation, in nDnHnMnS shorthand or full ISO8601 format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetPeriod(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Period = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Threshold
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Threshold"/>.</em></p><p>Numeric threshold at which to trigger the alert.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetThreshold(this AzureMonitorAlertUpdateSettings toolSettings, string threshold)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Threshold = threshold;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Threshold"/>.</em></p><p>Numeric threshold at which to trigger the alert.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetThreshold(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Threshold = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Resource
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetResource(this AzureMonitorAlertUpdateSettings toolSettings, string resource)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Resource = resource;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetResource(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Resource = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetResourceGroup(this AzureMonitorAlertUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetResourceGroup(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceNamespace
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetResourceNamespace(this AzureMonitorAlertUpdateSettings toolSettings, string resourceNamespace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceNamespace = resourceNamespace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetResourceNamespace(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceNamespace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceParent
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetResourceParent(this AzureMonitorAlertUpdateSettings toolSettings, string resourceParent)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceParent = resourceParent;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetResourceParent(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceParent = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceType
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetResourceType(this AzureMonitorAlertUpdateSettings toolSettings, string resourceType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceType = resourceType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetResourceType(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetAdd(this AzureMonitorAlertUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetAdd(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetForceString(this AzureMonitorAlertUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetForceString(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetRemove(this AzureMonitorAlertUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetRemove(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetSet(this AzureMonitorAlertUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetSet(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetDebug(this AzureMonitorAlertUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetDebug(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetHelp(this AzureMonitorAlertUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetHelp(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetOutput(this AzureMonitorAlertUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetOutput(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetQuery(this AzureMonitorAlertUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetQuery(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings SetVerbose(this AzureMonitorAlertUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAlertUpdateSettings ResetVerbose(this AzureMonitorAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAutoscaleSettingsCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetName(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetName(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Parameters
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Parameters"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. Use az autoscale-settings get-parameters-template to export json template.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetParameters(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string parameters)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameters = parameters;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Parameters"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. Use az autoscale-settings get-parameters-template to export json template.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetParameters(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Parameters = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetDebug(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetDebug(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetHelp(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetHelp(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetOutput(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetOutput(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetQuery(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetQuery(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings SetVerbose(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsCreateSettings ResetVerbose(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAutoscaleSettingsDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings SetName(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetName(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings SetDebug(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetDebug(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings SetHelp(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetHelp(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings SetOutput(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetOutput(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings SetQuery(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetQuery(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings SetVerbose(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetVerbose(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsGetParametersTemplateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAutoscaleSettingsGetParametersTemplateSettingsExtensions
-    {
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetDebug(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetDebug(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetHelp(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetHelp(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetOutput(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetOutput(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetQuery(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetQuery(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetVerbose(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetVerbose(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAutoscaleSettingsListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings SetDebug(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings ResetDebug(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings SetHelp(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings ResetHelp(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings SetOutput(this AzureMonitorAutoscaleSettingsListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings ResetOutput(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings SetQuery(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings ResetQuery(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings SetVerbose(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsListSettings ResetVerbose(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAutoscaleSettingsShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings SetName(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings ResetName(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings SetDebug(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings ResetDebug(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings SetHelp(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings ResetHelp(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings SetOutput(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings ResetOutput(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings SetQuery(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings ResetQuery(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings SetVerbose(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsShowSettings ResetVerbose(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorAutoscaleSettingsUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorAutoscaleSettingsUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetName(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetName(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetAdd(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetAdd(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetForceString(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetForceString(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetRemove(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetRemove(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetSet(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetSet(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetDebug(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetDebug(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetHelp(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetHelp(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetOutput(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetOutput(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetQuery(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetQuery(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings SetVerbose(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetVerbose(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureMonitorAutoscaleCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
     [PublicAPI]
@@ -7630,7 +4047,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMonitorAutoscaleCreateSettings SetLocation(this AzureMonitorAutoscaleCreateSettings toolSettings, string location)
         {
@@ -7638,7 +4055,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMonitorAutoscaleCreateSettings ResetLocation(this AzureMonitorAutoscaleCreateSettings toolSettings)
         {
@@ -7929,6 +4346,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleCreateSettings SetSubscription(this AzureMonitorAutoscaleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleCreateSettings ResetSubscription(this AzureMonitorAutoscaleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8027,6 +4462,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorAutoscaleDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings SetIds(this AzureMonitorAutoscaleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings SetIds(this AzureMonitorAutoscaleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings AddIds(this AzureMonitorAutoscaleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings AddIds(this AzureMonitorAutoscaleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAutoscaleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings ClearIds(this AzureMonitorAutoscaleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings RemoveIds(this AzureMonitorAutoscaleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings RemoveIds(this AzureMonitorAutoscaleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleDeleteSettings.Name"/>.</em></p><p>Name of the autoscale settings.</p></summary>
         [Pure]
@@ -8060,6 +4555,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings SetSubscription(this AzureMonitorAutoscaleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleDeleteSettings ResetSubscription(this AzureMonitorAutoscaleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8179,6 +4692,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleListSettings SetSubscription(this AzureMonitorAutoscaleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleListSettings ResetSubscription(this AzureMonitorAutoscaleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8277,6 +4808,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorAutoscaleShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings SetIds(this AzureMonitorAutoscaleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings SetIds(this AzureMonitorAutoscaleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings AddIds(this AzureMonitorAutoscaleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings AddIds(this AzureMonitorAutoscaleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAutoscaleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings ClearIds(this AzureMonitorAutoscaleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings RemoveIds(this AzureMonitorAutoscaleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings RemoveIds(this AzureMonitorAutoscaleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleShowSettings.Name"/>.</em></p><p>Name of the autoscale settings.</p></summary>
         [Pure]
@@ -8310,6 +4901,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings SetSubscription(this AzureMonitorAutoscaleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleShowSettings ResetSubscription(this AzureMonitorAutoscaleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8411,42 +5020,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorAutoscaleUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.Name"/>.</em></p><p>Name of the autoscale settings.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleUpdateSettings SetName(this AzureMonitorAutoscaleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleUpdateSettings.Name"/>.</em></p><p>Name of the autoscale settings.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleUpdateSettings ResetName(this AzureMonitorAutoscaleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleUpdateSettings SetResourceGroup(this AzureMonitorAutoscaleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorAutoscaleUpdateSettings ResetResourceGroup(this AzureMonitorAutoscaleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Enabled
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.Enabled"/>.</em></p><p>Autoscale settings enabled status.</p></summary>
         [Pure]
@@ -8504,6 +5077,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings SetIds(this AzureMonitorAutoscaleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings SetIds(this AzureMonitorAutoscaleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings AddIds(this AzureMonitorAutoscaleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings AddIds(this AzureMonitorAutoscaleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAutoscaleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings ClearIds(this AzureMonitorAutoscaleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings RemoveIds(this AzureMonitorAutoscaleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings RemoveIds(this AzureMonitorAutoscaleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.Name"/>.</em></p><p>Name of the autoscale settings.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings SetName(this AzureMonitorAutoscaleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleUpdateSettings.Name"/>.</em></p><p>Name of the autoscale settings.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings ResetName(this AzureMonitorAutoscaleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings SetResourceGroup(this AzureMonitorAutoscaleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings ResetResourceGroup(this AzureMonitorAutoscaleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings SetSubscription(this AzureMonitorAutoscaleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleUpdateSettings ResetSubscription(this AzureMonitorAutoscaleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -8845,6 +5532,3780 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureMonitorActionGroupCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActionGroupCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetName(this AzureMonitorActionGroupCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetName(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetResourceGroup(this AzureMonitorActionGroupCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetResourceGroup(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ShortName
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.ShortName"/>.</em></p><p>The short name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetShortName(this AzureMonitorActionGroupCreateSettings toolSettings, string shortName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShortName = shortName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.ShortName"/>.</em></p><p>The short name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetShortName(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShortName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetTags(this AzureMonitorActionGroupCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetTags(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Action
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Action"/>.</em></p><p>Add receivers to the action group during the creation.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetAction(this AzureMonitorActionGroupCreateSettings toolSettings, string action)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Action = action;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Action"/>.</em></p><p>Add receivers to the action group during the creation.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetAction(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Action = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetSubscription(this AzureMonitorActionGroupCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetSubscription(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetDebug(this AzureMonitorActionGroupCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetDebug(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetHelp(this AzureMonitorActionGroupCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetHelp(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetOutput(this AzureMonitorActionGroupCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetOutput(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetQuery(this AzureMonitorActionGroupCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetQuery(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings SetVerbose(this AzureMonitorActionGroupCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupCreateSettings ResetVerbose(this AzureMonitorActionGroupCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActionGroupDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActionGroupDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetIds(this AzureMonitorActionGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetIds(this AzureMonitorActionGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings AddIds(this AzureMonitorActionGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings AddIds(this AzureMonitorActionGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActionGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ClearIds(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings RemoveIds(this AzureMonitorActionGroupDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings RemoveIds(this AzureMonitorActionGroupDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetName(this AzureMonitorActionGroupDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetName(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetResourceGroup(this AzureMonitorActionGroupDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetResourceGroup(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetSubscription(this AzureMonitorActionGroupDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetSubscription(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetDebug(this AzureMonitorActionGroupDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetDebug(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetHelp(this AzureMonitorActionGroupDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetHelp(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetOutput(this AzureMonitorActionGroupDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetOutput(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetQuery(this AzureMonitorActionGroupDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetQuery(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings SetVerbose(this AzureMonitorActionGroupDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupDeleteSettings ResetVerbose(this AzureMonitorActionGroupDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActionGroupEnableReceiverSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActionGroupEnableReceiverSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Name"/>.</em></p><p>The name of the receiver to resubscribe.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetName(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Name"/>.</em></p><p>The name of the receiver to resubscribe.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetName(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ActionGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ActionGroup"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetActionGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string actionGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionGroup = actionGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ActionGroup"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetActionGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ActionGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetIds(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetIds(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupEnableReceiverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings AddIds(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupEnableReceiverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings AddIds(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActionGroupEnableReceiverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ClearIds(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupEnableReceiverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings RemoveIds(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupEnableReceiverSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings RemoveIds(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetResourceGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetResourceGroup(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetSubscription(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetSubscription(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetDebug(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetDebug(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetHelp(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetHelp(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetOutput(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetOutput(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetQuery(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetQuery(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings SetVerbose(this AzureMonitorActionGroupEnableReceiverSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupEnableReceiverSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupEnableReceiverSettings ResetVerbose(this AzureMonitorActionGroupEnableReceiverSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActionGroupListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActionGroupListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.ResourceGroup"/>.</em></p><p>Name of the resource group under which the action groups are being listed. If it is omitted, all the action groups under the current subscription are listed.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings SetResourceGroup(this AzureMonitorActionGroupListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.ResourceGroup"/>.</em></p><p>Name of the resource group under which the action groups are being listed. If it is omitted, all the action groups under the current subscription are listed.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings ResetResourceGroup(this AzureMonitorActionGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings SetSubscription(this AzureMonitorActionGroupListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings ResetSubscription(this AzureMonitorActionGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings SetDebug(this AzureMonitorActionGroupListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings ResetDebug(this AzureMonitorActionGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings SetHelp(this AzureMonitorActionGroupListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings ResetHelp(this AzureMonitorActionGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings SetOutput(this AzureMonitorActionGroupListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings ResetOutput(this AzureMonitorActionGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings SetQuery(this AzureMonitorActionGroupListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings ResetQuery(this AzureMonitorActionGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings SetVerbose(this AzureMonitorActionGroupListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupListSettings ResetVerbose(this AzureMonitorActionGroupListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActionGroupShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActionGroupShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetIds(this AzureMonitorActionGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetIds(this AzureMonitorActionGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings AddIds(this AzureMonitorActionGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings AddIds(this AzureMonitorActionGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActionGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ClearIds(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings RemoveIds(this AzureMonitorActionGroupShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings RemoveIds(this AzureMonitorActionGroupShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetName(this AzureMonitorActionGroupShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetName(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetResourceGroup(this AzureMonitorActionGroupShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetResourceGroup(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetSubscription(this AzureMonitorActionGroupShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetSubscription(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetDebug(this AzureMonitorActionGroupShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetDebug(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetHelp(this AzureMonitorActionGroupShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetHelp(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetOutput(this AzureMonitorActionGroupShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetOutput(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetQuery(this AzureMonitorActionGroupShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetQuery(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings SetVerbose(this AzureMonitorActionGroupShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupShowSettings ResetVerbose(this AzureMonitorActionGroupShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActionGroupUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActionGroupUpdateSettingsExtensions
+    {
+        #region ShortName
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.ShortName"/>.</em></p><p>Update the group short name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetShortName(this AzureMonitorActionGroupUpdateSettings toolSettings, string shortName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShortName = shortName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.ShortName"/>.</em></p><p>Update the group short name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetShortName(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ShortName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetTags(this AzureMonitorActionGroupUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetTags(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetIds(this AzureMonitorActionGroupUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetIds(this AzureMonitorActionGroupUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings AddIds(this AzureMonitorActionGroupUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActionGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings AddIds(this AzureMonitorActionGroupUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActionGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ClearIds(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings RemoveIds(this AzureMonitorActionGroupUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActionGroupUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings RemoveIds(this AzureMonitorActionGroupUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetName(this AzureMonitorActionGroupUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Name"/>.</em></p><p>The name of the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetName(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetResourceGroup(this AzureMonitorActionGroupUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetResourceGroup(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetSubscription(this AzureMonitorActionGroupUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetSubscription(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AddAction
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.AddAction"/>.</em></p><p>Add receivers to the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetAddAction(this AzureMonitorActionGroupUpdateSettings toolSettings, string addAction)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddAction = addAction;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.AddAction"/>.</em></p><p>Add receivers to the action group.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetAddAction(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddAction = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RemoveAction
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.RemoveAction"/>.</em></p><p>Remove receivers from the action group. Accept space-separated list of receiver names.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetRemoveAction(this AzureMonitorActionGroupUpdateSettings toolSettings, string removeAction)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveAction = removeAction;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.RemoveAction"/>.</em></p><p>Remove receivers from the action group. Accept space-separated list of receiver names.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetRemoveAction(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveAction = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetAdd(this AzureMonitorActionGroupUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetAdd(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetForceString(this AzureMonitorActionGroupUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetForceString(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetRemove(this AzureMonitorActionGroupUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetRemove(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetSet(this AzureMonitorActionGroupUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetSet(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetDebug(this AzureMonitorActionGroupUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetDebug(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetHelp(this AzureMonitorActionGroupUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetHelp(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetOutput(this AzureMonitorActionGroupUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetOutput(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetQuery(this AzureMonitorActionGroupUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetQuery(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActionGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings SetVerbose(this AzureMonitorActionGroupUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActionGroupUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActionGroupUpdateSettings ResetVerbose(this AzureMonitorActionGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAlertCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAlertCreateSettingsExtensions
+    {
+        #region Condition
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetCondition(this AzureMonitorAlertCreateSettings toolSettings, string condition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = condition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetCondition(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetName(this AzureMonitorAlertCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetName(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Description
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Description"/>.</em></p><p>Free-text description of the rule. Defaults to the condition expression.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetDescription(this AzureMonitorAlertCreateSettings toolSettings, string description)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = description;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Description"/>.</em></p><p>Free-text description of the rule. Defaults to the condition expression.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetDescription(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Disabled
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetDisabled(this AzureMonitorAlertCreateSettings toolSettings, bool? disabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = disabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetDisabled(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings EnableDisabled(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings DisableDisabled(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMonitorAlertCreateSettings.Disabled"/>.</em></p><p>Create the rule in a disabled state.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ToggleDisabled(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Disabled = !toolSettings.Disabled;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetLocation(this AzureMonitorAlertCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetLocation(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetTags(this AzureMonitorAlertCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetTags(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Action
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Action"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetAction(this AzureMonitorAlertCreateSettings toolSettings, string action)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Action = action;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Action"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetAction(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Action = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EmailServiceOwners
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings, bool? emailServiceOwners)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = emailServiceOwners;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings EnableEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings DisableEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMonitorAlertCreateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ToggleEmailServiceOwners(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = !toolSettings.EmailServiceOwners;
+            return toolSettings;
+        }
+        #endregion
+        #region Target
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Target"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetTarget(this AzureMonitorAlertCreateSettings toolSettings, string target)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Target = target;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Target"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetTarget(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Target = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetResourceGroup(this AzureMonitorAlertCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetResourceGroup(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetNamespace
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.TargetNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetTargetNamespace(this AzureMonitorAlertCreateSettings toolSettings, string targetNamespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetNamespace = targetNamespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.TargetNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetTargetNamespace(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetNamespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetParent
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.TargetParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetTargetParent(this AzureMonitorAlertCreateSettings toolSettings, string targetParent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetParent = targetParent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.TargetParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetTargetParent(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetParent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetType
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.TargetType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetTargetType(this AzureMonitorAlertCreateSettings toolSettings, string targetType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetType = targetType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.TargetType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetTargetType(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetSubscription(this AzureMonitorAlertCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetSubscription(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetDebug(this AzureMonitorAlertCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetDebug(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetHelp(this AzureMonitorAlertCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetHelp(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetOutput(this AzureMonitorAlertCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetOutput(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetQuery(this AzureMonitorAlertCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetQuery(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings SetVerbose(this AzureMonitorAlertCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertCreateSettings ResetVerbose(this AzureMonitorAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAlertDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAlertDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetIds(this AzureMonitorAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetIds(this AzureMonitorAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings AddIds(this AzureMonitorAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings AddIds(this AzureMonitorAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ClearIds(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings RemoveIds(this AzureMonitorAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings RemoveIds(this AzureMonitorAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetName(this AzureMonitorAlertDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetName(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetResourceGroup(this AzureMonitorAlertDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetResourceGroup(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetSubscription(this AzureMonitorAlertDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetSubscription(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetDebug(this AzureMonitorAlertDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetDebug(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetHelp(this AzureMonitorAlertDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetHelp(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetOutput(this AzureMonitorAlertDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetOutput(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetQuery(this AzureMonitorAlertDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetQuery(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings SetVerbose(this AzureMonitorAlertDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertDeleteSettings ResetVerbose(this AzureMonitorAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAlertListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAlertListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings SetResourceGroup(this AzureMonitorAlertListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings ResetResourceGroup(this AzureMonitorAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings SetSubscription(this AzureMonitorAlertListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings ResetSubscription(this AzureMonitorAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings SetDebug(this AzureMonitorAlertListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings ResetDebug(this AzureMonitorAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings SetHelp(this AzureMonitorAlertListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings ResetHelp(this AzureMonitorAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings SetOutput(this AzureMonitorAlertListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings ResetOutput(this AzureMonitorAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings SetQuery(this AzureMonitorAlertListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings ResetQuery(this AzureMonitorAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings SetVerbose(this AzureMonitorAlertListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListSettings ResetVerbose(this AzureMonitorAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAlertListIncidentsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAlertListIncidentsSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetResourceGroup(this AzureMonitorAlertListIncidentsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetResourceGroup(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RuleName
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetRuleName(this AzureMonitorAlertListIncidentsSettings toolSettings, string ruleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RuleName = ruleName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetRuleName(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetSubscription(this AzureMonitorAlertListIncidentsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetSubscription(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetDebug(this AzureMonitorAlertListIncidentsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetDebug(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetHelp(this AzureMonitorAlertListIncidentsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetHelp(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetOutput(this AzureMonitorAlertListIncidentsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetOutput(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetQuery(this AzureMonitorAlertListIncidentsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetQuery(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertListIncidentsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings SetVerbose(this AzureMonitorAlertListIncidentsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertListIncidentsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertListIncidentsSettings ResetVerbose(this AzureMonitorAlertListIncidentsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAlertShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAlertShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetIds(this AzureMonitorAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetIds(this AzureMonitorAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings AddIds(this AzureMonitorAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings AddIds(this AzureMonitorAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ClearIds(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings RemoveIds(this AzureMonitorAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings RemoveIds(this AzureMonitorAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetName(this AzureMonitorAlertShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetName(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetResourceGroup(this AzureMonitorAlertShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetResourceGroup(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetSubscription(this AzureMonitorAlertShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetSubscription(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetDebug(this AzureMonitorAlertShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetDebug(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetHelp(this AzureMonitorAlertShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetHelp(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetOutput(this AzureMonitorAlertShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetOutput(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetQuery(this AzureMonitorAlertShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetQuery(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings SetVerbose(this AzureMonitorAlertShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowSettings ResetVerbose(this AzureMonitorAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAlertShowIncidentSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAlertShowIncidentSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetIds(this AzureMonitorAlertShowIncidentSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetIds(this AzureMonitorAlertShowIncidentSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertShowIncidentSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings AddIds(this AzureMonitorAlertShowIncidentSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertShowIncidentSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings AddIds(this AzureMonitorAlertShowIncidentSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAlertShowIncidentSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ClearIds(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertShowIncidentSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings RemoveIds(this AzureMonitorAlertShowIncidentSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertShowIncidentSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings RemoveIds(this AzureMonitorAlertShowIncidentSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Name"/>.</em></p><p>The name of the incident to retrieve.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetName(this AzureMonitorAlertShowIncidentSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Name"/>.</em></p><p>The name of the incident to retrieve.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetName(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetResourceGroup(this AzureMonitorAlertShowIncidentSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetResourceGroup(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RuleName
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetRuleName(this AzureMonitorAlertShowIncidentSettings toolSettings, string ruleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RuleName = ruleName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.RuleName"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetRuleName(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetSubscription(this AzureMonitorAlertShowIncidentSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetSubscription(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetDebug(this AzureMonitorAlertShowIncidentSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetDebug(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetHelp(this AzureMonitorAlertShowIncidentSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetHelp(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetOutput(this AzureMonitorAlertShowIncidentSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetOutput(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetQuery(this AzureMonitorAlertShowIncidentSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetQuery(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertShowIncidentSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings SetVerbose(this AzureMonitorAlertShowIncidentSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertShowIncidentSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertShowIncidentSettings ResetVerbose(this AzureMonitorAlertShowIncidentSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAlertUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAlertUpdateSettingsExtensions
+    {
+        #region Description
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Description"/>.</em></p><p>Description of the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetDescription(this AzureMonitorAlertUpdateSettings toolSettings, string description)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = description;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Description"/>.</em></p><p>Description of the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetDescription(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Description = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Enabled
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Enabled"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetEnabled(this AzureMonitorAlertUpdateSettings toolSettings, string enabled)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = enabled;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Enabled"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetEnabled(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Enabled = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetTags(this AzureMonitorAlertUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetTags(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetIds(this AzureMonitorAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetIds(this AzureMonitorAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings AddIds(this AzureMonitorAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings AddIds(this AzureMonitorAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ClearIds(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings RemoveIds(this AzureMonitorAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings RemoveIds(this AzureMonitorAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetName(this AzureMonitorAlertUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetName(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetResourceGroup(this AzureMonitorAlertUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetResourceGroup(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetSubscription(this AzureMonitorAlertUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetSubscription(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AddAction
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.AddAction"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetAddAction(this AzureMonitorAlertUpdateSettings toolSettings, string addAction)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddAction = addAction;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.AddAction"/>.</em></p><p>Add an action to fire when the alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetAddAction(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AddAction = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EmailServiceOwners
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings, bool? emailServiceOwners)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = emailServiceOwners;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = null;
+            return toolSettings;
+        }
+        /// <summary><p><em>Enables <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings EnableEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = true;
+            return toolSettings;
+        }
+        /// <summary><p><em>Disables <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings DisableEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = false;
+            return toolSettings;
+        }
+        /// <summary><p><em>Toggles <see cref="AzureMonitorAlertUpdateSettings.EmailServiceOwners"/>.</em></p><p>Email the service owners if an alert is triggered.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ToggleEmailServiceOwners(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EmailServiceOwners = !toolSettings.EmailServiceOwners;
+            return toolSettings;
+        }
+        #endregion
+        #region RemoveAction
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.RemoveAction"/>.</em></p><p>Remove one or more actions.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetRemoveAction(this AzureMonitorAlertUpdateSettings toolSettings, string removeAction)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveAction = removeAction;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.RemoveAction"/>.</em></p><p>Remove one or more actions.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetRemoveAction(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RemoveAction = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Aggregation
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Aggregation"/>.</em></p><p>Type of aggregation to apply based on --period.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetAggregation(this AzureMonitorAlertUpdateSettings toolSettings, MonitorAlertUpdateAggregation aggregation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Aggregation = aggregation;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Aggregation"/>.</em></p><p>Type of aggregation to apply based on --period.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetAggregation(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Aggregation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Condition
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetCondition(this AzureMonitorAlertUpdateSettings toolSettings, string condition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = condition;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Condition"/>.</em></p><p>The condition which triggers the rule.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetCondition(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Condition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Metric
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Metric"/>.</em></p><p>Name of the metric to base the rule on.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetMetric(this AzureMonitorAlertUpdateSettings toolSettings, string metric)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Metric = metric;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Metric"/>.</em></p><p>Name of the metric to base the rule on.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetMetric(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Metric = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Operator
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Operator"/>.</em></p><p>How to compare the metric against the threshold.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetOperator(this AzureMonitorAlertUpdateSettings toolSettings, MonitorAlertUpdateOperator @operator)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Operator = @operator;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Operator"/>.</em></p><p>How to compare the metric against the threshold.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetOperator(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Operator = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Period
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Period"/>.</em></p><p>Time span over which to apply --aggregation, in nDnHnMnS shorthand or full ISO8601 format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetPeriod(this AzureMonitorAlertUpdateSettings toolSettings, string period)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Period = period;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Period"/>.</em></p><p>Time span over which to apply --aggregation, in nDnHnMnS shorthand or full ISO8601 format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetPeriod(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Period = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Threshold
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Threshold"/>.</em></p><p>Numeric threshold at which to trigger the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetThreshold(this AzureMonitorAlertUpdateSettings toolSettings, string threshold)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Threshold = threshold;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Threshold"/>.</em></p><p>Numeric threshold at which to trigger the alert.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetThreshold(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Threshold = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Resource
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetResource(this AzureMonitorAlertUpdateSettings toolSettings, string resource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = resource;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetResource(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceNamespace
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetResourceNamespace(this AzureMonitorAlertUpdateSettings toolSettings, string resourceNamespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceNamespace = resourceNamespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetResourceNamespace(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceNamespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceParent
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetResourceParent(this AzureMonitorAlertUpdateSettings toolSettings, string resourceParent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceParent = resourceParent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetResourceParent(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceParent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetResourceType(this AzureMonitorAlertUpdateSettings toolSettings, string resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetResourceType(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetAdd(this AzureMonitorAlertUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetAdd(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetForceString(this AzureMonitorAlertUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetForceString(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetRemove(this AzureMonitorAlertUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetRemove(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetSet(this AzureMonitorAlertUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetSet(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetDebug(this AzureMonitorAlertUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetDebug(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetHelp(this AzureMonitorAlertUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetHelp(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetOutput(this AzureMonitorAlertUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetOutput(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetQuery(this AzureMonitorAlertUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetQuery(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAlertUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings SetVerbose(this AzureMonitorAlertUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAlertUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAlertUpdateSettings ResetVerbose(this AzureMonitorAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActivityLogListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActivityLogListSettingsExtensions
+    {
+        #region MaxEvents
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.MaxEvents"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetMaxEvents(this AzureMonitorActivityLogListSettings toolSettings, int? maxEvents)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxEvents = maxEvents;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.MaxEvents"/>.</em></p><p>Maximum number of records to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetMaxEvents(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxEvents = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Select
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Select"/> to a new list.</em></p><p>Space-separated list of properties to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetSelect(this AzureMonitorActivityLogListSettings toolSettings, params MonitorActivityLogListSelect[] select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SelectInternal = select.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Select"/> to a new list.</em></p><p>Space-separated list of properties to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetSelect(this AzureMonitorActivityLogListSettings toolSettings, IEnumerable<MonitorActivityLogListSelect> select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SelectInternal = select.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings AddSelect(this AzureMonitorActivityLogListSettings toolSettings, params MonitorActivityLogListSelect[] select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SelectInternal.AddRange(select);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings AddSelect(this AzureMonitorActivityLogListSettings toolSettings, IEnumerable<MonitorActivityLogListSelect> select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SelectInternal.AddRange(select);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ClearSelect(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SelectInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings RemoveSelect(this AzureMonitorActivityLogListSettings toolSettings, params MonitorActivityLogListSelect[] select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<MonitorActivityLogListSelect>(select);
+            toolSettings.SelectInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogListSettings.Select"/>.</em></p><p>Space-separated list of properties to return.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings RemoveSelect(this AzureMonitorActivityLogListSettings toolSettings, IEnumerable<MonitorActivityLogListSelect> select)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<MonitorActivityLogListSelect>(select);
+            toolSettings.SelectInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Caller
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Caller"/>.</em></p><p>Caller to query for, such as an e-mail address or service principal ID.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetCaller(this AzureMonitorActivityLogListSettings toolSettings, string caller)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Caller = caller;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Caller"/>.</em></p><p>Caller to query for, such as an e-mail address or service principal ID.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetCaller(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Caller = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CorrelationId
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.CorrelationId"/>.</em></p><p>Correlation ID to query.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetCorrelationId(this AzureMonitorActivityLogListSettings toolSettings, string correlationId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CorrelationId = correlationId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.CorrelationId"/>.</em></p><p>Correlation ID to query.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetCorrelationId(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CorrelationId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filters
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Filters"/>.</em></p><p>OData filters. Will ignore other filter arguments.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetFilters(this AzureMonitorActivityLogListSettings toolSettings, string filters)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filters = filters;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Filters"/>.</em></p><p>OData filters. Will ignore other filter arguments.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetFilters(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filters = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Namespace
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Namespace"/>.</em></p><p>Resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetNamespace(this AzureMonitorActivityLogListSettings toolSettings, string @namespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = @namespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Namespace"/>.</em></p><p>Resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetNamespace(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetResourceGroup(this AzureMonitorActivityLogListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetResourceGroup(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceId
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.ResourceId"/>.</em></p><p>ARM ID of a resource.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetResourceId(this AzureMonitorActivityLogListSettings toolSettings, string resourceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceId = resourceId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.ResourceId"/>.</em></p><p>ARM ID of a resource.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetResourceId(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Status
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Status"/>.</em></p><p>Status to query for (ex: Failed).</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetStatus(this AzureMonitorActivityLogListSettings toolSettings, string status)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = status;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Status"/>.</em></p><p>Status to query for (ex: Failed).</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetStatus(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndTime
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.EndTime"/>.</em></p><p>End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetEndTime(this AzureMonitorActivityLogListSettings toolSettings, string endTime)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndTime = endTime;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.EndTime"/>.</em></p><p>End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetEndTime(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndTime = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Offset
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Offset"/>.</em></p><p>Time offset of the query range, in ##d##h format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetOffset(this AzureMonitorActivityLogListSettings toolSettings, string offset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offset = offset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Offset"/>.</em></p><p>Time offset of the query range, in ##d##h format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetOffset(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Offset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartTime
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.StartTime"/>.</em></p><p>Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetStartTime(this AzureMonitorActivityLogListSettings toolSettings, string startTime)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartTime = startTime;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.StartTime"/>.</em></p><p>Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm).</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetStartTime(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartTime = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetSubscription(this AzureMonitorActivityLogListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetSubscription(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetDebug(this AzureMonitorActivityLogListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetDebug(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetHelp(this AzureMonitorActivityLogListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetHelp(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetOutput(this AzureMonitorActivityLogListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetOutput(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetQuery(this AzureMonitorActivityLogListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetQuery(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings SetVerbose(this AzureMonitorActivityLogListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListSettings ResetVerbose(this AzureMonitorActivityLogListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorActivityLogListCategoriesSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorActivityLogListCategoriesSettingsExtensions
+    {
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings SetSubscription(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings ResetSubscription(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings SetDebug(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings ResetDebug(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings SetHelp(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings ResetHelp(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings SetOutput(this AzureMonitorActivityLogListCategoriesSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings ResetOutput(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings SetQuery(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings ResetQuery(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogListCategoriesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings SetVerbose(this AzureMonitorActivityLogListCategoriesSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogListCategoriesSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogListCategoriesSettings ResetVerbose(this AzureMonitorActivityLogListCategoriesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureMonitorDiagnosticSettingsCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
     [PublicAPI]
@@ -9067,6 +9528,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCreateSettings SetSubscription(this AzureMonitorDiagnosticSettingsCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCreateSettings ResetSubscription(this AzureMonitorDiagnosticSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -9273,6 +9752,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsDeleteSettings SetSubscription(this AzureMonitorDiagnosticSettingsDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsDeleteSettings ResetSubscription(this AzureMonitorDiagnosticSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -9458,6 +9955,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsListSettings SetSubscription(this AzureMonitorDiagnosticSettingsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsListSettings ResetSubscription(this AzureMonitorDiagnosticSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9664,6 +10179,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsShowSettings SetSubscription(this AzureMonitorDiagnosticSettingsShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsShowSettings ResetSubscription(this AzureMonitorDiagnosticSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -9945,6 +10478,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsUpdateSettings SetSubscription(this AzureMonitorDiagnosticSettingsUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsUpdateSettings ResetSubscription(this AzureMonitorDiagnosticSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -10037,6 +10588,1074 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureMonitorAutoscaleSettingsCreateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAutoscaleSettingsCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetName(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetName(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Parameters
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Parameters"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. Use az autoscale-settings get-parameters-template to export json template.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetParameters(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string parameters)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameters = parameters;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Parameters"/>.</em></p><p>JSON encoded parameters configuration. Use @{file} to load from a file. Use az autoscale-settings get-parameters-template to export json template.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetParameters(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Parameters = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetSubscription(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetSubscription(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetDebug(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetDebug(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetHelp(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetHelp(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetOutput(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetOutput(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetQuery(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetQuery(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings SetVerbose(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsCreateSettings ResetVerbose(this AzureMonitorAutoscaleSettingsCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsDeleteSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAutoscaleSettingsDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetIds(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetIds(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings AddIds(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings AddIds(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ClearIds(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings RemoveIds(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings RemoveIds(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetName(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetName(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetSubscription(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetSubscription(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetDebug(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetDebug(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetHelp(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetHelp(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetOutput(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetOutput(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetQuery(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetQuery(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings SetVerbose(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsDeleteSettings ResetVerbose(this AzureMonitorAutoscaleSettingsDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsGetParametersTemplateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAutoscaleSettingsGetParametersTemplateSettingsExtensions
+    {
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetSubscription(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetSubscription(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetDebug(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetDebug(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetHelp(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetHelp(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetOutput(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetOutput(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetQuery(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetQuery(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings SetVerbose(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsGetParametersTemplateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsGetParametersTemplateSettings ResetVerbose(this AzureMonitorAutoscaleSettingsGetParametersTemplateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAutoscaleSettingsListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings SetSubscription(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings ResetSubscription(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings SetDebug(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings ResetDebug(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings SetHelp(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings ResetHelp(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings SetOutput(this AzureMonitorAutoscaleSettingsListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings ResetOutput(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings SetQuery(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings ResetQuery(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings SetVerbose(this AzureMonitorAutoscaleSettingsListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsListSettings ResetVerbose(this AzureMonitorAutoscaleSettingsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAutoscaleSettingsShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetIds(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetIds(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleSettingsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings AddIds(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorAutoscaleSettingsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings AddIds(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorAutoscaleSettingsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ClearIds(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleSettingsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings RemoveIds(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorAutoscaleSettingsShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings RemoveIds(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetName(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetName(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetSubscription(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetSubscription(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetDebug(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetDebug(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetHelp(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetHelp(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetOutput(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetOutput(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetQuery(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetQuery(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings SetVerbose(this AzureMonitorAutoscaleSettingsShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsShowSettings ResetVerbose(this AzureMonitorAutoscaleSettingsShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorAutoscaleSettingsUpdateSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorAutoscaleSettingsUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetName(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Name"/>.</em></p><p>The autoscale setting name.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetName(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetResourceGroup(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetResourceGroup(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetAdd(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Add"/>.</em></p><p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetAdd(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetForceString(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.ForceString"/>.</em></p><p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetForceString(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetRemove(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Remove"/>.</em></p><p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetRemove(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetSet(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Set"/>.</em></p><p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetSet(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetSubscription(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetSubscription(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetDebug(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetDebug(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetHelp(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetHelp(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetOutput(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetOutput(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetQuery(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetQuery(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings SetVerbose(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleSettingsUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleSettingsUpdateSettings ResetVerbose(this AzureMonitorAutoscaleSettingsUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureMonitorLogProfilesCreateSettingsExtensions
     /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
     [PublicAPI]
@@ -10104,7 +11723,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMonitorLogProfilesCreateSettings SetLocation(this AzureMonitorLogProfilesCreateSettings toolSettings, string location)
         {
@@ -10112,7 +11731,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMonitorLogProfilesCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMonitorLogProfilesCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureMonitorLogProfilesCreateSettings ResetLocation(this AzureMonitorLogProfilesCreateSettings toolSettings)
         {
@@ -10313,6 +11932,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesCreateSettings SetSubscription(this AzureMonitorLogProfilesCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorLogProfilesCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesCreateSettings ResetSubscription(this AzureMonitorLogProfilesCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -10429,6 +12066,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesDeleteSettings SetSubscription(this AzureMonitorLogProfilesDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorLogProfilesDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesDeleteSettings ResetSubscription(this AzureMonitorLogProfilesDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -10527,6 +12182,24 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorLogProfilesListSettingsExtensions
     {
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesListSettings SetSubscription(this AzureMonitorLogProfilesListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorLogProfilesListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesListSettings ResetSubscription(this AzureMonitorLogProfilesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -10640,6 +12313,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesShowSettings SetSubscription(this AzureMonitorLogProfilesShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorLogProfilesShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesShowSettings ResetSubscription(this AzureMonitorLogProfilesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -10828,6 +12519,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorLogProfilesUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesUpdateSettings SetSubscription(this AzureMonitorLogProfilesUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorLogProfilesUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorLogProfilesUpdateSettings ResetSubscription(this AzureMonitorLogProfilesUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11277,6 +12986,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsListSettings SetSubscription(this AzureMonitorMetricsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsListSettings ResetSubscription(this AzureMonitorMetricsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorMetricsListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -11480,6 +13207,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsListDefinitionsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsListDefinitionsSettings SetSubscription(this AzureMonitorMetricsListDefinitionsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsListDefinitionsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsListDefinitionsSettings ResetSubscription(this AzureMonitorMetricsListDefinitionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -11785,6 +13530,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertCreateSettings SetSubscription(this AzureMonitorActivityLogAlertCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertCreateSettings ResetSubscription(this AzureMonitorActivityLogAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -11883,6 +13646,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorActivityLogAlertDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings SetIds(this AzureMonitorActivityLogAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings SetIds(this AzureMonitorActivityLogAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings AddIds(this AzureMonitorActivityLogAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings AddIds(this AzureMonitorActivityLogAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings ClearIds(this AzureMonitorActivityLogAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings RemoveIds(this AzureMonitorActivityLogAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings RemoveIds(this AzureMonitorActivityLogAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertDeleteSettings.Name"/>.</em></p><p>The name of the activity log alert.</p></summary>
         [Pure]
@@ -11916,6 +13739,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings SetSubscription(this AzureMonitorActivityLogAlertDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertDeleteSettings ResetSubscription(this AzureMonitorActivityLogAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -12035,6 +13876,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertListSettings SetSubscription(this AzureMonitorActivityLogAlertListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertListSettings ResetSubscription(this AzureMonitorActivityLogAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -12133,6 +13992,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorActivityLogAlertShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings SetIds(this AzureMonitorActivityLogAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings SetIds(this AzureMonitorActivityLogAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings AddIds(this AzureMonitorActivityLogAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings AddIds(this AzureMonitorActivityLogAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings ClearIds(this AzureMonitorActivityLogAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings RemoveIds(this AzureMonitorActivityLogAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings RemoveIds(this AzureMonitorActivityLogAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertShowSettings.Name"/>.</em></p><p>The name of the activity log alert.</p></summary>
         [Pure]
@@ -12166,6 +14085,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings SetSubscription(this AzureMonitorActivityLogAlertShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertShowSettings ResetSubscription(this AzureMonitorActivityLogAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -12267,42 +14204,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorActivityLogAlertUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Name"/>.</em></p><p>The name of the activity log alert.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertUpdateSettings SetName(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Name"/>.</em></p><p>The name of the activity log alert.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertUpdateSettings ResetName(this AzureMonitorActivityLogAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertUpdateSettings SetResourceGroup(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertUpdateSettings ResetResourceGroup(this AzureMonitorActivityLogAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Condition
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Condition"/>.</em></p><p>The conditional expression that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...].</p></summary>
         [Pure]
@@ -12396,6 +14297,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings SetIds(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings SetIds(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings AddIds(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings AddIds(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings ClearIds(this AzureMonitorActivityLogAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings RemoveIds(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings RemoveIds(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Name"/>.</em></p><p>The name of the activity log alert.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings SetName(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Name"/>.</em></p><p>The name of the activity log alert.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings ResetName(this AzureMonitorActivityLogAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings SetResourceGroup(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings ResetResourceGroup(this AzureMonitorActivityLogAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings SetSubscription(this AzureMonitorActivityLogAlertUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertUpdateSettings ResetSubscription(this AzureMonitorActivityLogAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -12555,6 +14570,436 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMonitorActivityLogAlertUpdateSettings ResetVerbose(this AzureMonitorActivityLogAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorDiagnosticSettingsCategoriesListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorDiagnosticSettingsCategoriesListSettingsExtensions
+    {
+        #region Resource
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResource(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = resource;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResource(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceNamespace
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceNamespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceNamespace = resourceNamespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceNamespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceParent
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceParent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceParent = resourceParent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceParent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceType(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceType(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetSubscription(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetSubscription(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetDebug(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetDebug(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetHelp(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetHelp(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetOutput(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetOutput(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetQuery(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetQuery(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetVerbose(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetVerbose(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMonitorDiagnosticSettingsCategoriesShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMonitorDiagnosticSettingsCategoriesShowSettingsExtensions
+    {
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Name"/>.</em></p><p>The name of the diagnostic setting.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetName(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Name"/>.</em></p><p>The name of the diagnostic setting.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetName(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Resource
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResource(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = resource;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResource(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Resource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceNamespace
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceNamespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceNamespace = resourceNamespace;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceNamespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceParent
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceParent)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceParent = resourceParent;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceParent = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceType(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceType(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetSubscription(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetSubscription(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetDebug(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetDebug(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetHelp(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetHelp(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetOutput(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetOutput(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetQuery(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetQuery(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetVerbose(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetVerbose(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -12767,6 +15212,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileCreateSettings SetSubscription(this AzureMonitorAutoscaleProfileCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleProfileCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileCreateSettings ResetSubscription(this AzureMonitorAutoscaleProfileCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -12919,6 +15382,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileDeleteSettings SetSubscription(this AzureMonitorAutoscaleProfileDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleProfileDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileDeleteSettings ResetSubscription(this AzureMonitorAutoscaleProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -13053,6 +15534,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileListSettings SetSubscription(this AzureMonitorAutoscaleProfileListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleProfileListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileListSettings ResetSubscription(this AzureMonitorAutoscaleProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -13184,6 +15683,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SearchQuery = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileListTimezonesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileListTimezonesSettings SetSubscription(this AzureMonitorAutoscaleProfileListTimezonesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleProfileListTimezonesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileListTimezonesSettings ResetSubscription(this AzureMonitorAutoscaleProfileListTimezonesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -13336,6 +15853,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleProfileShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileShowSettings SetSubscription(this AzureMonitorAutoscaleProfileShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleProfileShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleProfileShowSettings ResetSubscription(this AzureMonitorAutoscaleProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -13566,6 +16101,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SourceSchedule = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleRuleCopySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleCopySettings SetSubscription(this AzureMonitorAutoscaleRuleCopySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleRuleCopySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleCopySettings ResetSubscription(this AzureMonitorAutoscaleRuleCopySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -13865,6 +16418,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleCreateSettings SetSubscription(this AzureMonitorAutoscaleRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleRuleCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleCreateSettings ResetSubscription(this AzureMonitorAutoscaleRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleRuleCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -14077,6 +16648,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleDeleteSettings SetSubscription(this AzureMonitorAutoscaleRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleRuleDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleDeleteSettings ResetSubscription(this AzureMonitorAutoscaleRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleRuleDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -14229,6 +16818,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleListSettings SetSubscription(this AzureMonitorAutoscaleRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleRuleListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorAutoscaleRuleListSettings ResetSubscription(this AzureMonitorAutoscaleRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorAutoscaleRuleListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -14313,400 +16920,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureMonitorAutoscaleRuleListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureMonitorAutoscaleRuleListSettings ResetVerbose(this AzureMonitorAutoscaleRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorDiagnosticSettingsCategoriesListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorDiagnosticSettingsCategoriesListSettingsExtensions
-    {
-        #region Resource
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResource(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resource)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Resource = resource;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResource(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Resource = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceNamespace
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceNamespace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceNamespace = resourceNamespace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceNamespace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceParent
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceParent)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceParent = resourceParent;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceParent = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceType
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetResourceType(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string resourceType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceType = resourceType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetResourceType(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetDebug(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetDebug(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetHelp(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetHelp(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetOutput(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetOutput(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetQuery(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetQuery(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings SetVerbose(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesListSettings ResetVerbose(this AzureMonitorDiagnosticSettingsCategoriesListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMonitorDiagnosticSettingsCategoriesShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMonitorDiagnosticSettingsCategoriesShowSettingsExtensions
-    {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Name"/>.</em></p><p>The name of the diagnostic setting.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetName(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Name"/>.</em></p><p>The name of the diagnostic setting.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetName(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Resource
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResource(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resource)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Resource = resource;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Resource"/>.</em></p><p>Name or ID of the target resource.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResource(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Resource = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceGroup(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceNamespace
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceNamespace)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceNamespace = resourceNamespace;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceNamespace"/>.</em></p><p>Target resource provider namespace.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceNamespace(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceNamespace = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceParent
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceParent)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceParent = resourceParent;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceParent"/>.</em></p><p>Target resource parent path, if applicable.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceParent(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceParent = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceType
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetResourceType(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string resourceType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceType = resourceType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.ResourceType"/>.</em></p><p>Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines)').</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetResourceType(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetDebug(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetDebug(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetHelp(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetHelp(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetOutput(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetOutput(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetQuery(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetQuery(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings SetVerbose(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorDiagnosticSettingsCategoriesShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureMonitorDiagnosticSettingsCategoriesShowSettings ResetVerbose(this AzureMonitorDiagnosticSettingsCategoriesShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -15027,6 +17240,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings SetSubscription(this AzureMonitorMetricsAlertCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertCreateSettings ResetSubscription(this AzureMonitorMetricsAlertCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -15125,6 +17356,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorMetricsAlertDeleteSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetIds(this AzureMonitorMetricsAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetIds(this AzureMonitorMetricsAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings AddIds(this AzureMonitorMetricsAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings AddIds(this AzureMonitorMetricsAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorMetricsAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ClearIds(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings RemoveIds(this AzureMonitorMetricsAlertDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertDeleteSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings RemoveIds(this AzureMonitorMetricsAlertDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
         [Pure]
@@ -15158,6 +17449,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings SetSubscription(this AzureMonitorMetricsAlertDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertDeleteSettings ResetSubscription(this AzureMonitorMetricsAlertDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -15277,6 +17586,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings SetSubscription(this AzureMonitorMetricsAlertListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertListSettings ResetSubscription(this AzureMonitorMetricsAlertListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -15375,6 +17702,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorMetricsAlertShowSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetIds(this AzureMonitorMetricsAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetIds(this AzureMonitorMetricsAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings AddIds(this AzureMonitorMetricsAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings AddIds(this AzureMonitorMetricsAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorMetricsAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ClearIds(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings RemoveIds(this AzureMonitorMetricsAlertShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertShowSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings RemoveIds(this AzureMonitorMetricsAlertShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
         [Pure]
@@ -15408,6 +17795,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings SetSubscription(this AzureMonitorMetricsAlertShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertShowSettings ResetSubscription(this AzureMonitorMetricsAlertShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -15509,42 +17914,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorMetricsAlertUpdateSettingsExtensions
     {
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorMetricsAlertUpdateSettings SetName(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
-        [Pure]
-        public static AzureMonitorMetricsAlertUpdateSettings ResetName(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorMetricsAlertUpdateSettings SetResourceGroup(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorMetricsAlertUpdateSettings ResetResourceGroup(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region AutoMitigate
         /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.AutoMitigate"/>.</em></p><p>Automatically resolve the alert.</p></summary>
         [Pure]
@@ -15776,6 +18145,120 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WindowSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetIds(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetIds(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddIds(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorMetricsAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings AddIds(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorMetricsAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ClearIds(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveIds(this AzureMonitorMetricsAlertUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorMetricsAlertUpdateSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings RemoveIds(this AzureMonitorMetricsAlertUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetName(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Name"/>.</em></p><p>Name of the alert rule.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetName(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetResourceGroup(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetResourceGroup(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorMetricsAlertUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings SetSubscription(this AzureMonitorMetricsAlertUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorMetricsAlertUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorMetricsAlertUpdateSettings ResetSubscription(this AzureMonitorMetricsAlertUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -16123,42 +18606,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
         #region Reset
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Reset"/>.</em></p><p>Remove all the existing action groups before add new conditions.</p></summary>
         [Pure]
@@ -16252,6 +18699,120 @@ namespace Nuke.Azure
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(webhookProperties);
             toolSettings.WebhookPropertiesInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetIds(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetIds(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings AddIds(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings AddIds(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ClearIds(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings RemoveIds(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings RemoveIds(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetName(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetResourceGroup(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings SetSubscription(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupAddSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupAddSettings ResetSubscription(this AzureMonitorActivityLogAlertActionGroupAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -16371,6 +18932,66 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetIds(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetIds(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings AddIds(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings AddIds(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ClearIds(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings RemoveIds(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings RemoveIds(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
         [Pure]
@@ -16404,6 +19025,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings SetSubscription(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertActionGroupRemoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertActionGroupRemoveSettings ResetSubscription(this AzureMonitorActivityLogAlertActionGroupRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -16505,6 +19144,102 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorActivityLogAlertScopeAddSettingsExtensions
     {
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Reset
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string reset)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Reset = reset;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Reset = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetIds(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetIds(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings AddIds(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings AddIds(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings ClearIds(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings RemoveIds(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeAddSettings RemoveIds(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
         [Pure]
@@ -16541,39 +19276,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string scope)
+        public static AzureMonitorActivityLogAlertScopeAddSettings SetSubscription(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Scope"/>.</em></p><p>The scopes to add.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetScope(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
+        public static AzureMonitorActivityLogAlertScopeAddSettings ResetSubscription(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Reset
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings SetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings, string reset)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Reset = reset;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeAddSettings.Reset"/>.</em></p><p>Remove all the existing scopes before add new scopes.</p></summary>
-        [Pure]
-        public static AzureMonitorActivityLogAlertScopeAddSettings ResetReset(this AzureMonitorActivityLogAlertScopeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Reset = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -16675,6 +19392,84 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureMonitorActivityLogAlertScopeRemoveSettingsExtensions
     {
+        #region Scope
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string scope)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = scope;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Scope = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetIds(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetIds(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings AddIds(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings AddIds(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ClearIds(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings RemoveIds(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings RemoveIds(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Name"/>.</em></p><p>Name of the activity log alerts.</p></summary>
         [Pure]
@@ -16711,21 +19506,21 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Scope
-        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string scope)
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings SetSubscription(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = scope;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Scope"/>.</em></p><p>The scopes to remove.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureMonitorActivityLogAlertScopeRemoveSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetScope(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
+        public static AzureMonitorActivityLogAlertScopeRemoveSettings ResetSubscription(this AzureMonitorActivityLogAlertScopeRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Scope = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -16821,39 +19616,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region MonitorActivityLogListSelect
-    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    public partial class MonitorActivityLogListSelect : Enumeration
-    {
-        public static MonitorActivityLogListSelect authorization = new MonitorActivityLogListSelect { Value = "authorization" };
-        public static MonitorActivityLogListSelect caller = new MonitorActivityLogListSelect { Value = "caller" };
-        public static MonitorActivityLogListSelect category = new MonitorActivityLogListSelect { Value = "category" };
-        public static MonitorActivityLogListSelect claims = new MonitorActivityLogListSelect { Value = "claims" };
-        public static MonitorActivityLogListSelect correlationid = new MonitorActivityLogListSelect { Value = "correlationid" };
-        public static MonitorActivityLogListSelect description = new MonitorActivityLogListSelect { Value = "description" };
-        public static MonitorActivityLogListSelect eventdataid = new MonitorActivityLogListSelect { Value = "eventdataid" };
-        public static MonitorActivityLogListSelect eventname = new MonitorActivityLogListSelect { Value = "eventname" };
-        public static MonitorActivityLogListSelect eventtimestamp = new MonitorActivityLogListSelect { Value = "eventtimestamp" };
-        public static MonitorActivityLogListSelect httprequest = new MonitorActivityLogListSelect { Value = "httprequest" };
-        public static MonitorActivityLogListSelect id = new MonitorActivityLogListSelect { Value = "id" };
-        public static MonitorActivityLogListSelect level = new MonitorActivityLogListSelect { Value = "level" };
-        public static MonitorActivityLogListSelect operationid = new MonitorActivityLogListSelect { Value = "operationid" };
-        public static MonitorActivityLogListSelect operationname = new MonitorActivityLogListSelect { Value = "operationname" };
-        public static MonitorActivityLogListSelect properties = new MonitorActivityLogListSelect { Value = "properties" };
-        public static MonitorActivityLogListSelect resourcegroupname = new MonitorActivityLogListSelect { Value = "resourcegroupname" };
-        public static MonitorActivityLogListSelect resourceid = new MonitorActivityLogListSelect { Value = "resourceid" };
-        public static MonitorActivityLogListSelect resourceprovidername = new MonitorActivityLogListSelect { Value = "resourceprovidername" };
-        public static MonitorActivityLogListSelect resourcetype = new MonitorActivityLogListSelect { Value = "resourcetype" };
-        public static MonitorActivityLogListSelect status = new MonitorActivityLogListSelect { Value = "status" };
-        public static MonitorActivityLogListSelect substatus = new MonitorActivityLogListSelect { Value = "substatus" };
-        public static MonitorActivityLogListSelect submissiontimestamp = new MonitorActivityLogListSelect { Value = "submissiontimestamp" };
-        public static MonitorActivityLogListSelect subscriptionid = new MonitorActivityLogListSelect { Value = "subscriptionid" };
-        public static MonitorActivityLogListSelect tenantid = new MonitorActivityLogListSelect { Value = "tenantid" };
-    }
-    #endregion
     #region MonitorAlertUpdateAggregation
     /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
     [PublicAPI]
@@ -16893,6 +19655,39 @@ namespace Nuke.Azure
         public static MonitorAlertUpdateOperator SmallerThanOrEqualTo = new MonitorAlertUpdateOperator { Value = "<=" };
         public static MonitorAlertUpdateOperator GreaterThan = new MonitorAlertUpdateOperator { Value = ">" };
         public static MonitorAlertUpdateOperator GreatherThanOrEqualTo = new MonitorAlertUpdateOperator { Value = ">=" };
+    }
+    #endregion
+    #region MonitorActivityLogListSelect
+    /// <summary><p>Used within <see cref="AzureMonitorTasks"/>.</p></summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    public partial class MonitorActivityLogListSelect : Enumeration
+    {
+        public static MonitorActivityLogListSelect authorization = new MonitorActivityLogListSelect { Value = "authorization" };
+        public static MonitorActivityLogListSelect caller = new MonitorActivityLogListSelect { Value = "caller" };
+        public static MonitorActivityLogListSelect category = new MonitorActivityLogListSelect { Value = "category" };
+        public static MonitorActivityLogListSelect claims = new MonitorActivityLogListSelect { Value = "claims" };
+        public static MonitorActivityLogListSelect correlationid = new MonitorActivityLogListSelect { Value = "correlationid" };
+        public static MonitorActivityLogListSelect description = new MonitorActivityLogListSelect { Value = "description" };
+        public static MonitorActivityLogListSelect eventdataid = new MonitorActivityLogListSelect { Value = "eventdataid" };
+        public static MonitorActivityLogListSelect eventname = new MonitorActivityLogListSelect { Value = "eventname" };
+        public static MonitorActivityLogListSelect eventtimestamp = new MonitorActivityLogListSelect { Value = "eventtimestamp" };
+        public static MonitorActivityLogListSelect httprequest = new MonitorActivityLogListSelect { Value = "httprequest" };
+        public static MonitorActivityLogListSelect id = new MonitorActivityLogListSelect { Value = "id" };
+        public static MonitorActivityLogListSelect level = new MonitorActivityLogListSelect { Value = "level" };
+        public static MonitorActivityLogListSelect operationid = new MonitorActivityLogListSelect { Value = "operationid" };
+        public static MonitorActivityLogListSelect operationname = new MonitorActivityLogListSelect { Value = "operationname" };
+        public static MonitorActivityLogListSelect properties = new MonitorActivityLogListSelect { Value = "properties" };
+        public static MonitorActivityLogListSelect resourcegroupname = new MonitorActivityLogListSelect { Value = "resourcegroupname" };
+        public static MonitorActivityLogListSelect resourceid = new MonitorActivityLogListSelect { Value = "resourceid" };
+        public static MonitorActivityLogListSelect resourceprovidername = new MonitorActivityLogListSelect { Value = "resourceprovidername" };
+        public static MonitorActivityLogListSelect resourcetype = new MonitorActivityLogListSelect { Value = "resourcetype" };
+        public static MonitorActivityLogListSelect status = new MonitorActivityLogListSelect { Value = "status" };
+        public static MonitorActivityLogListSelect substatus = new MonitorActivityLogListSelect { Value = "substatus" };
+        public static MonitorActivityLogListSelect submissiontimestamp = new MonitorActivityLogListSelect { Value = "submissiontimestamp" };
+        public static MonitorActivityLogListSelect subscriptionid = new MonitorActivityLogListSelect { Value = "subscriptionid" };
+        public static MonitorActivityLogListSelect tenantid = new MonitorActivityLogListSelect { Value = "tenantid" };
     }
     #endregion
 }

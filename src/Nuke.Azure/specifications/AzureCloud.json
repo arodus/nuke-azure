@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cloud.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/cloud.yml"
   ],
   "name": "AzureCloud",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cloud?view=azure-cli-latest",
@@ -16,7 +16,16 @@
     {
       "postfix": "List",
       "definiteArgument": "cloud list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "ListProfiles",
@@ -34,6 +43,12 @@
             "type": "string",
             "format": "--show-all {value}",
             "help": "Show all available profiles supported in the CLI."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -150,6 +165,12 @@
             "type": "string",
             "format": "--suffix-storage-endpoint {value}",
             "help": "The endpoint suffix for storage accounts."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -170,6 +191,12 @@
             "type": "CloudProfile",
             "format": "--profile {value}",
             "help": "Profile to use for this cloud."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -184,6 +211,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of a registered cloud."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -198,6 +231,12 @@
             "type": "string",
             "format": "--name {value}",
             "help": "Name of a registered cloud."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -314,6 +353,12 @@
             "type": "string",
             "format": "--suffix-storage-endpoint {value}",
             "help": "The endpoint suffix for storage accounts."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

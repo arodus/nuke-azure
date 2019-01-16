@@ -1,43 +1,43 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/job-schedule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/location.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/pool.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/account/autostorage-keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/account/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/application/package.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/application/summary.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/job/all-statistics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/job/prep-release-status.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/job/task-counts.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/location/quotas.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/node/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/node/remote-desktop.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/node/remote-login-settings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/node/scheduling.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/node/service-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/node/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/pool/all-statistics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/pool/autoscale.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/pool/node-agent-skus.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/pool/node-counts.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/pool/os.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/pool/usage-metrics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/task/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/batch/task/subtask.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/task.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/job-schedule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/location.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/account/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/account/autostorage-keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/application/package.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/application/summary.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/pool/usage-metrics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/pool/autoscale.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/pool/os.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/pool/node-agent-skus.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/pool/node-counts.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/pool/all-statistics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/node/remote-desktop.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/node/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/node/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/node/remote-login-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/node/scheduling.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/node/service-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/task/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/task/subtask.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/job/prep-release-status.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/job/task-counts.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/job/all-statistics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/batch/location/quotas.yml"
   ],
   "name": "AzureBatch",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/batch?view=azure-cli-latest",
@@ -48,6 +48,202 @@
       "postfix": "",
       "definiteArgument": "batch",
       "settingsClass": {}
+    },
+    {
+      "postfix": "ApplicationCreate",
+      "definiteArgument": "batch application create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ApplicationId",
+            "type": "string",
+            "format": "--application-id {value}",
+            "help": "The ID of the application."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Batch account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group."
+          },
+          {
+            "name": "AllowUpdates",
+            "type": "string",
+            "format": "--allow-updates {value}",
+            "help": "Specify to indicate whether packages within the application may be overwritten using the same version string. True if flag present."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "The display name for the application."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ApplicationDelete",
+      "definiteArgument": "batch application delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ApplicationId",
+            "type": "string",
+            "format": "--application-id {value}",
+            "help": "The ID of the application."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Batch account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ApplicationList",
+      "definiteArgument": "batch application list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Batch account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group."
+          },
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "The maximum number of items to return in the response."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ApplicationSet",
+      "definiteArgument": "batch application set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ApplicationId",
+            "type": "string",
+            "format": "--application-id {value}",
+            "help": "The ID of the application."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Batch account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group."
+          },
+          {
+            "name": "AllowUpdates",
+            "type": "string",
+            "format": "--allow-updates {value}",
+            "help": "Specify to indicate whether packages within the application may be overwritten using the same version string. Specify either 'true' or 'false' to update the property."
+          },
+          {
+            "name": "DefaultVersion",
+            "type": "string",
+            "format": "--default-version {value}",
+            "help": "The package to use if a client requests the application but does not specify a version."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "help": "The display name for the application."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ApplicationShow",
+      "definiteArgument": "batch application show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ApplicationId",
+            "type": "string",
+            "format": "--application-id {value}",
+            "help": "The ID of the application."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Batch account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "AccountCreate",
@@ -95,6 +291,12 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -127,6 +329,12 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -141,6 +349,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of the resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -173,6 +387,12 @@
             "type": "string",
             "format": "--show {value}",
             "help": "Display the credential information for the Batch account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -205,6 +425,12 @@
             "type": "string",
             "format": "--tags {value}",
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -225,172 +451,550 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of the resource group. If not specified will display currently set account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ApplicationCreate",
-      "definiteArgument": "batch application create",
+      "postfix": "TaskCreate",
+      "definiteArgument": "batch task create",
       "settingsClass": {
         "properties": [
           {
-            "name": "ApplicationId",
+            "name": "JobId",
             "type": "string",
-            "format": "--application-id {value}",
-            "help": "The ID of the application."
+            "format": "--job-id {value}",
+            "help": "The ID of the job containing the task."
           },
           {
-            "name": "Name",
+            "name": "AffinityId",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Batch account."
+            "format": "--affinity-id {value}",
+            "help": "Required. An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere."
           },
           {
-            "name": "ResourceGroup",
+            "name": "ApplicationPackageReferences",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of the resource group."
+            "format": "--application-package-references {value}",
+            "help": "The space-separated list of IDs specifying the application packages to be installed. Space-separated application IDs with optional version in 'id[#version]' format."
           },
           {
-            "name": "AllowUpdates",
+            "name": "CommandLine",
             "type": "string",
-            "format": "--allow-updates {value}",
-            "help": "Specify to indicate whether packages within the application may be overwritten using the same version string. True if flag present."
+            "format": "--command-line {value}",
+            "help": "The command line of the task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux."
           },
           {
-            "name": "DisplayName",
+            "name": "EnvironmentSettings",
+            "type": "Dictionary<string, object>",
+            "format": "--environment-settings {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "help": "A list of environment variable settings for the task. Space-separated values in 'key=value' format."
+          },
+          {
+            "name": "JsonFile",
             "type": "string",
-            "format": "--display-name {value}",
-            "help": "The display name for the application."
+            "format": "--json-file {value}",
+            "help": "The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParamater. If this parameter is specified, all other parameters are ignored."
+          },
+          {
+            "name": "MaxTaskRetryCount",
+            "type": "int",
+            "format": "--max-task-retry-count {value}",
+            "help": "The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node."
+          },
+          {
+            "name": "MaxWallClockTime",
+            "type": "string",
+            "format": "--max-wall-clock-time {value}",
+            "help": "The maximum elapsed time that the task may run, measured from the time the task starts. If the task does not complete within the time limit, the Batch service terminates it. If this is not specified, there is no time limit on how long the task may run."
+          },
+          {
+            "name": "ResourceFiles",
+            "type": "string",
+            "format": "--resource-files {value}",
+            "help": "A list of files that the Batch service will download to the compute node before running the command line. Space-separated resource references in filename=blobsource format."
+          },
+          {
+            "name": "RetentionTime",
+            "type": "string",
+            "format": "--retention-time {value}",
+            "help": "The minimum time to retain the task directory on the compute node where it ran, from the time it completes execution. After this time, the Batch service may delete the task directory and all its contents. The default is infinite, i.e. the task directory will be retained until the compute node is removed or reimaged."
+          },
+          {
+            "name": "TaskId",
+            "type": "string",
+            "format": "--task-id {value}",
+            "help": "The ID of the task."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "The Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "The Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ApplicationDelete",
-      "definiteArgument": "batch application delete",
+      "postfix": "TaskDelete",
+      "definiteArgument": "batch task delete",
       "settingsClass": {
         "properties": [
           {
-            "name": "ApplicationId",
+            "name": "JobId",
             "type": "string",
-            "format": "--application-id {value}",
-            "help": "The ID of the application."
+            "format": "--job-id {value}",
+            "help": "The ID of the job from which to delete the task."
           },
           {
-            "name": "Name",
+            "name": "TaskId",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Batch account."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of the resource group."
+            "format": "--task-id {value}",
+            "help": "The ID of the task to delete."
           },
           {
             "name": "Yes",
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ApplicationList",
-      "definiteArgument": "batch application list",
+      "postfix": "TaskList",
+      "definiteArgument": "batch task list",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "JobId",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Batch account."
+            "format": "--job-id {value}",
+            "help": "The ID of the job."
           },
           {
-            "name": "ResourceGroup",
+            "name": "AccountEndpoint",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of the resource group."
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
           },
           {
-            "name": "Maxresults",
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "help": "An OData $expand clause."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-tasks\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-tasks</a>."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskReactivate",
+      "definiteArgument": "batch task reactivate",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "JobId",
+            "type": "string",
+            "format": "--job-id {value}",
+            "help": "The ID of the job containing the task."
+          },
+          {
+            "name": "TaskId",
+            "type": "string",
+            "format": "--task-id {value}",
+            "help": "The ID of the task to reactivate."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskReset",
+      "definiteArgument": "batch task reset",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "JobId",
+            "type": "string",
+            "format": "--job-id {value}",
+            "help": "The ID of the job containing the task."
+          },
+          {
+            "name": "TaskId",
+            "type": "string",
+            "format": "--task-id {value}",
+            "help": "The ID of the task to update."
+          },
+          {
+            "name": "JsonFile",
+            "type": "string",
+            "format": "--json-file {value}",
+            "help": "A file containing the constraints specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Constraints Arguments' are ignored."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "MaxTaskRetryCount",
             "type": "int",
-            "format": "--maxresults {value}",
-            "help": "The maximum number of items to return in the response."
+            "format": "--max-task-retry-count {value}",
+            "help": "The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node."
+          },
+          {
+            "name": "MaxWallClockTime",
+            "type": "string",
+            "format": "--max-wall-clock-time {value}",
+            "help": "The maximum elapsed time that the task may run, measured from the time the task starts. If the task does not complete within the time limit, the Batch service terminates it. If this is not specified, there is no time limit on how long the task may run. Expected format is an ISO-8601 duration."
+          },
+          {
+            "name": "RetentionTime",
+            "type": "string",
+            "format": "--retention-time {value}",
+            "help": "The minimum time to retain the task directory on the compute node where it ran, from the time it completes execution. After this time, the Batch service may delete the task directory and all its contents. The default is infinite, i.e. the task directory will be retained until the compute node is removed or reimaged. Expected format is an ISO-8601 duration."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ApplicationSet",
-      "definiteArgument": "batch application set",
+      "postfix": "TaskShow",
+      "definiteArgument": "batch task show",
       "settingsClass": {
         "properties": [
           {
-            "name": "ApplicationId",
+            "name": "JobId",
             "type": "string",
-            "format": "--application-id {value}",
-            "help": "The ID of the application."
+            "format": "--job-id {value}",
+            "help": "The ID of the job that contains the task."
           },
           {
-            "name": "Name",
+            "name": "TaskId",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Batch account."
+            "format": "--task-id {value}",
+            "help": "The ID of the task to get information about."
           },
           {
-            "name": "ResourceGroup",
+            "name": "AccountEndpoint",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of the resource group."
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
           },
           {
-            "name": "AllowUpdates",
+            "name": "AccountKey",
             "type": "string",
-            "format": "--allow-updates {value}",
-            "help": "Specify to indicate whether packages within the application may be overwritten using the same version string. Specify either 'true' or 'false' to update the property."
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
           },
           {
-            "name": "DefaultVersion",
+            "name": "AccountName",
             "type": "string",
-            "format": "--default-version {value}",
-            "help": "The package to use if a client requests the application but does not specify a version."
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
           },
           {
-            "name": "DisplayName",
+            "name": "Expand",
             "type": "string",
-            "format": "--display-name {value}",
-            "help": "The display name for the application."
+            "format": "--expand {value}",
+            "help": "An OData $expand clause."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "ApplicationShow",
-      "definiteArgument": "batch application show",
+      "postfix": "TaskStop",
+      "definiteArgument": "batch task stop",
       "settingsClass": {
         "properties": [
           {
-            "name": "ApplicationId",
+            "name": "JobId",
             "type": "string",
-            "format": "--application-id {value}",
-            "help": "The ID of the application."
+            "format": "--job-id {value}",
+            "help": "The ID of the job containing the task."
           },
           {
-            "name": "Name",
+            "name": "TaskId",
             "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Batch account."
+            "format": "--task-id {value}",
+            "help": "The ID of the task to terminate."
           },
           {
-            "name": "ResourceGroup",
+            "name": "AccountEndpoint",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of the resource group."
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -436,6 +1040,12 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "The Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -480,6 +1090,12 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "The Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -518,6 +1134,12 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -556,6 +1178,298 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NodeDelete",
+      "definiteArgument": "batch node delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool from which you want to remove nodes."
+          },
+          {
+            "name": "JsonFile",
+            "type": "string",
+            "format": "--json-file {value}",
+            "help": "A file containing the node remove parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Remove Arguments' are ignored."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "NodeDeallocationOption",
+            "type": "BatchNodeNodeDeallocationOption",
+            "format": "--node-deallocation-option {value}",
+            "help": "Determines what to do with a node and its running task(s) after it has been selected for deallocation. The default value is requeue."
+          },
+          {
+            "name": "NodeList",
+            "type": "string",
+            "format": "--node-list {value}",
+            "help": "Required. A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values."
+          },
+          {
+            "name": "ResizeTimeout",
+            "type": "string",
+            "format": "--resize-timeout {value}",
+            "help": "The timeout for removal of compute nodes to the pool. The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). Expected format is an ISO-8601 duration."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NodeList",
+      "definiteArgument": "batch node list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool from which you want to list nodes."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-nodes-in-a-pool\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-nodes-in-a-pool</a>."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NodeReboot",
+      "definiteArgument": "batch node reboot",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NodeId",
+            "type": "string",
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node that you want to restart."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool that contains the compute node."
+          },
+          {
+            "name": "NodeRebootOption",
+            "type": "BatchNodeNodeDeallocationOption",
+            "format": "--node-reboot-option {value}",
+            "help": "When to reboot the compute node and what to do with currently running tasks. The default value is requeue."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NodeReimage",
+      "definiteArgument": "batch node reimage",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NodeId",
+            "type": "string",
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node that you want to restart."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool that contains the compute node."
+          },
+          {
+            "name": "NodeReimageOption",
+            "type": "BatchNodeNodeDeallocationOption",
+            "format": "--node-reimage-option {value}",
+            "help": "When to reimage the compute node and what to do with currently running tasks. The default value is requeue."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NodeShow",
+      "definiteArgument": "batch node show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NodeId",
+            "type": "string",
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node that you want to get information about."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool that contains the compute node."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -680,6 +1594,12 @@
             "type": "string",
             "format": "--start-window {value}",
             "help": "The time interval, starting from the time at which the schedule indicates a job should be created, within which a job must be created. If a job is not created within the startWindow interval, then the 'opportunity' is lost; no job will be created until the next recurrence of the schedule. If the schedule is recurring, and the startWindow is longer than the recurrence interval, then this is equivalent to an infinite startWindow, because the job that is 'due' in one recurrenceInterval is not carried forward into the next recurrence interval. The default is infinite. The minimum value is 1 minute. If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). Expected format is an ISO-8601 duration."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -742,6 +1662,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -798,6 +1724,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -854,6 +1786,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -898,6 +1836,12 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1056,6 +2000,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1214,6 +2164,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1282,6 +2238,12 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1338,9 +2300,20 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
+    },
+    {
+      "postfix": "Location",
+      "definiteArgument": "batch location",
+      "settingsClass": {}
     },
     {
       "postfix": "JobCreate",
@@ -1440,6 +2413,12 @@
             "type": "string",
             "format": "--pool-id {value}",
             "help": "The id of an existing pool. All the tasks of the job will run on the specified pool."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1502,6 +2481,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1564,6 +2549,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1620,6 +2611,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1670,6 +2667,12 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1770,6 +2773,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1870,6 +2879,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1938,6 +2953,12 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2000,267 +3021,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "Location",
-      "definiteArgument": "batch location",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "NodeDelete",
-      "definiteArgument": "batch node delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool from which you want to remove nodes."
           },
           {
-            "name": "JsonFile",
+            "name": "Subscription",
             "type": "string",
-            "format": "--json-file {value}",
-            "help": "A file containing the node remove parameter specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Node Remove Arguments' are ignored."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "NodeDeallocationOption",
-            "type": "BatchNodeNodeDeallocationOption",
-            "format": "--node-deallocation-option {value}",
-            "help": "Determines what to do with a node and its running task(s) after it has been selected for deallocation. The default value is requeue."
-          },
-          {
-            "name": "NodeList",
-            "type": "string",
-            "format": "--node-list {value}",
-            "help": "Required. A list containing the IDs of the compute nodes to be removed from the specified pool. Space-separated values."
-          },
-          {
-            "name": "ResizeTimeout",
-            "type": "string",
-            "format": "--resize-timeout {value}",
-            "help": "The timeout for removal of compute nodes to the pool. The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). Expected format is an ISO-8601 duration."
-          },
-          {
-            "name": "IfMatch",
-            "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeList",
-      "definiteArgument": "batch node list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool from which you want to list nodes."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-nodes-in-a-pool\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-nodes-in-a-pool</a>."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "An OData $select clause."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeReboot",
-      "definiteArgument": "batch node reboot",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node that you want to restart."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "NodeRebootOption",
-            "type": "BatchNodeNodeDeallocationOption",
-            "format": "--node-reboot-option {value}",
-            "help": "When to reboot the compute node and what to do with currently running tasks. The default value is requeue."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeReimage",
-      "definiteArgument": "batch node reimage",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node that you want to restart."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "NodeReimageOption",
-            "type": "BatchNodeNodeDeallocationOption",
-            "format": "--node-reimage-option {value}",
-            "help": "When to reimage the compute node and what to do with currently running tasks. The default value is requeue."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeShow",
-      "definiteArgument": "batch node show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node that you want to get information about."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "An OData $select clause."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2403,6 +3169,12 @@
             "type": "string",
             "format": "--node-agent-sku-id {value}",
             "help": "Required. The SKU of the Batch node agent to be provisioned on compute nodes in the pool. The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2465,6 +3237,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2509,6 +3287,12 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2591,6 +3375,12 @@
             "type": "string",
             "format": "--start-task-wait-for-success {value}",
             "help": "Whether the Batch service should wait for the start task to complete successfully (that is, to exit with exit code 0) before scheduling any tasks on the compute node. True if flag present, otherwise defaults to False."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2677,6 +3467,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "The operation will not be performed only if the resource has been modified since the specified timestamp."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2791,6 +3587,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2859,522 +3661,12 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskCreate",
-      "definiteArgument": "batch task create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "JobId",
-            "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job containing the task."
-          },
-          {
-            "name": "AffinityId",
-            "type": "string",
-            "format": "--affinity-id {value}",
-            "help": "Required. An opaque string representing the location of a compute node or a task that has run previously. You can pass the affinityId of a compute node to indicate that this task needs to run on that compute node. Note that this is just a soft affinity. If the target node is busy or unavailable at the time the task is scheduled, then the task will be scheduled elsewhere."
-          },
-          {
-            "name": "ApplicationPackageReferences",
-            "type": "string",
-            "format": "--application-package-references {value}",
-            "help": "The space-separated list of IDs specifying the application packages to be installed. Space-separated application IDs with optional version in 'id[#version]' format."
-          },
-          {
-            "name": "CommandLine",
-            "type": "string",
-            "format": "--command-line {value}",
-            "help": "The command line of the task. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux."
-          },
-          {
-            "name": "EnvironmentSettings",
-            "type": "Dictionary<string, object>",
-            "format": "--environment-settings {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "help": "A list of environment variable settings for the task. Space-separated values in 'key=value' format."
-          },
-          {
-            "name": "JsonFile",
-            "type": "string",
-            "format": "--json-file {value}",
-            "help": "The file containing the task(s) to create in JSON(formatted to match REST API request body). When submitting multiple tasks, accepts either an array of tasks or a TaskAddCollectionParamater. If this parameter is specified, all other parameters are ignored."
-          },
-          {
-            "name": "MaxTaskRetryCount",
-            "type": "int",
-            "format": "--max-task-retry-count {value}",
-            "help": "The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node."
-          },
-          {
-            "name": "MaxWallClockTime",
-            "type": "string",
-            "format": "--max-wall-clock-time {value}",
-            "help": "The maximum elapsed time that the task may run, measured from the time the task starts. If the task does not complete within the time limit, the Batch service terminates it. If this is not specified, there is no time limit on how long the task may run."
-          },
-          {
-            "name": "ResourceFiles",
-            "type": "string",
-            "format": "--resource-files {value}",
-            "help": "A list of files that the Batch service will download to the compute node before running the command line. Space-separated resource references in filename=blobsource format."
-          },
-          {
-            "name": "RetentionTime",
-            "type": "string",
-            "format": "--retention-time {value}",
-            "help": "The minimum time to retain the task directory on the compute node where it ran, from the time it completes execution. After this time, the Batch service may delete the task directory and all its contents. The default is infinite, i.e. the task directory will be retained until the compute node is removed or reimaged."
-          },
-          {
-            "name": "TaskId",
-            "type": "string",
-            "format": "--task-id {value}",
-            "help": "The ID of the task."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "The Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "The Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskDelete",
-      "definiteArgument": "batch task delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "JobId",
-            "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job from which to delete the task."
-          },
-          {
-            "name": "TaskId",
-            "type": "string",
-            "format": "--task-id {value}",
-            "help": "The ID of the task to delete."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "IfMatch",
-            "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskList",
-      "definiteArgument": "batch task list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "JobId",
-            "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "An OData $expand clause."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-tasks\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-tasks</a>."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "An OData $select clause."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskReactivate",
-      "definiteArgument": "batch task reactivate",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "JobId",
-            "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job containing the task."
-          },
-          {
-            "name": "TaskId",
-            "type": "string",
-            "format": "--task-id {value}",
-            "help": "The ID of the task to reactivate."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "IfMatch",
-            "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskReset",
-      "definiteArgument": "batch task reset",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "JobId",
-            "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job containing the task."
-          },
-          {
-            "name": "TaskId",
-            "type": "string",
-            "format": "--task-id {value}",
-            "help": "The ID of the task to update."
-          },
-          {
-            "name": "JsonFile",
-            "type": "string",
-            "format": "--json-file {value}",
-            "help": "A file containing the constraints specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Constraints Arguments' are ignored."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "MaxTaskRetryCount",
-            "type": "int",
-            "format": "--max-task-retry-count {value}",
-            "help": "The maximum number of times the task may be retried. The Batch service retries a task if its exit code is nonzero. Note that this value specifically controls the number of retries for the task executable due to a nonzero exit code. The Batch service will try the task once, and may then retry up to this limit. For example, if the maximum retry count is 3, Batch tries the task up to 4 times (one initial try and 3 retries). If the maximum retry count is 0, the Batch service does not retry the task after the first attempt. If the maximum retry count is -1, the Batch service retries the task without limit. Resource files and application packages are only downloaded again if the task is retried on a new compute node."
-          },
-          {
-            "name": "MaxWallClockTime",
-            "type": "string",
-            "format": "--max-wall-clock-time {value}",
-            "help": "The maximum elapsed time that the task may run, measured from the time the task starts. If the task does not complete within the time limit, the Batch service terminates it. If this is not specified, there is no time limit on how long the task may run. Expected format is an ISO-8601 duration."
-          },
-          {
-            "name": "RetentionTime",
-            "type": "string",
-            "format": "--retention-time {value}",
-            "help": "The minimum time to retain the task directory on the compute node where it ran, from the time it completes execution. After this time, the Batch service may delete the task directory and all its contents. The default is infinite, i.e. the task directory will be retained until the compute node is removed or reimaged. Expected format is an ISO-8601 duration."
-          },
-          {
-            "name": "IfMatch",
-            "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskShow",
-      "definiteArgument": "batch task show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "JobId",
-            "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job that contains the task."
-          },
-          {
-            "name": "TaskId",
-            "type": "string",
-            "format": "--task-id {value}",
-            "help": "The ID of the task to get information about."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "Expand",
-            "type": "string",
-            "format": "--expand {value}",
-            "help": "An OData $expand clause."
-          },
-          {
-            "name": "IfMatch",
-            "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "help": "An OData $select clause."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskStop",
-      "definiteArgument": "batch task stop",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "JobId",
-            "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job containing the task."
-          },
-          {
-            "name": "TaskId",
-            "type": "string",
-            "format": "--task-id {value}",
-            "help": "The ID of the task to terminate."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "IfMatch",
-            "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountAutostorageKeysSync",
-      "definiteArgument": "batch account autostorage-keys sync",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Batch account."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of the resource group."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3395,6 +3687,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of the resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3421,6 +3719,38 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of the resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountAutostorageKeysSync",
+      "definiteArgument": "batch account autostorage-keys sync",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the Batch account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of the resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3459,6 +3789,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The version of the application to activate."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3497,6 +3833,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The version of the application."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3535,6 +3877,12 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3567,6 +3915,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The version of the application."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3593,6 +3947,12 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3625,13 +3985,19 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "JobAllStatisticsShow",
-      "definiteArgument": "batch job all-statistics show",
+      "postfix": "PoolUsageMetricsList",
+      "definiteArgument": "batch pool usage-metrics list",
       "settingsClass": {
         "properties": [
           {
@@ -3651,21 +4017,263 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "EndTime",
+            "type": "string",
+            "format": "--end-time {value}",
+            "help": "The latest time from which to include metrics. This must be at least two hours before the current time. If not specified this defaults to the end time of the last aggregation interval currently available."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-account-usage-metrics\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-account-usage-metrics</a>."
+          },
+          {
+            "name": "StartTime",
+            "type": "string",
+            "format": "--start-time {value}",
+            "help": "The earliest time from which to include metrics. This must be at least two and a half hours before the current time. If not specified this defaults to the start time of the last aggregation interval currently available."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "JobPrepReleaseStatusList",
-      "definiteArgument": "batch job prep-release-status list",
+      "postfix": "PoolAutoscaleDisable",
+      "definiteArgument": "batch pool autoscale disable",
       "settingsClass": {
         "properties": [
           {
-            "name": "JobId",
+            "name": "PoolId",
             "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job."
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool on which to disable automatic scaling."
           },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolAutoscaleEnable",
+      "definiteArgument": "batch pool autoscale enable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool on which to enable automatic scaling."
+          },
+          {
+            "name": "AutoScaleEvaluationInterval",
+            "type": "string",
+            "format": "--auto-scale-evaluation-interval {value}",
+            "help": "The time interval at which to automatically adjust the pool size according to the autoscale formula. The default value is 15 minutes. The minimum and maximum value are 5 minutes and 168 hours respectively. If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). If you specify a new interval, then the existing autoscale evaluation schedule will be stopped and a new autoscale evaluation schedule will be started, with its starting time being the time when this request was issued."
+          },
+          {
+            "name": "AutoScaleFormula",
+            "type": "string",
+            "format": "--auto-scale-formula {value}",
+            "help": "The formula for the desired number of compute nodes in the pool. The formula is checked for validity before it is applied to the pool. If the formula is not valid, the Batch service rejects the request with detailed error information. For more information about specifying this formula, see Automatically scale compute nodes in an Azure Batch pool (<a href=\"https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling\">https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling</a>)."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolAutoscaleEvaluate",
+      "definiteArgument": "batch pool autoscale evaluate",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoScaleFormula",
+            "type": "string",
+            "format": "--auto-scale-formula {value}",
+            "help": "The formula for the desired number of compute nodes in the pool. The formula is validated and its results calculated, but it is not applied to the pool. To apply the formula to the pool, 'Enable automatic scaling on a pool'. For more information about specifying this formula, see Automatically scale compute nodes in an Azure Batch pool (<a href=\"https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling\">https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling</a>)."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool on which to evaluate the automatic scaling formula."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolOsUpgrade",
+      "definiteArgument": "batch pool os upgrade",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool to upgrade."
+          },
+          {
+            "name": "TargetOsVersion",
+            "type": "string",
+            "format": "--target-os-version {value}",
+            "help": "The Azure Guest OS version to be installed on the virtual machines in the pool."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "IfMatch",
+            "type": "string",
+            "format": "--if-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
+          },
+          {
+            "name": "IfModifiedSince",
+            "type": "string",
+            "format": "--if-modified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
+          },
+          {
+            "name": "IfNoneMatch",
+            "type": "string",
+            "format": "--if-none-match {value}",
+            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
+          },
+          {
+            "name": "IfUnmodifiedSince",
+            "type": "string",
+            "format": "--if-unmodified-since {value}",
+            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolNodeAgentSkusList",
+      "definiteArgument": "batch pool node-agent-skus list",
+      "settingsClass": {
+        "properties": [
           {
             "name": "AccountEndpoint",
             "type": "string",
@@ -3688,27 +4296,109 @@
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
-            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-job-preparation-and-release-status\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-job-preparation-and-release-status</a>."
+            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-node-agent-skus\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-node-agent-skus</a>."
           },
           {
-            "name": "Select",
+            "name": "Subscription",
             "type": "string",
-            "format": "--select {value}",
-            "help": "An OData $select clause."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "JobTaskCountsShow",
-      "definiteArgument": "batch job task-counts show",
+      "postfix": "PoolNodeCountsList",
+      "definiteArgument": "batch pool node-counts list",
       "settingsClass": {
         "properties": [
           {
-            "name": "JobId",
+            "name": "AccountEndpoint",
             "type": "string",
-            "format": "--job-id {value}",
-            "help": "The ID of the job."
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolAllStatisticsShow",
+      "definiteArgument": "batch pool all-statistics show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NodeRemoteDesktopDownload",
+      "definiteArgument": "batch node remote-desktop download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Destination",
+            "type": "string",
+            "format": "--destination {value}",
+            "help": "The path to the destination file or directory."
+          },
+          {
+            "name": "NodeId",
+            "type": "string",
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node for which you want to get the Remote Desktop Protocol file."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool that contains the compute node."
           },
           {
             "name": "AccountEndpoint",
@@ -3727,20 +4417,12 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LocationQuotasShow",
-      "definiteArgument": "batch location quotas show",
-      "settingsClass": {
-        "properties": [
+          },
           {
-            "name": "Location",
+            "name": "Subscription",
             "type": "string",
-            "format": "--location {value}",
-            "help": "The region from which to display the Batch service quotas."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3797,6 +4479,12 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3871,6 +4559,12 @@
             "type": "string",
             "format": "--start-range {value}",
             "help": "The byte range to be retrieved. If not set the file will be retrieved from the beginning."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3921,6 +4615,12 @@
             "type": "string",
             "format": "--filter {value}",
             "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-compute-node-files\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-compute-node-files</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -3977,232 +4677,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeRemoteDesktopDownload",
-      "definiteArgument": "batch node remote-desktop download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Destination",
-            "type": "string",
-            "format": "--destination {value}",
-            "help": "The path to the destination file or directory."
           },
           {
-            "name": "NodeId",
+            "name": "Subscription",
             "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node for which you want to get the Remote Desktop Protocol file."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeRemoteLoginSettingsShow",
-      "definiteArgument": "batch node remote-login-settings show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node for which to obtain the remote login settings."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeSchedulingDisable",
-      "definiteArgument": "batch node scheduling disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node on which you want to disable task scheduling."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "NodeDisableSchedulingOption",
-            "type": "BatchNodeSchedulingDisableNodeDisableSchedulingOption",
-            "format": "--node-disable-scheduling-option {value}",
-            "help": "What to do with currently running tasks when disabling task scheduling on the compute node. The default value is requeue."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeSchedulingEnable",
-      "definiteArgument": "batch node scheduling enable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node on which you want to enable task scheduling."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NodeServiceLogsUpload",
-      "definiteArgument": "batch node service-logs upload",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "help": "The ID of the compute node from which you want to upload the Azure Batch service log files."
-          },
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool that contains the compute node."
-          },
-          {
-            "name": "JsonFile",
-            "type": "string",
-            "format": "--json-file {value}",
-            "help": "A file containing the upload batch service logs configuration specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "ContainerUrl",
-            "type": "string",
-            "format": "--container-url {value}",
-            "help": "Required. The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified."
-          },
-          {
-            "name": "EndTime",
-            "type": "string",
-            "format": "--end-time {value}",
-            "help": "The end of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. If omitted, the default is to upload all logs available after the startTime. Expected format is an ISO-8601 timestamp."
-          },
-          {
-            "name": "StartTime",
-            "type": "string",
-            "format": "--start-time {value}",
-            "help": "Required. The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -4278,6 +4758,12 @@
             "type": "string",
             "format": "--ssh-public-key {value}",
             "help": "The SSH public key that can be used for remote login to the compute node. The public key should be compatible with OpenSSH encoding and should be base 64 encoded. This property can be specified only for Linux nodes. If this is specified for a Windows node, then the Batch service rejects the request; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -4328,6 +4814,12 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -4397,152 +4889,32 @@
             "type": "string",
             "format": "--ssh-public-key {value}",
             "help": "The SSH public key that can be used for remote login to the compute node. The public key should be compatible with OpenSSH encoding and should be base 64 encoded. This property can be specified only for Linux nodes. If this is specified for a Windows node, then the Batch service rejects the request; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). If omitted, any existing SSH public key is removed."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "PoolAllStatisticsShow",
-      "definiteArgument": "batch pool all-statistics show",
+      "postfix": "NodeRemoteLoginSettingsShow",
+      "definiteArgument": "batch node remote-login-settings show",
       "settingsClass": {
         "properties": [
           {
-            "name": "AccountEndpoint",
+            "name": "NodeId",
             "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PoolAutoscaleDisable",
-      "definiteArgument": "batch pool autoscale disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool on which to disable automatic scaling."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PoolAutoscaleEnable",
-      "definiteArgument": "batch pool autoscale enable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "PoolId",
-            "type": "string",
-            "format": "--pool-id {value}",
-            "help": "The ID of the pool on which to enable automatic scaling."
-          },
-          {
-            "name": "AutoScaleEvaluationInterval",
-            "type": "string",
-            "format": "--auto-scale-evaluation-interval {value}",
-            "help": "The time interval at which to automatically adjust the pool size according to the autoscale formula. The default value is 15 minutes. The minimum and maximum value are 5 minutes and 168 hours respectively. If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). If you specify a new interval, then the existing autoscale evaluation schedule will be stopped and a new autoscale evaluation schedule will be started, with its starting time being the time when this request was issued."
-          },
-          {
-            "name": "AutoScaleFormula",
-            "type": "string",
-            "format": "--auto-scale-formula {value}",
-            "help": "The formula for the desired number of compute nodes in the pool. The formula is checked for validity before it is applied to the pool. If the formula is not valid, the Batch service rejects the request with detailed error information. For more information about specifying this formula, see Automatically scale compute nodes in an Azure Batch pool (<a href=\"https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling\">https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling</a>)."
-          },
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "IfMatch",
-            "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PoolAutoscaleEvaluate",
-      "definiteArgument": "batch pool autoscale evaluate",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoScaleFormula",
-            "type": "string",
-            "format": "--auto-scale-formula {value}",
-            "help": "The formula for the desired number of compute nodes in the pool. The formula is validated and its results calculated, but it is not applied to the pool. To apply the formula to the pool, 'Enable automatic scaling on a pool'. For more information about specifying this formula, see Automatically scale compute nodes in an Azure Batch pool (<a href=\"https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling\">https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling</a>)."
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node for which to obtain the remote login settings."
           },
           {
             "name": "PoolId",
             "type": "string",
             "format": "--pool-id {value}",
-            "help": "The ID of the pool on which to evaluate the automatic scaling formula."
+            "help": "The ID of the pool that contains the compute node."
           },
           {
             "name": "AccountEndpoint",
@@ -4561,90 +4933,38 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "PoolNodeAgentSkusList",
-      "definiteArgument": "batch pool node-agent-skus list",
+      "postfix": "NodeSchedulingDisable",
+      "definiteArgument": "batch node scheduling disable",
       "settingsClass": {
         "properties": [
           {
-            "name": "AccountEndpoint",
+            "name": "NodeId",
             "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node on which you want to disable task scheduling."
           },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-node-agent-skus\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-node-agent-skus</a>."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PoolNodeCountsList",
-      "definiteArgument": "batch pool node-counts list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AccountEndpoint",
-            "type": "string",
-            "format": "--account-endpoint {value}",
-            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
-          },
-          {
-            "name": "AccountKey",
-            "type": "string",
-            "format": "--account-key {value}",
-            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
-          },
-          {
-            "name": "AccountName",
-            "type": "string",
-            "format": "--account-name {value}",
-            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch</a>."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PoolOsUpgrade",
-      "definiteArgument": "batch pool os upgrade",
-      "settingsClass": {
-        "properties": [
           {
             "name": "PoolId",
             "type": "string",
             "format": "--pool-id {value}",
-            "help": "The ID of the pool to upgrade."
+            "help": "The ID of the pool that contains the compute node."
           },
           {
-            "name": "TargetOsVersion",
-            "type": "string",
-            "format": "--target-os-version {value}",
-            "help": "The Azure Guest OS version to be installed on the virtual machines in the pool."
+            "name": "NodeDisableSchedulingOption",
+            "type": "BatchNodeSchedulingDisableNodeDisableSchedulingOption",
+            "format": "--node-disable-scheduling-option {value}",
+            "help": "What to do with currently running tasks when disabling task scheduling on the compute node. The default value is requeue."
           },
           {
             "name": "AccountEndpoint",
@@ -4665,37 +4985,31 @@
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
           },
           {
-            "name": "IfMatch",
+            "name": "Subscription",
             "type": "string",
-            "format": "--if-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service exactly matches the value specified by the client."
-          },
-          {
-            "name": "IfModifiedSince",
-            "type": "string",
-            "format": "--if-modified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has been modified since the specified time."
-          },
-          {
-            "name": "IfNoneMatch",
-            "type": "string",
-            "format": "--if-none-match {value}",
-            "help": "An ETag value associated with the version of the resource known to the client. The operation will be performed only if the resource's current ETag on the service does not match the value specified by the client."
-          },
-          {
-            "name": "IfUnmodifiedSince",
-            "type": "string",
-            "format": "--if-unmodified-since {value}",
-            "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "PoolUsageMetricsList",
-      "definiteArgument": "batch pool usage-metrics list",
+      "postfix": "NodeSchedulingEnable",
+      "definiteArgument": "batch node scheduling enable",
       "settingsClass": {
         "properties": [
+          {
+            "name": "NodeId",
+            "type": "string",
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node on which you want to enable task scheduling."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool that contains the compute node."
+          },
           {
             "name": "AccountEndpoint",
             "type": "string",
@@ -4713,24 +5027,80 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NodeServiceLogsUpload",
+      "definiteArgument": "batch node service-logs upload",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NodeId",
+            "type": "string",
+            "format": "--node-id {value}",
+            "help": "The ID of the compute node from which you want to upload the Azure Batch service log files."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "help": "The ID of the pool that contains the compute node."
+          },
+          {
+            "name": "JsonFile",
+            "type": "string",
+            "format": "--json-file {value}",
+            "help": "A file containing the upload batch service logs configuration specification in JSON (formatted to match the respective REST API body). If this parameter is specified, all 'Upload Batch Service Logs Configuration Arguments' are ignored."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "ContainerUrl",
+            "type": "string",
+            "format": "--container-url {value}",
+            "help": "Required. The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s). The URL must include a Shared Access Signature (SAS) granting write permissions to the container. The SAS duration must allow enough time for the upload to finish. The start time for SAS is optional and recommended to not be specified."
           },
           {
             "name": "EndTime",
             "type": "string",
             "format": "--end-time {value}",
-            "help": "The latest time from which to include metrics. This must be at least two hours before the current time. If not specified this defaults to the end time of the last aggregation interval currently available."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-account-usage-metrics\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-account-usage-metrics</a>."
+            "help": "The end of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. If omitted, the default is to upload all logs available after the startTime. Expected format is an ISO-8601 timestamp."
           },
           {
             "name": "StartTime",
             "type": "string",
             "format": "--start-time {value}",
-            "help": "The earliest time from which to include metrics. This must be at least two and a half hours before the current time. If not specified this defaults to the start time of the last aggregation interval currently available."
+            "help": "Required. The start of the time range from which to upload Batch Service log file(s). Any log file containing a log message in the time range will be uploaded. This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested. Expected format is an ISO-8601 timestamp."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -4787,6 +5157,12 @@
             "type": "string",
             "format": "--account-name {value}",
             "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -4861,6 +5237,12 @@
             "type": "string",
             "format": "--start-range {value}",
             "help": "The byte range to be retrieved. If not set the file will be retrieved from the beginning."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -4911,6 +5293,12 @@
             "type": "string",
             "format": "--filter {value}",
             "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-task-files\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-task-files</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -4967,6 +5355,12 @@
             "type": "string",
             "format": "--if-unmodified-since {value}",
             "help": "A timestamp indicating the last modified time of the resource known to the client. The operation will be performed only if the resource on the service has not been modified since the specified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -5011,6 +5405,152 @@
             "type": "string",
             "format": "--select {value}",
             "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobPrepReleaseStatusList",
+      "definiteArgument": "batch job prep-release-status list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "JobId",
+            "type": "string",
+            "format": "--job-id {value}",
+            "help": "The ID of the job."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "help": "An OData $filter clause. For more information on constructing this filter, see <a href=\"https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-job-preparation-and-release-status\">https://docs.microsoft.com/en-us/rest/api/batchservice/odata-filters-in-batch#list-job-preparation-and-release-status</a>."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "help": "An OData $select clause."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobTaskCountsShow",
+      "definiteArgument": "batch job task-counts show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "JobId",
+            "type": "string",
+            "format": "--job-id {value}",
+            "help": "The ID of the job."
+          },
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobAllStatisticsShow",
+      "definiteArgument": "batch job all-statistics show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountEndpoint",
+            "type": "string",
+            "format": "--account-endpoint {value}",
+            "help": "Batch service endpoint. Alternatively, set by environment variable: AZURE_BATCH_ENDPOINT."
+          },
+          {
+            "name": "AccountKey",
+            "type": "string",
+            "format": "--account-key {value}",
+            "help": "Batch account key. Alternatively, set by environment variable: AZURE_BATCH_ACCESS_KEY."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "help": "Batch account name. Alternatively, set by environment variable: AZURE_BATCH_ACCOUNT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LocationQuotasShow",
+      "definiteArgument": "batch location quotas show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "help": "The region from which to display the Batch service quotas."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -5050,6 +5590,15 @@
   ],
   "enumerations": [
     {
+      "name": "BatchNodeNodeDeallocationOption",
+      "values": [
+        "requeue",
+        "retaineddata",
+        "taskcompletion",
+        "terminate"
+      ]
+    },
+    {
       "name": "BatchJobScheduleOnAllTasksComplete",
       "values": [
         "noaction",
@@ -5062,15 +5611,6 @@
         "requeue",
         "terminate",
         "wait"
-      ]
-    },
-    {
-      "name": "BatchNodeNodeDeallocationOption",
-      "values": [
-        "requeue",
-        "retaineddata",
-        "taskcompletion",
-        "terminate"
       ]
     },
     {

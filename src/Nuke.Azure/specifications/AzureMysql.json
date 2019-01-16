@@ -1,19 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql/server/firewall-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql/server/replica.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/mysql/server/vnet-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql/server/firewall-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql/server/vnet-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/mysql/server/replica.yml"
   ],
   "name": "AzureMysql",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/mysql?view=azure-cli-latest",
@@ -59,6 +59,12 @@
             "type": "string",
             "format": "--collation {value}",
             "help": "The collation of the database."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -91,6 +97,12 @@
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -111,6 +123,12 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -137,71 +155,12 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerLogsDownload",
-      "definiteArgument": "mysql server-logs download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "List<string>",
-            "format": "--name {value}",
-            "separator": " ",
-            "help": "Space-separated list of log filenames on the server to download."
           },
           {
-            "name": "ResourceGroup",
+            "name": "Subscription",
             "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerLogsList",
-      "definiteArgument": "mysql server-logs list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "FileLastWritten",
-            "type": "string",
-            "format": "--file-last-written {value}",
-            "help": "Integer in hours to indicate file last modify time, default value is 72."
-          },
-          {
-            "name": "FilenameContains",
-            "type": "string",
-            "format": "--filename-contains {value}",
-            "help": "The pattern that file name should match."
-          },
-          {
-            "name": "MaxFileSize",
-            "type": "string",
-            "format": "--max-file-size {value}",
-            "help": "The file size limitation to filter files."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -245,7 +204,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "SslEnforcement",
@@ -283,6 +242,12 @@
             "format": "--admin-password {value}",
             "secret": true,
             "help": "The password of the administrator login."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -292,6 +257,19 @@
       "definiteArgument": "mysql server delete",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -305,10 +283,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Yes",
+            "name": "Subscription",
             "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -322,19 +300,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "SourceServer",
@@ -365,6 +331,31 @@
             "type": "string",
             "format": "--sku-name {value}",
             "help": "The name of the sku, typically, tier + family + cores, e.g. B_Gen4_1, GP_Gen5_8."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -379,6 +370,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -388,18 +385,6 @@
       "definiteArgument": "mysql server restore",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "RestorePointInTime",
             "type": "string",
@@ -417,6 +402,31 @@
             "type": "bool",
             "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -427,6 +437,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -437,6 +454,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -446,18 +469,6 @@
       "definiteArgument": "mysql server update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
           {
             "name": "AdminPassword",
             "type": "string",
@@ -496,6 +507,31 @@
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
@@ -528,6 +564,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -538,6 +581,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Custom",
@@ -567,8 +616,41 @@
       }
     },
     {
-      "postfix": "ServerConfigurationList",
-      "definiteArgument": "mysql server configuration list",
+      "postfix": "ServerLogsDownload",
+      "definiteArgument": "mysql server-logs download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "List<string>",
+            "format": "--name {value}",
+            "separator": " ",
+            "help": "Space-separated list of log filenames on the server to download."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLogsList",
+      "definiteArgument": "mysql server-logs list",
       "settingsClass": {
         "properties": [
           {
@@ -582,6 +664,63 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
+          },
+          {
+            "name": "FileLastWritten",
+            "type": "string",
+            "format": "--file-last-written {value}",
+            "help": "Integer in hours to indicate file last modify time, default value is 72."
+          },
+          {
+            "name": "FilenameContains",
+            "type": "string",
+            "format": "--filename-contains {value}",
+            "help": "The pattern that file name should match."
+          },
+          {
+            "name": "MaxFileSize",
+            "type": "string",
+            "format": "--max-file-size {value}",
+            "help": "The file size limitation to filter files."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerConfigurationList",
+      "definiteArgument": "mysql server configuration list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -592,6 +731,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "help": "Value of the configuration. If not provided, configuration value will be set to default."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -610,10 +762,10 @@
             "help": "Name of the server."
           },
           {
-            "name": "Value",
+            "name": "Subscription",
             "type": "string",
-            "format": "--value {value}",
-            "help": "Value of the configuration. If not provided, configuration value will be set to default."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -624,6 +776,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -640,6 +799,12 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -678,6 +843,12 @@
             "type": "string",
             "format": "--start-ip-address {value}",
             "help": "The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -688,6 +859,19 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -706,10 +890,10 @@
             "help": "Name of the server."
           },
           {
-            "name": "Yes",
+            "name": "Subscription",
             "type": "string",
-            "format": "--yes {value}",
-            "help": "Do not prompt for confirmation."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -720,6 +904,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
@@ -730,6 +921,12 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -740,6 +937,13 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
@@ -756,6 +960,12 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -765,24 +975,6 @@
       "definiteArgument": "mysql server firewall-rule update",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the firewall rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          },
           {
             "name": "EndIpAddress",
             "type": "string",
@@ -794,6 +986,279 @@
             "type": "string",
             "format": "--start-ip-address {value}",
             "help": "The start IP address of the firewall rule. Must be IPv4 format. Use value '0.0.0.0' to represent all Azure-internal IP addresses."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleCreate",
+      "definiteArgument": "mysql server vnet-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The virtual network name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleDelete",
+      "definiteArgument": "mysql server vnet-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleList",
+      "definiteArgument": "mysql server vnet-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleShow",
+      "definiteArgument": "mysql server vnet-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleUpdate",
+      "definiteArgument": "mysql server vnet-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "The virtual network name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "help": "Name of the server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
@@ -850,6 +1315,12 @@
             "type": "bool",
             "format": "--no-wait",
             "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -859,6 +1330,13 @@
       "definiteArgument": "mysql server replica list",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "ResourceGroup",
             "type": "string",
@@ -870,6 +1348,12 @@
             "type": "string",
             "format": "--server-name {value}",
             "help": "Name of the master server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -880,36 +1364,23 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
             "name": "Yes",
             "type": "string",
             "format": "--yes {value}",
             "help": "Do not prompt for confirmation."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleCreate",
-      "definiteArgument": "mysql server vnet-rule create",
-      "settingsClass": {
-        "properties": [
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The name of the vnet rule."
+            "help": "Name of the server."
           },
           {
             "name": "ResourceGroup",
@@ -918,168 +1389,10 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "ServerName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
-          },
-          {
-            "name": "IgnoreMissingEndpoint",
-            "type": "bool",
-            "format": "--ignore-missing-endpoint",
-            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "The virtual network name."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleDelete",
-      "definiteArgument": "mysql server vnet-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the vnet rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleList",
-      "definiteArgument": "mysql server vnet-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleShow",
-      "definiteArgument": "mysql server vnet-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the vnet rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleUpdate",
-      "definiteArgument": "mysql server vnet-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The name of the vnet rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "help": "Name of the server."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
-          },
-          {
-            "name": "IgnoreMissingEndpoint",
-            "type": "bool",
-            "format": "--ignore-missing-endpoint",
-            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "The virtual network name."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

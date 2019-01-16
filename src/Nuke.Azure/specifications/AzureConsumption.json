@@ -1,19 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/budget.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/marketplace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/pricesheet.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/usage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation/detail.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation/summary.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption/budget.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption/pricesheet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption/marketplace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption/reservation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption/usage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption/reservation/summary.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/consumption/reservation/detail.yml"
   ],
   "name": "AzureConsumption",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest",
@@ -92,6 +92,12 @@
             "format": "--resource-group-filter {value}",
             "separator": " ",
             "help": "Space-separated list of resource groups to filter on."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -112,6 +118,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -126,6 +138,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -146,6 +164,38 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PricesheetShow",
+      "definiteArgument": "consumption pricesheet show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BillingPeriodName",
+            "type": "string",
+            "format": "--billing-period-name {value}",
+            "help": "Name of the billing period to get the price sheet."
+          },
+          {
+            "name": "IncludeMeterDetails",
+            "type": "string",
+            "format": "--include-meter-details {value}",
+            "help": "Include meter details in the price sheet."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -178,26 +228,12 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return. Value range: 1-1000."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PricesheetShow",
-      "definiteArgument": "consumption pricesheet show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "BillingPeriodName",
-            "type": "string",
-            "format": "--billing-period-name {value}",
-            "help": "Name of the billing period to get the price sheet."
           },
           {
-            "name": "IncludeMeterDetails",
+            "name": "Subscription",
             "type": "string",
-            "format": "--include-meter-details {value}",
-            "help": "Include meter details in the price sheet."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -247,38 +283,12 @@
             "type": "int",
             "format": "--top {value}",
             "help": "Maximum number of items to return. Value range: 1-1000."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReservationDetailList",
-      "definiteArgument": "consumption reservation detail list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EndDate",
-            "type": "string",
-            "format": "--end-date {value}",
-            "help": "End date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --start-date."
           },
           {
-            "name": "ReservationOrderId",
+            "name": "Subscription",
             "type": "string",
-            "format": "--reservation-order-id {value}",
-            "help": "Reservation order id."
-          },
-          {
-            "name": "StartDate",
-            "type": "string",
-            "format": "--start-date {value}",
-            "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
-          },
-          {
-            "name": "ReservationId",
-            "type": "string",
-            "format": "--reservation-id {value}",
-            "help": "Reservation id."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -317,6 +327,50 @@
             "type": "string",
             "format": "--start-date {value}",
             "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReservationDetailList",
+      "definiteArgument": "consumption reservation detail list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "help": "End date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --start-date."
+          },
+          {
+            "name": "ReservationOrderId",
+            "type": "string",
+            "format": "--reservation-order-id {value}",
+            "help": "Reservation order id."
+          },
+          {
+            "name": "StartDate",
+            "type": "string",
+            "format": "--start-date {value}",
+            "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
+          },
+          {
+            "name": "ReservationId",
+            "type": "string",
+            "format": "--reservation-id {value}",
+            "help": "Reservation id."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

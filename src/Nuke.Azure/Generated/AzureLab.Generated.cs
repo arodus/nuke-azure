@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -47,46 +47,6 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureLabGet(Configure<AzureLabGetSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabGetSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabArmTemplateList(Configure<AzureLabArmTemplateListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureLabArmTemplateListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabArmTemplateShow(Configure<AzureLabArmTemplateShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureLabArmTemplateShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabArtifactSourceList(Configure<AzureLabArtifactSourceListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureLabArtifactSourceListSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabArtifactSourceShow(Configure<AzureLabArtifactSourceShowSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureLabArtifactSourceShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabArtifactList(Configure<AzureLabArtifactListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureLabArtifactListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -156,41 +116,33 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabFormulaDelete(Configure<AzureLabFormulaDeleteSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureLabArtifactSourceList(Configure<AzureLabArtifactSourceListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaDeleteSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureLabArtifactSourceListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabFormulaExportArtifacts(Configure<AzureLabFormulaExportArtifactsSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureLabArtifactSourceShow(Configure<AzureLabArtifactSourceShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaExportArtifactsSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureLabArtifactSourceShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabFormulaList(Configure<AzureLabFormulaListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureLabVnetGet(Configure<AzureLabVnetGetSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureLabVnetGetSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabFormulaShow(Configure<AzureLabFormulaShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureLabVnetList(Configure<AzureLabVnetListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaShowSettings());
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabGalleryImageList(Configure<AzureLabGalleryImageListSettings> configurator = null)
-        {
-            var toolSettings = configurator.InvokeSafe(new AzureLabGalleryImageListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureLabVnetListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -223,6 +175,30 @@ namespace Nuke.Azure
         public static IReadOnlyCollection<Output> AzureLabSecretShow(Configure<AzureLabSecretShowSettings> configurator = null)
         {
             var toolSettings = configurator.InvokeSafe(new AzureLabSecretShowSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureLabArtifactList(Configure<AzureLabArtifactListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureLabArtifactListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureLabArmTemplateList(Configure<AzureLabArmTemplateListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureLabArmTemplateListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureLabArmTemplateShow(Configure<AzureLabArmTemplateShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureLabArmTemplateShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -292,17 +268,41 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabVnetGet(Configure<AzureLabVnetGetSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureLabGalleryImageList(Configure<AzureLabGalleryImageListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureLabVnetGetSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureLabGalleryImageListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureLabVnetList(Configure<AzureLabVnetListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureLabFormulaDelete(Configure<AzureLabFormulaDeleteSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureLabVnetListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaDeleteSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureLabFormulaExportArtifacts(Configure<AzureLabFormulaExportArtifactsSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaExportArtifactsSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureLabFormulaList(Configure<AzureLabFormulaListSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaListSettings());
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary><p>Manage Azure DevTest Labs.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest">official website</a>.</p></summary>
+        public static IReadOnlyCollection<Output> AzureLabFormulaShow(Configure<AzureLabFormulaShowSettings> configurator = null)
+        {
+            var toolSettings = configurator.InvokeSafe(new AzureLabFormulaShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -321,6 +321,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -337,6 +339,7 @@ namespace Nuke.Azure
               .Add("lab delete")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -361,6 +364,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Specify the $expand query. Example: 'properties($select=defaultStorageAccount)'.</p></summary>
         public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -378,253 +383,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabArmTemplateListSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabArmTemplateListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>The name of the artifact source.</p></summary>
-        public virtual string ArtifactSourceName { get; internal set; }
-        /// <summary><p>The name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>The filter to apply to the operation.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>The ordering expression for the results, using OData notation.</p></summary>
-        public virtual string Orderby { get; internal set; }
-        /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
-        public virtual int? Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab arm-template list")
-              .Add("--artifact-source-name {value}", ArtifactSourceName)
-              .Add("--lab-name {value}", LabName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--expand {value}", Expand)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabArmTemplateShowSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabArmTemplateShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>Name of the artifact source.</p></summary>
-        public virtual string ArtifactSourceName { get; internal set; }
-        /// <summary><p>Name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>Name of the Azure Resource Manager template.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of lab's resource group.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Whether or not to export parameters template.</p></summary>
-        public virtual string ExportParameters { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab arm-template show")
-              .Add("--artifact-source-name {value}", ArtifactSourceName)
-              .Add("--lab-name {value}", LabName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--export-parameters {value}", ExportParameters)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabArtifactSourceListSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabArtifactSourceListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>The name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>The filter to apply to the operation.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>The ordering expression for the results, using OData notation.</p></summary>
-        public virtual string Orderby { get; internal set; }
-        /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
-        public virtual int? Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab artifact-source list")
-              .Add("--lab-name {value}", LabName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--expand {value}", Expand)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby)
-              .Add("--top {value}", Top)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabArtifactSourceShowSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabArtifactSourceShowSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>The name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>The name of the artifact source.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab artifact-source show")
-              .Add("--lab-name {value}", LabName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--expand {value}", Expand)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabArtifactListSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabArtifactListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>The name of the artifact source.</p></summary>
-        public virtual string ArtifactSourceName { get; internal set; }
-        /// <summary><p>The name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($select=title)'.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>The filter to apply to the operation.</p></summary>
-        public virtual string Filter { get; internal set; }
-        /// <summary><p>The ordering expression for the results, using OData notation.</p></summary>
-        public virtual string Orderby { get; internal set; }
-        /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
-        public virtual int? Top { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab artifact list")
-              .Add("--artifact-source-name {value}", ArtifactSourceName)
-              .Add("--lab-name {value}", LabName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--expand {value}", Expand)
-              .Add("--filter {value}", Filter)
-              .Add("--orderby {value}", Orderby)
-              .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -659,6 +418,8 @@ namespace Nuke.Azure
         public virtual string Author { get; internal set; }
         /// <summary><p>A detailed description for the custom image.</p></summary>
         public virtual string Description { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -681,6 +442,7 @@ namespace Nuke.Azure
               .Add("--source-vm-id {value}", SourceVmId)
               .Add("--author {value}", Author)
               .Add("--description {value}", Description)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -705,6 +467,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -722,6 +486,7 @@ namespace Nuke.Azure
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -752,6 +517,8 @@ namespace Nuke.Azure
         public virtual string Orderby { get; internal set; }
         /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -772,6 +539,7 @@ namespace Nuke.Azure
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -798,6 +566,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Specify the $expand query. Example: 'properties($select=vm)'.</p></summary>
         public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -816,6 +586,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -848,6 +619,8 @@ namespace Nuke.Azure
         public virtual string Parameters { get; internal set; }
         /// <summary><p>The tags for the resource.</p></summary>
         public virtual string Tags { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -869,6 +642,7 @@ namespace Nuke.Azure
               .Add("--artifact-source-name {value}", ArtifactSourceName)
               .Add("--parameters {value}", Parameters)
               .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -893,6 +667,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -910,6 +686,7 @@ namespace Nuke.Azure
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -940,6 +717,8 @@ namespace Nuke.Azure
         public virtual string Orderby { get; internal set; }
         /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -960,6 +739,7 @@ namespace Nuke.Azure
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -986,6 +766,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Specify the $expand query. Example: 'properties($select=deploymentProperties)'.</p></summary>
         public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1004,6 +786,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1013,94 +796,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureLabFormulaDeleteSettings
+    #region AzureLabArtifactSourceListSettings
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureLabFormulaDeleteSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>The name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>The name of the formula.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab formula delete")
-              .Add("--lab-name {value}", LabName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabFormulaExportArtifactsSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabFormulaExportArtifactsSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>Name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>Name of the formula.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab formula export-artifacts")
-              .Add("--lab-name {value}", LabName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabFormulaListSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabFormulaListSettings : ToolSettings
+    public partial class AzureLabArtifactSourceListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureLab executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
@@ -1108,7 +809,7 @@ namespace Nuke.Azure
         public virtual string LabName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        /// <summary><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
         public virtual string Expand { get; internal set; }
         /// <summary><p>The filter to apply to the operation.</p></summary>
         public virtual string Filter { get; internal set; }
@@ -1116,6 +817,8 @@ namespace Nuke.Azure
         public virtual string Orderby { get; internal set; }
         /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1129,13 +832,14 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("lab formula list")
+              .Add("lab artifact-source list")
               .Add("--lab-name {value}", LabName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1145,23 +849,25 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureLabFormulaShowSettings
+    #region AzureLabArtifactSourceShowSettings
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureLabFormulaShowSettings : ToolSettings
+    public partial class AzureLabArtifactSourceShowSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureLab executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>Name of the lab.</p></summary>
+        /// <summary><p>The name of the lab.</p></summary>
         public virtual string LabName { get; internal set; }
-        /// <summary><p>Name of the formula.</p></summary>
+        /// <summary><p>The name of the artifact source.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        /// <summary><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
         public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1175,11 +881,12 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("lab formula show")
+              .Add("lab artifact-source show")
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1189,12 +896,59 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureLabGalleryImageListSettings
+    #region AzureLabVnetGetSettings
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureLabGalleryImageListSettings : ToolSettings
+    public partial class AzureLabVnetGetSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>The name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>The name of the virtual network.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab vnet get")
+              .Add("--lab-name {value}", LabName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabVnetListSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabVnetListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureLab executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
@@ -1202,7 +956,7 @@ namespace Nuke.Azure
         public virtual string LabName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($select=author)'.</p></summary>
+        /// <summary><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
         public virtual string Expand { get; internal set; }
         /// <summary><p>The filter to apply to the operation.</p></summary>
         public virtual string Filter { get; internal set; }
@@ -1210,6 +964,8 @@ namespace Nuke.Azure
         public virtual string Orderby { get; internal set; }
         /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1223,13 +979,14 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("lab gallery-image list")
+              .Add("lab vnet list")
               .Add("--lab-name {value}", LabName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1254,6 +1011,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1271,6 +1030,7 @@ namespace Nuke.Azure
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1301,6 +1061,8 @@ namespace Nuke.Azure
         public virtual string Orderby { get; internal set; }
         /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1321,6 +1083,7 @@ namespace Nuke.Azure
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1347,6 +1110,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Value of the secret.</p></summary>
         public virtual string Value { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1365,6 +1130,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--value {value}", Value)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1391,6 +1157,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Specify the $expand query. Example: 'properties($select=value)'.</p></summary>
         public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1409,6 +1177,169 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabArtifactListSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabArtifactListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>The name of the artifact source.</p></summary>
+        public virtual string ArtifactSourceName { get; internal set; }
+        /// <summary><p>The name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Specify the $expand query. Example: 'properties($select=title)'.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>The filter to apply to the operation.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>The ordering expression for the results, using OData notation.</p></summary>
+        public virtual string Orderby { get; internal set; }
+        /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
+        public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab artifact list")
+              .Add("--artifact-source-name {value}", ArtifactSourceName)
+              .Add("--lab-name {value}", LabName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--expand {value}", Expand)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby)
+              .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabArmTemplateListSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabArmTemplateListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>The name of the artifact source.</p></summary>
+        public virtual string ArtifactSourceName { get; internal set; }
+        /// <summary><p>The name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>The filter to apply to the operation.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>The ordering expression for the results, using OData notation.</p></summary>
+        public virtual string Orderby { get; internal set; }
+        /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
+        public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab arm-template list")
+              .Add("--artifact-source-name {value}", ArtifactSourceName)
+              .Add("--lab-name {value}", LabName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--expand {value}", Expand)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby)
+              .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabArmTemplateShowSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabArmTemplateShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>Name of the artifact source.</p></summary>
+        public virtual string ArtifactSourceName { get; internal set; }
+        /// <summary><p>Name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>Name of the Azure Resource Manager template.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of lab's resource group.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Whether or not to export parameters template.</p></summary>
+        public virtual string ExportParameters { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab arm-template show")
+              .Add("--artifact-source-name {value}", ArtifactSourceName)
+              .Add("--lab-name {value}", LabName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--export-parameters {value}", ExportParameters)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1435,6 +1366,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>JSON encoded array of artifacts to be applied. Use '@{file}' to load from a file.</p></summary>
         public virtual string Artifacts { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1453,6 +1386,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--artifacts {value}", Artifacts)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1471,12 +1405,17 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureLab executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary><p>Name of the lab.</p></summary>
         public virtual string LabName { get; internal set; }
         /// <summary><p>Name of the virtual machine to claim.</p></summary>
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of lab's resource group.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1491,9 +1430,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("lab vm claim")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1556,6 +1497,8 @@ namespace Nuke.Azure
         public virtual string Subnet { get; internal set; }
         /// <summary><p>Name of the virtual network to add the VM to.</p></summary>
         public virtual string VnetName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1592,6 +1535,7 @@ namespace Nuke.Azure
               .Add("--ip-configuration {value}", IpConfiguration)
               .Add("--subnet {value}", Subnet)
               .Add("--vnet-name {value}", VnetName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1616,6 +1560,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1633,6 +1579,7 @@ namespace Nuke.Azure
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1671,6 +1618,8 @@ namespace Nuke.Azure
         public virtual string Environment { get; internal set; }
         /// <summary><p>The filter to apply.</p></summary>
         public virtual string Filters { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1695,6 +1644,7 @@ namespace Nuke.Azure
               .Add("--top {value}", Top)
               .Add("--environment {value}", Environment)
               .Add("--filters {value}", Filters)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1721,6 +1671,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Specify the $expand query. Example: 'properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)'.</p></summary>
         public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1739,6 +1691,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1763,6 +1716,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1780,6 +1735,7 @@ namespace Nuke.Azure
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1804,6 +1760,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1821,6 +1779,7 @@ namespace Nuke.Azure
               .Add("--lab-name {value}", LabName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1830,56 +1789,12 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureLabVnetGetSettings
+    #region AzureLabGalleryImageListSettings
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureLabVnetGetSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureLab executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
-        /// <summary><p>The name of the lab.</p></summary>
-        public virtual string LabName { get; internal set; }
-        /// <summary><p>The name of the virtual network.</p></summary>
-        public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
-        public virtual string Expand { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("lab vnet get")
-              .Add("--lab-name {value}", LabName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--expand {value}", Expand)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureLabVnetListSettings
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureLabVnetListSettings : ToolSettings
+    public partial class AzureLabGalleryImageListSettings : ToolSettings
     {
         /// <summary><p>Path to the AzureLab executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
@@ -1887,7 +1802,7 @@ namespace Nuke.Azure
         public virtual string LabName { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        /// <summary><p>Specify the $expand query. Example: 'properties($select=author)'.</p></summary>
         public virtual string Expand { get; internal set; }
         /// <summary><p>The filter to apply to the operation.</p></summary>
         public virtual string Filter { get; internal set; }
@@ -1895,6 +1810,8 @@ namespace Nuke.Azure
         public virtual string Orderby { get; internal set; }
         /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
         public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1908,13 +1825,202 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("lab vnet list")
+              .Add("lab gallery-image list")
               .Add("--lab-name {value}", LabName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--expand {value}", Expand)
               .Add("--filter {value}", Filter)
               .Add("--orderby {value}", Orderby)
               .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabFormulaDeleteSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabFormulaDeleteSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>The name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>The name of the formula.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab formula delete")
+              .Add("--lab-name {value}", LabName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabFormulaExportArtifactsSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabFormulaExportArtifactsSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>Name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>Name of the formula.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab formula export-artifacts")
+              .Add("--lab-name {value}", LabName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabFormulaListSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabFormulaListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>The name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>The filter to apply to the operation.</p></summary>
+        public virtual string Filter { get; internal set; }
+        /// <summary><p>The ordering expression for the results, using OData notation.</p></summary>
+        public virtual string Orderby { get; internal set; }
+        /// <summary><p>The maximum number of resources to return from the operation.</p></summary>
+        public virtual int? Top { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab formula list")
+              .Add("--lab-name {value}", LabName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--expand {value}", Expand)
+              .Add("--filter {value}", Filter)
+              .Add("--orderby {value}", Orderby)
+              .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureLabFormulaShowSettings
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureLabFormulaShowSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureLab executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureLabTasks.AzureLabPath;
+        /// <summary><p>Name of the lab.</p></summary>
+        public virtual string LabName { get; internal set; }
+        /// <summary><p>Name of the formula.</p></summary>
+        public virtual string Name { get; internal set; }
+        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        public virtual string Expand { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("lab formula show")
+              .Add("--lab-name {value}", LabName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--expand {value}", Expand)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1963,6 +2069,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabDeleteSettings SetSubscription(this AzureLabDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabDeleteSettings ResetSubscription(this AzureLabDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2118,6 +2242,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabGetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabGetSettings SetSubscription(this AzureLabGetSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabGetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabGetSettings ResetSubscription(this AzureLabGetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabGetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2202,1018 +2344,6 @@ namespace Nuke.Azure
         /// <summary><p><em>Resets <see cref="AzureLabGetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
         public static AzureLabGetSettings ResetVerbose(this AzureLabGetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureLabArmTemplateListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureLabArmTemplateListSettingsExtensions
-    {
-        #region ArtifactSourceName
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetArtifactSourceName(this AzureLabArmTemplateListSettings toolSettings, string artifactSourceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSourceName = artifactSourceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetArtifactSourceName(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSourceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetLabName(this AzureLabArmTemplateListSettings toolSettings, string labName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = labName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetLabName(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetResourceGroup(this AzureLabArmTemplateListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetResourceGroup(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetExpand(this AzureLabArmTemplateListSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetExpand(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetFilter(this AzureLabArmTemplateListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetFilter(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetOrderby(this AzureLabArmTemplateListSettings toolSettings, string orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = orderby;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetOrderby(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetTop(this AzureLabArmTemplateListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetTop(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetDebug(this AzureLabArmTemplateListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetDebug(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetHelp(this AzureLabArmTemplateListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetHelp(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetOutput(this AzureLabArmTemplateListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetOutput(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetQuery(this AzureLabArmTemplateListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetQuery(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings SetVerbose(this AzureLabArmTemplateListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateListSettings ResetVerbose(this AzureLabArmTemplateListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureLabArmTemplateShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureLabArmTemplateShowSettingsExtensions
-    {
-        #region ArtifactSourceName
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.ArtifactSourceName"/>.</em></p><p>Name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetArtifactSourceName(this AzureLabArmTemplateShowSettings toolSettings, string artifactSourceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSourceName = artifactSourceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.ArtifactSourceName"/>.</em></p><p>Name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetArtifactSourceName(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSourceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetLabName(this AzureLabArmTemplateShowSettings toolSettings, string labName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = labName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetLabName(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Name"/>.</em></p><p>Name of the Azure Resource Manager template.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetName(this AzureLabArmTemplateShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Name"/>.</em></p><p>Name of the Azure Resource Manager template.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetName(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.ResourceGroup"/>.</em></p><p>Name of lab's resource group.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetResourceGroup(this AzureLabArmTemplateShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.ResourceGroup"/>.</em></p><p>Name of lab's resource group.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetResourceGroup(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ExportParameters
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.ExportParameters"/>.</em></p><p>Whether or not to export parameters template.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetExportParameters(this AzureLabArmTemplateShowSettings toolSettings, string exportParameters)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExportParameters = exportParameters;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.ExportParameters"/>.</em></p><p>Whether or not to export parameters template.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetExportParameters(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ExportParameters = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetDebug(this AzureLabArmTemplateShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetDebug(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetHelp(this AzureLabArmTemplateShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetHelp(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetOutput(this AzureLabArmTemplateShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetOutput(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetQuery(this AzureLabArmTemplateShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetQuery(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings SetVerbose(this AzureLabArmTemplateShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArmTemplateShowSettings ResetVerbose(this AzureLabArmTemplateShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureLabArtifactSourceListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureLabArtifactSourceListSettingsExtensions
-    {
-        #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetLabName(this AzureLabArtifactSourceListSettings toolSettings, string labName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = labName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetLabName(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetResourceGroup(this AzureLabArtifactSourceListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetResourceGroup(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetExpand(this AzureLabArtifactSourceListSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetExpand(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetFilter(this AzureLabArtifactSourceListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetFilter(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetOrderby(this AzureLabArtifactSourceListSettings toolSettings, string orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = orderby;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetOrderby(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetTop(this AzureLabArtifactSourceListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetTop(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetDebug(this AzureLabArtifactSourceListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetDebug(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetHelp(this AzureLabArtifactSourceListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetHelp(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetOutput(this AzureLabArtifactSourceListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetOutput(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetQuery(this AzureLabArtifactSourceListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetQuery(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings SetVerbose(this AzureLabArtifactSourceListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceListSettings ResetVerbose(this AzureLabArtifactSourceListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureLabArtifactSourceShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureLabArtifactSourceShowSettingsExtensions
-    {
-        #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetLabName(this AzureLabArtifactSourceShowSettings toolSettings, string labName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = labName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetLabName(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Name"/>.</em></p><p>The name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetName(this AzureLabArtifactSourceShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Name"/>.</em></p><p>The name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetName(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetResourceGroup(this AzureLabArtifactSourceShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetResourceGroup(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetExpand(this AzureLabArtifactSourceShowSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetExpand(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetDebug(this AzureLabArtifactSourceShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetDebug(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetHelp(this AzureLabArtifactSourceShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetHelp(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetOutput(this AzureLabArtifactSourceShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetOutput(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetQuery(this AzureLabArtifactSourceShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetQuery(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings SetVerbose(this AzureLabArtifactSourceShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactSourceShowSettings ResetVerbose(this AzureLabArtifactSourceShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureLabArtifactListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureLabArtifactListSettingsExtensions
-    {
-        #region ArtifactSourceName
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetArtifactSourceName(this AzureLabArtifactListSettings toolSettings, string artifactSourceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSourceName = artifactSourceName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetArtifactSourceName(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSourceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetLabName(this AzureLabArtifactListSettings toolSettings, string labName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = labName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetLabName(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetResourceGroup(this AzureLabArtifactListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetResourceGroup(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=title)'.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetExpand(this AzureLabArtifactListSettings toolSettings, string expand)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=title)'.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetExpand(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetFilter(this AzureLabArtifactListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetFilter(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetOrderby(this AzureLabArtifactListSettings toolSettings, string orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = orderby;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetOrderby(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetTop(this AzureLabArtifactListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetTop(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetDebug(this AzureLabArtifactListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetDebug(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetHelp(this AzureLabArtifactListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetHelp(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetOutput(this AzureLabArtifactListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetOutput(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetQuery(this AzureLabArtifactListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetQuery(this AzureLabArtifactListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings SetVerbose(this AzureLabArtifactListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabArtifactListSettings ResetVerbose(this AzureLabArtifactListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -3372,6 +2502,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabCustomImageCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageCreateSettings SetSubscription(this AzureLabCustomImageCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabCustomImageCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageCreateSettings ResetSubscription(this AzureLabCustomImageCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabCustomImageCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3521,6 +2669,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabCustomImageDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageDeleteSettings SetSubscription(this AzureLabCustomImageDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabCustomImageDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageDeleteSettings ResetSubscription(this AzureLabCustomImageDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3730,6 +2896,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabCustomImageListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageListSettings SetSubscription(this AzureLabCustomImageListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabCustomImageListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageListSettings ResetSubscription(this AzureLabCustomImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabCustomImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3897,6 +3081,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabCustomImageShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageShowSettings SetSubscription(this AzureLabCustomImageShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabCustomImageShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabCustomImageShowSettings ResetSubscription(this AzureLabCustomImageShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4124,6 +3326,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabEnvironmentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentCreateSettings SetSubscription(this AzureLabEnvironmentCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabEnvironmentCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentCreateSettings ResetSubscription(this AzureLabEnvironmentCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabEnvironmentCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4273,6 +3493,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabEnvironmentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentDeleteSettings SetSubscription(this AzureLabEnvironmentDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabEnvironmentDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentDeleteSettings ResetSubscription(this AzureLabEnvironmentDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4482,6 +3720,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabEnvironmentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentListSettings SetSubscription(this AzureLabEnvironmentListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabEnvironmentListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentListSettings ResetSubscription(this AzureLabEnvironmentListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabEnvironmentListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4652,6 +3908,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabEnvironmentShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentShowSettings SetSubscription(this AzureLabEnvironmentShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabEnvironmentShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabEnvironmentShowSettings ResetSubscription(this AzureLabEnvironmentShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabEnvironmentShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4744,328 +4018,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureLabFormulaDeleteSettingsExtensions
+    #region AzureLabArtifactSourceListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureLabFormulaDeleteSettingsExtensions
+    public static partial class AzureLabArtifactSourceListSettingsExtensions
     {
         #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabFormulaDeleteSettings SetLabName(this AzureLabFormulaDeleteSettings toolSettings, string labName)
+        public static AzureLabArtifactSourceListSettings SetLabName(this AzureLabArtifactSourceListSettings toolSettings, string labName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = labName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabFormulaDeleteSettings ResetLabName(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Name"/>.</em></p><p>The name of the formula.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings SetName(this AzureLabFormulaDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Name"/>.</em></p><p>The name of the formula.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings ResetName(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings SetResourceGroup(this AzureLabFormulaDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings ResetResourceGroup(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings SetDebug(this AzureLabFormulaDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings ResetDebug(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings SetHelp(this AzureLabFormulaDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings ResetHelp(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings SetOutput(this AzureLabFormulaDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings ResetOutput(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings SetQuery(this AzureLabFormulaDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings ResetQuery(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings SetVerbose(this AzureLabFormulaDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaDeleteSettings ResetVerbose(this AzureLabFormulaDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureLabFormulaExportArtifactsSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureLabFormulaExportArtifactsSettingsExtensions
-    {
-        #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetLabName(this AzureLabFormulaExportArtifactsSettings toolSettings, string labName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = labName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetLabName(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetName(this AzureLabFormulaExportArtifactsSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetName(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetResourceGroup(this AzureLabFormulaExportArtifactsSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetResourceGroup(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetDebug(this AzureLabFormulaExportArtifactsSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetDebug(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetHelp(this AzureLabFormulaExportArtifactsSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetHelp(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetOutput(this AzureLabFormulaExportArtifactsSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetOutput(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetQuery(this AzureLabFormulaExportArtifactsSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetQuery(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings SetVerbose(this AzureLabFormulaExportArtifactsSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureLabFormulaExportArtifactsSettings ResetVerbose(this AzureLabFormulaExportArtifactsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureLabFormulaListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureLabFormulaListSettingsExtensions
-    {
-        #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabFormulaListSettings SetLabName(this AzureLabFormulaListSettings toolSettings, string labName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LabName = labName;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
-        [Pure]
-        public static AzureLabFormulaListSettings ResetLabName(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetLabName(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = null;
@@ -5073,17 +4043,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetResourceGroup(this AzureLabFormulaListSettings toolSettings, string resourceGroup)
+        public static AzureLabArtifactSourceListSettings SetResourceGroup(this AzureLabArtifactSourceListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetResourceGroup(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetResourceGroup(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -5091,17 +4061,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetExpand(this AzureLabFormulaListSettings toolSettings, string expand)
+        public static AzureLabArtifactSourceListSettings SetExpand(this AzureLabArtifactSourceListSettings toolSettings, string expand)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = expand;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetExpand(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetExpand(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = null;
@@ -5109,17 +4079,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Filter
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetFilter(this AzureLabFormulaListSettings toolSettings, string filter)
+        public static AzureLabArtifactSourceListSettings SetFilter(this AzureLabArtifactSourceListSettings toolSettings, string filter)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = filter;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetFilter(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetFilter(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Filter = null;
@@ -5127,17 +4097,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetOrderby(this AzureLabFormulaListSettings toolSettings, string orderby)
+        public static AzureLabArtifactSourceListSettings SetOrderby(this AzureLabArtifactSourceListSettings toolSettings, string orderby)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Orderby = orderby;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetOrderby(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetOrderby(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Orderby = null;
@@ -5145,35 +4115,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region Top
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetTop(this AzureLabFormulaListSettings toolSettings, int? top)
+        public static AzureLabArtifactSourceListSettings SetTop(this AzureLabArtifactSourceListSettings toolSettings, int? top)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = top;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetTop(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetTop(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Top = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetDebug(this AzureLabFormulaListSettings toolSettings, string debug)
+        public static AzureLabArtifactSourceListSettings SetSubscription(this AzureLabArtifactSourceListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArtifactSourceListSettings ResetSubscription(this AzureLabArtifactSourceListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArtifactSourceListSettings SetDebug(this AzureLabArtifactSourceListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetDebug(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetDebug(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5181,17 +4169,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetHelp(this AzureLabFormulaListSettings toolSettings, string help)
+        public static AzureLabArtifactSourceListSettings SetHelp(this AzureLabArtifactSourceListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetHelp(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetHelp(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5199,17 +4187,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetOutput(this AzureLabFormulaListSettings toolSettings, AzureOutput output)
+        public static AzureLabArtifactSourceListSettings SetOutput(this AzureLabArtifactSourceListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetOutput(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetOutput(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5217,17 +4205,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetQuery(this AzureLabFormulaListSettings toolSettings, string query)
+        public static AzureLabArtifactSourceListSettings SetQuery(this AzureLabArtifactSourceListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetQuery(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetQuery(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5235,17 +4223,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings SetVerbose(this AzureLabFormulaListSettings toolSettings, string verbose)
+        public static AzureLabArtifactSourceListSettings SetVerbose(this AzureLabArtifactSourceListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabFormulaListSettings ResetVerbose(this AzureLabFormulaListSettings toolSettings)
+        public static AzureLabArtifactSourceListSettings ResetVerbose(this AzureLabArtifactSourceListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5254,24 +4242,24 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureLabFormulaShowSettingsExtensions
+    #region AzureLabArtifactSourceShowSettingsExtensions
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureLabFormulaShowSettingsExtensions
+    public static partial class AzureLabArtifactSourceShowSettingsExtensions
     {
         #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetLabName(this AzureLabFormulaShowSettings toolSettings, string labName)
+        public static AzureLabArtifactSourceShowSettings SetLabName(this AzureLabArtifactSourceShowSettings toolSettings, string labName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = labName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetLabName(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetLabName(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = null;
@@ -5279,17 +4267,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Name"/>.</em></p><p>The name of the artifact source.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetName(this AzureLabFormulaShowSettings toolSettings, string name)
+        public static AzureLabArtifactSourceShowSettings SetName(this AzureLabArtifactSourceShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Name"/>.</em></p><p>The name of the artifact source.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetName(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetName(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -5297,17 +4285,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetResourceGroup(this AzureLabFormulaShowSettings toolSettings, string resourceGroup)
+        public static AzureLabArtifactSourceShowSettings SetResourceGroup(this AzureLabArtifactSourceShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetResourceGroup(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetResourceGroup(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -5315,35 +4303,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetExpand(this AzureLabFormulaShowSettings toolSettings, string expand)
+        public static AzureLabArtifactSourceShowSettings SetExpand(this AzureLabArtifactSourceShowSettings toolSettings, string expand)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = expand;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetExpand(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetExpand(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetDebug(this AzureLabFormulaShowSettings toolSettings, string debug)
+        public static AzureLabArtifactSourceShowSettings SetSubscription(this AzureLabArtifactSourceShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArtifactSourceShowSettings ResetSubscription(this AzureLabArtifactSourceShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArtifactSourceShowSettings SetDebug(this AzureLabArtifactSourceShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetDebug(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetDebug(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5351,17 +4357,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetHelp(this AzureLabFormulaShowSettings toolSettings, string help)
+        public static AzureLabArtifactSourceShowSettings SetHelp(this AzureLabArtifactSourceShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetHelp(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetHelp(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5369,17 +4375,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetOutput(this AzureLabFormulaShowSettings toolSettings, AzureOutput output)
+        public static AzureLabArtifactSourceShowSettings SetOutput(this AzureLabArtifactSourceShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetOutput(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetOutput(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5387,17 +4393,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetQuery(this AzureLabFormulaShowSettings toolSettings, string query)
+        public static AzureLabArtifactSourceShowSettings SetQuery(this AzureLabArtifactSourceShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetQuery(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetQuery(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5405,17 +4411,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings SetVerbose(this AzureLabFormulaShowSettings toolSettings, string verbose)
+        public static AzureLabArtifactSourceShowSettings SetVerbose(this AzureLabArtifactSourceShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactSourceShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabFormulaShowSettings ResetVerbose(this AzureLabFormulaShowSettings toolSettings)
+        public static AzureLabArtifactSourceShowSettings ResetVerbose(this AzureLabArtifactSourceShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5424,42 +4430,60 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureLabGalleryImageListSettingsExtensions
+    #region AzureLabVnetGetSettingsExtensions
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureLabGalleryImageListSettingsExtensions
+    public static partial class AzureLabVnetGetSettingsExtensions
     {
         #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetLabName(this AzureLabGalleryImageListSettings toolSettings, string labName)
+        public static AzureLabVnetGetSettings SetLabName(this AzureLabVnetGetSettings toolSettings, string labName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = labName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetLabName(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetLabName(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = null;
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Name"/>.</em></p><p>The name of the virtual network.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetResourceGroup(this AzureLabGalleryImageListSettings toolSettings, string resourceGroup)
+        public static AzureLabVnetGetSettings SetName(this AzureLabVnetGetSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Name"/>.</em></p><p>The name of the virtual network.</p></summary>
+        [Pure]
+        public static AzureLabVnetGetSettings ResetName(this AzureLabVnetGetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabVnetGetSettings SetResourceGroup(this AzureLabVnetGetSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetResourceGroup(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetResourceGroup(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -5467,89 +4491,53 @@ namespace Nuke.Azure
         }
         #endregion
         #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=author)'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetExpand(this AzureLabGalleryImageListSettings toolSettings, string expand)
+        public static AzureLabVnetGetSettings SetExpand(this AzureLabVnetGetSettings toolSettings, string expand)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = expand;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=author)'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetExpand(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetExpand(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = null;
             return toolSettings;
         }
         #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetFilter(this AzureLabGalleryImageListSettings toolSettings, string filter)
+        public static AzureLabVnetGetSettings SetSubscription(this AzureLabVnetGetSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetFilter(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetSubscription(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabGalleryImageListSettings SetOrderby(this AzureLabGalleryImageListSettings toolSettings, string orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = orderby;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabGalleryImageListSettings ResetOrderby(this AzureLabGalleryImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabGalleryImageListSettings SetTop(this AzureLabGalleryImageListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabGalleryImageListSettings ResetTop(this AzureLabGalleryImageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetDebug(this AzureLabGalleryImageListSettings toolSettings, string debug)
+        public static AzureLabVnetGetSettings SetDebug(this AzureLabVnetGetSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetDebug(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetDebug(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5557,17 +4545,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetHelp(this AzureLabGalleryImageListSettings toolSettings, string help)
+        public static AzureLabVnetGetSettings SetHelp(this AzureLabVnetGetSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetHelp(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetHelp(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5575,17 +4563,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetOutput(this AzureLabGalleryImageListSettings toolSettings, AzureOutput output)
+        public static AzureLabVnetGetSettings SetOutput(this AzureLabVnetGetSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetOutput(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetOutput(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5593,17 +4581,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetQuery(this AzureLabGalleryImageListSettings toolSettings, string query)
+        public static AzureLabVnetGetSettings SetQuery(this AzureLabVnetGetSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetQuery(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetQuery(this AzureLabVnetGetSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5611,17 +4599,241 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings SetVerbose(this AzureLabGalleryImageListSettings toolSettings, string verbose)
+        public static AzureLabVnetGetSettings SetVerbose(this AzureLabVnetGetSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabGalleryImageListSettings ResetVerbose(this AzureLabGalleryImageListSettings toolSettings)
+        public static AzureLabVnetGetSettings ResetVerbose(this AzureLabVnetGetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureLabVnetListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureLabVnetListSettingsExtensions
+    {
+        #region LabName
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetLabName(this AzureLabVnetListSettings toolSettings, string labName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = labName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetLabName(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetResourceGroup(this AzureLabVnetListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetResourceGroup(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetExpand(this AzureLabVnetListSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetExpand(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetFilter(this AzureLabVnetListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetFilter(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetOrderby(this AzureLabVnetListSettings toolSettings, string orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = orderby;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetOrderby(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetTop(this AzureLabVnetListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetTop(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetSubscription(this AzureLabVnetListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetSubscription(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetDebug(this AzureLabVnetListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetDebug(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetHelp(this AzureLabVnetListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetHelp(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetOutput(this AzureLabVnetListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetOutput(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetQuery(this AzureLabVnetListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetQuery(this AzureLabVnetListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings SetVerbose(this AzureLabVnetListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabVnetListSettings ResetVerbose(this AzureLabVnetListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5687,6 +4899,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabSecretDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretDeleteSettings SetSubscription(this AzureLabSecretDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabSecretDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretDeleteSettings ResetSubscription(this AzureLabSecretDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5896,6 +5126,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabSecretListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretListSettings SetSubscription(this AzureLabSecretListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabSecretListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretListSettings ResetSubscription(this AzureLabSecretListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabSecretListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6063,6 +5311,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Value = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabSecretSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretSetSettings SetSubscription(this AzureLabSecretSetSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabSecretSetSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretSetSettings ResetSubscription(this AzureLabSecretSetSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6236,6 +5502,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabSecretShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretShowSettings SetSubscription(this AzureLabSecretShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabSecretShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabSecretShowSettings ResetSubscription(this AzureLabSecretShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabSecretShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -6328,6 +5612,696 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureLabArtifactListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureLabArtifactListSettingsExtensions
+    {
+        #region ArtifactSourceName
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetArtifactSourceName(this AzureLabArtifactListSettings toolSettings, string artifactSourceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSourceName = artifactSourceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetArtifactSourceName(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSourceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LabName
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetLabName(this AzureLabArtifactListSettings toolSettings, string labName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = labName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetLabName(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetResourceGroup(this AzureLabArtifactListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetResourceGroup(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=title)'.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetExpand(this AzureLabArtifactListSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=title)'.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetExpand(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetFilter(this AzureLabArtifactListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetFilter(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetOrderby(this AzureLabArtifactListSettings toolSettings, string orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = orderby;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetOrderby(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetTop(this AzureLabArtifactListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetTop(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetSubscription(this AzureLabArtifactListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetSubscription(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetDebug(this AzureLabArtifactListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetDebug(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetHelp(this AzureLabArtifactListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetHelp(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetOutput(this AzureLabArtifactListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetOutput(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetQuery(this AzureLabArtifactListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetQuery(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureLabArtifactListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings SetVerbose(this AzureLabArtifactListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArtifactListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArtifactListSettings ResetVerbose(this AzureLabArtifactListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureLabArmTemplateListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureLabArmTemplateListSettingsExtensions
+    {
+        #region ArtifactSourceName
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetArtifactSourceName(this AzureLabArmTemplateListSettings toolSettings, string artifactSourceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSourceName = artifactSourceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.ArtifactSourceName"/>.</em></p><p>The name of the artifact source.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetArtifactSourceName(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSourceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LabName
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetLabName(this AzureLabArmTemplateListSettings toolSettings, string labName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = labName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetLabName(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetResourceGroup(this AzureLabArmTemplateListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetResourceGroup(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetExpand(this AzureLabArmTemplateListSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=displayName)'.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetExpand(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetFilter(this AzureLabArmTemplateListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetFilter(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetOrderby(this AzureLabArmTemplateListSettings toolSettings, string orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = orderby;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetOrderby(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetTop(this AzureLabArmTemplateListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetTop(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetSubscription(this AzureLabArmTemplateListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetSubscription(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetDebug(this AzureLabArmTemplateListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetDebug(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetHelp(this AzureLabArmTemplateListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetHelp(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetOutput(this AzureLabArmTemplateListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetOutput(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetQuery(this AzureLabArmTemplateListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetQuery(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings SetVerbose(this AzureLabArmTemplateListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateListSettings ResetVerbose(this AzureLabArmTemplateListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureLabArmTemplateShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureLabArmTemplateShowSettingsExtensions
+    {
+        #region ArtifactSourceName
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.ArtifactSourceName"/>.</em></p><p>Name of the artifact source.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetArtifactSourceName(this AzureLabArmTemplateShowSettings toolSettings, string artifactSourceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSourceName = artifactSourceName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.ArtifactSourceName"/>.</em></p><p>Name of the artifact source.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetArtifactSourceName(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSourceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LabName
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetLabName(this AzureLabArmTemplateShowSettings toolSettings, string labName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = labName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetLabName(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Name"/>.</em></p><p>Name of the Azure Resource Manager template.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetName(this AzureLabArmTemplateShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Name"/>.</em></p><p>Name of the Azure Resource Manager template.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetName(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.ResourceGroup"/>.</em></p><p>Name of lab's resource group.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetResourceGroup(this AzureLabArmTemplateShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.ResourceGroup"/>.</em></p><p>Name of lab's resource group.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetResourceGroup(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ExportParameters
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.ExportParameters"/>.</em></p><p>Whether or not to export parameters template.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetExportParameters(this AzureLabArmTemplateShowSettings toolSettings, string exportParameters)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExportParameters = exportParameters;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.ExportParameters"/>.</em></p><p>Whether or not to export parameters template.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetExportParameters(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExportParameters = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetSubscription(this AzureLabArmTemplateShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetSubscription(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetDebug(this AzureLabArmTemplateShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetDebug(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetHelp(this AzureLabArmTemplateShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetHelp(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetOutput(this AzureLabArmTemplateShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetOutput(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetQuery(this AzureLabArmTemplateShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetQuery(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureLabArmTemplateShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings SetVerbose(this AzureLabArmTemplateShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabArmTemplateShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabArmTemplateShowSettings ResetVerbose(this AzureLabArmTemplateShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureLabVmApplyArtifactsSettingsExtensions
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
@@ -6403,6 +6377,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Artifacts = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmApplyArtifactsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmApplyArtifactsSettings SetSubscription(this AzureLabVmApplyArtifactsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmApplyArtifactsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmApplyArtifactsSettings ResetSubscription(this AzureLabVmApplyArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -6504,6 +6496,66 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureLabVmClaimSettingsExtensions
     {
+        #region Ids
+        /// <summary><p><em>Sets <see cref="AzureLabVmClaimSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings SetIds(this AzureLabVmClaimSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Sets <see cref="AzureLabVmClaimSettings.Ids"/> to a new list.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings SetIds(this AzureLabVmClaimSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLabVmClaimSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings AddIds(this AzureLabVmClaimSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Adds values to <see cref="AzureLabVmClaimSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings AddIds(this AzureLabVmClaimSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary><p><em>Clears <see cref="AzureLabVmClaimSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings ClearIds(this AzureLabVmClaimSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLabVmClaimSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings RemoveIds(this AzureLabVmClaimSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary><p><em>Removes values from <see cref="AzureLabVmClaimSettings.Ids"/>.</em></p><p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings RemoveIds(this AzureLabVmClaimSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region LabName
         /// <summary><p><em>Sets <see cref="AzureLabVmClaimSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
         [Pure]
@@ -6555,6 +6607,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmClaimSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings SetSubscription(this AzureLabVmClaimSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmClaimSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmClaimSettings ResetSubscription(this AzureLabVmClaimSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7052,6 +7122,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmCreateSettings SetSubscription(this AzureLabVmCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmCreateSettings ResetSubscription(this AzureLabVmCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabVmCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7201,6 +7289,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmDeleteSettings SetSubscription(this AzureLabVmDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmDeleteSettings ResetSubscription(this AzureLabVmDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7482,6 +7588,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmListSettings SetSubscription(this AzureLabVmListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmListSettings ResetSubscription(this AzureLabVmListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabVmListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7652,6 +7776,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmShowSettings SetSubscription(this AzureLabVmShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmShowSettings ResetSubscription(this AzureLabVmShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabVmShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -7801,6 +7943,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmStartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmStartSettings SetSubscription(this AzureLabVmStartSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmStartSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmStartSettings ResetSubscription(this AzureLabVmStartSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -7956,6 +8116,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabVmStopSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmStopSettings SetSubscription(this AzureLabVmStopSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabVmStopSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabVmStopSettings ResetSubscription(this AzureLabVmStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureLabVmStopSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -8048,60 +8226,42 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureLabVnetGetSettingsExtensions
+    #region AzureLabGalleryImageListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureLabVnetGetSettingsExtensions
+    public static partial class AzureLabGalleryImageListSettingsExtensions
     {
         #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetLabName(this AzureLabVnetGetSettings toolSettings, string labName)
+        public static AzureLabGalleryImageListSettings SetLabName(this AzureLabGalleryImageListSettings toolSettings, string labName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = labName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetLabName(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetLabName(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = null;
             return toolSettings;
         }
         #endregion
-        #region Name
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Name"/>.</em></p><p>The name of the virtual network.</p></summary>
-        [Pure]
-        public static AzureLabVnetGetSettings SetName(this AzureLabVnetGetSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Name"/>.</em></p><p>The name of the virtual network.</p></summary>
-        [Pure]
-        public static AzureLabVnetGetSettings ResetName(this AzureLabVnetGetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetResourceGroup(this AzureLabVnetGetSettings toolSettings, string resourceGroup)
+        public static AzureLabGalleryImageListSettings SetResourceGroup(this AzureLabGalleryImageListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetResourceGroup(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetResourceGroup(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -8109,35 +8269,107 @@ namespace Nuke.Azure
         }
         #endregion
         #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=author)'.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetExpand(this AzureLabVnetGetSettings toolSettings, string expand)
+        public static AzureLabGalleryImageListSettings SetExpand(this AzureLabGalleryImageListSettings toolSettings, string expand)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = expand;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=author)'.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetExpand(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetExpand(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Expand = null;
             return toolSettings;
         }
         #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetDebug(this AzureLabVnetGetSettings toolSettings, string debug)
+        public static AzureLabGalleryImageListSettings SetFilter(this AzureLabGalleryImageListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings ResetFilter(this AzureLabGalleryImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings SetOrderby(this AzureLabGalleryImageListSettings toolSettings, string orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = orderby;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings ResetOrderby(this AzureLabGalleryImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings SetTop(this AzureLabGalleryImageListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings ResetTop(this AzureLabGalleryImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings SetSubscription(this AzureLabGalleryImageListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings ResetSubscription(this AzureLabGalleryImageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabGalleryImageListSettings SetDebug(this AzureLabGalleryImageListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetDebug(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetDebug(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8145,17 +8377,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetHelp(this AzureLabVnetGetSettings toolSettings, string help)
+        public static AzureLabGalleryImageListSettings SetHelp(this AzureLabGalleryImageListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetHelp(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetHelp(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8163,17 +8395,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetOutput(this AzureLabVnetGetSettings toolSettings, AzureOutput output)
+        public static AzureLabGalleryImageListSettings SetOutput(this AzureLabGalleryImageListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetOutput(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetOutput(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8181,17 +8413,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetQuery(this AzureLabVnetGetSettings toolSettings, string query)
+        public static AzureLabGalleryImageListSettings SetQuery(this AzureLabGalleryImageListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetQuery(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetQuery(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8199,17 +8431,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabVnetGetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabGalleryImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings SetVerbose(this AzureLabVnetGetSettings toolSettings, string verbose)
+        public static AzureLabGalleryImageListSettings SetVerbose(this AzureLabGalleryImageListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetGetSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabGalleryImageListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabVnetGetSettings ResetVerbose(this AzureLabVnetGetSettings toolSettings)
+        public static AzureLabGalleryImageListSettings ResetVerbose(this AzureLabGalleryImageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -8218,132 +8450,96 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureLabVnetListSettingsExtensions
+    #region AzureLabFormulaDeleteSettingsExtensions
     /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureLabVnetListSettingsExtensions
+    public static partial class AzureLabFormulaDeleteSettingsExtensions
     {
         #region LabName
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetLabName(this AzureLabVnetListSettings toolSettings, string labName)
+        public static AzureLabFormulaDeleteSettings SetLabName(this AzureLabFormulaDeleteSettings toolSettings, string labName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = labName;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetLabName(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetLabName(this AzureLabFormulaDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.LabName = null;
             return toolSettings;
         }
         #endregion
-        #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Name"/>.</em></p><p>The name of the formula.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetResourceGroup(this AzureLabVnetListSettings toolSettings, string resourceGroup)
+        public static AzureLabFormulaDeleteSettings SetName(this AzureLabFormulaDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Name"/>.</em></p><p>The name of the formula.</p></summary>
+        [Pure]
+        public static AzureLabFormulaDeleteSettings ResetName(this AzureLabFormulaDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaDeleteSettings SetResourceGroup(this AzureLabFormulaDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetResourceGroup(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetResourceGroup(this AzureLabFormulaDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
-        #region Expand
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetExpand(this AzureLabVnetListSettings toolSettings, string expand)
+        public static AzureLabFormulaDeleteSettings SetSubscription(this AzureLabFormulaDeleteSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = expand;
+            toolSettings.Subscription = subscription;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($expand=externalSubnets)'.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetExpand(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetSubscription(this AzureLabFormulaDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Expand = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Filter
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabVnetListSettings SetFilter(this AzureLabVnetListSettings toolSettings, string filter)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = filter;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
-        [Pure]
-        public static AzureLabVnetListSettings ResetFilter(this AzureLabVnetListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Filter = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Orderby
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabVnetListSettings SetOrderby(this AzureLabVnetListSettings toolSettings, string orderby)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = orderby;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
-        [Pure]
-        public static AzureLabVnetListSettings ResetOrderby(this AzureLabVnetListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Orderby = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabVnetListSettings SetTop(this AzureLabVnetListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
-        [Pure]
-        public static AzureLabVnetListSettings ResetTop(this AzureLabVnetListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetDebug(this AzureLabVnetListSettings toolSettings, string debug)
+        public static AzureLabFormulaDeleteSettings SetDebug(this AzureLabFormulaDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetDebug(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetDebug(this AzureLabFormulaDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -8351,17 +8547,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetHelp(this AzureLabVnetListSettings toolSettings, string help)
+        public static AzureLabFormulaDeleteSettings SetHelp(this AzureLabFormulaDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetHelp(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetHelp(this AzureLabFormulaDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -8369,17 +8565,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetOutput(this AzureLabVnetListSettings toolSettings, AzureOutput output)
+        public static AzureLabFormulaDeleteSettings SetOutput(this AzureLabFormulaDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetOutput(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetOutput(this AzureLabFormulaDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -8387,17 +8583,17 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetQuery(this AzureLabVnetListSettings toolSettings, string query)
+        public static AzureLabFormulaDeleteSettings SetQuery(this AzureLabFormulaDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetQuery(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetQuery(this AzureLabFormulaDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -8405,17 +8601,599 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureLabVnetListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings SetVerbose(this AzureLabVnetListSettings toolSettings, string verbose)
+        public static AzureLabFormulaDeleteSettings SetVerbose(this AzureLabFormulaDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureLabVnetListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
         [Pure]
-        public static AzureLabVnetListSettings ResetVerbose(this AzureLabVnetListSettings toolSettings)
+        public static AzureLabFormulaDeleteSettings ResetVerbose(this AzureLabFormulaDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureLabFormulaExportArtifactsSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureLabFormulaExportArtifactsSettingsExtensions
+    {
+        #region LabName
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetLabName(this AzureLabFormulaExportArtifactsSettings toolSettings, string labName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = labName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetLabName(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetName(this AzureLabFormulaExportArtifactsSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetName(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetResourceGroup(this AzureLabFormulaExportArtifactsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetResourceGroup(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetSubscription(this AzureLabFormulaExportArtifactsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetSubscription(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetDebug(this AzureLabFormulaExportArtifactsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetDebug(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetHelp(this AzureLabFormulaExportArtifactsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetHelp(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetOutput(this AzureLabFormulaExportArtifactsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetOutput(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetQuery(this AzureLabFormulaExportArtifactsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetQuery(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaExportArtifactsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings SetVerbose(this AzureLabFormulaExportArtifactsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaExportArtifactsSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaExportArtifactsSettings ResetVerbose(this AzureLabFormulaExportArtifactsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureLabFormulaListSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureLabFormulaListSettingsExtensions
+    {
+        #region LabName
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetLabName(this AzureLabFormulaListSettings toolSettings, string labName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = labName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.LabName"/>.</em></p><p>The name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetLabName(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetResourceGroup(this AzureLabFormulaListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetResourceGroup(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetExpand(this AzureLabFormulaListSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetExpand(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Filter
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetFilter(this AzureLabFormulaListSettings toolSettings, string filter)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = filter;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Filter"/>.</em></p><p>The filter to apply to the operation.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetFilter(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Filter = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Orderby
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetOrderby(this AzureLabFormulaListSettings toolSettings, string orderby)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = orderby;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Orderby"/>.</em></p><p>The ordering expression for the results, using OData notation.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetOrderby(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Orderby = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetTop(this AzureLabFormulaListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Top"/>.</em></p><p>The maximum number of resources to return from the operation.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetTop(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetSubscription(this AzureLabFormulaListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetSubscription(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetDebug(this AzureLabFormulaListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetDebug(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetHelp(this AzureLabFormulaListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetHelp(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetOutput(this AzureLabFormulaListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetOutput(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetQuery(this AzureLabFormulaListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetQuery(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings SetVerbose(this AzureLabFormulaListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaListSettings ResetVerbose(this AzureLabFormulaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureLabFormulaShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureLabTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureLabFormulaShowSettingsExtensions
+    {
+        #region LabName
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetLabName(this AzureLabFormulaShowSettings toolSettings, string labName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = labName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.LabName"/>.</em></p><p>Name of the lab.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetLabName(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LabName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetName(this AzureLabFormulaShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Name"/>.</em></p><p>Name of the formula.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetName(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetResourceGroup(this AzureLabFormulaShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetResourceGroup(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Expand
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetExpand(this AzureLabFormulaShowSettings toolSettings, string expand)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = expand;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Expand"/>.</em></p><p>Specify the $expand query. Example: 'properties($select=description)'.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetExpand(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Expand = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetSubscription(this AzureLabFormulaShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetSubscription(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetDebug(this AzureLabFormulaShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetDebug(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetHelp(this AzureLabFormulaShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetHelp(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetOutput(this AzureLabFormulaShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetOutput(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetQuery(this AzureLabFormulaShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetQuery(this AzureLabFormulaShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureLabFormulaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings SetVerbose(this AzureLabFormulaShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureLabFormulaShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureLabFormulaShowSettings ResetVerbose(this AzureLabFormulaShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

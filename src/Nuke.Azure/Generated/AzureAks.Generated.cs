@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -205,6 +205,8 @@ namespace Nuke.Azure
         public virtual string DisableBrowser { get; internal set; }
         /// <summary><p>The listening port for the dashboard.</p></summary>
         public virtual string ListenPort { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -223,6 +225,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--disable-browser {value}", DisableBrowser)
               .Add("--listen-port {value}", ListenPort)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -245,13 +248,13 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>(PREVIEW) The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
+        /// <summary><p>The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
         public virtual string AadClientAppId { get; internal set; }
-        /// <summary><p>(PREVIEW) The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
+        /// <summary><p>The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
         public virtual string AadServerAppId { get; internal set; }
-        /// <summary><p>(PREVIEW) The secret of an Azure Active Directory server application.</p></summary>
+        /// <summary><p>The secret of an Azure Active Directory server application.</p></summary>
         public virtual string AadServerAppSecret { get; internal set; }
-        /// <summary><p>(PREVIEW) The ID of an Azure Active Directory tenant.</p></summary>
+        /// <summary><p>The ID of an Azure Active Directory tenant.</p></summary>
         public virtual string AadTenantId { get; internal set; }
         /// <summary><p>User account to create on node VMs for SSH access.</p></summary>
         public virtual string AdminUsername { get; internal set; }
@@ -274,12 +277,14 @@ namespace Nuke.Azure
         public virtual string GenerateSshKeys { get; internal set; }
         /// <summary><p>Version of Kubernetes to use for creating the cluster, such as "1.7.12" or "1.8.7".</p></summary>
         public virtual string KubernetesVersion { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>The maximum number of pods deployable to a node.</p></summary>
         public virtual int? MaxPods { get; internal set; }
         /// <summary><p>The Kubernetes network plugin to use.</p></summary>
         public virtual string NetworkPlugin { get; internal set; }
+        /// <summary><p>(PREVIEW) The Kubernetes network policy to use.</p></summary>
+        public virtual string NetworkPolicy { get; internal set; }
         /// <summary><p>Do not use or create a local SSH key.</p></summary>
         public virtual bool? NoSshKey { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
@@ -308,6 +313,8 @@ namespace Nuke.Azure
         public virtual string VnetSubnetId { get; internal set; }
         /// <summary><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one.</p></summary>
         public virtual string WorkspaceResourceId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -341,6 +348,7 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--max-pods {value}", MaxPods)
               .Add("--network-plugin {value}", NetworkPlugin)
+              .Add("--network-policy {value}", NetworkPolicy)
               .Add("--no-ssh-key", NoSshKey)
               .Add("--no-wait", NoWait)
               .Add("--node-count {value}", NodeCount)
@@ -355,6 +363,7 @@ namespace Nuke.Azure
               .Add("--tags {value}", Tags)
               .Add("--vnet-subnet-id {value}", VnetSubnetId)
               .Add("--workspace-resource-id {value}", WorkspaceResourceId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -381,6 +390,8 @@ namespace Nuke.Azure
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -399,6 +410,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -426,6 +438,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -444,6 +458,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -471,8 +486,12 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not wait for the long-running operation to finish.</p></summary>
         public virtual bool? NoWait { get; internal set; }
+        /// <summary><p></p></summary>
+        public virtual string SubnetName { get; internal set; }
         /// <summary><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
         public virtual string WorkspaceResourceId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -491,7 +510,9 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
+              .Add("--subnet-name {value}", SubnetName)
               .Add("--workspace-resource-id {value}", WorkspaceResourceId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -520,6 +541,8 @@ namespace Nuke.Azure
         public virtual string File { get; internal set; }
         /// <summary><p></p></summary>
         public virtual string OverwriteExisting { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -539,6 +562,7 @@ namespace Nuke.Azure
               .Add("--admin {value}", Admin)
               .Add("--file {value}", File)
               .Add("--overwrite-existing {value}", OverwriteExisting)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -561,6 +585,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -577,6 +603,7 @@ namespace Nuke.Azure
               .Add("aks get-upgrades")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -595,8 +622,10 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureAks executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -612,6 +641,7 @@ namespace Nuke.Azure
             arguments
               .Add("aks get-versions")
               .Add("--location {value}", Location)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -634,6 +664,8 @@ namespace Nuke.Azure
         public virtual string ClientVersion { get; internal set; }
         /// <summary><p></p></summary>
         public virtual string InstallLocation { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -650,6 +682,7 @@ namespace Nuke.Azure
               .Add("aks install-cli")
               .Add("--client-version {value}", ClientVersion)
               .Add("--install-location {value}", InstallLocation)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -688,6 +721,8 @@ namespace Nuke.Azure
         public virtual AksOsType OsType { get; internal set; }
         /// <summary><p>Service principal used for authentication to Azure APIs.</p></summary>
         public virtual bool? ServicePrincipal { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -712,6 +747,7 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
               .Add("--service-principal", ServicePrincipal)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -732,6 +768,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -747,6 +785,7 @@ namespace Nuke.Azure
             arguments
               .Add("aks list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -773,10 +812,12 @@ namespace Nuke.Azure
         public virtual string ConnectorName { get; internal set; }
         /// <summary><p>Use a "cordon and drain" strategy to evict pods safely before removing the ACI node.</p></summary>
         public virtual string Graceful { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
         /// <summary><p>Remove support for deploying ACIs of this operating system type.</p></summary>
         public virtual AksOsType OsType { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -797,6 +838,7 @@ namespace Nuke.Azure
               .Add("--graceful {value}", Graceful)
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -821,6 +863,8 @@ namespace Nuke.Azure
         public virtual string ResourceGroup { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -838,6 +882,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -866,6 +911,8 @@ namespace Nuke.Azure
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Node pool name, upto 12 alphanumeric characters.</p></summary>
         public virtual string NodepoolName { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -885,6 +932,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
               .Add("--nodepool-name {value}", NodepoolName)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -907,6 +955,8 @@ namespace Nuke.Azure
         public virtual string Name { get; internal set; }
         /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
         public virtual string ResourceGroup { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -923,6 +973,7 @@ namespace Nuke.Azure
               .Add("aks show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -951,6 +1002,8 @@ namespace Nuke.Azure
         public virtual bool? NoWait { get; internal set; }
         /// <summary><p>Do not prompt for confirmation.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -970,6 +1023,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1008,6 +1062,8 @@ namespace Nuke.Azure
         public virtual AksOsType OsType { get; internal set; }
         /// <summary><p>Service principal used for authentication to Azure APIs.</p></summary>
         public virtual bool? ServicePrincipal { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1032,6 +1088,7 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--os-type {value}", OsType)
               .Add("--service-principal", ServicePrincipal)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1060,6 +1117,8 @@ namespace Nuke.Azure
         public virtual string Update { get; internal set; }
         /// <summary><p>Do not prompt for confirmation. Requires --space.</p></summary>
         public virtual string Yes { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1079,6 +1138,7 @@ namespace Nuke.Azure
               .Add("--space {value}", Space)
               .Add("--update {value}", Update)
               .Add("--yes {value}", Yes)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1115,6 +1175,8 @@ namespace Nuke.Azure
         public virtual string Timeout { get; internal set; }
         /// <summary><p>Wait until updated with provisioningState at 'Succeeded'.</p></summary>
         public virtual string Updated { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -1138,6 +1200,7 @@ namespace Nuke.Azure
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
               .Add("--updated {value}", Updated)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1222,6 +1285,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ListenPort = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksBrowseSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksBrowseSettings SetSubscription(this AzureAksBrowseSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksBrowseSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksBrowseSettings ResetSubscription(this AzureAksBrowseSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1360,7 +1441,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AadClientAppId
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadClientAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadClientAppId"/>.</em></p><p>The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetAadClientAppId(this AzureAksCreateSettings toolSettings, string aadClientAppId)
         {
@@ -1368,7 +1449,7 @@ namespace Nuke.Azure
             toolSettings.AadClientAppId = aadClientAppId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadClientAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadClientAppId"/>.</em></p><p>The ID of an Azure Active Directory client application of type "Native". This application is for user login via kubectl.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetAadClientAppId(this AzureAksCreateSettings toolSettings)
         {
@@ -1378,7 +1459,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AadServerAppId
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadServerAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadServerAppId"/>.</em></p><p>The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetAadServerAppId(this AzureAksCreateSettings toolSettings, string aadServerAppId)
         {
@@ -1386,7 +1467,7 @@ namespace Nuke.Azure
             toolSettings.AadServerAppId = aadServerAppId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadServerAppId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadServerAppId"/>.</em></p><p>The ID of an Azure Active Directory server application of type "Web app/API". This application represents the managed cluster's apiserver (Server application).</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetAadServerAppId(this AzureAksCreateSettings toolSettings)
         {
@@ -1396,7 +1477,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AadServerAppSecret
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadServerAppSecret"/>.</em></p><p>(PREVIEW) The secret of an Azure Active Directory server application.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadServerAppSecret"/>.</em></p><p>The secret of an Azure Active Directory server application.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetAadServerAppSecret(this AzureAksCreateSettings toolSettings, string aadServerAppSecret)
         {
@@ -1404,7 +1485,7 @@ namespace Nuke.Azure
             toolSettings.AadServerAppSecret = aadServerAppSecret;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadServerAppSecret"/>.</em></p><p>(PREVIEW) The secret of an Azure Active Directory server application.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadServerAppSecret"/>.</em></p><p>The secret of an Azure Active Directory server application.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetAadServerAppSecret(this AzureAksCreateSettings toolSettings)
         {
@@ -1414,7 +1495,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region AadTenantId
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadTenantId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory tenant.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.AadTenantId"/>.</em></p><p>The ID of an Azure Active Directory tenant.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetAadTenantId(this AzureAksCreateSettings toolSettings, string aadTenantId)
         {
@@ -1422,7 +1503,7 @@ namespace Nuke.Azure
             toolSettings.AadTenantId = aadTenantId;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadTenantId"/>.</em></p><p>(PREVIEW) The ID of an Azure Active Directory tenant.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.AadTenantId"/>.</em></p><p>The ID of an Azure Active Directory tenant.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetAadTenantId(this AzureAksCreateSettings toolSettings)
         {
@@ -1654,7 +1735,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAksCreateSettings SetLocation(this AzureAksCreateSettings toolSettings, string location)
         {
@@ -1662,7 +1743,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAksCreateSettings ResetLocation(this AzureAksCreateSettings toolSettings)
         {
@@ -1704,6 +1785,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NetworkPlugin = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NetworkPolicy
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.NetworkPolicy"/>.</em></p><p>(PREVIEW) The Kubernetes network policy to use.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetNetworkPolicy(this AzureAksCreateSettings toolSettings, string networkPolicy)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetworkPolicy = networkPolicy;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.NetworkPolicy"/>.</em></p><p>(PREVIEW) The Kubernetes network policy to use.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetNetworkPolicy(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NetworkPolicy = null;
             return toolSettings;
         }
         #endregion
@@ -2031,6 +2130,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings SetSubscription(this AzureAksCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksCreateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetSubscription(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2222,6 +2339,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksDeleteSettings SetSubscription(this AzureAksDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDeleteSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksDeleteSettings ResetSubscription(this AzureAksDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2461,6 +2596,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings SetSubscription(this AzureAksDisableAddonsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksDisableAddonsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksDisableAddonsSettings ResetSubscription(this AzureAksDisableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksDisableAddonsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2697,6 +2850,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region SubnetName
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.SubnetName"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetSubnetName(this AzureAksEnableAddonsSettings toolSettings, string subnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubnetName = subnetName;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.SubnetName"/>.</em></p><p></p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetSubnetName(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubnetName = null;
+            return toolSettings;
+        }
+        #endregion
         #region WorkspaceResourceId
         /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.WorkspaceResourceId"/>.</em></p><p>The resource ID of an existing Log Analytics Workspace to use for storing monitoring data.</p></summary>
         [Pure]
@@ -2712,6 +2883,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.WorkspaceResourceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksEnableAddonsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings SetSubscription(this AzureAksEnableAddonsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksEnableAddonsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksEnableAddonsSettings ResetSubscription(this AzureAksEnableAddonsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2903,6 +3092,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksGetCredentialsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksGetCredentialsSettings SetSubscription(this AzureAksGetCredentialsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksGetCredentialsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksGetCredentialsSettings ResetSubscription(this AzureAksGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksGetCredentialsSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3037,6 +3244,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksGetUpgradesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksGetUpgradesSettings SetSubscription(this AzureAksGetUpgradesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksGetUpgradesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksGetUpgradesSettings ResetSubscription(this AzureAksGetUpgradesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksGetUpgradesSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3136,7 +3361,7 @@ namespace Nuke.Azure
     public static partial class AzureAksGetVersionsSettingsExtensions
     {
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureAksGetVersionsSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksGetVersionsSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAksGetVersionsSettings SetLocation(this AzureAksGetVersionsSettings toolSettings, string location)
         {
@@ -3144,12 +3369,30 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksGetVersionsSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksGetVersionsSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAksGetVersionsSettings ResetLocation(this AzureAksGetVersionsSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksGetVersionsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksGetVersionsSettings SetSubscription(this AzureAksGetVersionsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksGetVersionsSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksGetVersionsSettings ResetSubscription(this AzureAksGetVersionsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3284,6 +3527,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.InstallLocation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksInstallCliSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksInstallCliSettings SetSubscription(this AzureAksInstallCliSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksInstallCliSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksInstallCliSettings ResetSubscription(this AzureAksInstallCliSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3589,6 +3850,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksInstallConnectorSettings SetSubscription(this AzureAksInstallConnectorSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksInstallConnectorSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksInstallConnectorSettings ResetSubscription(this AzureAksInstallConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksInstallConnectorSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -3702,6 +3981,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksListSettings SetSubscription(this AzureAksListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksListSettings ResetSubscription(this AzureAksListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -3876,7 +4173,7 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAksRemoveConnectorSettings SetLocation(this AzureAksRemoveConnectorSettings toolSettings, string location)
         {
@@ -3884,7 +4181,7 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         [Pure]
         public static AzureAksRemoveConnectorSettings ResetLocation(this AzureAksRemoveConnectorSettings toolSettings)
         {
@@ -3908,6 +4205,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.OsType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveConnectorSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveConnectorSettings SetSubscription(this AzureAksRemoveConnectorSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveConnectorSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveConnectorSettings ResetSubscription(this AzureAksRemoveConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4060,6 +4375,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksRemoveDevSpacesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings SetSubscription(this AzureAksRemoveDevSpacesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksRemoveDevSpacesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksRemoveDevSpacesSettings ResetSubscription(this AzureAksRemoveDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4275,6 +4608,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksScaleSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksScaleSettings SetSubscription(this AzureAksScaleSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksScaleSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksScaleSettings ResetSubscription(this AzureAksScaleSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksScaleSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -4406,6 +4757,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksShowSettings SetSubscription(this AzureAksShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksShowSettings ResetSubscription(this AzureAksShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4618,6 +4987,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksUpgradeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeSettings SetSubscription(this AzureAksUpgradeSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUpgradeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeSettings ResetSubscription(this AzureAksUpgradeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4923,6 +5310,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeConnectorSettings SetSubscription(this AzureAksUpgradeConnectorSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksUpgradeConnectorSettings ResetSubscription(this AzureAksUpgradeConnectorSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -5108,6 +5513,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksUseDevSpacesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings SetSubscription(this AzureAksUseDevSpacesSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksUseDevSpacesSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksUseDevSpacesSettings ResetSubscription(this AzureAksUseDevSpacesSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5368,6 +5791,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Updated = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureAksWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksWaitSettings SetSubscription(this AzureAksWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureAksWaitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureAksWaitSettings ResetSubscription(this AzureAksWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

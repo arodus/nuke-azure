@@ -1,4 +1,4 @@
-// Copyright 2018 Maintainers of NUKE.
+// Copyright 2019 Maintainers of NUKE.
 // Distributed under the MIT License.
 // https://github.com/nuke-build/nuke/blob/master/LICENSE
 
@@ -44,17 +44,17 @@ namespace Nuke.Azure
             return process.Output;
         }
         /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureReservationsCatalogShow(Configure<AzureReservationsCatalogShowSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureReservationsReservationOrderIdList(Configure<AzureReservationsReservationOrderIdListSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureReservationsCatalogShowSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderIdListSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
         /// <summary><p>Manage Azure Reservations.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureReservationsReservationOrderIdList(Configure<AzureReservationsReservationOrderIdListSettings> configurator = null)
+        public static IReadOnlyCollection<Output> AzureReservationsCatalogShow(Configure<AzureReservationsCatalogShowSettings> configurator = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureReservationsReservationOrderIdListSettings());
+            var toolSettings = configurator.InvokeSafe(new AzureReservationsCatalogShowSettings());
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -156,6 +156,44 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureReservationsReservationOrderIdListSettings
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureReservationsReservationOrderIdListSettings : ToolSettings
+    {
+        /// <summary><p>Path to the AzureReservations executable.</p></summary>
+        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
+        /// <summary><p>Id of the subscription to look up applied reservations.</p></summary>
+        public virtual string SubscriptionId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary><p>Show this help message and exit.</p></summary>
+        public virtual string Help { get; internal set; }
+        /// <summary><p>Output format.</p></summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        public virtual string Query { get; internal set; }
+        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("reservations reservation-order-id list")
+              .Add("--subscription-id {value}", SubscriptionId)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureReservationsCatalogShowSettings
     /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
     [PublicAPI]
@@ -169,8 +207,10 @@ namespace Nuke.Azure
         public virtual ReservationsCatalogShowReservedResourceType ReservedResourceType { get; internal set; }
         /// <summary><p>Id of the subscription to get the catalog for.</p></summary>
         public virtual string SubscriptionId { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
         public virtual string Location { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -188,41 +228,7 @@ namespace Nuke.Azure
               .Add("--reserved-resource-type {value}", ReservedResourceType)
               .Add("--subscription-id {value}", SubscriptionId)
               .Add("--location {value}", Location)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureReservationsReservationOrderIdListSettings
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureReservationsReservationOrderIdListSettings : ToolSettings
-    {
-        /// <summary><p>Path to the AzureReservations executable.</p></summary>
-        public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
-        /// <summary><p>Id of the subscription to look up applied reservations.</p></summary>
-        public virtual string SubscriptionId { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
-        public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("reservations reservation-order-id list")
-              .Add("--subscription-id {value}", SubscriptionId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -241,6 +247,8 @@ namespace Nuke.Azure
     {
         /// <summary><p>Path to the AzureReservations executable.</p></summary>
         public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -255,6 +263,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("reservations reservation-order list")
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -275,6 +284,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
         /// <summary><p>Id of reservation order to look up.</p></summary>
         public virtual string ReservationOrderId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -290,6 +301,7 @@ namespace Nuke.Azure
             arguments
               .Add("reservations reservation-order show")
               .Add("--reservation-order-id {value}", ReservationOrderId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -310,6 +322,8 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureReservationsTasks.AzureReservationsPath;
         /// <summary><p>Id of container reservation order.</p></summary>
         public virtual string ReservationOrderId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -325,6 +339,7 @@ namespace Nuke.Azure
             arguments
               .Add("reservations reservation list")
               .Add("--reservation-order-id {value}", ReservationOrderId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -347,6 +362,8 @@ namespace Nuke.Azure
         public virtual string ReservationId { get; internal set; }
         /// <summary><p>Order id of the reservation.</p></summary>
         public virtual string ReservationOrderId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -363,6 +380,7 @@ namespace Nuke.Azure
               .Add("reservations reservation list-history")
               .Add("--reservation-id {value}", ReservationId)
               .Add("--reservation-order-id {value}", ReservationOrderId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -387,6 +405,8 @@ namespace Nuke.Azure
         public virtual string ReservationId2 { get; internal set; }
         /// <summary><p>Reservation order id of the reservations to merge.</p></summary>
         public virtual string ReservationOrderId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -404,6 +424,7 @@ namespace Nuke.Azure
               .Add("--reservation-id-1 {value}", ReservationId1)
               .Add("--reservation-id-2 {value}", ReservationId2)
               .Add("--reservation-order-id {value}", ReservationOrderId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -426,6 +447,8 @@ namespace Nuke.Azure
         public virtual string ReservationId { get; internal set; }
         /// <summary><p>Order id of reservation to look up.</p></summary>
         public virtual string ReservationOrderId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -442,6 +465,7 @@ namespace Nuke.Azure
               .Add("reservations reservation show")
               .Add("--reservation-id {value}", ReservationId)
               .Add("--reservation-order-id {value}", ReservationOrderId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -468,6 +492,8 @@ namespace Nuke.Azure
         public virtual string ReservationId { get; internal set; }
         /// <summary><p>Reservation order id of the reservation to split.</p></summary>
         public virtual string ReservationOrderId { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -486,6 +512,7 @@ namespace Nuke.Azure
               .Add("--quantity-2 {value}", Quantity2)
               .Add("--reservation-id {value}", ReservationId)
               .Add("--reservation-order-id {value}", ReservationOrderId)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -514,6 +541,8 @@ namespace Nuke.Azure
         public virtual string AppliedScopes { get; internal set; }
         /// <summary><p>Type of the Instance Flexibility to update the reservation with.</p></summary>
         public virtual ReservationsReservationUpdateInstanceFlexibility InstanceFlexibility { get; internal set; }
+        /// <summary><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        public virtual string Subscription { get; internal set; }
         /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
         public virtual string Debug { get; internal set; }
         /// <summary><p>Show this help message and exit.</p></summary>
@@ -533,6 +562,7 @@ namespace Nuke.Azure
               .Add("--reservation-order-id {value}", ReservationOrderId)
               .Add("--applied-scopes {value}", AppliedScopes)
               .Add("--instance-flexibility {value}", InstanceFlexibility)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -640,158 +670,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureReservationsCatalogShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureReservationsCatalogShowSettingsExtensions
-    {
-        #region ReservedResourceType
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings, ReservationsCatalogShowReservedResourceType reservedResourceType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReservedResourceType = reservedResourceType;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReservedResourceType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SubscriptionId
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings, string subscriptionId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SubscriptionId = subscriptionId;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SubscriptionId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetLocation(this AzureReservationsCatalogShowSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetLocation(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetDebug(this AzureReservationsCatalogShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetDebug(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetHelp(this AzureReservationsCatalogShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetHelp(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetOutput(this AzureReservationsCatalogShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetOutput(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetQuery(this AzureReservationsCatalogShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetQuery(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings SetVerbose(this AzureReservationsCatalogShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
-        [Pure]
-        public static AzureReservationsCatalogShowSettings ResetVerbose(this AzureReservationsCatalogShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureReservationsReservationOrderIdListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
     [PublicAPI]
@@ -813,6 +691,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SubscriptionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderIdListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderIdListSettings SetSubscription(this AzureReservationsReservationOrderIdListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderIdListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderIdListSettings ResetSubscription(this AzureReservationsReservationOrderIdListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -908,12 +804,200 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureReservationsCatalogShowSettingsExtensions
+    /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureReservationsCatalogShowSettingsExtensions
+    {
+        #region ReservedResourceType
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings, ReservationsCatalogShowReservedResourceType reservedResourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReservedResourceType = reservedResourceType;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.ReservedResourceType"/>.</em></p><p>Type of the resource for which the skus should be provided.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetReservedResourceType(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReservedResourceType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SubscriptionId
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings, string subscriptionId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubscriptionId = subscriptionId;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.SubscriptionId"/>.</em></p><p>Id of the subscription to get the catalog for.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetSubscriptionId(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SubscriptionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetLocation(this AzureReservationsCatalogShowSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Location"/>.</em></p><p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetLocation(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetSubscription(this AzureReservationsCatalogShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetSubscription(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetDebug(this AzureReservationsCatalogShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetDebug(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetHelp(this AzureReservationsCatalogShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetHelp(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetOutput(this AzureReservationsCatalogShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetOutput(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetQuery(this AzureReservationsCatalogShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetQuery(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary><p><em>Sets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings SetVerbose(this AzureReservationsCatalogShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsCatalogShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        [Pure]
+        public static AzureReservationsCatalogShowSettings ResetVerbose(this AzureReservationsCatalogShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureReservationsReservationOrderListSettingsExtensions
     /// <summary><p>Used within <see cref="AzureReservationsTasks"/>.</p></summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureReservationsReservationOrderListSettingsExtensions
     {
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings SetSubscription(this AzureReservationsReservationOrderListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderListSettings ResetSubscription(this AzureReservationsReservationOrderListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1030,6 +1114,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings SetSubscription(this AzureReservationsReservationOrderShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationOrderShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationOrderShowSettings ResetSubscription(this AzureReservationsReservationOrderShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureReservationsReservationOrderShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1143,6 +1245,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ReservationOrderId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationListSettings SetSubscription(this AzureReservationsReservationListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationListSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationListSettings ResetSubscription(this AzureReservationsReservationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1277,6 +1397,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ReservationOrderId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationListHistorySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationListHistorySettings SetSubscription(this AzureReservationsReservationListHistorySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationListHistorySettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationListHistorySettings ResetSubscription(this AzureReservationsReservationListHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1432,6 +1570,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationMergeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationMergeSettings SetSubscription(this AzureReservationsReservationMergeSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationMergeSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationMergeSettings ResetSubscription(this AzureReservationsReservationMergeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureReservationsReservationMergeSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -1563,6 +1719,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ReservationOrderId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationShowSettings SetSubscription(this AzureReservationsReservationShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationShowSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationShowSettings ResetSubscription(this AzureReservationsReservationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1733,6 +1907,24 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ReservationOrderId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationSplitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationSplitSettings SetSubscription(this AzureReservationsReservationSplitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationSplitSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationSplitSettings ResetSubscription(this AzureReservationsReservationSplitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1924,6 +2116,24 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary><p><em>Sets <see cref="AzureReservationsReservationUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationUpdateSettings SetSubscription(this AzureReservationsReservationUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary><p><em>Resets <see cref="AzureReservationsReservationUpdateSettings.Subscription"/>.</em></p><p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p></summary>
+        [Pure]
+        public static AzureReservationsReservationUpdateSettings ResetSubscription(this AzureReservationsReservationUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
         /// <summary><p><em>Sets <see cref="AzureReservationsReservationUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
         [Pure]
@@ -2024,6 +2234,7 @@ namespace Nuke.Azure
     public partial class ReservationsCatalogShowReservedResourceType : Enumeration
     {
         public static ReservationsCatalogShowReservedResourceType cosmosdb = new ReservationsCatalogShowReservedResourceType { Value = "cosmosdb" };
+        public static ReservationsCatalogShowReservedResourceType redhat = new ReservationsCatalogShowReservedResourceType { Value = "redhat" };
         public static ReservationsCatalogShowReservedResourceType sqldatabases = new ReservationsCatalogShowReservedResourceType { Value = "sqldatabases" };
         public static ReservationsCatalogShowReservedResourceType suselinux = new ReservationsCatalogShowReservedResourceType { Value = "suselinux" };
         public static ReservationsCatalogShowReservedResourceType virtualmachines = new ReservationsCatalogShowReservedResourceType { Value = "virtualmachines" };

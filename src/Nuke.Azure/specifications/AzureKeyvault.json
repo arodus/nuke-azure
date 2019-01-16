@@ -1,22 +1,22 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/storage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/storage/sas-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/storage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/certificate/issuer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/certificate/contact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/certificate/pending.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/storage/sas-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/keyvault/certificate/issuer/admin.yml"
   ],
   "name": "AzureKeyvault",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest",
@@ -74,7 +74,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "NoSelfPerms",
@@ -105,6 +105,12 @@
             "type": "KeyvaultDefaultAction",
             "format": "--default-action {value}",
             "help": "Default action to apply when no rule matches."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -125,6 +131,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -163,6 +175,12 @@
             "type": "string",
             "format": "--upn {value}",
             "help": "Name of a user principal that will receive permissions."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -177,6 +195,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -184,7 +208,16 @@
     {
       "postfix": "ListDeleted",
       "definiteArgument": "keyvault list-deleted",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "Purge",
@@ -195,13 +228,19 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -215,7 +254,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
@@ -228,6 +267,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -294,6 +339,12 @@
             "format": "--storage-permissions {value}",
             "separator": " ",
             "help": "Space-separated list of storage permissions to assign."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -314,6 +365,12 @@
             "type": "string",
             "format": "--resource-group {value}",
             "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -400,6 +457,12 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -444,6 +507,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -470,6 +539,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -514,6 +589,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The certificate version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -528,6 +609,12 @@
             "type": "string",
             "format": "--scaffold {value}",
             "help": "Create a fully formed policy structure with default values."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -579,6 +666,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -605,6 +698,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -631,6 +730,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -657,6 +762,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -683,6 +794,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -709,6 +826,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -759,6 +882,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The certificate version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -791,6 +920,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The certificate version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -817,6 +952,1052 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretBackup",
+      "definiteArgument": "keyvault secret backup",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretDelete",
+      "definiteArgument": "keyvault secret delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretDownload",
+      "definiteArgument": "keyvault secret download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "File to receive the secret contents."
+          },
+          {
+            "name": "Encoding",
+            "type": "KeyvaultSecretEncoding",
+            "format": "--encoding {value}",
+            "help": "Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretList",
+      "definiteArgument": "keyvault secret list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretListDeleted",
+      "definiteArgument": "keyvault secret list-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretListVersions",
+      "definiteArgument": "keyvault secret list-versions",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretPurge",
+      "definiteArgument": "keyvault secret purge",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretRecover",
+      "definiteArgument": "keyvault secret recover",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretRestore",
+      "definiteArgument": "keyvault secret restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretSet",
+      "definiteArgument": "keyvault secret set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "help": "Description of the secret contents (e.g. password, connection string, etc)."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Create secret in disabled state."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Encoding",
+            "type": "KeyvaultSecretEncoding",
+            "format": "--encoding {value}",
+            "help": "Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Source file for secret. Use in conjunction with '--encoding'."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "help": "Plain text secret value. Cannot be used with '--file' or '--encoding'."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretSetAttributes",
+      "definiteArgument": "keyvault secret set-attributes",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ContentType",
+            "type": "string",
+            "format": "--content-type {value}",
+            "help": "Type of the secret value such as a password."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "help": "Enable the secret."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "NotBefore",
+            "type": "string",
+            "format": "--not-before {value}",
+            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretShow",
+      "definiteArgument": "keyvault secret show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "help": "The secret version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretShowDeleted",
+      "definiteArgument": "keyvault secret show-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the secret. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageAdd",
+      "definiteArgument": "keyvault storage add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActiveKeyName",
+            "type": "string",
+            "format": "--active-key-name {value}",
+            "help": "Current active storage account key name."
+          },
+          {
+            "name": "ResourceId",
+            "type": "string",
+            "format": "--resource-id {value}",
+            "help": "Storage account resource id."
+          },
+          {
+            "name": "AutoRegenerateKey",
+            "type": "bool",
+            "format": "--auto-regenerate-key",
+            "help": "Whether keyvault should manage the storage account for the user."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Add the storage account in a disabled state."
+          },
+          {
+            "name": "RegenerationPeriod",
+            "type": "string",
+            "format": "--regeneration-period {value}",
+            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageBackup",
+      "definiteArgument": "keyvault storage backup",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "help": "Local file path in which to store storage account backup."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageList",
+      "definiteArgument": "keyvault storage list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageListDeleted",
+      "definiteArgument": "keyvault storage list-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Maxresults",
+            "type": "int",
+            "format": "--maxresults {value}",
+            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StoragePurge",
+      "definiteArgument": "keyvault storage purge",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRecover",
+      "definiteArgument": "keyvault storage recover",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRegenerateKey",
+      "definiteArgument": "keyvault storage regenerate-key",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyName",
+            "type": "string",
+            "format": "--key-name {value}",
+            "help": "The storage account key name."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRemove",
+      "definiteArgument": "keyvault storage remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageRestore",
+      "definiteArgument": "keyvault storage restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilePath",
+            "type": "string",
+            "format": "--file-path {value}",
+            "help": ""
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageShow",
+      "definiteArgument": "keyvault storage show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageShowDeleted",
+      "definiteArgument": "keyvault storage show-deleted",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "StorageUpdate",
+      "definiteArgument": "keyvault storage update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActiveKeyName",
+            "type": "string",
+            "format": "--active-key-name {value}",
+            "help": "The current active storage account key name."
+          },
+          {
+            "name": "AutoRegenerateKey",
+            "type": "bool",
+            "format": "--auto-regenerate-key",
+            "help": "Whether keyvault should manage the storage account for the user."
+          },
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "help": "Add the storage account in a disabled state."
+          },
+          {
+            "name": "RegenerationPeriod",
+            "type": "string",
+            "format": "--regeneration-period {value}",
+            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleAdd",
+      "definiteArgument": "keyvault network-rule add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "help": "IPv4 address or CIDR range."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "Name of a virtual network."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleList",
+      "definiteArgument": "keyvault network-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleRemove",
+      "definiteArgument": "keyvault network-rule remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "help": "IPv4 address or CIDR range."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Proceed only if Key Vault belongs to the specified resource group."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "help": "Name of a virtual network."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -849,6 +2030,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -924,6 +2111,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -950,6 +2143,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1026,6 +2225,12 @@
             "format": "--pem-password {value}",
             "secret": true,
             "help": "Password of PEM file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1046,6 +2251,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1066,6 +2277,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1092,6 +2309,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1118,6 +2341,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1144,6 +2373,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1164,6 +2399,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1227,6 +2468,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The key version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1259,6 +2506,12 @@
             "type": "string",
             "format": "--version {value}",
             "help": "The key version. If omitted, uses the latest version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1285,944 +2538,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleAdd",
-      "definiteArgument": "keyvault network-rule add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "IpAddress",
-            "type": "string",
-            "format": "--ip-address {value}",
-            "help": "IPv4 address or CIDR range."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "Name of a virtual network."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleList",
-      "definiteArgument": "keyvault network-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "NetworkRuleRemove",
-      "definiteArgument": "keyvault network-rule remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the key vault."
-          },
-          {
-            "name": "IpAddress",
-            "type": "string",
-            "format": "--ip-address {value}",
-            "help": "IPv4 address or CIDR range."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Proceed only if Key Vault belongs to the specified resource group."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "help": "Name of a virtual network."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretBackup",
-      "definiteArgument": "keyvault secret backup",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretDelete",
-      "definiteArgument": "keyvault secret delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretDownload",
-      "definiteArgument": "keyvault secret download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "File to receive the secret contents."
-          },
-          {
-            "name": "Encoding",
-            "type": "KeyvaultSecretEncoding",
-            "format": "--encoding {value}",
-            "help": "Encoding of the destination file. By default, will look for the 'file-encoding' tag on the secret. Otherwise will assume 'utf-8'."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretList",
-      "definiteArgument": "keyvault secret list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretListDeleted",
-      "definiteArgument": "keyvault secret list-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretListVersions",
-      "definiteArgument": "keyvault secret list-versions",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified, the service will return up to 25 results."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretPurge",
-      "definiteArgument": "keyvault secret purge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretRecover",
-      "definiteArgument": "keyvault secret recover",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretRestore",
-      "definiteArgument": "keyvault secret restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretSet",
-      "definiteArgument": "keyvault secret set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "help": "Description of the secret contents (e.g. password, connection string, etc)."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Create secret in disabled state."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Encoding",
-            "type": "KeyvaultSecretEncoding",
-            "format": "--encoding {value}",
-            "help": "Source file encoding. The value is saved as a tag (`file-encoding=&amp;lt;val&amp;gt;`) and used during download to automatically encode the resulting file."
-          },
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "Source file for secret. Use in conjunction with '--encoding'."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "help": "Plain text secret value. Cannot be used with '--file' or '--encoding'."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretSetAttributes",
-      "definiteArgument": "keyvault secret set-attributes",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ContentType",
-            "type": "string",
-            "format": "--content-type {value}",
-            "help": "Type of the secret value such as a password."
-          },
-          {
-            "name": "Enabled",
-            "type": "bool",
-            "format": "--enabled",
-            "help": "Enable the secret."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "help": "Expiration UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "NotBefore",
-            "type": "string",
-            "format": "--not-before {value}",
-            "help": "Key not usable before the provided UTC datetime  (Y-m-d'T'H:M:S'Z')."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretShow",
-      "definiteArgument": "keyvault secret show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "help": "The secret version. If omitted, uses the latest version."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretShowDeleted",
-      "definiteArgument": "keyvault secret show-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "The recovery id of the secret.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the secret. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageAdd",
-      "definiteArgument": "keyvault storage add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ActiveKeyName",
-            "type": "string",
-            "format": "--active-key-name {value}",
-            "help": "Current active storage account key name."
-          },
-          {
-            "name": "ResourceId",
-            "type": "string",
-            "format": "--resource-id {value}",
-            "help": "Storage account resource id."
-          },
-          {
-            "name": "AutoRegenerateKey",
-            "type": "bool",
-            "format": "--auto-regenerate-key",
-            "help": "Whether keyvault should manage the storage account for the user."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Add the storage account in a disabled state."
-          },
-          {
-            "name": "RegenerationPeriod",
-            "type": "string",
-            "format": "--regeneration-period {value}",
-            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageBackup",
-      "definiteArgument": "keyvault storage backup",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "help": "Local file path in which to store storage account backup."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageList",
-      "definiteArgument": "keyvault storage list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageListDeleted",
-      "definiteArgument": "keyvault storage list-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Maxresults",
-            "type": "int",
-            "format": "--maxresults {value}",
-            "help": "Maximum number of results to return in a page. If not specified the service will return up to 25 results."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StoragePurge",
-      "definiteArgument": "keyvault storage purge",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRecover",
-      "definiteArgument": "keyvault storage recover",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRegenerateKey",
-      "definiteArgument": "keyvault storage regenerate-key",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "KeyName",
-            "type": "string",
-            "format": "--key-name {value}",
-            "help": "The storage account key name."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRemove",
-      "definiteArgument": "keyvault storage remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageRestore",
-      "definiteArgument": "keyvault storage restore",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilePath",
-            "type": "string",
-            "format": "--file-path {value}",
-            "help": ""
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageShow",
-      "definiteArgument": "keyvault storage show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageShowDeleted",
-      "definiteArgument": "keyvault storage show-deleted",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "StorageUpdate",
-      "definiteArgument": "keyvault storage update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ActiveKeyName",
-            "type": "string",
-            "format": "--active-key-name {value}",
-            "help": "The current active storage account key name."
-          },
-          {
-            "name": "AutoRegenerateKey",
-            "type": "bool",
-            "format": "--auto-regenerate-key",
-            "help": "Whether keyvault should manage the storage account for the user."
-          },
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "help": "Add the storage account in a disabled state."
-          },
-          {
-            "name": "RegenerationPeriod",
-            "type": "string",
-            "format": "--regeneration-period {value}",
-            "help": "The key regeneration time duration specified in ISO-8601 format, such as \"P30D\" for rotation every 30 days."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "help": "Id of the storage account.  If specified all other 'Id' arguments should be omitted."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name to identify the storage account in the vault. Required if --id is not specified."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault. Required if --id is not specified."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificateContactAdd",
-      "definiteArgument": "keyvault certificate contact add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Email",
-            "type": "string",
-            "format": "--email {value}",
-            "help": "Contact e-mail address. Must be unique."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Full contact name."
           },
-          {
-            "name": "Phone",
-            "type": "string",
-            "format": "--phone {value}",
-            "help": "Contact phone number."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificateContactDelete",
-      "definiteArgument": "keyvault certificate contact delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Email",
-            "type": "string",
-            "format": "--email {value}",
-            "help": "Contact e-mail address. Must be unique."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CertificateContactList",
-      "definiteArgument": "keyvault certificate contact list",
-      "settingsClass": {
-        "properties": [
           {
-            "name": "VaultName",
+            "name": "Subscription",
             "type": "string",
-            "format": "--vault-name {value}",
-            "help": "Name of the key vault."
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2274,6 +2595,12 @@
             "type": "string",
             "format": "--organization-id {value}",
             "help": "The organization id."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2294,6 +2621,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2314,6 +2647,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2334,6 +2673,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2385,6 +2730,96 @@
             "type": "string",
             "format": "--organization-id {value}",
             "help": "The organization id."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CertificateContactAdd",
+      "definiteArgument": "keyvault certificate contact add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Email",
+            "type": "string",
+            "format": "--email {value}",
+            "help": "Contact e-mail address. Must be unique."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "help": "Full contact name."
+          },
+          {
+            "name": "Phone",
+            "type": "string",
+            "format": "--phone {value}",
+            "help": "Contact phone number."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CertificateContactDelete",
+      "definiteArgument": "keyvault certificate contact delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Email",
+            "type": "string",
+            "format": "--email {value}",
+            "help": "Contact e-mail address. Must be unique."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CertificateContactList",
+      "definiteArgument": "keyvault certificate contact list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2405,6 +2840,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2455,6 +2896,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2475,6 +2922,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2531,6 +2984,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2563,6 +3022,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2589,6 +3054,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2615,6 +3086,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2641,6 +3118,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2673,6 +3156,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2699,6 +3188,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2761,6 +3256,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault. Required if --id is not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2805,6 +3306,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2831,6 +3338,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -2851,6 +3364,12 @@
             "type": "string",
             "format": "--vault-name {value}",
             "help": "Name of the key vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

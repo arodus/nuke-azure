@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
   "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
+    "Copyright Sebastian Karasek, Matthias Koch 2019.",
     "Distributed under the MIT License.",
     "https://github.com/nuke-build/azure/blob/master/LICENSE"
   ],
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource/link.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/resource.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/resource/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b804ee0/latest/docs-ref-autogen/resource/link.yml"
   ],
   "name": "AzureResource",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest",
@@ -42,7 +42,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "ApiVersion",
@@ -79,6 +79,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -130,6 +136,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -193,6 +205,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -206,7 +224,7 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
@@ -237,6 +255,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -263,6 +287,12 @@
             "type": "string",
             "format": "--destination-subscription-id {value}",
             "help": "The destination subscription identifier."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -320,6 +350,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -377,6 +413,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -458,106 +500,117 @@
             "type": "string",
             "format": "--set {value}",
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "LinkCreate",
-      "definiteArgument": "resource link create",
+      "postfix": "Wait",
+      "definiteArgument": "resource wait",
       "settingsClass": {
         "properties": [
           {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": ""
+            "name": "IncludeResponseBody",
+            "type": "bool",
+            "format": "--include-response-body",
+            "help": "Use if the default command output doesn't capture all of the property data."
           },
           {
-            "name": "TargetId",
+            "name": "ApiVersion",
             "type": "string",
-            "format": "--target-id {value}",
-            "help": "The id of the resource link target."
+            "format": "--api-version {value}",
+            "help": "The api version of the resource (omit for latest)."
           },
           {
-            "name": "Notes",
-            "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes for this link."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkDelete",
-      "definiteArgument": "resource link delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": "The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkList",
-      "definiteArgument": "resource link list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FilterString",
-            "type": "string",
-            "format": "--filter-string {value}",
-            "help": "A filter for restricting the results."
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
-            "name": "Scope",
+            "name": "Name",
             "type": "string",
-            "format": "--scope {value}",
-            "help": "The scope for the links."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkShow",
-      "definiteArgument": "resource link show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": "The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LinkUpdate",
-      "definiteArgument": "resource link update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "LinkId",
-            "type": "string",
-            "format": "--link-id {value}",
-            "help": ""
+            "format": "--name {value}",
+            "help": "The resource name. (Ex: myC)."
           },
           {
-            "name": "Notes",
+            "name": "Namespace",
             "type": "string",
-            "format": "--notes {value}",
-            "help": "Notes for this link."
+            "format": "--namespace {value}",
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
-            "name": "TargetId",
+            "name": "Parent",
             "type": "string",
-            "format": "--target-id {value}",
-            "help": "The id of the resource link target."
+            "format": "--parent {value}",
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -614,6 +667,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -665,6 +724,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -709,6 +774,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -760,6 +831,12 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -823,6 +900,142 @@
             "type": "string",
             "format": "--resource-type {value}",
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkCreate",
+      "definiteArgument": "resource link create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": ""
+          },
+          {
+            "name": "TargetId",
+            "type": "string",
+            "format": "--target-id {value}",
+            "help": "The id of the resource link target."
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes for this link."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkDelete",
+      "definiteArgument": "resource link delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": "The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkList",
+      "definiteArgument": "resource link list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FilterString",
+            "type": "string",
+            "format": "--filter-string {value}",
+            "help": "A filter for restricting the results."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "help": "The scope for the links."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkShow",
+      "definiteArgument": "resource link show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": "The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LinkUpdate",
+      "definiteArgument": "resource link update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkId",
+            "type": "string",
+            "format": "--link-id {value}",
+            "help": ""
+          },
+          {
+            "name": "Notes",
+            "type": "string",
+            "format": "--notes {value}",
+            "help": "Notes for this link."
+          },
+          {
+            "name": "TargetId",
+            "type": "string",
+            "format": "--target-id {value}",
+            "help": "The id of the resource link target."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
