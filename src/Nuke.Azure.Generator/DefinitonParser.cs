@@ -127,12 +127,6 @@ namespace Nuke.Azure.Generator
                        {
                            Name = name,
                            PathExecutable = "az",
-                           License = new[]
-                                     {
-                                         $"Copyright Sebastian Karasek, Matthias Koch {DateTime.Now.Year}.",
-                                         "Distributed under the MIT License.",
-                                         "https://github.com/nuke-build/azure/blob/master/LICENSE"
-                                     },
                            References = new HashSet<string>(_items.Select(x => x.RawUrl)).ToList(),
                            Help = help,
                            OfficialUrl = GetOfficialUrl()
