@@ -1,14 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/acs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/acs/dcos.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/acs/kubernetes.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acs/dcos.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acs/kubernetes.yml"
   ],
   "name": "AzureAcs",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acs?view=azure-cli-latest",
@@ -24,25 +19,36 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
-            "help": ""
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "DisableBrowser",
             "type": "string",
             "format": "--disable-browser {value}",
+            "secret": false,
             "help": "Do not open browser after opening a proxy to the cluster web user interface."
           },
           {
             "name": "SshKeyFile",
             "type": "string",
             "format": "--ssh-key-file {value}",
+            "secret": false,
             "help": "If set a path to an SSH key to use, only applies to DCOS."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -56,12 +62,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -75,54 +83,63 @@
             "name": "AdminUsername",
             "type": "string",
             "format": "--admin-username {value}",
+            "secret": false,
             "help": "User name for the Linux Virtual Machines."
           },
           {
             "name": "AgentCount",
             "type": "string",
             "format": "--agent-count {value}",
-            "help": ""
+            "secret": false,
+            "help": "Set the default number of agents for the agent pools."
           },
           {
             "name": "AgentOsdiskSize",
             "type": "string",
             "format": "--agent-osdisk-size {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set the default disk size for agent pools vms. Unit in GB. Default: corresponding vmsize disk size."
           },
           {
             "name": "AgentPorts",
             "type": "string",
             "format": "--agent-ports {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set the default ports exposed on the agent pools. Only usable for non-Kubernetes. Default: 8080,4000,80."
           },
           {
             "name": "AgentProfiles",
             "type": "string",
             "format": "--agent-profiles {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The file or dictionary representation of the agent profiles. Note it will override any agent settings once set."
           },
           {
             "name": "AgentStorageProfile",
             "type": "AcsCreateAgentStorageProfile",
             "format": "--agent-storage-profile {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set default storage profile for agent pools. Default: varies based on Orchestrator."
           },
           {
             "name": "AgentVmSize",
             "type": "string",
             "format": "--agent-vm-size {value}",
+            "secret": false,
             "help": "Set the default size for agent pools vms."
           },
           {
             "name": "AgentVnetSubnetId",
             "type": "string",
             "format": "--agent-vnet-subnet-id {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Set the default custom vnet subnet id for agent pools. Note agent need to used the same vnet if master set. Default: \"\"."
           },
           {
             "name": "ApiVersion",
             "type": "string",
             "format": "--api-version {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Use API version of ACS to perform az acs operations. Available options: 2017-01-31, 2017-07-01. Default: the latest version for the location."
           },
           {
@@ -130,115 +147,140 @@
             "type": "string",
             "format": "--client-secret {value}",
             "secret": true,
-            "help": ""
+            "help": "Secret associated with the service principal. This argument is required if `--service-principal` is specified."
           },
           {
             "name": "DnsPrefix",
             "type": "string",
             "format": "--dns-prefix {value}",
+            "secret": false,
             "help": "Sets the Domain name prefix for the cluster. The concatenation of the domain name and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address."
           },
           {
             "name": "GenerateSshKeys",
             "type": "string",
             "format": "--generate-ssh-keys {value}",
+            "secret": false,
             "help": "Generate SSH public and private key files if missing."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "MasterCount",
             "type": "string",
             "format": "--master-count {value}",
+            "secret": false,
             "help": "The number of masters for the cluster."
           },
           {
             "name": "MasterFirstConsecutiveStaticIp",
             "type": "string",
             "format": "--master-first-consecutive-static-ip {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The first consecutive ip used to specify static ip block."
           },
           {
             "name": "MasterOsdiskSize",
             "type": "string",
             "format": "--master-osdisk-size {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The disk size for master pool vms. Unit in GB. Default: corresponding vmsize disk size."
           },
           {
             "name": "MasterProfile",
             "type": "string",
             "format": "--master-profile {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The file or dictionary representation of the master profile. Note it will override any master settings once set."
           },
           {
             "name": "MasterStorageProfile",
             "type": "AcsCreateAgentStorageProfile",
             "format": "--master-storage-profile {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Default: varies based on Orchestrator."
           },
           {
             "name": "MasterVmSize",
             "type": "string",
             "format": "--master-vm-size {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2."
           },
           {
             "name": "MasterVnetSubnetId",
             "type": "string",
             "format": "--master-vnet-subnet-id {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. The custom vnet subnet id. Note agent need to used the same vnet if master set. Default: \"\"."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "OrchestratorType",
             "type": "AcsCreateOrchestratorType",
             "format": "--orchestrator-type {value}",
+            "secret": false,
             "help": "The type of orchestrator used to manage the applications on the cluster."
           },
           {
             "name": "OrchestratorVersion",
             "type": "string",
             "format": "--orchestrator-version {value}",
+            "secret": false,
             "help": "Feature in preview, only in canadacentral, canadaeast, centralindia, koreasouth, koreacentral, southindia, uksouth, ukwest, westcentralus, westindia, westus2. Use Orchestrator Version to specify the semantic version for your choice of orchestrator."
           },
           {
             "name": "ServicePrincipal",
             "type": "bool",
             "format": "--service-principal",
-            "help": ""
+            "secret": false,
+            "help": "Service principal used for authentication to Azure APIs."
           },
           {
             "name": "SshKeyValue",
             "type": "string",
             "format": "--ssh-key-value {value}",
+            "secret": false,
             "help": "Configure all linux machines with the SSH RSA public key string.  Your key should include three parts, for example 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "Validate",
             "type": "string",
             "format": "--validate {value}",
+            "secret": false,
             "help": "Generate and validate the ARM template without creating any resources."
           },
           {
             "name": "Windows",
             "type": "bool",
             "format": "--windows",
+            "secret": false,
             "help": "If true, set the default osType of agent pools to be Windows."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -252,19 +294,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Yes",
             "type": "string",
             "format": "--yes {value}",
+            "secret": false,
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -278,7 +330,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -286,7 +346,17 @@
     {
       "postfix": "ListLocations",
       "definiteArgument": "acs list-locations",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "Scale",
@@ -297,19 +367,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "NewAgentCount",
             "type": "string",
             "format": "--new-agent-count {value}",
-            "help": ""
+            "secret": false,
+            "help": "The number of agents for the container service."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -323,13 +403,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -343,55 +432,71 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Created",
             "type": "string",
             "format": "--created {value}",
+            "secret": false,
             "help": "Wait until created with 'provisioningState' at 'Succeeded'."
           },
           {
             "name": "Custom",
             "type": "string",
             "format": "--custom {value}",
+            "secret": false,
             "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
           },
           {
             "name": "Deleted",
             "type": "string",
             "format": "--deleted {value}",
+            "secret": false,
             "help": "Wait until deleted."
           },
           {
             "name": "Exists",
             "type": "string",
             "format": "--exists {value}",
+            "secret": false,
             "help": "Wait until the resource exists."
           },
           {
             "name": "Interval",
             "type": "string",
             "format": "--interval {value}",
+            "secret": false,
             "help": "Polling interval in seconds."
           },
           {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
+            "secret": false,
             "help": "Maximum wait in seconds."
           },
           {
             "name": "Updated",
             "type": "string",
             "format": "--updated {value}",
+            "secret": false,
             "help": "Wait until updated with provisioningState at 'Succeeded'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -405,25 +510,36 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
-            "help": ""
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "DisableBrowser",
             "type": "string",
             "format": "--disable-browser {value}",
+            "secret": false,
             "help": "Do not open browser after opening a proxy to the cluster web user interface."
           },
           {
             "name": "SshKeyFile",
             "type": "string",
             "format": "--ssh-key-file {value}",
+            "secret": false,
             "help": "Path to an SSH key file to use."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -437,13 +553,22 @@
             "name": "ClientVersion",
             "type": "string",
             "format": "--client-version {value}",
-            "help": ""
+            "secret": false,
+            "help": "Version of the client to install."
           },
           {
             "name": "InstallLocation",
             "type": "string",
             "format": "--install-location {value}",
-            "help": ""
+            "secret": false,
+            "help": "Path at which to install DC/OS."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -457,25 +582,36 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
-            "help": ""
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "DisableBrowser",
             "type": "string",
             "format": "--disable-browser {value}",
+            "secret": false,
             "help": "Do not open browser after opening a proxy to the cluster web user interface."
           },
           {
             "name": "SshKeyFile",
             "type": "string",
             "format": "--ssh-key-file {value}",
-            "help": ""
+            "secret": false,
+            "help": "Path to an SSH key file to use."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -489,31 +625,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the container service. You can configure the default using `az configure --defaults acs=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "File",
             "type": "string",
             "format": "--file {value}",
+            "secret": false,
             "help": "Where to install the kubectl config file."
           },
           {
             "name": "OverwriteExisting",
             "type": "string",
             "format": "--overwrite-existing {value}",
-            "help": ""
+            "secret": false,
+            "help": "If specified, overwrite any existing credentials."
           },
           {
             "name": "SshKeyFile",
             "type": "string",
             "format": "--ssh-key-file {value}",
+            "secret": false,
             "help": "Path to an SSH key file to use."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -527,13 +675,22 @@
             "name": "ClientVersion",
             "type": "string",
             "format": "--client-version {value}",
-            "help": ""
+            "secret": false,
+            "help": "Version of the client to install."
           },
           {
             "name": "InstallLocation",
             "type": "string",
             "format": "--install-location {value}",
-            "help": ""
+            "secret": false,
+            "help": "Path at which to install DC/OS."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -544,30 +701,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],

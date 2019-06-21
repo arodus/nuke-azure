@@ -1,9 +1,5 @@
-// Copyright 2018 Maintainers of NUKE.
-// Distributed under the MIT License.
-// https://github.com/nuke-build/nuke/blob/master/LICENSE
-
-// Generated with Nuke.CodeGeneration, Version: 0.7.0 [CommitSha: 9d3d3d7e].
-// Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSignalr.json.
+// Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSignalr.json
+// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -15,6 +11,7 @@ using Nuke.Common.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
@@ -26,94 +23,410 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureSignalrTasks
     {
-        /// <summary><p>Path to the AzureSignalr executable.</p></summary>
-        public static string AzureSignalrPath => ToolPathResolver.GetPathExecutable("az");
-        /// <summary><p>Manage Azure SignalR Service.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSignalr(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
+        /// <summary>
+        ///   Path to the AzureSignalr executable.
+        /// </summary>
+        public static string AzureSignalrPath =>
+            ToolPathResolver.TryGetEnvironmentExecutable("AZURESIGNALR_EXE") ??
+            ToolPathResolver.GetPathExecutable("az");
+        public static Action<OutputType, string> AzureSignalrLogger { get; set; } = ProcessTasks.DefaultLogger;
+        /// <summary>
+        ///   Manage Azure SignalR Service.
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSignalr(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool? logOutput = null, bool? logInvocation = null, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureSignalrPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureSignalrPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, logInvocation, AzureSignalrLogger, outputFilter);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure SignalR Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSignalrCreate(Configure<AzureSignalrCreateSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSignalrCreate(AzureSignalrCreateSettings toolSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSignalrCreateSettings());
+            toolSettings = toolSettings ?? new AzureSignalrCreateSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure SignalR Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSignalrDelete(Configure<AzureSignalrDeleteSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureSignalrCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku</c> via <see cref="AzureSignalrCreateSettings.Sku"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureSignalrCreateSettings.Tags"/></li>
+        ///     <li><c>--unit-count</c> via <see cref="AzureSignalrCreateSettings.UnitCount"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSignalrCreate(Configure<AzureSignalrCreateSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSignalrDeleteSettings());
+            return AzureSignalrCreate(configurator(new AzureSignalrCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureSignalrCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku</c> via <see cref="AzureSignalrCreateSettings.Sku"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureSignalrCreateSettings.Tags"/></li>
+        ///     <li><c>--unit-count</c> via <see cref="AzureSignalrCreateSettings.UnitCount"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSignalrCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSignalrCreate(CombinatorialConfigure<AzureSignalrCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSignalrCreate, AzureSignalrLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSignalrDelete(AzureSignalrDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSignalrDeleteSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure SignalR Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSignalrList(Configure<AzureSignalrListSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSignalrDelete(Configure<AzureSignalrDeleteSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSignalrListSettings());
+            return AzureSignalrDelete(configurator(new AzureSignalrDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSignalrDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureSignalrDelete(CombinatorialConfigure<AzureSignalrDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSignalrDelete, AzureSignalrLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSignalrList(AzureSignalrListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSignalrListSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure SignalR Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSignalrShow(Configure<AzureSignalrShowSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSignalrList(Configure<AzureSignalrListSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSignalrShowSettings());
+            return AzureSignalrList(configurator(new AzureSignalrListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSignalrListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSignalrList(CombinatorialConfigure<AzureSignalrListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSignalrList, AzureSignalrLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSignalrShow(AzureSignalrShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSignalrShowSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure SignalR Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSignalrKeyList(Configure<AzureSignalrKeyListSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSignalrShow(Configure<AzureSignalrShowSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSignalrKeyListSettings());
+            return AzureSignalrShow(configurator(new AzureSignalrShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSignalrShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSignalrShow(CombinatorialConfigure<AzureSignalrShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSignalrShow, AzureSignalrLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSignalrKeyList(AzureSignalrKeyListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSignalrKeyListSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage Azure SignalR Service.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureSignalrKeyRenew(Configure<AzureSignalrKeyRenewSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrKeyListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrKeyListSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrKeyListSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrKeyListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrKeyListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrKeyListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrKeyListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrKeyListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSignalrKeyList(Configure<AzureSignalrKeyListSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureSignalrKeyRenewSettings());
+            return AzureSignalrKeyList(configurator(new AzureSignalrKeyListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrKeyListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrKeyListSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrKeyListSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrKeyListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrKeyListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrKeyListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrKeyListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrKeyListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSignalrKeyListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSignalrKeyList(CombinatorialConfigure<AzureSignalrKeyListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSignalrKeyList, AzureSignalrLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSignalrKeyRenew(AzureSignalrKeyRenewSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSignalrKeyRenewSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrKeyRenewSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrKeyRenewSettings.Help"/></li>
+        ///     <li><c>--key-type</c> via <see cref="AzureSignalrKeyRenewSettings.KeyType"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrKeyRenewSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrKeyRenewSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrKeyRenewSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrKeyRenewSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrKeyRenewSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrKeyRenewSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSignalrKeyRenew(Configure<AzureSignalrKeyRenewSettings> configurator)
+        {
+            return AzureSignalrKeyRenew(configurator(new AzureSignalrKeyRenewSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure SignalR Service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSignalrKeyRenewSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSignalrKeyRenewSettings.Help"/></li>
+        ///     <li><c>--key-type</c> via <see cref="AzureSignalrKeyRenewSettings.KeyType"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSignalrKeyRenewSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSignalrKeyRenewSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSignalrKeyRenewSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSignalrKeyRenewSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSignalrKeyRenewSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSignalrKeyRenewSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSignalrKeyRenewSettings Settings, IReadOnlyCollection<Output> Output)> AzureSignalrKeyRenew(CombinatorialConfigure<AzureSignalrKeyRenewSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSignalrKeyRenew, AzureSignalrLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureSignalrCreateSettings
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureSignalrCreateSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureSignalr executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureSignalr executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureSignalrTasks.AzureSignalrPath;
-        /// <summary><p>Name of signalr service.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureSignalrTasks.AzureSignalrLogger;
+        /// <summary>
+        ///   Name of signalr service.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>The sku name of the signalr service. E.g. Standard_S1.</p></summary>
+        /// <summary>
+        ///   The sku name of the signalr service. E.g. Standard_S1.
+        /// </summary>
         public virtual string Sku { get; internal set; }
-        /// <summary><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
+        /// </summary>
         public virtual string Location { get; internal set; }
-        /// <summary><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary>
+        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
         public virtual string Tags { get; internal set; }
-        /// <summary><p>The number of signalr service unit count.</p></summary>
+        /// <summary>
+        ///   The number of signalr service unit count.
+        /// </summary>
         public virtual string UnitCount { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
@@ -125,6 +438,7 @@ namespace Nuke.Azure
               .Add("--location {value}", Location)
               .Add("--tags {value}", Tags)
               .Add("--unit-count {value}", UnitCount)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -135,27 +449,50 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrDeleteSettings
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureSignalrDeleteSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureSignalr executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureSignalr executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureSignalrTasks.AzureSignalrPath;
-        /// <summary><p>Name of signalr service.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureSignalrTasks.AzureSignalrLogger;
+        /// <summary>
+        ///   Name of signalr service.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
@@ -163,6 +500,7 @@ namespace Nuke.Azure
               .Add("signalr delete")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -173,31 +511,53 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrListSettings
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureSignalrListSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureSignalr executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureSignalr executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureSignalrTasks.AzureSignalrPath;
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureSignalrTasks.AzureSignalrLogger;
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
               .Add("signalr list")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -208,27 +568,50 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrShowSettings
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureSignalrShowSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureSignalr executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureSignalr executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureSignalrTasks.AzureSignalrPath;
-        /// <summary><p>Name of signalr service.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureSignalrTasks.AzureSignalrLogger;
+        /// <summary>
+        ///   Name of signalr service.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
@@ -236,6 +619,7 @@ namespace Nuke.Azure
               .Add("signalr show")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -246,27 +630,50 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrKeyListSettings
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureSignalrKeyListSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureSignalr executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureSignalr executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureSignalrTasks.AzureSignalrPath;
-        /// <summary><p>Name of signalr service.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureSignalrTasks.AzureSignalrLogger;
+        /// <summary>
+        ///   Name of signalr service.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
@@ -274,6 +681,7 @@ namespace Nuke.Azure
               .Add("signalr key list")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -284,29 +692,54 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrKeyRenewSettings
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureSignalrKeyRenewSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureSignalr executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureSignalr executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureSignalrTasks.AzureSignalrPath;
-        /// <summary><p>The name of access key to regenerate.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureSignalrTasks.AzureSignalrLogger;
+        /// <summary>
+        ///   The name of access key to regenerate.
+        /// </summary>
         public virtual SignalrKeyRenewKeyType KeyType { get; internal set; }
-        /// <summary><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   Name of signalr service.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
@@ -315,6 +748,7 @@ namespace Nuke.Azure
               .Add("--key-type {value}", KeyType)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -325,13 +759,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrCreateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureSignalrCreateSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetName(this AzureSignalrCreateSettings toolSettings, string name)
         {
@@ -339,7 +778,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetName(this AzureSignalrCreateSettings toolSettings)
         {
@@ -349,7 +791,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetResourceGroup(this AzureSignalrCreateSettings toolSettings, string resourceGroup)
         {
@@ -357,7 +802,10 @@ namespace Nuke.Azure
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetResourceGroup(this AzureSignalrCreateSettings toolSettings)
         {
@@ -367,7 +815,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Sku
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Sku"/>.</em></p><p>The sku name of the signalr service. E.g. Standard_S1.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Sku"/></em></p>
+        ///   <p>The sku name of the signalr service. E.g. Standard_S1.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetSku(this AzureSignalrCreateSettings toolSettings, string sku)
         {
@@ -375,7 +826,10 @@ namespace Nuke.Azure
             toolSettings.Sku = sku;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Sku"/>.</em></p><p>The sku name of the signalr service. E.g. Standard_S1.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Sku"/></em></p>
+        ///   <p>The sku name of the signalr service. E.g. Standard_S1.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetSku(this AzureSignalrCreateSettings toolSettings)
         {
@@ -385,7 +839,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Location
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetLocation(this AzureSignalrCreateSettings toolSettings, string location)
         {
@@ -393,7 +850,10 @@ namespace Nuke.Azure
             toolSettings.Location = location;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Location"/>.</em></p><p>Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetLocation(this AzureSignalrCreateSettings toolSettings)
         {
@@ -403,7 +863,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Tags
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetTags(this AzureSignalrCreateSettings toolSettings, string tags)
         {
@@ -411,7 +874,10 @@ namespace Nuke.Azure
             toolSettings.Tags = tags;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Tags"/>.</em></p><p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetTags(this AzureSignalrCreateSettings toolSettings)
         {
@@ -421,7 +887,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region UnitCount
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.UnitCount"/>.</em></p><p>The number of signalr service unit count.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.UnitCount"/></em></p>
+        ///   <p>The number of signalr service unit count.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetUnitCount(this AzureSignalrCreateSettings toolSettings, string unitCount)
         {
@@ -429,7 +898,10 @@ namespace Nuke.Azure
             toolSettings.UnitCount = unitCount;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.UnitCount"/>.</em></p><p>The number of signalr service unit count.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.UnitCount"/></em></p>
+        ///   <p>The number of signalr service unit count.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetUnitCount(this AzureSignalrCreateSettings toolSettings)
         {
@@ -438,8 +910,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrCreateSettings SetSubscription(this AzureSignalrCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrCreateSettings ResetSubscription(this AzureSignalrCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetDebug(this AzureSignalrCreateSettings toolSettings, string debug)
         {
@@ -447,7 +946,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetDebug(this AzureSignalrCreateSettings toolSettings)
         {
@@ -457,7 +959,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetHelp(this AzureSignalrCreateSettings toolSettings, string help)
         {
@@ -465,7 +970,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetHelp(this AzureSignalrCreateSettings toolSettings)
         {
@@ -475,7 +983,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetOutput(this AzureSignalrCreateSettings toolSettings, AzureOutput output)
         {
@@ -483,7 +994,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetOutput(this AzureSignalrCreateSettings toolSettings)
         {
@@ -493,7 +1007,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetQuery(this AzureSignalrCreateSettings toolSettings, string query)
         {
@@ -501,7 +1018,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetQuery(this AzureSignalrCreateSettings toolSettings)
         {
@@ -511,7 +1031,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSignalrCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings SetVerbose(this AzureSignalrCreateSettings toolSettings, string verbose)
         {
@@ -519,7 +1042,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrCreateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrCreateSettings ResetVerbose(this AzureSignalrCreateSettings toolSettings)
         {
@@ -531,13 +1057,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrDeleteSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureSignalrDeleteSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSignalrDeleteSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings SetName(this AzureSignalrDeleteSettings toolSettings, string name)
         {
@@ -545,7 +1076,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrDeleteSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings ResetName(this AzureSignalrDeleteSettings toolSettings)
         {
@@ -555,7 +1089,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSignalrDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings SetResourceGroup(this AzureSignalrDeleteSettings toolSettings, string resourceGroup)
         {
@@ -563,7 +1100,10 @@ namespace Nuke.Azure
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrDeleteSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings ResetResourceGroup(this AzureSignalrDeleteSettings toolSettings)
         {
@@ -572,8 +1112,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrDeleteSettings SetSubscription(this AzureSignalrDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrDeleteSettings ResetSubscription(this AzureSignalrDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSignalrDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings SetDebug(this AzureSignalrDeleteSettings toolSettings, string debug)
         {
@@ -581,7 +1148,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrDeleteSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings ResetDebug(this AzureSignalrDeleteSettings toolSettings)
         {
@@ -591,7 +1161,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSignalrDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings SetHelp(this AzureSignalrDeleteSettings toolSettings, string help)
         {
@@ -599,7 +1172,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrDeleteSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings ResetHelp(this AzureSignalrDeleteSettings toolSettings)
         {
@@ -609,7 +1185,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSignalrDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings SetOutput(this AzureSignalrDeleteSettings toolSettings, AzureOutput output)
         {
@@ -617,7 +1196,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrDeleteSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings ResetOutput(this AzureSignalrDeleteSettings toolSettings)
         {
@@ -627,7 +1209,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSignalrDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings SetQuery(this AzureSignalrDeleteSettings toolSettings, string query)
         {
@@ -635,7 +1220,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrDeleteSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings ResetQuery(this AzureSignalrDeleteSettings toolSettings)
         {
@@ -645,7 +1233,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSignalrDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings SetVerbose(this AzureSignalrDeleteSettings toolSettings, string verbose)
         {
@@ -653,7 +1244,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrDeleteSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrDeleteSettings ResetVerbose(this AzureSignalrDeleteSettings toolSettings)
         {
@@ -665,13 +1259,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureSignalrListSettingsExtensions
     {
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSignalrListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings SetResourceGroup(this AzureSignalrListSettings toolSettings, string resourceGroup)
         {
@@ -679,7 +1278,10 @@ namespace Nuke.Azure
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings ResetResourceGroup(this AzureSignalrListSettings toolSettings)
         {
@@ -688,8 +1290,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrListSettings SetSubscription(this AzureSignalrListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrListSettings ResetSubscription(this AzureSignalrListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSignalrListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings SetDebug(this AzureSignalrListSettings toolSettings, string debug)
         {
@@ -697,7 +1326,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings ResetDebug(this AzureSignalrListSettings toolSettings)
         {
@@ -707,7 +1339,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSignalrListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings SetHelp(this AzureSignalrListSettings toolSettings, string help)
         {
@@ -715,7 +1350,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings ResetHelp(this AzureSignalrListSettings toolSettings)
         {
@@ -725,7 +1363,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSignalrListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings SetOutput(this AzureSignalrListSettings toolSettings, AzureOutput output)
         {
@@ -733,7 +1374,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings ResetOutput(this AzureSignalrListSettings toolSettings)
         {
@@ -743,7 +1387,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSignalrListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings SetQuery(this AzureSignalrListSettings toolSettings, string query)
         {
@@ -751,7 +1398,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings ResetQuery(this AzureSignalrListSettings toolSettings)
         {
@@ -761,7 +1411,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSignalrListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings SetVerbose(this AzureSignalrListSettings toolSettings, string verbose)
         {
@@ -769,7 +1422,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrListSettings ResetVerbose(this AzureSignalrListSettings toolSettings)
         {
@@ -781,13 +1437,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureSignalrShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSignalrShowSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings SetName(this AzureSignalrShowSettings toolSettings, string name)
         {
@@ -795,7 +1456,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrShowSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings ResetName(this AzureSignalrShowSettings toolSettings)
         {
@@ -805,7 +1469,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSignalrShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings SetResourceGroup(this AzureSignalrShowSettings toolSettings, string resourceGroup)
         {
@@ -813,7 +1480,10 @@ namespace Nuke.Azure
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrShowSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings ResetResourceGroup(this AzureSignalrShowSettings toolSettings)
         {
@@ -822,8 +1492,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrShowSettings SetSubscription(this AzureSignalrShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrShowSettings ResetSubscription(this AzureSignalrShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSignalrShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings SetDebug(this AzureSignalrShowSettings toolSettings, string debug)
         {
@@ -831,7 +1528,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings ResetDebug(this AzureSignalrShowSettings toolSettings)
         {
@@ -841,7 +1541,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSignalrShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings SetHelp(this AzureSignalrShowSettings toolSettings, string help)
         {
@@ -849,7 +1552,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings ResetHelp(this AzureSignalrShowSettings toolSettings)
         {
@@ -859,7 +1565,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSignalrShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings SetOutput(this AzureSignalrShowSettings toolSettings, AzureOutput output)
         {
@@ -867,7 +1576,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings ResetOutput(this AzureSignalrShowSettings toolSettings)
         {
@@ -877,7 +1589,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSignalrShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings SetQuery(this AzureSignalrShowSettings toolSettings, string query)
         {
@@ -885,7 +1600,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings ResetQuery(this AzureSignalrShowSettings toolSettings)
         {
@@ -895,7 +1613,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSignalrShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings SetVerbose(this AzureSignalrShowSettings toolSettings, string verbose)
         {
@@ -903,7 +1624,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrShowSettings ResetVerbose(this AzureSignalrShowSettings toolSettings)
         {
@@ -915,13 +1639,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrKeyListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureSignalrKeyListSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyListSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings SetName(this AzureSignalrKeyListSettings toolSettings, string name)
         {
@@ -929,7 +1658,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyListSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings ResetName(this AzureSignalrKeyListSettings toolSettings)
         {
@@ -939,7 +1671,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings SetResourceGroup(this AzureSignalrKeyListSettings toolSettings, string resourceGroup)
         {
@@ -947,7 +1682,10 @@ namespace Nuke.Azure
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyListSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings ResetResourceGroup(this AzureSignalrKeyListSettings toolSettings)
         {
@@ -956,8 +1694,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrKeyListSettings SetSubscription(this AzureSignalrKeyListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrKeyListSettings ResetSubscription(this AzureSignalrKeyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings SetDebug(this AzureSignalrKeyListSettings toolSettings, string debug)
         {
@@ -965,7 +1730,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings ResetDebug(this AzureSignalrKeyListSettings toolSettings)
         {
@@ -975,7 +1743,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings SetHelp(this AzureSignalrKeyListSettings toolSettings, string help)
         {
@@ -983,7 +1754,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings ResetHelp(this AzureSignalrKeyListSettings toolSettings)
         {
@@ -993,7 +1767,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings SetOutput(this AzureSignalrKeyListSettings toolSettings, AzureOutput output)
         {
@@ -1001,7 +1778,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings ResetOutput(this AzureSignalrKeyListSettings toolSettings)
         {
@@ -1011,7 +1791,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings SetQuery(this AzureSignalrKeyListSettings toolSettings, string query)
         {
@@ -1019,7 +1802,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings ResetQuery(this AzureSignalrKeyListSettings toolSettings)
         {
@@ -1029,7 +1815,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings SetVerbose(this AzureSignalrKeyListSettings toolSettings, string verbose)
         {
@@ -1037,7 +1826,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyListSettings ResetVerbose(this AzureSignalrKeyListSettings toolSettings)
         {
@@ -1049,13 +1841,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureSignalrKeyRenewSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureSignalrKeyRenewSettingsExtensions
     {
         #region KeyType
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.KeyType"/>.</em></p><p>The name of access key to regenerate.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.KeyType"/></em></p>
+        ///   <p>The name of access key to regenerate.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetKeyType(this AzureSignalrKeyRenewSettings toolSettings, SignalrKeyRenewKeyType keyType)
         {
@@ -1063,7 +1860,10 @@ namespace Nuke.Azure
             toolSettings.KeyType = keyType;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.KeyType"/>.</em></p><p>The name of access key to regenerate.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.KeyType"/></em></p>
+        ///   <p>The name of access key to regenerate.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetKeyType(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1073,7 +1873,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetName(this AzureSignalrKeyRenewSettings toolSettings, string name)
         {
@@ -1081,7 +1884,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Name"/>.</em></p><p>Name of signalr service.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Name"/></em></p>
+        ///   <p>Name of signalr service.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetName(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1091,7 +1897,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region ResourceGroup
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetResourceGroup(this AzureSignalrKeyRenewSettings toolSettings, string resourceGroup)
         {
@@ -1099,7 +1908,10 @@ namespace Nuke.Azure
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.ResourceGroup"/>.</em></p><p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetResourceGroup(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1108,8 +1920,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrKeyRenewSettings SetSubscription(this AzureSignalrKeyRenewSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSignalrKeyRenewSettings ResetSubscription(this AzureSignalrKeyRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetDebug(this AzureSignalrKeyRenewSettings toolSettings, string debug)
         {
@@ -1117,7 +1956,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetDebug(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1127,7 +1969,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetHelp(this AzureSignalrKeyRenewSettings toolSettings, string help)
         {
@@ -1135,7 +1980,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetHelp(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1145,7 +1993,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetOutput(this AzureSignalrKeyRenewSettings toolSettings, AzureOutput output)
         {
@@ -1153,7 +2004,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetOutput(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1163,7 +2017,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetQuery(this AzureSignalrKeyRenewSettings toolSettings, string query)
         {
@@ -1171,7 +2028,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetQuery(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1181,7 +2041,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSignalrKeyRenewSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings SetVerbose(this AzureSignalrKeyRenewSettings toolSettings, string verbose)
         {
@@ -1189,7 +2052,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSignalrKeyRenewSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureSignalrKeyRenewSettings ResetVerbose(this AzureSignalrKeyRenewSettings toolSettings)
         {
@@ -1201,10 +2067,13 @@ namespace Nuke.Azure
     }
     #endregion
     #region SignalrKeyRenewKeyType
-    /// <summary><p>Used within <see cref="AzureSignalrTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureSignalrTasks"/>.
+    /// </summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
+    [TypeConverter(typeof(TypeConverter<SignalrKeyRenewKeyType>))]
     public partial class SignalrKeyRenewKeyType : Enumeration
     {
         public static SignalrKeyRenewKeyType primary = new SignalrKeyRenewKeyType { Value = "primary" };

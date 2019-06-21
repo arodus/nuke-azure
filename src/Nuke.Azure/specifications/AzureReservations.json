@@ -1,16 +1,11 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/catalog.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation-order.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reservations/reservation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/reservations.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/reservations/catalog.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/reservations/reservation-order-id.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/reservations/reservation-order.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/reservations/reservation.yml"
   ],
   "name": "AzureReservations",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reservations?view=azure-cli-latest",
@@ -31,19 +26,29 @@
             "name": "ReservedResourceType",
             "type": "ReservationsCatalogShowReservedResourceType",
             "format": "--reserved-resource-type {value}",
+            "secret": false,
             "help": "Type of the resource for which the skus should be provided."
           },
           {
             "name": "SubscriptionId",
             "type": "string",
             "format": "--subscription-id {value}",
+            "secret": false,
             "help": "Id of the subscription to get the catalog for."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -57,7 +62,15 @@
             "name": "SubscriptionId",
             "type": "string",
             "format": "--subscription-id {value}",
+            "secret": false,
             "help": "Id of the subscription to look up applied reservations."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -65,7 +78,17 @@
     {
       "postfix": "ReservationOrderList",
       "definiteArgument": "reservations reservation-order list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "ReservationOrderShow",
@@ -76,7 +99,15 @@
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Id of reservation order to look up."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -90,7 +121,15 @@
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Id of container reservation order."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -104,13 +143,22 @@
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
+            "secret": false,
             "help": "Reservation id of the reservation."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Order id of the reservation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -124,19 +172,29 @@
             "name": "ReservationId1",
             "type": "string",
             "format": "--reservation-id-1 {value}",
+            "secret": false,
             "help": "Id of the first reservation to merge."
           },
           {
             "name": "ReservationId2",
             "type": "string",
             "format": "--reservation-id-2 {value}",
+            "secret": false,
             "help": "Id of the second reservation to merge."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Reservation order id of the reservations to merge."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -150,13 +208,22 @@
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
+            "secret": false,
             "help": "Reservation id of reservation to look up."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Order id of reservation to look up."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -170,25 +237,36 @@
             "name": "Quantity1",
             "type": "string",
             "format": "--quantity-1 {value}",
+            "secret": false,
             "help": "Quantity of the first reservation that will be created from split operation."
           },
           {
             "name": "Quantity2",
             "type": "string",
             "format": "--quantity-2 {value}",
+            "secret": false,
             "help": "Quantity of the second reservation that will be created from split operation."
           },
           {
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
+            "secret": false,
             "help": "Reservation id of the reservation to split."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Reservation order id of the reservation to split."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -202,31 +280,43 @@
             "name": "AppliedScopeType",
             "type": "ReservationsReservationUpdateAppliedScopeType",
             "format": "--applied-scope-type {value}",
+            "secret": false,
             "help": "Type of the Applied Scope to update the reservation with."
           },
           {
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
+            "secret": false,
             "help": "Id of the reservation to update."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Reservation order id of the reservation to update."
           },
           {
             "name": "AppliedScopes",
             "type": "string",
             "format": "--applied-scopes {value}",
+            "secret": false,
             "help": "Subscription that the benefit will be applied. Do not specify if AppliedScopeType is Shared."
           },
           {
             "name": "InstanceFlexibility",
             "type": "ReservationsReservationUpdateInstanceFlexibility",
             "format": "--instance-flexibility {value}",
+            "secret": false,
             "help": "Type of the Instance Flexibility to update the reservation with."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -237,30 +327,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -269,6 +364,7 @@
       "name": "ReservationsCatalogShowReservedResourceType",
       "values": [
         "cosmosdb",
+        "redhat",
         "sqldatabases",
         "suselinux",
         "virtualmachines"

@@ -1,26 +1,242 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/event-subscription.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/topic-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/topic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventgrid/topic/key.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/domain.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/event-subscription.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/topic-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/topic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/domain/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/domain/topic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/topic/key.yml"
   ],
   "name": "AzureEventgrid",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest",
-  "help": "Manage Azure Event Grid topics and subscriptions.",
+  "help": "Manage Azure Event Grid topics, event subscriptions, domains and domain topics.",
   "pathExecutable": "az",
   "tasks": [
     {
       "postfix": "",
       "definiteArgument": "eventgrid",
       "settingsClass": {}
+    },
+    {
+      "postfix": "DomainCreate",
+      "definiteArgument": "eventgrid domain create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainDelete",
+      "definiteArgument": "eventgrid domain delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainList",
+      "definiteArgument": "eventgrid domain list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "OdataQuery",
+            "type": "string",
+            "format": "--odata-query {value}",
+            "secret": false,
+            "help": "The OData query used for filtering the list results. Filtering is currently allowed on the Name property only. The supported operations include: CONTAINS, eq (for equal), ne (for not equal), AND, OR and NOT."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainShow",
+      "definiteArgument": "eventgrid domain show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainUpdate",
+      "definiteArgument": "eventgrid domain update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
     },
     {
       "postfix": "EventSubscriptionCreate",
@@ -31,67 +247,127 @@
             "name": "Endpoint",
             "type": "string",
             "format": "--endpoint {value}",
-            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For eventhub endpoint type, this should be the Azure ResourceID of the event hub."
+            "secret": false,
+            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For other endpoint types, this should be the Azure resource identifier of the endpoint."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "Name of the new event subscription."
+            "secret": false,
+            "help": "Name of the event subscription."
+          },
+          {
+            "name": "AdvancedFilter",
+            "type": "string",
+            "format": "--advanced-filter {value}",
+            "secret": false,
+            "help": "An advanced filter enables filtering of events based on a specific event property."
+          },
+          {
+            "name": "DeadletterEndpoint",
+            "type": "string",
+            "format": "--deadletter-endpoint {value}",
+            "secret": false,
+            "help": "The Azure resource ID of an Azure Storage blob container destination where EventGrid should deadletter undeliverable events for this event subscription."
           },
           {
             "name": "EndpointType",
             "type": "EventgridEventSubscriptionEndpointType",
             "format": "--endpoint-type {value}",
-            "help": ""
+            "secret": false,
+            "help": "The type of the destination endpoint."
+          },
+          {
+            "name": "EventTtl",
+            "type": "string",
+            "format": "--event-ttl {value}",
+            "secret": false,
+            "help": "Event time to live (in minutes). Must be a number between 1 and 1440."
+          },
+          {
+            "name": "ExpirationDate",
+            "type": "string",
+            "format": "--expiration-date {value}",
+            "secret": false,
+            "help": "Date or datetime (in UTC, e.g. '2018-11-30T11:59:59+00:00' or '2018-11-30') after which the event subscription would expire. By default, there is no expiration for the event subscription."
           },
           {
             "name": "IncludedEventTypes",
             "type": "string",
             "format": "--included-event-types {value}",
-            "help": "A space-separated list of event types. To subscribe to all event types, the string \"All\" should be specified."
+            "secret": false,
+            "help": "A space-separated list of event types (e.g., Microsoft.Storage.BlobCreated Microsoft.Storage.BlobDeleted). To subscribe to all default event types, do not specify this argument. For event grid topics, event types are customer defined. For Azure events, e.g., Storage Accounts, IoT Hub, etc., you can query their event types using this CLI command 'az eventgrid topic-type list-event-types'."
           },
           {
             "name": "Labels",
             "type": "string",
             "format": "--labels {value}",
+            "secret": false,
             "help": "A space-separated list of labels to associate with this event subscription."
+          },
+          {
+            "name": "MaxDeliveryAttempts",
+            "type": "int",
+            "format": "--max-delivery-attempts {value}",
+            "secret": false,
+            "help": "Maximum number of delivery attempts. Must be a number between 1 and 30."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceId",
             "type": "string",
             "format": "--resource-id {value}",
+            "secret": false,
+            "help": "Fully qualified identifier of the Azure resource."
+          },
+          {
+            "name": "SourceResourceId",
+            "type": "string",
+            "format": "--source-resource-id {value}",
+            "secret": false,
             "help": "Fully qualified identifier of the Azure resource to which the event subscription needs to be created."
           },
           {
             "name": "SubjectBeginsWith",
             "type": "string",
             "format": "--subject-begins-with {value}",
+            "secret": false,
             "help": "An optional string to filter events for an event subscription based on a prefix. Wildcard characters are not supported."
           },
           {
             "name": "SubjectCaseSensitive",
             "type": "bool",
             "format": "--subject-case-sensitive",
+            "secret": false,
             "help": "Specify to indicate whether the subject fields should be compared in a case sensitive manner. True if flag present."
           },
           {
             "name": "SubjectEndsWith",
             "type": "string",
             "format": "--subject-ends-with {value}",
+            "secret": false,
             "help": "An optional string to filter events for an event subscription based on a suffix. Wildcard characters are not supported."
           },
           {
             "name": "TopicName",
             "type": "string",
             "format": "--topic-name {value}",
-            "help": "Name of the Event Grid topic to which the event subscription needs to be created."
+            "secret": false,
+            "help": "Name of Event Grid topic."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -105,25 +381,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the event subscription."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceId",
             "type": "string",
             "format": "--resource-id {value}",
+            "secret": false,
+            "help": "Fully qualified identifier of the Azure resource."
+          },
+          {
+            "name": "SourceResourceId",
+            "type": "string",
+            "format": "--source-resource-id {value}",
+            "secret": false,
             "help": "Fully qualified identifier of the Azure resource whose event subscription needs to be deleted."
           },
           {
             "name": "TopicName",
             "type": "string",
             "format": "--topic-name {value}",
-            "help": "Name of the Event Grid topic whose event subscription needs to be deleted."
+            "secret": false,
+            "help": "Name of Event Grid topic."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -137,31 +431,57 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "OdataQuery",
+            "type": "string",
+            "format": "--odata-query {value}",
+            "secret": false,
+            "help": "The OData query used for filtering the list results. Filtering is currently allowed on the Name property only. The supported operations include: CONTAINS, eq (for equal), ne (for not equal), AND, OR and NOT."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceId",
             "type": "string",
             "format": "--resource-id {value}",
+            "secret": false,
             "help": "Fully qualified identifier of the Azure resource."
+          },
+          {
+            "name": "SourceResourceId",
+            "type": "string",
+            "format": "--source-resource-id {value}",
+            "secret": false,
+            "help": "Fully qualified identifier of the Azure resource whose event subscription needs to be listed."
           },
           {
             "name": "TopicName",
             "type": "string",
             "format": "--topic-name {value}",
-            "help": "Name of the Event Grid topic."
+            "secret": false,
+            "help": "Name of Event Grid topic."
           },
           {
             "name": "TopicTypeName",
             "type": "string",
             "format": "--topic-type-name {value}",
-            "help": "Name of the topic type."
+            "secret": false,
+            "help": "Name of the topic-type whose event subscriptions need to be listed. When this is specified, you must also specify --location."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -175,31 +495,50 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the event subscription."
           },
           {
             "name": "IncludeFullEndpointUrl",
             "type": "bool",
             "format": "--include-full-endpoint-url",
+            "secret": false,
             "help": "Specify to indicate whether the full endpoint URL should be returned. True if flag present."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceId",
             "type": "string",
             "format": "--resource-id {value}",
+            "secret": false,
             "help": "Fully qualified identifier of the Azure resource."
+          },
+          {
+            "name": "SourceResourceId",
+            "type": "string",
+            "format": "--source-resource-id {value}",
+            "secret": false,
+            "help": "Fully qualified identifier of the Azure resource whose event subscription needs to be shown."
           },
           {
             "name": "TopicName",
             "type": "string",
             "format": "--topic-name {value}",
-            "help": "Name of the Event Grid topic."
+            "secret": false,
+            "help": "Name of Event Grid topic."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -213,85 +552,120 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the event subscription."
+          },
+          {
+            "name": "DeadletterEndpoint",
+            "type": "string",
+            "format": "--deadletter-endpoint {value}",
+            "secret": false,
+            "help": "The Azure resource ID of an Azure Storage blob container destination where EventGrid should deadletter undeliverable events for this event subscription."
           },
           {
             "name": "Endpoint",
             "type": "string",
             "format": "--endpoint {value}",
-            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For eventhub endpoint type, this should be the Azure ResourceID of the event hub."
+            "secret": false,
+            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For other endpoint types, this should be the Azure resource identifier of the endpoint."
           },
           {
             "name": "EndpointType",
             "type": "EventgridEventSubscriptionEndpointType",
             "format": "--endpoint-type {value}",
-            "help": ""
+            "secret": false,
+            "help": "The type of the destination endpoint."
           },
           {
             "name": "IncludedEventTypes",
             "type": "string",
             "format": "--included-event-types {value}",
-            "help": "A space-separated list of event types. To subscribe to all event types, the string \"All\" should be specified."
+            "secret": false,
+            "help": "A space-separated list of event types (e.g., Microsoft.Storage.BlobCreated Microsoft.Storage.BlobDeleted). To subscribe to all default event types, do not specify this argument. For event grid topics, event types are customer defined. For Azure events, e.g., Storage Accounts, IoT Hub, etc., you can query their event types using this CLI command 'az eventgrid topic-type list-event-types'."
           },
           {
             "name": "Labels",
             "type": "string",
             "format": "--labels {value}",
+            "secret": false,
             "help": "A space-separated list of labels to associate with this event subscription."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceId",
             "type": "string",
             "format": "--resource-id {value}",
+            "secret": false,
             "help": "Fully qualified identifier of the Azure resource."
+          },
+          {
+            "name": "SourceResourceId",
+            "type": "string",
+            "format": "--source-resource-id {value}",
+            "secret": false,
+            "help": "Fully qualified identifier of the Azure resource whose event subscription needs to be updated."
           },
           {
             "name": "SubjectBeginsWith",
             "type": "string",
             "format": "--subject-begins-with {value}",
+            "secret": false,
             "help": "An optional string to filter events for an event subscription based on a prefix. Wildcard characters are not supported."
           },
           {
             "name": "SubjectEndsWith",
             "type": "string",
             "format": "--subject-ends-with {value}",
+            "secret": false,
             "help": "An optional string to filter events for an event subscription based on a suffix. Wildcard characters are not supported."
           },
           {
             "name": "TopicName",
             "type": "string",
             "format": "--topic-name {value}",
-            "help": "Name of the Event Grid topic."
+            "secret": false,
+            "help": "Name of Event Grid topic."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -299,7 +673,17 @@
     {
       "postfix": "TopicTypeList",
       "definiteArgument": "eventgrid topic-type list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "TopicTypeListEventTypes",
@@ -310,7 +694,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic type."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -324,7 +716,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic type."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -338,25 +738,36 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -367,16 +778,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -387,10 +815,25 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "OdataQuery",
+            "type": "string",
+            "format": "--odata-query {value}",
+            "secret": false,
+            "help": "The OData query used for filtering the list results. Filtering is currently allowed on the Name property only. The supported operations include: CONTAINS, eq (for equal), ne (for not equal), AND, OR and NOT."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -401,16 +844,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -421,46 +881,293 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Tags",
+            "name": "Subscription",
             "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainKeyList",
+      "definiteArgument": "eventgrid domain key list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainKeyRegenerate",
+      "definiteArgument": "eventgrid domain key regenerate",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyName",
+            "type": "string",
+            "format": "--key-name {value}",
+            "secret": false,
+            "help": "Key name to regenerate key1 or key2."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainTopicCreate",
+      "definiteArgument": "eventgrid domain topic create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DomainName",
+            "type": "string",
+            "format": "--domain-name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain topic."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainTopicDelete",
+      "definiteArgument": "eventgrid domain topic delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DomainName",
+            "type": "string",
+            "format": "--domain-name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain topic."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainTopicList",
+      "definiteArgument": "eventgrid domain topic list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DomainName",
+            "type": "string",
+            "format": "--domain-name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "OdataQuery",
+            "type": "string",
+            "format": "--odata-query {value}",
+            "secret": false,
+            "help": "The OData query used for filtering the list results. Filtering is currently allowed on the Name property only. The supported operations include: CONTAINS, eq (for equal), ne (for not equal), AND, OR and NOT."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DomainTopicShow",
+      "definiteArgument": "eventgrid domain topic show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DomainName",
+            "type": "string",
+            "format": "--domain-name {value}",
+            "secret": false,
+            "help": "Name of the domain."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the domain topic."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -474,13 +1181,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -494,19 +1210,29 @@
             "name": "KeyName",
             "type": "string",
             "format": "--key-name {value}",
+            "secret": false,
             "help": "Key name to regenerate key1 or key2."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -517,30 +1243,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -549,6 +1280,9 @@
       "name": "EventgridEventSubscriptionEndpointType",
       "values": [
         "eventhub",
+        "hybridconnection",
+        "servicebusqueue",
+        "storagequeue",
         "webhook"
       ]
     }

@@ -1,22 +1,17 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/fs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account/firewall.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/dls/fs/access.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/fs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/fs/access.yml"
   ],
   "name": "AzureDls",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest",
-  "help": "(PREVIEW) Manage Data Lake Store accounts and filesystems.",
+  "help": "Manage Data Lake Store accounts and filesystems.",
   "pathExecutable": "az",
   "tasks": [
     {
@@ -33,67 +28,85 @@
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
           },
           {
             "name": "DefaultGroup",
             "type": "string",
             "format": "--default-group {value}",
+            "secret": false,
             "help": "Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account."
           },
           {
             "name": "DisableEncryption",
             "type": "string",
             "format": "--disable-encryption {value}",
+            "secret": false,
             "help": "Indicates that the account will not have any form of encryption applied to it."
           },
           {
             "name": "EncryptionType",
             "type": "DlsAccountCreateEncryptionType",
             "format": "--encryption-type {value}",
+            "secret": false,
             "help": "Indicates what type of encryption to provision the account with. By default, encryption is ServiceManaged. If no encryption is desired, it must be explicitly set with the --disable-encryption flag."
           },
           {
             "name": "KeyName",
             "type": "string",
             "format": "--key-name {value}",
+            "secret": false,
             "help": "Key name for the user-assigned encryption type."
           },
           {
             "name": "KeyVaultId",
             "type": "string",
             "format": "--key-vault-id {value}",
+            "secret": false,
             "help": "Key vault for the user-assigned encryption type."
           },
           {
             "name": "KeyVersion",
             "type": "string",
             "format": "--key-version {value}",
+            "secret": false,
             "help": "Key version for the user-assigned encryption type."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "Tier",
             "type": "DlsAccountTier",
             "format": "--tier {value}",
+            "secret": false,
             "help": "The desired commitment tier for this account to use."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -104,16 +117,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -124,16 +154,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -147,7 +194,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -158,16 +213,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -178,58 +250,82 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "AllowAzureIps",
             "type": "DlsAccountUpdateAllowAzureIps",
             "format": "--allow-azure-ips {value}",
+            "secret": false,
             "help": "Allow/block Azure originating IPs through the firewall."
           },
           {
             "name": "DefaultGroup",
             "type": "string",
             "format": "--default-group {value}",
-            "help": ""
+            "secret": false,
+            "help": "Name of the default group to give permissions to for freshly created files and folders in the Data Lake Store account."
           },
           {
             "name": "FirewallState",
             "type": "DlsAccountUpdateAllowAzureIps",
             "format": "--firewall-state {value}",
+            "secret": false,
             "help": "Enable/disable existing firewall rules."
           },
           {
             "name": "KeyVersion",
             "type": "string",
             "format": "--key-version {value}",
-            "help": ""
+            "secret": false,
+            "help": "Key version for the user-assigned encryption type."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "Tier",
             "type": "DlsAccountTier",
             "format": "--tier {value}",
+            "secret": false,
             "help": "The desired commitment tier for this account to use."
           },
           {
             "name": "TrustedIdProviderState",
             "type": "DlsAccountUpdateAllowAzureIps",
             "format": "--trusted-id-provider-state {value}",
+            "secret": false,
             "help": "Enable/disable the existing trusted ID providers."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -240,22 +336,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Content",
             "type": "string",
             "format": "--content {value}",
+            "secret": false,
             "help": "Content to be appended to the file."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -269,31 +383,43 @@
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
           },
           {
             "name": "Content",
             "type": "string",
             "format": "--content {value}",
+            "secret": false,
             "help": "Content for the file to contain upon creation."
           },
           {
             "name": "Folder",
             "type": "string",
             "format": "--folder {value}",
+            "secret": false,
             "help": "Indicates that this new item is a folder and not a file."
           },
           {
             "name": "Force",
             "type": "string",
             "format": "--force {value}",
+            "secret": false,
             "help": "Indicates that, if the file or folder exists, it should be overwritten."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -304,22 +430,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
           },
           {
             "name": "Recurse",
             "type": "string",
             "format": "--recurse {value}",
+            "secret": false,
             "help": "Indicates this should be a recursive delete of the folder."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -330,58 +474,75 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "DestinationPath",
             "type": "string",
             "format": "--destination-path {value}",
+            "secret": false,
             "help": "The local path where the file or folder will be downloaded to."
           },
           {
             "name": "SourcePath",
             "type": "string",
             "format": "--source-path {value}",
+            "secret": false,
             "help": "The full path in the Data Lake Store filesystem to download the file or folder from."
           },
           {
             "name": "BlockSize",
             "type": "string",
             "format": "--block-size {value}",
+            "secret": false,
             "help": "Size of a block, in bytes."
           },
           {
             "name": "BufferSize",
             "type": "string",
             "format": "--buffer-size {value}",
+            "secret": false,
             "help": "Size of the transfer buffer, in bytes."
           },
           {
             "name": "ChunkSize",
             "type": "string",
             "format": "--chunk-size {value}",
+            "secret": false,
             "help": "Size of a chunk, in bytes."
           },
           {
             "name": "Overwrite",
             "type": "string",
             "format": "--overwrite {value}",
+            "secret": false,
             "help": "Indicates that, if the destination file or folder exists, it should be overwritten."
-          },
-          {
-            "name": "ProgressCallback",
-            "type": "string",
-            "format": "--progress-callback {value}",
-            "help": ""
           },
           {
             "name": "ThreadCount",
             "type": "string",
             "format": "--thread-count {value}",
+            "secret": false,
             "help": "Parallelism of the download. Default: The number of cores in the local machine."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -392,28 +553,47 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "DestinationPath",
             "type": "string",
             "format": "--destination-path {value}",
+            "secret": false,
             "help": "The destination path in the Data Lake Store account."
           },
           {
             "name": "SourcePaths",
             "type": "string",
             "format": "--source-paths {value}",
+            "secret": false,
             "help": "The space-separated list of files in the Data Lake Store account to join."
           },
           {
             "name": "Force",
             "type": "string",
             "format": "--force {value}",
+            "secret": false,
             "help": "Indicates that, if the destination file already exists, it should be overwritten."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -424,16 +604,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -444,28 +641,47 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "DestinationPath",
             "type": "string",
             "format": "--destination-path {value}",
+            "secret": false,
             "help": "The destination path in the Data Lake Store account."
           },
           {
             "name": "SourcePath",
             "type": "string",
             "format": "--source-path {value}",
+            "secret": false,
             "help": "The file or folder to move."
           },
           {
             "name": "Force",
             "type": "string",
             "format": "--force {value}",
+            "secret": false,
             "help": "Indicates that, if the destination file or folder already exists, it should be overwritten and replaced with the file or folder being moved."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -476,34 +692,54 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
           },
           {
             "name": "Force",
             "type": "string",
             "format": "--force {value}",
+            "secret": false,
             "help": "Indicates that, if the preview is larger than 1MB, still retrieve it. This can potentially be very slow, depending on how large the file is."
           },
           {
             "name": "Length",
             "type": "string",
             "format": "--length {value}",
+            "secret": false,
             "help": "The amount of data to preview in bytes."
           },
           {
             "name": "Offset",
             "type": "string",
             "format": "--offset {value}",
+            "secret": false,
             "help": "The position in bytes to start the preview from."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -514,16 +750,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -534,22 +787,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "ExpirationTime",
             "type": "string",
             "format": "--expiration-time {value}",
+            "secret": false,
             "help": "The absolute value of the expiration time expressed as milliseconds since the epoch."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -560,16 +831,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -580,16 +868,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -600,58 +905,75 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "DestinationPath",
             "type": "string",
             "format": "--destination-path {value}",
+            "secret": false,
             "help": "The full path in the Data Lake Store filesystem to upload the file or folder to."
           },
           {
             "name": "SourcePath",
             "type": "string",
             "format": "--source-path {value}",
+            "secret": false,
             "help": "The path to the file or folder to upload."
           },
           {
             "name": "BlockSize",
             "type": "string",
             "format": "--block-size {value}",
+            "secret": false,
             "help": "Size of a block, in bytes."
           },
           {
             "name": "BufferSize",
             "type": "string",
             "format": "--buffer-size {value}",
+            "secret": false,
             "help": "Size of the transfer buffer, in bytes."
           },
           {
             "name": "ChunkSize",
             "type": "string",
             "format": "--chunk-size {value}",
+            "secret": false,
             "help": "Size of a chunk, in bytes."
           },
           {
             "name": "Overwrite",
             "type": "string",
             "format": "--overwrite {value}",
+            "secret": false,
             "help": "Indicates that, if the destination file or folder exists, it should be overwritten."
-          },
-          {
-            "name": "ProgressCallback",
-            "type": "string",
-            "format": "--progress-callback {value}",
-            "help": ""
           },
           {
             "name": "ThreadCount",
             "type": "string",
             "format": "--thread-count {value}",
+            "secret": false,
             "help": "Parallelism of the upload. Default: The number of cores in the local machine."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -665,31 +987,43 @@
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
           },
           {
             "name": "EndIpAddress",
             "type": "string",
             "format": "--end-ip-address {value}",
+            "secret": false,
             "help": "The end of the valid ip range for the firewall rule."
           },
           {
             "name": "FirewallRuleName",
             "type": "string",
             "format": "--firewall-rule-name {value}",
+            "secret": false,
             "help": "The name of the firewall rule."
           },
           {
             "name": "StartIpAddress",
             "type": "string",
             "format": "--start-ip-address {value}",
+            "secret": false,
             "help": "The start of the valid ip range for the firewall rule."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -700,22 +1034,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "FirewallRuleName",
             "type": "string",
             "format": "--firewall-rule-name {value}",
+            "secret": false,
             "help": "The name of the firewall rule to delete."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -726,16 +1078,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -746,22 +1115,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "FirewallRuleName",
             "type": "string",
             "format": "--firewall-rule-name {value}",
+            "secret": false,
             "help": "The name of the firewall rule to retrieve."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -772,34 +1159,54 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "FirewallRuleName",
             "type": "string",
             "format": "--firewall-rule-name {value}",
+            "secret": false,
             "help": "The name of the firewall rule to update."
           },
           {
             "name": "EndIpAddress",
             "type": "string",
             "format": "--end-ip-address {value}",
+            "secret": false,
             "help": "The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
           },
           {
             "name": "StartIpAddress",
             "type": "string",
             "format": "--start-ip-address {value}",
+            "secret": false,
             "help": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -813,31 +1220,43 @@
             "name": "AccountName",
             "type": "string",
             "format": "--account-name {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The virtual network rule name."
           },
           {
             "name": "Subnet",
             "type": "string",
             "format": "--subnet {value}",
+            "secret": false,
             "help": "The subnet name or id for the virtual network rule."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "VnetName",
             "type": "string",
             "format": "--vnet-name {value}",
+            "secret": false,
             "help": "The name of the virtual network rule."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -851,19 +1270,37 @@
             "name": "AccountName",
             "type": "string",
             "format": "--account-name {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The virtual network rule name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -877,13 +1314,22 @@
             "name": "AccountName",
             "type": "string",
             "format": "--account-name {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -897,19 +1343,37 @@
             "name": "AccountName",
             "type": "string",
             "format": "--account-name {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The virtual network rule name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -923,54 +1387,78 @@
             "name": "AccountName",
             "type": "string",
             "format": "--account-name {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "The virtual network rule name."
           },
           {
             "name": "Subnet",
             "type": "string",
             "format": "--subnet {value}",
+            "secret": false,
             "help": "Name or ID of the subnet that allows access to DLS. If subnet name is provided, --name must be provided."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "VnetName",
             "type": "string",
             "format": "--vnet-name {value}",
+            "secret": false,
             "help": "The virtual network rule name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The virtual network rule name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
@@ -985,25 +1473,36 @@
             "name": "Account",
             "type": "string",
             "format": "--account {value}",
+            "secret": false,
             "help": "Name of the Data Lake Store account."
           },
           {
             "name": "IdProvider",
             "type": "string",
             "format": "--id-provider {value}",
+            "secret": false,
             "help": "The URL of this trusted identity provider."
           },
           {
             "name": "TrustedIdProviderName",
             "type": "string",
             "format": "--trusted-id-provider-name {value}",
+            "secret": false,
             "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1014,22 +1513,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "TrustedIdProviderName",
             "type": "string",
             "format": "--trusted-id-provider-name {value}",
+            "secret": false,
             "help": "The name of the trusted identity provider to delete."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1040,16 +1557,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1060,22 +1594,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "TrustedIdProviderName",
             "type": "string",
             "format": "--trusted-id-provider-name {value}",
+            "secret": false,
             "help": "The name of the trusted identity provider to retrieve."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1086,28 +1638,47 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "TrustedIdProviderName",
             "type": "string",
             "format": "--trusted-id-provider-name {value}",
+            "secret": false,
             "help": "The name of the trusted identity provider. This is used for differentiation of providers in the account."
           },
           {
             "name": "IdProvider",
             "type": "string",
             "format": "--id-provider {value}",
+            "secret": false,
             "help": "The URL of this trusted identity provider."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1118,22 +1689,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
           },
           {
             "name": "DefaultAcl",
             "type": "string",
             "format": "--default-acl {value}",
+            "secret": false,
             "help": "A switch that, if specified, indicates that the remove ACL operation should remove the default ACL of the folder. Otherwise the regular ACL is removed."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1144,22 +1733,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "AclSpec",
             "type": "string",
             "format": "--acl-spec {value}",
+            "secret": false,
             "help": "The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1170,22 +1777,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "AclSpec",
             "type": "string",
             "format": "--acl-spec {value}",
+            "secret": false,
             "help": "The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1196,22 +1821,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "AclSpec",
             "type": "string",
             "format": "--acl-spec {value}",
+            "secret": false,
             "help": "The ACL specification to set on the path in the format '[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,[default:]user|group|other:[entity id or UPN]:r|-w|-x|-,...'."
           },
           {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1222,28 +1865,47 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
           },
           {
             "name": "Group",
             "type": "string",
             "format": "--group {value}",
+            "secret": false,
             "help": "The group Azure Active Directory object ID or user principal name to set as the owning group."
           },
           {
             "name": "Owner",
             "type": "string",
             "format": "--owner {value}",
+            "secret": false,
             "help": "The user Azure Active Directory object ID or user principal name to set as the owner."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1254,22 +1916,40 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
           },
           {
             "name": "Permission",
             "type": "string",
             "format": "--permission {value}",
+            "secret": false,
             "help": "The octal representation of the permissions for user, group and mask."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1280,16 +1960,33 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "help": "Name of the Data Lake Store account."
-          },
-          {
             "name": "Path",
             "type": "string",
             "format": "--path {value}",
+            "secret": false,
             "help": "The path in the specified Data Lake Store account where the action should take place. In the format '/folder/file.txt', where the first '/' after the DNS indicates the root of the file system."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1300,30 +1997,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],

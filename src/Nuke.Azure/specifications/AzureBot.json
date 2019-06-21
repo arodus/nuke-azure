@@ -1,27 +1,22 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/authsetting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/directline.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/email.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/facebook.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/kik.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/msteams.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/skype.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/slack.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/sms.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/telegram.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/bot/webchat.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/authsetting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/directline.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/email.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/facebook.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/kik.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/msteams.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/skype.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/slack.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/sms.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/telegram.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/bot/webchat.yml"
   ],
   "name": "AzureBot",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/bot?view=azure-cli-latest",
-  "help": "Manage Microsoft Bot Services.",
+  "help": "Manage Microsoft Azure Bot Service.",
   "pathExecutable": "az",
   "tasks": [
     {
@@ -30,95 +25,123 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Appid",
+            "type": "string",
+            "format": "--appid {value}",
+            "secret": false,
+            "help": "The Microsoft account ID (MSA ID) to be used with the bot."
+          },
+          {
             "name": "Kind",
             "type": "BotCreateKind",
             "format": "--kind {value}",
+            "secret": false,
             "help": "The kind of the bot."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Appid",
-            "type": "string",
-            "format": "--appid {value}",
-            "help": "The Microsoft account ID (MSA ID) to be used with the bot."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "Password",
             "type": "string",
             "format": "--password {value}",
             "secret": true,
-            "help": "The Microsoft account (MSA) password for the bot."
+            "help": "The Microsoft account (MSA) password for the bot. Used to authorize messages being sent to the bot."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "Description",
             "type": "string",
             "format": "--description {value}",
+            "secret": false,
             "help": "The description of the bot."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "The display name of the bot. If not specified, defaults to the name of the bot."
           },
           {
             "name": "Endpoint",
             "type": "string",
             "format": "--endpoint {value}",
+            "secret": false,
             "help": "The messaging endpoint of the bot."
           },
           {
             "name": "Sku",
-            "type": "BotCreateSku",
+            "type": "BotSku",
             "format": "--sku {value}",
+            "secret": false,
             "help": "The Sku of the bot."
+          },
+          {
+            "name": "Echo",
+            "type": "bool",
+            "format": "--echo",
+            "secret": false,
+            "help": "Deploy an Echo Bot template to the newly created v4 Web App Bot."
           },
           {
             "name": "InsightsLocation",
             "type": "BotCreateInsightsLocation",
             "format": "--insights-location {value}",
-            "help": "The location for the app insights to be used with the bot."
+            "secret": false,
+            "help": "WARNING: Not used in V4 bot creation. The location for the app insights to be used with the bot.  Default: South Central US."
           },
           {
             "name": "Lang",
             "type": "BotCreateLang",
             "format": "--lang {value}",
+            "secret": false,
             "help": "The language to be used to create the bot."
           },
           {
             "name": "Storage",
             "type": "string",
             "format": "--storage {value}",
-            "help": "Storage account name to be used with the bot. If not provided, a new account will be created."
+            "secret": false,
+            "help": "WARNING: Not used in V4 bot creation. Storage account name to be used with the bot. If not provided, a new account will be created."
           },
           {
             "name": "Version",
-            "type": "BotCreateVersion",
+            "type": "BotVersion",
             "format": "--version {value}",
+            "secret": false,
             "help": "The Microsoft Bot Builder SDK version to be used to create the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -132,13 +155,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -152,19 +184,65 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "SavePath",
             "type": "string",
             "format": "--save-path {value}",
+            "secret": false,
             "help": "The directory to download bot code to."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrepareDeploy",
+      "definiteArgument": "bot prepare-deploy",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Lang",
+            "type": "BotPrepareDeployLang",
+            "format": "--lang {value}",
+            "secret": false,
+            "help": "The language or runtime of the bot."
+          },
+          {
+            "name": "CodeDir",
+            "type": "string",
+            "format": "--code-dir {value}",
+            "secret": false,
+            "help": "The directory to place the generated deployment files in. Defaults to the current directory the command is called from."
+          },
+          {
+            "name": "ProjFilePath",
+            "type": "string",
+            "format": "--proj-file-path {value}",
+            "secret": false,
+            "help": "The path to the .csproj file relative to --code-dir."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -178,31 +256,50 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
-            "name": "ProjName",
+            "name": "ProjFilePath",
             "type": "string",
-            "format": "--proj-name {value}",
-            "help": "Name of the start up project file name. Required only for C#."
+            "format": "--proj-file-path {value}",
+            "secret": false,
+            "help": "Path to the start up project file name. (E.g. \"./EchoBotWithCounter.csproj\") Required only for C#."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "SlnName",
             "type": "string",
             "format": "--sln-name {value}",
+            "secret": false,
             "help": "Name of the start up solution file name. Required only for C#."
           },
           {
             "name": "CodeDir",
             "type": "string",
             "format": "--code-dir {value}",
+            "secret": false,
             "help": "The directory to download deployment scripts to."
+          },
+          {
+            "name": "Version",
+            "type": "BotVersion",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "The Microsoft Bot Builder SDK version to be used in the bot template that will be created."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -216,19 +313,57 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "CodeDir",
             "type": "string",
             "format": "--code-dir {value}",
+            "secret": false,
             "help": "The directory to upload bot code from."
+          },
+          {
+            "name": "KeepNodeModules",
+            "type": "bool",
+            "format": "--keep-node-modules",
+            "secret": false,
+            "help": "Keep node_modules folder and do not run `npm install` on the App Service. This can greatly speed up publish commands for Node.js SDK bots."
+          },
+          {
+            "name": "ProjFilePath",
+            "type": "string",
+            "format": "--proj-file-path {value}",
+            "secret": false,
+            "help": "Path to the start up project file name. (E.g. \"./EchoBotWithCounter.csproj\")."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "secret": false,
+            "help": "Configurable timeout in seconds for checking the status of deployment."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "The Microsoft Bot Builder SDK version of the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -242,13 +377,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Msbot",
+            "type": "bool",
+            "format": "--msbot",
+            "secret": false,
+            "help": "Show the output as JSON compatible with a .bot file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -262,37 +413,78 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Add",
+            "name": "Description",
             "type": "string",
-            "format": "--add {value}",
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+            "format": "--description {value}",
+            "secret": false,
+            "help": "The bot's new description."
           },
           {
-            "name": "ForceString",
+            "name": "DisplayName",
             "type": "string",
-            "format": "--force-string {value}",
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "The bot's new display name."
           },
           {
-            "name": "Remove",
+            "name": "Endpoint",
             "type": "string",
-            "format": "--remove {value}",
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "The new endpoint of the bot. Must start with \"https://\"."
           },
           {
-            "name": "Set",
+            "name": "Sku",
+            "type": "BotSku",
+            "format": "--sku {value}",
+            "secret": false,
+            "help": "The Sku of the bot."
+          },
+          {
+            "name": "Tags",
             "type": "string",
-            "format": "--set {value}",
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "AiApiKey",
+            "type": "string",
+            "format": "--ai-api-key {value}",
+            "secret": false,
+            "help": "Azure Application Insights API Key used to read bot analytics data. Provide a key if you want to view analytics about your bot in the Analytics blade."
+          },
+          {
+            "name": "AiAppId",
+            "type": "string",
+            "format": "--ai-app-id {value}",
+            "secret": false,
+            "help": "Azure Application Insights Application ID used to read bot analytics data. Provide an Id if you want to view analytics about your bot in the Analytics blade."
+          },
+          {
+            "name": "AiKey",
+            "type": "string",
+            "format": "--ai-key {value}",
+            "secret": false,
+            "help": "Azure Application Insights Key used to write bot analytics data. Provide a key if you want to receive bot analytics."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -306,6 +498,7 @@
             "name": "ClientId",
             "type": "string",
             "format": "--client-id {value}",
+            "secret": false,
             "help": "Client ID associated with the service provider setting."
           },
           {
@@ -319,37 +512,50 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ProviderScopeString",
             "type": "string",
             "format": "--provider-scope-string {value}",
+            "secret": false,
             "help": "The scope string associated with the service provider setting.The string should be delimited as needed for the service provider."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Service",
             "type": "string",
             "format": "--service {value}",
+            "secret": false,
             "help": "Name of the service provider. For a list of all service providers, use `az bot connection listserviceproviders`."
           },
           {
             "name": "SettingName",
             "type": "string",
             "format": "--setting-name {value}",
+            "secret": false,
             "help": "Name of the oauth connection setting."
           },
           {
             "name": "Parameters",
             "type": "string",
             "format": "--parameters {value}",
+            "secret": false,
             "help": "Parameter values for service provider parameters. Usage: --parameters key=value key1=value1."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -363,19 +569,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "SettingName",
             "type": "string",
             "format": "--setting-name {value}",
+            "secret": false,
             "help": "Name of the oauth connection setting."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -389,13 +605,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -409,7 +634,15 @@
             "name": "ProviderName",
             "type": "string",
             "format": "--provider-name {value}",
+            "secret": false,
             "help": "Service provider name for which to fetch details."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -423,19 +656,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "SettingName",
             "type": "string",
             "format": "--setting-name {value}",
+            "secret": false,
             "help": "Name of the oauth connection setting."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -449,37 +692,50 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
           },
           {
             "name": "Disablev1",
             "type": "bool",
             "format": "--disablev1",
+            "secret": false,
             "help": "If true, v1 protocol will be disabled on the channel."
           },
           {
             "name": "Disablev3",
             "type": "bool",
             "format": "--disablev3",
+            "secret": false,
             "help": "If true, v3 protocol will be disabled on the channel."
           },
           {
             "name": "SiteName",
             "type": "string",
             "format": "--site-name {value}",
+            "secret": false,
             "help": "Name of the Directline channel site."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -493,13 +749,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -513,12 +778,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -527,6 +794,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -540,13 +814,15 @@
             "name": "EmailAddress",
             "type": "string",
             "format": "--email-address {value}",
+            "secret": false,
             "help": "The email address for the bot."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "Password",
@@ -559,13 +835,22 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -579,13 +864,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -599,12 +893,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -613,6 +909,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -626,24 +929,28 @@
             "name": "Appid",
             "type": "string",
             "format": "--appid {value}",
+            "secret": false,
             "help": "The Facebook application id."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "PageId",
             "type": "string",
             "format": "--page-id {value}",
+            "secret": false,
             "help": "Page ID of the Facebook page to be used for the bot."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -657,13 +964,22 @@
             "name": "Token",
             "type": "string",
             "format": "--token {value}",
+            "secret": false,
             "help": "The Facebook application access token."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -677,13 +993,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -697,12 +1022,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -711,6 +1038,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -724,37 +1058,50 @@
             "name": "Key",
             "type": "string",
             "format": "--key {value}",
+            "secret": false,
             "help": "The API key for the Kik account."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "UserName",
             "type": "string",
             "format": "--user-name {value}",
+            "secret": false,
             "help": "Kik user name."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
           },
           {
             "name": "IsValidated",
             "type": "bool",
             "format": "--is-validated",
+            "secret": false,
             "help": "Whether or not the Kik account has been validated for use with the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -768,13 +1115,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -788,12 +1144,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -802,6 +1160,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -815,31 +1180,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
           },
           {
             "name": "CallingWebHook",
             "type": "string",
             "format": "--calling-web-hook {value}",
+            "secret": false,
             "help": "The calling web hook to use on Microsoft Teams."
           },
           {
             "name": "EnableCalling",
             "type": "bool",
             "format": "--enable-calling",
+            "secret": false,
             "help": "Enable calling on Microsoft Teams."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -853,13 +1230,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -873,12 +1259,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -887,6 +1275,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -900,67 +1295,85 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
           },
           {
             "name": "CallingWebHook",
             "type": "string",
             "format": "--calling-web-hook {value}",
+            "secret": false,
             "help": "The calling web hook to use on Skype."
           },
           {
             "name": "EnableCalling",
             "type": "bool",
             "format": "--enable-calling",
+            "secret": false,
             "help": "Enable calling on Skype."
           },
           {
             "name": "EnableGroups",
             "type": "bool",
             "format": "--enable-groups",
+            "secret": false,
             "help": "Enable groups on Skype."
           },
           {
             "name": "EnableMediaCards",
             "type": "bool",
             "format": "--enable-media-cards",
+            "secret": false,
             "help": "Enable media cards on Skype."
           },
           {
             "name": "EnableMessaging",
             "type": "bool",
             "format": "--enable-messaging",
+            "secret": false,
             "help": "Enable messaging on Skype."
           },
           {
             "name": "EnableScreenSharing",
             "type": "bool",
             "format": "--enable-screen-sharing",
+            "secret": false,
             "help": "Enable screen sharing on Skype."
           },
           {
             "name": "EnableVideo",
             "type": "bool",
             "format": "--enable-video",
+            "secret": false,
             "help": "Enable video on Skype."
           },
           {
             "name": "GroupsMode",
             "type": "string",
             "format": "--groups-mode {value}",
+            "secret": false,
             "help": "Select groups mode on Skype."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -974,13 +1387,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -994,12 +1416,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -1008,6 +1432,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1021,6 +1452,7 @@
             "name": "ClientId",
             "type": "string",
             "format": "--client-id {value}",
+            "secret": false,
             "help": "The client ID from Slack."
           },
           {
@@ -1034,31 +1466,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "VerificationToken",
             "type": "string",
             "format": "--verification-token {value}",
+            "secret": false,
             "help": "The verification token from Slack."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
           },
           {
             "name": "LandingPageUrl",
             "type": "string",
             "format": "--landing-page-url {value}",
+            "secret": false,
             "help": "The landing page url to redirect to after login."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1072,13 +1516,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1092,12 +1545,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -1106,6 +1561,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1119,43 +1581,57 @@
             "name": "AccountSid",
             "type": "string",
             "format": "--account-sid {value}",
+            "secret": false,
             "help": "The account SID for the Twilio account."
           },
           {
             "name": "AuthToken",
             "type": "string",
             "format": "--auth-token {value}",
+            "secret": false,
             "help": "The token token for the Twilio account."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "Phone",
             "type": "string",
             "format": "--phone {value}",
+            "secret": false,
             "help": "The phone number for the Twilio account."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
           },
           {
             "name": "IsValidated",
             "type": "bool",
             "format": "--is-validated",
+            "secret": false,
             "help": "Whether or not the Twilio account has been validated for use with the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1169,13 +1645,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1189,12 +1674,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -1203,6 +1690,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1216,31 +1710,43 @@
             "name": "AccessToken",
             "type": "string",
             "format": "--access-token {value}",
+            "secret": false,
             "help": "The access token for the Telegram account."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AddDisabled",
             "type": "bool",
             "format": "--add-disabled",
+            "secret": false,
             "help": "Add the channel in a disabled state."
           },
           {
             "name": "IsValidated",
             "type": "bool",
             "format": "--is-validated",
+            "secret": false,
             "help": "Whether or not the Telegram account has been validated for use with the bot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1254,13 +1760,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1274,12 +1789,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -1288,6 +1805,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1301,12 +1825,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The resource name of the bot."
+            "secret": false,
+            "help": "The resource name of the bot. Bot name must be between 4 and 42 characters in length. Bot name can only have the following characters -, a - z, A - Z, 0 - 9, and _."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -1315,6 +1841,13 @@
             "format": "--with-secrets",
             "secret": true,
             "help": "Show secrets in response for the channel."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1325,30 +1858,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -1362,7 +1900,7 @@
       ]
     },
     {
-      "name": "BotCreateSku",
+      "name": "BotSku",
       "values": [
         "f0",
         "s1"
@@ -1371,10 +1909,19 @@
     {
       "name": "BotCreateInsightsLocation",
       "values": [
+        "australia east",
+        "canada central",
+        "central india",
+        "east asia",
         "east us",
+        "east us 2",
+        "france central",
+        "japan east",
+        "korea central",
         "north europe",
         "south central us",
         "southeast asia",
+        "uk south",
         "west europe",
         "west us 2"
       ]
@@ -1383,11 +1930,19 @@
       "name": "BotCreateLang",
       "values": [
         "csharp",
-        "node"
+        "javascript"
       ]
     },
     {
-      "name": "BotCreateVersion",
+      "name": "BotPrepareDeployLang",
+      "values": [
+        "csharp",
+        "javascript",
+        "typescript"
+      ]
+    },
+    {
+      "name": "BotVersion",
       "values": [
         "v3",
         "v4"

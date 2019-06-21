@@ -1,17 +1,15 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/event.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/set-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/policy/state.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/event.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/remediation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/set-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/state.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/assignment/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/remediation/deployment.yml"
   ],
   "name": "AzurePolicy",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest",
@@ -32,12 +30,21 @@
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "Display name of the policy assignment."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the new policy assignment."
           },
           {
@@ -45,43 +52,78 @@
             "type": "List<string>",
             "format": "--not-scopes {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated scopes where the policy assignment does not apply."
           },
           {
             "name": "Params",
             "type": "string",
             "format": "--params {value}",
-            "help": "JSON formatted string or path to file with parameter values of policy rule."
+            "secret": false,
+            "help": "JSON formatted string or a path to a file or uri with parameter values of the policy rule."
           },
           {
             "name": "Policy",
             "type": "string",
             "format": "--policy {value}",
+            "secret": false,
             "help": "Name or id of the policy definition."
           },
           {
             "name": "PolicySetDefinition",
             "type": "string",
             "format": "--policy-set-definition {value}",
+            "secret": false,
             "help": "Name or id of the policy set definition."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group where the policy will be applied."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope to which this policy assignment applies."
           },
           {
             "name": "Sku",
             "type": "PolicyAssignmentCreateSku",
             "format": "--sku {value}",
+            "secret": false,
             "help": "Policy sku."
+          },
+          {
+            "name": "AssignIdentity",
+            "type": "string",
+            "format": "--assign-identity {value}",
+            "secret": false,
+            "help": "Assigns a system assigned identity to the policy assignment."
+          },
+          {
+            "name": "IdentityScope",
+            "type": "string",
+            "format": "--identity-scope {value}",
+            "secret": false,
+            "help": "Scope that the system assigned identity can access."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "secret": false,
+            "help": "Role name or id that will be assigned to the managed identity."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -95,19 +137,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the policy assignment."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group where the policy will be applied."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -121,19 +173,29 @@
             "name": "DisableScopeStrictMatch",
             "type": "string",
             "format": "--disable-scope-strict-match {value}",
+            "secret": false,
             "help": "Include policy assignments either inherited from parent scope or at child scope."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group where the policy will be applied."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -147,19 +209,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the policy assignment."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group where the policy will be applied."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -173,24 +245,28 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the new policy definition."
           },
           {
             "name": "Description",
             "type": "string",
             "format": "--description {value}",
+            "secret": false,
             "help": "Description of policy definition."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "Display name of policy definition."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "Name of the management group the new policy definition can be assigned in."
           },
           {
@@ -199,30 +275,35 @@
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
+            "secret": false,
             "help": "Metadata in space-separated key=value pairs."
           },
           {
             "name": "Mode",
-            "type": "PolicyDefinitionCreateMode",
+            "type": "PolicyDefinitionMode",
             "format": "--mode {value}",
-            "help": "Mode of the new policy definition."
+            "secret": false,
+            "help": "Mode of the policy definition."
           },
           {
             "name": "Params",
             "type": "string",
             "format": "--params {value}",
+            "secret": false,
             "help": "JSON formatted string or a path to a file or uri with parameter definitions."
           },
           {
             "name": "Rules",
             "type": "string",
             "format": "--rules {value}",
+            "secret": false,
             "help": "Policy rules in JSON format, or a path to a file containing JSON rules."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "Name or id of the subscription the new policy definition can be assigned in."
           }
         ]
@@ -237,18 +318,21 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The policy definition name."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -263,12 +347,14 @@
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -283,18 +369,21 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The policy definition name."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -309,24 +398,28 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The policy definition name."
           },
           {
             "name": "Description",
             "type": "string",
             "format": "--description {value}",
+            "secret": false,
             "help": "Description of policy definition."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "Display name of policy definition."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
@@ -335,30 +428,35 @@
             "format": "--metadata {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
+            "secret": false,
             "help": "Metadata in space-separated key=value pairs."
           },
           {
             "name": "Mode",
-            "type": "string",
+            "type": "PolicyDefinitionMode",
             "format": "--mode {value}",
-            "help": ""
+            "secret": false,
+            "help": "Mode of the policy definition."
           },
           {
             "name": "Params",
             "type": "string",
             "format": "--params {value}",
+            "secret": false,
             "help": "JSON formatted string or a path to a file or uri with parameter definitions."
           },
           {
             "name": "Rules",
             "type": "string",
             "format": "--rules {value}",
+            "secret": false,
             "help": "JSON formatted string or a path to a file with such content."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -373,97 +471,455 @@
             "name": "Apply",
             "type": "string",
             "format": "--apply {value}",
+            "secret": false,
             "help": "Apply expression for aggregations using OData notation."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "Filter expression using OData notation."
           },
           {
             "name": "From",
             "type": "string",
             "format": "--from {value}",
+            "secret": false,
             "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
           },
           {
             "name": "OrderBy",
             "type": "string",
             "format": "--order-by {value}",
+            "secret": false,
             "help": "Ordering expression using OData notation."
           },
           {
             "name": "Select",
             "type": "string",
             "format": "--select {value}",
+            "secret": false,
             "help": "Select expression using OData notation."
           },
           {
             "name": "To",
             "type": "string",
             "format": "--to {value}",
+            "secret": false,
             "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "Maximum number of records to return."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: Microsoft.Provider)."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
-            "help": "The parent path (Ex: resA/myA/resB/myB)."
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
-            "help": "Resource type (Ex: resC)."
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "Name of management group."
           },
           {
             "name": "PolicyAssignment",
             "type": "string",
             "format": "--policy-assignment {value}",
+            "secret": false,
             "help": "Name of policy assignment."
           },
           {
             "name": "PolicyDefinition",
             "type": "string",
             "format": "--policy-definition {value}",
+            "secret": false,
             "help": "Name of policy definition."
           },
           {
             "name": "PolicySetDefinition",
             "type": "string",
             "format": "--policy-set-definition {value}",
+            "secret": false,
             "help": "Name of policy set definition."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RemediationCancel",
+      "definiteArgument": "policy remediation cancel",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the remediation."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RemediationCreate",
+      "definiteArgument": "policy remediation create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the remediation."
+          },
+          {
+            "name": "PolicyAssignment",
+            "type": "string",
+            "format": "--policy-assignment {value}",
+            "secret": false,
+            "help": "Name or resource ID of the policy assignment."
+          },
+          {
+            "name": "DefinitionReferenceId",
+            "type": "string",
+            "format": "--definition-reference-id {value}",
+            "secret": false,
+            "help": "Policy definition reference ID inside the policy set definition. Only required when the policy assignment is assigning a policy set definition."
+          },
+          {
+            "name": "LocationFilters",
+            "type": "List<string>",
+            "format": "--location-filters {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated list of resource locations that should be remediated (Ex: centralus westeurope)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RemediationDelete",
+      "definiteArgument": "policy remediation delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the remediation."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RemediationList",
+      "definiteArgument": "policy remediation list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RemediationShow",
+      "definiteArgument": "policy remediation show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the remediation."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -477,42 +933,49 @@
             "name": "Definitions",
             "type": "string",
             "format": "--definitions {value}",
+            "secret": false,
             "help": "Policy definitions in JSON format, or a path to a file containing JSON rules."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the new policy set definition."
           },
           {
             "name": "Description",
             "type": "string",
             "format": "--description {value}",
+            "secret": false,
             "help": "Description of policy set definition."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "Display name of policy set definition."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "Name of management group the new policy set definition can be assigned in."
           },
           {
             "name": "Params",
             "type": "string",
             "format": "--params {value}",
+            "secret": false,
             "help": "JSON formatted string or a path to a file or uri with parameter definitions."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "Name or id of the subscription the new policy set definition can be assigned in."
           }
         ]
@@ -527,18 +990,21 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The policy set definition name."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -553,12 +1019,14 @@
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -573,18 +1041,21 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The policy set definition name."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -599,42 +1070,49 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The policy set definition name."
           },
           {
             "name": "Definitions",
             "type": "string",
             "format": "--definitions {value}",
+            "secret": false,
             "help": "JSON formatted string or a path to a file or uri containing definitions."
           },
           {
             "name": "Description",
             "type": "string",
             "format": "--description {value}",
+            "secret": false,
             "help": "Description of policy set definition."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "Display name of policy set definition."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "The name of the management group of the policy [set] definition."
           },
           {
             "name": "Params",
             "type": "string",
             "format": "--params {value}",
+            "secret": false,
             "help": "JSON formatted string or a path to a file or uri with parameter definitions."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "The subscription id of the policy [set] definition."
           }
         ]
@@ -649,103 +1127,134 @@
             "name": "All",
             "type": "string",
             "format": "--all {value}",
+            "secret": false,
             "help": "Within the specified time interval, get all policy states instead of the latest only."
           },
           {
             "name": "Apply",
             "type": "string",
             "format": "--apply {value}",
+            "secret": false,
             "help": "Apply expression for aggregations using OData notation."
+          },
+          {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "secret": false,
+            "help": "Expand expression using OData notation."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "Filter expression using OData notation."
           },
           {
             "name": "From",
             "type": "string",
             "format": "--from {value}",
+            "secret": false,
             "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
           },
           {
             "name": "OrderBy",
             "type": "string",
             "format": "--order-by {value}",
+            "secret": false,
             "help": "Ordering expression using OData notation."
           },
           {
             "name": "Select",
             "type": "string",
             "format": "--select {value}",
+            "secret": false,
             "help": "Select expression using OData notation."
           },
           {
             "name": "To",
             "type": "string",
             "format": "--to {value}",
+            "secret": false,
             "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "Maximum number of records to return."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: Microsoft.Provider)."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
-            "help": "The parent path (Ex: resA/myA/resB/myB)."
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
-            "help": "Resource type (Ex: resC)."
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "Name of management group."
           },
           {
             "name": "PolicyAssignment",
             "type": "string",
             "format": "--policy-assignment {value}",
+            "secret": false,
             "help": "Name of policy assignment."
           },
           {
             "name": "PolicyDefinition",
             "type": "string",
             "format": "--policy-definition {value}",
+            "secret": false,
             "help": "Name of policy definition."
           },
           {
             "name": "PolicySetDefinition",
             "type": "string",
             "format": "--policy-set-definition {value}",
+            "secret": false,
             "help": "Name of policy set definition."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -759,79 +1268,285 @@
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "Filter expression using OData notation."
           },
           {
             "name": "From",
             "type": "string",
             "format": "--from {value}",
+            "secret": false,
             "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
           },
           {
             "name": "To",
             "type": "string",
             "format": "--to {value}",
+            "secret": false,
             "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "Maximum number of records to return."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: Microsoft.Provider)."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
-            "help": "The parent path (Ex: resA/myA/resB/myB)."
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
-            "help": "Resource type (Ex: resC)."
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
           },
           {
             "name": "ManagementGroup",
             "type": "string",
             "format": "--management-group {value}",
+            "secret": false,
             "help": "Name of management group."
           },
           {
             "name": "PolicyAssignment",
             "type": "string",
             "format": "--policy-assignment {value}",
+            "secret": false,
             "help": "Name of policy assignment."
           },
           {
             "name": "PolicyDefinition",
             "type": "string",
             "format": "--policy-definition {value}",
+            "secret": false,
             "help": "Name of policy definition."
           },
           {
             "name": "PolicySetDefinition",
             "type": "string",
             "format": "--policy-set-definition {value}",
+            "secret": false,
             "help": "Name of policy set definition."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentIdentityAssign",
+      "definiteArgument": "policy assignment identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the policy assignment."
+          },
+          {
+            "name": "IdentityScope",
+            "type": "string",
+            "format": "--identity-scope {value}",
+            "secret": false,
+            "help": "Scope that the system assigned identity can access."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "The resource group where the policy will be applied."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "secret": false,
+            "help": "Role name or id that will be assigned to the managed identity."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentIdentityRemove",
+      "definiteArgument": "policy assignment identity remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the policy assignment."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "The resource group where the policy will be applied."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentIdentityShow",
+      "definiteArgument": "policy assignment identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the policy assignment."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "The resource group where the policy will be applied."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "Scope to which this policy assignment applies."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RemediationDeploymentList",
+      "definiteArgument": "policy remediation deployment list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the remediation."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -842,30 +1557,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -878,7 +1598,7 @@
       ]
     },
     {
-      "name": "PolicyDefinitionCreateMode",
+      "name": "PolicyDefinitionMode",
       "values": [
         "all",
         "indexed",

@@ -1,14 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource/link.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/resource/lock.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/resource.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/resource/link.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/resource/lock.yml"
   ],
   "name": "AzureResource",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/resource?view=azure-cli-latest",
@@ -24,61 +19,78 @@
             "name": "Properties",
             "type": "string",
             "format": "--properties {value}",
+            "secret": false,
             "help": "A JSON-formatted string containing resource properties."
           },
           {
             "name": "Id",
             "type": "string",
             "format": "--id {value}",
+            "secret": false,
             "help": "Resource ID."
           },
           {
             "name": "IsFullObject",
             "type": "string",
             "format": "--is-full-object {value}",
+            "secret": false,
             "help": "Indicates that the properties object includes other options such as location, tags, sku, and/or plan."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "ApiVersion",
             "type": "string",
             "format": "--api-version {value}",
+            "secret": false,
             "help": "The api version of the resource (omit for latest)."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name. (Ex: myC)."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -92,6 +104,7 @@
             "name": "ApiVersion",
             "type": "string",
             "format": "--api-version {value}",
+            "secret": false,
             "help": "The api version of the resource (omit for latest)."
           },
           {
@@ -99,37 +112,50 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name. (Ex: myC)."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -143,18 +169,21 @@
             "name": "Action",
             "type": "string",
             "format": "--action {value}",
+            "secret": false,
             "help": "The action that will be invoked on the specified resource."
           },
           {
             "name": "RequestBody",
             "type": "string",
             "format": "--request-body {value}",
+            "secret": false,
             "help": "JSON encoded parameter arguments for the action that will be passed along in the post request body. Use @{file} to load from a file."
           },
           {
             "name": "ApiVersion",
             "type": "string",
             "format": "--api-version {value}",
+            "secret": false,
             "help": "The api version of the resource (omit for latest)."
           },
           {
@@ -162,37 +191,50 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name. (Ex: myC)."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -206,37 +248,50 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name. (Ex: myC)."
           },
           {
             "name": "Tag",
             "type": "string",
             "format": "--tag {value}",
+            "secret": false,
             "help": "A single tag in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -250,19 +305,29 @@
             "name": "DestinationGroup",
             "type": "string",
             "format": "--destination-group {value}",
+            "secret": false,
             "help": "The destination resource group name."
           },
           {
             "name": "Ids",
             "type": "string",
             "format": "--ids {value}",
+            "secret": false,
             "help": "The space-separated resource ids to be moved."
           },
           {
             "name": "DestinationSubscriptionId",
             "type": "string",
             "format": "--destination-subscription-id {value}",
+            "secret": false,
             "help": "The destination subscription identifier."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -276,12 +341,14 @@
             "name": "IncludeResponseBody",
             "type": "bool",
             "format": "--include-response-body",
+            "secret": false,
             "help": "Use if the default command output doesn't capture all of the property data."
           },
           {
             "name": "ApiVersion",
             "type": "string",
             "format": "--api-version {value}",
+            "secret": false,
             "help": "The api version of the resource (omit for latest)."
           },
           {
@@ -289,37 +356,50 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name. (Ex: myC)."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -333,12 +413,14 @@
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "ApiVersion",
             "type": "string",
             "format": "--api-version {value}",
+            "secret": false,
             "help": "The api version of the resource (omit for latest)."
           },
           {
@@ -346,37 +428,50 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name. (Ex: myC)."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -390,12 +485,14 @@
             "name": "IncludeResponseBody",
             "type": "bool",
             "format": "--include-response-body",
+            "secret": false,
             "help": "Use if the default command output doesn't capture all of the property data."
           },
           {
             "name": "ApiVersion",
             "type": "string",
             "format": "--api-version {value}",
+            "secret": false,
             "help": "The api version of the resource (omit for latest)."
           },
           {
@@ -403,61 +500,199 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name. (Ex: myC)."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Wait",
+      "definiteArgument": "resource wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "IncludeResponseBody",
+            "type": "bool",
+            "format": "--include-response-body",
+            "secret": false,
+            "help": "Use if the default command output doesn't capture all of the property data."
+          },
+          {
+            "name": "ApiVersion",
+            "type": "string",
+            "format": "--api-version {value}",
+            "secret": false,
+            "help": "The api version of the resource (omit for latest)."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The resource name. (Ex: myC)."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: 'Microsoft.Provider')."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: 'resA/myA/resB/myB')."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "secret": false,
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "secret": false,
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "secret": false,
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "secret": false,
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "secret": false,
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "secret": false,
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "secret": false,
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -468,22 +703,32 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "LinkId",
+            "name": "Link",
             "type": "string",
-            "format": "--link-id {value}",
-            "help": ""
+            "format": "--link {value}",
+            "secret": false,
+            "help": "Fully-qualified resource ID of the resource link."
           },
           {
-            "name": "TargetId",
+            "name": "Target",
             "type": "string",
-            "format": "--target-id {value}",
-            "help": "The id of the resource link target."
+            "format": "--target {value}",
+            "secret": false,
+            "help": "Fully-qualified resource ID of the resource link target."
           },
           {
             "name": "Notes",
             "type": "string",
             "format": "--notes {value}",
-            "help": "Notes for this link."
+            "secret": false,
+            "help": "Notes for the link."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -494,10 +739,18 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "LinkId",
+            "name": "Link",
             "type": "string",
-            "format": "--link-id {value}",
-            "help": "The fully qualified ID of the resource link. Use the format, /subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/{provider-namespace}/{resource-type}/{resource-name}/Microsoft.Resources/links/{link-name}. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+            "format": "--link {value}",
+            "secret": false,
+            "help": "Fully-qualified resource ID of the resource link."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -508,16 +761,25 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "FilterString",
+            "name": "Filter",
             "type": "string",
-            "format": "--filter-string {value}",
-            "help": "A filter for restricting the results."
+            "format": "--filter {value}",
+            "secret": false,
+            "help": "Filter string for limiting results."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
-            "help": "The scope for the links."
+            "secret": false,
+            "help": "Fully-qualified scope for retrieving links."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -528,10 +790,18 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "LinkId",
+            "name": "Link",
             "type": "string",
-            "format": "--link-id {value}",
-            "help": "The fully qualified Id of the resource link. For example, /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup/Microsoft.Web/sites/mySite/Microsoft.Resources/links/myLink."
+            "format": "--link {value}",
+            "secret": false,
+            "help": "Fully-qualified resource ID of the resource link."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -542,22 +812,32 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "LinkId",
+            "name": "Link",
             "type": "string",
-            "format": "--link-id {value}",
-            "help": ""
+            "format": "--link {value}",
+            "secret": false,
+            "help": "Fully-qualified resource ID of the resource link."
           },
           {
             "name": "Notes",
             "type": "string",
             "format": "--notes {value}",
-            "help": "Notes for this link."
+            "secret": false,
+            "help": "Notes for the link."
           },
           {
-            "name": "TargetId",
+            "name": "Target",
             "type": "string",
-            "format": "--target-id {value}",
-            "help": "The id of the resource link target."
+            "format": "--target {value}",
+            "secret": false,
+            "help": "Fully-qualified resource ID of the resource link target."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -571,49 +851,64 @@
             "name": "LockType",
             "type": "ResourceLockLockType",
             "format": "--lock-type {value}",
-            "help": ""
+            "secret": false,
+            "help": "The type of lock restriction."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
           },
           {
             "name": "Notes",
             "type": "string",
             "format": "--notes {value}",
+            "secret": false,
             "help": "Notes about this lock."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "If an ID is given, other resource arguments should not be given."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -628,43 +923,57 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "If an ID is given, other resource arguments should not be given."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -678,37 +987,50 @@
             "name": "FilterString",
             "type": "string",
             "format": "--filter-string {value}",
+            "secret": false,
             "help": "A query filter to use to restrict the results."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "If an ID is given, other resource arguments should not be given."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -723,43 +1045,57 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "If an ID is given, other resource arguments should not be given."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -774,55 +1110,71 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "LockType",
             "type": "ResourceLockLockType",
             "format": "--lock-type {value}",
-            "help": ""
+            "secret": false,
+            "help": "The type of lock restriction."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
           },
           {
             "name": "Notes",
             "type": "string",
             "format": "--notes {value}",
+            "secret": false,
             "help": "Notes about this lock."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "Provider namespace (Ex: 'Microsoft.Provider')."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "The parent path (Ex: 'resA/myA/resB/myB')."
           },
           {
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "If an ID is given, other resource arguments should not be given."
           },
           {
             "name": "ResourceType",
             "type": "string",
             "format": "--resource-type {value}",
+            "secret": false,
             "help": "The resource type (Ex: 'resC'). Can also accept namespace/type format (Ex: 'Microsoft.Provider/resC')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -833,30 +1185,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],

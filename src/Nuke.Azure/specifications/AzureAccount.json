@@ -1,15 +1,10 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/lock.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/management-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/account/management-group/subscription.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/account/lock.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/account/management-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/account/management-group/subscription.yml"
   ],
   "name": "AzureAccount",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest",
@@ -19,7 +14,17 @@
     {
       "postfix": "Clear",
       "definiteArgument": "account clear",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "GetAccessToken",
@@ -30,12 +35,14 @@
             "name": "Resource",
             "type": "string",
             "format": "--resource {value}",
+            "secret": false,
             "help": "Azure resource endpoints. Default to Azure Resource Manager Use 'az cloud show' command for other Azure resources."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "Name or ID of subscription."
           }
         ]
@@ -50,13 +57,22 @@
             "name": "All",
             "type": "string",
             "format": "--all {value}",
+            "secret": false,
             "help": "List all subscriptions, rather just 'Enabled' ones."
           },
           {
             "name": "Refresh",
             "type": "string",
             "format": "--refresh {value}",
+            "secret": false,
             "help": "Retrieve up-to-date subscriptions from server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -64,7 +80,17 @@
     {
       "postfix": "ListLocations",
       "definiteArgument": "account list-locations",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "Set",
@@ -75,6 +101,7 @@
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "Name or ID of subscription."
           }
         ]
@@ -89,12 +116,14 @@
             "name": "SdkAuth",
             "type": "string",
             "format": "--sdk-auth {value}",
-            "help": "Output result in compatible with Azure SDK auth file."
+            "secret": false,
+            "help": "Output result to a file compatible with Azure SDK auth. Only applicable when authenticating with a Service Principal."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "Name or ID of subscription."
           }
         ]
@@ -109,19 +138,29 @@
             "name": "LockType",
             "type": "AccountLockLockType",
             "format": "--lock-type {value}",
-            "help": ""
+            "secret": false,
+            "help": "The type of lock restriction."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
           },
           {
             "name": "Notes",
             "type": "string",
             "format": "--notes {value}",
+            "secret": false,
             "help": "Notes about this lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -136,13 +175,22 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -156,7 +204,15 @@
             "name": "FilterString",
             "type": "string",
             "format": "--filter-string {value}",
+            "secret": false,
             "help": "A query filter to use to restrict the results."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -171,13 +227,22 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -192,25 +257,36 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "One or more resource IDs (space-delimited). If provided, no other \"Resource Id\" arguments should be specified."
           },
           {
             "name": "LockType",
             "type": "AccountLockLockType",
             "format": "--lock-type {value}",
-            "help": ""
+            "secret": false,
+            "help": "The type of lock restriction."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the lock."
           },
           {
             "name": "Notes",
             "type": "string",
             "format": "--notes {value}",
+            "secret": false,
             "help": "Notes about this lock."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -224,19 +300,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the management group."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "Sets the display name of the management group. If null, the group name is set as the display name."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "Sets the parent of the management group. Can be the fully qualified id or the name of the management group. If null, the root tenant group is set as the parent."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -250,7 +336,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the management group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -258,7 +352,17 @@
     {
       "postfix": "ManagementGroupList",
       "definiteArgument": "account management-group list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "ManagementGroupShow",
@@ -269,19 +373,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the management group."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "If given, lists the children in the first level of hierarchy."
           },
           {
             "name": "Recurse",
             "type": "string",
             "format": "--recurse {value}",
+            "secret": false,
             "help": "If given, lists the children in all levels of hierarchy."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -295,43 +409,57 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the management group."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "Updates the display name of the management group. If null, no change is made."
           },
           {
             "name": "Parent",
             "type": "string",
             "format": "--parent {value}",
+            "secret": false,
             "help": "Update the parent of the management group. Can be the fully qualified id or the name of the management group. If null, no change is made."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -345,12 +473,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the management group."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "Subscription Id or Name."
           }
         ]
@@ -365,12 +495,14 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the management group."
           },
           {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
+            "secret": false,
             "help": "Subscription Id or Name."
           }
         ]
@@ -382,30 +514,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
