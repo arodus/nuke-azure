@@ -1,14 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/role.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/role/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/role/definition.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/role.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/role/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/role/definition.yml"
   ],
   "name": "AzureRole",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/role?view=azure-cli-latest",
@@ -29,31 +24,43 @@
             "name": "Role",
             "type": "string",
             "format": "--role {value}",
+            "secret": false,
             "help": "Role name or id."
           },
           {
             "name": "Assignee",
             "type": "string",
             "format": "--assignee {value}",
+            "secret": false,
             "help": "Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name."
           },
           {
             "name": "AssigneeObjectId",
             "type": "string",
             "format": "--assignee-object-id {value}",
-            "help": "Assignee's graph object id, such as the 'principal id' from a managed service identity. Use this instead of '--assignee' to bypass graph permission issues."
+            "secret": false,
+            "help": "Use this parameter instead of '--assignee' to bypass graph permission issues. This parameter only works with object ids for users, groups, service principals, and managed identities. For managed identities use the principal id. For service principals, use the object id and not the app id."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Use it only if the role or assignment was added at the level of a resource group."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -67,6 +74,7 @@
             "name": "Assignee",
             "type": "string",
             "format": "--assignee {value}",
+            "secret": false,
             "help": "Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name."
           },
           {
@@ -74,31 +82,50 @@
             "type": "List<string>",
             "format": "--ids {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated role assignment ids."
           },
           {
             "name": "IncludeInherited",
             "type": "string",
             "format": "--include-inherited {value}",
+            "secret": false,
             "help": "Include assignments applied on parent scopes."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Use it only if the role or assignment was added at the level of a resource group."
           },
           {
             "name": "Role",
             "type": "string",
             "format": "--role {value}",
+            "secret": false,
             "help": "Role name or id."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Continue to delete all assignments under the subscription."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -112,49 +139,64 @@
             "name": "All",
             "type": "string",
             "format": "--all {value}",
+            "secret": false,
             "help": "Show all assignments under the current subscription."
           },
           {
             "name": "Assignee",
             "type": "string",
             "format": "--assignee {value}",
+            "secret": false,
             "help": "Represent a user, group, or service principal. supported format: object id, user sign-in name, or service principal name."
           },
           {
             "name": "IncludeClassicAdministrators",
             "type": "bool",
             "format": "--include-classic-administrators",
+            "secret": false,
             "help": "List default role assignments for subscription classic administrators, aka co-admins."
           },
           {
             "name": "IncludeGroups",
             "type": "string",
             "format": "--include-groups {value}",
+            "secret": false,
             "help": "Include extra assignments to the groups of which the user is a member(transitively)."
           },
           {
             "name": "IncludeInherited",
             "type": "string",
             "format": "--include-inherited {value}",
+            "secret": false,
             "help": "Include assignments applied on parent scopes."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Use it only if the role or assignment was added at the level of a resource group."
           },
           {
             "name": "Role",
             "type": "string",
             "format": "--role {value}",
+            "secret": false,
             "help": "Role name or id."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -168,13 +210,22 @@
             "name": "EndTime",
             "type": "string",
             "format": "--end-time {value}",
+            "secret": false,
             "help": "The end time of the query in the format of %Y-%m-%dT%H:%M:%SZ, e.g. 2000-12-31T12:59:59Z. Defaults to the current time."
           },
           {
             "name": "StartTime",
             "type": "string",
             "format": "--start-time {value}",
+            "secret": false,
             "help": "The start time of the query in the format of %Y-%m-%dT%H:%M:%SZ, e.g. 2000-12-31T12:59:59Z. Defaults to 1 Hour prior to the current time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -188,7 +239,15 @@
             "name": "RoleDefinition",
             "type": "string",
             "format": "--role-definition {value}",
+            "secret": false,
             "help": "Description of a role as JSON, or a path to a file containing a JSON description."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -202,25 +261,36 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The role's name."
           },
           {
             "name": "CustomRoleOnly",
             "type": "bool",
             "format": "--custom-role-only",
+            "secret": false,
             "help": "Custom roles only(vs. build-in ones)."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Use it only if the role or assignment was added at the level of a resource group."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -234,25 +304,36 @@
             "name": "CustomRoleOnly",
             "type": "bool",
             "format": "--custom-role-only",
+            "secret": false,
             "help": "Custom roles only(vs. build-in ones)."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The role's name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Use it only if the role or assignment was added at the level of a resource group."
           },
           {
             "name": "Scope",
             "type": "string",
             "format": "--scope {value}",
+            "secret": false,
             "help": "Scope at which the role assignment or definition applies to, e.g., /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -266,7 +347,15 @@
             "name": "RoleDefinition",
             "type": "string",
             "format": "--role-definition {value}",
-            "help": "Description of a role as JSON, or a path to a file containing a JSON description."
+            "secret": false,
+            "help": "Description of an existing role as JSON, or a path to a file containing a JSON description."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -277,30 +366,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ]

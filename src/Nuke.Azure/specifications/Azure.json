@@ -1,12 +1,7 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/reference-index.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/reference-index.yml"
   ],
   "name": "Azure",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest",
@@ -24,7 +19,29 @@
             "format": "--defaults {value}",
             "itemFormat": "{key}={value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated 'name=value' pairs for common argument defaults."
+          },
+          {
+            "name": "ListDefaults",
+            "type": "bool",
+            "format": "--list-defaults",
+            "secret": false,
+            "help": "List all applicable defaults."
+          },
+          {
+            "name": "Scope",
+            "type": "ConfigureScope",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "Scope of defaults. Using \"local\" for settings only effective under current folder."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -32,7 +49,17 @@
     {
       "postfix": "Feedback",
       "definiteArgument": "feedback",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "Find",
@@ -40,16 +67,11 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "SearchQuery",
+            "name": "Subscription",
             "type": "string",
-            "format": "--search-query {value}",
-            "help": "Query text to find."
-          },
-          {
-            "name": "Reindex",
-            "type": "string",
-            "format": "--reindex {value}",
-            "help": "Clear the current index and reindex the command modules."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -63,13 +85,22 @@
             "name": "Style",
             "type": "InteractiveStyle",
             "format": "--style {value}",
+            "secret": false,
             "help": "The colors of the shell."
           },
           {
             "name": "Update",
             "type": "string",
             "format": "--update {value}",
+            "secret": false,
             "help": "Update the Interactive extension to the latest available."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -83,6 +114,7 @@
             "name": "AllowNoSubscriptions",
             "type": "bool",
             "format": "--allow-no-subscriptions",
+            "secret": false,
             "help": "Support access tenants without subscriptions. It's uncommon but useful to run tenant level commands, such as 'az ad'."
           },
           {
@@ -96,37 +128,50 @@
             "name": "ServicePrincipal",
             "type": "bool",
             "format": "--service-principal",
+            "secret": false,
             "help": "The credential representing a service principal."
           },
           {
             "name": "Tenant",
             "type": "string",
             "format": "--tenant {value}",
+            "secret": false,
             "help": "The AAD tenant, must provide when using service principals."
           },
           {
             "name": "UseCertSnIssuer",
             "type": "string",
             "format": "--use-cert-sn-issuer {value}",
+            "secret": false,
             "help": "Used with a service principal configured with Subject Name and Issuer Authentication in order to support automatic certificate rolls."
           },
           {
             "name": "UseDeviceCode",
             "type": "string",
             "format": "--use-device-code {value}",
+            "secret": false,
             "help": "Use CLI's old authentication flow based on device code. CLI will also use this if it can't launch a browser in your behalf, e.g. in remote SSH or Cloud Shell."
           },
           {
             "name": "Username",
             "type": "string",
             "format": "--username {value}",
+            "secret": false,
             "help": "User name, service principal, or managed service identity ID."
           },
           {
             "name": "Identity",
             "type": "bool",
             "format": "--identity",
+            "secret": false,
             "help": "Log in using the Virtual Machine's identity."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -140,7 +185,88 @@
             "name": "Username",
             "type": "string",
             "format": "--username {value}",
+            "secret": false,
             "help": "Account user, if missing, logout the current active account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Rest",
+      "definiteArgument": "rest",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Method",
+            "type": "RestMethod",
+            "format": "--method {value}",
+            "secret": false,
+            "help": "HTTP request method."
+          },
+          {
+            "name": "Uri",
+            "type": "string",
+            "format": "--uri {value}",
+            "secret": false,
+            "help": "Request uri. For uri without host, CLI will assume \"<a href=\"https://management.azure.com/\">https://management.azure.com/</a>\". Common tokens will also be replaced with real values including \"{subscriptionId}\"."
+          },
+          {
+            "name": "Body",
+            "type": "string",
+            "format": "--body {value}",
+            "secret": false,
+            "help": "Request body."
+          },
+          {
+            "name": "Headers",
+            "type": "List<string>",
+            "format": "--headers {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated headers in KEY=VALUE format or JSON string. Use @{file} to load from a file."
+          },
+          {
+            "name": "OutputFile",
+            "type": "string",
+            "format": "--output-file {value}",
+            "secret": false,
+            "help": "Save response payload to a file."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource url for which CLI should acquire a token in order to access the service. The token will be placed in the \"Authorization\" header. By default, CLI can figure this out based on \"--url\" argument, unless you use ones not in the list of \"az cloud show --query endpoints\"."
+          },
+          {
+            "name": "SkipAuthorizationHeader",
+            "type": "string",
+            "format": "--skip-authorization-header {value}",
+            "secret": false,
+            "help": "Do not auto append \"Authorization\" header."
+          },
+          {
+            "name": "UriParameters",
+            "type": "List<string>",
+            "format": "--uri-parameters {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated queries in KEY=VALUE format or JSON string. Use @{file} to load from a file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -148,7 +274,17 @@
     {
       "postfix": "SelfTest",
       "definiteArgument": "self-test",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -156,34 +292,46 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
   "enumerations": [
+    {
+      "name": "ConfigureScope",
+      "values": [
+        "global",
+        "local"
+      ]
+    },
     {
       "name": "InteractiveStyle",
       "values": [
@@ -199,6 +347,18 @@
         "primary",
         "purple",
         "quiet"
+      ]
+    },
+    {
+      "name": "RestMethod",
+      "values": [
+        "delete",
+        "get",
+        "head",
+        "options",
+        "patch",
+        "post",
+        "put"
       ]
     },
     {

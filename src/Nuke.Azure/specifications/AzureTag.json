@@ -1,12 +1,7 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/tag.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/tag.yml"
   ],
   "name": "AzureTag",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/tag?view=azure-cli-latest",
@@ -22,13 +17,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the tag."
           },
           {
             "name": "Value",
             "type": "string",
             "format": "--value {value}",
+            "secret": false,
             "help": "The value of the tag to create."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -42,7 +46,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the tag to create."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -56,7 +68,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the tag."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -64,7 +84,17 @@
     {
       "postfix": "List",
       "definiteArgument": "tag list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "RemoveValue",
@@ -75,13 +105,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the tag."
           },
           {
             "name": "Value",
             "type": "string",
             "format": "--value {value}",
+            "secret": false,
             "help": "The value of the tag to delete."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -92,30 +131,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ]

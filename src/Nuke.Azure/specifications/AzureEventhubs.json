@@ -1,22 +1,18 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/namespace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/eventhub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/georecovery-alias.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/namespace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/eventhub/consumer-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/namespace/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/eventhub/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/georecovery-alias/authorization-rule/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventhubs/namespace/authorization-rule/keys.yml"
   ],
   "name": "AzureEventhubs",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest",
@@ -37,79 +33,106 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Eventhub."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "EnableCapture",
             "type": "bool",
             "format": "--enable-capture",
+            "secret": false,
             "help": "A boolean value that indicates whether capture description is enabled."
           },
           {
             "name": "MessageRetention",
             "type": "int",
             "format": "--message-retention {value}",
-            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days."
+            "secret": false,
+            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days and depends on Namespace sku. if Namespace sku is Basic than value should be one and is Manadatory parameter. Namespace sku is standard value should be 1 to 7 days, default is 7 days and is optional parameter."
           },
           {
             "name": "PartitionCount",
             "type": "int",
             "format": "--partition-count {value}",
+            "secret": false,
             "help": "Number of partitions created for the Event Hub. By default, allowed values are 2-32. Lower value of 1 is supported with Kafka enabled namespaces. In presence of a custom quota, the upper limit will match the upper limit of the quota."
+          },
+          {
+            "name": "SkipEmptyArchives",
+            "type": "bool",
+            "format": "--skip-empty-archives",
+            "secret": false,
+            "help": "A boolean value that indicates whether to Skip Empty."
           },
           {
             "name": "Status",
             "type": "EventhubsEventhubStatus",
             "format": "--status {value}",
+            "secret": false,
             "help": "Status of Eventhub."
           },
           {
             "name": "CaptureInterval",
             "type": "string",
             "format": "--capture-interval {value}",
+            "secret": false,
             "help": "Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds."
           },
           {
             "name": "CaptureSizeLimit",
             "type": "string",
             "format": "--capture-size-limit {value}",
+            "secret": false,
             "help": "Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes."
           },
           {
             "name": "ArchiveNameFormat",
             "type": "string",
             "format": "--archive-name-format {value}",
+            "secret": false,
             "help": "Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order."
           },
           {
             "name": "BlobContainer",
             "type": "string",
             "format": "--blob-container {value}",
+            "secret": false,
             "help": "Blob container Name."
           },
           {
             "name": "DestinationName",
             "type": "string",
             "format": "--destination-name {value}",
+            "secret": false,
             "help": "Name for capture destination."
           },
           {
             "name": "StorageAccount",
             "type": "string",
             "format": "--storage-account {value}",
+            "secret": false,
             "help": "Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -120,22 +143,40 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Eventhub."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -149,25 +190,36 @@
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Skip",
             "type": "string",
             "format": "--skip {value}",
+            "secret": false,
             "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
           },
           {
             "name": "Top",
             "type": "string",
             "format": "--top {value}",
+            "secret": false,
             "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -178,22 +230,40 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Eventhub."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -204,105 +274,144 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Eventhub."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
             "name": "EnableCapture",
             "type": "bool",
             "format": "--enable-capture",
+            "secret": false,
             "help": "A boolean value that indicates whether capture description is enabled."
           },
           {
             "name": "MessageRetention",
             "type": "int",
             "format": "--message-retention {value}",
-            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days."
+            "secret": false,
+            "help": "Number of days to retain events for this Event Hub, value should be 1 to 7 days and depends on Namespace sku. if Namespace sku is Basic than value should be one and is Manadatory parameter. Namespace sku is standard value should be 1 to 7 days, default is 7 days and is optional parameter."
           },
           {
             "name": "PartitionCount",
             "type": "int",
             "format": "--partition-count {value}",
+            "secret": false,
             "help": "Number of partitions created for the Event Hub. By default, allowed values are 2-32. Lower value of 1 is supported with Kafka enabled namespaces. In presence of a custom quota, the upper limit will match the upper limit of the quota."
+          },
+          {
+            "name": "SkipEmptyArchives",
+            "type": "bool",
+            "format": "--skip-empty-archives",
+            "secret": false,
+            "help": "A boolean value that indicates whether to Skip Empty."
           },
           {
             "name": "Status",
             "type": "EventhubsEventhubStatus",
             "format": "--status {value}",
+            "secret": false,
             "help": "Status of Eventhub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of Eventhub."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "secret": false,
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "CaptureInterval",
             "type": "string",
             "format": "--capture-interval {value}",
+            "secret": false,
             "help": "Allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds."
           },
           {
             "name": "CaptureSizeLimit",
             "type": "string",
             "format": "--capture-size-limit {value}",
+            "secret": false,
             "help": "Defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes."
           },
           {
             "name": "ArchiveNameFormat",
             "type": "string",
             "format": "--archive-name-format {value}",
+            "secret": false,
             "help": "Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order."
           },
           {
             "name": "BlobContainer",
             "type": "string",
             "format": "--blob-container {value}",
+            "secret": false,
             "help": "Blob container Name."
           },
           {
             "name": "DestinationName",
             "type": "string",
             "format": "--destination-name {value}",
+            "secret": false,
             "help": "Name for capture destination."
           },
           {
             "name": "StorageAccount",
             "type": "string",
             "format": "--storage-account {value}",
+            "secret": false,
             "help": "Name (if within same resource group and not of type Classic Storage) or ARM id of the storage account to be used to create the blobs."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
@@ -317,19 +426,37 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -343,19 +470,37 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -369,19 +514,29 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo Recovery Configs - Alias to check availability."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -395,19 +550,37 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -421,13 +594,22 @@
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -438,34 +620,54 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Alias",
-            "type": "string",
-            "format": "--alias {value}",
-            "help": "Name of Geo-Disaster Recovery Configuration Alias."
-          },
-          {
-            "name": "NamespaceName",
-            "type": "string",
-            "format": "--namespace-name {value}",
-            "help": "Name of Namespace."
-          },
-          {
             "name": "PartnerNamespace",
             "type": "string",
             "format": "--partner-namespace {value}",
+            "secret": false,
             "help": "Name (if within the same resource group) or ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AlternateName",
             "type": "string",
             "format": "--alternate-name {value}",
+            "secret": false,
             "help": "Alternate Name for the Alias, when the Namespace name and Alias name are same."
+          },
+          {
+            "name": "Alias",
+            "type": "string",
+            "format": "--alias {value}",
+            "secret": false,
+            "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "secret": false,
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -479,19 +681,37 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -505,55 +725,78 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Capacity",
             "type": "string",
             "format": "--capacity {value}",
+            "secret": false,
             "help": "Capacity for Sku."
           },
           {
             "name": "EnableAutoInflate",
             "type": "bool",
             "format": "--enable-auto-inflate",
+            "secret": false,
             "help": "A boolean value that indicates whether AutoInflate is enabled for eventhub namespace."
           },
           {
             "name": "EnableKafka",
             "type": "bool",
             "format": "--enable-kafka",
+            "secret": false,
             "help": "A boolean value that indicates whether Kafka is enabled for eventhub namespace."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "MaximumThroughputUnits",
             "type": "string",
             "format": "--maximum-throughput-units {value}",
+            "secret": false,
             "help": "Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units. ( 0 if AutoInflateEnabled = true)."
           },
           {
             "name": "Sku",
             "type": "EventhubsNamespaceSku",
             "format": "--sku {value}",
-            "help": ""
+            "secret": false,
+            "help": "Namespace SKU."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "DefaultAction",
+            "type": "EventhubsNamespaceDefaultAction",
+            "format": "--default-action {value}",
+            "secret": false,
+            "help": "Default Action for Network Rule Set."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -564,16 +807,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -587,7 +847,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name to check the namespace name availability."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -601,7 +869,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -612,16 +888,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -632,75 +925,109 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of Namespace."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
             "name": "Capacity",
             "type": "string",
             "format": "--capacity {value}",
+            "secret": false,
             "help": "Capacity for Sku."
           },
           {
             "name": "EnableAutoInflate",
             "type": "bool",
             "format": "--enable-auto-inflate",
+            "secret": false,
             "help": "A boolean value that indicates whether AutoInflate is enabled for eventhub namespace."
           },
           {
             "name": "EnableKafka",
             "type": "bool",
             "format": "--enable-kafka",
+            "secret": false,
             "help": "A boolean value that indicates whether Kafka is enabled for eventhub namespace."
           },
           {
             "name": "MaximumThroughputUnits",
             "type": "string",
             "format": "--maximum-throughput-units {value}",
+            "secret": false,
             "help": "Upper limit of throughput units when AutoInflate is enabled, vaule should be within 0 to 20 throughput units. ( 0 if AutoInflateEnabled = true)."
           },
           {
             "name": "Sku",
             "type": "EventhubsNamespaceSku",
             "format": "--sku {value}",
-            "help": ""
+            "secret": false,
+            "help": "Namespace SKU."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "DefaultAction",
+            "type": "EventhubsNamespaceDefaultAction",
+            "format": "--default-action {value}",
+            "secret": false,
+            "help": "Default Action for Network Rule Set."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
@@ -715,24 +1042,28 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -740,7 +1071,15 @@
             "type": "List<EventhubsEventhubAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -754,25 +1093,44 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -786,19 +1144,29 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -812,25 +1180,44 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -841,58 +1228,82 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Rights",
+            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
@@ -907,31 +1318,43 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of ConsumerGroup."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "UserMetadata",
             "type": "string",
             "format": "--user-metadata {value}",
+            "secret": false,
             "help": "Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -945,25 +1368,44 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of ConsumerGroup."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -977,31 +1419,43 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Skip",
             "type": "string",
             "format": "--skip {value}",
+            "secret": false,
             "help": "Skip is only used if a previous operation returned a partial result. If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls."
           },
           {
             "name": "Top",
             "type": "string",
             "format": "--top {value}",
+            "secret": false,
             "help": "May be used to limit the number of results to the most recent N usageDetails."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1015,25 +1469,44 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of ConsumerGroup."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1044,57 +1517,81 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "UserMetadata",
+            "type": "string",
+            "format": "--user-metadata {value}",
+            "secret": false,
+            "help": "Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
+          },
+          {
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of ConsumerGroup."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "UserMetadata",
+            "name": "Subscription",
             "type": "string",
-            "format": "--user-metadata {value}",
-            "help": "Usermetadata is a placeholder to store user-defined string data with maximum length 1024. e.g. it can be used to store descriptive data, such as list of teams and their contact information also user-defined configuration settings can be stored."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
@@ -1109,19 +1606,29 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1135,25 +1642,44 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1167,18 +1693,21 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -1186,7 +1715,15 @@
             "type": "List<EventhubsEventhubAuthorizationRuleRights>",
             "format": "--rights {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1197,22 +1734,40 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1226,13 +1781,22 @@
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1243,22 +1807,40 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1269,53 +1851,219 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Rights",
+            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
+            "format": "--rights {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of Authorization rule rights."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Rights",
-            "type": "List<EventhubsEventhubAuthorizationRuleRights>",
-            "format": "--rights {value}",
-            "separator": " ",
-            "help": "Space-separated list of Authorization rule rights."
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceNetworkRuleAdd",
+      "definiteArgument": "eventhubs namespace network-rule add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "secret": false,
+            "help": "Name of the Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Action",
+            "type": "EventhubsNamespaceNetworkRuleAddAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Action of the IP rule."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "secret": false,
+            "help": "IPv4 address or CIDR range - 10.6.0.0/24."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "secret": false,
+            "help": "A boolean value that indicates whether to ignore missing vnet Service Endpoint."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "secret": false,
+            "help": "Name of the Virtual Network."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceNetworkRuleList",
+      "definiteArgument": "eventhubs namespace network-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "secret": false,
+            "help": "Name of the Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NamespaceNetworkRuleRemove",
+      "definiteArgument": "eventhubs namespace network-rule remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NamespaceName",
+            "type": "string",
+            "format": "--namespace-name {value}",
+            "secret": false,
+            "help": "Name of the Namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "secret": false,
+            "help": "IPv4 address or CIDR range - 10.6.0.0/24."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "secret": false,
+            "help": "Name of the Virtual Network."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1329,25 +2077,36 @@
             "name": "EventhubName",
             "type": "string",
             "format": "--eventhub-name {value}",
+            "secret": false,
             "help": "Name of EventHub."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1358,40 +2117,61 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "EventhubName",
-            "type": "string",
-            "format": "--eventhub-name {value}",
-            "help": "Name of EventHub."
-          },
-          {
             "name": "Key",
             "type": "EventhubsEventhubAuthorizationRuleKeysKey",
             "format": "--key {value}",
+            "secret": false,
             "help": "Specifies Primary or Secondary key needs to be reset."
+          },
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "secret": false,
+            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          },
+          {
+            "name": "EventhubName",
+            "type": "string",
+            "format": "--eventhub-name {value}",
+            "secret": false,
+            "help": "Name of EventHub."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of EventHub AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "KeyValue",
+            "name": "Subscription",
             "type": "string",
-            "format": "--key-value {value}",
-            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1405,25 +2185,36 @@
             "name": "Alias",
             "type": "string",
             "format": "--alias {value}",
+            "secret": false,
             "help": "Name of Geo-Disaster Recovery Configuration Alias."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1437,19 +2228,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1463,31 +2264,51 @@
             "name": "Key",
             "type": "EventhubsEventhubAuthorizationRuleKeysKey",
             "format": "--key {value}",
+            "secret": false,
             "help": "Specifies Primary or Secondary key needs to be reset."
+          },
+          {
+            "name": "KeyValue",
+            "type": "string",
+            "format": "--key-value {value}",
+            "secret": false,
+            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of Namespace AuthorizationRule."
           },
           {
             "name": "NamespaceName",
             "type": "string",
             "format": "--namespace-name {value}",
+            "secret": false,
             "help": "Name of Namespace."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "KeyValue",
+            "name": "Subscription",
             "type": "string",
-            "format": "--key-value {value}",
-            "help": "Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1498,30 +2319,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -1543,11 +2369,24 @@
       ]
     },
     {
+      "name": "EventhubsNamespaceDefaultAction",
+      "values": [
+        "allow",
+        "deny"
+      ]
+    },
+    {
       "name": "EventhubsEventhubAuthorizationRuleRights",
       "values": [
         "listen",
         "manage",
         "send"
+      ]
+    },
+    {
+      "name": "EventhubsNamespaceNetworkRuleAddAction",
+      "values": [
+        "allow"
       ]
     },
     {

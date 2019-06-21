@@ -1,12 +1,10 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image/template.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image/template/customizer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image/template/output.yml"
   ],
   "name": "AzureImage",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest",
@@ -22,18 +20,21 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "New image name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Source",
             "type": "string",
             "format": "--source {value}",
+            "secret": false,
             "help": "OS disk source from the same region, including a virtual machine ID or name, OS disk blob URI, managed OS disk ID or name, or OS snapshot ID or name."
           },
           {
@@ -41,37 +42,64 @@
             "type": "List<string>",
             "format": "--data-disk-sources {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated list of data disk sources, including unmanaged blob URI, managed disk ID or name, or snapshot ID or name."
+          },
+          {
+            "name": "HyperVGeneration",
+            "type": "ImageCreateHyperVGeneration",
+            "format": "--hyper-v-generation {value}",
+            "secret": false,
+            "help": "The hypervisor generation of the Virtual Machine created from the image."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "OsDiskCaching",
+            "type": "ImageCreateOsDiskCaching",
+            "format": "--os-disk-caching {value}",
+            "secret": false,
+            "help": "Storage caching type for the image's OS disk."
           },
           {
             "name": "OsType",
             "type": "ImageCreateOsType",
             "format": "--os-type {value}",
+            "secret": false,
             "help": ""
           },
           {
             "name": "StorageSku",
             "type": "ImageCreateStorageSku",
             "format": "--storage-sku {value}",
+            "secret": false,
             "help": "The SKU of the storage account with which to create the VM image. Unused if source VM is specified."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "ZoneResilient",
             "type": "bool",
             "format": "--zone-resilient",
+            "secret": false,
             "help": "Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -82,16 +110,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the image."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -105,7 +150,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -116,22 +169,961 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Expand",
+            "type": "string",
+            "format": "--expand {value}",
+            "secret": false,
+            "help": "The expand expression to apply on the operation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the image."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Expand",
+            "name": "Subscription",
             "type": "string",
-            "format": "--expand {value}",
-            "help": "The expand expression to apply on the operation."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "image update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateCreate",
+      "definiteArgument": "image template create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "BuildTimeout",
+            "type": "string",
+            "format": "--build-timeout {value}",
+            "secret": false,
+            "help": "The Maximum duration to wait while building the image template, in minutes. Default is 60."
+          },
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Scripts",
+            "type": "List<string>",
+            "format": "--scripts {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of shell or powershell scripts to customize the image with. Each script must be a publicly accessible URL. Infers type of script from file extension ('.sh' or'.ps1') or from source type. More more customizer options and flexibility, see: 'az image template customizer add'."
+          },
+          {
+            "name": "Checksum",
+            "type": "string",
+            "format": "--checksum {value}",
+            "secret": false,
+            "help": "The SHA256 checksum of the Red Hat ISO image."
+          },
+          {
+            "name": "ImageSource",
+            "type": "string",
+            "format": "--image-source {value}",
+            "secret": false,
+            "help": "The base image to customize. Must be a valid platform image URN, platform image alias, Red Hat ISO image URI, managed image name/ID, or shared image version ID."
+          },
+          {
+            "name": "ManagedImageDestinations",
+            "type": "string",
+            "format": "--managed-image-destinations {value}",
+            "secret": false,
+            "help": "Managed image output distributor information. Space-separated list of key-value pairs. E.g \"image_1=westus2 image_2=westus\". Each key is the name or resource ID of the managed image to be created. Each value is the location of the image."
+          },
+          {
+            "name": "SharedImageDestinations",
+            "type": "string",
+            "format": "--shared-image-destinations {value}",
+            "secret": false,
+            "help": "Shared image gallery (sig) output distributor information. Space-separated list of key-value pairs. E.g \"my_gallery_1/image_def_1=eastus,westus  my_gallery_2/image_def_2=uksouth,canadaeast,francesouth.\" Each key is the sig image definition ID or sig gallery name and sig image definition delimited by a \"/\". Each value is a comma-delimited list of replica locations."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateDelete",
+      "definiteArgument": "image template delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateList",
+      "definiteArgument": "image template list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateRun",
+      "definiteArgument": "image template run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateShow",
+      "definiteArgument": "image template show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateShowRuns",
+      "definiteArgument": "image template show-runs",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "OutputName",
+            "type": "string",
+            "format": "--output-name {value}",
+            "secret": false,
+            "help": "Name of the image builder run output."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateUpdate",
+      "definiteArgument": "image template update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateWait",
+      "definiteArgument": "image template wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Created",
+            "type": "string",
+            "format": "--created {value}",
+            "secret": false,
+            "help": "Wait until created with 'provisioningState' at 'Succeeded'."
+          },
+          {
+            "name": "Custom",
+            "type": "string",
+            "format": "--custom {value}",
+            "secret": false,
+            "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
+          },
+          {
+            "name": "Deleted",
+            "type": "string",
+            "format": "--deleted {value}",
+            "secret": false,
+            "help": "Wait until deleted."
+          },
+          {
+            "name": "Exists",
+            "type": "string",
+            "format": "--exists {value}",
+            "secret": false,
+            "help": "Wait until the resource exists."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "secret": false,
+            "help": "Polling interval in seconds."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "secret": false,
+            "help": "Maximum wait in seconds."
+          },
+          {
+            "name": "Updated",
+            "type": "string",
+            "format": "--updated {value}",
+            "secret": false,
+            "help": "Wait until updated with provisioningState at 'Succeeded'."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateCustomizerAdd",
+      "definiteArgument": "image template customizer add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CustomizerName",
+            "type": "string",
+            "format": "--customizer-name {value}",
+            "secret": false,
+            "help": "Name of the customizer."
+          },
+          {
+            "name": "Type",
+            "type": "ImageTemplateCustomizerAddType",
+            "format": "--type {value}",
+            "secret": false,
+            "help": "Type of customizer to be added to the image template."
+          },
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "DestPath",
+            "type": "string",
+            "format": "--dest-path {value}",
+            "secret": false,
+            "help": "The absolute destination path where the file specified in --file-source will be downloaded to in the image."
+          },
+          {
+            "name": "FileSource",
+            "type": "string",
+            "format": "--file-source {value}",
+            "secret": false,
+            "help": "The URI of the file to be downloaded into the image. It can be a github link, SAS URI for Azure Storage, etc."
+          },
+          {
+            "name": "ExitCodes",
+            "type": "List<string>",
+            "format": "--exit-codes {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of valid exit codes, as integers."
+          },
+          {
+            "name": "InlineScript",
+            "type": "List<string>",
+            "format": "--inline-script {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of inline script lines to customize the image with."
+          },
+          {
+            "name": "ScriptUrl",
+            "type": "string",
+            "format": "--script-url {value}",
+            "secret": false,
+            "help": "URL of script to customize the image with. The URL must be publicly accessible."
+          },
+          {
+            "name": "RestartCheckCommand",
+            "type": "string",
+            "format": "--restart-check-command {value}",
+            "secret": false,
+            "help": "Command to verify that restart succeeded."
+          },
+          {
+            "name": "RestartCommand",
+            "type": "string",
+            "format": "--restart-command {value}",
+            "secret": false,
+            "help": "Command to execute the restart operation."
+          },
+          {
+            "name": "RestartTimeout",
+            "type": "string",
+            "format": "--restart-timeout {value}",
+            "secret": false,
+            "help": "Restart timeout specified as a string consisting of a magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours)."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateCustomizerClear",
+      "definiteArgument": "image template customizer clear",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateCustomizerRemove",
+      "definiteArgument": "image template customizer remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CustomizerName",
+            "type": "string",
+            "format": "--customizer-name {value}",
+            "secret": false,
+            "help": "Name of the customizer."
+          },
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateOutputAdd",
+      "definiteArgument": "image template output add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ArtifactTags",
+            "type": "string",
+            "format": "--artifact-tags {value}",
+            "secret": false,
+            "help": "Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "OutputName",
+            "type": "string",
+            "format": "--output-name {value}",
+            "secret": false,
+            "help": "Name of the image builder run output. Defaults to the name of the managed image or sig image definition."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "ManagedImage",
+            "type": "string",
+            "format": "--managed-image {value}",
+            "secret": false,
+            "help": "Name or ID of the customized managed image to be created."
+          },
+          {
+            "name": "ManagedImageLocation",
+            "type": "string",
+            "format": "--managed-image-location {value}",
+            "secret": false,
+            "help": "Location where the customized image will be created. Defaults to resource group's location."
+          },
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "secret": false,
+            "help": "Name or ID of the existing SIG image definition to create the customized image version with."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "secret": false,
+            "help": "Shared image gallery name, if image definition name and not ID was provided."
+          },
+          {
+            "name": "GalleryReplicationRegions",
+            "type": "List<string>",
+            "format": "--gallery-replication-regions {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of regions to replicate the image version into. Defaults to resource group's location."
+          },
+          {
+            "name": "IsVhd",
+            "type": "string",
+            "format": "--is-vhd {value}",
+            "secret": false,
+            "help": "The output is a VHD distributor."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateOutputClear",
+      "definiteArgument": "image template output clear",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateOutputRemove",
+      "definiteArgument": "image template output remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "OutputName",
+            "type": "string",
+            "format": "--output-name {value}",
+            "secret": false,
+            "help": "Name of the image builder run output."
+          },
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -142,34 +1134,54 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
   "enumerations": [
+    {
+      "name": "ImageCreateHyperVGeneration",
+      "values": [
+        "v1",
+        "v2"
+      ]
+    },
+    {
+      "name": "ImageCreateOsDiskCaching",
+      "values": [
+        "none",
+        "readonly",
+        "readwrite"
+      ]
+    },
     {
       "name": "ImageCreateOsType",
       "values": [
@@ -184,6 +1196,15 @@
         "standardssd_lrs",
         "standard_lrs",
         "ultrassd_lrs"
+      ]
+    },
+    {
+      "name": "ImageTemplateCustomizerAddType",
+      "values": [
+        "file",
+        "powershell",
+        "shell",
+        "windows-restart"
       ]
     }
   ]

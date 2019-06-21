@@ -1,13 +1,8 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/provider.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/provider/operation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/provider.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/provider/operation.yml"
   ],
   "name": "AzureProvider",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/provider?view=azure-cli-latest",
@@ -23,7 +18,15 @@
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "The properties to include in the results. For example, use &amp;$expand=metadata in the query string to retrieve resource provider metadata. To include property aliases in response, use $expand=resourceTypes/aliases."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -37,13 +40,22 @@
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "The resource namespace, aka 'provider'."
           },
           {
             "name": "Wait",
             "type": "string",
             "format": "--wait {value}",
+            "secret": false,
             "help": "Wait for the registration to finish."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -57,13 +69,22 @@
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "The resource namespace, aka 'provider'."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "The $expand query parameter. For example, to include property aliases in response, use $expand=resourceTypes/aliases."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -77,13 +98,22 @@
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "The resource namespace, aka 'provider'."
           },
           {
             "name": "Wait",
             "type": "string",
             "format": "--wait {value}",
+            "secret": false,
             "help": "Wait for unregistration to finish."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -91,7 +121,17 @@
     {
       "postfix": "OperationList",
       "definiteArgument": "provider operation list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "OperationShow",
@@ -102,7 +142,15 @@
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
+            "secret": false,
             "help": "The resource namespace, aka 'provider'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -113,30 +161,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ]

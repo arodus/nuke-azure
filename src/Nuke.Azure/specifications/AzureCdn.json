@@ -1,17 +1,12 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/custom-domain.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/edge-node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/endpoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/origin.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/cdn/profile.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/custom-domain.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/edge-node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/origin.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/profile.yml"
   ],
   "name": "AzureCdn",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest",
@@ -24,10 +19,26 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The resource name to validate."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -35,7 +46,17 @@
     {
       "postfix": "Usage",
       "definiteArgument": "cdn usage",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "CustomDomainCreate",
@@ -46,43 +67,57 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
             "name": "Hostname",
             "type": "string",
             "format": "--hostname {value}",
+            "secret": false,
             "help": "The host name of the custom domain. Must be a domain name."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the custom domain."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -96,25 +131,36 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the custom domain."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -128,25 +174,36 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the custom domain."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -160,25 +217,43 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the custom domain."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "CustomDomainHttpsParameters",
+            "type": "string",
+            "format": "--custom-domain-https-parameters {value}",
+            "secret": false,
+            "help": "The configuration specifying how to enable HTTPS for the custom domain - using CDN managed certificate or user's own certificate. If not specified, enabling ssl uses CDN managed certificate by default."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -192,19 +267,29 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -218,25 +303,36 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the custom domain."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -244,7 +340,17 @@
     {
       "postfix": "EdgeNodeList",
       "definiteArgument": "cdn edge-node list",
-      "settingsClass": {}
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "EndpointCreate",
@@ -255,79 +361,106 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "Origin",
             "type": "string",
             "format": "--origin {value}",
+            "secret": false,
             "help": "Endpoint origin specified by the following space-delimited 3 tuple: `www.example.com http_port https_port`. The HTTP and HTTPsports are optional and will default to 80 and 443 respectively."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ContentTypesToCompress",
             "type": "string",
             "format": "--content-types-to-compress {value}",
+            "secret": false,
             "help": "List of content types on which compression applies. The value should be a valid MIME type."
           },
           {
             "name": "EnableCompression",
             "type": "bool",
             "format": "--enable-compression",
+            "secret": false,
             "help": "If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "NoHttp",
             "type": "bool",
             "format": "--no-http",
+            "secret": false,
             "help": "Indicates whether HTTP traffic is not allowed on the endpoint. Default is to allow HTTP traffic."
           },
           {
             "name": "NoHttps",
             "type": "bool",
             "format": "--no-https",
+            "secret": false,
             "help": "Indicates whether HTTPS traffic is not allowed on the endpoint. Default is to allow HTTPS traffic."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "OriginHostHeader",
             "type": "string",
             "format": "--origin-host-header {value}",
+            "secret": false,
             "help": "The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default."
           },
           {
             "name": "OriginPath",
             "type": "string",
             "format": "--origin-path {value}",
-            "help": "A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath."
+            "secret": false,
+            "help": "A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath."
           },
           {
             "name": "QueryStringCaching",
             "type": "CdnEndpointQueryStringCaching",
             "format": "--query-string-caching {value}",
+            "secret": false,
             "help": "Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -338,22 +471,47 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -367,13 +525,22 @@
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -387,25 +554,51 @@
             "name": "ContentPaths",
             "type": "string",
             "format": "--content-paths {value}",
+            "secret": false,
             "help": "The path to the content to be loaded. Path should be a relative file URL of the origin."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -419,25 +612,51 @@
             "name": "ContentPaths",
             "type": "string",
             "format": "--content-paths {value}",
+            "secret": false,
             "help": "The path to the content to be purged. Can describe a file path or a wild card directory."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -448,22 +667,40 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -474,22 +711,47 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -500,22 +762,47 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -526,93 +813,130 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the CDN endpoint."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
             "name": "ContentTypesToCompress",
             "type": "string",
             "format": "--content-types-to-compress {value}",
+            "secret": false,
             "help": "List of content types on which compression applies. The value should be a valid MIME type."
           },
           {
             "name": "EnableCompression",
             "type": "bool",
             "format": "--enable-compression",
+            "secret": false,
             "help": "If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB."
           },
           {
             "name": "NoHttp",
             "type": "bool",
             "format": "--no-http",
+            "secret": false,
             "help": "Indicates whether HTTP traffic is not allowed on the endpoint. Default is to allow HTTP traffic."
           },
           {
             "name": "NoHttps",
             "type": "bool",
             "format": "--no-https",
+            "secret": false,
             "help": "Indicates whether HTTPS traffic is not allowed on the endpoint. Default is to allow HTTPS traffic."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "OriginHostHeader",
             "type": "string",
             "format": "--origin-host-header {value}",
+            "secret": false,
             "help": "The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default."
           },
           {
             "name": "OriginPath",
             "type": "string",
             "format": "--origin-path {value}",
-            "help": "A directory path on the origin that CDN can use to retreive content from, e.g. contoso.cloudapp.net/originpath."
+            "secret": false,
+            "help": "A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath."
           },
           {
             "name": "QueryStringCaching",
             "type": "CdnEndpointQueryStringCaching",
             "format": "--query-string-caching {value}",
+            "secret": false,
             "help": "Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the CDN endpoint."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "secret": false,
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
@@ -627,25 +951,44 @@
             "name": "HostName",
             "type": "string",
             "format": "--host-name {value}",
+            "secret": false,
             "help": "The host name of the custom domain. Must be a domain name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -659,19 +1002,29 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -685,25 +1038,44 @@
             "name": "EndpointName",
             "type": "string",
             "format": "--endpoint-name {value}",
+            "secret": false,
             "help": "Name of the endpoint under the profile which is unique globally."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the origin which is unique within the endpoint."
           },
           {
             "name": "ProfileName",
             "type": "string",
             "format": "--profile-name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the origin which is unique within the endpoint."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -717,31 +1089,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Sku",
             "type": "CdnProfileCreateSku",
             "format": "--sku {value}",
+            "secret": false,
             "help": "The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -752,16 +1136,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -775,7 +1176,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -786,16 +1195,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -806,45 +1232,67 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Tags",
+            "name": "Subscription",
             "type": "string",
-            "format": "--tags {value}",
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
@@ -856,16 +1304,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the CDN profile which is unique within the resource group."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -876,30 +1341,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -920,6 +1390,7 @@
         "premium_verizon",
         "standard_akamai",
         "standard_chinacdn",
+        "standard_microsoft",
         "standard_verizon"
       ]
     }

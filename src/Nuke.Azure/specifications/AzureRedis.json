@@ -1,13 +1,10 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/redis.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/redis/patch-schedule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/redis.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/redis/firewall-rules.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/redis/patch-schedule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/redis/server-link.yml"
   ],
   "name": "AzureRedis",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest",
@@ -23,73 +20,108 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
-            "help": "The primary resource name."
+            "secret": false,
+            "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Sku",
             "type": "RedisSku",
             "format": "--sku {value}",
+            "secret": false,
             "help": "Type of Redis cache."
           },
           {
             "name": "VmSize",
-            "type": "string",
+            "type": "RedisVmSize",
             "format": "--vm-size {value}",
-            "help": "Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4)."
+            "secret": false,
+            "help": "Size of Redis cache to deploy. Basic and Standard Cache sizes start with C. Premium Cache sizes start with P."
           },
           {
             "name": "EnableNonSslPort",
             "type": "string",
             "format": "--enable-non-ssl-port {value}",
+            "secret": false,
             "help": "If the value is true, then the non-ssl redis server port (6379) will be enabled."
+          },
+          {
+            "name": "MinimumTlsVersion",
+            "type": "RedisCreateMinimumTlsVersion",
+            "format": "--minimum-tls-version {value}",
+            "secret": false,
+            "help": "Specifies the TLS version required by clients to connect to cache."
           },
           {
             "name": "RedisConfiguration",
             "type": "string",
             "format": "--redis-configuration {value}",
+            "secret": false,
             "help": "JSON encoded configuration settings. Use @{file} to load from a file."
           },
           {
             "name": "ShardCount",
             "type": "string",
             "format": "--shard-count {value}",
+            "secret": false,
             "help": "The number of shards to be created on a Premium Cluster Cache."
           },
           {
             "name": "StaticIp",
             "type": "string",
             "format": "--static-ip {value}",
-            "help": "Required when deploying a redis cache inside an existing Azure Virtual Network."
+            "secret": false,
+            "help": "Specify a static ip if required for the VNET. If you do not specify a static IP then an IP address is chosen automatically."
           },
           {
             "name": "SubnetId",
             "type": "string",
             "format": "--subnet-id {value}",
+            "secret": false,
             "help": "The full resource ID of a subnet in a virtual network to deploy the redis cache in. Example format /subscriptions/{subid}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "TenantSettings",
-            "type": "string",
+            "type": "List<string>",
             "format": "--tenant-settings {value}",
-            "help": "Json dictionary with tenant settings."
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated tenant settings in key[=value] format."
+          },
+          {
+            "name": "Zones",
+            "type": "List<RedisCreateZones>",
+            "format": "--zones {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of availability zones into which to provision the resource."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -100,16 +132,40 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -123,31 +179,51 @@
             "name": "Container",
             "type": "string",
             "format": "--container {value}",
-            "help": "Container name to export to."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Redis cache."
+            "secret": false,
+            "help": "SAS url for container where data needs to be exported to."
           },
           {
             "name": "Prefix",
             "type": "string",
             "format": "--prefix {value}",
+            "secret": false,
             "help": "Prefix to use for exported files."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "FileFormat",
             "type": "string",
             "format": "--file-format {value}",
-            "help": "File format to export."
+            "secret": false,
+            "help": "Format of the blob (Currently rdb is the only supported format, with other formats expected in the future)."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -158,28 +234,47 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Redis cache."
-          },
-          {
             "name": "RebootType",
             "type": "RedisForceRebootRebootType",
             "format": "--reboot-type {value}",
+            "secret": false,
             "help": "Which Redis node(s) to reboot. Depending on this value data loss is possible."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ShardId",
             "type": "string",
             "format": "--shard-id {value}",
+            "secret": false,
             "help": "If clustering is enabled, the ID of the shard to be rebooted."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -190,29 +285,47 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Files",
+            "type": "string",
+            "format": "--files {value}",
+            "secret": false,
+            "help": "SAS url for blobs that needs to be imported."
+          },
+          {
             "name": "FileFormat",
             "type": "string",
             "format": "--file-format {value}",
-            "help": "File format to import."
+            "secret": false,
+            "help": "Format of the blob (Currently rdb is the only supported format, with other formats expected in the future)."
           },
           {
-            "name": "Files",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--files {value}",
+            "format": "--ids {value}",
             "separator": " ",
-            "help": "Space-separated list of files to import."
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -223,29 +336,47 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Files",
+            "type": "string",
+            "format": "--files {value}",
+            "secret": false,
+            "help": "SAS url for blobs that needs to be imported."
+          },
+          {
             "name": "FileFormat",
             "type": "string",
             "format": "--file-format {value}",
-            "help": "File format to import."
+            "secret": false,
+            "help": "Format of the blob (Currently rdb is the only supported format, with other formats expected in the future)."
           },
           {
-            "name": "Files",
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--files {value}",
+            "format": "--ids {value}",
             "separator": " ",
-            "help": "Space-separated list of files to import."
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -259,15 +390,18 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
-    },
-    {
-      "postfix": "ListAll",
-      "definiteArgument": "redis list-all",
-      "settingsClass": {}
     },
     {
       "postfix": "ListKeys",
@@ -275,16 +409,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -298,19 +449,37 @@
             "name": "KeyType",
             "type": "RedisRegenerateKeysKeyType",
             "format": "--key-type {value}",
+            "secret": false,
             "help": "The Redis access key to regenerate."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -321,16 +490,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -341,78 +527,336 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Sku",
+            "type": "RedisSku",
+            "format": "--sku {value}",
+            "secret": false,
+            "help": "Type of Redis cache."
+          },
+          {
+            "name": "VmSize",
+            "type": "RedisVmSize",
+            "format": "--vm-size {value}",
+            "secret": false,
+            "help": "Size of Redis cache to deploy. Basic and Standard Cache sizes start with C. Premium Cache sizes start with P."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Sku",
-            "type": "RedisSku",
-            "format": "--sku {value}",
-            "help": "Type of Redis cache."
-          },
-          {
-            "name": "VmSize",
+            "name": "Subscription",
             "type": "string",
-            "format": "--vm-size {value}",
-            "help": "Size of Redis cache to deploy. Example : values for C family (C0, C1, C2, C3, C4, C5, C6). For P family (P1, P2, P3, P4)."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           },
           {
             "name": "Add",
             "type": "string",
             "format": "--add {value}",
+            "secret": false,
             "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
           },
           {
             "name": "ForceString",
             "type": "string",
             "format": "--force-string {value}",
+            "secret": false,
             "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
           },
           {
             "name": "Remove",
             "type": "string",
             "format": "--remove {value}",
+            "secret": false,
             "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
           },
           {
             "name": "Set",
             "type": "string",
             "format": "--set {value}",
+            "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
     },
     {
-      "postfix": "UpdateSettings",
-      "definiteArgument": "redis update-settings",
+      "postfix": "FirewallRulesCreate",
+      "definiteArgument": "redis firewall-rules create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndIp",
+            "type": "string",
+            "format": "--end-ip {value}",
+            "secret": false,
+            "help": "Highest IP address included in the range."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "StartIp",
+            "type": "string",
+            "format": "--start-ip {value}",
+            "secret": false,
+            "help": "Lowest IP address included in the range."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FirewallRulesDelete",
+      "definiteArgument": "redis firewall-rules delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FirewallRulesList",
+      "definiteArgument": "redis firewall-rules list",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
-          },
-          {
-            "name": "RedisConfiguration",
-            "type": "string",
-            "format": "--redis-configuration {value}",
-            "help": "JSON encoded configuration settings. Use @{file} to load from a file."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FirewallRulesShow",
+      "definiteArgument": "redis firewall-rules show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FirewallRulesUpdate",
+      "definiteArgument": "redis firewall-rules update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EndIp",
+            "type": "string",
+            "format": "--end-ip {value}",
+            "secret": false,
+            "help": "Highest IP address included in the range."
+          },
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "StartIp",
+            "type": "string",
+            "format": "--start-ip {value}",
+            "secret": false,
+            "help": "Lowest IP address included in the range."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PatchScheduleCreate",
+      "definiteArgument": "redis patch-schedule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ScheduleEntries",
+            "type": "string",
+            "format": "--schedule-entries {value}",
+            "secret": false,
+            "help": "List of Patch schedule entries. Example Value:[{\"dayOfWeek\":\"Monday\",\"startHourUtc\":\"00\",\"maintenanceWindow\":\"PT5H\"}]."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -426,39 +870,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PatchScheduleSet",
-      "definiteArgument": "redis patch-schedule set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "help": "Name of the Redis cache."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "ScheduleEntries",
+            "name": "Subscription",
             "type": "string",
-            "format": "--schedule-entries {value}",
-            "help": "List of patch schedules for a Redis cache."
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -472,13 +899,202 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Redis cache."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PatchScheduleUpdate",
+      "definiteArgument": "redis patch-schedule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ScheduleEntries",
+            "type": "string",
+            "format": "--schedule-entries {value}",
+            "secret": false,
+            "help": "List of Patch schedule entries. Example Value:[{\"dayOfWeek\":\"Monday\",\"startHourUtc\":\"00\",\"maintenanceWindow\":\"PT5H\"}]."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLinkCreate",
+      "definiteArgument": "redis server-link create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ReplicationRole",
+            "type": "RedisRegenerateKeysKeyType",
+            "format": "--replication-role {value}",
+            "secret": false,
+            "help": "Role of the redis cache to be linked."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerToLink",
+            "type": "string",
+            "format": "--server-to-link {value}",
+            "secret": false,
+            "help": "Resource ID or name of the redis cache to be linked."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLinkDelete",
+      "definiteArgument": "redis server-link delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkedServerName",
+            "type": "string",
+            "format": "--linked-server-name {value}",
+            "secret": false,
+            "help": "Name of the linked redis cache."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLinkList",
+      "definiteArgument": "redis server-link list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLinkShow",
+      "definiteArgument": "redis server-link show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "LinkedServerName",
+            "type": "string",
+            "format": "--linked-server-name {value}",
+            "secret": false,
+            "help": "Name of the linked redis cache."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Redis cache."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -489,30 +1105,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -523,6 +1144,39 @@
         "basic",
         "premium",
         "standard"
+      ]
+    },
+    {
+      "name": "RedisVmSize",
+      "values": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+      ]
+    },
+    {
+      "name": "RedisCreateMinimumTlsVersion",
+      "values": [
+        "1.0",
+        "1.1",
+        "1.2"
+      ]
+    },
+    {
+      "name": "RedisCreateZones",
+      "values": [
+        "1",
+        "2",
+        "3"
       ]
     },
     {

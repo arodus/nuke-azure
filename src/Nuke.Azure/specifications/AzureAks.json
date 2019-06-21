@@ -1,12 +1,7 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/aks.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/aks.yml"
   ],
   "name": "AzureAks",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest",
@@ -22,25 +17,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "DisableBrowser",
             "type": "string",
             "format": "--disable-browser {value}",
+            "secret": false,
             "help": "Don't launch a web browser after establishing port-forwarding."
+          },
+          {
+            "name": "ListenAddress",
+            "type": "string",
+            "format": "--listen-address {value}",
+            "secret": false,
+            "help": "The listening address for the dashboard."
           },
           {
             "name": "ListenPort",
             "type": "string",
             "format": "--listen-port {value}",
+            "secret": false,
             "help": "The listening port for the dashboard."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -54,43 +67,49 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AadClientAppId",
             "type": "string",
             "format": "--aad-client-app-id {value}",
-            "help": "(PREVIEW) The ID of an Azure Active Directory client application of type \"Native\". This application is for user login via kubectl."
+            "secret": false,
+            "help": "The ID of an Azure Active Directory client application of type \"Native\". This application is for user login via kubectl."
           },
           {
             "name": "AadServerAppId",
             "type": "string",
             "format": "--aad-server-app-id {value}",
-            "help": "(PREVIEW) The ID of an Azure Active Directory server application of type \"Web app/API\". This application represents the managed cluster's apiserver (Server application)."
+            "secret": false,
+            "help": "The ID of an Azure Active Directory server application of type \"Web app/API\". This application represents the managed cluster's apiserver (Server application)."
           },
           {
             "name": "AadServerAppSecret",
             "type": "string",
             "format": "--aad-server-app-secret {value}",
             "secret": true,
-            "help": "(PREVIEW) The secret of an Azure Active Directory server application."
+            "help": "The secret of an Azure Active Directory server application."
           },
           {
             "name": "AadTenantId",
             "type": "string",
             "format": "--aad-tenant-id {value}",
-            "help": "(PREVIEW) The ID of an Azure Active Directory tenant."
+            "secret": false,
+            "help": "The ID of an Azure Active Directory tenant."
           },
           {
             "name": "AdminUsername",
             "type": "string",
             "format": "--admin-username {value}",
+            "secret": false,
             "help": "User account to create on node VMs for SSH access."
           },
           {
@@ -104,24 +123,28 @@
             "name": "DisableRbac",
             "type": "string",
             "format": "--disable-rbac {value}",
+            "secret": false,
             "help": "Disable Kubernetes Role-Based Access Control."
           },
           {
             "name": "DnsNamePrefix",
             "type": "string",
             "format": "--dns-name-prefix {value}",
+            "secret": false,
             "help": "Prefix for hostnames that are created. If not specified, generate a hostname using the managed cluster and resource group names."
           },
           {
             "name": "DnsServiceIp",
             "type": "string",
             "format": "--dns-service-ip {value}",
+            "secret": false,
             "help": "An IP address assigned to the Kubernetes DNS service."
           },
           {
             "name": "DockerBridgeAddress",
             "type": "string",
             "format": "--docker-bridge-address {value}",
+            "secret": false,
             "help": "A specific IP address and netmask for the Docker bridge, using standard CIDR notation."
           },
           {
@@ -129,127 +152,162 @@
             "type": "List<string>",
             "format": "--enable-addons {value}",
             "separator": ",",
+            "secret": false,
             "help": "Enable the Kubernetes addons in a comma-separated list."
           },
           {
             "name": "EnableRbac",
             "type": "string",
             "format": "--enable-rbac {value}",
+            "secret": false,
             "help": "Enable Kubernetes Role-Based Access Control. Default: enabled."
           },
           {
             "name": "GenerateSshKeys",
             "type": "string",
             "format": "--generate-ssh-keys {value}",
-            "help": "Generate SSH public and private key files if missing."
+            "secret": false,
+            "help": "Generate SSH public and private key files if missing. The keys will be stored in the ~/.ssh directory."
           },
           {
             "name": "KubernetesVersion",
             "type": "string",
             "format": "--kubernetes-version {value}",
-            "help": "Version of Kubernetes to use for creating the cluster, such as \"1.7.12\" or \"1.8.7\"."
+            "secret": false,
+            "help": "Version of Kubernetes to use for creating the cluster, such as \"1.11.8\" or \"1.12.6\"."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "MaxPods",
             "type": "int",
             "format": "--max-pods {value}",
+            "secret": false,
             "help": "The maximum number of pods deployable to a node."
           },
           {
             "name": "NetworkPlugin",
             "type": "string",
             "format": "--network-plugin {value}",
+            "secret": false,
             "help": "The Kubernetes network plugin to use."
+          },
+          {
+            "name": "NetworkPolicy",
+            "type": "string",
+            "format": "--network-policy {value}",
+            "secret": false,
+            "help": "The Kubernetes network policy to use."
           },
           {
             "name": "NoSshKey",
             "type": "bool",
             "format": "--no-ssh-key",
+            "secret": false,
             "help": "Do not use or create a local SSH key."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "NodeCount",
             "type": "int",
             "format": "--node-count {value}",
+            "secret": false,
             "help": "Number of nodes in the Kubernetes node pool. After creating a cluster, you can change the size of its node pool with `az aks scale`."
           },
           {
             "name": "NodeOsdiskSize",
             "type": "string",
             "format": "--node-osdisk-size {value}",
+            "secret": false,
             "help": "Size in GB of the OS disk for each node in the node pool. Minimum 30 GB."
           },
           {
             "name": "NodeVmSize",
             "type": "string",
             "format": "--node-vm-size {value}",
+            "secret": false,
             "help": "Size of Virtual Machines to create as Kubernetes nodes."
           },
           {
             "name": "NodepoolName",
             "type": "string",
             "format": "--nodepool-name {value}",
+            "secret": false,
             "help": "Node pool name, upto 12 alphanumeric characters."
           },
           {
             "name": "PodCidr",
             "type": "string",
             "format": "--pod-cidr {value}",
+            "secret": false,
             "help": "A CIDR notation IP range from which to assign pod IPs when kubenet is used."
           },
           {
             "name": "ServiceCidr",
             "type": "string",
             "format": "--service-cidr {value}",
+            "secret": false,
             "help": "A CIDR notation IP range from which to assign service cluster IPs."
           },
           {
             "name": "ServicePrincipal",
             "type": "bool",
             "format": "--service-principal",
+            "secret": false,
             "help": "Service principal used for authentication to Azure APIs."
           },
           {
             "name": "SkipSubnetRoleAssignment",
             "type": "string",
             "format": "--skip-subnet-role-assignment {value}",
+            "secret": false,
             "help": "Skip role assignment for subnet (advanced networking)."
           },
           {
             "name": "SshKeyValue",
             "type": "string",
             "format": "--ssh-key-value {value}",
+            "secret": false,
             "help": "Public key path or key contents to install on node VMs for SSH access. For example, 'ssh-rsa AAAAB...snip...UcyupgH azureuser@linuxvm'."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "VnetSubnetId",
             "type": "string",
             "format": "--vnet-subnet-id {value}",
+            "secret": false,
             "help": "The ID of a subnet in an existing VNet into which to deploy the cluster."
           },
           {
             "name": "WorkspaceResourceId",
             "type": "string",
             "format": "--workspace-resource-id {value}",
+            "secret": false,
             "help": "The resource ID of an existing Log Analytics Workspace to use for storing monitoring data. If not specified, uses the default Log Analytics Workspace if it exists, otherwise creates one."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -263,25 +321,36 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "Yes",
             "type": "string",
             "format": "--yes {value}",
+            "secret": false,
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -296,25 +365,36 @@
             "type": "List<string>",
             "format": "--addons {value}",
             "separator": ",",
+            "secret": false,
             "help": "Disable the Kubernetes addons in a comma-separated list."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -329,31 +409,50 @@
             "type": "List<string>",
             "format": "--addons {value}",
             "separator": ",",
+            "secret": false,
             "help": "Enable the Kubernetes addons in a comma-separated list."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "SubnetName",
+            "type": "string",
+            "format": "--subnet-name {value}",
+            "secret": false,
+            "help": "Name of an existing subnet to use with the virtual-node add-on."
           },
           {
             "name": "WorkspaceResourceId",
             "type": "string",
             "format": "--workspace-resource-id {value}",
+            "secret": false,
             "help": "The resource ID of an existing Log Analytics Workspace to use for storing monitoring data."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -367,31 +466,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Admin",
             "type": "string",
             "format": "--admin {value}",
+            "secret": false,
             "help": "Get cluster administrator credentials.  Default: cluster user credentials."
           },
           {
             "name": "File",
             "type": "string",
             "format": "--file {value}",
+            "secret": false,
             "help": "Kubernetes configuration file to update. Use \"-\" to print YAML to stdout instead."
           },
           {
             "name": "OverwriteExisting",
             "type": "string",
             "format": "--overwrite-existing {value}",
-            "help": ""
+            "secret": false,
+            "help": "Overwrite any existing cluster entry with the same name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -405,13 +516,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -425,7 +545,15 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -439,13 +567,22 @@
             "name": "ClientVersion",
             "type": "string",
             "format": "--client-version {value}",
-            "help": ""
+            "secret": false,
+            "help": "Version of the client to install."
           },
           {
             "name": "InstallLocation",
             "type": "string",
             "format": "--install-location {value}",
-            "help": ""
+            "secret": false,
+            "help": "Path at which to install DC/OS."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -459,24 +596,28 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AciResourceGroup",
             "type": "string",
             "format": "--aci-resource-group {value}",
+            "secret": false,
             "help": "The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified."
           },
           {
             "name": "ChartUrl",
             "type": "string",
             "format": "--chart-url {value}",
+            "secret": false,
             "help": "URL of a Helm chart that installs ACI Connector."
           },
           {
@@ -490,31 +631,43 @@
             "name": "ConnectorName",
             "type": "string",
             "format": "--connector-name {value}",
+            "secret": false,
             "help": "Name of the ACI Connector."
           },
           {
             "name": "ImageTag",
             "type": "string",
             "format": "--image-tag {value}",
+            "secret": false,
             "help": "The image tag of the virtual kubelet. Use 'latest' if it is not specified."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
+            "secret": false,
             "help": "The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified."
           },
           {
             "name": "OsType",
             "type": "AksOsType",
             "format": "--os-type {value}",
+            "secret": false,
             "help": "Install support for deploying ACIs of this operating system type."
           },
           {
             "name": "ServicePrincipal",
             "type": "bool",
             "format": "--service-principal",
+            "secret": false,
             "help": "Service principal used for authentication to Azure APIs."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -528,7 +681,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -542,37 +703,50 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "ConnectorName",
             "type": "string",
             "format": "--connector-name {value}",
+            "secret": false,
             "help": "Name of the ACI Connector."
           },
           {
             "name": "Graceful",
             "type": "string",
             "format": "--graceful {value}",
+            "secret": false,
             "help": "Use a \"cordon and drain\" strategy to evict pods safely before removing the ACI node."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "OsType",
             "type": "AksOsType",
             "format": "--os-type {value}",
+            "secret": false,
             "help": "Remove support for deploying ACIs of this operating system type."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -586,19 +760,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Yes",
             "type": "string",
             "format": "--yes {value}",
+            "secret": false,
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -612,31 +796,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "NodeCount",
             "type": "int",
             "format": "--node-count {value}",
+            "secret": false,
             "help": "Number of nodes in the Kubernetes node pool."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "NodepoolName",
             "type": "string",
             "format": "--nodepool-name {value}",
+            "secret": false,
             "help": "Node pool name, upto 12 alphanumeric characters."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -650,13 +846,114 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UpdateCredentials",
+      "definiteArgument": "aks update-credentials",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the managed cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "AadClientAppId",
+            "type": "string",
+            "format": "--aad-client-app-id {value}",
+            "secret": false,
+            "help": "The ID of an Azure Active Directory client application. This argument is required if `--reset-aad` is specified."
+          },
+          {
+            "name": "AadServerAppId",
+            "type": "string",
+            "format": "--aad-server-app-id {value}",
+            "secret": false,
+            "help": "The ID of an Azure Active Directory server application. This argument is required if `--reset-aad` is specified."
+          },
+          {
+            "name": "AadServerAppSecret",
+            "type": "string",
+            "format": "--aad-server-app-secret {value}",
+            "secret": true,
+            "help": "The secret of an Azure Active Directory server application. This argument is required if `--reset-aad` is specified."
+          },
+          {
+            "name": "AadTenantId",
+            "type": "string",
+            "format": "--aad-tenant-id {value}",
+            "secret": false,
+            "help": "Tenant ID associated with Azure Active Directory."
+          },
+          {
+            "name": "ResetAad",
+            "type": "string",
+            "format": "--reset-aad {value}",
+            "secret": false,
+            "help": "Reset Azure Active Directory configuration for a managed cluster."
+          },
+          {
+            "name": "ClientSecret",
+            "type": "string",
+            "format": "--client-secret {value}",
+            "secret": true,
+            "help": "Secret associated with the service principal. This argument is required if `--service-principal` is specified."
+          },
+          {
+            "name": "ResetServicePrincipal",
+            "type": "string",
+            "format": "--reset-service-principal {value}",
+            "secret": false,
+            "help": "Reset service principal for a managed cluster."
+          },
+          {
+            "name": "ServicePrincipal",
+            "type": "bool",
+            "format": "--service-principal",
+            "secret": false,
+            "help": "Service principal used for authentication to Azure APIs. This argument is required if `--reset-service-principal` is specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -670,31 +967,43 @@
             "name": "KubernetesVersion",
             "type": "string",
             "format": "--kubernetes-version {value}",
-            "help": "Version of Kubernetes to upgrade the cluster to, such as \"1.7.12\" or \"1.8.7\"."
+            "secret": false,
+            "help": "Version of Kubernetes to upgrade the cluster to, such as \"1.11.8\" or \"1.12.6\"."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "Yes",
             "type": "string",
             "format": "--yes {value}",
+            "secret": false,
             "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -708,24 +1017,28 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AciResourceGroup",
             "type": "string",
             "format": "--aci-resource-group {value}",
+            "secret": false,
             "help": "The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified."
           },
           {
             "name": "ChartUrl",
             "type": "string",
             "format": "--chart-url {value}",
+            "secret": false,
             "help": "URL of a Helm chart that installs ACI Connector."
           },
           {
@@ -739,31 +1052,43 @@
             "name": "ConnectorName",
             "type": "string",
             "format": "--connector-name {value}",
+            "secret": false,
             "help": "Name of the ACI Connector."
           },
           {
             "name": "ImageTag",
             "type": "string",
             "format": "--image-tag {value}",
+            "secret": false,
             "help": "The image tag of the virtual kubelet. Use 'latest' if it is not specified."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
+            "secret": false,
             "help": "The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified."
           },
           {
             "name": "OsType",
             "type": "AksOsType",
             "format": "--os-type {value}",
+            "secret": false,
             "help": "Install support for deploying ACIs of this operating system type."
           },
           {
             "name": "ServicePrincipal",
             "type": "bool",
             "format": "--service-principal",
+            "secret": false,
             "help": "Service principal used for authentication to Azure APIs."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -777,31 +1102,43 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Space",
             "type": "string",
             "format": "--space {value}",
+            "secret": false,
             "help": "Name of the new or existing dev space to select. Defaults to an interactive selection experience."
           },
           {
             "name": "Update",
             "type": "string",
             "format": "--update {value}",
+            "secret": false,
             "help": "Update to the latest Azure Dev Spaces client components."
           },
           {
             "name": "Yes",
             "type": "string",
             "format": "--yes {value}",
+            "secret": false,
             "help": "Do not prompt for confirmation. Requires --space."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -815,55 +1152,71 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the managed cluster."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Created",
             "type": "string",
             "format": "--created {value}",
+            "secret": false,
             "help": "Wait until created with 'provisioningState' at 'Succeeded'."
           },
           {
             "name": "Custom",
             "type": "string",
             "format": "--custom {value}",
+            "secret": false,
             "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
           },
           {
             "name": "Deleted",
             "type": "string",
             "format": "--deleted {value}",
+            "secret": false,
             "help": "Wait until deleted."
           },
           {
             "name": "Exists",
             "type": "string",
             "format": "--exists {value}",
+            "secret": false,
             "help": "Wait until the resource exists."
           },
           {
             "name": "Interval",
             "type": "string",
             "format": "--interval {value}",
+            "secret": false,
             "help": "Polling interval in seconds."
           },
           {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
+            "secret": false,
             "help": "Maximum wait in seconds."
           },
           {
             "name": "Updated",
             "type": "string",
             "format": "--updated {value}",
+            "secret": false,
             "help": "Wait until updated with provisioningState at 'Succeeded'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -874,30 +1227,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],

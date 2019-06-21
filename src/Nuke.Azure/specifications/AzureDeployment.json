@@ -1,13 +1,8 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/deployment/operation.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deployment/operation.yml"
   ],
   "name": "AzureDeployment",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/deployment?view=azure-cli-latest",
@@ -23,37 +18,50 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The deployment name. Default to template file base name."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
           },
           {
             "name": "Parameters",
             "type": "string",
             "format": "--parameters {value}",
+            "secret": false,
             "help": "Supply deployment parameter values."
           },
           {
             "name": "TemplateFile",
             "type": "string",
             "format": "--template-file {value}",
+            "secret": false,
             "help": "A template file path in the file system."
           },
           {
             "name": "TemplateUri",
             "type": "string",
             "format": "--template-uri {value}",
+            "secret": false,
             "help": "A uri to a remote template file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -67,13 +75,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The deployment name."
           },
           {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
+            "secret": false,
             "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -87,7 +104,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The deployment name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -101,13 +126,22 @@
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply on the operation. For example, you can use $filter=provisioningState eq '{state}'."
           },
           {
             "name": "Top",
             "type": "string",
             "format": "--top {value}",
+            "secret": false,
             "help": "The number of results to get. If null is passed, returns all deployments."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -121,7 +155,15 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The deployment name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -135,25 +177,36 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "Parameters",
             "type": "string",
             "format": "--parameters {value}",
+            "secret": false,
             "help": "Supply deployment parameter values."
           },
           {
             "name": "TemplateFile",
             "type": "string",
             "format": "--template-file {value}",
+            "secret": false,
             "help": "A template file path in the file system."
           },
           {
             "name": "TemplateUri",
             "type": "string",
             "format": "--template-uri {value}",
+            "secret": false,
             "help": "A uri to a remote template file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -167,49 +220,64 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The deployment name."
           },
           {
             "name": "Created",
             "type": "string",
             "format": "--created {value}",
+            "secret": false,
             "help": "Wait until created with 'provisioningState' at 'Succeeded'."
           },
           {
             "name": "Custom",
             "type": "string",
             "format": "--custom {value}",
+            "secret": false,
             "help": "Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running']."
           },
           {
             "name": "Deleted",
             "type": "string",
             "format": "--deleted {value}",
+            "secret": false,
             "help": "Wait until deleted."
           },
           {
             "name": "Exists",
             "type": "string",
             "format": "--exists {value}",
+            "secret": false,
             "help": "Wait until the resource exists."
           },
           {
             "name": "Interval",
             "type": "string",
             "format": "--interval {value}",
+            "secret": false,
             "help": "Polling interval in seconds."
           },
           {
             "name": "Timeout",
             "type": "string",
             "format": "--timeout {value}",
+            "secret": false,
             "help": "Maximum wait in seconds."
           },
           {
             "name": "Updated",
             "type": "string",
             "format": "--updated {value}",
+            "secret": false,
             "help": "Wait until updated with provisioningState at 'Succeeded'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -223,13 +291,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The deployment name."
           },
           {
             "name": "Top",
             "type": "string",
             "format": "--top {value}",
+            "secret": false,
             "help": "The number of results to return."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -243,13 +320,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The deployment name."
           },
           {
             "name": "OperationIds",
             "type": "string",
             "format": "--operation-ids {value}",
+            "secret": false,
             "help": "A list of operation ids to show."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -260,30 +346,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ]

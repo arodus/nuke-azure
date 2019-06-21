@@ -1,23 +1,18 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/application/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/durability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/reliability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/setting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/application/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/durability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/node-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/reliability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/setting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
   ],
   "name": "AzureSf",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest",
@@ -43,24 +38,28 @@
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "CertificateFile",
             "type": "string",
             "format": "--certificate-file {value}",
+            "secret": false,
             "help": "The existing certificate file path for the primary cluster certificate."
           },
           {
             "name": "CertificateOutputFolder",
             "type": "string",
             "format": "--certificate-output-folder {value}",
+            "secret": false,
             "help": "The folder of the new certificate file to be created."
           },
           {
@@ -74,30 +73,35 @@
             "name": "CertificateSubjectName",
             "type": "string",
             "format": "--certificate-subject-name {value}",
+            "secret": false,
             "help": "The subject name of the certificate to be created."
           },
           {
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ClusterSize",
             "type": "string",
             "format": "--cluster-size {value}",
+            "secret": false,
             "help": "The number of nodes in the cluster. Default are 5 nodes."
           },
           {
             "name": "Os",
             "type": "SfClusterCreateOs",
             "format": "--os {value}",
+            "secret": false,
             "help": "The Operating System of the VMs that make up the cluster."
           },
           {
             "name": "ParameterFile",
             "type": "string",
             "format": "--parameter-file {value}",
+            "secret": false,
             "help": "The path to the template parameter file."
           },
           {
@@ -111,18 +115,21 @@
             "name": "TemplateFile",
             "type": "string",
             "format": "--template-file {value}",
+            "secret": false,
             "help": "The path to the template file."
           },
           {
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
+            "secret": false,
             "help": "Azure key vault name, it not given it will be the cluster resource group name."
           },
           {
             "name": "VaultResourceGroup",
             "type": "string",
             "format": "--vault-resource-group {value}",
+            "secret": false,
             "help": "Key vault resource group name,if not given it will be cluster resource group name."
           },
           {
@@ -136,13 +143,22 @@
             "name": "VmSku",
             "type": "string",
             "format": "--vm-sku {value}",
-            "help": "The Vm Sku."
+            "secret": false,
+            "help": "VM Sku."
           },
           {
             "name": "VmUserName",
             "type": "string",
             "format": "--vm-user-name {value}",
+            "secret": false,
             "help": "The user name for logging to Vm. Default will be adminuser."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -156,7 +172,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -170,13 +194,22 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -190,24 +223,28 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "CertificateFile",
             "type": "string",
             "format": "--certificate-file {value}",
+            "secret": false,
             "help": "The existing certificate file path for the primary cluster certificate."
           },
           {
             "name": "CertificateOutputFolder",
             "type": "string",
             "format": "--certificate-output-folder {value}",
+            "secret": false,
             "help": "The folder of the new certificate file to be created."
           },
           {
@@ -221,6 +258,7 @@
             "name": "CertificateSubjectName",
             "type": "string",
             "format": "--certificate-subject-name {value}",
+            "secret": false,
             "help": "The subject name of the certificate to be created."
           },
           {
@@ -234,13 +272,22 @@
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
+            "secret": false,
             "help": "Azure key vault name, it not given it will be the cluster resource group name."
           },
           {
             "name": "VaultResourceGroup",
             "type": "string",
             "format": "--vault-resource-group {value}",
+            "secret": false,
             "help": "Key vault resource group name,if not given it will be cluster resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -254,24 +301,28 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "CertificateFile",
             "type": "string",
             "format": "--certificate-file {value}",
+            "secret": false,
             "help": "The existing certificate file path for the primary cluster certificate."
           },
           {
             "name": "CertificateOutputFolder",
             "type": "string",
             "format": "--certificate-output-folder {value}",
+            "secret": false,
             "help": "The folder of the new certificate file to be created."
           },
           {
@@ -285,6 +336,7 @@
             "name": "CertificateSubjectName",
             "type": "string",
             "format": "--certificate-subject-name {value}",
+            "secret": false,
             "help": "The subject name of the certificate to be created."
           },
           {
@@ -298,13 +350,22 @@
             "name": "VaultName",
             "type": "string",
             "format": "--vault-name {value}",
+            "secret": false,
             "help": "Azure key vault name, it not given it will be the cluster resource group name."
           },
           {
             "name": "VaultResourceGroup",
             "type": "string",
             "format": "--vault-resource-group {value}",
+            "secret": false,
             "help": "Key vault resource group name,if not given it will be cluster resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -318,19 +379,29 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "Thumbprint",
             "type": "string",
             "format": "--thumbprint {value}",
+            "secret": false,
             "help": "The cluster certificate thumbprint to be removed."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -344,42 +415,49 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "AdminClientThumbprints",
             "type": "string",
             "format": "--admin-client-thumbprints {value}",
+            "secret": false,
             "help": "Client certificate thumbprint that only has admin permission."
           },
           {
             "name": "CertificateCommonName",
             "type": "string",
             "format": "--certificate-common-name {value}",
+            "secret": false,
             "help": "Client certificate common name."
           },
           {
             "name": "CertificateIssuerThumbprint",
             "type": "string",
             "format": "--certificate-issuer-thumbprint {value}",
+            "secret": false,
             "help": "Client certificate issuer thumbprint."
           },
           {
             "name": "ClientCertificateCommonNames",
             "type": "string",
             "format": "--client-certificate-common-names {value}",
+            "secret": false,
             "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"isAdmin\":true, \"certificateCommonName\": \"test.com\", \"certificateIssuerThumbprint\": \"22B4AE296B504E512DF880A77A2CAE20200FF922\"}]."
           },
           {
             "name": "IsAdmin",
             "type": "string",
             "format": "--is-admin {value}",
+            "secret": false,
             "help": "Client authentication type."
           },
           {
@@ -387,13 +465,22 @@
             "type": "List<string>",
             "format": "--readonly-client-thumbprints {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated list of client certificate thumbprint that has read only permission."
           },
           {
             "name": "Thumbprint",
             "type": "string",
             "format": "--thumbprint {value}",
+            "secret": false,
             "help": "Client certificate thumbprint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -407,37 +494,50 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "CertificateCommonName",
             "type": "string",
             "format": "--certificate-common-name {value}",
+            "secret": false,
             "help": "Client certificate common name."
           },
           {
             "name": "CertificateIssuerThumbprint",
             "type": "string",
             "format": "--certificate-issuer-thumbprint {value}",
+            "secret": false,
             "help": "Client certificate issuer thumbprint."
           },
           {
             "name": "ClientCertificateCommonNames",
             "type": "string",
             "format": "--client-certificate-common-names {value}",
+            "secret": false,
             "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"certificateCommonName\": \"test.com\",\"certificateIssuerThumbprint\": \"22B4AE296B504E512DF880A77A2CAE20200FF922\"}]."
           },
           {
             "name": "Thumbprints",
             "type": "string",
             "format": "--thumbprints {value}",
+            "secret": false,
             "help": "A single or Space-separated list of client certificate thumbprint(s) to be remove."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -451,25 +551,36 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "DurabilityLevel",
-            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "type": "SfClusterDurabilityDurabilityLevel",
             "format": "--durability-level {value}",
+            "secret": false,
             "help": "Durability level."
           },
           {
             "name": "NodeType",
             "type": "string",
             "format": "--node-type {value}",
+            "secret": false,
             "help": "The Node type name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -483,24 +594,28 @@
             "name": "Capacity",
             "type": "string",
             "format": "--capacity {value}",
-            "help": ""
+            "secret": false,
+            "help": "The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has."
           },
           {
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "NodeType",
             "type": "string",
             "format": "--node-type {value}",
+            "secret": false,
             "help": "The Node type name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
@@ -514,25 +629,36 @@
             "name": "VmUserName",
             "type": "string",
             "format": "--vm-user-name {value}",
+            "secret": false,
             "help": "The user name for logging to Vm. Default will be adminuser."
           },
           {
             "name": "DurabilityLevel",
-            "type": "string",
+            "type": "SfClusterDurabilityDurabilityLevel",
             "format": "--durability-level {value}",
-            "help": ""
+            "secret": false,
+            "help": "Durability level."
           },
           {
             "name": "VmSku",
             "type": "string",
             "format": "--vm-sku {value}",
-            "help": "The Vm Sku."
+            "secret": false,
+            "help": "VM Sku."
           },
           {
             "name": "VmTier",
             "type": "string",
             "format": "--vm-tier {value}",
-            "help": ""
+            "secret": false,
+            "help": "VM tier."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -546,25 +672,36 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "NodeType",
             "type": "string",
             "format": "--node-type {value}",
+            "secret": false,
             "help": "The Node type name."
           },
           {
             "name": "NumberOfNodesToAdd",
             "type": "int",
             "format": "--number-of-nodes-to-add {value}",
+            "secret": false,
             "help": "Number of nodes to add."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -578,25 +715,36 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "NodeType",
             "type": "string",
             "format": "--node-type {value}",
+            "secret": false,
             "help": "The Node type name."
           },
           {
             "name": "NumberOfNodesToRemove",
             "type": "int",
             "format": "--number-of-nodes-to-remove {value}",
+            "secret": false,
             "help": "Number of nodes to remove."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -610,25 +758,36 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ReliabilityLevel",
-            "type": "SfClusterDurabilityUpdateDurabilityLevel",
+            "type": "SfClusterDurabilityDurabilityLevel",
             "format": "--reliability-level {value}",
+            "secret": false,
             "help": "Durability level."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "AutoAddNode",
             "type": "string",
             "format": "--auto-add-node {value}",
+            "secret": false,
             "help": "Add node count automatically when changing reliability."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -642,31 +801,43 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "Parameter",
             "type": "string",
             "format": "--parameter {value}",
+            "secret": false,
             "help": "Parameter name."
           },
           {
             "name": "Section",
             "type": "string",
             "format": "--section {value}",
+            "secret": false,
             "help": "Section name."
           },
           {
             "name": "SettingsSectionDescription",
             "type": "string",
             "format": "--settings-section-description {value}",
+            "secret": false,
             "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -680,37 +851,50 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "Parameter",
             "type": "string",
             "format": "--parameter {value}",
+            "secret": false,
             "help": "Parameter name."
           },
           {
             "name": "Section",
             "type": "string",
             "format": "--section {value}",
+            "secret": false,
             "help": "Section name."
           },
           {
             "name": "SettingsSectionDescription",
             "type": "string",
             "format": "--settings-section-description {value}",
+            "secret": false,
             "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\",\"value\": 1000},{\"section\": \"MaxFileOperationTimeout\",\"parameter\": \"Max2\",\"value\": 1000]."
           },
           {
             "name": "Value",
             "type": "string",
             "format": "--value {value}",
+            "secret": false,
             "help": "Specify the value."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -724,25 +908,36 @@
             "name": "ClusterName",
             "type": "string",
             "format": "--cluster-name {value}",
+            "secret": false,
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group name."
           },
           {
             "name": "UpgradeMode",
             "type": "SfClusterUpgradeTypeSetUpgradeMode",
             "format": "--upgrade-mode {value}",
+            "secret": false,
             "help": "Cluster upgrade mode."
           },
           {
             "name": "Version",
             "type": "string",
             "format": "--version {value}",
+            "secret": false,
             "help": "Cluster code version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -753,30 +948,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],
@@ -791,7 +991,7 @@
       ]
     },
     {
-      "name": "SfClusterDurabilityUpdateDurabilityLevel",
+      "name": "SfClusterDurabilityDurabilityLevel",
       "values": [
         "bronze",
         "gold",

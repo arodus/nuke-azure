@@ -1,22 +1,17 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/arm-template.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/artifact-source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/artifact.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/custom-image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/environment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/formula.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/gallery-image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/vm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/lab/vnet.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/arm-template.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/artifact-source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/artifact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/custom-image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/environment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/formula.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/gallery-image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/vm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/lab/vnet.yml"
   ],
   "name": "AzureLab",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/lab?view=azure-cli-latest",
@@ -32,13 +27,22 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -52,19 +56,29 @@
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=defaultStorageAccount)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -78,43 +92,57 @@
             "name": "ArtifactSourceName",
             "type": "string",
             "format": "--artifact-source-name {value}",
+            "secret": false,
             "help": "The name of the artifact source."
           },
           {
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=displayName)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -128,31 +156,43 @@
             "name": "ArtifactSourceName",
             "type": "string",
             "format": "--artifact-source-name {value}",
+            "secret": false,
             "help": "Name of the artifact source."
           },
           {
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the Azure Resource Manager template."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of lab's resource group."
           },
           {
             "name": "ExportParameters",
             "type": "string",
             "format": "--export-parameters {value}",
+            "secret": false,
             "help": "Whether or not to export parameters template."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -166,37 +206,50 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=displayName)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -210,25 +263,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the artifact source."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=displayName)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -242,43 +306,57 @@
             "name": "ArtifactSourceName",
             "type": "string",
             "format": "--artifact-source-name {value}",
+            "secret": false,
             "help": "The name of the artifact source."
           },
           {
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=title)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -292,49 +370,64 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the Lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the image."
           },
           {
             "name": "OsState",
             "type": "string",
             "format": "--os-state {value}",
+            "secret": false,
             "help": "The current state of the virtual machine."
           },
           {
             "name": "OsType",
             "type": "string",
             "format": "--os-type {value}",
+            "secret": false,
             "help": "Type of the OS on which the custom image is based. Allowed values are: Windows, Linux."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "SourceVmId",
             "type": "string",
             "format": "--source-vm-id {value}",
+            "secret": false,
             "help": "The resource ID of a virtual machine in the provided lab."
           },
           {
             "name": "Author",
             "type": "string",
             "format": "--author {value}",
+            "secret": false,
             "help": "The author of the custom image."
           },
           {
             "name": "Description",
             "type": "string",
             "format": "--description {value}",
+            "secret": false,
             "help": "A detailed description for the custom image."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -348,19 +441,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the custom image."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -374,37 +477,50 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=vm)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -418,25 +534,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the custom image."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=vm)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -450,43 +577,57 @@
             "name": "ArmTemplate",
             "type": "string",
             "format": "--arm-template {value}",
+            "secret": false,
             "help": "Name or ID of the ARM template in the lab."
           },
           {
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the environment."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of the lab's resource group."
           },
           {
             "name": "ArtifactSourceName",
             "type": "string",
             "format": "--artifact-source-name {value}",
+            "secret": false,
             "help": "Name of the artifact source in the lab."
           },
           {
             "name": "Parameters",
             "type": "string",
             "format": "--parameters {value}",
+            "secret": false,
             "help": "JSON encoded list of parameters. Use '@{file}' to load from a file."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "The tags for the resource."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -500,19 +641,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the environment."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -526,37 +677,50 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=deploymentProperties)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -570,25 +734,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the environment."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=deploymentProperties)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -602,19 +777,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the formula."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -628,19 +813,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the formula."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -654,37 +849,50 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=description)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -698,25 +906,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the formula."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=description)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -730,37 +949,50 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=author)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -774,19 +1006,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the secret."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -800,37 +1042,50 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=value)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -844,25 +1099,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the secret."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Value",
             "type": "string",
             "format": "--value {value}",
+            "secret": false,
             "help": "Value of the secret."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -876,25 +1142,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the secret."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($select=value)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -908,25 +1185,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the Lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the virtual machine."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of lab's resource group."
           },
           {
             "name": "Artifacts",
             "type": "string",
             "format": "--artifacts {value}",
+            "secret": false,
             "help": "JSON encoded array of artifacts to be applied. Use '@{file}' to load from a file."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -937,22 +1225,40 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the virtual machine to claim."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of lab's resource group."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -966,84 +1272,98 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "Name of the virtual machine."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "AllowClaim",
             "type": "string",
             "format": "--allow-claim {value}",
+            "secret": false,
             "help": "Flag indicating if the VM should be created as claimable."
           },
           {
             "name": "Artifacts",
             "type": "string",
             "format": "--artifacts {value}",
+            "secret": false,
             "help": "JSON encoded array of artifacts to be applied. Use '@{file}' to load from a file."
           },
           {
             "name": "DiskType",
             "type": "string",
             "format": "--disk-type {value}",
+            "secret": false,
             "help": "Storage type to use for virtual machine."
           },
           {
             "name": "ExpirationDate",
             "type": "string",
             "format": "--expiration-date {value}",
+            "secret": false,
             "help": "The expiration date in UTC(YYYY-mm-dd) for the VM."
           },
           {
             "name": "Formula",
             "type": "string",
             "format": "--formula {value}",
+            "secret": false,
             "help": "Name of the formula. Use `az lab formula list` for available formulas."
           },
           {
             "name": "GenerateSshKeys",
             "type": "string",
             "format": "--generate-ssh-keys {value}",
+            "secret": false,
             "help": "Generate SSH public and private key files if missing."
           },
           {
             "name": "Image",
             "type": "string",
             "format": "--image {value}",
+            "secret": false,
             "help": "The name of the operating system image (gallery image name or custom image name/ID)."
           },
           {
             "name": "ImageType",
             "type": "string",
             "format": "--image-type {value}",
+            "secret": false,
             "help": "Type of the image. Allowed values are: gallery, custom."
           },
           {
             "name": "Notes",
             "type": "string",
             "format": "--notes {value}",
+            "secret": false,
             "help": "Notes for the virtual machine."
           },
           {
             "name": "Size",
             "type": "string",
             "format": "--size {value}",
+            "secret": false,
             "help": "The size of the VM to be created. See <a href=\"https://azure.microsoft.com/en-us/pricing/details/virtual-machines/\">https://azure.microsoft.com/en-us/pricing/details/virtual-machines/</a> for size info."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Space-separated tags in `key[=value]` format."
           },
           {
@@ -1057,12 +1377,14 @@
             "name": "AdminUsername",
             "type": "string",
             "format": "--admin-username {value}",
+            "secret": false,
             "help": "Username for the VM admin."
           },
           {
             "name": "AuthenticationType",
             "type": "string",
             "format": "--authentication-type {value}",
+            "secret": false,
             "help": "Type of authentication allowed for the VM. Allowed values are: password, ssh."
           },
           {
@@ -1076,25 +1398,36 @@
             "name": "SshKey",
             "type": "string",
             "format": "--ssh-key {value}",
+            "secret": false,
             "help": "The SSH public key or public key file path. Use `--generate-ssh-keys` to generate SSH keys."
           },
           {
             "name": "IpConfiguration",
             "type": "string",
             "format": "--ip-configuration {value}",
+            "secret": false,
             "help": "Type of IP configuration to use for the VM. Allowed values are: shared, public, private."
           },
           {
             "name": "Subnet",
             "type": "string",
             "format": "--subnet {value}",
+            "secret": false,
             "help": "Name of the subnet to add the VM to."
           },
           {
             "name": "VnetName",
             "type": "string",
             "format": "--vnet-name {value}",
+            "secret": false,
             "help": "Name of the virtual network to add the VM to."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1108,19 +1441,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the virtual machine."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1134,61 +1477,78 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "Name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "All",
             "type": "string",
             "format": "--all {value}",
+            "secret": false,
             "help": "List all virtual machines in the lab. Cannot be used with `--filters`."
           },
           {
             "name": "Claimable",
             "type": "string",
             "format": "--claimable {value}",
+            "secret": false,
             "help": "List only claimable virtual machines in the lab. Cannot be used with `--filters`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "The expand query."
           },
           {
             "name": "ObjectId",
             "type": "string",
             "format": "--object-id {value}",
+            "secret": false,
             "help": "Object ID of the owner to list VMs for."
           },
           {
             "name": "OrderBy",
             "type": "string",
             "format": "--order-by {value}",
+            "secret": false,
             "help": "The ordering expression for the results using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return."
           },
           {
             "name": "Environment",
             "type": "string",
             "format": "--environment {value}",
+            "secret": false,
             "help": "Name or ID of the environment to list virtual machines in. Cannot be used with `--filters`."
           },
           {
             "name": "Filters",
             "type": "string",
             "format": "--filters {value}",
+            "secret": false,
             "help": "The filter to apply."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1202,25 +1562,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the virtual machine."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($expand=artifacts,computeVm,networkInterface,applicableSchedule)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1234,19 +1605,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the virtual machine."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1260,19 +1641,29 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the virtual machine."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1286,25 +1677,36 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the virtual network."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($expand=externalSubnets)'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1318,37 +1720,50 @@
             "name": "LabName",
             "type": "string",
             "format": "--lab-name {value}",
+            "secret": false,
             "help": "The name of the lab."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Expand",
             "type": "string",
             "format": "--expand {value}",
+            "secret": false,
             "help": "Specify the $expand query. Example: 'properties($expand=externalSubnets)'."
           },
           {
             "name": "Filter",
             "type": "string",
             "format": "--filter {value}",
+            "secret": false,
             "help": "The filter to apply to the operation."
           },
           {
             "name": "Orderby",
             "type": "string",
             "format": "--orderby {value}",
+            "secret": false,
             "help": "The ordering expression for the results, using OData notation."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "The maximum number of resources to return from the operation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1359,30 +1774,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ]

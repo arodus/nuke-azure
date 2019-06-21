@@ -1,13 +1,8 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/managedapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/managedapp/definition.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/managedapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/managedapp/definition.yml"
   ],
   "name": "AzureManagedapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/managedapp?view=azure-cli-latest",
@@ -23,73 +18,92 @@
             "name": "Kind",
             "type": "string",
             "format": "--kind {value}",
+            "secret": false,
             "help": "The managed application kind. can be marketplace or servicecatalog."
           },
           {
             "name": "ManagedRgId",
             "type": "string",
             "format": "--managed-rg-id {value}",
+            "secret": false,
             "help": "The resource group managed by the managed application."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The managed application name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
+            "secret": false,
             "help": "The managed application location."
           },
           {
             "name": "ManagedappDefinitionId",
             "type": "string",
             "format": "--managedapp-definition-id {value}",
+            "secret": false,
             "help": "The full qualified managed application definition id."
           },
           {
             "name": "Parameters",
             "type": "string",
             "format": "--parameters {value}",
+            "secret": false,
             "help": "JSON formatted string or a path to a file with such content."
           },
           {
             "name": "PlanName",
             "type": "string",
             "format": "--plan-name {value}",
+            "secret": false,
             "help": "The managed application package plan name."
           },
           {
             "name": "PlanProduct",
             "type": "string",
             "format": "--plan-product {value}",
+            "secret": false,
             "help": "The managed application package plan product."
           },
           {
             "name": "PlanPublisher",
             "type": "string",
             "format": "--plan-publisher {value}",
+            "secret": false,
             "help": "The managed application package plan publisher."
           },
           {
             "name": "PlanVersion",
             "type": "string",
             "format": "--plan-version {value}",
+            "secret": false,
             "help": "The managed application package plan version."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Tags in 'a=b c' format."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -100,16 +114,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the managed application."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -123,7 +154,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -134,16 +173,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The managed application name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -158,67 +214,85 @@
             "type": "List<string>",
             "format": "--authorizations {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated authorization pairs in a format of &lt;principalId&gt;:&lt;roleDefinitionId&gt;."
           },
           {
             "name": "Description",
             "type": "string",
             "format": "--description {value}",
+            "secret": false,
             "help": "The managed application definition description."
           },
           {
             "name": "DisplayName",
             "type": "string",
             "format": "--display-name {value}",
+            "secret": false,
             "help": "The managed application definition display name."
           },
           {
             "name": "LockLevel",
             "type": "ManagedappDefinitionCreateLockLevel",
             "format": "--lock-level {value}",
-            "help": ""
+            "secret": false,
+            "help": "The type of lock restriction."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The managed application definition name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application definition."
           },
           {
             "name": "CreateUiDefinition",
             "type": "string",
             "format": "--create-ui-definition {value}",
+            "secret": false,
             "help": "The managed application definition create ui definition."
           },
           {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
-            "help": "Location. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
             "name": "MainTemplate",
             "type": "string",
             "format": "--main-template {value}",
+            "secret": false,
             "help": "The managed application definition main template."
           },
           {
             "name": "PackageFileUri",
             "type": "string",
             "format": "--package-file-uri {value}",
+            "secret": false,
             "help": "The managed application definition package file uri."
           },
           {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
+            "secret": false,
             "help": "Tags in 'a=b c' format."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -229,16 +303,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The name of the managed application definition to delete."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -252,7 +343,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -263,16 +362,33 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
             "help": "The managed application definition name."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "The resource group of the managed application definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -283,30 +399,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],

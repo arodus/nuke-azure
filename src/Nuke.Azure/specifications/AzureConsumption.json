@@ -1,19 +1,14 @@
 {
-  "$schema": "https://raw.githubusercontent.com/nuke-build/nuke/master/source/Nuke.CodeGeneration/schema.json",
-  "license": [
-    "Copyright Sebastian Karasek, Matthias Koch 2018.",
-    "Distributed under the MIT License.",
-    "https://github.com/nuke-build/azure/blob/master/LICENSE"
-  ],
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/budget.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/marketplace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/pricesheet.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/usage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation/detail.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/2a2c87c2/latest/docs-ref-autogen/consumption/reservation/summary.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/budget.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/marketplace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/pricesheet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/reservation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/usage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/reservation/detail.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/reservation/summary.yml"
   ],
   "name": "AzureConsumption",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest",
@@ -34,36 +29,42 @@
             "name": "Amount",
             "type": "string",
             "format": "--amount {value}",
+            "secret": false,
             "help": "Amount of a budget."
           },
           {
             "name": "BudgetName",
             "type": "string",
             "format": "--budget-name {value}",
+            "secret": false,
             "help": "Name of a budget."
           },
           {
             "name": "Category",
             "type": "ConsumptionBudgetCreateCategory",
             "format": "--category {value}",
+            "secret": false,
             "help": "Category of the budget can be cost or usage."
           },
           {
             "name": "EndDate",
             "type": "string",
             "format": "--end-date {value}",
+            "secret": false,
             "help": "End date (YYYY-MM-DD in UTC) of time period of a budget."
           },
           {
             "name": "StartDate",
             "type": "string",
             "format": "--start-date {value}",
+            "secret": false,
             "help": "Start date (YYYY-MM-DD in UTC) of time period of a budget."
           },
           {
             "name": "TimeGrain",
             "type": "ConsumptionBudgetCreateTimeGrain",
             "format": "--time-grain {value}",
+            "secret": false,
             "help": "Time grain of the budget can be monthly, quarterly, or annually."
           },
           {
@@ -71,6 +72,7 @@
             "type": "List<string>",
             "format": "--meter-filter {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated list of meters to filter on. Required if category is usage."
           },
           {
@@ -78,12 +80,14 @@
             "type": "List<string>",
             "format": "--resource-filter {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated list of resource instances to filter on."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
@@ -91,7 +95,15 @@
             "type": "List<string>",
             "format": "--resource-group-filter {value}",
             "separator": " ",
+            "secret": false,
             "help": "Space-separated list of resource groups to filter on."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -105,13 +117,22 @@
             "name": "BudgetName",
             "type": "string",
             "format": "--budget-name {value}",
+            "secret": false,
             "help": "Name of a budget."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -125,7 +146,15 @@
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -139,13 +168,22 @@
             "name": "BudgetName",
             "type": "string",
             "format": "--budget-name {value}",
+            "secret": false,
             "help": "Name of a budget."
           },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
+            "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -159,25 +197,36 @@
             "name": "BillingPeriodName",
             "type": "string",
             "format": "--billing-period-name {value}",
+            "secret": false,
             "help": "Name of the billing period to get the marketplace."
           },
           {
             "name": "EndDate",
             "type": "string",
             "format": "--end-date {value}",
+            "secret": false,
             "help": "End date (YYYY-MM-DD in UTC). If specified, also requires --start-date."
           },
           {
             "name": "StartDate",
             "type": "string",
             "format": "--start-date {value}",
+            "secret": false,
             "help": "Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "Maximum number of items to return. Value range: 1-1000."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -191,13 +240,22 @@
             "name": "BillingPeriodName",
             "type": "string",
             "format": "--billing-period-name {value}",
+            "secret": false,
             "help": "Name of the billing period to get the price sheet."
           },
           {
             "name": "IncludeMeterDetails",
             "type": "string",
             "format": "--include-meter-details {value}",
+            "secret": false,
             "help": "Include meter details in the price sheet."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -216,37 +274,50 @@
             "name": "BillingPeriodName",
             "type": "string",
             "format": "--billing-period-name {value}",
+            "secret": false,
             "help": "Name of the billing period to get the usage details that associate with."
           },
           {
             "name": "EndDate",
             "type": "string",
             "format": "--end-date {value}",
+            "secret": false,
             "help": "End date (YYYY-MM-DD in UTC). If specified, also requires --start-date."
           },
           {
             "name": "IncludeAdditionalProperties",
             "type": "string",
             "format": "--include-additional-properties {value}",
+            "secret": false,
             "help": "Include additional properties in the usages."
           },
           {
             "name": "IncludeMeterDetails",
             "type": "string",
             "format": "--include-meter-details {value}",
+            "secret": false,
             "help": "Include meter details in the usages."
           },
           {
             "name": "StartDate",
             "type": "string",
             "format": "--start-date {value}",
+            "secret": false,
             "help": "Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date."
           },
           {
             "name": "Top",
             "type": "int",
             "format": "--top {value}",
+            "secret": false,
             "help": "Maximum number of items to return. Value range: 1-1000."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -260,25 +331,36 @@
             "name": "EndDate",
             "type": "string",
             "format": "--end-date {value}",
+            "secret": false,
             "help": "End date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --start-date."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Reservation order id."
           },
           {
             "name": "StartDate",
             "type": "string",
             "format": "--start-date {value}",
+            "secret": false,
             "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
           },
           {
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
+            "secret": false,
             "help": "Reservation id."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -292,31 +374,43 @@
             "name": "Grain",
             "type": "string",
             "format": "--grain {value}",
+            "secret": false,
             "help": "Reservation summary grain. Possible values are daily or monthly."
           },
           {
             "name": "ReservationOrderId",
             "type": "string",
             "format": "--reservation-order-id {value}",
+            "secret": false,
             "help": "Reservation order id."
           },
           {
             "name": "EndDate",
             "type": "string",
             "format": "--end-date {value}",
+            "secret": false,
             "help": "End date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --start-date."
           },
           {
             "name": "ReservationId",
             "type": "string",
             "format": "--reservation-id {value}",
+            "secret": false,
             "help": "Reservation id."
           },
           {
             "name": "StartDate",
             "type": "string",
             "format": "--start-date {value}",
+            "secret": false,
             "help": "Start date (YYYY-MM-DD in UTC). Only needed for daily grain and if specified, also requires --end-date."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -327,30 +421,35 @@
       "name": "Debug",
       "type": "string",
       "format": "--debug {value}",
+      "secret": false,
       "help": "Increase logging verbosity to show all debug logs."
     },
     {
       "name": "Help",
       "type": "string",
       "format": "--help {value}",
+      "secret": false,
       "help": "Show this help message and exit."
     },
     {
       "name": "Output",
       "type": "AzureOutput",
       "format": "--output {value}",
+      "secret": false,
       "help": "Output format."
     },
     {
       "name": "Query",
       "type": "string",
       "format": "--query {value}",
+      "secret": false,
       "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
     },
     {
       "name": "Verbose",
       "type": "string",
       "format": "--verbose {value}",
+      "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
     }
   ],

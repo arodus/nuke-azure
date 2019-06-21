@@ -1,9 +1,5 @@
-// Copyright 2018 Maintainers of NUKE.
-// Distributed under the MIT License.
-// https://github.com/nuke-build/nuke/blob/master/LICENSE
-
-// Generated with Nuke.CodeGeneration, Version: 0.7.0 [CommitSha: 9d3d3d7e].
-// Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureExtension.json.
+// Generated from https://github.com/totollygeek/azure/blob/master/src/Nuke.Azure/specifications/AzureExtension.json
+// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -15,6 +11,7 @@ using Nuke.Common.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
@@ -26,93 +23,397 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionTasks
     {
-        /// <summary><p>Path to the AzureExtension executable.</p></summary>
-        public static string AzureExtensionPath => ToolPathResolver.GetPathExecutable("az");
-        /// <summary><p>Manage and update CLI extensions.</p></summary>
-        public static IReadOnlyCollection<Output> AzureExtension(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool logOutput = true, Func<string, string> outputFilter = null)
+        /// <summary>
+        ///   Path to the AzureExtension executable.
+        /// </summary>
+        public static string AzureExtensionPath =>
+            ToolPathResolver.TryGetEnvironmentExecutable("AZUREEXTENSION_EXE") ??
+            ToolPathResolver.GetPathExecutable("az");
+        public static Action<OutputType, string> AzureExtensionLogger { get; set; } = ProcessTasks.DefaultLogger;
+        /// <summary>
+        ///   Manage and update CLI extensions.
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureExtension(string arguments, string workingDirectory = null, IReadOnlyDictionary<string, string> environmentVariables = null, int? timeout = null, bool? logOutput = null, bool? logInvocation = null, Func<string, string> outputFilter = null)
         {
-            var process = ProcessTasks.StartProcess(AzureExtensionPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, null, outputFilter);
+            var process = ProcessTasks.StartProcess(AzureExtensionPath, arguments, workingDirectory, environmentVariables, timeout, logOutput, logInvocation, AzureExtensionLogger, outputFilter);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureExtensionAdd(Configure<AzureExtensionAddSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureExtensionAdd(AzureExtensionAddSettings toolSettings = null)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureExtensionAddSettings());
+            toolSettings = toolSettings ?? new AzureExtensionAddSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureExtensionList(Configure<AzureExtensionListSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionAddSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionAddSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionAddSettings.Output"/></li>
+        ///     <li><c>--pip-extra-index-urls</c> via <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/></li>
+        ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionAddSettings.PipProxy"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionAddSettings.Query"/></li>
+        ///     <li><c>--source</c> via <see cref="AzureExtensionAddSettings.Source"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionAddSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzureExtensionAddSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureExtensionAdd(Configure<AzureExtensionAddSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureExtensionListSettings());
+            return AzureExtensionAdd(configurator(new AzureExtensionAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionAddSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionAddSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionAddSettings.Output"/></li>
+        ///     <li><c>--pip-extra-index-urls</c> via <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/></li>
+        ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionAddSettings.PipProxy"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionAddSettings.Query"/></li>
+        ///     <li><c>--source</c> via <see cref="AzureExtensionAddSettings.Source"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionAddSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzureExtensionAddSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureExtensionAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureExtensionAdd(CombinatorialConfigure<AzureExtensionAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureExtensionAdd, AzureExtensionLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureExtensionList(AzureExtensionListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureExtensionListSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureExtensionListAvailable(Configure<AzureExtensionListAvailableSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureExtensionList(Configure<AzureExtensionListSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureExtensionListAvailableSettings());
+            return AzureExtensionList(configurator(new AzureExtensionListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureExtensionListSettings Settings, IReadOnlyCollection<Output> Output)> AzureExtensionList(CombinatorialConfigure<AzureExtensionListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureExtensionList, AzureExtensionLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureExtensionListAvailable(AzureExtensionListAvailableSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureExtensionListAvailableSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureExtensionRemove(Configure<AzureExtensionRemoveSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionListAvailableSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionListAvailableSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionListAvailableSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionListAvailableSettings.Query"/></li>
+        ///     <li><c>--show-details</c> via <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListAvailableSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionListAvailableSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureExtensionListAvailable(Configure<AzureExtensionListAvailableSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureExtensionRemoveSettings());
+            return AzureExtensionListAvailable(configurator(new AzureExtensionListAvailableSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionListAvailableSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionListAvailableSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionListAvailableSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionListAvailableSettings.Query"/></li>
+        ///     <li><c>--show-details</c> via <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListAvailableSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionListAvailableSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureExtensionListAvailableSettings Settings, IReadOnlyCollection<Output> Output)> AzureExtensionListAvailable(CombinatorialConfigure<AzureExtensionListAvailableSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureExtensionListAvailable, AzureExtensionLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureExtensionRemove(AzureExtensionRemoveSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureExtensionRemoveSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureExtensionShow(Configure<AzureExtensionShowSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionRemoveSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionRemoveSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionRemoveSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureExtensionRemove(Configure<AzureExtensionRemoveSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureExtensionShowSettings());
+            return AzureExtensionRemove(configurator(new AzureExtensionRemoveSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionRemoveSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionRemoveSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionRemoveSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureExtensionRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureExtensionRemove(CombinatorialConfigure<AzureExtensionRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureExtensionRemove, AzureExtensionLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureExtensionShow(AzureExtensionShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureExtensionShowSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
         }
-        /// <summary><p>Manage and update CLI extensions.</p><p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p></summary>
-        public static IReadOnlyCollection<Output> AzureExtensionUpdate(Configure<AzureExtensionUpdateSettings> configurator = null)
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureExtensionShow(Configure<AzureExtensionShowSettings> configurator)
         {
-            var toolSettings = configurator.InvokeSafe(new AzureExtensionUpdateSettings());
+            return AzureExtensionShow(configurator(new AzureExtensionShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureExtensionShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureExtensionShow(CombinatorialConfigure<AzureExtensionShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureExtensionShow, AzureExtensionLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureExtensionUpdate(AzureExtensionUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureExtensionUpdateSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionUpdateSettings.Output"/></li>
+        ///     <li><c>--pip-extra-index-urls</c> via <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></li>
+        ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionUpdateSettings.PipProxy"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionUpdateSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureExtensionUpdate(Configure<AzureExtensionUpdateSettings> configurator)
+        {
+            return AzureExtensionUpdate(configurator(new AzureExtensionUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and update CLI extensions.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/extension?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureExtensionUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureExtensionUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureExtensionUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureExtensionUpdateSettings.Output"/></li>
+        ///     <li><c>--pip-extra-index-urls</c> via <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></li>
+        ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionUpdateSettings.PipProxy"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureExtensionUpdateSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureExtensionUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureExtensionUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureExtensionUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureExtensionUpdate(CombinatorialConfigure<AzureExtensionUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureExtensionUpdate, AzureExtensionLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureExtensionAddSettings
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureExtensionAddSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureExtension executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureExtension executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureExtensionTasks.AzureExtensionPath;
-        /// <summary><p>Name of extension.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureExtensionTasks.AzureExtensionLogger;
+        /// <summary>
+        ///   Name of extension.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Filepath or URL to an extension.</p></summary>
+        /// <summary>
+        ///   Filepath or URL to an extension.
+        /// </summary>
         public virtual string Source { get; internal set; }
-        /// <summary><p>Do not prompt for confirmation.</p></summary>
+        /// <summary>
+        ///   Do not prompt for confirmation.
+        /// </summary>
         public virtual string Yes { get; internal set; }
-        /// <summary><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.
+        /// </summary>
         public virtual IReadOnlyList<string> PipExtraIndexUrls => PipExtraIndexUrlsInternal.AsReadOnly();
         internal List<string> PipExtraIndexUrlsInternal { get; set; } = new List<string>();
-        /// <summary><p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p></summary>
+        /// <summary>
+        ///   Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.
+        /// </summary>
         public virtual string PipProxy { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
@@ -123,6 +424,7 @@ namespace Nuke.Azure
               .Add("--yes {value}", Yes)
               .Add("--pip-extra-index-urls {value}", PipExtraIndexUrls, separator: ' ')
               .Add("--pip-proxy {value}", PipProxy)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -133,28 +435,48 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionListSettings
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureExtensionListSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureExtension executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureExtension executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureExtensionTasks.AzureExtensionPath;
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureExtensionTasks.AzureExtensionLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
               .Add("extension list")
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -165,31 +487,53 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionListAvailableSettings
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureExtensionListAvailableSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureExtension executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureExtension executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureExtensionTasks.AzureExtensionPath;
-        /// <summary><p>Show the raw data from the extension index.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureExtensionTasks.AzureExtensionLogger;
+        /// <summary>
+        ///   Show the raw data from the extension index.
+        /// </summary>
         public virtual bool? ShowDetails { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
               .Add("extension list-available")
               .Add("--show-details", ShowDetails)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -200,31 +544,53 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionRemoveSettings
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureExtensionRemoveSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureExtension executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureExtension executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureExtensionTasks.AzureExtensionPath;
-        /// <summary><p>Name of extension.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureExtensionTasks.AzureExtensionLogger;
+        /// <summary>
+        ///   Name of extension.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
               .Add("extension remove")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -235,31 +601,53 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionShowSettings
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureExtensionShowSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureExtension executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureExtension executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureExtensionTasks.AzureExtensionPath;
-        /// <summary><p>Name of extension.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureExtensionTasks.AzureExtensionLogger;
+        /// <summary>
+        ///   Name of extension.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
               .Add("extension show")
               .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -270,30 +658,55 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionUpdateSettings
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
     public partial class AzureExtensionUpdateSettings : ToolSettings
     {
-        /// <summary><p>Path to the AzureExtension executable.</p></summary>
+        /// <summary>
+        ///   Path to the AzureExtension executable.
+        /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureExtensionTasks.AzureExtensionPath;
-        /// <summary><p>Name of extension.</p></summary>
+        public override Action<OutputType, string> CustomLogger => AzureExtensionTasks.AzureExtensionLogger;
+        /// <summary>
+        ///   Name of extension.
+        /// </summary>
         public virtual string Name { get; internal set; }
-        /// <summary><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.
+        /// </summary>
         public virtual IReadOnlyList<string> PipExtraIndexUrls => PipExtraIndexUrlsInternal.AsReadOnly();
         internal List<string> PipExtraIndexUrlsInternal { get; set; } = new List<string>();
-        /// <summary><p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p></summary>
+        /// <summary>
+        ///   Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.
+        /// </summary>
         public virtual string PipProxy { get; internal set; }
-        /// <summary><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
         public virtual string Debug { get; internal set; }
-        /// <summary><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
         public virtual string Help { get; internal set; }
-        /// <summary><p>Output format.</p></summary>
+        /// <summary>
+        ///   Output format.
+        /// </summary>
         public virtual AzureOutput Output { get; internal set; }
-        /// <summary><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
         public virtual string Query { get; internal set; }
-        /// <summary><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
         public virtual string Verbose { get; internal set; }
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
@@ -302,6 +715,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--pip-extra-index-urls {value}", PipExtraIndexUrls, separator: ' ')
               .Add("--pip-proxy {value}", PipProxy)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -312,13 +726,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionAddSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionAddSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetName(this AzureExtensionAddSettings toolSettings, string name)
         {
@@ -326,7 +745,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetName(this AzureExtensionAddSettings toolSettings)
         {
@@ -336,7 +758,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Source
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Source"/>.</em></p><p>Filepath or URL to an extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Source"/></em></p>
+        ///   <p>Filepath or URL to an extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetSource(this AzureExtensionAddSettings toolSettings, string source)
         {
@@ -344,7 +769,10 @@ namespace Nuke.Azure
             toolSettings.Source = source;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Source"/>.</em></p><p>Filepath or URL to an extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Source"/></em></p>
+        ///   <p>Filepath or URL to an extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetSource(this AzureExtensionAddSettings toolSettings)
         {
@@ -354,7 +782,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Yes
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetYes(this AzureExtensionAddSettings toolSettings, string yes)
         {
@@ -362,7 +793,10 @@ namespace Nuke.Azure
             toolSettings.Yes = yes;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Yes"/>.</em></p><p>Do not prompt for confirmation.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetYes(this AzureExtensionAddSettings toolSettings)
         {
@@ -372,7 +806,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region PipExtraIndexUrls
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/> to a new list.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/> to a new list</em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetPipExtraIndexUrls(this AzureExtensionAddSettings toolSettings, params string[] pipExtraIndexUrls)
         {
@@ -380,7 +817,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal = pipExtraIndexUrls.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/> to a new list.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/> to a new list</em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetPipExtraIndexUrls(this AzureExtensionAddSettings toolSettings, IEnumerable<string> pipExtraIndexUrls)
         {
@@ -388,7 +828,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal = pipExtraIndexUrls.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings AddPipExtraIndexUrls(this AzureExtensionAddSettings toolSettings, params string[] pipExtraIndexUrls)
         {
@@ -396,7 +839,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.AddRange(pipExtraIndexUrls);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings AddPipExtraIndexUrls(this AzureExtensionAddSettings toolSettings, IEnumerable<string> pipExtraIndexUrls)
         {
@@ -404,7 +850,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.AddRange(pipExtraIndexUrls);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ClearPipExtraIndexUrls(this AzureExtensionAddSettings toolSettings)
         {
@@ -412,7 +861,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings RemovePipExtraIndexUrls(this AzureExtensionAddSettings toolSettings, params string[] pipExtraIndexUrls)
         {
@@ -421,7 +873,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureExtensionAddSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings RemovePipExtraIndexUrls(this AzureExtensionAddSettings toolSettings, IEnumerable<string> pipExtraIndexUrls)
         {
@@ -432,7 +887,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region PipProxy
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.PipProxy"/>.</em></p><p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.PipProxy"/></em></p>
+        ///   <p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetPipProxy(this AzureExtensionAddSettings toolSettings, string pipProxy)
         {
@@ -440,7 +898,10 @@ namespace Nuke.Azure
             toolSettings.PipProxy = pipProxy;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.PipProxy"/>.</em></p><p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.PipProxy"/></em></p>
+        ///   <p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetPipProxy(this AzureExtensionAddSettings toolSettings)
         {
@@ -449,8 +910,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionAddSettings SetSubscription(this AzureExtensionAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionAddSettings ResetSubscription(this AzureExtensionAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetDebug(this AzureExtensionAddSettings toolSettings, string debug)
         {
@@ -458,7 +946,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetDebug(this AzureExtensionAddSettings toolSettings)
         {
@@ -468,7 +959,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetHelp(this AzureExtensionAddSettings toolSettings, string help)
         {
@@ -476,7 +970,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetHelp(this AzureExtensionAddSettings toolSettings)
         {
@@ -486,7 +983,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetOutput(this AzureExtensionAddSettings toolSettings, AzureOutput output)
         {
@@ -494,7 +994,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetOutput(this AzureExtensionAddSettings toolSettings)
         {
@@ -504,7 +1007,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetQuery(this AzureExtensionAddSettings toolSettings, string query)
         {
@@ -512,7 +1018,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetQuery(this AzureExtensionAddSettings toolSettings)
         {
@@ -522,7 +1031,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureExtensionAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings SetVerbose(this AzureExtensionAddSettings toolSettings, string verbose)
         {
@@ -530,7 +1042,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionAddSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionAddSettings ResetVerbose(this AzureExtensionAddSettings toolSettings)
         {
@@ -542,13 +1057,42 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionListSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionListSettingsExtensions
     {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionListSettings SetSubscription(this AzureExtensionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionListSettings ResetSubscription(this AzureExtensionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureExtensionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings SetDebug(this AzureExtensionListSettings toolSettings, string debug)
         {
@@ -556,7 +1100,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings ResetDebug(this AzureExtensionListSettings toolSettings)
         {
@@ -566,7 +1113,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureExtensionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings SetHelp(this AzureExtensionListSettings toolSettings, string help)
         {
@@ -574,7 +1124,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings ResetHelp(this AzureExtensionListSettings toolSettings)
         {
@@ -584,7 +1137,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureExtensionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings SetOutput(this AzureExtensionListSettings toolSettings, AzureOutput output)
         {
@@ -592,7 +1148,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings ResetOutput(this AzureExtensionListSettings toolSettings)
         {
@@ -602,7 +1161,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureExtensionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings SetQuery(this AzureExtensionListSettings toolSettings, string query)
         {
@@ -610,7 +1172,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings ResetQuery(this AzureExtensionListSettings toolSettings)
         {
@@ -620,7 +1185,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureExtensionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings SetVerbose(this AzureExtensionListSettings toolSettings, string verbose)
         {
@@ -628,7 +1196,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListSettings ResetVerbose(this AzureExtensionListSettings toolSettings)
         {
@@ -640,13 +1211,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionListAvailableSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionListAvailableSettingsExtensions
     {
         #region ShowDetails
-        /// <summary><p><em>Sets <see cref="AzureExtensionListAvailableSettings.ShowDetails"/>.</em></p><p>Show the raw data from the extension index.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></em></p>
+        ///   <p>Show the raw data from the extension index.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings SetShowDetails(this AzureExtensionListAvailableSettings toolSettings, bool? showDetails)
         {
@@ -654,7 +1230,10 @@ namespace Nuke.Azure
             toolSettings.ShowDetails = showDetails;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListAvailableSettings.ShowDetails"/>.</em></p><p>Show the raw data from the extension index.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></em></p>
+        ///   <p>Show the raw data from the extension index.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings ResetShowDetails(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -662,7 +1241,10 @@ namespace Nuke.Azure
             toolSettings.ShowDetails = null;
             return toolSettings;
         }
-        /// <summary><p><em>Enables <see cref="AzureExtensionListAvailableSettings.ShowDetails"/>.</em></p><p>Show the raw data from the extension index.</p></summary>
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></em></p>
+        ///   <p>Show the raw data from the extension index.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings EnableShowDetails(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -670,7 +1252,10 @@ namespace Nuke.Azure
             toolSettings.ShowDetails = true;
             return toolSettings;
         }
-        /// <summary><p><em>Disables <see cref="AzureExtensionListAvailableSettings.ShowDetails"/>.</em></p><p>Show the raw data from the extension index.</p></summary>
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></em></p>
+        ///   <p>Show the raw data from the extension index.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings DisableShowDetails(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -678,7 +1263,10 @@ namespace Nuke.Azure
             toolSettings.ShowDetails = false;
             return toolSettings;
         }
-        /// <summary><p><em>Toggles <see cref="AzureExtensionListAvailableSettings.ShowDetails"/>.</em></p><p>Show the raw data from the extension index.</p></summary>
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></em></p>
+        ///   <p>Show the raw data from the extension index.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings ToggleShowDetails(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -687,8 +1275,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionListAvailableSettings SetSubscription(this AzureExtensionListAvailableSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionListAvailableSettings ResetSubscription(this AzureExtensionListAvailableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureExtensionListAvailableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings SetDebug(this AzureExtensionListAvailableSettings toolSettings, string debug)
         {
@@ -696,7 +1311,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListAvailableSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings ResetDebug(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -706,7 +1324,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureExtensionListAvailableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings SetHelp(this AzureExtensionListAvailableSettings toolSettings, string help)
         {
@@ -714,7 +1335,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListAvailableSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings ResetHelp(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -724,7 +1348,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureExtensionListAvailableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings SetOutput(this AzureExtensionListAvailableSettings toolSettings, AzureOutput output)
         {
@@ -732,7 +1359,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListAvailableSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings ResetOutput(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -742,7 +1372,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureExtensionListAvailableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings SetQuery(this AzureExtensionListAvailableSettings toolSettings, string query)
         {
@@ -750,7 +1383,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListAvailableSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings ResetQuery(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -760,7 +1396,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureExtensionListAvailableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings SetVerbose(this AzureExtensionListAvailableSettings toolSettings, string verbose)
         {
@@ -768,7 +1407,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionListAvailableSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionListAvailableSettings ResetVerbose(this AzureExtensionListAvailableSettings toolSettings)
         {
@@ -780,13 +1422,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionRemoveSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionRemoveSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureExtensionRemoveSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings SetName(this AzureExtensionRemoveSettings toolSettings, string name)
         {
@@ -794,7 +1441,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionRemoveSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings ResetName(this AzureExtensionRemoveSettings toolSettings)
         {
@@ -803,8 +1453,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionRemoveSettings SetSubscription(this AzureExtensionRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionRemoveSettings ResetSubscription(this AzureExtensionRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureExtensionRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings SetDebug(this AzureExtensionRemoveSettings toolSettings, string debug)
         {
@@ -812,7 +1489,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionRemoveSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings ResetDebug(this AzureExtensionRemoveSettings toolSettings)
         {
@@ -822,7 +1502,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureExtensionRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings SetHelp(this AzureExtensionRemoveSettings toolSettings, string help)
         {
@@ -830,7 +1513,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionRemoveSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings ResetHelp(this AzureExtensionRemoveSettings toolSettings)
         {
@@ -840,7 +1526,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureExtensionRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings SetOutput(this AzureExtensionRemoveSettings toolSettings, AzureOutput output)
         {
@@ -848,7 +1537,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionRemoveSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings ResetOutput(this AzureExtensionRemoveSettings toolSettings)
         {
@@ -858,7 +1550,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureExtensionRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings SetQuery(this AzureExtensionRemoveSettings toolSettings, string query)
         {
@@ -866,7 +1561,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionRemoveSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings ResetQuery(this AzureExtensionRemoveSettings toolSettings)
         {
@@ -876,7 +1574,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureExtensionRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings SetVerbose(this AzureExtensionRemoveSettings toolSettings, string verbose)
         {
@@ -884,7 +1585,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionRemoveSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionRemoveSettings ResetVerbose(this AzureExtensionRemoveSettings toolSettings)
         {
@@ -896,13 +1600,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionShowSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionShowSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureExtensionShowSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings SetName(this AzureExtensionShowSettings toolSettings, string name)
         {
@@ -910,7 +1619,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionShowSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings ResetName(this AzureExtensionShowSettings toolSettings)
         {
@@ -919,8 +1631,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionShowSettings SetSubscription(this AzureExtensionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionShowSettings ResetSubscription(this AzureExtensionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureExtensionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings SetDebug(this AzureExtensionShowSettings toolSettings, string debug)
         {
@@ -928,7 +1667,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionShowSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings ResetDebug(this AzureExtensionShowSettings toolSettings)
         {
@@ -938,7 +1680,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureExtensionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings SetHelp(this AzureExtensionShowSettings toolSettings, string help)
         {
@@ -946,7 +1691,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionShowSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings ResetHelp(this AzureExtensionShowSettings toolSettings)
         {
@@ -956,7 +1704,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureExtensionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings SetOutput(this AzureExtensionShowSettings toolSettings, AzureOutput output)
         {
@@ -964,7 +1715,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionShowSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings ResetOutput(this AzureExtensionShowSettings toolSettings)
         {
@@ -974,7 +1728,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureExtensionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings SetQuery(this AzureExtensionShowSettings toolSettings, string query)
         {
@@ -982,7 +1739,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionShowSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings ResetQuery(this AzureExtensionShowSettings toolSettings)
         {
@@ -992,7 +1752,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureExtensionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings SetVerbose(this AzureExtensionShowSettings toolSettings, string verbose)
         {
@@ -1000,7 +1763,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionShowSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionShowSettings ResetVerbose(this AzureExtensionShowSettings toolSettings)
         {
@@ -1012,13 +1778,18 @@ namespace Nuke.Azure
     }
     #endregion
     #region AzureExtensionUpdateSettingsExtensions
-    /// <summary><p>Used within <see cref="AzureExtensionTasks"/>.</p></summary>
+    /// <summary>
+    ///   Used within <see cref="AzureExtensionTasks"/>.
+    /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionUpdateSettingsExtensions
     {
         #region Name
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetName(this AzureExtensionUpdateSettings toolSettings, string name)
         {
@@ -1026,7 +1797,10 @@ namespace Nuke.Azure
             toolSettings.Name = name;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionUpdateSettings.Name"/>.</em></p><p>Name of extension.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Name"/></em></p>
+        ///   <p>Name of extension.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ResetName(this AzureExtensionUpdateSettings toolSettings)
         {
@@ -1036,7 +1810,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region PipExtraIndexUrls
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/> to a new list.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/> to a new list</em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetPipExtraIndexUrls(this AzureExtensionUpdateSettings toolSettings, params string[] pipExtraIndexUrls)
         {
@@ -1044,7 +1821,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal = pipExtraIndexUrls.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/> to a new list.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/> to a new list</em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetPipExtraIndexUrls(this AzureExtensionUpdateSettings toolSettings, IEnumerable<string> pipExtraIndexUrls)
         {
@@ -1052,7 +1832,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal = pipExtraIndexUrls.ToList();
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings AddPipExtraIndexUrls(this AzureExtensionUpdateSettings toolSettings, params string[] pipExtraIndexUrls)
         {
@@ -1060,7 +1843,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.AddRange(pipExtraIndexUrls);
             return toolSettings;
         }
-        /// <summary><p><em>Adds values to <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings AddPipExtraIndexUrls(this AzureExtensionUpdateSettings toolSettings, IEnumerable<string> pipExtraIndexUrls)
         {
@@ -1068,7 +1854,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.AddRange(pipExtraIndexUrls);
             return toolSettings;
         }
-        /// <summary><p><em>Clears <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ClearPipExtraIndexUrls(this AzureExtensionUpdateSettings toolSettings)
         {
@@ -1076,7 +1865,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.Clear();
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings RemovePipExtraIndexUrls(this AzureExtensionUpdateSettings toolSettings, params string[] pipExtraIndexUrls)
         {
@@ -1085,7 +1877,10 @@ namespace Nuke.Azure
             toolSettings.PipExtraIndexUrlsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
-        /// <summary><p><em>Removes values from <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/>.</em></p><p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p></summary>
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></em></p>
+        ///   <p>Space-separated list of extra URLs of package indexes to use. This should point to a repository compliant with PEP 503 (the simple repository API) or a local directory laid out in the same format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings RemovePipExtraIndexUrls(this AzureExtensionUpdateSettings toolSettings, IEnumerable<string> pipExtraIndexUrls)
         {
@@ -1096,7 +1891,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region PipProxy
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.PipProxy"/>.</em></p><p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.PipProxy"/></em></p>
+        ///   <p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetPipProxy(this AzureExtensionUpdateSettings toolSettings, string pipProxy)
         {
@@ -1104,7 +1902,10 @@ namespace Nuke.Azure
             toolSettings.PipProxy = pipProxy;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionUpdateSettings.PipProxy"/>.</em></p><p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.PipProxy"/></em></p>
+        ///   <p>Proxy for pip to use for extension dependencies in the form of [user:passwd@]proxy.server:port.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ResetPipProxy(this AzureExtensionUpdateSettings toolSettings)
         {
@@ -1113,8 +1914,35 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionUpdateSettings SetSubscription(this AzureExtensionUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureExtensionUpdateSettings ResetSubscription(this AzureExtensionUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
         #region Debug
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetDebug(this AzureExtensionUpdateSettings toolSettings, string debug)
         {
@@ -1122,7 +1950,10 @@ namespace Nuke.Azure
             toolSettings.Debug = debug;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionUpdateSettings.Debug"/>.</em></p><p>Increase logging verbosity to show all debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ResetDebug(this AzureExtensionUpdateSettings toolSettings)
         {
@@ -1132,7 +1963,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Help
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetHelp(this AzureExtensionUpdateSettings toolSettings, string help)
         {
@@ -1140,7 +1974,10 @@ namespace Nuke.Azure
             toolSettings.Help = help;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionUpdateSettings.Help"/>.</em></p><p>Show this help message and exit.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ResetHelp(this AzureExtensionUpdateSettings toolSettings)
         {
@@ -1150,7 +1987,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Output
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetOutput(this AzureExtensionUpdateSettings toolSettings, AzureOutput output)
         {
@@ -1158,7 +1998,10 @@ namespace Nuke.Azure
             toolSettings.Output = output;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionUpdateSettings.Output"/>.</em></p><p>Output format.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ResetOutput(this AzureExtensionUpdateSettings toolSettings)
         {
@@ -1168,7 +2011,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Query
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetQuery(this AzureExtensionUpdateSettings toolSettings, string query)
         {
@@ -1176,7 +2022,10 @@ namespace Nuke.Azure
             toolSettings.Query = query;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionUpdateSettings.Query"/>.</em></p><p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ResetQuery(this AzureExtensionUpdateSettings toolSettings)
         {
@@ -1186,7 +2035,10 @@ namespace Nuke.Azure
         }
         #endregion
         #region Verbose
-        /// <summary><p><em>Sets <see cref="AzureExtensionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings SetVerbose(this AzureExtensionUpdateSettings toolSettings, string verbose)
         {
@@ -1194,7 +2046,10 @@ namespace Nuke.Azure
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
-        /// <summary><p><em>Resets <see cref="AzureExtensionUpdateSettings.Verbose"/>.</em></p><p>Increase logging verbosity. Use --debug for full debug logs.</p></summary>
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
         [Pure]
         public static AzureExtensionUpdateSettings ResetVerbose(this AzureExtensionUpdateSettings toolSettings)
         {
